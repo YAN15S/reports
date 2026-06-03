@@ -14,7 +14,8 @@
   h1{margin:0 0 4px;font-size:23px;}
   .sub{color:var(--muted);font-size:14px;}
   section{max-width:1000px;margin:24px auto;padding:0 22px;}
-  h2{font-size:16px;border-left:4px solid var(--slate);padding-left:10px;margin:0 0 14px;}
+  h2{font-size:16px;border-left:4px solid var(--slate);padding-left:10px;margin:0 0 6px;}
+  .h2note{font-size:12px;color:var(--muted);margin:0 0 14px;padding-left:14px;}
   .summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
   .box{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;}
   .box .l{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;}
@@ -34,20 +35,30 @@
   .micros{display:grid;gap:6px;}
   .micro{font-size:13px;display:flex;gap:8px;}
   .tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#3730a3;background:#eef2ff;border-radius:5px;padding:2px 6px;height:fit-content;white-space:nowrap;}
-  .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+  .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center;}
+  .filters .lbl{font-size:12px;color:var(--muted);margin-right:2px;}
   .filters button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:7px 11px;border-radius:8px;font-size:12px;cursor:pointer;}
   .filters button.on{background:var(--slate);color:#fff;border-color:var(--slate);}
   table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:11px;overflow:hidden;}
   th,td{text-align:left;padding:10px 12px;font-size:13px;border-bottom:1px solid var(--line);vertical-align:top;}
   th{background:#f8fafc;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+  th.sortable{cursor:pointer;}
   .catpill{font-size:11px;padding:2px 8px;border-radius:999px;background:#eef2ff;color:#3730a3;white-space:nowrap;}
+  /* uniqueness badges */
+  .uniq{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .uniq.fresh{background:#ecfdf5;color:#065f46;}
+  .uniq.twist{background:#fffbeb;color:#92400e;}
+  .uniq.crowded{background:#fef2f2;color:#991b1b;}
+  .legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#334155;margin-top:10px;}
+  .legend span{display:flex;align-items:center;gap:6px;}
+  .dot{width:11px;height:11px;border-radius:3px;flex:none;}
   .notes ul{margin:6px 0;padding-left:18px;font-size:14px;color:#334155;}
   .notes .col{background:#fff;border:1px solid var(--line);border-radius:11px;padding:14px 16px;}
 </style>
 </head>
 <body>
 <div class="accent"></div>
-<header><div class="wrap"><h1>Marketing Angles &middot; Posture Corrector</h1><div class="sub">Avatar: office workers 30-55 with chronic slouching and nagging upper-back pain &nbsp;|&nbsp; 06-03-2026</div></div></header>
+<header><div class="wrap"><h1>Marketing Angles &middot; Posture Corrector</h1><div class="sub">Avatar: office workers 30-55 with chronic slouching and nagging upper-back pain &nbsp;|&nbsp; Uniqueness scored vs 18 competitor ads in the Winners DB &nbsp;|&nbsp; 06-03-2026</div></div></header>
 
 <section>
   <div class="summary">
@@ -59,12 +70,15 @@
 
 <section>
   <h2>Top 3 Angles</h2>
+  <p class="h2note">Selected for emotional charge AND differentiation. Uniqueness measured against the 18 competitor ads captured in the Winners DB for "posture corrector".</p>
   <div class="top3" id="top3"></div>
 </section>
 
 <section>
   <h2>All 20 Angles</h2>
+  <p class="h2note">Filter by category or uniqueness; click the Uniqueness header to sort.</p>
   <div class="filters" id="catfilter">
+    <span class="lbl">Category:</span>
     <button data-cat="all" class="on">All</button>
     <button data-cat="Pain / Frustration">Pain</button>
     <button data-cat="Aspiration / Identity">Aspiration</button>
@@ -72,12 +86,25 @@
     <button data-cat="Fear / Urgency">Fear</button>
     <button data-cat="Social Proof / Tribe">Social Proof</button>
   </div>
-  <table><thead><tr><th>Angle</th><th>Category</th><th>Core insight</th><th>Hook</th><th>Format</th></tr></thead><tbody id="alltbody"></tbody></table>
+  <div class="filters" id="uniqfilter">
+    <span class="lbl">Uniqueness:</span>
+    <button data-u="all" class="on">All</button>
+    <button data-u="fresh">Fresh</button>
+    <button data-u="twist">Twist</button>
+    <button data-u="crowded">Crowded</button>
+  </div>
+  <table><thead><tr><th>Angle</th><th>Category</th><th class="sortable" id="usort">Uniqueness &#8597;</th><th>Core insight</th><th>Hook</th><th>Format</th></tr></thead><tbody id="alltbody"></tbody></table>
+  <div class="legend">
+    <span><span class="dot" style="background:#10b981"></span> <b>Fresh</b> &middot; no competitor ad uses it</span>
+    <span><span class="dot" style="background:#f59e0b"></span> <b>Twist</b> &middot; same pain/benefit, fresh framing</span>
+    <span><span class="dot" style="background:#ef4444"></span> <b>Crowded</b> &middot; competitors already run it</span>
+    <span style="color:var(--muted)">Count = matching competitor ads out of 18 in the Winners DB.</span>
+  </div>
 </section>
 
 <section>
   <h2>Macro-Angles (offers that fit)</h2>
-  <div class="notes col">
+  <div class="notes col" style="margin-top:10px;">
     <ul>
       <li><b>New Year "Stand Tall in 2027" launch</b> &mdash; activate 2 weeks before New Year; resolution + posture identity.</li>
       <li><b>Father's Day gift bundle</b> &mdash; "the gift for the dad who is always at a desk."</li>
@@ -88,45 +115,47 @@
 
 <section class="notes">
   <h2>Research Notes</h2>
-  <div class="col">
+  <div class="col" style="margin-top:10px;">
     <p><b>Top pain points:</b> mid-afternoon upper-back ache, visible hunch in photos, stiffness after long calls, fear of permanent damage, failed stretching routines.</p>
     <p><b>Top benefits people cite:</b> immediate "pull-back" reminder, less end-of-day soreness, more confident stance, discreet under a shirt.</p>
-    <p><b>Competitor angles in market (differentiate from):</b> generic "improve your posture" claims, medical-device framing, and before/after photos that trip Meta policy. Our edge: the daily-habit retraining story and the identity shift, not a medical claim.</p>
+    <p><b>Competitor angles in the Winners DB (differentiate from):</b> generic "improve your posture" claims, "stand tall / confidence" identity plays, and before/after photos. The crowded angles below are the ones already saturated in those 18 ads; the Fresh ones are open lanes.</p>
   </div>
 </section>
 
 <script>
+  const U={fresh:{c:"fresh",rank:3},twist:{c:"twist",rank:2},crowded:{c:"crowded",rank:1}};
+  function ubadge(u){return '<span class="uniq '+U[u.band].c+'">'+u.band.charAt(0).toUpperCase()+u.band.slice(1)+' '+u.n+'/18</span>';}
   const TOP3=[
-    {rk:1,nm:"Stop Stretching",cat:"Contrarian / Pattern Interrupt",ins:"People blame weak willpower for bad posture; the real issue is that nothing reminds the body to hold the position, so stretching fades by noon.",hook:"Stop stretching. It is not discipline you are missing, it is a reminder your spine can feel.",fmt:"UGC video",why:"Flips the self-blame the avatar already feels, which stops the scroll, and pre-empts the 'I tried everything' objection.",micros:[["contra","Stop doing more stretches. Do this instead."],["problem-first","Tired of remembering to sit up straight, then forgetting 5 minutes later?"],["curiosity","Why posture fixes fail by 11am, and the one that does not."]]},
-    {rk:2,nm:"Permanent Hunch",cat:"Fear / Urgency",ins:"The avatar quietly fears the hunch is becoming permanent; naming the clock makes the cost of doing nothing concrete.",hook:"The hunch you see in photos today is the posture you are training for life. Every slouched hour locks it in a little more.",fmt:"Static + caption",why:"Highest emotional charge, taps an unspoken fear, and frames daily wear as reversing a countdown.",micros:[["result-first","I caught my hunch in a photo at 38. Six weeks later it was gone."],["problem-first","That rounded back in every photo is not just posture, it is becoming permanent."],["social-proof","'I did not realize how bad it looked until my daughter pointed it out.'"]]},
-    {rk:3,nm:"The 3pm Slump",cat:"Pain / Frustration",ins:"The pain is predictable and time-stamped; anchoring to 3pm makes the ad feel like it was written about them.",hook:"It is 3pm. Your upper back is aching, your shoulders are creeping forward, and coffee is not fixing it.",fmt:"UGC video",why:"Hyper-specific daily moment the avatar lives, so it feels personal and stops the scroll instantly.",micros:[["problem-first","If your back aches every afternoon at your desk, read this."],["curiosity","The 3pm ache is not tiredness. It is your posture giving out."],["result-first","My 3pm back ache disappeared in two weeks. Here is what changed."]]}
+    {rk:1,nm:"Stop Stretching",cat:"Contrarian / Pattern Interrupt",u:{band:"fresh",n:0},ins:"People blame weak willpower for bad posture; the real issue is that nothing reminds the body to hold the position, so stretching fades by noon.",hook:"Stop stretching. It is not discipline you are missing, it is a reminder your spine can feel.",fmt:"UGC video",why:"Fresh: none of the 18 competitor ads run this. Flips the self-blame the avatar feels and pre-empts the 'I tried everything' objection.",micros:[["contra","Stop doing more stretches. Do this instead."],["problem-first","Tired of remembering to sit up straight, then forgetting 5 minutes later?"],["curiosity","Why posture fixes fail by 11am, and the one that does not."]]},
+    {rk:2,nm:"Permanent Hunch",cat:"Fear / Urgency",u:{band:"twist",n:3},ins:"The avatar quietly fears the hunch is becoming permanent; naming the clock makes the cost of doing nothing concrete.",hook:"The hunch you see in photos today is the posture you are training for life. Every slouched hour locks it in a little more.",fmt:"Static + caption",why:"Twist: 3 competitors use fear, but none frame it as a daily countdown you are reversing. Highest emotional charge.",micros:[["result-first","I caught my hunch in a photo at 38. Six weeks later it was gone."],["problem-first","That rounded back in every photo is not just posture, it is becoming permanent."],["social-proof","'I did not realize how bad it looked until my daughter pointed it out.'"]]},
+    {rk:3,nm:"The 3pm Slump",cat:"Pain / Frustration",u:{band:"twist",n:2},ins:"The pain is predictable and time-stamped; anchoring to 3pm makes the ad feel like it was written about them.",hook:"It is 3pm. Your upper back is aching, your shoulders are creeping forward, and coffee is not fixing it.",fmt:"UGC video",why:"Twist: 2 competitors agitate desk pain, none anchor to the exact 3pm moment. Hyper-specific, so it feels personal.",micros:[["problem-first","If your back aches every afternoon at your desk, read this."],["curiosity","The 3pm ache is not tiredness. It is your posture giving out."],["result-first","My 3pm back ache disappeared in two weeks. Here is what changed."]]}
   ];
   const ALL=[
-    ["The 3pm Slump","Pain / Frustration","Pain is predictable and time-stamped","It is 3pm and your back already aches.","UGC video"],
-    ["Desk Hunch Trap","Pain / Frustration","Long sitting quietly rounds the back","Your chair is not the problem, your default slouch is.","Static"],
-    ["Pain You Ignore","Pain / Frustration","Small daily ache becomes chronic","You have learned to ignore it. Your spine has not.","UGC video"],
-    ["Stretch Fatigue","Pain / Frustration","Stretching relief never lasts","You stretch, it feels good, an hour later you are hunched again.","Carousel"],
-    ["Stand Tall","Aspiration / Identity","Posture signals confidence","Walk into the room standing like you own it.","Static"],
-    ["The Confident Posture","Aspiration / Identity","Upright = capable and in control","People read your posture before they read your resume.","UGC video"],
-    ["Younger Spine","Aspiration / Identity","Good posture reads as younger","Straighten your back and drop a decade.","Static"],
-    ["Camera-Ready","Aspiration / Identity","Look better in every photo","Never untag a slouched photo again.","UGC video"],
-    ["Stop Stretching","Contrarian / Pattern Interrupt","The fix is a reminder, not willpower","Stop stretching. Train the habit instead.","UGC video"],
-    ["Chairs Won't Save You","Contrarian / Pattern Interrupt","Ergonomic chairs do not retrain you","You bought the chair. You are still hunched.","Static"],
-    ["Posture Isn't Willpower","Contrarian / Pattern Interrupt","Willpower fades, cues do not","It is not that you are lazy. You just have no cue to sit up.","VSL"],
-    ["Core Myth","Contrarian / Pattern Interrupt","You do not need a 6-pack first","Everyone says 'strengthen your core.' Here is the faster path.","UGC video"],
-    ["Permanent Hunch","Fear / Urgency","The hunch can become permanent","Every slouched hour locks the hunch in a little more.","Static"],
-    ["Nerve Damage Clock","Fear / Urgency","Posture strain compounds over years","The ache is the early warning, not the problem.","VSL"],
-    ["It Gets Worse","Fear / Urgency","Untreated slouch worsens with age","This does not plateau. It compounds.","Static"],
-    ["20 Years From Now","Fear / Urgency","Future-self framing of the cost","Picture your back at 60 if nothing changes.","UGC video"],
-    ["Office Convert","Social Proof / Tribe","Peer-like testimonial","'I sit at a desk 9 hours a day. This is the only thing that helped.'","Testimonial"],
-    ["PT Approved","Social Proof / Tribe","Authority endorsement framing","Why physical therapists keep recommending the cue, not the cure.","UGC video"],
-    ["Desk Worker Tribe","Social Proof / Tribe","Belonging to a group like them","The brace half your open-plan office is quietly wearing.","Static"],
-    ["Before/After Wall","Social Proof / Tribe","Volume of transformations","Hundreds of straightened backs in 6 weeks.","Carousel"]
+    ["The 3pm Slump","Pain / Frustration",{band:"twist",n:2},"Pain is predictable and time-stamped","It is 3pm and your back already aches.","UGC video"],
+    ["Desk Hunch Trap","Pain / Frustration",{band:"crowded",n:7},"Long sitting quietly rounds the back","Your chair is not the problem, your default slouch is.","Static"],
+    ["Pain You Ignore","Pain / Frustration",{band:"twist",n:1},"Small daily ache becomes chronic","You have learned to ignore it. Your spine has not.","UGC video"],
+    ["Stretch Fatigue","Pain / Frustration",{band:"fresh",n:0},"Stretching relief never lasts","You stretch, it feels good, an hour later you are hunched again.","Carousel"],
+    ["Stand Tall","Aspiration / Identity",{band:"crowded",n:9},"Posture signals confidence","Walk into the room standing like you own it.","Static"],
+    ["The Confident Posture","Aspiration / Identity",{band:"twist",n:4},"Upright = capable and in control","People read your posture before they read your resume.","UGC video"],
+    ["Younger Spine","Aspiration / Identity",{band:"fresh",n:0},"Good posture reads as younger","Straighten your back and drop a decade.","Static"],
+    ["Camera-Ready","Aspiration / Identity",{band:"twist",n:2},"Look better in every photo","Never untag a slouched photo again.","UGC video"],
+    ["Stop Stretching","Contrarian / Pattern Interrupt",{band:"fresh",n:0},"The fix is a reminder, not willpower","Stop stretching. Train the habit instead.","UGC video"],
+    ["Chairs Won't Save You","Contrarian / Pattern Interrupt",{band:"fresh",n:0},"Ergonomic chairs do not retrain you","You bought the chair. You are still hunched.","Static"],
+    ["Posture Isn't Willpower","Contrarian / Pattern Interrupt",{band:"twist",n:1},"Willpower fades, cues do not","It is not that you are lazy. You just have no cue to sit up.","VSL"],
+    ["Core Myth","Contrarian / Pattern Interrupt",{band:"twist",n:3},"You do not need a 6-pack first","Everyone says 'strengthen your core.' Here is the faster path.","UGC video"],
+    ["Permanent Hunch","Fear / Urgency",{band:"twist",n:3},"The hunch can become permanent","Every slouched hour locks the hunch in a little more.","Static"],
+    ["Nerve Damage Clock","Fear / Urgency",{band:"fresh",n:0},"Posture strain compounds over years","The ache is the early warning, not the problem.","VSL"],
+    ["It Gets Worse","Fear / Urgency",{band:"twist",n:2},"Untreated slouch worsens with age","This does not plateau. It compounds.","Static"],
+    ["20 Years From Now","Fear / Urgency",{band:"twist",n:1},"Future-self framing of the cost","Picture your back at 60 if nothing changes.","UGC video"],
+    ["Office Convert","Social Proof / Tribe",{band:"crowded",n:6},"Peer-like testimonial","'I sit at a desk 9 hours a day. This is the only thing that helped.'","Testimonial"],
+    ["PT Approved","Social Proof / Tribe",{band:"twist",n:5},"Authority endorsement framing","Why physical therapists recommend the cue, not the cure.","UGC video"],
+    ["Desk Worker Tribe","Social Proof / Tribe",{band:"twist",n:2},"Belonging to a group like them","The brace half your open-plan office is quietly wearing.","Static"],
+    ["Before/After Wall","Social Proof / Tribe",{band:"crowded",n:8},"Volume of transformations","Hundreds of straightened backs in 6 weeks.","Carousel"]
   ];
   const t3=document.getElementById("top3");
   t3.innerHTML=TOP3.map(a=>`
     <div class="angle">
-      <div class="head"><div class="rk">${a.rk}</div><div><div class="nm">${a.nm}</div><div class="cat">${a.cat}</div></div></div>
+      <div class="head"><div class="rk">${a.rk}</div><div style="flex:1"><div class="nm">${a.nm}</div><div class="cat">${a.cat}</div></div>${ubadge(a.u)}</div>
       <div class="body">
         <div class="ins">${a.ins}</div>
         <div class="hook">"${a.hook}"</div>
@@ -134,13 +163,16 @@
         <div class="micros">${a.micros.map(m=>`<div class="micro"><span class="tag">${m[0]}</span><span>${m[1]}</span></div>`).join("")}</div>
       </div>
     </div>`).join("");
-  let catFilter="all";
+  let catFilter="all",uFilter="all",uSort=0;
   const tb=document.getElementById("alltbody");
   function renderTable(){
-    const rows=ALL.filter(r=>catFilter==="all"||r[1]===catFilter);
-    tb.innerHTML=rows.map(r=>`<tr><td><b>${r[0]}</b></td><td><span class="catpill">${r[1]}</span></td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td></tr>`).join("");
+    let rows=ALL.filter(r=>(catFilter==="all"||r[1]===catFilter)&&(uFilter==="all"||r[2].band===uFilter));
+    if(uSort){rows=rows.slice().sort((a,b)=>uSort*(U[b[2].band].rank-U[a[2].band].rank||b[2].n-a[2].n));}
+    tb.innerHTML=rows.map(r=>`<tr><td><b>${r[0]}</b></td><td><span class="catpill">${r[1]}</span></td><td>${ubadge(r[2])}</td><td>${r[3]}</td><td>${r[4]}</td><td>${r[5]}</td></tr>`).join("");
   }
-  document.getElementById("catfilter").addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;catFilter=e.target.dataset.cat;[...e.currentTarget.children].forEach(b=>b.classList.toggle("on",b===e.target));renderTable();});
+  document.getElementById("catfilter").addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;catFilter=e.target.dataset.cat;[...e.currentTarget.querySelectorAll("button")].forEach(b=>b.classList.toggle("on",b===e.target));renderTable();});
+  document.getElementById("uniqfilter").addEventListener("click",e=>{if(e.target.tagName!=="BUTTON")return;uFilter=e.target.dataset.u;[...e.currentTarget.querySelectorAll("button")].forEach(b=>b.classList.toggle("on",b===e.target));renderTable();});
+  document.getElementById("usort").addEventListener("click",()=>{uSort=uSort===0?1:(uSort===1?-1:0);renderTable();});
   renderTable();
 </script>
 </body>

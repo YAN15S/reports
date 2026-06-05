@@ -14,9 +14,10 @@
   h1 { margin:0 0 4px; font-size:22px; }
   .sub { color:var(--muted); font-size:14px; }
   .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:18px auto 0; max-width:920px; padding:0 20px; }
-  #q { flex:1; min-width:200px; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
-  .filters { display:flex; gap:6px; flex-wrap:wrap; }
-  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:8px 12px; border-radius:8px; font-size:13px; cursor:pointer; }
+  #q { flex:1; min-width:160px; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
+  .filters { display:flex; gap:5px; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+  .filters::-webkit-scrollbar { display:none; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 11px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; flex-shrink:0; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
   main { max-width:920px; margin:18px auto 60px; padding:0 20px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
@@ -27,6 +28,7 @@
   .badge { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; margin-left:8px; vertical-align:middle; }
   .badge.winners { background:#ecfdf5; color:#065f46; }
   .badge.angles { background:#fef3c7; color:#92400e; }
+  .badge.vas { background:#f0f4ff; color:#1e40af; }
   .empty { color:var(--muted); text-align:center; padding:40px 0; }
 </style>
 </head>
@@ -39,6 +41,7 @@
     <button data-type="all" class="on">All</button>
     <button data-type="winners">Winners</button>
     <button data-type="angles">Angles</button>
+    <button data-type="vas">VAs</button>
     <button data-type="other">Other</button>
   </div>
 </div>

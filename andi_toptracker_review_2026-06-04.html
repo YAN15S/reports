@@ -13,16 +13,24 @@
   .header .sub { font-size: 14px; color: #666; margin-top: 6px; }
   .header .meta { font-size: 13px; color: #888; margin-top: 4px; }
   .container { max-width: 960px; margin: 0 auto; padding: 28px 24px; }
-  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-bottom: 28px; }
-  .stat-card { background: #fff; border-radius: 8px; padding: 18px 20px; border: 1px solid #e5e8ef; }
-  .stat-card .val { font-size: 26px; font-weight: 700; color: #1e3a5f; }
+  .pay-block { background: #fff; border: 1px solid #e5e8ef; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px; }
+  .pay-block h2 { font-size: 14px; font-weight: 600; color: #1e3a5f; margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .pay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pay-card { background: #f8faff; border: 1px solid #dce8fb; border-radius: 8px; padding: 16px 18px; }
+  .pay-card .currency { font-size: 11px; font-weight: 600; color: #6b7da0; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 4px; }
+  .pay-card .amount { font-size: 28px; font-weight: 700; color: #1e3a5f; }
+  .pay-card .symbol { font-size: 18px; }
+  .pay-rates { margin-top: 10px; font-size: 11px; color: #999; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 20px; }
+  .stat-card { background: #fff; border-radius: 8px; padding: 16px 18px; border: 1px solid #e5e8ef; }
+  .stat-card .val { font-size: 24px; font-weight: 700; color: #1e3a5f; }
   .stat-card .lbl { font-size: 12px; color: #888; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
-  .verdict-banner { background: #d4edda; border: 1px solid #b8dac1; border-radius: 8px; padding: 16px 20px; margin-bottom: 28px; display: flex; align-items: center; gap: 12px; }
-  .verdict-banner .icon { font-size: 24px; }
-  .verdict-banner .text strong { font-size: 16px; color: #155724; }
-  .verdict-banner .text p { font-size: 13px; color: #2d6a35; margin-top: 4px; }
+  .verdict-banner { background: #d4edda; border: 1px solid #b8dac1; border-radius: 8px; padding: 16px 20px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  .verdict-banner .icon { font-size: 22px; }
+  .verdict-banner .text strong { font-size: 15px; color: #155724; }
+  .verdict-banner .text p { font-size: 13px; color: #2d6a35; margin-top: 3px; }
   .section { background: #fff; border-radius: 8px; border: 1px solid #e5e8ef; margin-bottom: 20px; overflow: hidden; }
-  .section-header { padding: 16px 20px; border-bottom: 1px solid #f0f2f5; font-weight: 600; font-size: 14px; color: #1e3a5f; background: #fafbfd; display: flex; justify-content: space-between; align-items: center; }
+  .section-header { padding: 14px 20px; border-bottom: 1px solid #f0f2f5; font-weight: 600; font-size: 14px; color: #1e3a5f; background: #fafbfd; display: flex; justify-content: space-between; align-items: center; }
   .section-body { padding: 20px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; }
   th { text-align: left; padding: 8px 12px; background: #f5f6fa; color: #555; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 1px solid #e5e8ef; }
@@ -31,32 +39,43 @@
   tr:hover td { background: #fafbfd; }
   .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
   .badge-green { background: #d4edda; color: #155724; }
-  .badge-yellow { background: #fff3cd; color: #856404; }
-  .badge-blue { background: #d1ecf1; color: #0c5460; }
-  .badge-gray { background: #e9ecef; color: #495057; }
   .coverage-note { background: #e8f0fe; border: 1px solid #c5d5f7; border-radius: 6px; padding: 14px 16px; font-size: 13px; color: #1a3a6e; margin-bottom: 20px; }
   .activity-row td:first-child { color: #888; font-size: 12px; white-space: nowrap; }
-  .flag-none { color: #888; font-style: italic; font-size: 13px; }
   .confidence { display: flex; align-items: center; gap: 8px; font-size: 13px; margin-top: 12px; }
-  .confidence .dot { width: 10px; height: 10px; border-radius: 50%; background: #28a745; }
-  .confidence .dot.medium { background: #ffc107; }
-  h3 { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 10px; }
+  .confidence .dot { width: 10px; height: 10px; border-radius: 50%; background: #ffc107; }
   .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 640px) { .two-col { grid-template-columns: 1fr; } .header { padding: 20px; } }
-  .progress-bar { height: 6px; background: #e9ecef; border-radius: 3px; margin-top: 6px; }
-  .progress-bar .fill { height: 100%; border-radius: 3px; background: #28a745; }
   .tool-chip { display: inline-block; background: #f0f4ff; color: #2d50a0; border-radius: 4px; padding: 2px 7px; font-size: 11px; margin: 2px; }
+  @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .pay-grid { grid-template-columns: 1fr; } .header { padding: 20px; } }
 </style>
 </head>
 <body>
 <div class="accent-bar"></div>
 <div class="header">
   <h1>VA Activity Review: Andi (Dian Decena)</h1>
-  <div class="sub">TopTracker - Product Research Project</div>
-  <div class="meta">Review date: Jun 4, 2026 &nbsp;|&nbsp; Period covered: May 21 - Jun 4, 2026 (14 days) &nbsp;|&nbsp; Reviewer: Claude Agent 7</div>
+  <div class="sub">TopTracker — Product Research Project</div>
+  <div class="meta">Review date: Jun 4, 2026 &nbsp;|&nbsp; Period: May 21 – Jun 4, 2026 (14 days) &nbsp;|&nbsp; Agent 7</div>
 </div>
 
 <div class="container">
+
+  <div class="pay-block">
+    <h2>Pay for Period</h2>
+    <div class="pay-grid">
+      <div class="pay-card">
+        <div class="currency">USD</div>
+        <div class="amount"><span class="symbol">$</span>130.72</div>
+      </div>
+      <div class="pay-card">
+        <div class="currency">PHP</div>
+        <div class="amount"><span class="symbol">&#x20B1;</span>8,071.96</div>
+      </div>
+      <div class="pay-card">
+        <div class="currency">CAD</div>
+        <div class="amount"><span class="symbol">CA$</span>181.61</div>
+      </div>
+    </div>
+    <div class="pay-rates">Source: TopTracker tracked earnings. Rates fetched Jun 4, 2026: 1 USD = 61.75 PHP (BSP reference rate) &nbsp;|&nbsp; 1 USD = 1.3893 CAD</div>
+  </div>
 
   <div class="verdict-banner">
     <div class="icon">✅</div>
@@ -67,7 +86,7 @@
   </div>
 
   <div class="stats-grid">
-    <div class="stat-card"><div class="val">65:21</div><div class="lbl">Total Hours</div></div>
+    <div class="stat-card"><div class="val">65:21</div><div class="lbl">Hours Tracked</div></div>
     <div class="stat-card"><div class="val">49</div><div class="lbl">Sessions</div></div>
     <div class="stat-card"><div class="val">613+</div><div class="lbl">Screenshots Taken</div></div>
     <div class="stat-card"><div class="val">89</div><div class="lbl">Screenshots Reviewed</div></div>
@@ -77,7 +96,7 @@
   </div>
 
   <div class="coverage-note">
-    <strong>Screenshot coverage method:</strong> The TopTracker activity log displays the <em>most recent</em> screenshot per session as its thumbnail (highest proof ID = end-of-session). This was verified by opening a popup for the Jun 4 11:25am session: the displayed thumbnail (proof 745910917) showed a 1:10pm timestamp on a session that ended at 1:14pm. All 49 last-shots were downloaded directly from S3 and reviewed individually. Additionally, 40 first-shots from a prior review pass are on record. Together this gives coverage at both the start and end of every session. Mid-session drift cannot be ruled out with 100% certainty, but combined with consistent mouse/keyboard activity throughout, the risk is low.
+    <strong>Screenshot coverage method:</strong> The TopTracker activity log displays the <em>most recent</em> screenshot per session as its thumbnail (highest proof ID = end-of-session). Verified Jun 4 2026: proof 745910917 showed a 1:10pm timestamp on a session ending at 1:14pm. All 49 last-shots were downloaded directly from S3 and reviewed individually. Additionally, 40 first-shots from a prior review pass are on record. Combined with consistent mouse/keyboard activity throughout, confidence is medium-high.
   </div>
 
   <div class="section">
@@ -91,7 +110,7 @@
           <tr><th>Date / Time</th><th>Duration</th><th>Shots</th><th>Last-Shot Content</th><th>Verdict</th></tr>
         </thead>
         <tbody>
-          <tr class="activity-row"><td>May 21 &nbsp;11:47am–5:47pm</td><td>6:00</td><td>72</td><td>Amazon product page (ASIN research, $4.93, 4.1★)</td><td><span class="badge badge-green">On-task</span></td></tr>
+          <tr class="activity-row"><td>May 21 &nbsp;11:47am–5:47pm</td><td>6:00</td><td>72</td><td>Amazon product page (ASIN research, $4.93, 4.1&#9733;)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 21 &nbsp;9:22pm–10:32pm</td><td>1:10</td><td>14</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 22 &nbsp;3:45am–4:26am</td><td>0:40</td><td>8</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 22 &nbsp;4:51am–5:02am</td><td>0:10</td><td>2</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
@@ -102,12 +121,12 @@
           <tr class="activity-row"><td>May 22 &nbsp;10:19pm–12:20am</td><td>2:00</td><td>24</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 23 &nbsp;2:00am–4:05am</td><td>2:05</td><td>25</td><td>Product image search results page</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 23 &nbsp;6:36am–7:41am</td><td>1:05</td><td>13</td><td>AliExpress product listings</td><td><span class="badge badge-green">On-task</span></td></tr>
-          <tr class="activity-row"><td>May 24 &nbsp;2:38am–3:06am</td><td>0:28</td><td>5</td><td>Amazon product page (standing desk / monitor product)</td><td><span class="badge badge-green">On-task</span></td></tr>
+          <tr class="activity-row"><td>May 24 &nbsp;2:38am–3:06am</td><td>0:28</td><td>5</td><td>Amazon product page (monitor / desk accessory)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 24 &nbsp;10:33am–11:01am</td><td>0:27</td><td>5</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 25 &nbsp;1:20am–1:58am</td><td>0:37</td><td>7</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 25 &nbsp;6:15am–8:50am</td><td>2:35</td><td>31</td><td>WatchCount.com (eBay watcher research)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 25 &nbsp;10:19am–10:34am</td><td>0:14</td><td>2</td><td>Product demo video (research context)</td><td><span class="badge badge-green">On-task</span></td></tr>
-          <tr class="activity-row"><td>May 25 &nbsp;8:44pm–9:45pm</td><td>1:01</td><td>12</td><td>AliExpress search results (soap dispensers / home products)</td><td><span class="badge badge-green">On-task</span></td></tr>
+          <tr class="activity-row"><td>May 25 &nbsp;8:44pm–9:45pm</td><td>1:01</td><td>12</td><td>AliExpress search results (home products)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 26 &nbsp;1:29am–4:43am</td><td>3:14</td><td>38</td><td>AliExpress product page ($66.74)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 26 &nbsp;5:42am–6:40am</td><td>0:58</td><td>11</td><td>AliExpress product detail ($45.94)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 26 &nbsp;7:39am–8:14am</td><td>0:35</td><td>6</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
@@ -117,7 +136,7 @@
           <tr class="activity-row"><td>May 27 &nbsp;6:51am–9:56am</td><td>3:05</td><td>37</td><td>Google Shopping product search results</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 28 &nbsp;3:50am–4:04am</td><td>0:13</td><td>2</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 28 &nbsp;4:05am–5:26am</td><td>1:21</td><td>16</td><td>Amazon search results (health / supplement products)</td><td><span class="badge badge-green">On-task</span></td></tr>
-          <tr class="activity-row"><td>May 28 &nbsp;9:43am–9:59am</td><td>0:15</td><td>3</td><td>Google Trends / data comparison tool</td><td><span class="badge badge-green">On-task</span></td></tr>
+          <tr class="activity-row"><td>May 28 &nbsp;9:43am–9:59am</td><td>0:15</td><td>3</td><td>Google Trends / data comparison</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 28 &nbsp;12:18pm–2:54pm</td><td>2:35</td><td>31</td><td>AliExpress browsing (product search)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 29 &nbsp;2:48am–4:29am</td><td>1:40</td><td>20</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>May 29 &nbsp;2:23pm–2:33pm</td><td>0:09</td><td>1</td><td>AliExpress product page (supplement, $60.56)</td><td><span class="badge badge-green">On-task</span></td></tr>
@@ -134,7 +153,7 @@
           <tr class="activity-row"><td>Jun 3 &nbsp;5:20am–6:50am</td><td>1:30</td><td>18</td><td>Dense text document (research article / product doc)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>Jun 3 &nbsp;7:10am–9:00am</td><td>1:50</td><td>22</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>Jun 3 &nbsp;9:00am–9:11am</td><td>0:10</td><td>2</td><td>Google Sheets — Product DB</td><td><span class="badge badge-green">On-task</span></td></tr>
-          <tr class="activity-row"><td>Jun 3 &nbsp;12:30pm–2:21pm</td><td>1:50</td><td>22</td><td>Google Shopping product cards (research)</td><td><span class="badge badge-green">On-task</span></td></tr>
+          <tr class="activity-row"><td>Jun 3 &nbsp;12:30pm–2:21pm</td><td>1:50</td><td>22</td><td>Google Shopping product cards</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>Jun 4 &nbsp;1:43am–3:33am</td><td>1:50</td><td>22</td><td>Amazon search (health / supplement products)</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>Jun 4 &nbsp;4:39am–4:54am</td><td>0:15</td><td>3</td><td>Product listing page</td><td><span class="badge badge-green">On-task</span></td></tr>
           <tr class="activity-row"><td>Jun 4 &nbsp;4:54am–6:59am</td><td>2:04</td><td>24</td><td>AliExpress product page ($16.51)</td><td><span class="badge badge-green">On-task</span></td></tr>
@@ -157,21 +176,20 @@
         <span class="tool-chip">Google Shopping</span>
         <span class="tool-chip">Google Trends</span>
         <span class="tool-chip">Product video research</span>
-        <div style="margin-top:14px;font-size:13px;color:#555;">All tools are consistent with the product research role. No personal social media, entertainment, games, or unrelated browsing detected in any session.</div>
+        <div style="margin-top:14px;font-size:13px;color:#555;">All tools consistent with the product research role. No personal social media, entertainment, games, or unrelated browsing detected in any session.</div>
       </div>
     </div>
-
     <div class="section">
-      <div class="section-header">Keyboard / Mouse Activity (CSV)</div>
+      <div class="section-header">Keyboard / Mouse Activity</div>
       <div class="section-body">
         <table>
           <tr><th>Metric</th><th>Total</th></tr>
           <tr><td>Mouse clicks</td><td>72,216</td></tr>
           <tr><td>Keystrokes</td><td>23,698</td></tr>
-          <tr><td>Sessions flagged (low KB)</td><td style="color:#856404">4 of 49</td></tr>
+          <tr><td>Sessions with low KB</td><td style="color:#856404">4 of 49</td></tr>
           <tr><td>Sessions with 0 keystrokes</td><td>2 (both &lt;15 min browsing)</td></tr>
         </table>
-        <div style="margin-top:12px;font-size:12px;color:#666;">The 4 low-KB sessions were all short browsing sessions (AliExpress / product pages) where typing is not expected. No session shows the logged-not-worked pattern (long duration + near-zero combined activity).</div>
+        <div style="margin-top:12px;font-size:12px;color:#666;">The 4 low-KB sessions were all short browsing sessions where typing is not expected. No session shows the logged-not-worked pattern.</div>
       </div>
     </div>
   </div>
@@ -179,15 +197,15 @@
   <div class="section">
     <div class="section-header">Overall Assessment</div>
     <div class="section-body">
-      <p style="font-size:14px;line-height:1.7;color:#333;">Andi is fully on-task across the entire 14-day window. Every session end-state shows product research work — the Product DB spreadsheet, product sourcing on Amazon and AliExpress, eBay saturation research on WatchCount, Google Trends checks, and Google Shopping comparisons. The keyboard and mouse totals (72,216 clicks / 23,698 keystrokes) confirm active engagement throughout. The 4 low-keyboard sessions are all short browsing sessions where typing is not expected.</p>
+      <p style="font-size:14px;line-height:1.7;color:#333;">Andi is fully on-task across the entire 14-day window. Every session end-state shows product research work — the Product DB spreadsheet, product sourcing on Amazon and AliExpress, eBay saturation research on WatchCount, Google Trends checks, and Google Shopping comparisons. The keyboard and mouse totals (72,216 clicks / 23,698 keystrokes) confirm active engagement throughout.</p>
       <div class="confidence" style="margin-top:14px;">
-        <div class="dot medium"></div>
-        <span style="color:#555;font-size:13px;"><strong>Confidence: medium-high.</strong> Every session reviewed at end-of-session. Mid-session screenshots not individually checked. The end-shot method combined with consistent KB/mouse activity throughout gives strong confidence, but not 100% certitude over every individual mid-session frame.</span>
+        <div class="dot"></div>
+        <span style="color:#555;font-size:13px;"><strong>Confidence: medium-high.</strong> Every session reviewed at end-of-session. Mid-session screenshots not individually checked. End-shot method combined with consistent KB/mouse activity throughout gives strong confidence, but not 100% certitude over every individual mid-session frame.</span>
       </div>
     </div>
   </div>
 
-  <div style="font-size:11px;color:#aaa;text-align:center;margin-top:20px;padding-bottom:20px;">
+  <div style="font-size:11px;color:#aaa;text-align:center;padding-bottom:24px;">
     Generated Jun 4, 2026 &nbsp;|&nbsp; Agent 7 - Review TopTracker &nbsp;|&nbsp; tracker.toptal.com
   </div>
 

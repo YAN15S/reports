@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Angles: Wireless Castable Fish Finder | 2026-06-06</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --blue: #2563eb;
+    --green: #16a34a;
+    --amber: #d97706;
+    --red: #dc2626;
+    --purple: #7c3aed;
+    --teal: #0d9488;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-500: #64748b;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--gray-50); color: var(--gray-900); }
+
+  /* TOP ACCENT BAR */
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--blue) 0%, var(--teal) 100%); }
+
+  /* HEADER */
+  .header { background: #fff; padding: 32px 40px 24px; border-bottom: 1px solid var(--gray-200); }
+  .header h1 { font-size: 26px; font-weight: 700; color: var(--slate); }
+  .header .subtitle { font-size: 14px; color: var(--gray-500); margin-top: 6px; }
+  .header .meta { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+
+  /* MAIN CONTENT */
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 40px; }
+
+  /* SECTION HEADERS */
+  h2 { font-size: 18px; font-weight: 700; color: var(--slate); margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gray-200); }
+  h3 { font-size: 15px; font-weight: 600; color: var(--slate); margin: 20px 0 10px; }
+
+  /* SUMMARY BLOCK */
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin: 24px 0; }
+  .summary-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px; }
+  .summary-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-500); margin-bottom: 8px; }
+  .summary-card .value { font-size: 14px; color: var(--gray-700); line-height: 1.5; }
+  .summary-card .value strong { color: var(--slate); }
+
+  /* UNIQUENESS BADGES */
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  .badge-fresh { background: #dcfce7; color: #15803d; }
+  .badge-twist { background: #fef9c3; color: #a16207; }
+  .badge-crowded { background: #fee2e2; color: #b91c1c; }
+
+  /* CATEGORY BADGES */
+  .cat-badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+  .cat-1 { background: #fce7f3; color: #9d174d; }
+  .cat-2 { background: #dbeafe; color: #1d4ed8; }
+  .cat-3 { background: #f3e8ff; color: #6b21a8; }
+  .cat-4 { background: #fee2e2; color: #991b1b; }
+  .cat-5 { background: #dcfce7; color: #166534; }
+
+  /* TOP 3 ANGLE CARDS */
+  .top3-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin: 20px 0; }
+  .top3-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 12px; overflow: hidden; }
+  .top3-card .card-accent { height: 4px; }
+  .top3-card.rank1 .card-accent { background: #f59e0b; }
+  .top3-card.rank2 .card-accent { background: #94a3b8; }
+  .top3-card.rank3 .card-accent { background: #b45309; }
+  .top3-card .card-body { padding: 20px; }
+  .top3-card .rank { font-size: 11px; font-weight: 700; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .top3-card .angle-name { font-size: 18px; font-weight: 700; color: var(--slate); margin-bottom: 8px; }
+  .top3-card .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .top3-card .field-label { font-size: 11px; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.05em; margin: 12px 0 4px; }
+  .top3-card .field-value { font-size: 13px; color: var(--gray-700); line-height: 1.5; }
+  .top3-card .hook-box { background: var(--gray-50); border-left: 3px solid var(--blue); padding: 10px 14px; border-radius: 0 6px 6px 0; margin: 6px 0; font-size: 13px; color: var(--gray-700); font-style: italic; line-height: 1.5; }
+  .top3-card .hook-type { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--blue); margin-bottom: 4px; }
+
+  /* ALL 20 ANGLES TABLE */
+  .angles-controls { display: flex; gap: 10px; flex-wrap: wrap; margin: 16px 0; }
+  .filter-btn { padding: 6px 14px; border: 1px solid var(--gray-200); border-radius: 6px; background: #fff; font-size: 12px; cursor: pointer; color: var(--gray-700); }
+  .filter-btn.active { background: var(--slate); color: #fff; border-color: var(--slate); }
+  .angles-grid { display: grid; gap: 12px; }
+  .angle-row { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 16px; }
+  .angle-row .angle-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .angle-row .angle-num { font-size: 12px; font-weight: 700; color: var(--gray-500); min-width: 24px; }
+  .angle-row .angle-name { font-size: 14px; font-weight: 700; color: var(--slate); flex: 1; }
+  .angle-row .angle-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+  .angle-row .insight { font-size: 13px; color: var(--gray-700); margin-bottom: 6px; line-height: 1.4; }
+  .angle-row .hook { font-size: 13px; color: var(--gray-500); font-style: italic; border-left: 2px solid var(--gray-200); padding-left: 10px; margin-bottom: 4px; line-height: 1.4; }
+  .angle-row .format { font-size: 11px; color: var(--gray-500); }
+
+  /* MACRO ANGLES */
+  .macro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .macro-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 16px; }
+  .macro-card .macro-title { font-size: 14px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .macro-card .macro-desc { font-size: 13px; color: var(--gray-700); line-height: 1.5; }
+
+  /* RESEARCH NOTES */
+  .research-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin: 16px 0; }
+  .research-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 16px; }
+  .research-card ul { padding-left: 16px; font-size: 13px; color: var(--gray-700); line-height: 1.7; }
+
+  /* LEGEND */
+  .legend { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 20px; margin: 24px 0; }
+  .legend h3 { margin-top: 0; margin-bottom: 12px; }
+  .legend-items { display: flex; gap: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-700); }
+
+  /* PRIMARY OBJECTION */
+  .objection-box { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 16px 20px; margin: 16px 0; font-size: 14px; color: #664d03; line-height: 1.5; }
+  .objection-box strong { display: block; margin-bottom: 4px; color: #7c4a00; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .top3-grid, .summary-grid, .macro-grid, .research-grid { grid-template-columns: 1fr; }
+    .container { padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<div class="header">
+  <h1>Marketing Angles: Wireless Castable Fish Finder</h1>
+  <div class="subtitle">Avatar: Male recreational angler, 25-64, shore / kayak / ice fisher, tired of casting blind and coming home empty-handed</div>
+  <div class="meta">Product: Venterior B07WVQYKZ9 &nbsp;|&nbsp; Search Term: "fish finder" &nbsp;|&nbsp; Competitor Ads (N=5 product-matched winners) &nbsp;|&nbsp; Generated: 2026-06-06 &nbsp;|&nbsp; Agent 6</div>
+</div>
+<div class="container">
+
+<!-- SUMMARY BLOCK -->
+<h2>Summary</h2>
+<div class="summary-grid">
+  <div class="summary-card">
+    <div class="label">Avatar</div>
+    <div class="value"><strong>Male angler, 25-64</strong><br>Fishes from shore, bank, kayak, dock, or ice. Has limited or no boat access. Spends hours moving spots with no idea if fish are present. Tired of guessing, tired of going home empty. Wants data, not luck.</div>
+  </div>
+  <div class="summary-card">
+    <div class="label">Core Transformation</div>
+    <div class="value"><strong>Before:</strong> Casting blind into empty water, wasting hours moving spots, leaving with nothing.<br><br><strong>After:</strong> Sees exactly where fish are, what depth, what structure - before the first cast. Stays longer where it counts, moves faster from dead spots.</div>
+  </div>
+  <div class="summary-card">
+    <div class="label">Primary Objection</div>
+    <div class="value"><strong>"Will this actually show me where the fish are, or is it just gimmick electronics that reads noise?"</strong><br><br>Deeper fear: being the guy who spent $80 on a toy that does nothing while the fish are still laughing at him.</div>
+  </div>
+</div>
+
+<div class="objection-box">
+  <strong>PRIMARY OBJECTION:</strong>
+  "I've been burned by fishing gadgets before - does this thing actually find fish, or does it just show random blips on a screen?"
+</div>
+
+<!-- TOP 3 ANGLES -->
+<h2>Top 3 Angles (Ranked)</h2>
+<p style="font-size:13px;color:#64748b;margin-bottom:16px;">Ranked by emotional charge x uniqueness vs. the 5 product-matched competitor ads in the Winners DB. Competitors (HawkEye FishPod x3, Deeper Max x2) run pure Aspiration/tech-upgrade framing only. Every angle below exploits a category they have completely ignored.</p>
+
+<div class="top3-grid">
+
+  <!-- RANK 1 -->
+  <div class="top3-card rank1">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="rank">#1 Best Angle</div>
+      <div class="angle-name">Blind Cast Pain</div>
+      <div class="badges">
+        <span class="badge badge-fresh">Fresh 0/5</span>
+        <span class="cat-badge cat-1">Pain / Frustration</span>
+      </div>
+
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Every angler knows the gut-punch of packing up after hours on the water with nothing to show - this angle names that specific failure ("you were casting into empty water") and puts the product as the only logical fix.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="field-value">"You spent 4 hours fishing the same spot. Turns out the fish were 30 feet to the left the whole time. This $80 sensor would have shown you that in 10 seconds."</div>
+
+      <div class="field-label">Best Format</div>
+      <div class="field-value">UGC video / VSL - angler at the water, cast out the sensor, sees fish on screen, catches fish. Before/after story arc.</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="field-value">Both competitors (HawkEye, Deeper) run Aspiration only - they never name the pain. This angle is the emotional open wound: wasted time, wasted effort, going home empty. Fresh 0/5 - zero competitors touch it. Highest emotional charge in the category.</div>
+
+      <div class="field-label">Micro Hooks</div>
+
+      <div class="hook-box">
+        <div class="hook-type">Problem-First</div>
+        "You know that feeling when you've been fishing for 3 hours and haven't had a single bite? That's not bad luck. That's fishing blind. This little sensor tells you exactly where the fish are before you even cast."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Result-First</div>
+        "My buddy went from skunked every weekend to catching bass within 20 minutes of arriving. The difference? He stopped guessing and started looking."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Curiosity</div>
+        "99% of shore anglers have no idea how many fish are sitting 15 feet away from where they're casting. This thing shows you."
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 2 -->
+  <div class="top3-card rank2">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="rank">#2 Best Angle</div>
+      <div class="angle-name">No Boat Needed</div>
+      <div class="badges">
+        <span class="badge badge-fresh">Fresh 0/5</span>
+        <span class="cat-badge cat-3">Contrarian / Pattern Interrupt</span>
+      </div>
+
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Fish finders have always been "for boats" - this challenges that belief head-on, repositioning the product as the first real electronics for the 90% of anglers who fish from shore, bank, kayak, or ice.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="field-value">"Fish finders are for boats. Wrong. Cast this from shore, your kayak, the dock, or through the ice - and see exactly what's below. No boat required. No installation. Just cast it out."</div>
+
+      <div class="field-label">Best Format</div>
+      <div class="field-value">Static image or carousel - show the 4 use cases (shore, kayak, dock, ice) in panels, each with a reading on the built-in LCD.</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="field-value">This directly challenges the dominant belief that sonar is boat-only. Neither HawkEye nor Deeper runs this angle (both emphasize smartphone integration, not the shore/no-boat access angle). Deeply emotional for the bank angler who has always felt like a second-class fisher. Fresh 0/5.</div>
+
+      <div class="field-label">Micro Hooks</div>
+
+      <div class="hook-box">
+        <div class="hook-type">Contra</div>
+        "Stop thinking fish finders are only for boats. Cast this from shore and see the bottom, the depth, and the fish - in real time."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Result-First</div>
+        "I fish from the bank. I used to have zero electronics. Now I know the depth, the structure, and whether fish are even there - before I rig up."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Social Proof</div>
+        "I've been bank fishing for 20 years and never thought I'd have a fish finder. This thing changed that."
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 3 -->
+  <div class="top3-card rank3">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="rank">#3 Best Angle</div>
+      <div class="angle-name">Stay or Move</div>
+      <div class="badges">
+        <span class="badge badge-fresh">Fresh 0/5</span>
+        <span class="cat-badge cat-4">Fear / Urgency</span>
+      </div>
+
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Every shore angler faces the same impossible question: "Should I stay here or move?" This product ends that paralysis with real data - which is a Fear angle because staying in a dead spot costs fish, while moving prematurely costs fish too.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="field-value">"You move too soon and you walk away from fish. You stay too long and you're fishing an empty hole. Cast this out first. Know before you decide."</div>
+
+      <div class="field-label">Best Format</div>
+      <div class="field-value">UGC video or testimonial - angler debates moving, casts sensor, sees empty bottom, moves 30 feet, sees fish, catches one within minutes.</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="field-value">The "stay or move" dilemma is the central emotional tension of shore fishing - and zero competitors address it. Both HawkEye and Deeper focus on the device's tech (3D scan, smartphone screen) not on the decision the angler is trying to make. This angle speaks to the real mental cost of guessing. Fresh 0/5.</div>
+
+      <div class="field-label">Micro Hooks</div>
+
+      <div class="hook-box">
+        <div class="hook-type">Fear / Problem-First</div>
+        "The worst feeling in fishing: you pack up and walk to a new spot, and ten minutes later someone catches a big one right where you were standing."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Curiosity</div>
+        "Most anglers waste 40% of their time on the water in dead spots. A $80 sonar sensor tells you in 10 seconds if it's worth staying."
+      </div>
+      <div class="hook-box">
+        <div class="hook-type">Social Proof</div>
+        "I used to move spots every 20 minutes because I had no idea if fish were there. Now I check first. My catch rate doubled."
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ALL 20 ANGLES -->
+<h2>All 20 Angles</h2>
+<div class="angles-controls">
+  <button class="filter-btn active" onclick="filterAngles('all')">All</button>
+  <button class="filter-btn" onclick="filterAngles('pain')">Pain / Frustration</button>
+  <button class="filter-btn" onclick="filterAngles('aspiration')">Aspiration / Identity</button>
+  <button class="filter-btn" onclick="filterAngles('contrarian')">Contrarian</button>
+  <button class="filter-btn" onclick="filterAngles('fear')">Fear / Urgency</button>
+  <button class="filter-btn" onclick="filterAngles('social')">Social Proof</button>
+  <button class="filter-btn" onclick="filterAngles('fresh')">Fresh Only</button>
+  <button class="filter-btn" onclick="filterAngles('twist')">Twist Only</button>
+  <button class="filter-btn" onclick="filterAngles('crowded')">Crowded Only</button>
+</div>
+
+<div class="angles-grid" id="anglesGrid">
+
+<!-- CAT 1: PAIN / FRUSTRATION (4 angles) -->
+
+<div class="angle-row" data-cat="pain" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">01</div>
+    <div class="angle-name">Blind Cast Pain</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-1">Pain / Frustration</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / VSL</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Anglers cast blind for hours and go home empty - this names the specific failure and puts the product as the cure.</div>
+  <div class="hook">"You spent 4 hours fishing the same spot. Turns out the fish were 30 feet to the left the whole time. This $80 sensor would have shown you that in 10 seconds."</div>
+</div>
+
+<div class="angle-row" data-cat="pain" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">02</div>
+    <div class="angle-name">Moving Spot Trap</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-1">Pain / Frustration</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static Image / Carousel</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The constant "should I stay or should I move" anxiety burns time and costs fish - data ends the guessing.</div>
+  <div class="hook">"You move too soon and lose fish. You stay too long and fish an empty hole. Cast this out first. Know before you decide."</div>
+</div>
+
+<div class="angle-row" data-cat="pain" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">03</div>
+    <div class="angle-name">Skunk Day Shame</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-1">Pain / Frustration</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Testimonial</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Getting skunked (catching nothing) is a personal failure and social embarrassment - especially in front of family or friends. The product removes that identity threat.</div>
+  <div class="hook">"My kid asked why we never catch fish when dad takes him. I had no good answer. Then I got this. First trip out - 6 bass. Now he wants to go every weekend."</div>
+</div>
+
+<div class="angle-row" data-cat="pain" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">04</div>
+    <div class="angle-name">Wasted Weekend</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-1">Pain / Frustration</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static Image</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The 25-64 male demographic has limited time - wasting a whole Saturday on an empty spot is a real cost, not a minor inconvenience.</div>
+  <div class="hook">"I drive 45 minutes to the lake. I have 3 hours. I can't afford to spend them on a spot with nothing in it. This tells me in 10 seconds."</div>
+</div>
+
+<!-- CAT 2: ASPIRATION / IDENTITY (4 angles) -->
+
+<div class="angle-row" data-cat="aspiration" data-unique="twist">
+  <div class="angle-header">
+    <div class="angle-num">05</div>
+    <div class="angle-name">Smarter Angler</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-2">Aspiration / Identity</span>
+    <span class="badge badge-twist">Twist 2/5</span>
+    <span class="format">UGC Video / VSL</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Competitors sell "smarter tech" (smartphone screen, 3D scan) - this sells "smarter angler" identity, shifting the frame from device features to personal evolution.</div>
+  <div class="hook">"The guys who consistently catch fish aren't luckier than you. They're fishing smarter. They know where the fish are before they cast."</div>
+</div>
+
+<div class="angle-row" data-cat="aspiration" data-unique="twist">
+  <div class="angle-header">
+    <div class="angle-num">06</div>
+    <div class="angle-name">Shore Fishing Upgrade</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-2">Aspiration / Identity</span>
+    <span class="badge badge-twist">Twist 2/5</span>
+    <span class="format">Carousel / Static</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Shore anglers have always been the "lesser" fishers vs. boat anglers - this product closes that gap and gives them something boat guys don't have: no setup, no trailer, no ramp.</div>
+  <div class="hook">"Shore fishing used to mean going in blind. Now you've got better intel than half the boats on the lake."</div>
+</div>
+
+<div class="angle-row" data-cat="aspiration" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">07</div>
+    <div class="angle-name">Dad Who Delivers</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-2">Aspiration / Identity</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Testimonial</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> For the 35-55 male segment, fishing with kids is about being the "capable dad" - the one who always knows where the fish are. The product protects that identity.</div>
+  <div class="hook">"Fishing with your kids is supposed to be about catching fish, not explaining why you're going home empty again."</div>
+</div>
+
+<div class="angle-row" data-cat="aspiration" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">08</div>
+    <div class="angle-name">Ice Fishing Edge</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-2">Aspiration / Identity</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Static</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Ice fishing is brutally unforgiving - drill in the wrong spot and you freeze in a dead hole. This product is uniquely suited to drop-the-sensor ice use, and zero competitors target ice anglers specifically.</div>
+  <div class="hook">"Ice fishing in the wrong hole means sitting in the cold for nothing. Drop this sensor through the hole first. Know if it's worth drilling."</div>
+</div>
+
+<!-- CAT 3: CONTRARIAN / PATTERN INTERRUPT (4 angles) -->
+
+<div class="angle-row" data-cat="contrarian" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">09</div>
+    <div class="angle-name">No Boat Needed</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-3">Contrarian / Pattern Interrupt</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static / Carousel</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The belief "fish finders are for boats" is universal - this challenges it head-on and repositions the category entirely for shore/kayak/ice fishers.</div>
+  <div class="hook">"Fish finders are for boats. Wrong. Cast this from shore, your kayak, the dock, or through the ice. No boat. No installation. Just cast it out and see what's below."</div>
+</div>
+
+<div class="angle-row" data-cat="contrarian" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">10</div>
+    <div class="angle-name">Luck Is a Myth</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-3">Contrarian / Pattern Interrupt</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static / VSL</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Anglers attribute poor results to luck, weather, or the fish "not biting" - this reframes the real problem as information deficit, not luck, which is a confrontational but sticky insight.</div>
+  <div class="hook">"The fish aren't not biting. They're just not where you're casting. Luck isn't a fishing strategy."</div>
+</div>
+
+<div class="angle-row" data-cat="contrarian" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">11</div>
+    <div class="angle-name">$80 vs. $80K Boat</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-3">Contrarian / Pattern Interrupt</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static / Carousel</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The pattern interrupt is the price gap - a $80 sensor gives the shore angler the same core data (depth, fish location, bottom) as a $80,000 boat rig.</div>
+  <div class="hook">"The guy on the $80,000 boat knows the depth, the structure, and where the fish are. Now you do too. For $80."</div>
+</div>
+
+<div class="angle-row" data-cat="contrarian" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">12</div>
+    <div class="angle-name">Spot Loyalty Is Costing You</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-3">Contrarian / Pattern Interrupt</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Anglers stay loyal to "their spot" out of habit and hope - this challenges that belief by showing the spot is probably empty and the fish have moved.</div>
+  <div class="hook">"You've been going to the same spot for 3 years. It used to be good. Have you checked if it still is? Fish move. Your spot doesn't."</div>
+</div>
+
+<!-- CAT 4: FEAR / URGENCY (4 angles) -->
+
+<div class="angle-row" data-cat="fear" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">13</div>
+    <div class="angle-name">Stay or Move</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-4">Fear / Urgency</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Testimonial</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The fear of making the wrong spot decision is the defining micro-anxiety of shore fishing - real data ends it.</div>
+  <div class="hook">"The worst feeling in fishing: you pack up and move, and ten minutes later someone catches a trophy right where you were standing."</div>
+</div>
+
+<div class="angle-row" data-cat="fear" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">14</div>
+    <div class="angle-name">Season Slipping Away</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-4">Fear / Urgency</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static / Carousel</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> For the 25-64 male, fishing season is short and the weekends are limited - each wasted trip is a real loss that compounds across a season.</div>
+  <div class="hook">"You've got maybe 20 fishing trips left this season. How many do you want to spend fishing empty water?"</div>
+</div>
+
+<div class="angle-row" data-cat="fear" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">15</div>
+    <div class="angle-name">The Smart Fish Finder Lie</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-4">Fear / Urgency</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">VSL / UGC Video</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Fear of buying another gadget that doesn't work - this pre-empts the PRIMARY OBJECTION by naming it in the hook and immediately defusing it with specificity (1,084 reviews, 4.3 stars).</div>
+  <div class="hook">"I've wasted money on fishing gadgets that didn't do anything. So I was skeptical. Then I checked: 1,084 Amazon reviews, 4.3 stars. Ordered it. It works."</div>
+</div>
+
+<div class="angle-row" data-cat="fear" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">16</div>
+    <div class="angle-name">Cold Hole Fear</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-4">Fear / Urgency</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Static</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Ice fishing-specific fear - drilling in the wrong spot means sitting in dangerous cold for nothing. The cost of guessing is physically painful, not just disappointing.</div>
+  <div class="hook">"Drilling an ice hole in the wrong spot means you're sitting in 10-degree weather for nothing. Check before you drill."</div>
+</div>
+
+<!-- CAT 5: SOCIAL PROOF / TRIBE (4 angles) -->
+
+<div class="angle-row" data-cat="social" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">17</div>
+    <div class="angle-name">Skeptic Converts</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-5">Social Proof / Tribe</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Testimonial / UGC Video</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The avatar is skeptical - social proof from a fellow skeptic who got burned before is the most disarming opening possible, because it matches their exact mindset.</div>
+  <div class="hook">"I almost didn't buy this because I've wasted money on fishing gadgets before. My buddy convinced me. First trip, I caught three bass in 45 minutes. I hadn't caught anything in that spot in months."</div>
+</div>
+
+<div class="angle-row" data-cat="social" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">18</div>
+    <div class="angle-name">Guys Like You</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-5">Social Proof / Tribe</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Testimonial / Static</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> The avatar sees himself as a "real" angler who doesn't need gadgets - this reframes gadget-use as what smart real anglers do, not what beginners or weekend warriors do.</div>
+  <div class="hook">"I've been fishing for 30 years. I resisted electronics. Then I tried this on a bank trip and caught more in one morning than I had all month. Old dogs can learn new spots."</div>
+</div>
+
+<div class="angle-row" data-cat="social" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">19</div>
+    <div class="angle-name">3,000 Anglers Know</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-5">Social Proof / Tribe</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">Static / Carousel</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Uses the AliExpress 3,000+ sold signal as social proof - large numbers of fellow anglers have already validated this decision, reducing perceived risk.</div>
+  <div class="hook">"Over 3,000 anglers added this to their tackle bag. They stopped casting blind. You can too."</div>
+</div>
+
+<div class="angle-row" data-cat="social" data-unique="fresh">
+  <div class="angle-header">
+    <div class="angle-num">20</div>
+    <div class="angle-name">Kayak Community Stamp</div>
+  </div>
+  <div class="angle-meta">
+    <span class="cat-badge cat-5">Social Proof / Tribe</span>
+    <span class="badge badge-fresh">Fresh 0/5</span>
+    <span class="format">UGC Video / Testimonial</span>
+  </div>
+  <div class="insight"><strong>Insight:</strong> Kayak anglers are a tight, gear-sharing community - framing this as "what the kayak fishing community has figured out" leverages tribal belonging and peer adoption signals.</div>
+  <div class="hook">"Kayak anglers figured this out a while ago. No boat mount, no transducer cable, no permanent install. Just cast it off the bow and see the bottom. Shore anglers are catching on."</div>
+</div>
+
+</div><!-- end anglesGrid -->
+
+<!-- MACRO ANGLES -->
+<h2>Macro-Angles (Offer Level)</h2>
+<div class="macro-grid">
+
+  <div class="macro-card">
+    <div class="macro-title">Father's Day (Seasonal - Summer)</div>
+    <div class="macro-desc">Activate 2 weeks before Father's Day (early June). Angle: "Give dad what he actually wants - more fish." Price point $79.95 sits perfectly in the Father's Day gift range for a fishing dad. Hook: "Dad spends every weekend fishing. Maybe give him a reason to catch something this time." High-intent seasonal audience, high conversion on gift framing.</div>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-title">Christmas / Holiday (Winter - BFCM)</div>
+    <div class="macro-desc">Activate Black Friday through Christmas. Angle: "The fishing gift that actually gets used." Most fishing gifts collect dust; this one changes every future trip. Hook: "He already has lures. He already has rods. Give him the one thing he's been missing: knowing where the fish are." Gift-for-him framing with the added push of "he'd never buy it for himself."</div>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-title">Ice Fishing Season (Winter)</div>
+    <div class="macro-desc">Activate October-November, before ice-over. Target ice fishing audience specifically - a unique use case no competitor targets. Angle: "Before you drill, know if it's worth it." Ice fishing has the highest "cold hole" cost of any fishing type (physically dangerous to guess wrong). High-relevance niche with passionate buyers and limited electronics options.</div>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-title">Fishing Season Opener (Spring)</div>
+    <div class="macro-desc">Activate late March through April (state-by-state opener). Angle: "Start the season smarter than last year." This is a renewal moment - anglers are motivated to change their approach and buy new gear. Hook: "Last season you guessed. This season you'll know." High purchase-intent window; the "new season, new approach" mindset is at its peak.</div>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-title">Evergreen Milestone (Social Proof Trigger)</div>
+    <div class="macro-desc">When the product crosses meaningful milestones (500 reviews, 1,000 reviews, 5,000 units sold). Angle: "1,000+ anglers already stopped guessing." Use real milestones as urgency and validation signals - ties directly to the Social Proof tribe angles. Can refresh creative without changing the offer.</div>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-title">Back-to-School / Labor Day (Fall)</div>
+    <div class="macro-desc">Activate late August. Angle: "One last summer trip before the season ends." Targets the urgency of diminishing weekends. Fall fishing (bass pre-spawn, catfish, etc.) is peak season in many regions. Hook: "The season's winding down. Make the last few trips count." Bridges the summer-to-fall transition window.</div>
+  </div>
+
+</div>
+
+<!-- RESEARCH NOTES -->
+<h2>Research Notes</h2>
+<div class="research-grid">
+
+  <div class="research-card">
+    <h3>Top Pain Points (Real)</h3>
+    <ul>
+      <li>"Casting into empty water and wasting time" (Bass Resource forum, verbatim)</li>
+      <li>Moving spots too quickly OR staying too long - the core guessing loop</li>
+      <li>Settings reset when device turns off (verified review complaint)</li>
+      <li>Wifi/Bluetooth signal loss beyond 10-30 feet on phone-based units</li>
+      <li>False readings in choppy water or when retrieved too fast</li>
+      <li>Requires a dedicated second rod to use properly</li>
+      <li>Battery life drops in cold weather (ice fishing use case)</li>
+      <li>Getting skunked (catching nothing) in front of family / kids</li>
+      <li>Wasted drive + wasted Saturday on a dead spot</li>
+      <li>No boat = no fish finder options (before this product existed)</li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Top Benefits (Verified)</h3>
+    <ul>
+      <li>Real-time depth, fish location, and bottom contour on built-in LCD (no phone required)</li>
+      <li>Works from shore, bank, kayak, dock, and ice - no boat needed</li>
+      <li>Know whether to stay or move before wasting time rigging up</li>
+      <li>Find structure (drop-offs, brush, weed lines) bank anglers can't otherwise see</li>
+      <li>Self-contained display - no smartphone battery drain or Bluetooth dependency</li>
+      <li>Portable and castable - no installation, no wiring, no transducer mount</li>
+      <li>2-year warranty + 1,084 verified reviews at 4.3 stars</li>
+      <li>3,000+ sold on AliExpress - validated product demand</li>
+      <li>$79.95 price point - one-time buy, no subscription</li>
+      <li>Rechargeable - no ongoing battery cost</li>
+    </ul>
+  </div>
+
+  <div class="research-card">
+    <h3>Competitor Angles Being Differentiated From</h3>
+    <ul>
+      <li><strong>HawkEye FishPod (3 ads):</strong> "Pocket Power" - turn smartphone/tablet/watch into a fish finder screen. Pure Aspiration/tech angle. No pain, no fear, no social proof.</li>
+      <li><strong>Deeper Max (2 ads):</strong> "Dimension Upgrade" - 3D scanning, no wires, full contour mapping. Pure Aspiration/premium positioning.</li>
+      <li><strong>Observation:</strong> Both competitors compete on device features and tech aspiration only. Zero competitor ads address: the "casting blind" pain, the "stay or move" anxiety, the shore-angler identity, the fear of wasting a trip, or social proof from skeptics. The entire Pain/Fear/Contrarian/Social Proof space is uncontested at N=5.</li>
+      <li><strong>Note:</strong> "unresolved" rows in Winners DB (multiple kill rows) had no usable marketing angle - correctly excluded from uniqueness scoring.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- UNIQUENESS LEGEND -->
+<div class="legend">
+  <h3>Uniqueness Score Legend</h3>
+  <div class="legend-items">
+    <div class="legend-item"><span class="badge badge-fresh">Fresh 0/5</span> No competitor ad in the Winners DB runs this angle. Strongest, most differentiated picks.</div>
+    <div class="legend-item"><span class="badge badge-twist">Twist 2/5</span> Competitors hit the same pain/benefit but frame it differently; this angle adds a fresh differentiator.</div>
+    <div class="legend-item"><span class="badge badge-crowded">Crowded X/5</span> One or more competitors already run essentially this angle. Differentiate or drop.</div>
+  </div>
+  <p style="font-size:12px;color:#64748b;margin-top:12px;">Uniqueness scored against the 5 product-matched winner ads in the Winners DB for search term "fish finder" (HawkEye FishPod x3, Deeper Max x2). Both competitors run Aspiration/tech-upgrade framing only. The denominator N=5 is the total product-matched competitor ad count. Non-product rows (kill/! rows) are excluded from scoring as they do not represent competing castable fish finder angles.</p>
+</div>
+
+<!-- PAIN POINTS AND BENEFITS DETAIL -->
+<h2>Pain Points and Benefits (Full Analysis)</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:16px 0;">
+
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:20px;">
+<h3 style="margin-top:0;color:#dc2626;">10 Pain Points with Root Cause and Fix</h3>
+<ol style="padding-left:18px;font-size:13px;color:#334155;line-height:1.8;">
+  <li><strong>Casting blind into empty water.</strong> Root: no way to know fish location before casting. Emotional cost: hours wasted, feeling stupid. Fix: sensor shows real-time fish location before the first cast.</li>
+  <li><strong>The "stay or move" paralysis.</strong> Root: no data to decide whether the spot is live or dead. Emotional cost: constant second-guessing, regret either way. Fix: 10-second sensor check ends the debate.</li>
+  <li><strong>Going home skunked (catching nothing).</strong> Root: fishing wrong spots without knowing it. Emotional cost: identity threat, embarrassment in front of family. Fix: know the fish are there before committing to the spot.</li>
+  <li><strong>Wasted drive and wasted Saturday.</strong> Root: limited free time vs. uncertain fish location. Emotional cost: resentment, wife frustrated, kid disappointed. Fix: reduce dead time at each spot by confirming fish presence fast.</li>
+  <li><strong>Shore anglers have zero electronics access.</strong> Root: all fish finders require boat installation. Emotional cost: feeling like a second-class angler vs. boat fishers. Fix: castable wireless unit works from any bank, dock, kayak, or ice hole.</li>
+  <li><strong>Moving too soon, missing fish already there.</strong> Root: impatience born from uncertainty. Emotional cost: the gut-punch when someone else catches right where you just were. Fix: sensor confirms fish presence before moving.</li>
+  <li><strong>Staying too long on a dead spot.</strong> Root: sunk-cost stubbornness born from hope and no data. Emotional cost: entire trip wasted on one empty hole. Fix: sensor confirms quickly that it is time to move.</li>
+  <li><strong>Drilling ice holes in the wrong place.</strong> Root: no way to check fish presence before drilling (physically and thermally costly). Emotional cost: sitting in dangerous cold for nothing. Fix: drop sensor through a pilot hole first.</li>
+  <li><strong>Gadget skepticism from past burnouts.</strong> Root: anglers have bought expensive gimmicks that did not work. Emotional cost: distrust, identity as a "real" angler who does not need toys. Fix: 1,084 Amazon reviews at 4.3 stars from verified buyers; 3,000+ sold on AliExpress.</li>
+  <li><strong>Not knowing the bottom structure.</strong> Root: depth, drop-offs, weed lines, and brush piles are invisible from shore. Emotional cost: fishing the surface when fish are relating to structure 15 feet down. Fix: sensor maps depth and bottom contour in real time.</li>
+</ol>
+</div>
+
+<div style="background:#fff;border:1px solid #e2e8f0;border-radius:8px;padding:20px;">
+<h3 style="margin-top:0;color:#16a34a;">Objections and Disarming Responses</h3>
+<div style="font-size:13px;color:#334155;line-height:1.7;">
+  <p><strong>1. "Will it actually show fish or just blips?" (PRIMARY)</strong><br>Deeper fear: wasting $80 on a toy. Response: 1,084 Amazon reviews at 4.3 stars from verified buyers. Real sonar physics - same technology used in boat-mounted units - just portable.</p>
+  <p><strong>2. "It's too expensive for something I'm not sure about."</strong><br>Deeper fear: financial regret. Response: $79.95 is one tank of gas. One good fishing trip pays for it in satisfaction. The cost of continued guessing is worse.</p>
+  <p><strong>3. "I'm not a tech person - will I be able to use it?"</strong><br>Deeper fear: embarrassment, incompetence. Response: built-in LCD display, no app, no Bluetooth setup. Cast it out. Read the screen. That is the entire user experience.</p>
+  <p><strong>4. "Choppy water / moving water messes up the readings."</strong><br>Deeper fear: it only works in ideal conditions. Response: best in calm water (lakes, ponds, slow rivers) - which is exactly where shore and kayak anglers fish most often.</p>
+  <p><strong>5. "I'd need a separate rod to cast it."</strong><br>Deeper fear: added hassle defeats the simplicity. Response: many users throw it by hand with 20lb mono. Or keep a simple Zebco rigged for it. One 30-second swap.</p>
+  <p><strong>6. "The fish will be spooked by the splash."</strong><br>Deeper fear: the tool undermines itself. Response: let it settle for 30 seconds. The fish are more interested in the float than scared of it - anglers report it working as a structure too.</p>
+  <p><strong>7. "It's not as good as a real boat fish finder."</strong><br>Deeper fear: buying an inferior product. Response: correct - it is not a $3,000 Garmin. It is a $80 portable sonar that tells you: fish here, depth X feet, bottom type. That is all a shore angler needs.</p>
+  <p><strong>PRIMARY OBJECTION: "I've been burned by fishing gadgets before - does this thing actually find fish, or is it just random blips?"</strong></p>
+</div>
+</div>
+
+</div>
+
+<!-- CLOSING JS + FOOTER -->
+<div style="margin:40px 0 20px;padding:20px;background:#f1f5f9;border-radius:8px;font-size:12px;color:#64748b;text-align:center;">
+  Generated by Agent 6 - Find Marketing Angles &nbsp;|&nbsp; Product: Wireless Castable Fish Finder (Venterior B07WVQYKZ9) &nbsp;|&nbsp; 2026-06-06<br>
+  Competitor set: N=5 product-matched winner ads for "fish finder" (HawkEye FishPod x3, Deeper Max x2) &nbsp;|&nbsp; All angles grounded in primary research
+</div>
+
+</div><!-- end container -->
+
+<script>
+function filterAngles(filter) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.angle-row').forEach(row => {
+    let show = false;
+    if (filter === 'all') show = true;
+    else if (filter === 'fresh') show = row.dataset.unique === 'fresh';
+    else if (filter === 'twist') show = row.dataset.unique === 'twist';
+    else if (filter === 'crowded') show = row.dataset.unique === 'crowded';
+    else show = row.dataset.cat === filter;
+    row.style.display = show ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

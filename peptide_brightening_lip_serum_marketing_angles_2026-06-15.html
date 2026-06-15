@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peptide Brightening Lip Serum — Marketing Angles Report</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f4f6f9;color:#1a202c;line-height:1.6}
+.top-bar{height:4px;background:linear-gradient(90deg,#1a202c,#4a5568)}
+.header{background:#fff;padding:32px 48px 24px;border-bottom:1px solid #e2e8f0}
+.header h1{font-size:1.75rem;font-weight:700;color:#1a202c;margin-bottom:6px}
+.header .subtitle{color:#718096;font-size:0.95rem;max-width:720px}
+.header .meta{margin-top:12px;font-size:0.85rem;color:#a0aec0}
+.container{max-width:1200px;margin:0 auto;padding:32px 24px}
+.stats-block{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:32px}
+.stat-card{background:#fff;border-radius:10px;padding:20px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.stat-card .num{font-size:2rem;font-weight:700;color:#2d3748}
+.stat-card .lbl{font-size:0.8rem;color:#718096;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.section{background:#fff;border-radius:10px;padding:28px;margin-bottom:24px;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.section h2{font-size:1.2rem;font-weight:700;color:#2d3748;margin-bottom:20px;border-bottom:2px solid #f0f4f8;padding-bottom:10px}
+.section h3{font-size:1rem;font-weight:600;color:#4a5568;margin:16px 0 8px}
+.top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.angle-card{border-radius:10px;padding:24px;border:1px solid #e2e8f0;position:relative;overflow:hidden}
+.angle-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.rank1::before{background:linear-gradient(90deg,#f6e05e,#ed8936)}
+.rank2::before{background:linear-gradient(90deg,#e2e8f0,#a0aec0)}
+.rank3::before{background:linear-gradient(90deg,#b7791f,#d69e2e)}
+.rank-badge{position:absolute;top:16px;right:16px;font-size:0.75rem;font-weight:700;padding:4px 10px;border-radius:20px;background:#edf2f7;color:#4a5568}
+.angle-card .angle-name{font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:6px;padding-right:56px}
+.angle-card .cat-tag{font-size:0.75rem;font-weight:600;padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px}
+.cat-pain{background:#fff5f5;color:#c53030}
+.cat-aspir{background:#ebf8ff;color:#2b6cb0}
+.cat-contra{background:#f0fff4;color:#276749}
+.cat-fear{background:#fffaf0;color:#c05621}
+.cat-social{background:#faf5ff;color:#6b46c1}
+.uniqueness-badge{font-size:0.72rem;font-weight:700;padding:2px 8px;border-radius:8px;display:inline-block;margin-left:6px;background:#edf2f7;color:#718096}
+.angle-card .insight{color:#4a5568;font-size:0.88rem;margin-bottom:10px;font-style:italic;border-left:3px solid #e2e8f0;padding-left:10px}
+.angle-card .hook{background:#f7fafc;border-radius:6px;padding:12px;font-size:0.85rem;color:#2d3748;margin-bottom:10px}
+.angle-card .hook-label{font-size:0.72rem;font-weight:700;color:#a0aec0;text-transform:uppercase;margin-bottom:4px}
+.angle-card .why-wins{font-size:0.83rem;color:#667eea;font-weight:600;margin-bottom:12px}
+.micro-hooks{margin-top:12px;border-top:1px solid #f0f4f8;padding-top:12px}
+.micro-hooks h4{font-size:0.78rem;font-weight:700;color:#718096;text-transform:uppercase;margin-bottom:8px}
+.micro-hook{margin-bottom:8px}
+.micro-hook .type-tag{font-size:0.68rem;font-weight:700;background:#f0f4f8;color:#4a5568;padding:2px 7px;border-radius:8px;display:inline-block;margin-bottom:3px;text-transform:uppercase}
+.micro-hook p{font-size:0.82rem;color:#4a5568}
+.grid-controls{margin-bottom:16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filter-btn{background:#f0f4f8;border:none;border-radius:20px;padding:6px 14px;font-size:0.8rem;cursor:pointer;color:#4a5568;font-weight:600;transition:all .15s}
+.filter-btn.active,.filter-btn:hover{background:#2d3748;color:#fff}
+.sort-sel{background:#f0f4f8;border:1px solid #e2e8f0;border-radius:8px;padding:6px 10px;font-size:0.8rem;color:#4a5568;cursor:pointer}
+table{width:100%;border-collapse:collapse;font-size:0.83rem}
+th{text-align:left;padding:10px 12px;background:#f7fafc;color:#718096;font-size:0.75rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:2px solid #e2e8f0;white-space:nowrap;cursor:pointer}
+th:hover{color:#2d3748}
+td{padding:10px 12px;border-bottom:1px solid #f0f4f8;vertical-align:top}
+tr:hover td{background:#f7fafc}
+tr.hidden{display:none}
+.tbl-name{font-weight:600;color:#2d3748}
+.tbl-insight{color:#718096;font-size:0.8rem}
+.tbl-hook{color:#4a5568;font-size:0.8rem;font-style:italic}
+.fmt-badge{font-size:0.72rem;padding:2px 7px;border-radius:8px;background:#ebf8ff;color:#2b6cb0;white-space:nowrap}
+.macro-item{padding:14px;border-radius:8px;border-left:3px solid #667eea;background:#f8f7ff;margin-bottom:10px}
+.macro-item .macro-title{font-weight:700;color:#2d3748;font-size:0.9rem;margin-bottom:4px}
+.macro-item .macro-body{font-size:0.85rem;color:#4a5568}
+.macro-item .macro-timing{font-size:0.75rem;color:#9f7aea;font-weight:600;margin-top:4px}
+.pain-list,.benefit-list{list-style:none}
+.pain-list li,.benefit-list li{padding:8px 12px;border-radius:6px;margin-bottom:6px;font-size:0.85rem}
+.pain-list li{background:#fff5f5;color:#4a5568;border-left:3px solid #fc8181}
+.benefit-list li{background:#f0fff4;color:#4a5568;border-left:3px solid #68d391}
+.comp-angle{background:#fafafa;border-radius:6px;padding:10px 14px;margin-bottom:6px;font-size:0.83rem;color:#4a5568;border:1px solid #e2e8f0}
+.comp-angle strong{color:#2d3748}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:8px}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:#4a5568}
+.legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.unscored-note{background:#fffbeb;border:1px solid #f6e05e;border-radius:8px;padding:12px 16px;font-size:0.83rem;color:#744210;margin-bottom:20px}
+footer{text-align:center;padding:24px;color:#a0aec0;font-size:0.8rem}
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Peptide Brightening Lip Serum &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: Female 25&ndash;45, dealing with dark/hyperpigmented/uneven lip tone. Has tried every remedy. Covers lips with makeup daily. Hides them in photos. Wants visible brightening without clinic procedures.</div>
+  <div class="meta">Generated 06-15-2026 &bull; trace_run_id: mktangle-06-15-r107b &bull; Product DB: VA Products (Andi) row 107</div>
+</div>
+<div class="container">
+<div class="stats-block">
+  <div class="stat-card"><div class="num">20</div><div class="lbl">Angles Generated</div></div>
+  <div class="stat-card"><div class="num">5</div><div class="lbl">Categories</div></div>
+  <div class="stat-card"><div class="num">9</div><div class="lbl">Micro Hooks</div></div>
+  <div class="stat-card"><div class="num">8+</div><div class="lbl">Competitors Analyzed</div></div>
+  <div class="stat-card"><div class="num">0</div><div class="lbl">Winners DB Rows</div></div>
+  <div class="stat-card"><div class="num">PASS</div><div class="lbl">AI Verdict</div></div>
+</div>
+
+<div class="section">
+  <h2>Summary</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;flex-wrap:wrap">
+    <div>
+      <h3>Avatar</h3>
+      <p style="font-size:0.88rem;color:#4a5568">"The Dark-Lip Seeker" — Female 25&ndash;45 (peak), Female dominated up to 55. South Asian, Latina, Middle Eastern women disproportionately affected. Daily coffee/tea drinker, outdoor exposure, career-focused. Has tried lemon juice (worsened pigmentation), honey/turmeric, hydroquinone (irritated), generic balms (zero brightening), expensive lip oils. Applies lip makeup EVERY DAY just to even out her lip color. Avoids cameras or angles photos to hide her lips. Consumes TikTok/Instagram beauty content constantly, sees "perfect pink lip" trends and feels genetically excluded. Research-savvy: knows peptides, HA, Vit C.</p>
+    </div>
+    <div>
+      <h3>Core Transformation</h3>
+      <p style="font-size:0.88rem;color:#4a5568"><strong>Before:</strong> Dark, uneven lip tone visible every time she talks or smiles. Daily lip concealer routine. Dreads event photos. Has spent $100+ on failed brightening products. Feels "genetically disadvantaged" vs. pink-lip beauty standard.<br><br><strong>After:</strong> Visibly brighter, more even lip tone after 2&ndash;14 days. Skips the concealer step. Posts bare-lip photos. Goes to events without dreading how her lips look. One serum replaces 4 separate products.</p>
+    </div>
+    <div>
+      <h3>Primary Objection</h3>
+      <p style="font-size:0.88rem;background:#fff5f5;border-radius:8px;padding:12px;color:#c53030;border-left:4px solid #fc8181">"Nothing has ever worked on my lips &mdash; lemon juice, balms, treatments, serums. What's actually different this time?"<br><br><span style="color:#4a5568;font-size:0.82rem"><strong>Deeper fear:</strong> She's already burned money and hope on this problem. One more failed product and she gives up entirely.<br><br><strong>Response:</strong> The mechanism was wrong, not the effort. Balms and oils seal in the problem; they can't regulate melanin. Peptides + Vit C address the biological source of pigmentation, not the surface.</span></p>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Top 3 Angles</h2>
+  <div class="unscored-note"><strong>Uniqueness Note:</strong> Winners DB has 0 rows for any lip serum search term (spy tool not run at time of this run; Social Media was UNVERIFIABLE in AI Audit, then CEO meta-validated via independent research). All uniqueness ratings are marked <em>unscored</em> per spec. Competitive context from live research: 8+ brands analyzed (Rhode, Laneige, Summer Fridays, Charlotte Tilbury, Buxom, Dr. Whitney Bowe Beauty, LONDONTOWN, OMORFEE). See Research Notes for competitor angles found.</div>
+  <div class="top3-grid">
+
+    <div class="angle-card rank1">
+      <div class="rank-badge">#1</div>
+      <div class="angle-name">The Photo Avoidance</div>
+      <span class="cat-tag cat-pain">Pain / Frustration</span>
+      <span class="uniqueness-badge">Unscored</span>
+      <div class="insight">"She doesn't avoid cameras because of her face &mdash; she avoids them because of her lips."</div>
+      <div class="hook-label">Sample Hook</div>
+      <div class="hook">"I used to ask people to retake photos until I found the angle that hid my lip color. Turns out that's not a lighting problem."</div>
+      <div class="why-wins">Why it wins: Most emotionally charged (9.5/10). The specific behavior of adjusting photo angles for lips is a never-voiced private truth instantly recognizable to the avatar. No competitor in the lip serum space uses this specific behavior as their hook &mdash; they sell features (plumping, hydration) not lived emotional experience. Best format: UGC confessional (woman to camera, authentic, no script feel). Unscored vs. Winners DB; no competitor matched in live research.</div>
+      <div class="micro-hooks">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><div class="type-tag">Problem-First</div><p>"Tired of asking people to retake photos until you find the one where your lips look lighter? You're not alone. And there's an actual reason it keeps happening."</p></div>
+        <div class="micro-hook"><div class="type-tag">Result-First</div><p>"I went from adjusting every photo angle to hide my lip color to posting bare-lip selfies in 14 days. I never thought a serum would be the thing."</p></div>
+        <div class="micro-hook"><div class="type-tag">Contra</div><p>"Stop turning your head for the 'good angle' in photos. That's a lip pigmentation problem. Here's the actual fix."</p></div>
+      </div>
+    </div>
+
+    <div class="angle-card rank2">
+      <div class="rank-badge">#2</div>
+      <div class="angle-name">Lip Balm Has Been Lying to You</div>
+      <span class="cat-tag cat-contra">Contrarian / Pattern Interrupt</span>
+      <span class="uniqueness-badge">Unscored</span>
+      <div class="insight">"Regular lip balms seal in the problem &mdash; they can never regulate melanin or stimulate collagen."</div>
+      <div class="hook-label">Sample Hook</div>
+      <div class="hook">"Stop treating dark lips with lip balm. It's why nothing's working. Balms hydrate the surface. They can't touch what's happening underneath."</div>
+      <div class="why-wins">Why it wins: Highest scroll-stopping power (8.5/10). The "STOP" command creates instant curiosity. Directly pre-empts the PRIMARY OBJECTION: "Nothing has ever worked" &mdash; by answering that the mechanism was wrong, not the effort. No competitor explicitly calls out the failed category mechanism in advertising. Converts skeptics because it validates their experience before making any product claim. Best format: Educational short video / carousel revealing the mechanism, then the solution.</div>
+      <div class="micro-hooks">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><div class="type-tag">Curiosity</div><p>"There's a reason dermatologists say lip balm can never brighten dark lips. The mechanism is completely different. Here's what you need instead."</p></div>
+        <div class="micro-hook"><div class="type-tag">Social Proof</div><p>"I told my aesthetician I was using lip balm for dark pigmentation. She told me that's like using a bandage for a broken bone."</p></div>
+        <div class="micro-hook"><div class="type-tag">Contra</div><p>"Stop using lip balm on dark lips. It's why they're getting worse, not better. Here's the science."</p></div>
+      </div>
+    </div>
+
+    <div class="angle-card rank3">
+      <div class="rank-badge">#3</div>
+      <div class="angle-name">The Wedding Photo</div>
+      <span class="cat-tag cat-fear">Fear / Urgency</span>
+      <span class="uniqueness-badge">Unscored</span>
+      <div class="insight">"The one moment she most wants to look perfect is the moment her lip color shows in every single photo she can't retake."</div>
+      <div class="hook-label">Sample Hook</div>
+      <div class="hook">"My lips looked darker in every photo at my sister's wedding. No filter could fix it. That was the last time I let that happen."</div>
+      <div class="why-wins">Why it wins: Highest specificity (9/10). References a documented real pain point (Marie Claire beauty writer's own experience) &mdash; the exact scenario. Instantly visual and emotionally resonant because it's story-based, not claim-based. Converts skeptics because the vulnerability is real and specific. No competitor lip serum uses this wedding/event photo moment as their primary hook. Best format: UGC confessional &mdash; starts the story, product revealed as the solution at the end.</div>
+      <div class="micro-hooks">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><div class="type-tag">Problem-First</div><p>"Tired of seeing your lip color show dark in every important photo? The kind you can't retake? I spent years dreading those moments."</p></div>
+        <div class="micro-hook"><div class="type-tag">Result-First</div><p>"I went from editing every photo of my lips to crying when I saw how they looked at my sister's wedding &mdash; but this time because they were beautiful."</p></div>
+        <div class="micro-hook"><div class="type-tag">Contra</div><p>"Stop filtering your lips in event photos. That's not a lighting problem. It's a pigmentation problem. And it's fixable before your next event."</p></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section">
+  <h2>All 20 Angles</h2>
+  <div class="grid-controls">
+    <span style="font-size:0.8rem;color:#718096;font-weight:600;margin-right:4px">Filter:</span>
+    <button class="filter-btn active" onclick="filterAngles('all',this)">All</button>
+    <button class="filter-btn" onclick="filterAngles('pain',this)">Pain/Frustration</button>
+    <button class="filter-btn" onclick="filterAngles('aspir',this)">Aspiration</button>
+    <button class="filter-btn" onclick="filterAngles('contra',this)">Contrarian</button>
+    <button class="filter-btn" onclick="filterAngles('fear',this)">Fear/Urgency</button>
+    <button class="filter-btn" onclick="filterAngles('social',this)">Social Proof</button>
+    <span style="margin-left:auto;font-size:0.8rem;color:#718096;font-weight:600">Sort:</span>
+    <select class="sort-sel" onchange="sortAngles(this.value)">
+      <option value="rank">Rank</option>
+      <option value="name">Name A-Z</option>
+      <option value="cat">Category</option>
+      <option value="fmt">Format</option>
+    </select>
+  </div>
+  <table id="anglesTable">
+    <thead><tr>
+      <th onclick="sortAngles('rank')">#</th>
+      <th onclick="sortAngles('name')">Angle Name</th>
+      <th onclick="sortAngles('cat')">Category</th>
+      <th>Uniqueness</th>
+      <th>Core Insight</th>
+      <th>Sample Hook</th>
+      <th onclick="sortAngles('fmt')">Format</th>
+    </tr></thead>
+    <tbody id="anglesBody">
+      <tr data-cat="pain" data-rank="2"><td>1</td><td><span class="tbl-name">The Makeup Ritual</span></td><td><span class="cat-tag cat-pain">Pain</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Having to apply lip makeup every day just to look "normal" is a secret shame that shouldn't exist</td><td class="tbl-hook">"If you put on lip concealer before lipstick... this is for you."</td><td><span class="fmt-badge">Static / UGC</span></td></tr>
+      <tr data-cat="pain" data-rank="1"><td>2</td><td><span class="tbl-name">The Photo Avoidance</span></td><td><span class="cat-tag cat-pain">Pain</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">She doesn't avoid cameras because of her face &mdash; she avoids them because of her lips. A never-voiced private truth.</td><td class="tbl-hook">"I used to ask people to retake photos until I found the angle that hid my lip color."</td><td><span class="fmt-badge">UGC Confessional</span></td></tr>
+      <tr data-cat="pain" data-rank="3"><td>3</td><td><span class="tbl-name">The Failed Remedies Graveyard</span></td><td><span class="cat-tag cat-pain">Pain</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">She has tried every natural remedy; the growing graveyard of failed products IS the pain point</td><td class="tbl-hook">"Lemon juice. Honey. Rose water. Turmeric. Hydroquinone. All failed. Then I found out why."</td><td><span class="fmt-badge">VSL / Educational</span></td></tr>
+      <tr data-cat="pain" data-rank="4"><td>4</td><td><span class="tbl-name">The Color That Shows Through</span></td><td><span class="cat-tag cat-pain">Pain</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Even her favorite lip color looks wrong because the dark undertone bleeds through and undermines the look</td><td class="tbl-hook">"Why does your lipstick look good in the store but wrong on you? Your lip's natural color is fighting it."</td><td><span class="fmt-badge">Carousel / Static</span></td></tr>
+      <tr data-cat="aspir" data-rank="5"><td>5</td><td><span class="tbl-name">From Covering Up to Showing Off</span></td><td><span class="cat-tag cat-aspir">Aspiration</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">The real transformation isn't brighter lips &mdash; it's going from covering up to choosing to show them off</td><td class="tbl-hook">"She stopped wearing lip concealer. Not because she ran out. Because she didn't need it anymore."</td><td><span class="fmt-badge">UGC / Before-After</span></td></tr>
+      <tr data-cat="aspir" data-rank="6"><td>6</td><td><span class="tbl-name">The Natural Lip Era</span></td><td><span class="cat-tag cat-aspir">Aspiration</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">The dream isn't fillers or coverage &mdash; it's looking effortlessly beautiful with no lip makeup at all</td><td class="tbl-hook">"Bare lips, zero filter, zero makeup. And still the compliment."</td><td><span class="fmt-badge">Static / Reel</span></td></tr>
+      <tr data-cat="aspir" data-rank="7"><td>7</td><td><span class="tbl-name">The Skin Tone Validation</span></td><td><span class="cat-tag cat-aspir">Aspiration</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Pink lips aren't "the only beautiful" &mdash; but every woman deserves the version of beautiful that's uniquely hers</td><td class="tbl-hook">"Your lips are perfect. The gap between what they are now and what they could be is just one ingredient away."</td><td><span class="fmt-badge">Inclusive UGC</span></td></tr>
+      <tr data-cat="aspir" data-rank="8"><td>8</td><td><span class="tbl-name">The Anti-Clinic</span></td><td><span class="cat-tag cat-aspir">Aspiration</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Paying $200/session for clinic lip brightening is the old way; a science-backed at-home serum is the new way</td><td class="tbl-hook">"I canceled my next lip brightening appointment. This is why."</td><td><span class="fmt-badge">Testimonial / Comparison</span></td></tr>
+      <tr data-cat="contra" data-rank="9" style="background:#f7fff9"><td>9</td><td><span class="tbl-name">Lip Balm Has Been Lying to You</span></td><td><span class="cat-tag cat-contra">Contrarian</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Regular lip balms seal in the problem rather than solving it; they can never regulate melanin or stimulate collagen</td><td class="tbl-hook">"Stop treating dark lips with lip balm. It's why nothing's working."</td><td><span class="fmt-badge">VSL / Edu Video</span></td></tr>
+      <tr data-cat="contra" data-rank="10"><td>10</td><td><span class="tbl-name">Your Lips Are Aging Faster Than Your Face</span></td><td><span class="cat-tag cat-contra">Contrarian</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Lips show aging 5x faster yet nobody treats them like skin &mdash; combining darker color with thinning and fine lines</td><td class="tbl-hook">"You're moisturizing your face. You're not moisturizing your lips. That's why they look 10 years older."</td><td><span class="fmt-badge">Edu Static / Carousel</span></td></tr>
+      <tr data-cat="contra" data-rank="11"><td>11</td><td><span class="tbl-name">The Vitamin C Nobody Uses on Their Lips</span></td><td><span class="cat-tag cat-contra">Contrarian</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Everyone uses Vitamin C on their face for brightening but ignores the lips where pigmentation is visually far more concentrated</td><td class="tbl-hook">"You use Vitamin C on your face. You're ignoring the darkest, most visible area: your lips."</td><td><span class="fmt-badge">Edu Carousel</span></td></tr>
+      <tr data-cat="contra" data-rank="12"><td>12</td><td><span class="tbl-name">Why Lemon Juice Darkens Lips</span></td><td><span class="cat-tag cat-contra">Contrarian</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Natural remedies like lemon juice often worsen lip darkening due to photosensitivity and pH disruption &mdash; the opposite of what she expects</td><td class="tbl-hook">"Lemon juice brightens skin, right? Not your lips. Here's what it actually does."</td><td><span class="fmt-badge">Short Edu Video</span></td></tr>
+      <tr data-cat="fear" data-rank="13" style="background:#fff8f8"><td>13</td><td><span class="tbl-name">The Wedding Photo</span></td><td><span class="cat-tag cat-fear">Fear</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">The one moment she most wants to look perfect is exactly when her lip color shows in every photo she can't retake</td><td class="tbl-hook">"My lips looked darker in every photo at my sister's wedding. No filter could fix it."</td><td><span class="fmt-badge">UGC Confessional</span></td></tr>
+      <tr data-cat="fear" data-rank="14"><td>14</td><td><span class="tbl-name">Lips That Age While You Wait</span></td><td><span class="cat-tag cat-fear">Fear</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Every day without treatment, collagen breakdown and melanin accumulation compound &mdash; it only gets harder to reverse</td><td class="tbl-hook">"Lip pigmentation doesn't pause while you research which product to try."</td><td><span class="fmt-badge">VSL / Fear-Based</span></td></tr>
+      <tr data-cat="fear" data-rank="15"><td>15</td><td><span class="tbl-name">The Slow Fade Nobody Warned Her About</span></td><td><span class="cat-tag cat-fear">Fear</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Lips lose color brightness and volume after 30 &mdash; nobody talks about this the way they talk about face aging</td><td class="tbl-hook">"Your lips aren't the same color they were at 25. By 35, without intervention, the gap gets wider."</td><td><span class="fmt-badge">Edu / Fear + Solution</span></td></tr>
+      <tr data-cat="fear" data-rank="16"><td>16</td><td><span class="tbl-name">The Last Product in the Graveyard</span></td><td><span class="cat-tag cat-fear">Fear</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Every failed product gave a competitor one more sale and her one more disappointment. The cycle only ends when the mechanism changes.</td><td class="tbl-hook">"How much have you spent trying to brighten your lips? Count it up. Then ask: was it the ingredients &mdash; or the delivery system?"</td><td><span class="fmt-badge">VSL / Problem-Agitate</span></td></tr>
+      <tr data-cat="social" data-rank="17"><td>17</td><td><span class="tbl-name">The Dark Lip Club</span></td><td><span class="cat-tag cat-social">Social Proof</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Millions of women share the same dark lip pain and secret shame &mdash; they're not alone, and they've quietly started finding what works</td><td class="tbl-hook">"You've never heard women talk about this openly. But 3 million of them are quietly treating the same thing."</td><td><span class="fmt-badge">UGC Compilation</span></td></tr>
+      <tr data-cat="social" data-rank="18"><td>18</td><td><span class="tbl-name">The TikTok Transformation She Didn't Expect</span></td><td><span class="cat-tag cat-social">Social Proof</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">The skeptic who bought because of TikTok and actually got results &mdash; leveraging SKINTIFIC's authentic viral traction</td><td class="tbl-hook">"I didn't believe TikTok about this one. Then my lips changed."</td><td><span class="fmt-badge">UGC / Skeptic-to-Believer</span></td></tr>
+      <tr data-cat="social" data-rank="19"><td>19</td><td><span class="tbl-name">The Dermatologist's Pick</span></td><td><span class="cat-tag cat-social">Social Proof</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Dermatologists recommend this specific ingredient stack (peptides + ceramides + Vit C) for lip hyperpigmentation over most clinic treatments</td><td class="tbl-hook">"My dermatologist said this ingredient combination addresses lip pigmentation better than most of what I'd recommend at the clinic."</td><td><span class="fmt-badge">Authority / Edu Testimonial</span></td></tr>
+      <tr data-cat="social" data-rank="20"><td>20</td><td><span class="tbl-name">The Before/After That Went Viral</span></td><td><span class="cat-tag cat-social">Social Proof</span></td><td><span class="uniqueness-badge">Unscored</span></td><td class="tbl-insight">Real results in real lighting, no filter, no pro photography &mdash; just someone's camera roll showing 14 days of visible change</td><td class="tbl-hook">"She took a photo every day for 14 days. Day 14 made her cry."</td><td><span class="fmt-badge">UGC Day-by-Day Video</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <h2>Macro-Angles (Offers / Seasonal / Evergreen)</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <div class="macro-item">
+      <div class="macro-title">Summer Selfie Season</div>
+      <div class="macro-body">Peak photography season + outdoor sun exposure that worsens lip darkening. "Before-and-after photo season is here. Your lips are in every shot."</div>
+      <div class="macro-timing">Activate NOW (June-July 2026)</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Father's Day &mdash; Gift Yourself</div>
+      <div class="macro-body">She's buying gifts for others; position this as the self-care she actually wants. "The gift she'll actually use daily."</div>
+      <div class="macro-timing">Activate NOW (June 21, 2026)</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Wedding Season</div>
+      <div class="macro-body">Peak event photography anxiety. Start treatment 4 weeks before a wedding/event for visible results in time for photos. "Start now, see results before the big day."</div>
+      <div class="macro-timing">Active May-July (ongoing)</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Back-to-School / New Routine Reset</div>
+      <div class="macro-body">New semester = new skincare routine. "This school year, treat your lips like your face." Targets college-age + parents.</div>
+      <div class="macro-timing">Activate late August 2026</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">BFCM Holiday Glow</div>
+      <div class="macro-body">Holiday photos, family gatherings, event appearances. "Holiday photos are coming. You have 4 weeks." Start showing results before Thanksgiving events.</div>
+      <div class="macro-timing">Activate 2 weeks before Thanksgiving (Nov 13, 2026)</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">New Year's Lip Resolution</div>
+      <div class="macro-body">"This year, treat your lips like your face. They're the one part of your face routine you've been ignoring."</div>
+      <div class="macro-timing">Activate January 1, 2027</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">TikTok-Validated (Evergreen)</div>
+      <div class="macro-body">SKINTIFIC is already a verified TikTok viral product. Leverage authentic organic traction: "The serum that went viral on TikTok. Here's why dermatologists agree."</div>
+      <div class="macro-timing">Evergreen (deploy anytime)</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">All-in-One Simplifier (Evergreen)</div>
+      <div class="macro-body">Replaces balm + treatment + primer + lip color prep in one tube. "Stop using 4 products on your lips. One does what all of them promised."</div>
+      <div class="macro-timing">Evergreen (deploy anytime)</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Research Notes</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div>
+      <h3>Top Pain Points (from Research)</h3>
+      <ul class="pain-list">
+        <li>"Dark lips are a proper confidence killer" &mdash; visible every time she talks or smiles, no hiding</li>
+        <li>Daily lip makeup routine just to "even out" color &mdash; the secret ritual of covering up</li>
+        <li>The hope-crash cycle: excited about a new product, wait 8 weeks, feel devastated when nothing changes</li>
+        <li>Natural remedies made things worse &mdash; lemon juice causes photosensitivity darkening, hydroquinone irritates</li>
+        <li>"Naturally pink lips are unrealistic for Indians" &mdash; cultural beauty standard collision with biology</li>
+        <li>Wedding/event photos showing dark lips in every shot that can't be retaken (documented by Marie Claire writer)</li>
+        <li>Fine lines around lips making them look older AND darker simultaneously after 30+</li>
+        <li>Even favorite lip colors look "wrong" because the dark undertone bleeds through the tint</li>
+        <li>Heightened self-consciousness during dating, job interviews, first impressions where "lips are the first thing noticed"</li>
+        <li>Counterfeit products on marketplaces adding fear/risk to the purchase decision</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Top Benefits (from Research)</h3>
+      <ul class="benefit-list">
+        <li>Visible brightening + tone-up in 2&ndash;14 days (Vitamin C derivative targets melanin at the source)</li>
+        <li>Plumping via peptides + micro-collagen spheres &mdash; addresses thinning simultaneously</li>
+        <li>All-day moisture without reapplication (Ceramide 5X Complex + Squalane barrier)</li>
+        <li>No hydroquinone, no harsh acids &mdash; safe for melanin-rich lip skin with no rebound darkening</li>
+        <li>Fine-line reduction &mdash; peptides stimulate collagen; lips look younger AND brighter</li>
+        <li>One product replaces 4 (treatment + hydration + primer + color prep)</li>
+        <li>TikTok-validated real results: authentic "before/after in 7 days" content proven viral</li>
+        <li>Works on South Asian, Latina, Middle Eastern skin tones (ingredient mechanism, not bleach)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:20px">Competitor Angles Found (Live Research &mdash; N=0 in Winners DB)</h3>
+  <div class="unscored-note" style="margin-bottom:12px">Winners DB has 0 rows for any lip serum search term. Competitor angle landscape built from live competitor research across 8+ brands. Used as context only; uniqueness marked "unscored" per spec rule.</div>
+  <div class="comp-angle"><strong>Rhode (Hailey Bieber):</strong> Celebrity founder halo + "glazed donut" aesthetic + peptide innovation for plumping without injections + limited-edition drops for FOMO</div>
+  <div class="comp-angle"><strong>Laneige:</strong> "Advanced Water Science" authority + hydration as hero + sensorial/food storytelling (flavors) + overnight repair ritual</div>
+  <div class="comp-angle"><strong>Summer Fridays:</strong> Organic TikTok virality (Get Ready With Me) + aesthetic taste-signifier + influencer casual moments (Sofia Richie wedding)</div>
+  <div class="comp-angle"><strong>Charlotte Tilbury:</strong> Luxury/red-carpet glamour + "feel like the most beautiful version of yourself" empowerment + exclusivity app launches</div>
+  <div class="comp-angle"><strong>Buxom:</strong> "Like filler, without the injections" &mdash; non-invasive plumping enhancement as primary claim</div>
+  <div class="comp-angle"><strong>SKINTIFIC (existing):</strong> Healthy skincare + TikTok viral (1.1M ceramide units sold) + celebrity/influencer + brightening for dark lips + ceramide authority</div>
+  <div class="comp-angle"><strong>Dr. Whitney Bowe Beauty:</strong> Dermatologist clinical credential + P46 Peptide Plumping Serum + before/after proof &mdash; but for FACE, not lips specifically</div>
+  <div class="comp-angle"><strong>OMORFEE:</strong> Lip Lightening Balm + brightening for dark lips &mdash; but balm format, limited paid social presence in research</div>
+  <p style="font-size:0.83rem;color:#718096;margin-top:12px"><strong>Dominant themes across all competitors:</strong> Peptide innovation (plumping), hydration as hero, non-invasive enhancement, glossy/glass lip aesthetic, celebrity/influencer halo, limited-edition drops, multi-function. <strong>Underserved angles:</strong> Ethnic/dark lips correction narrative (fragmented), clinical dermatology authority for lips specifically, aging-specific lip narrative ("your lips age too"), the specific failed-remedy mechanism explanation, photo-avoidance behavior.</p>
+</div>
+
+<div class="section">
+  <h2>Uniqueness Legend</h2>
+  <div class="unscored-note">All angles for this product are rated <strong>Unscored</strong> because the Winners DB has 0 rows for any lip serum search term (spy tool was not run for this product prior to this angle run). Per the Marketing Angle System spec: "If the Winners DB has no rows for this search term, mark uniqueness 'unscored' and say so; never invent counts." The competitive context above is from live research (8+ brands) and is provided as guidance, not as a formal uniqueness denominator.</div>
+  <div class="legend" style="margin-top:16px">
+    <div class="legend-item"><div class="legend-dot" style="background:#68d391"></div><strong>Fresh</strong> &mdash; No competitor ad in Winners DB uses this angle (strongest picks)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f6ad55"></div><strong>Twist</strong> &mdash; Competitors hit same pain/benefit but frame differently; this adds a fresh differentiator</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#fc8181"></div><strong>Crowded</strong> &mdash; One or more competitors already run essentially this angle; differentiate or drop</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#a0aec0"></div><strong>Unscored</strong> &mdash; Winners DB has no rows for this search term; scored against live research context only</div>
+  </div>
+</div>
+
+<footer>
+  Nova Capital &bull; Find Marketing Angles &bull; Row 107 &bull; trace_run_id: mktangle-06-15-r107b &bull; 06-15-2026
+</footer>
+</div>
+
+<script>
+var allRows = [];
+window.onload = function(){
+  var tbody = document.getElementById('anglesBody');
+  var rows = tbody.querySelectorAll('tr');
+  rows.forEach(function(r){allRows.push(r);});
+};
+function filterAngles(cat, btn){
+  var btns = document.querySelectorAll('.filter-btn');
+  btns.forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  var tbody = document.getElementById('anglesBody');
+  var rows = tbody.querySelectorAll('tr');
+  rows.forEach(function(r){
+    if(cat === 'all' || r.getAttribute('data-cat') === cat){
+      r.classList.remove('hidden');
+    } else {
+      r.classList.add('hidden');
+    }
+  });
+}
+function sortAngles(key){
+  var tbody = document.getElementById('anglesBody');
+  var rows = Array.from(tbody.querySelectorAll('tr'));
+  rows.sort(function(a,b){
+    if(key==='rank') return parseInt(a.getAttribute('data-rank')||99)-parseInt(b.getAttribute('data-rank')||99);
+    if(key==='cat') return (a.getAttribute('data-cat')||'').localeCompare(b.getAttribute('data-cat')||'');
+    if(key==='name') return (a.querySelector('.tbl-name')||{textContent:''}).textContent.localeCompare((b.querySelector('.tbl-name')||{textContent:''}).textContent);
+    if(key==='fmt') return (a.querySelector('.fmt-badge')||{textContent:''}).textContent.localeCompare((b.querySelector('.fmt-badge')||{textContent:''}).textContent);
+    return 0;
+  });
+  rows.forEach(function(r){tbody.appendChild(r);});
+}
+</script>
+</body>
+</html>

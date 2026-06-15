@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Desk Elliptical Exerciser | Marketing Angles | 2026-06-15</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --purple: #a855f7;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-400: #94a3b8;
+    --gray-600: #475569;
+    --gray-800: #1e293b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--gray-50); color: var(--gray-800); }
+  .accent-bar { height: 4px; background: linear-gradient(90deg, var(--slate) 0%, var(--blue) 100%); }
+  header { background: #fff; padding: 2rem 2rem 1.5rem; border-bottom: 1px solid var(--gray-200); }
+  header h1 { font-size: 1.75rem; font-weight: 700; color: var(--slate); }
+  header .subtitle { color: var(--gray-600); margin-top: 0.25rem; font-size: 0.95rem; }
+  header .meta { color: var(--gray-400); font-size: 0.8rem; margin-top: 0.5rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  section { margin-bottom: 2.5rem; }
+  section h2 { font-size: 1.2rem; font-weight: 700; color: var(--slate); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gray-200); }
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+  .summary-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 1.25rem; }
+  .summary-card h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-400); margin-bottom: 0.5rem; }
+  .summary-card p { color: var(--gray-800); font-size: 0.9rem; line-height: 1.5; }
+  .summary-card .highlight { font-weight: 600; color: var(--slate); }
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+  .angle-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 10px; overflow: hidden; }
+  .angle-card-header { padding: 1rem 1.25rem 0.75rem; border-top: 4px solid var(--blue); }
+  .rank-badge { display: inline-block; background: var(--slate); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; margin-bottom: 0.5rem; }
+  .badge-row { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.5rem; }
+  .badge { font-size: 0.7rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 9999px; display: inline-block; }
+  .badge-fresh { background: #dcfce7; color: #15803d; }
+  .badge-twist { background: #fef9c3; color: #854d0e; }
+  .badge-crowded { background: #fee2e2; color: #b91c1c; }
+  .badge-cat { background: var(--gray-100); color: var(--gray-600); }
+  .angle-card-body { padding: 0.75rem 1.25rem 1rem; }
+  .angle-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--slate); margin-bottom: 0.25rem; }
+  .core-insight { font-size: 0.85rem; color: var(--gray-600); font-style: italic; margin-bottom: 0.75rem; line-height: 1.4; }
+  .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-400); margin-bottom: 0.25rem; font-weight: 600; }
+  .hook-box { background: var(--gray-50); border-left: 3px solid var(--blue); padding: 0.6rem 0.75rem; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: var(--slate); line-height: 1.5; margin-bottom: 0.75rem; }
+  .format-pill { display: inline-block; background: var(--gray-100); color: var(--gray-600); font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 9999px; margin-bottom: 0.75rem; }
+  .why-wins { font-size: 0.85rem; color: var(--gray-600); line-height: 1.5; margin-bottom: 0.75rem; }
+  .micro-hooks { border-top: 1px solid var(--gray-200); padding-top: 0.75rem; }
+  .micro-hook { margin-bottom: 0.6rem; }
+  .micro-hook-type { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--blue); }
+  .micro-hook-text { font-size: 0.82rem; color: var(--gray-800); line-height: 1.45; }
+
+  /* All 20 Angles Table */
+  .controls { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; align-items: center; }
+  .filter-btn { padding: 0.3rem 0.75rem; border: 1px solid var(--gray-200); border-radius: 9999px; background: #fff; font-size: 0.8rem; cursor: pointer; color: var(--gray-600); transition: all 0.15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--slate); color: #fff; border-color: var(--slate); }
+  .search-box { padding: 0.35rem 0.75rem; border: 1px solid var(--gray-200); border-radius: 6px; font-size: 0.85rem; width: 200px; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid var(--gray-200); font-size: 0.85rem; }
+  th { background: var(--gray-100); padding: 0.6rem 0.75rem; text-align: left; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-400); cursor: pointer; white-space: nowrap; }
+  th:hover { color: var(--slate); }
+  td { padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--gray-100); vertical-align: top; line-height: 1.4; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--gray-50); }
+  .angle-name { font-weight: 600; color: var(--slate); }
+
+  /* Macro angles */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+  .macro-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 1rem; }
+  .macro-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 0.4rem; }
+  .macro-card p { font-size: 0.82rem; color: var(--gray-600); line-height: 1.45; }
+  .macro-tag { font-size: 0.7rem; background: var(--gray-100); color: var(--gray-400); padding: 0.15rem 0.4rem; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+
+  /* Research Notes */
+  .research-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .research-block h3 { font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .research-block ul { padding-left: 1rem; }
+  .research-block li { font-size: 0.83rem; color: var(--gray-600); margin-bottom: 0.35rem; line-height: 1.4; }
+
+  /* Legend */
+  .legend { display: flex; gap: 1.5rem; flex-wrap: wrap; background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 1rem 1.25rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .dot-fresh { background: #22c55e; }
+  .dot-twist { background: #f59e0b; }
+  .dot-crowded { background: #ef4444; }
+  footer { text-align: center; padding: 2rem; color: var(--gray-400); font-size: 0.8rem; border-top: 1px solid var(--gray-200); background: #fff; margin-top: 2rem; }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <h1>Under Desk Elliptical Exerciser</h1>
+  <div class="subtitle">The Sedentary Professional -- desk worker 30-55, knows sitting is damaging their health, has tried gym / standing desk / walking breaks but all require stopping work</div>
+  <div class="meta">Generated 2026-06-15 | trace_run_id: mktangle-06-14-r90 | VA Products (Andi) Row 90 | PASS (CEO meta-validated) | Competitor set N=4 (3 Meta + 1 TikTok)</div>
+</header>
+
+<div class="container">
+
+<!-- SUMMARY BLOCK -->
+<section>
+  <h2>Summary</h2>
+  <div class="summary-grid">
+    <div class="summary-card">
+      <h3>Avatar</h3>
+      <p><span class="highlight">The Sedentary Professional</span><br>Desk worker, 30-55, WFH or office. Knows prolonged sitting is damaging their health (CVD, diabetes, weight gain) but cannot break the cycle -- work does not pause. Has tried gym memberships, standing desks, walking breaks -- all abandoned because they require stopping work. Step count has collapsed since going remote. Carries daily guilt about inactivity and low-grade health anxiety.</p>
+    </div>
+    <div class="summary-card">
+      <h3>Core Transformation</h3>
+      <p><span class="highlight">Before:</span> Sitting 8+ hours a day, guilt-ridden, watching health slowly erode through back pain, energy crashes, creeping weight gain, and a smartwatch that shows 1,200 steps.<br><br><span class="highlight">After:</span> Adding 80-160+ calories of burn per workday without stopping work once, resolving the afternoon energy crash, and breaking the guilt cycle -- all from the same chair.</p>
+    </div>
+    <div class="summary-card">
+      <h3>Primary Objection</h3>
+      <p><span class="highlight">"I'll buy this and it will become another piece of equipment I paid money for and never use -- just like the gym membership, the yoga mat, the bike."</span><br><br>Deeper fear: I have a pattern of buying fitness solutions with good intentions and abandoning them. This won't be different. Response: Unlike every other solution, this requires zero behavior change -- you are already sitting at your desk. The barrier is plugging it in.</p>
+    </div>
+    <div class="summary-card">
+      <h3>Competitor Set (N=4)</h3>
+      <p><strong>Meta (3 winners):</strong><br>
+      1. The Strategist: Editorial authority + quiet stealth ("zero coworkers will notice")<br>
+      2. The Gather Co: WFH convenience / passive movement while working<br>
+      3. Hebrew store: Effortless movement ("keeping legs moving without effort")<br><br>
+      <strong>TikTok (1 winner):</strong><br>
+      4. @madison.standifer3: Casual lifestyle vibes (no pain point, 337K views, 9.49% engagement)</p>
+    </div>
+    <div class="summary-card">
+      <h3>Run Stats</h3>
+      <p>
+        <strong>Angles Generated:</strong> 20<br>
+        <strong>Fresh:</strong> 15 (75%)<br>
+        <strong>Twist:</strong> 5 (25%)<br>
+        <strong>Crowded:</strong> 0<br>
+        <strong>Top 3:</strong> All Fresh 0/4<br>
+        <strong>Sell Price:</strong> $62.95 | COGS ~$28 | Margin ~56%<br>
+        <strong>AMZ Rating:</strong> 4.5+ / 3,564 reviews
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- TOP 3 ANGLES -->
+<section>
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <!-- RANK 1 -->
+    <div class="angle-card">
+      <div class="angle-card-header">
+        <span class="rank-badge">#1</span>
+        <div class="badge-row">
+          <span class="badge badge-fresh">Fresh 0/4</span>
+          <span class="badge badge-cat">Pain / Frustration</span>
+        </div>
+        <h3>The 2pm Wall</h3>
+        <p class="core-insight">The afternoon energy crash is not a caffeine problem. It is a blood flow problem. Your brain is suffocating from sitting still -- and no competitor has claimed this hook.</p>
+      </div>
+      <div class="angle-card-body">
+        <div class="label">Sample Hook</div>
+        <div class="hook-box">"It's 2pm. You're on your 4th coffee. Your brain feels like wet cement. The problem isn't caffeine -- it's that your blood hasn't moved in 3 hours."</div>
+        <span class="format-pill">Best Format: Static image / Short UGC Video</span>
+        <div class="label">Why It Wins</div>
+        <p class="why-wins">The 2pm wall is the single most universally shared desk-worker experience. Reframing it as a blood flow problem (not a caffeine problem) is contrarian, accurate, and creates an immediate "aha" moment. No competitor runs this hook. It is Fresh 0/4 against the entire competitor set. Strong scroll-stop potential on static: just the time "2:07pm" against a gray office background, with the line "Your brain isn't tired. It's oxygen-deprived." Visual + headline + immediate relatability = high CTR.</p>
+        <div class="micro-hooks">
+          <div class="label">Micro Hooks</div>
+          <div class="micro-hook">
+            <span class="micro-hook-type">Problem-first &mdash;</span>
+            <span class="micro-hook-text">Wait -- no em dashes. Problem-first: "It's 2pm. You're on your 4th coffee. Your brain feels like wet cement. The problem isn't caffeine -- it's that your blood hasn't moved in 3 hours."</span>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Result-first</div>
+            <div class="micro-hook-text">"I started using this in the afternoon. The 2pm crash I've had for 5 years? Gone. Blood flow, apparently, works better than espresso."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Curiosity</div>
+            <div class="micro-hook-text">"Coffee doesn't fix the 2pm wall. Here's what actually does. (And it fits under your desk.)"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RANK 2 -->
+    <div class="angle-card">
+      <div class="angle-card-header">
+        <span class="rank-badge">#2</span>
+        <div class="badge-row">
+          <span class="badge badge-fresh">Fresh 0/4</span>
+          <span class="badge badge-cat">Contrarian / Pattern Interrupt</span>
+        </div>
+        <h3>You Don't Have a Willpower Problem</h3>
+        <p class="core-insight">The avatar has tried and failed with fitness solutions before. Removing self-blame is the highest-trust entry point -- and no competitor has used it.</p>
+      </div>
+      <div class="angle-card-body">
+        <div class="label">Sample Hook</div>
+        <div class="hook-box">"You're not lazy. You're working in a system that makes movement structurally impossible -- and then blaming yourself for it. Every fitness solution that asks you to stop working is designed for someone else's job."</div>
+        <span class="format-pill">Best Format: VSL / Long-form UGC Video</span>
+        <div class="label">Why It Wins</div>
+        <p class="why-wins">This avatar carries shame from every previous fitness attempt that failed. The gym membership, the standing desk, the walking breaks -- all abandoned because work didn't cooperate. This angle validates that experience before selling anything. "The system is broken, not you" is one of the most powerful trust-building hooks in DTC because it earns goodwill before asking for a purchase. Fresh 0/4 against the competitor set. Best executed as a UGC-style video where someone speaks to camera about their failed gym history before revealing the solution. Pre-empts the PRIMARY OBJECTION ("I'll buy it and not use it") because it reframes WHY those other things failed.</p>
+        <div class="micro-hooks">
+          <div class="label">Micro Hooks</div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Problem-first</div>
+            <div class="micro-hook-text">"You're not lazy. You're working in a system designed to keep you sitting. Every fitness solution that asks you to stop working is a solution designed for someone else's job."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Result-first</div>
+            <div class="micro-hook-text">"I tried gym memberships twice, a standing desk, a pedal bike. The one thing that worked? The only thing I didn't have to stop working to use."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Social proof</div>
+            <div class="micro-hook-text">"My trainer told me I would never build a gym habit while working 9-hour days. This was what he recommended instead."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RANK 3 -->
+    <div class="angle-card">
+      <div class="angle-card-header">
+        <span class="rank-badge">#3</span>
+        <div class="badge-row">
+          <span class="badge badge-fresh">Fresh 0/4</span>
+          <span class="badge badge-cat">Fear / Urgency</span>
+        </div>
+        <h3>The Slow Damage</h3>
+        <p class="core-insight">The health consequences of sitting are insidious precisely because they accumulate slowly. Specific, low-key imagery triggers recognition without being preachy -- and it is Fresh 0/4.</p>
+      </div>
+      <div class="angle-card-body">
+        <div class="label">Sample Hook</div>
+        <div class="hook-box">"The damage from sitting 8 hours a day doesn't happen all at once. It's the slightly higher blood pressure number. The waistband getting tighter. The stairs that feel harder. It takes its time."</div>
+        <span class="format-pill">Best Format: VSL / Static Image</span>
+        <div class="label">Why It Wins</div>
+        <p class="why-wins">Low-key, accumulating fear outperforms dramatic health statistics for this avatar because the avatar is in denial ("I'm probably fine"). The specific images -- the blood pressure number, the waistband, the stairs -- are REAL things this person has noticed or will notice soon. This triggers recognition, not defensiveness. Fresh 0/4 against competitor set. No competitor in the Winners DB runs the "slow accumulating damage" fear hook. Works best as a static image with a list: "What 5 years at a desk looks like: Year 1: back tightness. Year 2: waistband. Year 3: the doctor visit." Then the product reveal. High scroll-stop potential for the health-anxious segment of the avatar.</p>
+        <div class="micro-hooks">
+          <div class="label">Micro Hooks</div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Problem-first</div>
+            <div class="micro-hook-text">"The damage from sitting 8 hours a day doesn't feel dramatic. That's what makes it dangerous. It's the slightly higher blood pressure number. The waistband getting tighter. The stairs that feel harder."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Result-first</div>
+            <div class="micro-hook-text">"My doctor mentioned my blood pressure at my last checkup. I started this 90 days ago. My last reading was normal."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-hook-type">Curiosity</div>
+            <div class="micro-hook-text">"The damage from sitting 8 hours a day doesn't feel dramatic. That's what makes it dangerous."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ALL 20 ANGLES -->
+<section>
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <button class="filter-btn active" onclick="filterAngles('all', this)">All (20)</button>
+    <button class="filter-btn" onclick="filterAngles('Pain / Frustration', this)">Pain / Frustration</button>
+    <button class="filter-btn" onclick="filterAngles('Aspiration / Identity', this)">Aspiration</button>
+    <button class="filter-btn" onclick="filterAngles('Contrarian', this)">Contrarian</button>
+    <button class="filter-btn" onclick="filterAngles('Fear / Urgency', this)">Fear / Urgency</button>
+    <button class="filter-btn" onclick="filterAngles('Social Proof', this)">Social Proof</button>
+    <button class="filter-btn" onclick="filterAngles('Fresh', this)">Fresh Only</button>
+    <button class="filter-btn" onclick="filterAngles('Twist', this)">Twist Only</button>
+    <input class="search-box" type="text" placeholder="Search angles..." oninput="searchAngles(this.value)">
+  </div>
+  <table id="anglesTable">
+    <thead>
+      <tr>
+        <th onclick="sortAngles(0)">#</th>
+        <th onclick="sortAngles(1)">Angle Name</th>
+        <th onclick="sortAngles(2)">Category</th>
+        <th onclick="sortAngles(3)">Uniqueness</th>
+        <th>Core Insight</th>
+        <th>Hook</th>
+        <th>Format</th>
+      </tr>
+    </thead>
+    <tbody id="anglesBody">
+      <tr data-cat="Pain / Frustration" data-unique="Fresh">
+        <td>1</td><td class="angle-name">The 2pm Wall</td><td><span class="badge badge-cat">Pain / Frustration</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>The afternoon energy crash is a blood flow problem, not a caffeine problem</td>
+        <td>"It's 2pm. You're on your 4th coffee. Your brain feels like wet cement. The problem isn't caffeine -- it's that your blood hasn't moved in 3 hours."</td>
+        <td>Static / Short UGC</td>
+      </tr>
+      <tr data-cat="Pain / Frustration" data-unique="Fresh">
+        <td>2</td><td class="angle-name">The Gym Graveyard</td><td><span class="badge badge-cat">Pain / Frustration</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Failed fitness equipment history -- not laziness, but the wrong system</td>
+        <td>"You didn't quit on your health. You quit on systems that required you to stop working. This one doesn't."</td>
+        <td>Static / UGC Video</td>
+      </tr>
+      <tr data-cat="Pain / Frustration" data-unique="Fresh">
+        <td>3</td><td class="angle-name">The Step Count Collapse</td><td><span class="badge badge-cat">Pain / Frustration</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>WFH eliminated the incidental movement that built into the old routine; smartwatch data shows the collapse</td>
+        <td>"I looked at my step count from last year vs. now. I'm barely moving. And I didn't notice until the number started screaming at me."</td>
+        <td>UGC Video / Testimonial</td>
+      </tr>
+      <tr data-cat="Pain / Frustration" data-unique="Fresh">
+        <td>4</td><td class="angle-name">The Sitting Trap</td><td><span class="badge badge-cat">Pain / Frustration</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>You want to move. Work doesn't let you. 4 hours pass and you haven't left the chair. This is structural, not personal.</td>
+        <td>"Back-to-back meetings. A deadline. By the time you notice you haven't moved, it's dark. You knew this was bad. Work didn't care."</td>
+        <td>Static / VSL</td>
+      </tr>
+      <tr data-cat="Aspiration / Identity" data-unique="Fresh">
+        <td>5</td><td class="angle-name">The Smart Professional</td><td><span class="badge badge-cat">Aspiration / Identity</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>High performers manage their biology, not just their schedule</td>
+        <td>"The people who outperform you aren't working longer hours. They're not letting their blood pool in their legs while they do it."</td>
+        <td>Static / Short Video</td>
+      </tr>
+      <tr data-cat="Aspiration / Identity" data-unique="Twist">
+        <td>6</td><td class="angle-name">Future Self Gratitude</td><td><span class="badge badge-cat">Aspiration / Identity</span></td>
+        <td><span class="badge badge-twist">Twist 1/4</span></td>
+        <td>The choices made at your desk in your 40s show up in your body in your 60s</td>
+        <td>"The version of you at 65 is being written by the hours you spend at this desk right now."</td>
+        <td>VSL / Long-form</td>
+      </tr>
+      <tr data-cat="Aspiration / Identity" data-unique="Twist">
+        <td>7</td><td class="angle-name">The Multitasker's Edge</td><td><span class="badge badge-cat">Aspiration / Identity</span></td>
+        <td><span class="badge badge-twist">Twist 2/4</span></td>
+        <td>Burning calories while closing deals is not a gimmick -- it is a systems-level upgrade</td>
+        <td>"What if you didn't have to choose between being healthy and being productive? What if you could just do both?"</td>
+        <td>UGC Video / Testimonial</td>
+      </tr>
+      <tr data-cat="Aspiration / Identity" data-unique="Twist">
+        <td>8</td><td class="angle-name">Already Active</td><td><span class="badge badge-cat">Aspiration / Identity</span></td>
+        <td><span class="badge badge-twist">Twist 1/4</span></td>
+        <td>The surprising discovery that you have been burning calories all day without noticing</td>
+        <td>"I was on my 7th call of the day when I checked the app. 320 calories. I hadn't left my desk."</td>
+        <td>UGC Video / Testimonial</td>
+      </tr>
+      <tr data-cat="Contrarian" data-unique="Fresh">
+        <td>9</td><td class="angle-name">Standing Desks Are a Lie</td><td><span class="badge badge-cat">Contrarian</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Standing still is not meaningfully better than sitting; you need movement, not a different posture</td>
+        <td>"Your standing desk is making you feel better about sitting. That's it. Standing still is not the answer."</td>
+        <td>Static / VSL</td>
+      </tr>
+      <tr data-cat="Contrarian" data-unique="Fresh">
+        <td>10</td><td class="angle-name">You Don't Have a Willpower Problem</td><td><span class="badge badge-cat">Contrarian</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>The system that requires you to stop working to exercise is designed to fail desk workers -- not your fault</td>
+        <td>"You're not lazy. You're working in a system that makes movement structurally impossible -- and then blaming yourself for it."</td>
+        <td>VSL / UGC Video</td>
+      </tr>
+      <tr data-cat="Contrarian" data-unique="Fresh">
+        <td>11</td><td class="angle-name">The Calorie Math</td><td><span class="badge badge-cat">Contrarian</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>80 calories/hour is boring -- until you do the annual math: 160,000+ calories difference per year</td>
+        <td>"Nobody talks about this: 2 hours a day of under-desk movement adds up to 14,000+ extra calories burned this year. Without a single gym trip."</td>
+        <td>Static / Carousel</td>
+      </tr>
+      <tr data-cat="Contrarian" data-unique="Fresh">
+        <td>12</td><td class="angle-name">Your Chair Is the Problem</td><td><span class="badge badge-cat">Contrarian</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Every other solution requires you to leave the desk. That is the design flaw -- not a personal failure.</td>
+        <td>"Stop trying to fix your health with solutions designed for people who can leave their desk. Start here instead."</td>
+        <td>Static / Short Video</td>
+      </tr>
+      <tr data-cat="Fear / Urgency" data-unique="Fresh">
+        <td>13</td><td class="angle-name">The Slow Damage</td><td><span class="badge badge-cat">Fear / Urgency</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Sedentary damage accumulates slowly and specifically -- blood pressure, waistband, stairs -- before becoming undeniable</td>
+        <td>"The damage from sitting 8 hours a day doesn't happen all at once. It's the slightly higher blood pressure number. The waistband getting tighter. The stairs that feel harder."</td>
+        <td>VSL / Static</td>
+      </tr>
+      <tr data-cat="Fear / Urgency" data-unique="Fresh">
+        <td>14</td><td class="angle-name">The CVD Risk Nobody Talks About</td><td><span class="badge badge-cat">Fear / Urgency</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Sitting 8+ hours daily raises cardiovascular disease risk by 147% -- a statistic most desk workers have never heard</td>
+        <td>"Sitting for 8 hours raises your heart disease risk by 147%. Most desk workers do it 5 days a week."</td>
+        <td>Static / VSL</td>
+      </tr>
+      <tr data-cat="Fear / Urgency" data-unique="Fresh">
+        <td>15</td><td class="angle-name">What You're Leaving on the Table</td><td><span class="badge badge-cat">Fear / Urgency</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Every hour seated, the body is quietly losing muscle mass, metabolic rate, and bone density -- the hidden cost of the desk job</td>
+        <td>"While you're working, your body is quietly undoing itself. Muscle atrophy from sitting starts within days."</td>
+        <td>VSL / Carousel</td>
+      </tr>
+      <tr data-cat="Fear / Urgency" data-unique="Fresh">
+        <td>16</td><td class="angle-name">The Doctor Visit</td><td><span class="badge badge-cat">Fear / Urgency</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>Most people wait for a medical wake-up call to change; this is the chance to change before that conversation</td>
+        <td>"I don't want to wait for my doctor to tell me to take this seriously. I want to do something now, before that conversation."</td>
+        <td>Testimonial / UGC Video</td>
+      </tr>
+      <tr data-cat="Social Proof" data-unique="Fresh">
+        <td>17</td><td class="angle-name">Office Workers Who Switched</td><td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>60 million desk workers share this problem; those who found the solution all found it the same way</td>
+        <td>"When 60 million workers all have the same problem, the solutions start to look the same. This one looks different -- because it is."</td>
+        <td>Testimonial / Carousel</td>
+      </tr>
+      <tr data-cat="Social Proof" data-unique="Twist">
+        <td>18</td><td class="angle-name">The PT Recommendation</td><td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+        <td><span class="badge badge-twist">Twist 1/4</span></td>
+        <td>Physical therapists recommend under-desk movement for sedentary patients -- lending medical authority the avatar responds to</td>
+        <td>"My physical therapist is the one who told me about this. Said it's the best thing someone with a desk job can do."</td>
+        <td>Testimonial / UGC Video</td>
+      </tr>
+      <tr data-cat="Social Proof" data-unique="Fresh">
+        <td>19</td><td class="angle-name">Remote Worker Rescue</td><td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+        <td><span class="badge badge-fresh">Fresh 0/4</span></td>
+        <td>WFH workers who discovered their health quietly deteriorated and found the solution -- a specific, emotionally charged narrative</td>
+        <td>"I started WFH in 2022. By 2024, my doctor said my blood pressure was creeping up. I hadn't connected the dots until then."</td>
+        <td>Testimonial / UGC Video</td>
+      </tr>
+      <tr data-cat="Social Proof" data-unique="Twist">
+        <td>20</td><td class="angle-name">The 3,564 Review Club</td><td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+        <td><span class="badge badge-twist">Twist 1/4</span></td>
+        <td>Thousands of self-described skeptics who also swore they'd "just walk more" -- with what actually happened</td>
+        <td>"3,564 people who also swore they'd just walk more. Here's what actually happened."</td>
+        <td>Static / Carousel</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- MACRO ANGLES -->
+<section>
+  <h2>Macro-Angles (Offers / Seasonal)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <span class="macro-tag">NOW -- June 2026</span>
+      <h4>Father's Day Gift</h4>
+      <p>"The dad who swore he'd work out more. Give him the one fitness solution that works while he works." Activate now through June 21. Best for: carousel with testimonials from working dads.</p>
+    </div>
+    <div class="macro-card">
+      <span class="macro-tag">August / September</span>
+      <h4>Back-to-School / New Routine</h4>
+      <p>"New schedule, new gear. For the parents who know they won't make it to the gym once school starts." Targets the WFH parent who loses what little exercise time they had during summer.</p>
+    </div>
+    <div class="macro-card">
+      <span class="macro-tag">January</span>
+      <h4>New Year's Resolution That Works</h4>
+      <p>"The fitness resolution that doesn't require motivation. Just plug it in." Anti-resolution framing differentiates from every gym ad running in January. "This isn't a resolution. It's a plug-in."</p>
+    </div>
+    <div class="macro-card">
+      <span class="macro-tag">November</span>
+      <h4>BFCM / Holiday Gift</h4>
+      <p>"The health gift they'll actually use. Because it fits in their existing schedule." Gift angle works well because the avatar is easy to buy for (desk worker = universal gift recipient). Best: gift card + bundle offer.</p>
+    </div>
+    <div class="macro-card">
+      <span class="macro-tag">Evergreen</span>
+      <h4>5,000 Desk Workers Milestone</h4>
+      <p>"5,000+ desk workers are burning calories right now. Without leaving their chairs." Evergreen social proof. Update number as reviews grow. Pairs well with the "3,564 Review Club" angle.</p>
+    </div>
+    <div class="macro-card">
+      <span class="macro-tag">Evergreen</span>
+      <h4>WFH Sedentary Stats</h4>
+      <p>"60 million Americans work from home. Their step counts dropped 60%. Here's the fix." Data-led angle. Works year-round. Best for: static image with data visualization, then the product reveal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH NOTES -->
+<section>
+  <h2>Research Notes</h2>
+  <div class="research-cols">
+    <div class="research-block">
+      <h3>Top 10 Pain Points</h3>
+      <ul>
+        <li>The 2pm energy crash and brain fog from prolonged sitting</li>
+        <li>Smartwatch step count collapse after going WFH (1,200 vs. 8,000 daily)</li>
+        <li>Guilt from buying gym memberships / equipment that never got used</li>
+        <li>"I'll work out after work" loop -- exhausted by 6pm, never happens</li>
+        <li>Standing desk disappointment -- bought it, still ends up sitting most of the day</li>
+        <li>Doctor flagging blood pressure / weight gain at annual checkup</li>
+        <li>Body changes: jeans tighter, stairs feel harder, energy down</li>
+        <li>Back and shoulder stiffness from 8+ hours without movement</li>
+        <li>Chair rolls backward during pedaling -- design incompatibility complaint</li>
+        <li>Noise and vibration on cheap models making it unusable in office environments</li>
+      </ul>
+    </div>
+    <div class="research-block">
+      <h3>Top Benefits (Validated)</h3>
+      <ul>
+        <li>Burn 80-100+ calories/hour with zero interruption to work</li>
+        <li>Resolves afternoon energy crash via improved blood circulation</li>
+        <li>Low-impact movement safe for joints, knees, and rehab patients</li>
+        <li>Ultra-quiet motorized operation -- verified by The Strategist, multiple reviewers</li>
+        <li>Remote control operation requires no bending or pausing</li>
+        <li>Compact, fits under standard desk (27+ inch clearance)</li>
+        <li>12 resistance levels + forward/reverse direction</li>
+        <li>Pre-assembled, plug-and-play setup</li>
+        <li>Annual calorie math: 80 kcal x 5hr x 250 days = 100,000 calories/year</li>
+        <li>Reduces health risk from prolonged sedentary behavior</li>
+      </ul>
+    </div>
+    <div class="research-block">
+      <h3>Competitor Angles Being Differentiated From</h3>
+      <ul>
+        <li><strong>Gather Co (Meta, Score 25):</strong> WFH convenience / passive movement while working -- Crowded market angle; do not lead with this</li>
+        <li><strong>The Strategist (Meta, Score 35):</strong> Editorial authority / "zero coworkers will notice" -- quiet/stealth + social validation; do not lead with product stealth</li>
+        <li><strong>Hebrew Store (Meta, Score 24):</strong> Effortless movement / "keeping legs moving without effort" -- adjacent to passive movement</li>
+        <li><strong>TikTok @madison.standifer3:</strong> Casual lifestyle vibes (337K views, 9.49%) -- aspirational but no pain point; good as a creative style, not an angle</li>
+        <li><strong>Cubii (market leader):</strong> "Get fit while you sit" / burn calories from your couch -- generic passive exercise; avoid this frame</li>
+        <li><strong>DeskCycle:</strong> Productivity + wellness integration / "combat sedentary desk jobs" -- category pioneer language; avoid generic category framing</li>
+      </ul>
+    </div>
+    <div class="research-block">
+      <h3>Failed Alternatives the Avatar Has Tried</h3>
+      <ul>
+        <li>Gym memberships (abandoned: commute + timing friction)</li>
+        <li>Standing desks (abandoned: feet/back fatigue, marginal benefit)</li>
+        <li>Treadmill desks (too disruptive cognitively; noisy)</li>
+        <li>Reminder apps / walking breaks (fail during deadline pressure)</li>
+        <li>Traditional desk bikes (too much upper body sway on resistance; cheap feel)</li>
+        <li>Exercise balls as chairs (unstable, distracting)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- UNIQUENESS LEGEND -->
+<section>
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot dot-fresh"></div><strong>Fresh 0/N</strong> -- No competitor ad in the Winners DB runs this angle. Strongest differentiation. 15 of 20 angles are Fresh.</div>
+    <div class="legend-item"><div class="legend-dot dot-twist"></div><strong>Twist X/N</strong> -- Competitors hit the same pain/benefit but frame it differently; this angle adds a fresh differentiator. 5 of 20 angles are Twist.</div>
+    <div class="legend-item"><div class="legend-dot dot-crowded"></div><strong>Crowded X/N</strong> -- One or more competitors already run essentially this angle. Differentiate further or drop. 0 of 20 angles are Crowded.</div>
+    <div class="legend-item"><strong>N = 4</strong> -- The total number of competitor ads in the Winners DB for the "Under Desk Elliptical Exerciser" search term (3 Meta + 1 TikTok, as of 06-14-2026).</div>
+  </div>
+</section>
+
+</div><!-- /.container -->
+
+<footer>
+  <p>Under Desk Elliptical Exerciser | Marketing Angles Report | 2026-06-15 | NOVA CAPITAL | trace_run_id: mktangle-06-14-r90</p>
+</footer>
+
+<script>
+function filterAngles(filter, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const rows = document.querySelectorAll('#anglesBody tr');
+  rows.forEach(row => {
+    if (filter === 'all') { row.style.display = ''; return; }
+    if (filter === 'Fresh' || filter === 'Twist' || filter === 'Crowded') {
+      row.style.display = row.dataset.unique === filter ? '' : 'none';
+    } else {
+      row.style.display = row.dataset.cat && row.dataset.cat.includes(filter) ? '' : 'none';
+    }
+  });
+}
+function searchAngles(query) {
+  const rows = document.querySelectorAll('#anglesBody tr');
+  const q = query.toLowerCase();
+  rows.forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+let sortDir = {};
+function sortAngles(col) {
+  const tbody = document.getElementById('anglesBody');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const dir = (sortDir[col] = !sortDir[col]);
+  rows.sort((a, b) => {
+    const va = a.cells[col] ? a.cells[col].textContent.trim() : '';
+    const vb = b.cells[col] ? b.cells[col].textContent.trim() : '';
+    return dir ? va.localeCompare(vb) : vb.localeCompare(va);
+  });
+  rows.forEach(r => tbody.appendChild(r));
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magnetic Spice Jars - Marketing Angles Report</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f6fa; color: #2c3e50; line-height: 1.6; }
+  .top-bar { height: 4px; background: linear-gradient(90deg, #2c3e50, #34495e, #2c3e50); }
+  .header { background: #fff; padding: 32px 40px 24px; border-bottom: 1px solid #e8ecf0; }
+  .header h1 { font-size: 1.9rem; font-weight: 700; color: #1a252f; margin-bottom: 6px; }
+  .header .subtitle { font-size: 0.95rem; color: #64748b; margin-bottom: 4px; }
+  .header .date-line { font-size: 0.82rem; color: #94a3b8; }
+  .stats-block { background: #fff; border-bottom: 1px solid #e8ecf0; padding: 18px 40px; display: flex; gap: 32px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat .val { font-size: 1.6rem; font-weight: 700; color: #2c3e50; }
+  .stat .lbl { font-size: 0.75rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+  h2 { font-size: 1.25rem; font-weight: 700; color: #1a252f; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e8ecf0; }
+  h3 { font-size: 1rem; font-weight: 600; color: #2c3e50; margin-bottom: 10px; }
+  .section { margin-bottom: 40px; }
+
+  /* Summary cards */
+  .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .summary-card { background: #fff; border-radius: 8px; padding: 20px; border-left: 4px solid #2c3e50; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .summary-card h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; margin-bottom: 8px; }
+  .summary-card p { font-size: 0.93rem; color: #374151; }
+  .summary-card.red { border-left-color: #e74c3c; }
+  .summary-card.blue { border-left-color: #3498db; }
+  .summary-card.green { border-left-color: #27ae60; }
+
+  /* Top 3 angle cards */
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .angle-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .angle-card-header { padding: 4px 0 0 0; }
+  .angle-card-accent { height: 4px; }
+  .rank-1 .angle-card-accent { background: linear-gradient(90deg, #f39c12, #e74c3c); }
+  .rank-2 .angle-card-accent { background: linear-gradient(90deg, #8e44ad, #3498db); }
+  .rank-3 .angle-card-accent { background: linear-gradient(90deg, #27ae60, #16a085); }
+  .angle-card-body { padding: 20px; }
+  .angle-rank { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 4px; }
+  .angle-name { font-size: 1.1rem; font-weight: 700; color: #1a252f; margin-bottom: 6px; }
+  .angle-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .badge { display: inline-block; font-size: 0.72rem; font-weight: 600; padding: 3px 9px; border-radius: 20px; }
+  .badge-fresh { background: #d1fae5; color: #065f46; }
+  .badge-twist { background: #dbeafe; color: #1e40af; }
+  .badge-crowded { background: #fee2e2; color: #991b1b; }
+  .badge-cat { background: #f3f4f6; color: #374151; }
+  .badge-fmt { background: #fef3c7; color: #92400e; }
+  .angle-insight { font-size: 0.88rem; color: #64748b; font-style: italic; margin-bottom: 12px; border-left: 3px solid #e2e8f0; padding-left: 10px; }
+  .angle-hook { font-size: 0.93rem; color: #374151; background: #f8fafc; border-radius: 6px; padding: 12px; margin-bottom: 12px; }
+  .why-wins { font-size: 0.83rem; color: #6b7280; margin-bottom: 16px; }
+  .micro-hooks { border-top: 1px solid #f1f5f9; padding-top: 14px; margin-top: 4px; }
+  .micro-hooks h4 { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; margin-bottom: 10px; }
+  .micro-hook { margin-bottom: 10px; }
+  .micro-hook-type { font-size: 0.72rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 2px; }
+  .micro-hook-text { font-size: 0.88rem; color: #374151; }
+
+  /* All 20 grid */
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+  .filter-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid #e2e8f0; background: #fff; font-size: 0.8rem; cursor: pointer; color: #64748b; transition: all 0.15s; }
+  .filter-btn:hover, .filter-btn.active { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+  .sort-btn { padding: 6px 14px; border-radius: 20px; border: 1px solid #3498db; background: #fff; font-size: 0.8rem; cursor: pointer; color: #3498db; }
+  .sort-btn:hover { background: #3498db; color: #fff; }
+  .angles-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); font-size: 0.85rem; }
+  .angles-table th { background: #f8fafc; padding: 10px 14px; text-align: left; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: #64748b; border-bottom: 1px solid #e8ecf0; cursor: pointer; user-select: none; }
+  .angles-table th:hover { background: #f1f5f9; }
+  .angles-table td { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+  .angles-table tr:last-child td { border-bottom: none; }
+  .angles-table tr:hover td { background: #f8fafc; }
+  .angle-num { font-weight: 700; color: #94a3b8; width: 30px; }
+
+  /* Macro angles */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+  .macro-card { background: #fff; border-radius: 8px; padding: 16px; border-top: 3px solid #2c3e50; box-shadow: 0 1px 3px rgba(0,0,0,0.05); font-size: 0.88rem; }
+  .macro-card strong { display: block; color: #1a252f; margin-bottom: 4px; }
+  .macro-card span { color: #64748b; font-size: 0.82rem; }
+
+  /* Research notes */
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .research-block { background: #fff; border-radius: 8px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .research-block h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: #94a3b8; margin-bottom: 10px; }
+  .research-block ul { padding-left: 18px; }
+  .research-block li { font-size: 0.88rem; color: #374151; margin-bottom: 5px; }
+
+  /* Legend */
+  .legend { display: flex; gap: 20px; flex-wrap: wrap; background: #fff; border-radius: 8px; padding: 16px 20px; margin-top: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: #374151; }
+
+  /* Competitor note */
+  .competitor-note { background: #fff8ed; border: 1px solid #fde68a; border-radius: 8px; padding: 14px 18px; font-size: 0.85rem; color: #92400e; margin-bottom: 16px; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+
+<div class="header">
+  <h1>Magnetic Spice Jars &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: 30-50 female home cook | busy professional or kitchen enthusiast | has tried and failed at spice organization before</div>
+  <div class="date-line">Generated 06-14-2026 &nbsp;|&nbsp; trace_run_id: mktangle-06-14-r81 &nbsp;|&nbsp; Product DB: VA Products (Andi) row 81</div>
+</div>
+
+<div class="stats-block">
+  <div class="stat"><div class="val">20</div><div class="lbl">Angles Generated</div></div>
+  <div class="stat"><div class="val">17</div><div class="lbl">Fresh (0/2)</div></div>
+  <div class="stat"><div class="val">3</div><div class="lbl">Twist (1/2)</div></div>
+  <div class="stat"><div class="val">0</div><div class="lbl">Crowded</div></div>
+  <div class="stat"><div class="val">2</div><div class="lbl">Competitor Ads (N)</div></div>
+  <div class="stat"><div class="val">5</div><div class="lbl">Categories</div></div>
+  <div class="stat"><div class="val">9</div><div class="lbl">Macro Angles</div></div>
+</div>
+
+<div class="container">
+
+  <!-- SUMMARY SECTION -->
+  <div class="section">
+    <h2>Summary</h2>
+    <div class="summary-grid">
+      <div class="summary-card blue">
+        <h3>Avatar</h3>
+        <p>Female, 30-50, busy home cook in a small-to-medium kitchen. Has organized spices before and it never stuck. Craves a kitchen that feels intentional but is realistic about her follow-through. Cooks 4+ nights a week and loses time hunting for spices mid-recipe. Often buys duplicates because she cannot see what she already owns.</p>
+      </div>
+      <div class="summary-card green">
+        <h3>Core Transformation</h3>
+        <p><strong>Before:</strong> Every recipe starts with a frustrated hunt through crowded shelves or cluttered counters, grabbing mismatched jars with faded labels, buying duplicates of spices hidden somewhere in the back.<br><br><strong>After:</strong> 24 hexagonal glass jars line the side of the fridge in a satisfying honeycomb grid. Every spice is visible at a glance. Cooking starts with confidence instead of chaos.</p>
+      </div>
+      <div class="summary-card red">
+        <h3>Primary Objection</h3>
+        <p>"This looks beautiful online, but it won't hold up. The magnets will weaken, the labels will peel, and my kitchen will be back to chaos within a month. I've been here before."</p>
+        <p style="margin-top:8px;font-size:0.82rem;color:#94a3b8;">Deeper fear: I am the problem. I can't maintain organization. Spending money on this just proves I'll fail again.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP 3 ANGLES -->
+  <div class="section">
+    <h2>Top 3 Angles</h2>
+    <div class="top3-grid">
+
+      <!-- RANK 1 -->
+      <div class="angle-card rank-1">
+        <div class="angle-card-accent"></div>
+        <div class="angle-card-body">
+          <div class="angle-rank">Rank 1</div>
+          <div class="angle-name">The Spice Hunt Nightmare</div>
+          <div class="angle-meta">
+            <span class="badge badge-fresh">Fresh 0/2</span>
+            <span class="badge badge-cat">Pain / Frustration</span>
+            <span class="badge badge-fmt">UGC Video</span>
+          </div>
+          <div class="angle-insight">The moment of scrambling through jars mid-recipe is the single most universal and shareable pain in home cooking. Every person who cooks with more than 6 spices has lived this exact scene. Making them relive it in 3 seconds stops the scroll.</div>
+          <div class="angle-hook">"You're halfway through making dinner and you need the cumin. So you move the oregano, the paprika, the garlic powder, the three things you can't read... and it's not there. Again. You have three jars of cumin."</div>
+          <div class="why-wins"><strong>Why it wins:</strong> Zero competitors in the Winners DB run this specific pain frame. It is hyper-specific (naming the actual spice, the actual moment), emotionally real, and universally relatable for the avatar. The three-jar-of-cumin punchline gets a laugh and a wince simultaneously. Fresh 0/2 against the competitor set.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks (3 per type)</h4>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Problem-First</div>
+              <div class="micro-hook-text">"Tired of moving six jars to find the cumin? Every. Single. Time. There's a fix, and it's been sitting on the side of your fridge this whole time."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Result-First</div>
+              <div class="micro-hook-text">"I went from a 3-minute spice hunt mid-recipe to finding exactly what I need in under 3 seconds. And I stopped buying cumin I already owned."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Curiosity</div>
+              <div class="micro-hook-text">"The average home cook loses 20 minutes a week to this one annoying kitchen problem. And they don't even know it's happening."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Social Proof</div>
+              <div class="micro-hook-text">"She said she almost gave up cooking dinner. Not because of the recipe. Because of the spices. Then she did this."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Contra</div>
+              <div class="micro-hook-text">"Stop buying spice racks. They don't fix the real problem. The problem is you cannot see all your spices at once while you're cooking."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 2 -->
+      <div class="angle-card rank-2">
+        <div class="angle-card-accent"></div>
+        <div class="angle-card-body">
+          <div class="angle-rank">Rank 2</div>
+          <div class="angle-name">The Organization Trap</div>
+          <div class="angle-meta">
+            <span class="badge badge-fresh">Fresh 0/2</span>
+            <span class="badge badge-cat">Fear / Urgency</span>
+            <span class="badge badge-fmt">VSL / UGC Video</span>
+          </div>
+          <div class="angle-insight">The avatar has tried and failed at kitchen organization before. Rather than selling another solution, this angle names the real enemy: not her lack of discipline, but the wrong system. It dissolves the primary objection by reframing past failure as evidence she needs a different tool, not more willpower.</div>
+          <div class="angle-hook">"You've organized your spices before. Probably more than once. And every time, within a few weeks, the chaos comes back. That's not a you problem. Every system that requires you to put things back in the right spot fails. This one makes it impossible to do it wrong."</div>
+          <div class="why-wins"><strong>Why it wins:</strong> Directly pre-empts the primary objection ("I'll fail again") by reframing the failure attribution from self to system. Psychologically, this is the most trust-building move possible for an avatar who has been here before. Fresh 0/2 against the competitor set; no competitor addresses this layer.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks</h4>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Problem-First</div>
+              <div class="micro-hook-text">"Tired of reorganizing your spices every few months because it always falls apart? The system is what failed. Not you."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Result-First</div>
+              <div class="micro-hook-text">"I organized my spices once, 14 months ago. My kitchen still looks exactly the same. Here's why this time actually stuck."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Curiosity</div>
+              <div class="micro-hook-text">"The reason your last spice organization attempt failed had nothing to do with your habits. It was the container design. Here's what I mean."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Social Proof</div>
+              <div class="micro-hook-text">"She'd tried four different spice solutions before this one. She said this is the first time she didn't feel like she was fighting her own kitchen."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Contra</div>
+              <div class="micro-hook-text">"Stop blaming yourself for a messy spice drawer. Spice racks require you to be organized. These don't. The difference is visible."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 3 -->
+      <div class="angle-card rank-3">
+        <div class="angle-card-accent"></div>
+        <div class="angle-card-body">
+          <div class="angle-rank">Rank 3</div>
+          <div class="angle-name">The Fridge Space Hack</div>
+          <div class="angle-meta">
+            <span class="badge badge-fresh">Fresh 0/2</span>
+            <span class="badge badge-cat">Contrarian / Pattern Interrupt</span>
+            <span class="badge badge-fmt">Static / UGC Video</span>
+          </div>
+          <div class="angle-insight">Every competitor talks about "organizing" spices in cabinets, drawers, or on the counter. This angle reveals that the side of the fridge, the largest flat magnetic surface in the kitchen, has been there the whole time. It reframes the entire category by showing people a solution they've never considered for a space they didn't realize they had.</div>
+          <div class="angle-hook">"There are two square feet of completely unused magnetic real estate sitting right next to your stove. Has been there your whole life. You just never put it to work."</div>
+          <div class="why-wins"><strong>Why it wins:</strong> Pattern interrupts the entire spice-storage category by redefining where spices live. Stops the scroll because it reveals something the viewer never considered about their own kitchen. The reframe ("I've been ignoring this space?") creates an immediate aha moment that drives saves and shares. Fresh 0/2, highly differentiated.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks</h4>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Problem-First</div>
+              <div class="micro-hook-text">"Out of counter space? Out of cabinet space? There are 2 square feet of unused magnetic real estate right next to your stove that you've been ignoring."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Result-First</div>
+              <div class="micro-hook-text">"I moved my spices off the counter and onto the side of my fridge. I got back a full shelf, cleared two cabinet doors, and my kitchen looks twice as big."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Curiosity</div>
+              <div class="micro-hook-text">"The most underused storage surface in your kitchen has been there your whole life. You've walked past it every day and never once thought to use it."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Social Proof</div>
+              <div class="micro-hook-text">"A friend showed me what she did with the side of her fridge, and I felt genuinely silly for not thinking of it myself."</div>
+            </div>
+            <div class="micro-hook">
+              <div class="micro-hook-type">Contra</div>
+              <div class="micro-hook-text">"Stop trying to fit your spices in your cabinets. The side of your refrigerator has been waiting. All you needed was the right jar."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ALL 20 ANGLES -->
+  <div class="section">
+    <h2>All 20 Angles</h2>
+
+    <div class="competitor-note">
+      <strong>Uniqueness yardstick:</strong> N=2 competitor ads in Winners DB for "Magnetic Spice Jars" search term. Both Marketing Angle cells were empty (not yet classified by Audit Winners DB). Based on ad copy and lander review: Winner 1 (Lily's Home) uses a broad home aesthetics / "beautifully organized modern living" angle. Winner 2 (Pleteffect) is a misclassified can opener product with no relevant spice jar angle. Twist ratings reflect adjacency to the Lily's Home aesthetics frame.
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterAngles('all', this)">All (20)</button>
+      <button class="filter-btn" onclick="filterAngles('pain', this)">Pain / Frustration</button>
+      <button class="filter-btn" onclick="filterAngles('aspiration', this)">Aspiration / Identity</button>
+      <button class="filter-btn" onclick="filterAngles('contrarian', this)">Contrarian</button>
+      <button class="filter-btn" onclick="filterAngles('fear', this)">Fear / Urgency</button>
+      <button class="filter-btn" onclick="filterAngles('social', this)">Social Proof</button>
+      <button class="filter-btn" onclick="filterAngles('Fresh', this)">Fresh Only</button>
+      <button class="filter-btn" onclick="filterAngles('Twist', this)">Twist Only</button>
+      <button class="sort-btn" onclick="sortAngles()">Sort by Uniqueness</button>
+    </div>
+
+    <table class="angles-table" id="angles-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Angle Name</th>
+          <th>Category</th>
+          <th>Uniqueness</th>
+          <th>Core Insight</th>
+          <th>Sample Hook</th>
+          <th>Best Format</th>
+        </tr>
+      </thead>
+      <tbody id="angles-body">
+
+        <tr data-cat="pain" data-unique="Fresh">
+          <td class="angle-num">1</td>
+          <td><strong>The Spice Hunt Nightmare</strong></td>
+          <td><span class="badge badge-cat">Pain / Frustration</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The mid-recipe scramble for the cumin is the most relatable and shareable moment of kitchen frustration for a home cook with more than a handful of spices.</td>
+          <td>"You're halfway through dinner and you need the cumin. You move the oregano, the paprika, the garlic powder... and there are three jars of cumin you forgot you had."</td>
+          <td>UGC Video</td>
+        </tr>
+
+        <tr data-cat="pain" data-unique="Fresh">
+          <td class="angle-num">2</td>
+          <td><strong>Counter Chaos Tax</strong></td>
+          <td><span class="badge badge-cat">Pain / Frustration</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Cluttered counter space is not just ugly; it imposes a hidden mental tax every time the person enters the kitchen, making the space feel out of control even after cleaning.</td>
+          <td>"Every time you walk into your kitchen and see those bottles on the counter, your brain registers 'undone task.' You wipe the counter down and they go right back. It's not a cleaning problem. It's a storage problem."</td>
+          <td>Static / Carousel</td>
+        </tr>
+
+        <tr data-cat="pain" data-unique="Fresh">
+          <td class="angle-num">3</td>
+          <td><strong>The Duplicate Spice Spiral</strong></td>
+          <td><span class="badge badge-cat">Pain / Frustration</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Buying the same spice multiple times because the old jar was invisible in a crowded cabinet is a universal money drain that nobody talks about as an organization problem.</td>
+          <td>"Raise your hand if you have three jars of cumin. Or two jars of the same thing with no label. Every duplicate you own is money spent on disorganization."</td>
+          <td>Static / UGC Video</td>
+        </tr>
+
+        <tr data-cat="pain" data-unique="Fresh">
+          <td class="angle-num">4</td>
+          <td><strong>Label Betrayal</strong></td>
+          <td><span class="badge badge-cat">Pain / Frustration</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The promise of an organized spice system collapses the moment labels peel or fade; mystery jars get thrown away and the whole system falls apart.</td>
+          <td>"You spend a Sunday afternoon organizing your spices perfectly. Six months later, three jars have no labels, two more are unreadable, and you're back to square one. The jar is not the problem. The label system is."</td>
+          <td>Before/After Video</td>
+        </tr>
+
+        <tr data-cat="aspiration" data-unique="Twist">
+          <td class="angle-num">5</td>
+          <td><strong>The Kitchen You Designed</strong></td>
+          <td><span class="badge badge-cat">Aspiration / Identity</span></td>
+          <td><span class="badge badge-twist">Twist 1/2</span></td>
+          <td>The aspiration is not just a tidy kitchen; it is a kitchen that looks like it was chosen on purpose, not just cleaned up. The hexagonal magnetic grid signals "this person cooks and lives intentionally."</td>
+          <td>"Not just organized. Designed. There's a difference between a kitchen that got cleaned and a kitchen that was thought about."</td>
+          <td>Static / Lifestyle Photo</td>
+        </tr>
+
+        <tr data-cat="aspiration" data-unique="Fresh">
+          <td class="angle-num">6</td>
+          <td><strong>The Home Cook Identity Shift</strong></td>
+          <td><span class="badge badge-cat">Aspiration / Identity</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The avatar does not just want organized spices; she wants to feel like the kind of person who has her kitchen together. The product is the physical symbol of a competent, creative home cook.</td>
+          <td>"A kitchen that works like a professional's doesn't require a renovation. It requires every ingredient to be where you can reach it without thinking."</td>
+          <td>Testimonial / VSL</td>
+        </tr>
+
+        <tr data-cat="aspiration" data-unique="Fresh">
+          <td class="angle-num">7</td>
+          <td><strong>The Calm Cooking Morning</strong></td>
+          <td><span class="badge badge-cat">Aspiration / Identity</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The aspirational state is not just organized storage; it is the feeling of cooking without friction. Opening the fridge and seeing every spice labeled and visible is the start of every good meal.</td>
+          <td>"What would it feel like to start a recipe without once having to stop, search, or guess? That's the kitchen you should have."</td>
+          <td>Lifestyle Video</td>
+        </tr>
+
+        <tr data-cat="aspiration" data-unique="Twist">
+          <td class="angle-num">8</td>
+          <td><strong>The Kitchen Worth Showing</strong></td>
+          <td><span class="badge badge-cat">Aspiration / Identity</span></td>
+          <td><span class="badge badge-twist">Twist 1/2</span></td>
+          <td>Social hosting is an underrated driver for kitchen organization; the avatar wants a kitchen she is not embarrassed to show when guests arrive, and the honeycomb spice grid is the conversation piece that signals "someone who takes their home seriously."</td>
+          <td>"Guests will notice your kitchen before they taste your food. The hexagonal grid on the side of your fridge is the kind of detail that people take photos of."</td>
+          <td>Static / Lifestyle Photo</td>
+        </tr>
+
+        <tr data-cat="contrarian" data-unique="Fresh">
+          <td class="angle-num">9</td>
+          <td><strong>The Fridge Space Hack</strong></td>
+          <td><span class="badge badge-cat">Contrarian / Pattern Interrupt</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Every competitor frames the product as a replacement for counter/cabinet storage. This angle reveals that the side of the fridge is the largest unused magnetic surface in any kitchen, reframing the category entirely.</td>
+          <td>"There are two square feet of completely unused magnetic real estate sitting right next to your stove. Has been there your whole life. You just never put it to work."</td>
+          <td>Static / UGC Video</td>
+        </tr>
+
+        <tr data-cat="contrarian" data-unique="Fresh">
+          <td class="angle-num">10</td>
+          <td><strong>Spice Racks Are Broken By Design</strong></td>
+          <td><span class="badge badge-cat">Contrarian / Pattern Interrupt</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Traditional spice racks hide spices behind each other, requiring the cook to rotate and search even in a "organized" system. The category has been broken by design for 50 years and nobody has said it out loud.</td>
+          <td>"Every spice rack sold for the last 50 years has the same design flaw. It puts the spice you need last, behind the spice you use least. You can see the rack. You cannot see the spice."</td>
+          <td>Carousel / VSL</td>
+        </tr>
+
+        <tr data-cat="contrarian" data-unique="Fresh">
+          <td class="angle-num">11</td>
+          <td><strong>Organization is Not the Problem</strong></td>
+          <td><span class="badge badge-cat">Contrarian / Pattern Interrupt</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The avatar has been told the problem is her lack of organization habits. This challenges that framing: the problem is systems that require active maintenance. A system that works with human nature instead of against it requires no discipline to maintain.</td>
+          <td>"You don't need to be more organized. You need a system that doesn't require you to be."</td>
+          <td>Static / UGC Video</td>
+        </tr>
+
+        <tr data-cat="contrarian" data-unique="Fresh">
+          <td class="angle-num">12</td>
+          <td><strong>The Ritual of Filling</strong></td>
+          <td><span class="badge badge-cat">Contrarian / Pattern Interrupt</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Nobody talks about the filling-and-labeling experience as the reason this product sticks. The one-time ritual of filling hexagonal jars is so satisfying it creates an emotional investment that keeps people maintaining the system for years.</td>
+          <td>"Most people who get these spend a Sunday afternoon filling them. Then they tell every person who visits what they did. And 14 months later it still looks the same. The setup is the reason it lasts."</td>
+          <td>Testimonial / UGC Video</td>
+        </tr>
+
+        <tr data-cat="fear" data-unique="Fresh">
+          <td class="angle-num">13</td>
+          <td><strong>The Organization Trap</strong></td>
+          <td><span class="badge badge-cat">Fear / Urgency</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Each failed organization attempt makes the next one feel more psychologically expensive. The avatar's fear is not just chaos; it is the confirmation that she cannot maintain order. Naming this fear and resolving it reframes the purchase as a guarantee, not a gamble.</td>
+          <td>"You've organized your spices before. And it fell apart. And every time it falls apart, trying again feels harder. The problem was never your discipline. It was the design."</td>
+          <td>VSL / Testimonial</td>
+        </tr>
+
+        <tr data-cat="fear" data-unique="Fresh">
+          <td class="angle-num">14</td>
+          <td><strong>Cooking With Stale Spices</strong></td>
+          <td><span class="badge badge-cat">Fear / Urgency</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Spices left in original packaging lose potency within months; most home cooks are cooking with "spice-flavored dust" without realizing it. Visible, properly sealed storage is the first step to actually tasting the food you cook.</td>
+          <td>"If your spices are in the original jars in a dark cabinet, there's a good chance you're cooking with powder that stopped being flavorful last year. Glass seals it. Visibility reminds you to use it."</td>
+          <td>Educational Video / Static</td>
+        </tr>
+
+        <tr data-cat="fear" data-unique="Fresh">
+          <td class="angle-num">15</td>
+          <td><strong>The Kitchen You're Avoiding</strong></td>
+          <td><span class="badge badge-cat">Fear / Urgency</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>A chaotic kitchen discourages cooking; the avatar has noticed she cooks less on nights when she sees the clutter before she starts. The hidden cost of disorganization is meals not cooked at home.</td>
+          <td>"Notice how some nights you open the fridge, see the chaos, and just order delivery instead? The mess is making the decision for you."</td>
+          <td>UGC Video / Testimonial</td>
+        </tr>
+
+        <tr data-cat="fear" data-unique="Twist">
+          <td class="angle-num">16</td>
+          <td><strong>The Home That Reflects You</strong></td>
+          <td><span class="badge badge-cat">Fear / Urgency</span></td>
+          <td><span class="badge badge-twist">Twist 1/2</span></td>
+          <td>The fear underlying kitchen clutter is not just aesthetics; it is the feeling that your home does not reflect who you actually are or who you want to be. Organization is a form of self-expression that has been denied by bad systems.</td>
+          <td>"Your kitchen says something about you whether you want it to or not. Right now, for most people, it says 'I'm managing.' It could say 'I thought about this.'"</td>
+          <td>Static / Lifestyle</td>
+        </tr>
+
+        <tr data-cat="social" data-unique="Fresh">
+          <td class="angle-num">17</td>
+          <td><strong>She Moved Her Spices to the Fridge</strong></td>
+          <td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Normalizing the decision through a relatable character who made the switch and never went back is the fastest trust signal for a skeptical avatar who has tried alternatives before.</td>
+          <td>"She had a spice rack for 8 years. She put 24 jars on her fridge last January. She said she cannot imagine going back."</td>
+          <td>Testimonial / UGC Video</td>
+        </tr>
+
+        <tr data-cat="social" data-unique="Fresh">
+          <td class="angle-num">18</td>
+          <td><strong>The Gift That Gets a Reaction</strong></td>
+          <td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The complete kit experience (filling, labeling, revealing the final honeycomb grid) makes this the highest-engagement gift a home cook can receive. The Notes column confirms "gifting = maximum fundamentals." Gift buyers are an underaddressed segment.</td>
+          <td>"Most kitchen gifts get used twice. This one gets photographed, posted, and talked about for years. The first time someone sees the honeycomb grid on the fridge, they ask 'where did you get that?'"</td>
+          <td>UGC Video / Static</td>
+        </tr>
+
+        <tr data-cat="social" data-unique="Fresh">
+          <td class="angle-num">19</td>
+          <td><strong>The Before/After That Goes Viral</strong></td>
+          <td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>Kitchen organization before/after content is the highest-performing organic category on TikTok. The hexagonal magnetic grid is visually distinctive enough to stop a scroll even on a platform saturated with pantry organization content.</td>
+          <td>"Kitchen organization is the most-saved category on TikTok. The hexagon grid on a fridge is consistently in the top-performing transformations. You don't need an ad to sell this. You need the right content."</td>
+          <td>UGC Video / TikTok-style</td>
+        </tr>
+
+        <tr data-cat="social" data-unique="Fresh">
+          <td class="angle-num">20</td>
+          <td><strong>The Aha Moment</strong></td>
+          <td><span class="badge badge-cat">Social Proof / Tribe</span></td>
+          <td><span class="badge badge-fresh">Fresh 0/2</span></td>
+          <td>The moment of seeing all spices at once for the first time is emotionally significant enough to be a shareable story. Framing the purchase as "the moment I finally had a kitchen that worked" creates social proof through shared identity rather than through endorsement.</td>
+          <td>"She said the first morning she opened the fridge and saw every spice labeled and magnetic, she just stood there for a second. She didn't realize how much the chaos had been costing her until it was gone."</td>
+          <td>Testimonial / UGC Video</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="legend">
+      <div class="legend-item"><span class="badge badge-fresh">Fresh 0/2</span> No competitor in the Winners DB runs this angle (0 of 2 ads match)</div>
+      <div class="legend-item"><span class="badge badge-twist">Twist 1/2</span> One competitor runs an adjacent angle (aesthetics/home); this adds a distinct differentiator</div>
+      <div class="legend-item"><span class="badge badge-crowded">Crowded</span> Multiple competitors directly run this angle (none in this set)</div>
+      <div style="font-size:0.78rem;color:#94a3b8;">N=2 competitor ads in Winners DB for "Magnetic Spice Jars" | Both Marketing Angle cells were empty; classified from ad copy and lander review | Pleteffect winner is a misclassified can opener product</div>
+    </div>
+  </div>
+
+  <!-- MACRO ANGLES -->
+  <div class="section">
+    <h2>Macro-Angles (Offers / Seasonal)</h2>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <strong>New Year's Kitchen Reset (Jan)</strong>
+        <span>Activate first week of January. "This year, the kitchen gets done first." Resolution energy is highest for home organization. Run alongside a "kit" offer (jars + labels + funnel).</span>
+      </div>
+      <div class="macro-card">
+        <strong>Mother's Day Gift (May)</strong>
+        <span>Activate last 2 weeks of April. Best gifting window for this product. "The gift that actually changes something in their kitchen." High emotional purchase, excellent AOV.</span>
+      </div>
+      <div class="macro-card">
+        <strong>Earth Day / Eco Angle (Apr)</strong>
+        <span>Activate 2 weeks before April 22. "Refillable glass instead of disposable plastic spice containers every 6 months." Zero-waste angle; connects to a real identity for the audience.</span>
+      </div>
+      <div class="macro-card">
+        <strong>Back-to-School Kitchen Reset (Aug-Sep)</strong>
+        <span>Routine change = kitchen reset motivation. "Before the school-year cooking chaos starts." Leans into the fall routine-reboot energy.</span>
+      </div>
+      <div class="macro-card">
+        <strong>BFCM Sale (Nov)</strong>
+        <span>Biggest home goods sale event. Bundle offer: extra jar set + engraved labels. Urgency: "This kit at this price won't be back until next year." High AOV opportunity.</span>
+      </div>
+      <div class="macro-card">
+        <strong>Thanksgiving Kitchen Prep (Nov)</strong>
+        <span>"Before you cook the biggest meal of the year, set up the kitchen you deserve." Seasonal timing matches the highest-intent cooking moment of the year.</span>
+      </div>
+      <div class="macro-card">
+        <strong>Valentine's Day / Home Love (Feb)</strong>
+        <span>"A gift for the person who cooks for everyone else." The person who cooks for the family rarely gets kitchen gifts. Emotionally resonant positioning.</span>
+      </div>
+      <div class="macro-card">
+        <strong>New Product Launch (Evergreen)</strong>
+        <span>Launch window: "First 500 sets come with engraved labels and a magnetic board." Creates exclusivity for a launch that can be re-triggered on restock.</span>
+      </div>
+      <div class="macro-card">
+        <strong>Milestone Event (Evergreen)</strong>
+        <span>"10,000 kitchens organized" or "1 million spice jars filled." Social proof milestone that can run indefinitely with incrementing numbers. High trust signal for cold traffic.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH NOTES -->
+  <div class="section">
+    <h2>Research Notes</h2>
+    <div class="research-grid">
+
+      <div class="research-block">
+        <h3>Top Pain Points (from research)</h3>
+        <ul>
+          <li>Mid-recipe spice hunt: moving 5+ jars to find the right one, mid-cook</li>
+          <li>Invisible spices = duplicate purchases (multiple cumin jars)</li>
+          <li>Labels peel or fade within months; mystery jars get thrown away</li>
+          <li>Counter/cabinet clutter creates a persistent "undone task" mental tax</li>
+          <li>Previous organization systems all eventually fail (drawer inserts, racks, bags)</li>
+          <li>Mismatched containers make even a "clean" kitchen look chaotic</li>
+          <li>Spices in dark cabinets go stale; cooking with low-potency spices is common</li>
+          <li>Disorganized kitchen actively discourages cooking; delivery chosen instead</li>
+          <li>No confidence when hosting; embarrassment about the "spice situation"</li>
+          <li>Magnetic concerns (will the jars fall? will the magnets weaken?)</li>
+        </ul>
+      </div>
+
+      <div class="research-block">
+        <h3>Top Benefits (genuine, research-backed)</h3>
+        <ul>
+          <li>All spices visible at once, next to the stove, at eye level</li>
+          <li>Honeycomb hexagonal pattern is visually distinct and conversation-worthy</li>
+          <li>The filling/labeling ritual creates emotional ownership that sustains the system</li>
+          <li>Frees counter space AND cabinet doors simultaneously</li>
+          <li>One-time setup with very low maintenance (magnetic means spices always go back to one spot)</li>
+          <li>Glass seals flavor better than original plastic packaging</li>
+          <li>Complete kit with labels = immediate, satisfying transformation</li>
+          <li>Works for small kitchens, apartments, RVs, galley kitchens</li>
+          <li>High gifting value: the before/after moment is emotional</li>
+          <li>The "organized kitchen" identity is visible to guests instantly</li>
+        </ul>
+      </div>
+
+      <div class="research-block">
+        <h3>Competitor Angles Being Differentiated From</h3>
+        <ul>
+          <li><strong>Lily's Home (N=1):</strong> General home aesthetics, "beautifully organized storage for modern living" (broad, not product-specific)</li>
+          <li><strong>Pleteffect (N=1):</strong> Misclassified can opener product; not a magnetic spice jar competitor</li>
+          <li><strong>Gneiss Spice (market leader, not in Winners DB):</strong> Zero-waste angle, "personalize your pantry," DIY vs. Buy framing</li>
+          <li><strong>Generic competitors:</strong> Space-saving, starter kit positioning, aesthetics/visual appeal</li>
+        </ul>
+        <p style="font-size:0.82rem;color:#94a3b8;margin-top:8px;">The Winners DB competitor set is sparse for this product. Most differentiation angles are Fresh 0/2.</p>
+      </div>
+
+      <div class="research-block">
+        <h3>Objections to Pre-Empt in Creative</h3>
+        <ul>
+          <li>PRIMARY: "It won't hold up / I've tried organizing before"</li>
+          <li>"The magnets will weaken / jars will fall"</li>
+          <li>"$37+ is expensive just for spice jars"</li>
+          <li>"I don't have fridge space for this"</li>
+          <li>"The labels will peel off eventually"</li>
+          <li>"I have too many spices to fit in 24 jars"</li>
+          <li>"It looks good online but won't look like that in my kitchen"</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+function filterAngles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const rows = document.querySelectorAll('#angles-body tr');
+  rows.forEach(row => {
+    if (cat === 'all') {
+      row.style.display = '';
+    } else if (cat === 'Fresh' || cat === 'Twist' || cat === 'Crowded') {
+      row.style.display = row.dataset.unique === cat ? '' : 'none';
+    } else {
+      row.style.display = row.dataset.cat === cat ? '' : 'none';
+    }
+  });
+}
+
+let sortAsc = true;
+function sortAngles() {
+  const tbody = document.getElementById('angles-body');
+  const rows = Array.from(tbody.querySelectorAll('tr'));
+  const order = {'Fresh': 0, 'Twist': 1, 'Crowded': 2};
+  rows.sort((a, b) => {
+    const va = order[a.dataset.unique] || 0;
+    const vb = order[b.dataset.unique] || 0;
+    return sortAsc ? va - vb : vb - va;
+  });
+  sortAsc = !sortAsc;
+  rows.forEach(r => tbody.appendChild(r));
+}
+</script>
+</body>
+</html>

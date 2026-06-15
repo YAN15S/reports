@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Bottle Washer / Sterilizer / Dryer -- Marketing Angles Report</title>
+<style>
+  :root {
+    --accent: #1e293b;
+    --fresh: #16a34a;
+    --twist: #d97706;
+    --crowded: #dc2626;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    --rank1: #7c3aed;
+    --rank2: #0284c7;
+    --rank3: #059669;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); }
+  .top-bar { height: 5px; background: linear-gradient(90deg, #1e293b, #475569, #1e293b); }
+  header { background: #fff; padding: 36px 40px 28px; border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 1.75rem; font-weight: 700; color: var(--accent); }
+  header .sub { color: var(--muted); margin-top: 4px; font-size: 0.95rem; }
+  header .meta { display: flex; gap: 24px; margin-top: 16px; font-size: 0.85rem; color: var(--muted); }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 1.25rem; font-weight: 700; color: var(--accent); margin-bottom: 20px; border-left: 4px solid var(--accent); padding-left: 12px; }
+  h3 { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 8px; }
+
+  /* Summary block */
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; }
+  .summary-card .label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 8px; }
+  .summary-card .value { font-size: 0.95rem; line-height: 1.5; }
+
+  /* Top 3 angle cards */
+  .top3-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .top-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .top-card-header { padding: 16px 20px 12px; border-bottom: 1px solid var(--border); }
+  .rank-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; color: #fff; }
+  .rank1 { background: var(--rank1); }
+  .rank2 { background: var(--rank2); }
+  .rank3 { background: var(--rank3); }
+  .unique-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 8px; }
+  .fresh-badge { background: #dcfce7; color: var(--fresh); }
+  .twist-badge { background: #fef3c7; color: var(--twist); }
+  .crowded-badge { background: #fee2e2; color: var(--crowded); }
+  .top-card-body { padding: 16px 20px; }
+  .category-tag { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .insight { font-size: 0.9rem; color: var(--text); line-height: 1.5; margin-bottom: 12px; }
+  .hook-box { background: #f1f5f9; border-left: 3px solid var(--accent); padding: 12px 14px; border-radius: 0 6px 6px 0; font-size: 0.875rem; font-style: italic; line-height: 1.55; color: #334155; margin-bottom: 12px; }
+  .why-wins { font-size: 0.82rem; color: var(--muted); line-height: 1.45; margin-bottom: 14px; }
+  .micro-hooks { border-top: 1px solid var(--border); padding-top: 14px; }
+  .micro-hooks h4 { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .micro-hook-item { margin-bottom: 10px; }
+  .hook-type { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--muted); }
+  .hook-text { font-size: 0.83rem; color: var(--text); line-height: 1.45; }
+
+  /* 20 angles table */
+  .controls { display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+  .filter-btn { padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px; font-size: 0.8rem; cursor: pointer; background: #fff; color: var(--muted); }
+  .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .search-box { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.83rem; min-width: 200px; }
+  .angle-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .angle-table th { background: var(--accent); color: #fff; padding: 10px 14px; text-align: left; font-size: 0.78rem; font-weight: 600; }
+  .angle-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .angle-table tr:hover td { background: #f8fafc; }
+  .angle-table tr.top3-row td { background: #fafaf8; }
+  .cat-tag { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; }
+  .cat-pain { background: #fee2e2; color: #991b1b; }
+  .cat-aspiration { background: #e0e7ff; color: #3730a3; }
+  .cat-contrarian { background: #fef3c7; color: #92400e; }
+  .cat-fear { background: #fce7f3; color: #9d174d; }
+  .cat-social { background: #d1fae5; color: #064e3b; }
+  .format-tag { font-size: 0.7rem; color: var(--muted); }
+  .hidden { display: none; }
+
+  /* Macro angles */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .macro-card .type { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .macro-card .name { font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+  .macro-card .desc { font-size: 0.83rem; color: var(--muted); line-height: 1.45; }
+
+  /* Research notes */
+  .notes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .notes-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+  .notes-card h3 { margin-bottom: 12px; }
+  .notes-card ul { padding-left: 18px; }
+  .notes-card li { font-size: 0.88rem; line-height: 1.55; color: var(--text); margin-bottom: 5px; }
+
+  /* Legend */
+  .legend { display: flex; gap: 24px; padding: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: 0.83rem; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  @media (max-width: 900px) {
+    .top3-grid { grid-template-columns: 1fr; }
+    .summary-grid { grid-template-columns: 1fr 1fr; }
+    .notes-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<header>
+  <h1>Automatic Bottle Washer / Sterilizer / Dryer</h1>
+  <div class="sub">Marketing Angles Report -- VA Products (Andi) Tab, Row 88 | PASS Verdict (CEO Meta-Validation)</div>
+  <div class="meta">
+    <span>Date: 06-15-2026</span>
+    <span>Product: Baby Brezza Bottle Washer Pro (B0CKRWC8ZN)</span>
+    <span>ASIN: B0CKRWC8ZN</span>
+    <span>Sell Price: $299 | COGS: $110 | BER: 1.58</span>
+    <span>Competitor Set: N~14 angles in live Meta Ad Library (Winners DB sparse; extended per spec)</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SUMMARY -->
+  <section>
+    <h2>Summary</h2>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="label">Avatar</div>
+        <div class="value">Sleep-deprived new mother, 25-45, bottle-feeding or pumping. Recently postpartum or returning to work. Feeds every 2-3 hours, washes 8-12 bottles/day by hand. Lives with a partner who "helps" but not correctly. Guilty when she cuts corners on sterilization. Running on 4 hours of fragmented sleep. Her kitchen is her battlefield.</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Core Transformation</div>
+        <div class="value"><strong>Before:</strong> Exhausted parent scrubbing bottles multiple times daily, unsure they're truly clean, arguing with partner about who does it right, losing 30 minutes of sleep/day to a task a machine should do.<br><br><strong>After:</strong> One button. 19 minutes. Clinically clean, steam-sterile, HEPA-dried bottles -- ready to use for 72 hours. She sleeps instead.</div>
+      </div>
+      <div class="summary-card">
+        <div class="label">Primary Objection</div>
+        <div class="value"><strong>"$299 is too expensive for something I can just do by hand."</strong><br><br>Deeper fear: "I should be able to handle this manually. Buying a machine feels like admitting failure." Disarm: At $25/month, you are buying 30 minutes of sleep every day. That math is not even close.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP 3 ANGLES -->
+  <section>
+    <h2>Top 3 Angles</h2>
+    <div class="top3-grid">
+
+      <!-- RANK 1 -->
+      <div class="top-card">
+        <div class="top-card-header">
+          <div><span class="rank-badge rank1">Rank 1</span><span class="unique-badge fresh-badge">Fresh 0/14</span></div>
+          <h3>The Nipple Hole Problem</h3>
+          <div class="category-tag">Pain / Frustration</div>
+        </div>
+        <div class="top-card-body">
+          <div class="insight">Exploits the invisible, unverifiable anxiety that formula residue hides in nipple holes where no brush or eye can reach. This is the specific, persistent guilt new parents carry with every hand wash -- and no competitor owns it.</div>
+          <div class="hook-box">"You scrub them. You rinse them. You hold them up to the light. And you still cannot be sure. The formula residue you cannot see is the one that worries you most."</div>
+          <div class="why-wins">Why it wins: Most emotionally charged + completely unowned by competitors. Cold scroll pattern interrupt because it names a specific, invisible fear. 20 high-pressure jets and the "0% milk residue" clinical claim are the perfect proof points. Format: UGC closeup of bottle nipple, before/after reveal.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks</h4>
+            <div class="micro-hook-item">
+              <div class="hook-type">Problem-first</div>
+              <div class="hook-text">"You scrub every bottle for two minutes. You use hot water. A bottle brush. Dish soap. And you still hold it up to the light afterwards -- because you cannot be sure. The holes are too small to see and too important to guess about."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Result-first</div>
+              <div class="hook-text">"Zero milk residue. Verified. Not by me holding a bottle up to the kitchen light -- by 20 high-pressure jets that reach every angle my hands never could. I stopped second-guessing on day one."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Curiosity</div>
+              <div class="hook-text">"Why do pediatric nurses specifically worry about bottle nipple holes? It is not what most parents think -- and your best hand wash does not fix it."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Social proof</div>
+              <div class="hook-text">"I was the mom who scrubbed every bottle for two full minutes per wash. My sister watched me doing it one afternoon and sent me a link. I genuinely wish I had known about this sooner."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Contra</div>
+              <div class="hook-text">"Stop holding your bottles up to the light. That is not cleaning. That is reassurance-seeking. This is 20 jets, 19 minutes, and zero residue. No light check required."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 2 -->
+      <div class="top-card">
+        <div class="top-card-header">
+          <div><span class="rank-badge rank2">Rank 2</span><span class="unique-badge fresh-badge">Fresh 0/14</span></div>
+          <h3>The Sleep Investor</h3>
+          <div class="category-tag">Aspiration / Identity</div>
+        </div>
+        <div class="top-card-body">
+          <div class="insight">Reframes the $299 price tag as purchasing sleep -- the single most coveted resource for new parents. Converts the PRIMARY OBJECTION ("too expensive") into a simple, obvious math win that any tired parent instantly understands.</div>
+          <div class="hook-box">"I bought 30 minutes of sleep every day for $299. That is less than a dollar a day. Best parenting purchase I have made."</div>
+          <div class="why-wins">Why it wins: Directly disarms the #1 objection in the first sentence. No competitor frames the purchase as buying sleep -- they frame it as saving time, which is abstract. Sleep is visceral and immediate for this avatar. Fresh angle with strong testimonial format. Pairs with 30-minute daily savings claim from the listing.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks</h4>
+            <div class="micro-hook-item">
+              <div class="hook-type">Problem-first</div>
+              <div class="hook-text">"You are losing 30 minutes a day to bottle washing. Over the next year that is 180 hours. You are not just tired -- you are 180 hours behind on sleep."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Result-first</div>
+              <div class="hook-text">"I bought 30 minutes of sleep every day for $299. For the first time since my baby was born, I have time to lie down while bottles clean themselves."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Curiosity</div>
+              <div class="hook-text">"What if the $299 thing everybody says is too expensive actually costs less than a dollar a day? And what if that dollar buys you 30 minutes of sleep you desperately need?"</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Social proof</div>
+              <div class="hook-text">"My friend told me she gets 30 more minutes of sleep since she stopped washing bottles by hand. I thought she was exaggerating. She was not. I ordered the same one that week."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Contra</div>
+              <div class="hook-text">"Stop treating bottle washing as something you just endure. Trade 30 minutes of daily exhaustion for one push of a button and a dollar a day. The math is not even close."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 3 -->
+      <div class="top-card">
+        <div class="top-card-header">
+          <div><span class="rank-badge rank3">Rank 3</span><span class="unique-badge fresh-badge">Fresh 0/14</span></div>
+          <h3>The Dad Who Actually Helps</h3>
+          <div class="category-tag">Social Proof / Tribe</div>
+        </div>
+        <div class="top-card-body">
+          <div class="insight">Taps into the intense, unspoken friction around partner fairness in baby care. "You are not doing it right" is one of the most common and most loaded conflicts between new parents. The machine eliminates the variable -- and the argument.</div>
+          <div class="hook-box">"My husband handles bottles now. Every time. Correctly. We have not had a bottle argument since the day this arrived."</div>
+          <div class="why-wins">Why it wins: Completely unowned by any competitor. Appeals to both the mother (finally, actual fairness) and the father (I can do this right without being corrected). Hits multiple pain points simultaneously: conflict, control anxiety, and mental load. "Zero redo-washing" is a phrase that will stop the exact audience this targets. Format: UGC couple testimonial, ideally a dad talking.</div>
+          <div class="micro-hooks">
+            <h4>Micro Hooks</h4>
+            <div class="micro-hook-item">
+              <div class="hook-type">Problem-first</div>
+              <div class="hook-text">"Tired of rewashing the bottles your partner already cleaned? The machine does not argue. It does not half-do it. It does it exactly right regardless of who pushes the button."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Result-first</div>
+              <div class="hook-text">"My husband is the bottle person in our house now. He actually likes it. I sleep 30 extra minutes. We have not had a single argument about bottles since we got this. Not one."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Curiosity</div>
+              <div class="hook-text">"What if the reason your partner never gets bottles right has nothing to do with effort -- and everything to do with the method? A machine removes the human variable. Completely."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Social proof</div>
+              <div class="hook-text">"My husband handles all the bottles now. Correctly. Every single time. Three months in and I have not once had to redo his work. This changed our dynamic completely."</div>
+            </div>
+            <div class="micro-hook-item">
+              <div class="hook-type">Contra</div>
+              <div class="hook-text">"Stop hoping your partner will wash bottles your way. There is no 'your way' anymore. The machine has one way. It is right every time. No instructions. No redos. No arguments."</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ALL 20 ANGLES -->
+  <section>
+    <h2>All 20 Angles</h2>
+    <div class="controls">
+      <button class="filter-btn active" data-cat="all" onclick="filterCat('all', this)">All</button>
+      <button class="filter-btn" data-cat="pain" onclick="filterCat('pain', this)">Pain</button>
+      <button class="filter-btn" data-cat="aspiration" onclick="filterCat('aspiration', this)">Aspiration</button>
+      <button class="filter-btn" data-cat="contrarian" onclick="filterCat('contrarian', this)">Contrarian</button>
+      <button class="filter-btn" data-cat="fear" onclick="filterCat('fear', this)">Fear</button>
+      <button class="filter-btn" data-cat="social" onclick="filterCat('social', this)">Social Proof</button>
+      <button class="filter-btn" style="background:#dcfce7;color:#16a34a;border-color:#16a34a;" onclick="filterUniq('fresh', this)">Fresh Only</button>
+      <button class="filter-btn" style="background:#fef3c7;color:#d97706;border-color:#d97706;" onclick="filterUniq('twist', this)">Twist Only</button>
+    </div>
+    <table class="angle-table" id="angleTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Angle Name</th>
+          <th>Category</th>
+          <th>Uniqueness</th>
+          <th>Core Insight</th>
+          <th>Sample Hook</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-cat="pain" data-uniq="crowded">
+          <td>1</td>
+          <td><strong>3AM Bottle Trap</strong></td>
+          <td><span class="cat-tag cat-pain">Pain</span></td>
+          <td><span class="unique-badge crowded-badge">Crowded 11/14</span></td>
+          <td>The 3am feed moment -- most vulnerable, most resentful -- when a dirty bottle in the sink becomes unbearable.</td>
+          <td>"It is 3:08am. Your baby is screaming. The bottle you need is still in the sink from the last feed."</td>
+          <td><span class="format-tag">UGC video</span></td>
+        </tr>
+        <tr data-cat="pain" data-uniq="fresh" class="top3-row">
+          <td>2</td>
+          <td><strong>The Nipple Hole Problem ★1</strong></td>
+          <td><span class="cat-tag cat-pain">Pain</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Formula residue hides in nipple holes no brush or eye can reach -- a specific, invisible, persistent parental anxiety.</td>
+          <td>"You scrub them. You rinse them. You hold them up to the light. And you still cannot be sure."</td>
+          <td><span class="format-tag">UGC / static</span></td>
+        </tr>
+        <tr data-cat="pain" data-uniq="fresh">
+          <td>3</td>
+          <td><strong>The Mold You Don't Know About</strong></td>
+          <td><span class="cat-tag cat-pain">Pain</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Damp bottles stored after incomplete drying breed bacteria. Parents assume the "clean" zone is safe. It is not.</td>
+          <td>"Your 'clean' bottle rack has been growing mold for three weeks. You just cannot see it yet."</td>
+          <td><span class="format-tag">UGC / reveal</span></td>
+        </tr>
+        <tr data-cat="pain" data-uniq="fresh">
+          <td>4</td>
+          <td><strong>The Bottle Queue</strong></td>
+          <td><span class="cat-tag cat-pain">Pain</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Multiple babies or multiple feeds create a constant backlog that makes bottle care feel like a second full-time job.</td>
+          <td>"7 bottles. 4 pump parts. A sink full of accessories. And your baby is already hungry again."</td>
+          <td><span class="format-tag">Carousel</span></td>
+        </tr>
+        <tr data-cat="aspiration" data-uniq="twist">
+          <td>5</td>
+          <td><strong>The Efficient Parent</strong></td>
+          <td><span class="cat-tag cat-aspiration">Aspiration</span></td>
+          <td><span class="unique-badge twist-badge">Twist 3/14</span></td>
+          <td>New parents want to prove they have life under control. This angle makes the machine a sign of competence, not surrender.</td>
+          <td>"Your bottles are cleaner than any restaurant's kitchen. You handled everything -- while also taking a nap."</td>
+          <td><span class="format-tag">Aspirational static</span></td>
+        </tr>
+        <tr data-cat="aspiration" data-uniq="twist">
+          <td>6</td>
+          <td><strong>Good Parent Redefined</strong></td>
+          <td><span class="cat-tag cat-aspiration">Aspiration</span></td>
+          <td><span class="unique-badge twist-badge">Twist 2/14</span></td>
+          <td>Reframes the machine not as a shortcut but as the superior standard. Good parents use the method that actually works.</td>
+          <td>"A good parent does not wash bottles by hand. A good parent makes sure they are actually, clinically, zero-residue clean."</td>
+          <td><span class="format-tag">Static / testimonial</span></td>
+        </tr>
+        <tr data-cat="aspiration" data-uniq="fresh" class="top3-row">
+          <td>7</td>
+          <td><strong>The Sleep Investor ★2</strong></td>
+          <td><span class="cat-tag cat-aspiration">Aspiration</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Reframes the $299 price as buying sleep -- the most coveted resource for new parents. Makes the primary objection its own proof point.</td>
+          <td>"I bought 30 minutes of sleep every day for $299. Best parenting purchase I have made."</td>
+          <td><span class="format-tag">Testimonial / UGC</span></td>
+        </tr>
+        <tr data-cat="aspiration" data-uniq="fresh">
+          <td>8</td>
+          <td><strong>Not Just a Mom. A Planner.</strong></td>
+          <td><span class="cat-tag cat-aspiration">Aspiration</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>The 72-hour sterile storage unlocks planning ahead. Frames the machine as an identity upgrade: from reactive to planned.</td>
+          <td>"I prepped tomorrow's bottles before I went to bed. They will still be sterile at noon. That is not lucky -- that is planned."</td>
+          <td><span class="format-tag">Aspirational video</span></td>
+        </tr>
+        <tr data-cat="contrarian" data-uniq="crowded">
+          <td>9</td>
+          <td><strong>The Dishwasher Lie</strong></td>
+          <td><span class="cat-tag cat-contrarian">Contrarian</span></td>
+          <td><span class="unique-badge crowded-badge">Crowded 2/14</span></td>
+          <td>Most parents assume the dishwasher sterilizes. It cleans. The distinction matters more for a newborn's immune system than most parents realize.</td>
+          <td>"Your dishwasher gets bottles clean. But clean is not sterile. And your 8-week-old's immune system does not care about the difference."</td>
+          <td><span class="format-tag">VSL / educational</span></td>
+        </tr>
+        <tr data-cat="contrarian" data-uniq="fresh">
+          <td>10</td>
+          <td><strong>Washing by Hand Is Actually Worse</strong></td>
+          <td><span class="cat-tag cat-contrarian">Contrarian</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Hand washing introduces variables -- soap residue, temperature inconsistency, human fatigue error -- that people never consider.</td>
+          <td>"You think hand washing is more thorough. At 2am on 4 hours of sleep, you are not cleaning. You are performing the ritual."</td>
+          <td><span class="format-tag">Static / UGC</span></td>
+        </tr>
+        <tr data-cat="contrarian" data-uniq="fresh">
+          <td>11</td>
+          <td><strong>The Real Cost of "Free" Washing</strong></td>
+          <td><span class="cat-tag cat-contrarian">Contrarian</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Reframes the price objection. Hand washing is not cheaper. It costs 180 hours/year, skin damage, and relationship friction.</td>
+          <td>"At $25/month, this is the cheapest decision you will make as a parent. Your alternative is 180 hours of manual washing."</td>
+          <td><span class="format-tag">Static / carousel with math</span></td>
+        </tr>
+        <tr data-cat="contrarian" data-uniq="fresh">
+          <td>12</td>
+          <td><strong>Your Sterilizer Is Not Done</strong></td>
+          <td><span class="cat-tag cat-contrarian">Contrarian</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Most parents have a sterilizer that does not dry. Wet bottles stored on a contaminated rack undo the sterilization immediately.</td>
+          <td>"You sterilize the bottle. Then you set it on a drying rack that has not been cleaned in three weeks. You sterilized half a bottle."</td>
+          <td><span class="format-tag">UGC / humor</span></td>
+        </tr>
+        <tr data-cat="fear" data-uniq="fresh">
+          <td>13</td>
+          <td><strong>What Lives in a Wet Bottle</strong></td>
+          <td><span class="cat-tag cat-fear">Fear</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Wet bottles stored overnight grow bacteria exponentially. Specific, scary, and actionable. Leads directly to the dry-chamber solution.</td>
+          <td>"A wet bottle stored overnight grows bacteria faster than a dry one. But you already knew the dry part was the hard part."</td>
+          <td><span class="format-tag">Educational static / VSL</span></td>
+        </tr>
+        <tr data-cat="fear" data-uniq="fresh">
+          <td>14</td>
+          <td><strong>The 12-Month Problem</strong></td>
+          <td><span class="cat-tag cat-fear">Fear</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Hand washing damage accumulates across a year. By the time bottle-feeding ends, hands, relationships, and sanity have all paid the price.</td>
+          <td>"12 months from now, you will have washed bottles 3,650 times. What do your hands feel like? What do you think when you walk into the kitchen?"</td>
+          <td><span class="format-tag">VSL / long-form static</span></td>
+        </tr>
+        <tr data-cat="fear" data-uniq="fresh">
+          <td>15</td>
+          <td><strong>The Ticking Bottle</strong></td>
+          <td><span class="cat-tag cat-fear">Fear</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Sterility decays with time and moisture. A 72-hour sealed dry chamber is the only way to stop the clock.</td>
+          <td>"The clock starts the moment you sterilize it. Two hours later, that sterile bottle is no longer sterile. Unless it is sealed and completely dry."</td>
+          <td><span class="format-tag">Static / short video</span></td>
+        </tr>
+        <tr data-cat="fear" data-uniq="fresh">
+          <td>16</td>
+          <td><strong>Who Cleans the Cleaner?</strong></td>
+          <td><span class="cat-tag cat-fear">Fear</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>The equipment used for cleaning -- drying racks, brushes, UV sterilizers -- becomes the source of contamination. The meta-problem.</td>
+          <td>"When did you last disinfect your drying rack? Your bottle brush? The sterilizer tray? Your 'clean' setup might be the dirtiest thing in your nursery."</td>
+          <td><span class="format-tag">UGC / horror reveal</span></td>
+        </tr>
+        <tr data-cat="social" data-uniq="twist">
+          <td>17</td>
+          <td><strong>The Turning Point</strong></td>
+          <td><span class="cat-tag cat-social">Social Proof</span></td>
+          <td><span class="unique-badge twist-badge">Twist 4/14</span></td>
+          <td>New parents who buy this describe it as THE turning point of the newborn stage. The "why didn't I do this sooner" regret is the hook -- not just general validation.</td>
+          <td>"I thought washing bottles was just part of being a parent. My sister showed me what she was using. I actually cried. Because why did I wait so long?"</td>
+          <td><span class="format-tag">Testimonial / UGC</span></td>
+        </tr>
+        <tr data-cat="social" data-uniq="fresh" class="top3-row">
+          <td>18</td>
+          <td><strong>The Dad Who Actually Helps ★3</strong></td>
+          <td><span class="cat-tag cat-social">Social Proof</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>The machine removes the "you're not doing it right" dynamic between partners. Both parents can do bottles -- correctly, every time.</td>
+          <td>"My husband handles bottles now. Every time. Correctly. We have not had a bottle argument since the day this arrived."</td>
+          <td><span class="format-tag">UGC couple testimonial</span></td>
+        </tr>
+        <tr data-cat="social" data-uniq="fresh">
+          <td>19</td>
+          <td><strong>NICU Graduate Parents</strong></td>
+          <td><span class="cat-tag cat-social">Social Proof</span></td>
+          <td><span class="unique-badge fresh-badge">Fresh 0/14</span></td>
+          <td>Parents of premature or immunocompromised babies have non-negotiable sterilization needs. This is a community with high validation weight and specific search behavior.</td>
+          <td>"After 6 weeks in the NICU, I was not bringing her home to a bottle I was not 100% certain about. This was not optional for us."</td>
+          <td><span class="format-tag">Emotional testimonial</span></td>
+        </tr>
+        <tr data-cat="social" data-uniq="twist">
+          <td>20</td>
+          <td><strong>What Every Mom Group Is Talking About</strong></td>
+          <td><span class="cat-tag cat-social">Social Proof</span></td>
+          <td><span class="unique-badge twist-badge">Twist 2/14</span></td>
+          <td>Peer recommendation inside a mom community is more trusted than brand claims. Intimate group recommendation vs. mass social proof.</td>
+          <td>"It started with one DM from my mom group. Then three of us ordered it the same week. Now it is the first thing we recommend to every new mom."</td>
+          <td><span class="format-tag">Social proof UGC</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- MACRO ANGLES -->
+  <section>
+    <h2>Macro-Angles (Offers and Seasonal)</h2>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <div class="type">Seasonal -- Spring</div>
+        <div class="name">Mother's Day</div>
+        <div class="desc">"Give her one less thing to worry about." Gift angle -- activate 2 weeks before May 11. Frame as the registry item she did not know she needed. Pair with the Sleep Investor or Nipple Hole angles.</div>
+      </div>
+      <div class="macro-card">
+        <div class="type">Seasonal -- Spring</div>
+        <div class="name">Baby Shower Season</div>
+        <div class="desc">"The registry item that will actually change her life." Position as the gift that gets rave reviews at 2am vs. the cute plush that sits on a shelf. Frame as the experienced-mom choice for new-mom registries.</div>
+      </div>
+      <div class="macro-card">
+        <div class="type">Seasonal -- Fall</div>
+        <div class="name">Back to Work</div>
+        <div class="desc">"Going back to work? Your bottles will be ready when you need them." Activate September. Speaks to the returning-to-work parent who suddenly needs maximum efficiency -- batch wash the night before, grab sterile bottles all day.</div>
+      </div>
+      <div class="macro-card">
+        <div class="type">Seasonal -- Winter</div>
+        <div class="name">New Year's Resolution</div>
+        <div class="desc">"One thing off your plate in 2027." Position as the practical life upgrade for parents resolving to reclaim time and sleep in the new year. Pairs naturally with the Sleep Investor angle.</div>
+      </div>
+      <div class="macro-card">
+        <div class="type">Evergreen</div>
+        <div class="name">Milestone: X Bottles Cleaned</div>
+        <div class="desc">"We have helped parents clean over [X] million bottles." Social proof at scale. Frame inside the "The Turning Point" or "Mom Group" angles. Builds brand trust for a product in the $299 price range.</div>
+      </div>
+      <div class="macro-card">
+        <div class="type">Product-Specific</div>
+        <div class="name">Second Baby Upgrade</div>
+        <div class="desc">"With one baby, you managed. With two, you cannot." Frame the purchase as the inevitable upgrade for second-time parents who remember how hard the first round was. High urgency, high conversion -- they KNOW the pain.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH NOTES -->
+  <section>
+    <h2>Research Notes</h2>
+    <div class="notes-grid">
+      <div class="notes-card">
+        <h3>Top Pain Points (Verified from Amazon 1-3 Star Reviews)</h3>
+        <ul>
+          <li>Formula residue hiding in bottle nipple holes despite thorough scrubbing</li>
+          <li>Drying cycle leaves moisture on bottles even in electric sterilizers</li>
+          <li>Mold developing in hard-to-clean crevices of sterilizers and drying racks</li>
+          <li>Machine noise disrupts sleeping household during late cycles</li>
+          <li>Poor fit for specialty or angled bottle designs</li>
+          <li>Hand washing 8-12x/day causes eczema and cracked skin</li>
+          <li>Partner washes bottles incorrectly -- tension and redo-washing</li>
+          <li>Counter space consumed by separate sterilizer, washer, and drying rack</li>
+          <li>3am feed delays from having to clean before feeding</li>
+          <li>Uncertainty about whether bottles are truly sterile vs. just clean</li>
+        </ul>
+      </div>
+      <div class="notes-card">
+        <h3>Top Benefits (Listing + Clinical Claims)</h3>
+        <ul>
+          <li>0% milk residue -- clinically verified with 20 high-pressure spray jets</li>
+          <li>99.9% germ kill via steam sterilization at hospital-grade temperature</li>
+          <li>HEPA-filtered air drying -- no moisture trapped, no mold risk</li>
+          <li>Bottles remain sterile up to 72 hours in sealed chamber</li>
+          <li>19-minute full cycle (wash + sterilize + dry)</li>
+          <li>85% less water than hand washing</li>
+          <li>One-button operation -- no attention required during cycle</li>
+          <li>Universal compatibility -- fits virtually all bottle brands</li>
+          <li>All-in-one replaces three separate tools (counter space reclaimed)</li>
+          <li>Saves up to 30 minutes daily vs. manual washing</li>
+        </ul>
+      </div>
+      <div class="notes-card">
+        <h3>Competitor Angles Already in Market (Uniqueness Yardstick)</h3>
+        <ul>
+          <li>2AM / nighttime washing exhaustion (Momcozy -- dominant, 11+ variations)</li>
+          <li>Smart technology / precision jets / automation (Momcozy)</li>
+          <li>All-in-one wash-sterilize-dry-store (Momcozy, Grownsy)</li>
+          <li>Time savings "30 minutes per day" (Baby Brezza)</li>
+          <li>Warranty / purchase confidence (Baby Brezza)</li>
+          <li>Water purification -- removes lead and PFAS (Papablic)</li>
+          <li>Dishwasher danger education (Papablic)</li>
+          <li>Medical-grade 99.9% sterilization safety claim (multiple brands)</li>
+          <li>Emotional overwhelm validation "one less task" (Momcozy)</li>
+          <li>Social proof at scale "4.5M moms worldwide" (Momcozy)</li>
+          <li>Emotional support "overwhelming" (Grownsy)</li>
+          <li>Modern parenting "Must Have 2025" (The Familys Place)</li>
+          <li>Influencer dad endorsement (doctordadchronicles)</li>
+          <li>Limited-time sale + discount code urgency (multiple brands)</li>
+        </ul>
+      </div>
+      <div class="notes-card">
+        <h3>Uniqueness Notes and Data Sources</h3>
+        <ul>
+          <li>Winners DB: N=1 winner for this product (CEO meta-validation; spy tool not run through standard n8n pipeline)</li>
+          <li>Extended per spec via live Meta Ad Library: ~200+ ads, 14 distinct competitor angle types identified</li>
+          <li>All 14 "Fresh" angles (0 competitor matches) are genuinely unowned in this market</li>
+          <li>Amazon data: SerpApi + proxy fetch, B0CKRWC8ZN, 1,634 reviews</li>
+          <li>Reddit data: synthesized (Reddit anti-bot blocked live scrape; flagged as lower confidence)</li>
+          <li>Meta Ad Library: agent-browser + proxy, live scrape confirmed 200+ ads, 8+ competitor brands</li>
+          <li>Proxy: iProyal residential, US IP confirmed (66.24.55.212)</li>
+          <li>Key buying triggers: second baby, return to work, daycare sterilization requirement, partner gift, eczema from washing, NICU discharge</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGEND -->
+  <section>
+    <h2>Uniqueness Legend</h2>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#16a34a;"></div>
+        <span><strong>Fresh</strong> -- 0 competitor ads use this angle. Most differentiated, highest strategic value.</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#d97706;"></div>
+        <span><strong>Twist</strong> -- Competitors hit the same pain/benefit but frame it differently. This angle adds a fresh differentiator.</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#dc2626;"></div>
+        <span><strong>Crowded</strong> -- Competitors already run essentially this angle. Differentiate further or drop.</span>
+      </div>
+      <div class="legend-item">
+        <span>Counts shown as X/14 where 14 = distinct competitor angle types found in live Meta Ad Library (Winners DB sparse; extended per spec).</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+function filterCat(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#angleTable tbody tr').forEach(row => {
+    if (cat === 'all' || row.dataset.cat === cat) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+function filterUniq(band, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#angleTable tbody tr').forEach(row => {
+    if (row.dataset.uniq === band) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>

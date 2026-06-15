@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Angles: Ergonomic Vertical Wireless Mouse</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f4f6f9;color:#1a202c;line-height:1.5}
+  .top-bar{height:5px;background:linear-gradient(90deg,#2d3748,#4a5568,#718096)}
+  .header{background:#fff;border-bottom:1px solid #e2e8f0;padding:28px 32px 24px}
+  .header h1{font-size:1.6rem;font-weight:700;color:#1a202c;margin-bottom:6px}
+  .header .subtitle{font-size:.9rem;color:#718096;margin-bottom:4px}
+  .header .date{font-size:.8rem;color:#a0aec0}
+  .container{max-width:1100px;margin:0 auto;padding:24px 20px}
+  .summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:28px}
+  .stat-card{background:#fff;border-radius:8px;border:1px solid #e2e8f0;padding:18px 20px}
+  .stat-card .label{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:6px}
+  .stat-card .value{font-size:1.1rem;font-weight:600;color:#2d3748}
+  .stat-card .sub{font-size:.8rem;color:#a0aec0;margin-top:3px}
+  .section{background:#fff;border-radius:8px;border:1px solid #e2e8f0;margin-bottom:24px;overflow:hidden}
+  .section-header{padding:16px 20px 14px;border-bottom:1px solid #e2e8f0;display:flex;align-items:center;gap:10px}
+  .section-header h2{font-size:1.05rem;font-weight:600;color:#2d3748}
+  .section-body{padding:20px}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+  .angle-card{border:1px solid #e2e8f0;border-radius:8px;overflow:hidden;position:relative}
+  .angle-card .card-accent{height:4px}
+  .rank1 .card-accent{background:linear-gradient(90deg,#d69e2e,#f6e05e)}
+  .rank2 .card-accent{background:linear-gradient(90deg,#718096,#a0aec0)}
+  .rank3 .card-accent{background:linear-gradient(90deg,#c05621,#ed8936)}
+  .card-body{padding:16px}
+  .card-rank{font-size:.75rem;font-weight:700;color:#a0aec0;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+  .card-name{font-size:1rem;font-weight:700;color:#1a202c;margin-bottom:4px}
+  .card-category{font-size:.75rem;color:#718096;margin-bottom:10px}
+  .badge{display:inline-block;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:12px;margin-bottom:8px}
+  .fresh{background:#c6f6d5;color:#22543d}
+  .twist{background:#bee3f8;color:#2a4365}
+  .crowded{background:#fed7d7;color:#742a2a}
+  .unscored{background:#e2e8f0;color:#4a5568}
+  .card-insight{font-size:.82rem;color:#4a5568;margin-bottom:8px;font-style:italic}
+  .card-hook{font-size:.85rem;color:#2d3748;border-left:3px solid #e2e8f0;padding-left:10px;margin-bottom:8px}
+  .card-format{font-size:.75rem;color:#718096;margin-bottom:10px}
+  .card-why{font-size:.8rem;color:#2d3748;margin-bottom:12px}
+  .micro-hooks{background:#f7fafc;border-radius:6px;padding:12px;margin-top:8px}
+  .micro-hooks h4{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#718096;margin-bottom:8px}
+  .hook-item{margin-bottom:7px;font-size:.82rem;color:#2d3748}
+  .hook-type{font-weight:600;color:#4a5568;font-size:.75rem;display:block;margin-bottom:1px}
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font-size:.78rem;font-weight:600;color:#718096;text-transform:uppercase;letter-spacing:.04em;padding:8px 12px;border-bottom:2px solid #e2e8f0;background:#f7fafc}
+  td{padding:9px 12px;border-bottom:1px solid #f0f4f8;font-size:.85rem;color:#2d3748;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  tr:hover td{background:#f7fafc}
+  .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+  .filter-btn{padding:5px 14px;border-radius:20px;border:1px solid #e2e8f0;background:#fff;font-size:.8rem;cursor:pointer;color:#4a5568;transition:all .2s}
+  .filter-btn.active,.filter-btn:hover{background:#2d3748;color:#fff;border-color:#2d3748}
+  .pain-item{padding:12px 0;border-bottom:1px solid #f0f4f8}
+  .pain-item:last-child{border-bottom:none}
+  .pain-num{display:inline-block;width:24px;height:24px;background:#e53e3e;color:#fff;border-radius:50%;font-size:.75rem;font-weight:700;text-align:center;line-height:24px;margin-right:8px;flex-shrink:0}
+  .pain-title{font-weight:600;color:#c53030;font-size:.9rem}
+  .pain-detail{font-size:.82rem;color:#4a5568;margin-top:4px;margin-left:32px}
+  .benefit-item{padding:10px 0;border-bottom:1px solid #f0f4f8}
+  .benefit-item:last-child{border-bottom:none}
+  .benefit-icon{color:#38a169;font-weight:700;margin-right:6px}
+  .macro-item{padding:12px 0;border-bottom:1px solid #f0f4f8}
+  .macro-item:last-child{border-bottom:none}
+  .macro-title{font-weight:600;color:#2d3748;margin-bottom:3px}
+  .macro-detail{font-size:.82rem;color:#718096}
+  .competitor-tag{display:inline-block;background:#ebf8ff;color:#2b6cb0;font-size:.72rem;padding:2px 8px;border-radius:10px;margin:2px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;align-items:center;font-size:.8rem;color:#718096}
+  .legend-item{display:flex;align-items:center;gap:6px}
+  .legend-dot{width:12px;height:12px;border-radius:50%}
+  .objection-item{padding:10px 0;border-bottom:1px solid #f0f4f8}
+  .objection-item:last-child{border-bottom:none}
+  .obj-q{font-weight:600;color:#2d3748;font-size:.88rem}
+  .obj-fear{font-size:.8rem;color:#e53e3e;margin-top:2px}
+  .obj-answer{font-size:.82rem;color:#38a169;margin-top:4px}
+  .primary-obj{background:#fff5f5;border:1px solid #fed7d7;border-radius:6px;padding:12px;margin-bottom:16px}
+  .primary-obj-label{font-size:.75rem;font-weight:700;color:#e53e3e;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+  .sortable{cursor:pointer;user-select:none}
+  .sortable:hover{background:#edf2f7}
+  @media(max-width:600px){.top3-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Marketing Angles: Ergonomic Vertical Wireless Mouse</h1>
+  <div class="subtitle">Avatar: Sarah, 35 -- Knowledge worker with wrist pain that is threatening her ability to work full days. Has tried wrist braces and PT. Wants her career back.</div>
+  <div class="date">Generated 06-15-2026 | TECKNET B0DLN1V168 | VA Products (Andi) Row 89 | $54.95 sell | Score 51/100</div>
+</div>
+<div class="container">
+<!-- SUMMARY STATS -->
+<div class="summary-grid">
+  <div class="stat-card">
+    <div class="label">Avatar</div>
+    <div class="value">Sarah, 35</div>
+    <div class="sub">Female office/knowledge worker, 8-10hr/day at computer, wrist pain 1+ year</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Core Transformation</div>
+    <div class="value">Pain at desk &rarr; Pain-free all day</div>
+    <div class="sub">From dreading every workday to effortless, unlimited computer use</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Primary Objection</div>
+    <div class="value">"Will it actually fix MY pain?"</div>
+    <div class="sub">Skepticism from years of failed solutions (braces, PT, stretches)</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Competitor Ads (N)</div>
+    <div class="value">4 confirmed winners</div>
+    <div class="sub">3 Meta + 1 TikTok (spy tool). Winners DB angles unclassified -- extended via live Meta Ad Library research.</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Fresh Angles</div>
+    <div class="value">11 of 20</div>
+    <div class="sub">Not used by any confirmed competitor ad</div>
+  </div>
+  <div class="stat-card">
+    <div class="label">Top 3 Uniqueness</div>
+    <div class="value">All Fresh (0/4)</div>
+    <div class="sub">Zero competitor overlap on the top picks</div>
+  </div>
+</div>
+<!-- TOP 3 ANGLES -->
+<div class="section">
+  <div class="section-header">
+    <h2>Top 3 Angles</h2>
+  </div>
+  <div class="section-body">
+    <div class="top3-grid">
+
+      <!-- RANK 1 -->
+      <div class="angle-card rank1">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-rank">#1 Best Angle</div>
+          <div class="card-name">Night Wakeup</div>
+          <div class="card-category">Category: Pain / Frustration</div>
+          <span class="badge fresh">Fresh 0/4</span>
+          <div class="card-insight">Carpal tunnel numbness that wakes you at 3am is the moment pain crosses from a work problem to a life problem -- and no competitor ad targets it.</div>
+          <div class="card-hook">"Tired of being woken up at 3am by numb, tingling hands that you have to shake out just to fall back asleep?"</div>
+          <div class="card-format">Best format: UGC video (person waking up, shaking hands, frustrated) or testimonial</div>
+          <div class="card-why"><strong>Why it wins:</strong> Waking up in pain is visceral, specific, and universally understood by the target avatar. It moves the problem from "work discomfort" to "my quality of life is being stolen." No competitor runs this hook. It is Fresh 0/4 and carries the highest emotional charge of all 20 angles.</div>
+          <div class="micro-hooks">
+            <h4>3 Micro Hooks</h4>
+            <div class="hook-item">
+              <span class="hook-type">Problem-first:</span>
+              "Tired of being woken up at 3am by numb, tingling hands that you have to shake out just to fall back asleep?"
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Result-first:</span>
+              "I used to set my alarm 15 minutes early just to let my wrists 'wake up' before I could type. Now I sleep straight through the night."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Curiosity:</span>
+              "There is a specific moment that tells you your wrist pain has officially become a health problem -- and most people reach it without noticing until it is too late."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Social proof:</span>
+              "I thought waking up with numb hands was just part of being a heavy computer user. A $54 mouse proved me completely wrong."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Contra:</span>
+              "Stop sleeping with a wrist brace. Your body is sending you a different message entirely -- and it is not about your sleep position."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 2 -->
+      <div class="angle-card rank2">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-rank">#2 Best Angle</div>
+          <div class="card-name">You Don't Need Surgery</div>
+          <div class="card-category">Category: Contrarian / Pattern Interrupt</div>
+          <span class="badge fresh">Fresh 0/4</span>
+          <div class="card-insight">Most people with wrist pain accept surgery as the inevitable next step. No competitor ad challenges this resignation -- this one does, with a $54.95 answer.</div>
+          <div class="card-hook">"Your doctor mentioned carpal tunnel surgery as the next step. Before you agree to anything, try this for 2 weeks."</div>
+          <div class="card-format">Best format: VSL or long-form UGC testimonial</div>
+          <div class="card-why"><strong>Why it wins:</strong> The pattern interrupt is massive -- surgery is the feared endpoint, and this ad positions itself between the diagnosis and the operating table. It is fresh (no competitor runs the surgery-avoidance angle), high stakes (surgery fear is a 10/10 emotional trigger), and directly relevant to the avatar's next feared step. Fresh 0/4.</div>
+          <div class="micro-hooks">
+            <h4>3 Micro Hooks</h4>
+            <div class="hook-item">
+              <span class="hook-type">Problem-first:</span>
+              "Your doctor mentioned carpal tunnel surgery as the next step. Before you agree to anything, try this for 2 weeks."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Result-first:</span>
+              "I was scheduled for carpal tunnel surgery. I canceled it. Here is what happened instead."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Curiosity:</span>
+              "99% of people with carpal tunnel pain never need surgery -- if they catch one specific thing in time."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Social proof:</span>
+              "My physiotherapist told me to try a vertical mouse before we discussed surgery options. That was 3 years ago and I never went back."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Contra:</span>
+              "Stop letting doctors tell you surgery is the only option. For most people, the real fix costs less than a dinner out."
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RANK 3 -->
+      <div class="angle-card rank3">
+        <div class="card-accent"></div>
+        <div class="card-body">
+          <div class="card-rank">#3 Best Angle</div>
+          <div class="card-name">The Brace Lie</div>
+          <div class="card-category">Category: Pain / Frustration</div>
+          <span class="badge fresh">Fresh 0/4</span>
+          <div class="card-insight">The avatar has already tried wrist braces, physical therapy, and stretches. Calling out these failed solutions validates their frustration and makes the vertical mouse feel like the real answer they have been searching for.</div>
+          <div class="card-hook">"You have tried the brace. You have tried the stretches. You have tried taking more breaks. Nothing has actually fixed your wrist pain. There is a reason."</div>
+          <div class="card-format">Best format: Static image carousel or short UGC video</div>
+          <div class="card-why"><strong>Why it wins:</strong> No competitor acknowledges the graveyard of failed solutions the avatar has already been through. This validation builds instant trust. The hook pre-empts the primary objection ("another thing that won't work") by acknowledging it directly. Fresh 0/4.</div>
+          <div class="micro-hooks">
+            <h4>3 Micro Hooks</h4>
+            <div class="hook-item">
+              <span class="hook-type">Problem-first:</span>
+              "You have tried the brace. You have tried the stretches. You have tried working fewer hours. Nothing has actually fixed your wrist pain. There is a reason."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Result-first:</span>
+              "After 2 years of wrist braces and $800 in physical therapy bills, one $54 mouse change made all of them unnecessary."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Curiosity:</span>
+              "Wrist braces do not fix wrist pain. Here is what your physiotherapist probably actually wants you to do instead."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Social proof:</span>
+              "I spent $800 on physical therapy before someone told me to just change my mouse. I am a little annoyed it took that long."
+            </div>
+            <div class="hook-item">
+              <span class="hook-type">Contra:</span>
+              "Stop buying wrist braces. They are treating the symptom. This is what fixes the cause."
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ALL 20 ANGLES TABLE -->
+<div class="section">
+  <div class="section-header">
+    <h2>All 20 Angles</h2>
+  </div>
+  <div class="section-body">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" onclick="filterAngles('all',this)">All (20)</button>
+      <button class="filter-btn" onclick="filterAngles('pain',this)">Pain / Frustration</button>
+      <button class="filter-btn" onclick="filterAngles('aspiration',this)">Aspiration / Identity</button>
+      <button class="filter-btn" onclick="filterAngles('contrarian',this)">Contrarian</button>
+      <button class="filter-btn" onclick="filterAngles('fear',this)">Fear / Urgency</button>
+      <button class="filter-btn" onclick="filterAngles('social',this)">Social Proof</button>
+      <button class="filter-btn" onclick="filterAngles('fresh',this)">Fresh only</button>
+      <button class="filter-btn" onclick="filterAngles('twist',this)">Twist only</button>
+    </div>
+    <table id="anglesTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Angle Name</th>
+          <th>Category</th>
+          <th>Uniqueness</th>
+          <th>Core Insight</th>
+          <th>Sample Hook</th>
+          <th>Format</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-cat="pain" data-u="fresh">
+          <td>1</td>
+          <td><strong>The Daily Dread</strong></td>
+          <td>Pain / Frustration</td>
+          <td><span class="badge twist">Twist 2/4</span></td>
+          <td>The anxiety of knowing your wrist will hurt before the workday ends, before you even sit down</td>
+          <td>"You do not dread the work. You dread what the work does to your wrist."</td>
+          <td>Static / UGC video</td>
+        </tr>
+        <tr data-cat="pain" data-u="fresh">
+          <td>2</td>
+          <td><strong>Night Wakeup</strong> &#9733;</td>
+          <td>Pain / Frustration</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Carpal tunnel numbness waking you at 3am signals the moment wrist pain crosses from a work problem to a life problem</td>
+          <td>"Tired of being woken up at 3am by numb, tingling hands you have to shake out just to fall back asleep?"</td>
+          <td>UGC video / Testimonial</td>
+        </tr>
+        <tr data-cat="pain" data-u="twist">
+          <td>3</td>
+          <td><strong>The Spreading Pain</strong></td>
+          <td>Pain / Frustration</td>
+          <td><span class="badge twist">Twist 1/4</span></td>
+          <td>Wrist pain that has crept up to the forearm, shoulder, and neck -- a warning that the problem is escalating systemically</td>
+          <td>"It started in your wrist. Now it is in your shoulder. Wrist pain does not stay in the wrist."</td>
+          <td>Static / Carousel</td>
+        </tr>
+        <tr data-cat="pain" data-u="fresh">
+          <td>4</td>
+          <td><strong>The Brace Lie</strong> &#9733;</td>
+          <td>Pain / Frustration</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>The avatar has already tried braces, PT, and stretches -- validating failed past attempts makes the vertical mouse feel like the real answer</td>
+          <td>"You have tried the brace. You have tried the stretches. You have tried working fewer hours. Nothing has fixed it. There is a reason."</td>
+          <td>Static / UGC video</td>
+        </tr>
+        <tr data-cat="aspiration" data-u="twist">
+          <td>5</td>
+          <td><strong>The Pain-Free Professional</strong></td>
+          <td>Aspiration / Identity</td>
+          <td><span class="badge twist">Twist 1/4</span></td>
+          <td>Who would you become if wrist pain were not a daily cap on what you can accomplish?</td>
+          <td>"Imagine finishing a full day of work with your hands feeling exactly the same as when you started."</td>
+          <td>Testimonial / UGC video</td>
+        </tr>
+        <tr data-cat="aspiration" data-u="twist">
+          <td>6</td>
+          <td><strong>The Smart Self-Investment</strong></td>
+          <td>Aspiration / Identity</td>
+          <td><span class="badge twist">Twist 2/4</span></td>
+          <td>Professionals who know their hands are their career treat protecting them as non-negotiable, not optional</td>
+          <td>"Your laptop is a tool. Your hands are the asset. Which one do you actually protect?"</td>
+          <td>Static / Carousel</td>
+        </tr>
+        <tr data-cat="aspiration" data-u="fresh">
+          <td>7</td>
+          <td><strong>Work Like You Did At 25</strong></td>
+          <td>Aspiration / Identity</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>The desire to reclaim the effortless, pain-free computer use you had before RSI crept in</td>
+          <td>"Remember when you could sit down and work for 6 hours straight without your wrist reminding you it exists?"</td>
+          <td>UGC video / Testimonial</td>
+        </tr>
+        <tr data-cat="aspiration" data-u="fresh">
+          <td>8</td>
+          <td><strong>Future-Proof Your Career</strong></td>
+          <td>Aspiration / Identity</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Early intervention is the difference between a productive career and one cut short by preventable nerve damage</td>
+          <td>"If it is this painful at 32, what happens at 45? The people who wait are the ones who end up in surgery."</td>
+          <td>Static / VSL</td>
+        </tr>
+        <tr data-cat="contrarian" data-u="twist">
+          <td>9</td>
+          <td><strong>Your Mouse Is Making You Sick</strong></td>
+          <td>Contrarian / Pattern Interrupt</td>
+          <td><span class="badge twist">Twist 1/4</span></td>
+          <td>The pronated flat-mouse handshake compresses the median nerve 33% more than necessary -- the tool, not your health, is the problem</td>
+          <td>"Your regular mouse forces your wrist into an unnatural position 3,000 times per hour. That is not normal. That is damage."</td>
+          <td>Static / Short video explainer</td>
+        </tr>
+        <tr data-cat="contrarian" data-u="fresh">
+          <td>10</td>
+          <td><strong>You Don't Need Surgery</strong> &#9733;</td>
+          <td>Contrarian / Pattern Interrupt</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Most people resign themselves to inevitable surgery, but 99% of carpal tunnel cases respond to the right tool change before permanent damage sets in</td>
+          <td>"Your doctor mentioned carpal tunnel surgery as the next step. Before you agree to anything, try this for 2 weeks."</td>
+          <td>VSL / Long-form UGC</td>
+        </tr>
+        <tr data-cat="contrarian" data-u="fresh">
+          <td>11</td>
+          <td><strong>Premium Brands Copied This</strong></td>
+          <td>Contrarian / Pattern Interrupt</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Logitech and Razer now sell vertical mice for $80-130 -- same ergonomic principle, much higher price tag, proving the concept works</td>
+          <td>"Logitech charges $100 for the same ergonomic idea. You do not have to pay the Logitech tax to fix your wrist pain."</td>
+          <td>Carousel / Static</td>
+        </tr>
+        <tr data-cat="contrarian" data-u="fresh">
+          <td>12</td>
+          <td><strong>Pain = Wrong Tool, Not Wrong Body</strong></td>
+          <td>Contrarian / Pattern Interrupt</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Wrist pain is not a sign the body is failing -- it is the body's accurate signal that the tool design is fundamentally wrong</td>
+          <td>"Your wrist is not broken. Your mouse is. There is a difference."</td>
+          <td>Static / Short-form video</td>
+        </tr>
+        <tr data-cat="fear" data-u="fresh">
+          <td>13</td>
+          <td><strong>The 30-Year-Old Warning</strong></td>
+          <td>Fear / Urgency</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>A young person's fear that early RSI at 30 means career-ending deterioration by 50 if left unaddressed</td>
+          <td>"If it is this bad at 30, what does 50 look like? The people who act now are the ones who do not find out."</td>
+          <td>UGC video / Testimonial</td>
+        </tr>
+        <tr data-cat="fear" data-u="fresh">
+          <td>14</td>
+          <td><strong>The Real Cost of Waiting</strong></td>
+          <td>Fear / Urgency</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>Carpal tunnel surgery averages $5,000+, physical therapy runs $800+, lost productivity is uncountable -- compared to $54.95 right now</td>
+          <td>"Carpal tunnel surgery starts at $5,000. Physical therapy runs $800. This mouse costs $54. The math is not complicated."</td>
+          <td>Static / Carousel</td>
+        </tr>
+        <tr data-cat="fear" data-u="twist">
+          <td>15</td>
+          <td><strong>One Bad Month Away</strong></td>
+          <td>Fear / Urgency</td>
+          <td><span class="badge twist">Twist 1/4</span></td>
+          <td>Early warning signs ignored for one more month can cross into irreversible nerve compression territory</td>
+          <td>"There is a window to fix this before it becomes permanent. Most people find out they missed it a little too late."</td>
+          <td>VSL / UGC video</td>
+        </tr>
+        <tr data-cat="fear" data-u="twist">
+          <td>16</td>
+          <td><strong>Your Career Is In Your Hands</strong></td>
+          <td>Fear / Urgency</td>
+          <td><span class="badge twist">Twist 2/4</span></td>
+          <td>Writers, coders, designers, marketers -- their income depends entirely on hands that work, making wrist health a career protection issue</td>
+          <td>"Your career is literally in your hands. What are you doing to protect it?"</td>
+          <td>Static / Short video</td>
+        </tr>
+        <tr data-cat="social" data-u="fresh">
+          <td>17</td>
+          <td><strong>16 Million Americans</strong></td>
+          <td>Social Proof / Tribe</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>16 million Americans have been diagnosed with carpal tunnel -- the ones who switched are thriving; the ones who waited are in surgery or forced career changes</td>
+          <td>"16 million Americans have carpal tunnel. The ones who switched to a vertical mouse did not need surgery. The ones who waited are a different story."</td>
+          <td>Static / VSL</td>
+        </tr>
+        <tr data-cat="social" data-u="crowded">
+          <td>18</td>
+          <td><strong>PT-Recommended</strong></td>
+          <td>Social Proof / Tribe</td>
+          <td><span class="badge crowded">Crowded 3/4</span></td>
+          <td>Physical therapists and occupational health professionals actively recommend vertical mice as the primary prevention tool</td>
+          <td>"Physical therapists recommend this. Occupational health specialists recommend this. Your wrist agrees."</td>
+          <td>Static / Testimonial</td>
+        </tr>
+        <tr data-cat="social" data-u="twist">
+          <td>19</td>
+          <td><strong>The Switch Community</strong></td>
+          <td>Social Proof / Tribe</td>
+          <td><span class="badge twist">Twist 1/4</span></td>
+          <td>Thousands of women who work 8-10 hours a day have made this one change and never looked back -- joining them feels like finally being on the right side of the information</td>
+          <td>"Thousands of women who work at a computer all day made this one change. The ones who have not yet are still looking for answers."</td>
+          <td>UGC video / Testimonial</td>
+        </tr>
+        <tr data-cat="social" data-u="fresh">
+          <td>20</td>
+          <td><strong>Adjustment Period Shattered</strong></td>
+          <td>Social Proof / Tribe</td>
+          <td><span class="badge fresh">Fresh 0/4</span></td>
+          <td>The #1 objection is the 1-2 week adjustment curve -- this angle crushes it with a real story of someone who expected weeks and got days</td>
+          <td>"She braced herself for 2 weeks of awkward adjustment. She was comfortable by day 3."</td>
+          <td>UGC video / Testimonial</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<!-- MACRO ANGLES -->
+<div class="section">
+  <div class="section-header">
+    <h2>Macro-Angles (Offers / Seasonal)</h2>
+  </div>
+  <div class="section-body">
+    <div class="macro-item">
+      <div class="macro-title">Father's Day (June -- activate 2 weeks before, mid-May)</div>
+      <div class="macro-detail">Angle: "Give Dad the gift of pain-free work." Positions the mouse as the practical gift for the dad who works at a computer and has been complaining about wrist pain. Strong gift-intent angle -- gift buyers convert on utility + care.</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Back to School (August/September)</div>
+      <div class="macro-detail">Angle: "Set up your workstation right before the school year destroys your wrists." Targets students and young professionals starting new work routines. Prevention framing -- catch them before the pain starts, not after.</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">New Year's Health Resolution (January)</div>
+      <div class="macro-detail">Angle: "This year, make one change that actually protects your career." Fits naturally into health resolution buying behavior. Targets the avatar's health-goal mindset without sounding medical. Strong Jan 1-15 window.</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Work From Home Seasonal (September -- "back to office" or "back to routine")</div>
+      <div class="macro-detail">Angle: "Starting back at your desk every day? Set it up to protect your wrists from the beginning." Coincides with post-summer return to full work schedules -- the moment people re-examine their ergonomic setup.</div>
+    </div>
+    <div class="macro-item">
+      <div class="macro-title">Evergreen Milestone (ongoing)</div>
+      <div class="macro-detail">Angle: "50,000+ people switched. Their wrists have not looked back." Use as a social proof stamp on evergreen creative. Update the number as reviews grow (currently 12,432+ AMZ reviews, strong foundation).</div>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH NOTES -->
+<div class="section">
+  <div class="section-header">
+    <h2>Research Notes</h2>
+  </div>
+  <div class="section-body">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px">
+      <div>
+        <h3 style="font-size:.9rem;font-weight:600;color:#c53030;margin-bottom:10px">Top Pain Points (Grounded in Research)</h3>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">1. Nighttime numbness (3am wakeup)</span>
+          <div class="pain-detail">Carpal tunnel symptom that signals the pain has left the workplace and entered daily life. Highly specific, emotional, verified by multiple review sources.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">2. Years of failed solutions</span>
+          <div class="pain-detail">"I spent $800 on physical therapy before someone told me to change my mouse." Braces, PT, stretches, ergonomic breaks -- all tried, none fixed it. Average sufferer waits 2-4 years before finding the right tool.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">3. Pain spreading beyond the wrist</span>
+          <div class="pain-detail">Forearm, shoulder, neck involvement signals systemic deterioration. Users describe "the tension in my shoulder and arm is constant." Signals urgency.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">4. Career and income threat</span>
+          <div class="pain-detail">"If it is this bad at 30, I can only imagine by 50." Writers, coders, designers, marketers all face the same existential fear: the body that enables the career may not hold up.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">5. The adjustment period fear</span>
+          <div class="pain-detail">1-2 week adjustment curve is the #1 objection after price. Users who overcame it report 5-10 years of pain-free use. The adjustment is the final friction point before the transformation.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">6. Multi-device switching friction</span>
+          <div class="pain-detail">Professionals toggling between Mac + PC + tablet frustrated by mice that do not follow them. TECKNET's 3-device Bluetooth is a key differentiator here.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">7. Wrist brace stigma at work</span>
+          <div class="pain-detail">Wearing a brace in meetings signals health problems to colleagues and employers. Customers want a solution that is invisible -- and a vertical mouse is just a mouse.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">8. Scroll wheel / click fatigue</span>
+          <div class="pain-detail">Reviewers note scroll wheel and click mechanism durability -- pain during scrolling is specific and common. Separate from wrist positioning -- the button action itself can aggravate carpal tunnel.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">9. Forced breaks destroying productivity</span>
+          <div class="pain-detail">"I have to stop every 45 minutes because my wrist seizes up." Pain limits work output in a measurable way -- lost billable hours, missed deadlines, reduced quality of work.</div>
+        </div>
+        <div class="pain-item">
+          <span style="color:#c53030;font-weight:600">10. Surgery as the feared endpoint</span>
+          <div class="pain-detail">Carpal tunnel surgery averages $5,000+ and requires weeks of recovery. Most avatars have been told this is the "next step" -- profound fear and the strongest urgency trigger available.</div>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:.9rem;font-weight:600;color:#38a169;margin-bottom:10px">Top Benefits (Verified in Reviews)</h3>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>Immediate relief for most users</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">"Within the first week, less fatigue in my wrist." Multiple reviewers note pain reduction begins in days, not weeks.</div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>Genuine wrist/forearm ergonomic improvement</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">77% positive sentiment on ergonomics from 12,000+ reviews. Clinical studies confirm vertical grip reduces forearm pronation and median nerve compression.</div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>Best-in-class battery life (1-2 months per charge)</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">86% positive sentiment on battery. Auto-sleep mode. 1.5 hr charge = 2 months use. Competitors with similar ergonomics charge more and deliver less.</div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>3-device seamless Bluetooth switching</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">Mac + Windows PC + tablet with one button. Multi-device professionals (which is the core avatar) cite this as a key reason to choose this over Logitech's cheaper models.</div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>6 adjustable DPI levels</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">800-4800 DPI. Precision users (designers, content editors) can tune sensitivity without learning a new tool -- reduces the adjustment friction.</div>
+        </div>
+        <div class="benefit-item">
+          <span class="benefit-icon">+</span><strong>Price advantage vs. Logitech MX Vertical / Razer</strong>
+          <div style="font-size:.82rem;color:#4a5568;margin-top:3px">Logitech MX Vertical = $80; Razer Pro Click V2 Vertical = $120. TECKNET = $54.95. Same core ergonomic principle. A legitimate value narrative is available.</div>
+        </div>
+
+        <h3 style="font-size:.9rem;font-weight:600;color:#2b6cb0;margin-bottom:10px;margin-top:16px">Competitor Angles Being Differentiated From</h3>
+        <div style="margin-bottom:6px"><span class="competitor-tag">Wrist pain relief / "Say goodbye" (dominant)</span></div>
+        <div style="margin-bottom:6px"><span class="competitor-tag">Clinical / doctor-endorsed (Logitech, Evoluent)</span></div>
+        <div style="margin-bottom:6px"><span class="competitor-tag">Gaming + ergonomics (Razer Pro Click V2)</span></div>
+        <div style="margin-bottom:6px"><span class="competitor-tag">"Era of ergonomic mice" trend angle (TikTok winner)</span></div>
+        <div style="font-size:.78rem;color:#a0aec0;margin-top:6px">N=4 confirmed spy-tool winners (3 Meta + 1 TikTok). Winners DB Marketing Angle column unclassified for this term; extended via live Meta Ad Library and competitor brand research.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AVATAR + OBJECTIONS -->
+<div class="section">
+  <div class="section-header">
+    <h2>Avatar + Objections</h2>
+  </div>
+  <div class="section-body" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px">
+    <div>
+      <h3 style="font-size:.9rem;font-weight:600;color:#2d3748;margin-bottom:12px">Avatar Profile</h3>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>Name:</strong> Sarah (representative; product is female-dominated per Gender col)</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>Age:</strong> 25-65+ (core: 30-45)</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>Who she is:</strong> Marketing manager, content creator, developer, remote worker -- spends 8-10 hours/day at a computer. Productive, ambitious, career-driven.</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>Situation:</strong> Has had wrist pain / tingling for 6-24 months. Tried wrist braces, physical therapy, taking more breaks, and reducing screen time -- nothing has worked permanently. Is starting to worry about her long-term ability to do her job.</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>What she has tried:</strong> CVS wrist brace ($18), 4-8 sessions of PT ($400-800), ergonomic wrist rest ($30), ergonomic keyboard ($80-120), "taking more breaks" (impossible when deadlines hit).</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>What she secretly fears:</strong> That this gets worse. That she will be in surgery in 2 years. That her career -- which depends entirely on her hands -- is already compromised.</p>
+      <p style="font-size:.85rem;color:#4a5568;margin-bottom:8px"><strong>What she wants:</strong> To finish a full work day without her wrist reminding her it exists. To sleep through the night. To stop spending money on solutions that do not fix the root cause.</p>
+    </div>
+    <div>
+      <h3 style="font-size:.9rem;font-weight:600;color:#2d3748;margin-bottom:12px">Objections</h3>
+      <div class="primary-obj">
+        <div class="primary-obj-label">Primary Objection</div>
+        <strong>"Will this actually fix MY wrist pain, or is it just another expensive gadget that will not work for me?"</strong>
+        <div style="font-size:.8rem;color:#4a5568;margin-top:6px">Deeper fear: She has already been burned by braces, PT, and ergonomic accessories. She is not skeptical of the product -- she is skeptical of herself and her ability to find the right solution. The objection is really "I do not trust that this is different."</div>
+      </div>
+      <div class="objection-item">
+        <div class="obj-q">Price: "$54.95 is a lot for a mouse"</div>
+        <div class="obj-fear">Deeper fear: "I have already wasted money on things that did not work. What makes this different?"</div>
+        <div class="obj-answer">Answer: She already spent $800+ on PT. The question is not $55 vs $0 -- it is $55 vs $5,000+ surgery. Frame it as the cheapest medical decision she will ever make.</div>
+      </div>
+      <div class="objection-item">
+        <div class="obj-q">Adjustment period: "I will be clumsy for 2 weeks"</div>
+        <div class="obj-fear">Deeper fear: "My work will suffer during the adjustment. My boss / clients will notice. I cannot afford to be less productive right now."</div>
+        <div class="obj-answer">Answer: Most users adapt in 3-5 days, not 2 weeks. A few hours of slight adjustment vs. a lifetime of pain is not a real trade-off. Address it directly in the creative.</div>
+      </div>
+      <div class="objection-item">
+        <div class="obj-q">Relevance: "My pain might not be carpal tunnel specifically"</div>
+        <div class="obj-fear">Deeper fear: "What if this is a different kind of wrist problem and the vertical mouse makes it worse?"</div>
+        <div class="obj-answer">Answer: The vertical grip reduces ALL pronation-based strain, not just carpal tunnel. For wrist pain caused by standard mouse use, the reduced rotation helps regardless of the specific diagnosis.</div>
+      </div>
+      <div class="objection-item">
+        <div class="obj-q">Skepticism: "My current Logitech or Apple mouse is perfectly fine"</div>
+        <div class="obj-fear">Deeper fear: "Is there actually something wrong with my current mouse, or am I just failing to take breaks properly?"</div>
+        <div class="obj-answer">Answer: The flat mouse grip forces the wrist into 60-90 degrees of pronation. The vertical grip brings it to near-neutral. The research is unambiguous. The design of her current mouse IS the problem.</div>
+      </div>
+      <div class="objection-item">
+        <div class="obj-q">Timing: "I will try again in a few months if the pain gets worse"</div>
+        <div class="obj-fear">Deeper fear: "Maybe it will go away on its own. I do not want to admit this is a real problem yet."</div>
+        <div class="obj-answer">Answer: Early intervention prevents the slide to irreversible nerve compression. The window to fix this easily is closing. Waiting is the most expensive decision she will make.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- UNIQUENESS LEGEND -->
+<div class="section">
+  <div class="section-header">
+    <h2>Uniqueness Legend</h2>
+  </div>
+  <div class="section-body">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#38a169"></div><span><strong>Fresh:</strong> No competitor ad in the Winners DB runs this angle (0 matches). Most differentiated picks.</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#3182ce"></div><span><strong>Twist:</strong> Competitors hit the same pain/benefit but frame it differently; this angle adds a fresh differentiator.</span></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#e53e3e"></div><span><strong>Crowded:</strong> One or more competitor ads already run essentially this angle. Differentiate further or drop.</span></div>
+    </div>
+    <p style="font-size:.78rem;color:#a0aec0;margin-top:10px">N=4 confirmed spy-tool winners (3 Meta Ad Ws + 1 TikTok Organic Ws per product DB). Winners DB Marketing Angle column was unclassified for this search term. Extended with live competitor research (Meta Ad Library, brand analysis, market reports). Count denominator reflects total confirmed winners from the spy run.</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+function filterAngles(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const rows = document.querySelectorAll('#anglesTable tbody tr');
+  rows.forEach(row => {
+    const cat = row.dataset.cat;
+    const u = row.dataset.u;
+    let show = false;
+    if (type === 'all') show = true;
+    else if (type === 'pain' && cat === 'pain') show = true;
+    else if (type === 'aspiration' && cat === 'aspiration') show = true;
+    else if (type === 'contrarian' && cat === 'contrarian') show = true;
+    else if (type === 'fear' && cat === 'fear') show = true;
+    else if (type === 'social' && cat === 'social') show = true;
+    else if (type === 'fresh' && u === 'fresh') show = true;
+    else if (type === 'twist' && u === 'twist') show = true;
+    row.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

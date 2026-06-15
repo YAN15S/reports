@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Angles: Robot Vacuum (Smart Mapping, Auto-Empty)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f4f5f7;color:#1a1a2e}
+.accent-bar{height:4px;background:linear-gradient(90deg,#2d3561,#5c6bc0,#7986cb)}
+.header{background:#fff;padding:32px 40px 24px;border-bottom:1px solid #e8eaf0}
+.header h1{font-size:26px;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.header .subtitle{font-size:14px;color:#5c6bc0;font-weight:500;margin-bottom:4px}
+.header .date{font-size:13px;color:#9e9e9e}
+.container{max-width:1200px;margin:0 auto;padding:28px 24px}
+.stats-block{background:#fff;border:1px solid #e8eaf0;border-radius:10px;padding:24px 28px;margin-bottom:28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.stat-item label{font-size:11px;font-weight:700;text-transform:uppercase;color:#9e9e9e;letter-spacing:.8px;display:block;margin-bottom:5px}
+.stat-item .val{font-size:15px;font-weight:600;color:#1a1a2e;line-height:1.4}
+.section-title{font-size:18px;font-weight:700;color:#1a1a2e;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #e8eaf0}
+.section-title span{font-size:13px;font-weight:400;color:#9e9e9e;margin-left:10px}
+.top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:36px}
+.angle-card{background:#fff;border-radius:10px;border:1px solid #e8eaf0;overflow:hidden;position:relative}
+.angle-card .card-accent{height:3px}
+.card-rank1 .card-accent{background:linear-gradient(90deg,#c62828,#ef5350)}
+.card-rank2 .card-accent{background:linear-gradient(90deg,#1565c0,#42a5f5)}
+.card-rank3 .card-accent{background:linear-gradient(90deg,#2e7d32,#66bb6a)}
+.card-body{padding:20px 22px}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;gap:10px}
+.rank-badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap;flex-shrink:0}
+.rank1{background:#fde8e8;color:#c62828}
+.rank2{background:#e3f0ff;color:#1565c0}
+.rank3{background:#e8f5e9;color:#2e7d32}
+.uniqueness-badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:12px;white-space:nowrap}
+.fresh{background:#e8f5e9;color:#2e7d32}
+.twist{background:#fff8e1;color:#f57f17}
+.crowded{background:#fde8e8;color:#c62828}
+.card-name{font-size:17px;font-weight:700;color:#1a1a2e;margin-bottom:4px}
+.card-category{font-size:12px;color:#5c6bc0;font-weight:600;margin-bottom:10px}
+.card-insight{font-size:13px;color:#424242;line-height:1.55;margin-bottom:12px}
+.card-hook{background:#f8f9ff;border-left:3px solid #5c6bc0;padding:10px 14px;border-radius:0 6px 6px 0;font-size:13px;color:#2d3561;font-style:italic;line-height:1.5;margin-bottom:12px}
+.card-format{font-size:12px;color:#757575;margin-bottom:14px}
+.card-format strong{color:#424242}
+.why-wins{font-size:12px;color:#424242;background:#f9fbe7;border:1px solid #f0f4c3;padding:8px 12px;border-radius:6px;margin-bottom:14px}
+.why-wins strong{color:#827717}
+.hooks-section h4{font-size:12px;font-weight:700;color:#757575;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.hook-item{margin-bottom:8px;padding:8px 12px;background:#f5f5f5;border-radius:6px}
+.hook-type{font-size:10px;font-weight:700;text-transform:uppercase;color:#9e9e9e;letter-spacing:.5px;margin-bottom:3px}
+.hook-text{font-size:13px;color:#1a1a2e;line-height:1.45}
+.grid20{width:100%;border-collapse:collapse;margin-bottom:36px;font-size:13px}
+.grid20 th{background:#2d3561;color:#fff;padding:10px 12px;text-align:left;font-size:12px;font-weight:600;position:sticky;top:0}
+.grid20 td{padding:9px 12px;border-bottom:1px solid #f0f0f0;vertical-align:top;color:#1a1a2e}
+.grid20 tr:hover td{background:#f8f9ff}
+.grid20 tr:nth-child(even) td{background:#fafafa}
+.grid20 tr:nth-child(even):hover td{background:#f0f4ff}
+.cat-tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600;white-space:nowrap}
+.cat-pain{background:#fde8e8;color:#c62828}
+.cat-asp{background:#e3f0ff;color:#1565c0}
+.cat-contra{background:#f3e5f5;color:#6a1b9a}
+.cat-fear{background:#fff3e0;color:#e65100}
+.cat-social{background:#e8f5e9;color:#2e7d32}
+.macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:36px}
+.macro-card{background:#fff;border:1px solid #e8eaf0;border-radius:8px;padding:16px 18px}
+.macro-card .macro-label{font-size:11px;font-weight:700;text-transform:uppercase;color:#5c6bc0;letter-spacing:.6px;margin-bottom:6px}
+.macro-card h4{font-size:14px;font-weight:700;color:#1a1a2e;margin-bottom:6px}
+.macro-card p{font-size:13px;color:#424242;line-height:1.5}
+.research-block{background:#fff;border:1px solid #e8eaf0;border-radius:10px;padding:24px 28px;margin-bottom:28px}
+.research-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.research-list{list-style:none}
+.research-list li{padding:5px 0;border-bottom:1px solid #f5f5f5;font-size:13px;color:#424242;line-height:1.45}
+.research-list li:before{content:"• ";color:#5c6bc0;font-weight:700}
+.competitor-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:10px}
+.competitor-table th{background:#f5f5f5;padding:8px 12px;text-align:left;font-weight:700;font-size:12px;color:#424242}
+.competitor-table td{padding:8px 12px;border-bottom:1px solid #f0f0f0}
+.legend{background:#fff;border:1px solid #e8eaf0;border-radius:8px;padding:18px 22px;margin-bottom:24px}
+.legend h4{font-size:13px;font-weight:700;color:#424242;margin-bottom:10px}
+.legend-items{display:flex;gap:20px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:13px;color:#424242}
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.filter-btn{padding:5px 14px;border-radius:20px;border:1px solid #e0e0e0;background:#fff;font-size:12px;cursor:pointer;font-weight:600;color:#424242;transition:all .15s}
+.filter-btn.active,.filter-btn:hover{background:#2d3561;color:#fff;border-color:#2d3561}
+.section-wrap{margin-bottom:36px}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<div class="header">
+  <h1>Marketing Angles: Robot Vacuum (Smart Mapping, Auto-Empty)</h1>
+  <div class="subtitle">ASIN B09H8CWFNK &mdash; Shark AV2501S &mdash; VA Products (Andi) Row 85</div>
+  <div class="date">Generated 06-15-2026 &nbsp;|&nbsp; Verdict: PASS &nbsp;|&nbsp; Sell Price: $162.95 &nbsp;|&nbsp; Margin: $92.95 / 57% &nbsp;|&nbsp; Competitor set: N=5 Meta Ad Winners</div>
+</div>
+<div class="container">
+
+<!-- SUMMARY BLOCK -->
+<div class="stats-block">
+  <div class="stat-item"><label>Primary Avatar</label><div class="val">The Home-Proud Pet Owner<br><span style="font-weight:400;font-size:13px">Female, 30-55 | 1-2 dogs/cats | Busy homeowner/renter | Has failed with cheaper robots</span></div></div>
+  <div class="stat-item"><label>Core Transformation</label><div class="val">Reactive pet-hair panic + robot babysitting<br><span style="font-weight:400;font-size:13px">to</span><br>Floors always clean, no thought required</div></div>
+  <div class="stat-item"><label>Primary Objection</label><div class="val" style="color:#c62828">"I've tried cheaper robot vacuums before and they got stuck and missed spots. How is this one different?"</div></div>
+  <div class="stat-item"><label>Competitor Set (N=5)</label><div class="val">5 Meta Ad Winners<br><span style="font-weight:400;font-size:13px">2 real DTC angles in market: Hands-free convenience (Packed Direct) + Price comparison / pet hair pain (Renora)</span></div></div>
+</div>
+
+<!-- TOP 3 ANGLES -->
+<div class="section-wrap">
+<div class="section-title">Top 3 Angles <span>ranked by emotional charge x differentiation</span></div>
+<div class="top3-grid">
+
+  <!-- RANK 1 -->
+  <div class="angle-card card-rank1">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="card-name">The Stuck Robot Tax</div>
+          <div class="card-category">Pain / Frustration</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end">
+          <span class="rank-badge rank1">#1</span>
+          <span class="uniqueness-badge fresh">Fresh 0/5</span>
+        </div>
+      </div>
+      <div class="card-insight">The promise of a robot vacuum was "set it and forget it." The reality of a cheap robot is a new anxiety: checking whether it's stuck, restarting failed runs, babysitting the machine that was supposed to free you. This angle attacks the broken promise directly.</div>
+      <div class="card-hook">"You bought a robot vacuum to stop thinking about vacuuming. Now you set reminders to check if it's stuck. That's the wrong robot."</div>
+      <div class="card-format"><strong>Best format:</strong> UGC Video / VSL (relatable before-after; robot stuck under couch visual)</div>
+      <div class="why-wins"><strong>Why it wins:</strong> Zero competitor coverage. Packs betrayal + wasted money + the solution into one line. Every robot vacuum owner has this experience; it is the category-wide unspoken truth. Fresh 0/5 against all 5 Winners DB competitors.</div>
+      <div class="hooks-section">
+        <h4>Micro-Hooks (3 of 5 types)</h4>
+        <div class="hook-item"><div class="hook-type">Problem-First</div><div class="hook-text">"You bought a robot vacuum to stop thinking about vacuuming. Now you set reminders to check if it's stuck. That's the wrong robot."</div></div>
+        <div class="hook-item"><div class="hook-type">Result-First</div><div class="hook-text">"I haven't checked my floors in 3 weeks. Not because I gave up - because I got a robot with smart mapping that actually finishes what it starts."</div></div>
+        <div class="hook-item"><div class="hook-type">Contra</div><div class="hook-text">"Stop babysitting your robot vacuum. A real smart-mapping robot doesn't need you to watch it."</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 2 -->
+  <div class="angle-card card-rank2">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="card-name">The Guest Ambush</div>
+          <div class="card-category">Fear / Urgency</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end">
+          <span class="rank-badge rank2">#2</span>
+          <span class="uniqueness-badge fresh">Fresh 0/5</span>
+        </div>
+      </div>
+      <div class="card-insight">The moment someone says "I'll stop by in 10 minutes" and the buyer looks at her pet-hair-covered floors. A micro-scene of social fear that every pet-owning homeowner has lived. This angle converts scroll-stopping self-recognition into purchase intent.</div>
+      <div class="card-hook">"They said they'd stop by in 10 minutes. You looked at the floor. You looked at the door. And you started running."</div>
+      <div class="card-format"><strong>Best format:</strong> Static image / short UGC video (the scene is one frame; extremely shareable)</div>
+      <div class="why-wins"><strong>Why it wins:</strong> Zero competitor coverage. Uses scene-based specificity to create immediate self-recognition. Exploits the social anxiety that lives under every pet-hair problem - not "my floors are dirty" but "what will they think." Fresh 0/5 and demographically precise for the female-dominant avatar.</div>
+      <div class="hooks-section">
+        <h4>Micro-Hooks (3 of 5 types)</h4>
+        <div class="hook-item"><div class="hook-type">Problem-First</div><div class="hook-text">"They said they'd stop by in 10 minutes. You looked at the floor. You looked at the door. And you started running."</div></div>
+        <div class="hook-item"><div class="hook-type">Result-First</div><div class="hook-text">"Now when someone says 'I'll stop by in 5,' I just say 'perfect.' Because the floor is always clean. It always is."</div></div>
+        <div class="hook-item"><div class="hook-type">Social Proof</div><div class="hook-text">"She told me she stopped doing the scramble-clean. I didn't know what that was until I did it myself for 6 more months."</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 3 -->
+  <div class="angle-card card-rank3">
+    <div class="card-accent"></div>
+    <div class="card-body">
+      <div class="card-header">
+        <div>
+          <div class="card-name">The Pet Hair Treadmill</div>
+          <div class="card-category">Pain / Frustration</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:5px;align-items:flex-end">
+          <span class="rank-badge rank3">#3</span>
+          <span class="uniqueness-badge twist">Twist 1/5</span>
+        </div>
+      </div>
+      <div class="card-insight">No matter how often you vacuum, the pet hair always wins because you are playing a reactive game that can never be won. The only way to win is to change the system: daily automated prevention, not weekly manual cleanup. Renora mentions pet hair as setup context; this angle goes deeper to the identity/futility layer.</div>
+      <div class="card-hook">"You vacuum on Sunday. It's dirty by Tuesday. You're not losing the cleaning battle - you're playing a game that can't be won by vacuuming more."</div>
+      <div class="card-format"><strong>Best format:</strong> UGC video (daily shedding footage) / Carousel (Sunday-Monday-Tuesday visual)</div>
+      <div class="why-wins"><strong>Why it wins:</strong> Highest-volume pain point in the category (every pet owner has this exact experience). Renora uses pet hair as a setup line ("pet hair tornadoes by Wednesday") but never goes to the identity/futility frame. This angle claims the root cause and the solution system. Twist 1/5 - adjacent but distinctly deeper.</div>
+      <div class="hooks-section">
+        <h4>Micro-Hooks (3 of 5 types)</h4>
+        <div class="hook-item"><div class="hook-type">Problem-First</div><div class="hook-text">"You vacuum on Sunday. It's dirty by Tuesday. You're not losing the cleaning battle - you're playing a game that can't be won by vacuuming more."</div></div>
+        <div class="hook-item"><div class="hook-type">Result-First</div><div class="hook-text">"My house has three dogs and I vacuum once a week now. Not because they shed less - because the robot runs every day while I'm at work."</div></div>
+        <div class="hook-item"><div class="hook-type">Contra</div><div class="hook-text">"Stop scheduling time to vacuum. Every time you do it, you're manually doing the job a robot should be doing automatically."</div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ALL 20 ANGLES TABLE -->
+<div class="section-wrap">
+<div class="section-title">All 20 Angles <span>sortable by uniqueness; filterable by category</span></div>
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterAngles('all',this)">All 20</button>
+  <button class="filter-btn" onclick="filterAngles('pain',this)">Pain / Frustration</button>
+  <button class="filter-btn" onclick="filterAngles('asp',this)">Aspiration / Identity</button>
+  <button class="filter-btn" onclick="filterAngles('contra',this)">Contrarian</button>
+  <button class="filter-btn" onclick="filterAngles('fear',this)">Fear / Urgency</button>
+  <button class="filter-btn" onclick="filterAngles('social',this)">Social Proof</button>
+  <button class="filter-btn" onclick="filterAngles('fresh',this)">Fresh only</button>
+  <button class="filter-btn" onclick="filterAngles('twist',this)">Twist only</button>
+</div>
+<table class="grid20" id="angles-table">
+<thead><tr>
+  <th>#</th>
+  <th>Angle Name</th>
+  <th>Category</th>
+  <th>Uniqueness</th>
+  <th>Core Insight</th>
+  <th>Sample Hook</th>
+  <th>Format</th>
+</tr></thead>
+<tbody>
+<tr data-cat="pain" data-u="fresh">
+  <td style="font-weight:700;color:#c62828">1</td>
+  <td style="font-weight:700">The Stuck Robot Tax</td>
+  <td><span class="cat-tag cat-pain">Pain</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>The promise was set-it-and-forget-it; the reality of a cheap robot is a new anxiety about whether it finished. Attacks the broken promise every buyer has experienced.</td>
+  <td style="font-style:italic">"You bought a robot vacuum to stop thinking about vacuuming. Now you set reminders to check if it's stuck."</td>
+  <td>UGC Video / VSL</td>
+</tr>
+<tr data-cat="fear" data-u="fresh">
+  <td style="font-weight:700;color:#c62828">2</td>
+  <td style="font-weight:700">The Guest Ambush</td>
+  <td><span class="cat-tag cat-fear">Fear</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>The panic moment when a guest announces 10 minutes out. Scene-based social fear that every pet-owning homeowner has lived. Converts self-recognition into purchase urgency.</td>
+  <td style="font-style:italic">"They said they'd stop by in 10 minutes. You looked at the floor. You looked at the door. And you started running."</td>
+  <td>Static / Short UGC</td>
+</tr>
+<tr data-cat="pain" data-u="twist">
+  <td style="font-weight:700;color:#2e7d32">3</td>
+  <td style="font-weight:700">The Pet Hair Treadmill</td>
+  <td><span class="cat-tag cat-pain">Pain</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>Reactive vacuuming is a system that can never win against daily shedding. The framing goes to identity/futility, deeper than Renora's surface pet-hair mention.</td>
+  <td style="font-style:italic">"You vacuum on Sunday. It's dirty by Tuesday. You're not losing the battle - you're playing a game that can't be won by vacuuming more."</td>
+  <td>UGC Video / Carousel</td>
+</tr>
+<tr data-cat="pain" data-u="fresh">
+  <td>4</td>
+  <td>The Dustbin Disgust</td>
+  <td><span class="cat-tag cat-pain">Pain</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Emptying a dustbin full of compressed pet hair and dust negates the hands-free promise. The gross, hands-on maintenance ritual nobody talks about in robot vacuum ads.</td>
+  <td style="font-style:italic">"You didn't buy a robot vacuum to kneel on the floor and shake compressed pet hair into a trash can twice a week."</td>
+  <td>UGC Video</td>
+</tr>
+<tr data-cat="asp" data-u="twist">
+  <td>5</td>
+  <td>The Always-Clean Home</td>
+  <td><span class="cat-tag cat-asp">Aspiration</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>Identity upgrade from "person who can never keep up" to "person whose home is always effortlessly clean." Packed Direct owns zero-effort; this adds the identity layer.</td>
+  <td style="font-style:italic">"What if your floors were always clean - not because you clean constantly, but because you stopped having to?"</td>
+  <td>Static / Testimonial</td>
+</tr>
+<tr data-cat="asp" data-u="fresh">
+  <td>6</td>
+  <td>The Modern Home Owner</td>
+  <td><span class="cat-tag cat-asp">Aspiration</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Smart home automation as identity marker. Every other home device works for you; the floor is the last holdout. Positions the robot as the obvious next step in a modern home.</td>
+  <td style="font-style:italic">"Every other smart home device makes your life easier. Your floors deserve the same upgrade."</td>
+  <td>Carousel / Static</td>
+</tr>
+<tr data-cat="asp" data-u="fresh">
+  <td>7</td>
+  <td>The Perfect Host</td>
+  <td><span class="cat-tag cat-asp">Aspiration</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Never being embarrassed by floors when guests arrive. The elimination of the "sorry about the dog hair" reflex. Aspirational social identity: effortlessly clean home, always ready.</td>
+  <td style="font-style:italic">"You stopped apologizing for the dog hair the day you set the schedule."</td>
+  <td>Static / UGC Video</td>
+</tr>
+<tr data-cat="asp" data-u="twist">
+  <td>8</td>
+  <td>The Reclaimed Weekend</td>
+  <td><span class="cat-tag cat-asp">Aspiration</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>Time-budget reframe: the hours spent vacuuming are hours of your life. Renora uses "30+ hours a year" as a setup line; this angle makes it the entire identity argument.</td>
+  <td style="font-style:italic">"You'll get 50+ hours back this year. That's two vacations' worth of time currently spent pushing a Dyson."</td>
+  <td>VSL / UGC Video</td>
+</tr>
+<tr data-cat="contra" data-u="fresh">
+  <td>9</td>
+  <td>Cleaning Is A Chore Lie</td>
+  <td><span class="cat-tag cat-contra">Contrarian</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>The premise that cleaning requires your time and presence is a relic. Smart mapping has changed the math; you just didn't know it was already solved.</td>
+  <td style="font-style:italic">"Stop cleaning your floors. You don't have to anymore - and haven't for years. You just didn't know it yet."</td>
+  <td>Static / Short Video</td>
+</tr>
+<tr data-cat="contra" data-u="twist">
+  <td>10</td>
+  <td>The Brand Tax</td>
+  <td><span class="cat-tag cat-contra">Contrarian</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>You pay for Roomba's name, not for better LiDAR. The specific tech proof differentiates this from Renora's general "half the price" frame - it names the exact feature you're overpaying for.</td>
+  <td style="font-style:italic">"The $1,200 Roomba uses the same LiDAR as your $162 robot. The brand name just costs more."</td>
+  <td>Static / Carousel</td>
+</tr>
+<tr data-cat="contra" data-u="twist">
+  <td>11</td>
+  <td>The Cheap Robot Was Right</td>
+  <td><span class="cat-tag cat-contra">Contrarian</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>The $99 robot that failed wasn't proof robot vacuums don't work - it was missing smart mapping. Reframes past failure as a technology gap, not a category failure. Counters the primary objection directly.</td>
+  <td style="font-style:italic">"The cheap robot that disappointed you wasn't proof robot vacuums don't work. It was missing one thing: a real map."</td>
+  <td>VSL / UGC Video</td>
+</tr>
+<tr data-cat="contra" data-u="fresh">
+  <td>12</td>
+  <td>Vacuuming Is The Wrong System</td>
+  <td><span class="cat-tag cat-contra">Contrarian</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Manual vacuuming is reactive - it starts after the mess has built up. Daily automated prevention is the only system that wins against continuous pet shedding.</td>
+  <td style="font-style:italic">"You vacuum when it's already bad. The only way to win with pet hair is to never let it build up."</td>
+  <td>Static / Carousel</td>
+</tr>
+<tr data-cat="fear" data-u="fresh">
+  <td>13</td>
+  <td>The Allergen Accumulation</td>
+  <td><span class="cat-tag cat-fear">Fear</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Pet dander and dust mites accumulate invisibly even when floors "look" clean. The invisible health cost that gives rational permission for an emotional purchase.</td>
+  <td style="font-style:italic">"The floor looks clean. The pet dander doesn't care. It's on the couch, in the rug fibers, and in the air your kids are breathing."</td>
+  <td>Static / VSL</td>
+</tr>
+<tr data-cat="fear" data-u="twist">
+  <td>14</td>
+  <td>The Weekend Sacrifice</td>
+  <td><span class="cat-tag cat-fear">Fear</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>The compound cost of trading a slice of every weekend for floors that are dirty again in 72 hours. Renora mentions "30+ hours a year"; this angle presents the compounding as a life-scale loss.</td>
+  <td style="font-style:italic">"You'll spend 58 hours this year vacuuming floors that get dirty again in 72 hours. Or you won't."</td>
+  <td>Static / Short Video</td>
+</tr>
+<tr data-cat="fear" data-u="twist">
+  <td>15</td>
+  <td>The Cheap Robot Graveyard</td>
+  <td><span class="cat-tag cat-fear">Fear</span></td>
+  <td><span class="uniqueness-badge twist">Twist 1/5</span></td>
+  <td>The pattern: cheap robot fails, ends up in the closet, replaced by another cheap robot. Without mapping, the outcome is the same. Renora implies this; this angle names the cycle explicitly.</td>
+  <td style="font-style:italic">"Your third cheap robot vacuum is in the closet with the first two. The pet hair still wins."</td>
+  <td>UGC Video / Testimonial</td>
+</tr>
+<tr data-cat="social" data-u="fresh">
+  <td>16</td>
+  <td>The Dog Mom Club</td>
+  <td><span class="cat-tag cat-social">Social Proof</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Women with dogs have collectively solved the floor problem this way. The "last holdout" social proof frame - belonging to the tribe of people who have already figured it out.</td>
+  <td style="font-style:italic">"Every dog mom on my street has one now. I was the last holdout. Now I understand why they all seemed so relaxed about it."</td>
+  <td>UGC Video / Testimonial</td>
+</tr>
+<tr data-cat="social" data-u="fresh">
+  <td>17</td>
+  <td>The WFH Convert</td>
+  <td><span class="cat-tag cat-social">Social Proof</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Work-from-home identity: the floor running in the background during calls is the adult version of having a clean office. Casual, normalized behavior that makes buyers feel behind the curve.</td>
+  <td style="font-style:italic">"'I just let it run during my calls.' She said it so casually. Like not vacuuming was just... the obvious choice."</td>
+  <td>Short UGC Video / Static</td>
+</tr>
+<tr data-cat="social" data-u="fresh">
+  <td>18</td>
+  <td>The Partner Converter</td>
+  <td><span class="cat-tag cat-social">Social Proof</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>The skeptical partner who opposed the purchase and became the one who now manages the cleaning schedule. Ultimate social proof for household tech doubters.</td>
+  <td style="font-style:italic">"He called it a waste of money. Now he's the one setting the cleaning schedule."</td>
+  <td>UGC Video / Testimonial</td>
+</tr>
+<tr data-cat="social" data-u="fresh">
+  <td>19</td>
+  <td>The Former Skeptic</td>
+  <td><span class="cat-tag cat-social">Social Proof</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Personal transformation from "this is a gimmick" to "I don't know how I lived without it." Preempts the objection by putting it in the customer's own voice.</td>
+  <td style="font-style:italic">"I almost talked myself out of it three times. Then I realized I was defending a chore."</td>
+  <td>Testimonial / UGC Video</td>
+</tr>
+<tr data-cat="pain" data-u="fresh">
+  <td>20</td>
+  <td>The Missed Zones Rage</td>
+  <td><span class="cat-tag cat-pain">Pain</span></td>
+  <td><span class="uniqueness-badge fresh">Fresh 0/5</span></td>
+  <td>Cheap bump-and-go robots clean the same small area repeatedly while leaving entire zones untouched. Specific, infuriating, and the exact thing smart mapping solves.</td>
+  <td style="font-style:italic">"It cleaned the same 4-foot square 12 times. The rest of the living room? Untouched."</td>
+  <td>UGC Video / Short Clip</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- MACRO ANGLES -->
+<div class="section-wrap">
+<div class="section-title">Macro-Angles <span>offer / seasonal / product-specific angles to layer on top</span></div>
+<div class="macro-grid">
+  <div class="macro-card">
+    <div class="macro-label">Seasonal - Summer NOW</div>
+    <h4>Father's Day (activate now)</h4>
+    <p>For the household member who does most of the vacuuming - reframe as "the gift that gives back time." Frame: "Give him his Sundays back." Activate June 1-15.</p>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Seasonal - Fall</div>
+    <h4>Back-to-School Chaos</h4>
+    <p>September school-year restart = "school-year chaos is no time to be vacuuming." The household cleaning burden multiplies with kids home for summer then back to school schedule. Activate late August.</p>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Seasonal - Winter</div>
+    <h4>New Year Clean Start</h4>
+    <p>"This is the year you stop spending Sundays cleaning." New Year's resolution frame for home organization. Activate Dec 26 - Jan 7.</p>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Seasonal - Winter</div>
+    <h4>BFCM / Holiday Gift</h4>
+    <p>"The thing that pays for itself in Year 1." Calculate: if buyer saves 58 hours/year at minimum wage, the ROI is clear. Also positions as a gift. Activate Nov 1.</p>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Evergreen</div>
+    <h4>50,000+ Homes Cleaning Themselves</h4>
+    <p>Milestone social proof event - when the unit-sold count hits a round number. Works as a trust signal for skeptical first-time buyers who need validation before committing to a premium price point.</p>
+  </div>
+  <div class="macro-card">
+    <div class="macro-label">Product-Specific</div>
+    <h4>The 30-Day No-Touch Challenge</h4>
+    <p>Built for the "I've failed with gadgets before" skeptic. Frame the self-empty dock as a 30-day experiment: "set it up, don't touch it for 30 days, see what happens." Removes the purchase risk framing by reframing as a test, not a commitment.</p>
+  </div>
+</div>
+</div>
+
+<!-- RESEARCH NOTES -->
+<div class="section-wrap">
+<div class="section-title">Research Notes <span>grounded in live research - no invented data</span></div>
+<div class="research-block">
+  <div class="research-col">
+    <div>
+      <h4 style="font-size:14px;font-weight:700;margin-bottom:10px;color:#2d3561">Top Pain Points</h4>
+      <ul class="research-list">
+        <li>Pet hair tangling around brushes every 2-4 weeks (requiring manual scissors intervention)</li>
+        <li>Cheap robots get stuck under furniture; owner comes home to an untouched room and a dead battery</li>
+        <li>Smart mapping gets corrupted after furniture moves or battery drain; requires full remap</li>
+        <li>Self-empty dock announces "complete" but dustbin is still full (dock suction failures)</li>
+        <li>Thresholds and rug edges cause immobilization ("Mount Everest to small wheels")</li>
+        <li>WiFi connectivity failures - won't connect to 5GHz routers; drops connection during runs</li>
+        <li>Cheap robots miss entire zones while over-cleaning small areas ("cleaned the same spot 12 times")</li>
+        <li>In pet-heavy homes, "30-day self-empty" fills in 10-14 days instead</li>
+        <li>Dust cloud from emptying the bin without a sealed dock (inhaled by the owner)</li>
+        <li>Social embarrassment: guest arrival with visible pet hair = panic scramble clean</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:14px;font-weight:700;margin-bottom:10px;color:#2d3561">Top Benefits (Verified)</h4>
+      <ul class="research-list">
+        <li>HEPA self-emptying - 99.97% allergen containment, sealed bag, no dust cloud</li>
+        <li>Smart room-by-room mapping - remembers layout, cleans every zone systematically</li>
+        <li>Multi-floor memory - up to 4 floor plans remembered</li>
+        <li>Auto-lift mop pads on carpet transitions (no wet carpet edges)</li>
+        <li>Tangle-free brush design built for pet-hair households</li>
+        <li>App + voice control (Alexa/Google Home) - integrates into existing smart home routine</li>
+        <li>Time recovery: 50+ hours/year reclaimed from vacuuming</li>
+        <li>True hands-free: touch it once a month (dock bag change)</li>
+      </ul>
+    </div>
+  </div>
+  <div style="margin-top:20px">
+    <h4 style="font-size:14px;font-weight:700;margin-bottom:10px;color:#2d3561">Competitor Angles Being Differentiated From (Winners DB N=5)</h4>
+    <table class="competitor-table">
+      <thead><tr><th>Advertiser</th><th>Score</th><th>Angle Classified</th><th>Our Differentiation</th></tr></thead>
+      <tbody>
+        <tr><td>Packed Direct (Olsen &amp; Smith)</td><td>51</td><td>Hands-free convenience / zero effort ("let it do the cleaning while you get on with life")</td><td>We go deeper: WHY the hands-free promise breaks (stuck robots), and the identity cost of reactive cleaning</td></tr>
+        <tr><td>TP-Link Tapo RV30</td><td>17</td><td>Award validation / best budget pick ("Best Budget-Friendly Robot Vacuum" - PCMag)</td><td>We own specific pain moments, not generic award framing. Different emotional register.</td></tr>
+        <tr><td>ResipiKita.com</td><td>16</td><td>Affiliate comparison roundup (Malaysian market) - not a DTC angle</td><td>Not applicable - not a real competitor DTC angle</td></tr>
+        <tr><td>Renora (Matrix)</td><td>13</td><td>Pet hair time-waste + price comparison vs premium brands ("Premium Robot Vacuum, Half The Price")</td><td>We own the stuck-robot broken promise and the guest ambush scene - both Fresh 0/5. We don't fight on price.</td></tr>
+        <tr><td>Smart Frontier US (AIRROBO)</td><td>12</td><td>Product listing headline - no angle</td><td>Not applicable</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-top:16px;padding:12px 16px;background:#f8f9ff;border-radius:6px;font-size:13px;color:#2d3561">
+    <strong>Uniqueness Note:</strong> Marketing Angle column in Winners DB was empty for all 5 rows (Audit Winners DB has not classified them). Competitor angles were derived directly from reading the ad copy, headlines, and lander content in the Winners DB rows. Classification is high-confidence based on the ad copy itself (not invented). N=5 is the full competitor set for this search term.
+  </div>
+</div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <h4>Uniqueness Scale (measured against Winners DB N=5 competitor ads)</h4>
+  <div class="legend-items">
+    <div class="legend-item"><span class="uniqueness-badge fresh">Fresh 0/5</span> No competitor ad uses this angle. Strongest differentiation.</div>
+    <div class="legend-item"><span class="uniqueness-badge twist">Twist 1/5</span> Competitor hits same pain/benefit but with different framing. This angle adds a fresh differentiator.</div>
+    <div class="legend-item"><span class="uniqueness-badge crowded" style="background:#fde8e8;color:#c62828">Crowded</span> (none in this set) Competitors already run essentially this angle. Differentiate further before testing.</div>
+  </div>
+</div>
+
+</div><!-- end container -->
+
+<script>
+function filterAngles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const rows = document.querySelectorAll('#angles-table tbody tr');
+  rows.forEach(r => {
+    const c = r.dataset.cat, u = r.dataset.u;
+    if (cat === 'all') { r.style.display = ''; }
+    else if (cat === 'fresh' || cat === 'twist') { r.style.display = u === cat ? '' : 'none'; }
+    else { r.style.display = c === cat ? '' : 'none'; }
+  });
+}
+</script>
+
+</body>
+</html>

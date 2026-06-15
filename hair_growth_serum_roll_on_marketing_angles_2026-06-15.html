@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair Growth Serum Roll On - Marketing Angles Report</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --slate-light: #334155;
+    --accent: #6366f1;
+    --accent-light: #818cf8;
+    --fresh: #16a34a;
+    --fresh-bg: #dcfce7;
+    --twist: #ca8a04;
+    --twist-bg: #fef9c3;
+    --crowded: #dc2626;
+    --crowded-bg: #fee2e2;
+    --white: #ffffff;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-900: #0f172a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--gray-50); color: var(--gray-900); line-height: 1.6; }
+  .top-bar { height: 4px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+  .header { background: var(--white); border-bottom: 1px solid var(--gray-200); padding: 32px 40px 24px; }
+  .header h1 { font-size: 26px; font-weight: 700; color: var(--slate); margin-bottom: 4px; }
+  .header .subtitle { font-size: 14px; color: var(--gray-600); }
+  .header .meta { margin-top: 12px; font-size: 13px; color: var(--gray-600); display: flex; gap: 20px; flex-wrap: wrap; }
+  .header .meta span { background: var(--gray-100); padding: 3px 10px; border-radius: 12px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+  .section { margin-bottom: 40px; }
+  .section-title { font-size: 18px; font-weight: 700; color: var(--slate); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gray-200); display: flex; align-items: center; gap: 8px; }
+  .section-title .num { background: var(--accent); color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  /* Summary block */
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  .summary-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px; }
+  .summary-card .label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-600); margin-bottom: 8px; }
+  .summary-card .value { font-size: 15px; color: var(--gray-900); line-height: 1.5; }
+  .summary-card .objection-badge { background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 10px 12px; font-size: 14px; color: #991b1b; margin-top: 6px; font-style: italic; }
+  /* Top 3 angles */
+  .top-angle-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 12px; padding: 24px; margin-bottom: 20px; position: relative; overflow: hidden; }
+  .top-angle-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .top-angle-card.rank-1::before { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+  .top-angle-card.rank-2::before { background: linear-gradient(90deg, #94a3b8, #cbd5e1); }
+  .top-angle-card.rank-3::before { background: linear-gradient(90deg, #b45309, #d97706); }
+  .angle-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 16px; }
+  .rank-badge { font-size: 28px; font-weight: 800; min-width: 40px; }
+  .rank-1 .rank-badge { color: #f59e0b; }
+  .rank-2 .rank-badge { color: #94a3b8; }
+  .rank-3 .rank-badge { color: #b45309; }
+  .angle-title-group h3 { font-size: 20px; font-weight: 700; color: var(--slate); margin-bottom: 4px; }
+  .angle-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .badge-category { background: #ede9fe; color: #5b21b6; }
+  .badge-format { background: #e0f2fe; color: #0369a1; }
+  .badge-fresh { background: var(--fresh-bg); color: var(--fresh); }
+  .badge-twist { background: var(--twist-bg); color: var(--twist); }
+  .badge-crowded { background: var(--crowded-bg); color: var(--crowded); }
+  .angle-insight { font-size: 14px; color: var(--gray-600); margin-bottom: 12px; }
+  .angle-hook { background: var(--gray-100); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 0 6px 6px 0; font-size: 14px; font-style: italic; color: var(--gray-700); margin-bottom: 12px; }
+  .why-wins { font-size: 14px; color: var(--gray-700); margin-bottom: 16px; padding: 10px 14px; background: #f0fdf4; border-radius: 6px; border: 1px solid #bbf7d0; }
+  .micro-hooks { margin-top: 16px; }
+  .micro-hooks h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-600); margin-bottom: 10px; }
+  .micro-hook-item { display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start; }
+  .micro-type { min-width: 120px; font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--accent); padding-top: 2px; }
+  .micro-copy { font-size: 14px; color: var(--gray-700); font-style: italic; }
+  /* All 20 angles grid */
+  .angles-controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+  .angles-controls input { padding: 7px 14px; border: 1px solid var(--gray-200); border-radius: 6px; font-size: 14px; width: 220px; }
+  .filter-btn { padding: 6px 14px; border: 1px solid var(--gray-200); border-radius: 20px; background: var(--white); font-size: 13px; cursor: pointer; color: var(--gray-700); transition: all 0.15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
+  .angles-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .angle-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 18px; }
+  .angle-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+  .angle-card-name { font-size: 15px; font-weight: 700; color: var(--slate); }
+  .angle-card-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+  .angle-card-insight { font-size: 13px; color: var(--gray-600); margin-bottom: 10px; }
+  .angle-card-hook { font-size: 13px; color: var(--gray-700); font-style: italic; background: var(--gray-100); padding: 8px 12px; border-radius: 6px; }
+  /* Macro angles */
+  .macro-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .macro-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 16px; }
+  .macro-card .macro-season { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-600); margin-bottom: 4px; }
+  .macro-card .macro-name { font-size: 15px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .macro-card .macro-desc { font-size: 13px; color: var(--gray-600); }
+  /* Research notes */
+  .research-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .research-list { list-style: none; }
+  .research-list li { padding: 8px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; color: var(--gray-700); display: flex; gap: 8px; }
+  .research-list li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-top: 7px; flex-shrink: 0; }
+  .competitor-set { background: var(--white); border: 1px solid var(--gray-200); border-radius: 10px; padding: 20px; margin-top: 20px; }
+  .competitor-set h4 { font-size: 14px; font-weight: 700; color: var(--slate); margin-bottom: 12px; }
+  .competitor-item { font-size: 13px; color: var(--gray-700); padding: 6px 0; border-bottom: 1px solid var(--gray-100); display: flex; gap: 10px; }
+  .comp-brand { font-weight: 600; min-width: 160px; }
+  /* Legend */
+  .legend { display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--gray-600); }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  /* Footer */
+  .footer { background: var(--white); border-top: 1px solid var(--gray-200); padding: 24px 40px; text-align: center; color: var(--gray-600); font-size: 13px; margin-top: 40px; }
+  @media (max-width: 768px) {
+    .summary-grid, .macro-grid, .research-two-col { grid-template-columns: 1fr; }
+    .angles-grid { grid-template-columns: 1fr; }
+    .container { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+
+<div class="header">
+  <h1>Hair Growth Serum Roll On &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: The Failed Fixer &mdash; Female, 28-50, battling thinning hair after 3+ failed solutions</div>
+  <div class="meta">
+    <span>Run: 06-15-2026</span>
+    <span>Verdict: PASS (CEO meta-validation)</span>
+    <span>Category: Beauty &amp; Personal Care &gt; Hair Growth &amp; Restoration</span>
+    <span>Price: $44.95</span>
+    <span>Winners DB N = 38</span>
+    <span>trace: mktangle-06-15-r95</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- SECTION 1: SUMMARY -->
+<div class="section">
+  <div class="section-title"><span class="num">1</span> Avatar &amp; Summary</div>
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="label">Avatar</div>
+      <div class="value">
+        <strong>Primary: "The Failed Fixer"</strong> &mdash; Female, 28-50. Has tried biotin, shampoo switches, rosemary oil, maybe minoxidil. Currently losing 100+ strands/day. Sees her scalp in photos. Cleans the drain after every shower. Feels less like herself.<br><br>
+        <strong>Sub-avatars:</strong><br>
+        - Postpartum Mom (25-38): baby 3-9 months old, clumps in the drain<br>
+        - Perimenopausal Professional (45-55): "everything changed at 45"<br>
+        - Stress Thinner (30-48): loss after major life event
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Core Transformation</div>
+      <div class="value">
+        <strong>Before:</strong> Daily shame at the shower drain. Avoiding photos. Wearing ponytails not by choice but to hide. Feeling less feminine, less herself. Watching her part get wider and doing nothing because nothing has worked.<br><br>
+        <strong>After:</strong> New baby hairs at the hairline. Hairdresser notices the density. Pulling hair back without scanning the mirror first. Being asked "what did you do to your hair?" by people who knew her before.
+      </div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Primary Objection</div>
+      <div class="objection-badge">"This won't work for me. I've tried serums before and they all promised the same thing. I probably just wasted $45 again."</div>
+      <div class="value" style="margin-top:10px; font-size:13px; color:var(--gray-600);">
+        Deeper fear: That her hair loss is irreversible and she will look like this forever. The product is the last hope before accepting defeat.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: TOP 3 ANGLES -->
+<div class="section">
+  <div class="section-title"><span class="num">2</span> Top 3 Angles</div>
+
+  <!-- RANK 1 -->
+  <div class="top-angle-card rank-1">
+    <div class="angle-header">
+      <div class="rank-badge">#1</div>
+      <div class="angle-title-group">
+        <h3>The Drain Moment</h3>
+        <div class="angle-meta">
+          <span class="badge badge-category">Pain / Frustration</span>
+          <span class="badge badge-fresh">Fresh 0/38</span>
+          <span class="badge badge-format">UGC Video / Static</span>
+        </div>
+      </div>
+    </div>
+    <div class="angle-insight"><strong>Core insight:</strong> The shower drain is the single most visceral, unavoidable daily trigger for women experiencing hair loss. It makes the loss real, concrete, and impossible to rationalize away. No competitor in the 38-ad Winner set runs this as the primary hook.</div>
+    <div class="angle-hook">"Every morning in the shower, another handful of hair at your feet. You already know it's not normal shedding. You know the difference."</div>
+    <div class="why-wins"><strong>Why it wins:</strong> Zero competitors run the drain as the stopping hook. The image is viscerally recognizable to the exact avatar who needs this product. Emotional charge: 10/10. Requires zero explanation &mdash; every woman who has experienced thinning hair has stood in the shower and felt this. The format (UGC video of the drain covered in hair, then a reveal) is TikTok-native and mirrors what's already going viral organically. Fresh 0/38.</div>
+    <div class="micro-hooks">
+      <h4>Micro Hooks (3 per angle)</h4>
+      <div class="micro-hook-item">
+        <span class="micro-type">Problem-First</span>
+        <span class="micro-copy">"Every morning in the shower, the same thing. Hair. Everywhere. At some point it stops being 'normal shedding' and starts being something you can't ignore."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Result-First</span>
+        <span class="micro-copy">"Six weeks ago I was cleaning hair off the drain after every single shower. This morning I checked, and I actually forgot to &mdash; because there was nothing there."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Curiosity</span>
+        <span class="micro-copy">"The shower drain is actually the most accurate hair loss test your dermatologist isn't using. Here's what yours is telling you."</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 2 -->
+  <div class="top-angle-card rank-2">
+    <div class="angle-header">
+      <div class="rank-badge">#2</div>
+      <div class="angle-title-group">
+        <h3>Biotin Didn't Fail You</h3>
+        <div class="angle-meta">
+          <span class="badge badge-category">Contrarian / Pattern Interrupt</span>
+          <span class="badge badge-fresh">Fresh 0/38</span>
+          <span class="badge badge-format">Static / Short VSL</span>
+        </div>
+      </div>
+    </div>
+    <div class="angle-insight"><strong>Core insight:</strong> Millions of women with hair thinning have taken biotin (often on influencer advice) for months with no result, then felt like failures. Reframing this &mdash; "biotin was designed for a different problem" &mdash; removes the self-blame and positions the roll-on serum as the CORRECT solution category. It also pre-empts the primary objection by acknowledging prior failures without dismissing them.</div>
+    <div class="angle-hook">"Stop taking biotin for hair thinning. Not because it's bad &mdash; because it was never designed to fix what you're actually experiencing."</div>
+    <div class="why-wins"><strong>Why it wins:</strong> No competitor in the 38-ad set calls out biotin specifically. The angle does multiple jobs simultaneously: pattern interrupt (stops the scroll), self-blame removal (builds immediate goodwill), category education (establishes topical follicle treatment as the right solution), and objection pre-emption ("serums don't work" becomes "you were trying the wrong thing"). The framing is generous rather than shaming. Fresh 0/38.</div>
+    <div class="micro-hooks">
+      <h4>Micro Hooks (3 per angle)</h4>
+      <div class="micro-hook-item">
+        <span class="micro-type">Problem-First</span>
+        <span class="micro-copy">"Took biotin for 4 months. Still thinning. That's not a failure of discipline. That's the wrong solution for the actual problem."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Contra</span>
+        <span class="micro-copy">"Stop taking hair vitamins for hair thinning. They support nail growth and general health &mdash; they cannot reach the follicle where your thinning actually starts."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Curiosity</span>
+        <span class="micro-copy">"99% of women with thinning hair are supplementing for the wrong mechanism. Here's what dermatologists actually treat it with topically."</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 3 -->
+  <div class="top-angle-card rank-3">
+    <div class="angle-header">
+      <div class="rank-badge">#3</div>
+      <div class="angle-title-group">
+        <h3>Postpartum Recovery Club</h3>
+        <div class="angle-meta">
+          <span class="badge badge-category">Social Proof / Tribe</span>
+          <span class="badge badge-fresh">Fresh 0/38</span>
+          <span class="badge badge-format">UGC Video / Testimonial</span>
+        </div>
+      </div>
+    </div>
+    <div class="angle-insight"><strong>Core insight:</strong> 90%+ of women experience postpartum hair loss starting at 3 months post-birth. The loss is dramatic, time-limited, and uniquely emotional (you grew a human, you're sleep-deprived, and now your hair is falling out in clumps). Zero competitors in the 38-ad set specifically target postpartum women with social proof content. This is a well-defined, high-intent segment with a real urgency window.</div>
+    <div class="angle-hook">"My daughter is 6 months old. My hair was falling out in clumps every morning. I'm 8 weeks in and I can already see new baby hairs along my hairline."</div>
+    <div class="why-wins"><strong>Why it wins:</strong> Postpartum hair loss is the single largest identifiable trigger group in this category. No competitor specifically addresses it. The social proof format (first-person UGC voice) is the most trusted format for this audience. The urgency is natural and physiological (the postpartum recovery window is real). Naming the specific context ("my daughter is 6 months old") creates instant recognition. Fresh 0/38.</div>
+    <div class="micro-hooks">
+      <h4>Micro Hooks (3 per angle)</h4>
+      <div class="micro-hook-item">
+        <span class="micro-type">Social Proof</span>
+        <span class="micro-copy">"I almost didn't try this because I'd already wasted money on biotin and those hair gummies. Three months postpartum and I was losing in clumps. Eight weeks later my hairdresser asked what I changed."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Problem-First</span>
+        <span class="micro-copy">"Postpartum hair loss is supposed to be temporary. But watching it fall out in the shower every morning doesn't feel temporary. It feels like you're disappearing."</span>
+      </div>
+      <div class="micro-hook-item">
+        <span class="micro-type">Result-First</span>
+        <span class="micro-copy">"Six months postpartum I had a full hairline again. Not from magical supplements. From finally treating the scalp directly, not the hair."</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: ALL 20 ANGLES -->
+<div class="section">
+  <div class="section-title"><span class="num">3</span> All 20 Angles</div>
+  <div class="angles-controls">
+    <input type="text" id="angleSearch" placeholder="Search angles..." oninput="filterAngles()">
+    <button class="filter-btn active" onclick="filterCat('all', this)">All</button>
+    <button class="filter-btn" onclick="filterCat('Pain',this)">Pain</button>
+    <button class="filter-btn" onclick="filterCat('Aspiration',this)">Aspiration</button>
+    <button class="filter-btn" onclick="filterCat('Contrarian',this)">Contrarian</button>
+    <button class="filter-btn" onclick="filterCat('Fear',this)">Fear</button>
+    <button class="filter-btn" onclick="filterCat('Social',this)">Social Proof</button>
+    <button class="filter-btn" onclick="filterUnique('Fresh',this)">Fresh Only</button>
+    <button class="filter-btn" onclick="filterUnique('Twist',this)">Twist Only</button>
+  </div>
+  <div class="angles-grid" id="anglesGrid">
+
+    <!-- Pain / Frustration x4 -->
+    <div class="angle-card" data-cat="Pain" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">1. The Drain Moment <span style="color:var(--accent);font-size:12px;">&#9733; Top 3</span></div>
+        <div class="angle-card-badges"><span class="badge badge-category">Pain</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">The shower drain is the daily, unavoidable, visceral trigger. It makes hair loss real and impossible to rationalize away.</div>
+      <div class="angle-card-hook">"Every morning in the shower, another handful at your feet. You already know it's not normal shedding."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Static</div>
+    </div>
+
+    <div class="angle-card" data-cat="Pain" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">2. Photo Proof Pain</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Pain</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Comparing current photos to 2 years ago and seeing the scalp &mdash; the undeniable, datestamped proof that progression is real.</div>
+      <div class="angle-card-hook">"Your camera roll told you before your mirror did. Scroll back two years. Now look at today."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / UGC</div>
+    </div>
+
+    <div class="angle-card" data-cat="Pain" data-unique="Twist">
+      <div class="angle-card-header">
+        <div class="angle-card-name">3. The Graveyard Under Your Sink</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Pain</span><span class="badge badge-twist">Twist 1/38</span></div>
+      </div>
+      <div class="angle-card-insight">The accumulation of failed solutions &mdash; biotin, castor oil, rosemary, shampoo switches &mdash; as a physical, visible metaphor for exhaustion and readiness for something actually different. (Dr.Groot runs "shampoo can't fix it" &mdash; this extends the frame to the full graveyard of products.)</div>
+      <div class="angle-card-hook">"Count the bottles you bought that didn't work. Now stop buying another version of the same thing."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / Carousel</div>
+    </div>
+
+    <div class="angle-card" data-cat="Pain" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">4. Missed Daily Application</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Pain</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Application friction is the actual reason most serums fail &mdash; not formula efficacy. The roll-on format removes the friction. No competitor frames this as the root cause of serum failure.</div>
+      <div class="angle-card-hook">"Forgot to apply again? Your serum's applicator is the problem, not your hair."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / Short UGC</div>
+    </div>
+
+    <!-- Aspiration / Identity x4 -->
+    <div class="angle-card" data-cat="Aspiration" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">5. Full Participation</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Aspiration</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Hair thinning causes social withdrawal from everyday moments &mdash; ponytails, swimming, going out without thinking about it. Regaining full participation is the real aspiration, not just aesthetics.</div>
+      <div class="angle-card-hook">"Wearing your hair down at dinner without checking the reflection. Pulling it back without counting the strands. The women who don't think about it."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Testimonial</div>
+    </div>
+
+    <div class="angle-card" data-cat="Aspiration" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">6. Hair as Crown</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Aspiration</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Hair is deeply tied to femininity and self-relationship. Regaining it restores a specific felt sense of self, not just appearance. The aspiration is about a lost relationship, not a cosmetic fix.</div>
+      <div class="angle-card-hook">"Your hair used to be your favorite thing about yourself. You deserve to feel that way again."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Testimonial</div>
+    </div>
+
+    <div class="angle-card" data-cat="Aspiration" data-unique="Twist">
+      <div class="angle-card-header">
+        <div class="angle-card-name">7. The New Hair Era</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Aspiration</span><span class="badge badge-twist">Twist 1/38</span></div>
+      </div>
+      <div class="angle-card-insight">K-beauty scalp-first philosophy represents a category upgrade that savvy women want to belong to. Dr.Groot runs K-beauty positioning in lander; this extends the identity aspiration to the US market broadly.</div>
+      <div class="angle-card-hook">"There are two kinds of women with thinning hair: those who cover it up, and those who fix it from the scalp."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Carousel</div>
+    </div>
+
+    <div class="angle-card" data-cat="Aspiration" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">8. The Roll-On Habit</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Aspiration</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">The transformation belongs to women who build the habit. This angle makes consistency the identity &mdash; you become "someone who does her scalp routine" &mdash; and the roll-on is what makes that person possible.</div>
+      <div class="angle-card-hook">"The difference between the women whose hair came back and the ones who are still waiting: 2 minutes every morning. And the right applicator to make those 2 minutes stick."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: VSL / UGC</div>
+    </div>
+
+    <!-- Contrarian / Pattern Interrupt x4 -->
+    <div class="angle-card" data-cat="Contrarian" data-unique="Twist">
+      <div class="angle-card-header">
+        <div class="angle-card-name">9. Scalp First, Hair Second</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Contrarian</span><span class="badge badge-twist">Twist 1/38</span></div>
+      </div>
+      <div class="angle-card-insight">Treating the dead hair shaft is the wrong approach. The follicle in the scalp is where growth happens. Dr.Groot and Hair Solutions both use "treat the root" framing; this extends the belief disruption upstream to where women currently spend their money.</div>
+      <div class="angle-card-hook">"You've been treating the wrong thing. Hair is dead. The life is in the scalp."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / VSL</div>
+    </div>
+
+    <div class="angle-card" data-cat="Contrarian" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">10. Biotin Didn't Fail You <span style="color:var(--accent);font-size:12px;">&#9733; Top 3</span></div>
+        <div class="angle-card-badges"><span class="badge badge-category">Contrarian</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Biotin supports general hair health but cannot reach the follicle where thinning originates. Calling this out removes self-blame and re-educates the category. No competitor in N=38 names biotin specifically as the wrong tool.</div>
+      <div class="angle-card-hook">"Stop taking biotin for hair thinning. Not because it's bad &mdash; because it was never designed to fix what you're actually experiencing."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / Short VSL</div>
+    </div>
+
+    <div class="angle-card" data-cat="Contrarian" data-unique="Crowded">
+      <div class="angle-card-header">
+        <div class="angle-card-name">11. The Dropper Problem</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Contrarian</span><span class="badge badge-crowded">Crowded 2/38</span></div>
+      </div>
+      <div class="angle-card-insight">Dropper serum physics: product hits hair first, coats strands, pools at scalp surface. Roll-on delivers directly to scalp and aids absorption via mechanical stimulation. BodyWise AND Rumi HairBooster+ both run mechanism differentiation variants. Differentiate further with specific mechanism education (dropper physics) to earn the top 3.</div>
+      <div class="angle-card-hook">"Your dropper serum is coating your hair, not your scalp. By the time it touches the follicle, most of it is gone."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / UGC</div>
+    </div>
+
+    <div class="angle-card" data-cat="Contrarian" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">12. The 3-Week Quitters Club</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Contrarian</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Women quit serums at exactly the wrong moment because they don't understand the hair growth cycle. Week 3-4 is the transition phase &mdash; baby hairs start appearing at week 4-6 for those who persist. No competitor uses this timing psychology angle.</div>
+      <div class="angle-card-hook">"Week 3 is when most women quit. Week 4 is when the new hair starts. You were one week away."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / Carousel education</div>
+    </div>
+
+    <!-- Fear / Urgency x4 -->
+    <div class="angle-card" data-cat="Fear" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">13. The Window Is Closing</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Fear</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Hair follicles don't stay dormant indefinitely. Prolonged inactivity leads to permanent miniaturization. The urgency is physiologically real. No competitor in N=38 runs the follicle dormancy window as a fear angle.</div>
+      <div class="angle-card-hook">"Every month you wait, some follicles become harder to reactivate. There is a window. It doesn't stay open forever."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / VSL</div>
+    </div>
+
+    <div class="angle-card" data-cat="Fear" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">14. Salon Chair Reality</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Fear</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">The hairdresser who notices first validates what the woman has been trying to deny. Third-party detection is deeply uncomfortable and motivating. No competitor uses this specific social fear moment.</div>
+      <div class="angle-card-hook">"Your hairdresser can see it. You've been hoping it was just bad lighting at home."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC / VSL</div>
+    </div>
+
+    <div class="angle-card" data-cat="Fear" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">15. Progress Photos vs. Regret Photos</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Fear</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Future-self framing with a specific action: the real urgency is that every day of inaction becomes a day of documented loss. 90 days from now you'll either have before/after proof or another regret photo.</div>
+      <div class="angle-card-hook">"Take a photo right now. In 90 days, you'll be glad you did &mdash; or you'll wish you'd started today."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC / VSL</div>
+    </div>
+
+    <div class="angle-card" data-cat="Fear" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">16. Hormonal Clock</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Fear</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">The postpartum hormonal recovery window is 3-12 months. Temporary postpartum loss becomes harder to reverse after this window closes. No competitor in N=38 targets postpartum with urgency framing.</div>
+      <div class="angle-card-hook">"Postpartum hair loss is temporary &mdash; but only if you treat it within the recovery window. You're in it right now."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Testimonial</div>
+    </div>
+
+    <!-- Social Proof / Tribe x4 -->
+    <div class="angle-card" data-cat="Social" data-unique="Twist">
+      <div class="angle-card-header">
+        <div class="angle-card-name">17. 2,373 Reviews Later</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Social Proof</span><span class="badge badge-twist">Twist 1/38</span></div>
+      </div>
+      <div class="angle-card-insight">Large authentic review counts signal peer validation in a skeptical category. Women with failed product histories trust other women's direct experience over brand claims. Peterson/Nutraridge runs "you're not alone" &mdash; this pairs the social proof with a specific, believable number.</div>
+      <div class="angle-card-hook">"2,373 women left a review. Not because they were asked. Because something finally worked."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / Carousel testimonial</div>
+    </div>
+
+    <div class="angle-card" data-cat="Social" data-unique="Twist">
+      <div class="angle-card-header">
+        <div class="angle-card-name">18. The Derm Appointment I Cancelled</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Social Proof</span><span class="badge badge-twist">Twist 1/38</span></div>
+      </div>
+      <div class="angle-card-insight">Hair thinning often reaches a threshold where women start considering dermatologist visits or medical intervention. Avoiding the doctor is a tangible outcome. RealGro uses the "Turkey transplant" extreme version; this is a more relatable, accessible variant.</div>
+      <div class="angle-card-hook">"I was three days away from booking a dermatology appointment. Then I started using this, and two months later I had to cancel because there was nothing left to treat."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Testimonial</div>
+    </div>
+
+    <div class="angle-card" data-cat="Social" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">19. Postpartum Recovery Club <span style="color:var(--accent);font-size:12px;">&#9733; Top 3</span></div>
+        <div class="angle-card-badges"><span class="badge badge-category">Social Proof</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">90%+ of postpartum women experience significant hair loss. The peer-to-peer voice from someone who survived it in the exact same stage is the most powerful buying trigger. No competitor in N=38 targets postpartum with UGC social proof content.</div>
+      <div class="angle-card-hook">"My daughter is 6 months old. My hair was falling out in clumps every morning. Eight weeks in, I can already see new baby hairs along my hairline."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: UGC Video / Testimonial</div>
+    </div>
+
+    <div class="angle-card" data-cat="Social" data-unique="Fresh">
+      <div class="angle-card-header">
+        <div class="angle-card-name">20. What Your Friends Are Using</div>
+        <div class="angle-card-badges"><span class="badge badge-category">Social Proof</span><span class="badge badge-fresh">Fresh 0/38</span></div>
+      </div>
+      <div class="angle-card-insight">Word-of-mouth in friend groups and workplaces is how beauty products spread in the 30-50 female demographic. The visual hair transformation is undeniable to others. No competitor in N=38 runs peer-to-peer referral as the primary frame.</div>
+      <div class="angle-card-hook">"Three women at her office asked what she was doing to her hair. She told them. Now all four of them use it."</div>
+      <div style="font-size:12px;color:var(--gray-600);margin-top:8px;">Format: Static / UGC testimonial</div>
+    </div>
+
+  </div><!-- end angles-grid -->
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--fresh)"></div><strong>Fresh 0/N</strong> &mdash; No competitor in the N=38 Winners DB winner set runs this angle. Highest differentiation.</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--twist)"></div><strong>Twist X/N</strong> &mdash; Competitors hit the same pain or benefit but frame it differently. Add a fresh differentiator.</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--crowded)"></div><strong>Crowded X/N</strong> &mdash; One or more competitors already run essentially this angle. Differentiate further or drop.</div>
+  </div>
+</div>
+
+<!-- SECTION 4: MACRO-ANGLES -->
+<div class="section">
+  <div class="section-title"><span class="num">4</span> Macro-Angles (Product / Offer)</div>
+  <div class="macro-grid">
+
+    <div class="macro-card">
+      <div class="macro-season">Spring / Right Now</div>
+      <div class="macro-name">Mother's Day &mdash; Gift Her Hair Back</div>
+      <div class="macro-desc">Activate 2 weeks before Mother's Day (early May). "Give the gift that actually solves something." The gift frame makes a $44 serum a considered, meaningful purchase, not an impulse. Strong for the postpartum sub-avatar ("give this to the new mom in your life").</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Summer / Urgent Now</div>
+      <div class="macro-name">Summer Scalp Prep</div>
+      <div class="macro-desc">"Pool water, sun exposure, and salt dry out and damage hair follicles. Start the roll-on protocol before summer to protect and rebuild." Seasonal relevance + preemptive urgency. Works as a reason to start now before damage compounds.</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Winter</div>
+      <div class="macro-name">New Year Hair Resolution</div>
+      <div class="macro-desc">January = the biggest month for personal change and self-improvement purchasing. "New year, new scalp routine." Frame the 90-day protocol as a January start with visible results by spring. Highest intent period for "finally doing something about this."</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Winter</div>
+      <div class="macro-name">BFCM &mdash; Bundle the 90-Day Supply</div>
+      <div class="macro-desc">Black Friday / Cyber Monday = the one time to buy 3 bottles at once and actually complete the full protocol. "The only hair product that takes 90 days to work. Stock up while it's 30% off so you don't quit at week 6." Frames the bundle as protocol completion, not just deal-seeking.</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Fall</div>
+      <div class="macro-name">Back-to-School Confidence Reset</div>
+      <div class="macro-desc">September = return to structured routines. "Start your fall routine with a scalp protocol that actually fits into your morning." Targets the stress-thinner and the mom returning to work or kids returning to school, with a routine-building angle.</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Evergreen</div>
+      <div class="macro-name">10,000 Women Treated Milestone</div>
+      <div class="macro-desc">"10,000 women have already completed the 90-day protocol. Here's what they saw." Social proof at scale, timelessly usable. Grows as a proof asset over time. Combine with user-submitted before/after content for ongoing creative fuel.</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Evergreen</div>
+      <div class="macro-name">Postpartum Recovery Protocol</div>
+      <div class="macro-desc">The postpartum cohort is always entering the window (3-12 months post-birth). A dedicated "Postpartum Hair Recovery Protocol" landing page + bundle (90-day supply, a tracker, a community link) turns a product into a defined program. Evergreen demand, no seasonal dependency.</div>
+    </div>
+
+    <div class="macro-card">
+      <div class="macro-season">Launch / Restock</div>
+      <div class="macro-name">As Seen on TikTok Launch</div>
+      <div class="macro-desc">The roll-on application (ball rolling on scalp, satisfying, demonstrable) is inherently TikTok-native. A launch can ride organic creator content. "The serum that's going viral for a reason &mdash; and now finally available." Viral social proof as the launch hook rather than brand claims.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 5: RESEARCH NOTES -->
+<div class="section">
+  <div class="section-title"><span class="num">5</span> Research Notes</div>
+  <div class="research-two-col">
+    <div>
+      <h4 style="font-size:14px;font-weight:700;color:var(--slate);margin-bottom:12px;">Top 10 Pain Points (grounded in research)</h4>
+      <ul class="research-list">
+        <li>Hair falling out in the shower daily &mdash; drain cleaning becomes a ritual of dread ("the most emotionally honest test of hair loss")</li>
+        <li>Seeing scalp in current photos vs. 2 years ago &mdash; photo comparison is the undeniable gut-punch moment</li>
+        <li>Spent hundreds on biotin, vitamins, shampoos with no result &mdash; "tried everything" exhaustion and self-blame</li>
+        <li>"I don't feel feminine anymore" / "I don't recognize myself" &mdash; identity loss, not just cosmetic frustration</li>
+        <li>Serums are greasy or leave residue &mdash; dropper format fails compliance; women quit rather than deal with greasy hair</li>
+        <li>Applied it for 3 weeks, saw nothing, gave up &mdash; quit right before the growth phase starts (week 4-6 baby hairs)</li>
+        <li>Postpartum clumps in the shower &mdash; "I know it's normal but nothing prepared me for the clumps, I was already exhausted"</li>
+        <li>Hairdresser noticed and said something &mdash; third-party validation of what the woman had been denying</li>
+        <li>Baby hairs appear but don't thicken into real hair, so women stop using it at the wrong moment</li>
+        <li>Terrified it won't come back &mdash; fear of permanent follicle dormancy is the deepest emotional driver</li>
+      </ul>
+    </div>
+    <div>
+      <h4 style="font-size:14px;font-weight:700;color:var(--slate);margin-bottom:12px;">Top Benefits (from product + competitor research)</h4>
+      <ul class="research-list">
+        <li>Roll-on ball delivers formula directly to follicle &mdash; not down the hair shaft; rolling motion opens absorption pathways via micro-stimulation</li>
+        <li>Ingredient stack: Redensyl (proven efficacy), Aminexil (anti-fibrosis around follicle), Rosemary (blood circulation), Procapil + Anagain + Saw Palmetto (multi-pathway)</li>
+        <li>Mess-free, non-greasy, fast-absorbing &mdash; removes the daily application friction that kills serum compliance</li>
+        <li>Dual use: scalp (primary) + brows/edges/hairline (precision applicator enables targeting)</li>
+        <li>Consumable / resuppliable &mdash; 20-50ml rolls on finish in 4-6 weeks, natural reorder cadence with results-driven retention</li>
+        <li>K-beauty / Korean scalp-first philosophy &mdash; global trend credibility without requiring brand origination from Korea</li>
+        <li>Clean formula &mdash; paraben-free, sulfate-free, cruelty-free; appeals to health-conscious beauty buyer</li>
+        <li>Visible results: reduced shedding week 1-2, baby hairs week 4-6, visible density week 8-12</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Competitor angles -->
+  <div class="competitor-set">
+    <h4>Competitor Angles (Winners DB, N=38 &mdash; meaningful US/English DTC ads classified)</h4>
+    <div class="competitor-item"><div class="comp-brand">RealGro</div><div>Fear / extreme alternative &mdash; "I almost flew to Turkey for a hair transplant. Then I found this."</div></div>
+    <div class="competitor-item"><div class="comp-brand">Reverse HairCo</div><div>Social proof / Reddit confession &mdash; "I'm 40 and embarrassed about my severe hair loss" (Reddit 2:47am format)</div></div>
+    <div class="competitor-item"><div class="comp-brand">Ethan Miller (Reverse HairCo)</div><div>Anti-pharma / replacement &mdash; "The serum that replaces minoxidil | 65% OFF Today"</div></div>
+    <div class="competitor-item"><div class="comp-brand">Hair Solutions / Dr.Groot</div><div>Contrarian &mdash; "Shampoo sits on the surface. Thinning starts at the root. Treat it there."</div></div>
+    <div class="competitor-item"><div class="comp-brand">BodyWise</div><div>Mechanism &mdash; "No more wasted serums that never reach the root. The roller opens micro-channels."</div></div>
+    <div class="competitor-item"><div class="comp-brand">Rumi HairBooster+ (x2)</div><div>Mechanism &mdash; "Traditional serums waste product and miss follicles. Precision jade applicator."</div></div>
+    <div class="competitor-item"><div class="comp-brand">Be Bodywise (x3)</div><div>Ingredient stack &mdash; "3% Rosemary, 3% Redensyl, 2% Aminexil, 2% Anagain. See results in 3 months."</div></div>
+    <div class="competitor-item"><div class="comp-brand">Aparthy / Melissa Currell</div><div>Results timeline &mdash; "From patchy hairline to baby hairs in 3 weeks."</div></div>
+    <div class="competitor-item"><div class="comp-brand">Peterson Reviews / Nutraridge</div><div>Social proof / tribe &mdash; "Hair thinning? You're not alone. Get our hair back or your money back."</div></div>
+    <div class="competitor-item"><div class="comp-brand">TikTok: Seapuri (@yourcurlyhaircoach)</div><div>Brand/organic &mdash; "#seapuri #seapurihairgrowthserum #hairgrowth #curlyhair" 497K views</div></div>
+    <div class="competitor-item"><div class="comp-brand">TikTok: @irinapolini6</div><div>Personal organic &mdash; "i put the name on the bio #hairgrowth #hairtransformation" 354K views</div></div>
+    <p style="font-size:13px;color:var(--gray-600);margin-top:10px;">Remaining 28 rows of N=38: non-English regional pharmacy/multi-brand stores (Arabic, Bangla, Spanish Latin America) and off-topic ads (teeth whitening, perfume, beard serum). Not classified as US DTC competitor angles.</p>
+  </div>
+</div>
+
+
+</div><!-- end container -->
+
+<div class="footer">
+  Hair Growth Serum Roll On &mdash; Marketing Angles Report &mdash; 06-15-2026 &mdash; trace: mktangle-06-15-r95 &mdash; N=38 (Winners DB, "Hair Growth Serum Roll On") &mdash; 14 Fresh / 5 Twist / 1 Crowded
+</div>
+
+<script>
+function filterAngles() {
+  var q = document.getElementById('angleSearch').value.toLowerCase();
+  var cards = document.querySelectorAll('#anglesGrid .angle-card');
+  cards.forEach(function(c) {
+    c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+var activeCat = 'all', activeUnique = null;
+function filterCat(cat, btn) {
+  activeCat = cat; activeUnique = null;
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  applyFilter();
+}
+function filterUnique(u, btn) {
+  activeUnique = u; activeCat = 'all';
+  document.querySelectorAll('.filter-btn').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  applyFilter();
+}
+function applyFilter() {
+  var cards = document.querySelectorAll('#anglesGrid .angle-card');
+  cards.forEach(function(c) {
+    var catOk = activeCat === 'all' || c.dataset.cat === activeCat;
+    var uOk = !activeUnique || c.dataset.unique === activeUnique;
+    c.style.display = catOk && uOk ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Angles: Portable Sous Vide Precision Cooker (WIFI) | 06-16-2026</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f4f5f7; color: #1a1a2e; }
+
+  /* Top accent bar */
+  .accent-bar { height: 4px; background: linear-gradient(90deg, #2d3748, #4a5568); }
+
+  /* Header */
+  .header { background: #fff; padding: 32px 40px 24px; border-bottom: 1px solid #e2e8f0; }
+  .header h1 { font-size: 22px; font-weight: 700; color: #1a202c; margin-bottom: 4px; }
+  .header .subtitle { font-size: 14px; color: #718096; margin-bottom: 8px; }
+  .header .meta { font-size: 12px; color: #a0aec0; }
+  .header .meta span { margin-right: 16px; }
+
+  /* Summary stats */
+  .stats-bar { background: #fff; border-bottom: 1px solid #e2e8f0; padding: 20px 40px; display: flex; gap: 40px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; }
+  .stat-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #718096; margin-bottom: 4px; }
+  .stat-value { font-size: 18px; font-weight: 700; color: #1a202c; }
+  .stat-sub { font-size: 11px; color: #a0aec0; margin-top: 2px; }
+
+  /* Main layout */
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+  h2 { font-size: 16px; font-weight: 700; color: #2d3748; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em; }
+  h3 { font-size: 14px; font-weight: 600; color: #4a5568; margin-bottom: 8px; }
+  .section { margin-bottom: 40px; }
+
+  /* Avatar block */
+  .avatar-block { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px 24px; margin-bottom: 24px; }
+  .avatar-block .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #718096; margin-bottom: 6px; }
+  .avatar-block .value { font-size: 14px; color: #2d3748; line-height: 1.6; }
+  .avatar-block .transform { margin-top: 10px; font-size: 13px; color: #2d3748; }
+  .arrow { color: #4299e1; font-weight: 700; margin: 0 8px; }
+  .objection-tag { display: inline-block; background: #fff3cd; color: #856404; border: 1px solid #ffc107; border-radius: 4px; padding: 4px 10px; font-size: 12px; font-weight: 600; margin-top: 10px; }
+
+  /* Top 3 angle cards */
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+  .angle-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+  .angle-card-top { height: 4px; }
+  .rank-1 .angle-card-top { background: linear-gradient(90deg, #f6ad55, #ed8936); }
+  .rank-2 .angle-card-top { background: linear-gradient(90deg, #a0aec0, #718096); }
+  .rank-3 .angle-card-top { background: linear-gradient(90deg, #9ae6b4, #48bb78); }
+  .angle-card-body { padding: 20px; }
+  .angle-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; }
+  .rank-badge { font-size: 11px; font-weight: 700; background: #edf2f7; color: #4a5568; border-radius: 4px; padding: 2px 8px; white-space: nowrap; margin-right: 8px; }
+  .angle-name { font-size: 15px; font-weight: 700; color: #1a202c; flex: 1; }
+  .cat-badge { font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 12px; white-space: nowrap; }
+  .cat-pain { background: #fed7d7; color: #c53030; }
+  .cat-aspiration { background: #bee3f8; color: #2b6cb0; }
+  .cat-contrarian { background: #e9d8fd; color: #6b46c1; }
+  .cat-fear { background: #feebc8; color: #c05621; }
+  .cat-social { background: #c6f6d5; color: #276749; }
+  .freshness-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 12px; margin-bottom: 10px; }
+  .fresh { background: #c6f6d5; color: #22543d; }
+  .twist { background: #bee3f8; color: #1a365d; }
+  .crowded { background: #fed7d7; color: #742a2a; }
+  .insight { font-size: 13px; color: #4a5568; line-height: 1.5; margin-bottom: 10px; }
+  .hook-box { background: #f7fafc; border-left: 3px solid #4299e1; padding: 10px 14px; font-size: 13px; color: #2d3748; font-style: italic; line-height: 1.5; margin-bottom: 10px; border-radius: 0 4px 4px 0; }
+  .format-tag { display: inline-block; background: #edf2f7; color: #4a5568; font-size: 11px; padding: 2px 8px; border-radius: 4px; margin-bottom: 12px; }
+  .why-wins { font-size: 12px; color: #718096; line-height: 1.5; margin-bottom: 14px; }
+  .micro-hooks { border-top: 1px solid #e2e8f0; padding-top: 14px; }
+  .micro-hook { margin-bottom: 10px; }
+  .micro-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #a0aec0; margin-bottom: 3px; }
+  .micro-text { font-size: 12px; color: #4a5568; line-height: 1.5; }
+
+  /* All 20 angles table */
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .filter-btn { font-size: 11px; font-weight: 600; padding: 5px 12px; border: 1px solid #e2e8f0; border-radius: 20px; cursor: pointer; background: #fff; color: #4a5568; transition: all 0.15s; }
+  .filter-btn:hover { background: #edf2f7; }
+  .filter-btn.active { background: #2d3748; color: #fff; border-color: #2d3748; }
+  .angle-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .angle-table th { background: #f7fafc; font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: #718096; padding: 10px 14px; text-align: left; border-bottom: 1px solid #e2e8f0; cursor: pointer; white-space: nowrap; }
+  .angle-table th:hover { background: #edf2f7; }
+  .angle-table td { padding: 12px 14px; font-size: 13px; border-bottom: 1px solid #f0f4f8; vertical-align: top; }
+  .angle-table tr:last-child td { border-bottom: none; }
+  .angle-table tr:hover td { background: #f7fafc; }
+  .angle-num { font-weight: 700; color: #a0aec0; font-size: 12px; }
+  .angle-name-td { font-weight: 600; color: #2d3748; }
+  .insight-td { color: #4a5568; line-height: 1.4; max-width: 280px; }
+  .hook-td { color: #4a5568; font-style: italic; line-height: 1.4; max-width: 300px; }
+
+  /* Macro angles */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .macro-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 16px; }
+  .macro-type { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #a0aec0; margin-bottom: 6px; }
+  .macro-title { font-size: 14px; font-weight: 700; color: #2d3748; margin-bottom: 6px; }
+  .macro-desc { font-size: 12px; color: #718096; line-height: 1.5; }
+
+  /* Research notes */
+  .notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+  .notes-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; }
+  .notes-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #a0aec0; margin-bottom: 10px; }
+  .notes-list { list-style: none; }
+  .notes-list li { font-size: 13px; color: #4a5568; line-height: 1.5; padding: 4px 0; border-bottom: 1px solid #f0f4f8; }
+  .notes-list li:last-child { border-bottom: none; }
+  .notes-list li::before { content: "- "; color: #4299e1; font-weight: 700; }
+
+  /* Legend */
+  .legend { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 24px; }
+  .legend-row { display: flex; gap: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #4a5568; }
+
+  /* Competitor angles */
+  .competitor-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 18px; margin-bottom: 10px; }
+  .comp-brand { font-weight: 700; font-size: 13px; color: #2d3748; }
+  .comp-angle { font-size: 12px; color: #718096; margin-top: 4px; }
+  .comp-badge { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+  .comp-w { background: #c6f6d5; color: #22543d; }
+  .comp-wish { background: #bee3f8; color: #1a365d; }
+  .comp-rej { background: #fed7d7; color: #742a2a; }
+
+  /* Footer */
+  .footer { background: #fff; border-top: 1px solid #e2e8f0; padding: 16px 40px; font-size: 11px; color: #a0aec0; }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Marketing Angles: Portable Sous Vide Precision Cooker (WIFI)</h1>
+  <div class="subtitle">Anova Precision Cooker 3.0 (WiFi) - ASIN B0BQ9F56WV - Home Cook who craves consistent, restaurant-quality results from an expensive cut without the guesswork</div>
+  <div class="meta">
+    <span>Generated: 06-16-2026</span>
+    <span>Verdict: PASS</span>
+    <span>Price: $168.96</span>
+    <span>Search Term: sous vide cooker</span>
+    <span>Winner Set: N=2</span>
+    <span>Trace ID: marketing-angles-06-16-2026-r50b</span>
+  </div>
+</div>
+
+<!-- SUMMARY STATS -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-label">Total Angles</div>
+    <div class="stat-value">20</div>
+    <div class="stat-sub">5 categories, 4 each</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Fresh Angles</div>
+    <div class="stat-value">16</div>
+    <div class="stat-sub">0 competitor matches</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Twist Angles</div>
+    <div class="stat-value">4</div>
+    <div class="stat-sub">1 adjacent match</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Crowded Angles</div>
+    <div class="stat-value">0</div>
+    <div class="stat-sub">No direct matches</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Primary Objection</div>
+    <div class="stat-value" style="font-size:13px; max-width:260px;">Too complex - will spend $169 and let it collect dust</div>
+    <div class="stat-sub">Learning curve + money risk</div>
+  </div>
+  <div class="stat">
+    <div class="stat-label">Winner Set</div>
+    <div class="stat-value">2</div>
+    <div class="stat-sub">Typhur (w), OmniKitchen (w-ish)</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- AVATAR + TRANSFORMATION -->
+<div class="section">
+  <h2>Avatar and Core Transformation</h2>
+  <div class="avatar-block">
+    <div class="label">Avatar</div>
+    <div class="value">Home cook, 30-55, male/female (slight male skew for steak content), suburban homeowner. Watches cooking content on YouTube/TikTok. Aspires to restaurant quality but routinely overcooks or undercooks expensive cuts using traditional methods. Views cooking as a hobby and identity signal, not just sustenance. Has tried and failed with precision cooking guides before - the failure was embarrassing and expensive.</div>
+    <div class="transform">
+      <strong>Core Transformation:</strong>
+      <span style="color:#c53030;">Anxious cook who gambles $30+ on a ribeye and hopes for the best</span>
+      <span class="arrow">to</span>
+      <span style="color:#276749;">Confident home chef who pulls perfect medium-rare, edge to edge, every single time</span>
+    </div>
+    <div class="objection-tag">PRIMARY OBJECTION: "I'll spend $169 and it'll be too complicated - I'll ruin my food or it'll collect dust."</div>
+  </div>
+</div>
+
+<!-- TOP 3 ANGLES -->
+<div class="section">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <!-- RANK 1 -->
+    <div class="angle-card rank-1">
+      <div class="angle-card-top"></div>
+      <div class="angle-card-body">
+        <div class="angle-header">
+          <span class="rank-badge">RANK 1</span>
+          <span class="angle-name">The $30 Steak Gamble</span>
+          <span class="cat-badge cat-pain">Pain</span>
+        </div>
+        <span class="freshness-badge fresh">Fresh 0/2</span>
+        <div class="insight">Every home cook who buys premium meat is making an anxious bet they will cook it right - and they lose that bet more than they admit. The steak purchase is the moment of peak anxiety that the product resolves.</div>
+        <div class="hook-box">"I've been paying $30+ for ribeyes and guessing the temperature every single time. I ruined more steaks than I care to admit before I found this."</div>
+        <div class="format-tag">UGC video (before/after steak transformation)</div>
+        <div class="why-wins">Hits the most visceral, recurring pain in the category. Steak is the #1 sous vide use case and the clearest demonstration of value. "Gamble" framing adds emotional tension. No competitor in the N=2 winner set runs this pain angle - both run Aspiration or Social Proof. The UGC before/after steak format is proven viral (#sousvide 200M+ TikTok views). Directly pre-empts the PRIMARY OBJECTION by reframing: the real money wasted is the steaks already ruined, not the device.</div>
+        <div class="micro-hooks">
+          <div class="micro-hook">
+            <div class="micro-label">Problem-first</div>
+            <div class="micro-text">"Tired of spending $30 on a ribeye and praying you don't screw it up? There's a reason restaurant chefs stopped guessing temperatures 20 years ago."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Result-first</div>
+            <div class="micro-text">"I went from ruining half my steaks to pulling perfect medium-rare, edge to edge, every single time - without ever touching a thermometer again."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Curiosity</div>
+            <div class="micro-text">"The reason your home steaks never taste like the restaurant isn't the cut, the pan, or your skill. It's something they don't teach in any cooking video."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RANK 2 -->
+    <div class="angle-card rank-2">
+      <div class="angle-card-top"></div>
+      <div class="angle-card-body">
+        <div class="angle-header">
+          <span class="rank-badge">RANK 2</span>
+          <span class="angle-name">The 4-Step Simplicity Flip</span>
+          <span class="cat-badge cat-contrarian">Contrarian</span>
+        </div>
+        <span class="freshness-badge fresh">Fresh 0/2</span>
+        <div class="insight">The PRIMARY OBJECTION is "too complicated, will collect dust." The pattern interrupt: it is actually simpler than traditional cooking - 4 steps, no guessing, no thermometer anxiety. Attacks the core barrier head-on with a reframe instead of a defense.</div>
+        <div class="hook-box">"Everyone told me sous vide was complicated. I thought so too until I tried it. 4 steps. Zero guessing. One less way to ruin dinner."</div>
+        <div class="format-tag">Short-form demo video (UGC walk-through)</div>
+        <div class="why-wins">Directly dismantles the #1 objection standing between cold audience and purchase. "Everyone told me..." is an identification opener - the audience who hesitated over complexity immediately recognizes themselves. Short-form demo format resolves doubt in real time. No competitor in the winner set challenges the "too complicated" objection - they both lead with premium outcome, not ease. Helen Rennie's "Why I No Longer Cook Sous-Vide" (393K views) shows the complexity objection is actively present in the category.</div>
+        <div class="micro-hooks">
+          <div class="micro-hook">
+            <div class="micro-label">Contra</div>
+            <div class="micro-text">"Stop buying cooking thermometers, timing hacks, and sear-first guides. They're all workarounds for a broken process. Here's what actually works."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Curiosity</div>
+            <div class="micro-text">"Everyone said sous vide was complicated. After 3 minutes of setup and 90 minutes of walking away, I had the best steak I've ever cooked at home. What am I missing?"</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Problem-first</div>
+            <div class="micro-text">"I almost didn't try this because I thought it would be too technical. 4 steps. No guessing. And I haven't overcooked meat since."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RANK 3 -->
+    <div class="angle-card rank-3">
+      <div class="angle-card-top"></div>
+      <div class="angle-card-body">
+        <div class="angle-header">
+          <span class="rank-badge">RANK 3</span>
+          <span class="angle-name">Dinner Party Freedom</span>
+          <span class="cat-badge cat-aspiration">Aspiration</span>
+        </div>
+        <span class="freshness-badge fresh">Fresh 0/2</span>
+        <div class="insight">Hosting anxiety - the stress of timing everything perfectly while guests wait - is one of the most emotionally charged moments in the home cook's life. Sous vide lets you cook proteins 4-8 hours in advance and simply finish. The freedom from real-time kitchen stress is the identity transformation.</div>
+        <div class="hook-box">"I served 8 perfect steaks at my last dinner party without once checking the kitchen during cocktail hour. Here's how."</div>
+        <div class="format-tag">Lifestyle video / UGC (hosting transformation)</div>
+        <div class="why-wins">Hits a high-identity, high-emotion use case (hosting) with a unique time-freedom angle competitors don't occupy. Neither Typhur nor OmniKitchen targets the hosting moment - Typhur is chef technique, OmniKitchen is regional authority. "Set at noon, walk away, pull perfection out at 7" is concrete, vivid, and differentiated from generic "restaurant quality" aspirational claims. Strong sharing impulse: people share hosting wins.</div>
+        <div class="micro-hooks">
+          <div class="micro-hook">
+            <div class="micro-label">Result-first</div>
+            <div class="micro-text">"I served 8 perfect steaks at my last dinner party without once checking the kitchen during cocktail hour. Here's how."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Social proof</div>
+            <div class="micro-text">"I almost didn't host Thanksgiving this year. Too much pressure on timing everything perfectly. Then I discovered I could cook the main proteins 4 hours in advance, flawlessly."</div>
+          </div>
+          <div class="micro-hook">
+            <div class="micro-label">Problem-first</div>
+            <div class="micro-text">"Hosting is supposed to be fun. Not a 3-hour stress sprint in the kitchen while your guests drink without you. There's a better way."</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ALL 20 ANGLES TABLE -->
+<div class="section">
+  <h2>All 20 Angles</h2>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterAngles('all', this)">All (20)</button>
+    <button class="filter-btn" onclick="filterAngles('Pain', this)">Pain / Frustration (4)</button>
+    <button class="filter-btn" onclick="filterAngles('Aspiration', this)">Aspiration / Identity (4)</button>
+    <button class="filter-btn" onclick="filterAngles('Contrarian', this)">Contrarian (4)</button>
+    <button class="filter-btn" onclick="filterAngles('Fear', this)">Fear / Urgency (4)</button>
+    <button class="filter-btn" onclick="filterAngles('Social', this)">Social Proof (4)</button>
+    <button class="filter-btn" onclick="filterAngles('fresh', this)">Fresh (16)</button>
+    <button class="filter-btn" onclick="filterAngles('twist', this)">Twist (4)</button>
+  </div>
+
+  <table class="angle-table" id="anglesTable">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Angle Name</th>
+        <th>Category</th>
+        <th>Uniqueness</th>
+        <th>Core Insight</th>
+        <th>Sample Hook</th>
+        <th>Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- PAIN / FRUSTRATION -->
+      <tr data-cat="Pain" data-uni="fresh">
+        <td class="angle-num">PF1</td>
+        <td class="angle-name-td">The $30 Steak Gamble</td>
+        <td><span class="cat-badge cat-pain">Pain</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Every home cook who buys premium meat is making an anxious bet they will cook it right - and they lose more than they admit.</td>
+        <td class="hook-td">"I've been paying $30+ for ribeyes and guessing the temperature every single time..."</td>
+        <td>UGC video</td>
+      </tr>
+      <tr data-cat="Pain" data-uni="fresh">
+        <td class="angle-num">PF2</td>
+        <td class="angle-name-td">Hours Wasted, Dinner Ruined</td>
+        <td><span class="cat-badge cat-pain">Pain</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">The time investment of sous vide amplifies disappointment - 3 hours waited only to get a mediocre result is a distinct, layered frustration.</td>
+        <td class="hook-td">"3 hours. That's how long I waited for dinner that turned out mediocre. Until I understood what precise temperature control actually means."</td>
+        <td>VSL / testimonial</td>
+      </tr>
+      <tr data-cat="Pain" data-uni="fresh">
+        <td class="angle-num">PF3</td>
+        <td class="angle-name-td">The Technique Blame Loop</td>
+        <td><span class="cat-badge cat-pain">Pain</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">When home cooks fail at steaks, they blame themselves. Sous vide removes the skill variable entirely - it's a process fix, not a talent fix.</td>
+        <td class="hook-td">"Every culinary fail I had for years was me blaming my technique. Turns out I didn't need better technique. I needed a better process."</td>
+        <td>UGC video / static</td>
+      </tr>
+      <tr data-cat="Pain" data-uni="fresh">
+        <td class="angle-num">PF4</td>
+        <td class="angle-name-td">Expensive Cuts, Cheap Results</td>
+        <td><span class="cat-badge cat-pain">Pain</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">The gap between paying premium grocery prices for wagyu and getting steakhouse quality at home feels impossible without the right tool.</td>
+        <td class="hook-td">"Paying steakhouse prices at the grocery store only to cook it like a diner. The problem isn't the cut. It's the method."</td>
+        <td>Static / carousel</td>
+      </tr>
+
+      <!-- ASPIRATION / IDENTITY -->
+      <tr data-cat="Aspiration" data-uni="twist">
+        <td class="angle-num">AI1</td>
+        <td class="angle-name-td">The Home Chef Identity</td>
+        <td><span class="cat-badge cat-aspiration">Aspiration</span></td>
+        <td><span class="freshness-badge twist" style="font-size:10px;padding:2px 8px;">Twist 1/2</span></td>
+        <td class="insight-td">Sous vide cooking signals "serious home cook" - a hobby identity upgrade. The moment friends stop asking where you ordered from is the transformation signal.</td>
+        <td class="hook-td">"The moment I served a perfect medium-rare edge to edge, my friends stopped asking where I ordered from."</td>
+        <td>Lifestyle video / UGC</td>
+      </tr>
+      <tr data-cat="Aspiration" data-uni="twist">
+        <td class="angle-num">AI2</td>
+        <td class="angle-name-td">Restaurant Logic at Home</td>
+        <td><span class="cat-badge cat-aspiration">Aspiration</span></td>
+        <td><span class="freshness-badge twist" style="font-size:10px;padding:2px 8px;">Twist 1/2</span></td>
+        <td class="insight-td">Professional kitchens have used sous vide for decades. The aspirational frame: the same method 3-Michelin-star chefs use is now $165.</td>
+        <td class="hook-td">"The method 3-Michelin-star chefs use to cook perfect steak, every single time. Now $165."</td>
+        <td>Static / carousel</td>
+      </tr>
+      <tr data-cat="Aspiration" data-uni="fresh">
+        <td class="angle-num">AI3</td>
+        <td class="angle-name-td">The Meal Prep Evolution</td>
+        <td><span class="cat-badge cat-aspiration">Aspiration</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Meal preppers who use sous vide get repeatable, restaurant-quality proteins that stay tender after reheating - a genuine weekly routine upgrade no competitor targets.</td>
+        <td class="hook-td">"I used to meal prep dry, flavorless chicken breast every Sunday. Now I batch-cook perfect chicken in 2 hours and it's still tender on Friday."</td>
+        <td>UGC / carousel</td>
+      </tr>
+      <tr data-cat="Aspiration" data-uni="fresh">
+        <td class="angle-num">AI4</td>
+        <td class="angle-name-td">Dinner Party Freedom</td>
+        <td><span class="cat-badge cat-aspiration">Aspiration</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Hosting anxiety - stress-cooking while guests wait - is highly emotionally charged. Sous vide lets you cook proteins 4-8 hours ahead. The freedom from real-time kitchen stress is the identity win.</td>
+        <td class="hook-td">"I served 8 perfect steaks at my last dinner party without once checking the kitchen during cocktail hour."</td>
+        <td>Lifestyle video / UGC</td>
+      </tr>
+
+      <!-- CONTRARIAN / PATTERN INTERRUPT -->
+      <tr data-cat="Contrarian" data-uni="fresh">
+        <td class="angle-num">CP1</td>
+        <td class="angle-name-td">Stop Searing First</td>
+        <td><span class="cat-badge cat-contrarian">Contrarian</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Every cooking class teaches "sear first" - but sous vide uses reverse-sear, and the result is categorically different. Flipping the sequence is the discovery.</td>
+        <td class="hook-td">"Every cooking class taught you sear first. They were wrong. Here's what happens to a steak when you flip that sequence."</td>
+        <td>Educational video / UGC</td>
+      </tr>
+      <tr data-cat="Contrarian" data-uni="fresh">
+        <td class="angle-num">CP2</td>
+        <td class="angle-name-td">The 4-Step Simplicity Flip</td>
+        <td><span class="cat-badge cat-contrarian">Contrarian</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">The #1 objection is "too complicated." The pattern interrupt: it is actually simpler than traditional cooking - 4 steps, no guessing, no thermometer anxiety.</td>
+        <td class="hook-td">"Everyone told me sous vide was complicated. I thought so too until I tried it. 4 steps. Zero guessing. One less way to ruin dinner."</td>
+        <td>Short-form demo video</td>
+      </tr>
+      <tr data-cat="Contrarian" data-uni="fresh">
+        <td class="angle-num">CP3</td>
+        <td class="angle-name-td">Why Are You Still Guessing?</td>
+        <td><span class="cat-badge cat-contrarian">Contrarian</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">We use precise tools in every other part of modern life. Cooking expensive food by feel is the last irrational holdout. The absurdity is the pattern interrupt.</td>
+        <td class="hook-td">"You use a digital thermometer for your house. A tire pressure gauge for your car. You eyeball your $30 steak. We'll wait."</td>
+        <td>Static image (copy-forward)</td>
+      </tr>
+      <tr data-cat="Contrarian" data-uni="fresh">
+        <td class="angle-num">CP4</td>
+        <td class="angle-name-td">The Cooking Skill Myth</td>
+        <td><span class="cat-badge cat-contrarian">Contrarian</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Cooking talent is largely a myth - good outcomes come from good processes. The "bad cook" identity is a process problem, not a talent problem.</td>
+        <td class="hook-td">"I always thought I was just bad at cooking. Turns out I was just using the wrong method."</td>
+        <td>UGC video / testimonial</td>
+      </tr>
+
+      <!-- FEAR / URGENCY -->
+      <tr data-cat="Fear" data-uni="fresh">
+        <td class="angle-num">FU1</td>
+        <td class="angle-name-td">The Ruined Steak Math</td>
+        <td><span class="cat-badge cat-fear">Fear</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Fear of ruining expensive meat is the #1 emotional driver. Reframe: one $30 steak ruined costs more per use than this device costs per month.</td>
+        <td class="hook-td">"One $30 steak gone wrong costs you more than what this costs per month. How many more do you need to ruin?"</td>
+        <td>Static / VSL</td>
+      </tr>
+      <tr data-cat="Fear" data-uni="fresh">
+        <td class="angle-num">FU2</td>
+        <td class="angle-name-td">The Sunday Meal Prep Trap</td>
+        <td><span class="cat-badge cat-fear">Fear</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Batch-cooking dry, flavorless chicken for the week is a real failure cycle that affects eating habits and motivation all week. The fear: another Sunday wasted on bad food.</td>
+        <td class="hook-td">"If you batch-cook dry chicken every Sunday and abandon your meal prep by Wednesday, the problem isn't willpower."</td>
+        <td>UGC / static</td>
+      </tr>
+      <tr data-cat="Fear" data-uni="fresh">
+        <td class="angle-num">FU3</td>
+        <td class="angle-name-td">The Bad Cook Trap</td>
+        <td><span class="cat-badge cat-fear">Fear</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">The fear of being permanently labeled a "bad cook" - and confirming that identity with another failed meal - is a deep emotional driver for the aspiring home chef.</td>
+        <td class="hook-td">"The one thing every bad cook has in common: they're using a process that makes failure inevitable."</td>
+        <td>VSL / educational video</td>
+      </tr>
+      <tr data-cat="Fear" data-uni="fresh">
+        <td class="angle-num">FU4</td>
+        <td class="angle-name-td">Summer Hosting Stakes</td>
+        <td><span class="cat-badge cat-fear">Fear</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Seasonal urgency: summer cookouts and dinner parties are when cooking failure is most visible and embarrassing. The stakes are the audience.</td>
+        <td class="hook-td">"Summer hosting season is here. Will you guess your way through the grill again, or do you want to actually know it'll be perfect?"</td>
+        <td>Static / carousel (seasonal)</td>
+      </tr>
+
+      <!-- SOCIAL PROOF / TRIBE -->
+      <tr data-cat="Social" data-uni="twist">
+        <td class="angle-num">SP1</td>
+        <td class="angle-name-td">The Reluctant Convert</td>
+        <td><span class="cat-badge cat-social">Social Proof</span></td>
+        <td><span class="freshness-badge twist" style="font-size:10px;padding:2px 8px;">Twist 1/2</span></td>
+        <td class="insight-td">Social proof from skeptical converts (people who thought it was overcomplicated) is the most persuasive format for the skeptical cold audience who shares that fear.</td>
+        <td class="hook-td">"I thought sous vide was just for restaurant chefs who charged too much. Then I tried it. My dinner parties have never been the same."</td>
+        <td>UGC / testimonial</td>
+      </tr>
+      <tr data-cat="Social" data-uni="twist">
+        <td class="angle-num">SP2</td>
+        <td class="angle-name-td">12 Years, 1 Million Converts</td>
+        <td><span class="cat-badge cat-social">Social Proof</span></td>
+        <td><span class="freshness-badge twist" style="font-size:10px;padding:2px 8px;">Twist 1/2</span></td>
+        <td class="insight-td">Anova's 12-year track record and platform scale (1M+ users, Gen 3 released) counter the "startup risk" objection. This is scale proof, not regional authority.</td>
+        <td class="hook-td">"12 years. One million home cooks converted. The most-reviewed sous vide circulator on Amazon. Still only $165."</td>
+        <td>Static / carousel</td>
+      </tr>
+      <tr data-cat="Social" data-uni="fresh">
+        <td class="angle-num">SP3</td>
+        <td class="angle-name-td">200 Million Views Can't Be Wrong</td>
+        <td><span class="cat-badge cat-social">Social Proof</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">#sousvide has 200M+ TikTok views - this is a mainstream food tribe signal, not a niche hobby. The community is the social proof vehicle.</td>
+        <td class="hook-td">"200 million TikTok views later, the sous vide community isn't a niche anymore. Here's how to join it."</td>
+        <td>Short-form video (TikTok-native)</td>
+      </tr>
+      <tr data-cat="Social" data-uni="fresh">
+        <td class="angle-num">SP4</td>
+        <td class="angle-name-td">Real Person, First Try</td>
+        <td><span class="cat-badge cat-social">Social Proof</span></td>
+        <td><span class="freshness-badge fresh" style="font-size:10px;padding:2px 8px;">Fresh 0/2</span></td>
+        <td class="insight-td">Testimonials from everyday home cooks (not food influencers) who were skeptical and got real results on the first try build trust with the cold, skeptical audience.</td>
+        <td class="hook-td">"I'm not a chef. I don't know knife skills. I ruined my last steak. This is what happened when I tried sous vide for the first time."</td>
+        <td>UGC testimonial video</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- MACRO ANGLES -->
+<div class="section">
+  <h2>Macro-Angles (Offer and Seasonal)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <div class="macro-type">Seasonal - Summer (Active Now)</div>
+      <div class="macro-title">Father's Day and 4th of July</div>
+      <div class="macro-desc">Summer is peak steak-cooking season. Father's Day (June) and 4th of July (July) are natural triggers. Position as the gift that turns a steak enthusiast into a home chef. Activate 2 weeks before each date.</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-type">Seasonal - Fall</div>
+      <div class="macro-title">Holiday Hosting Season</div>
+      <div class="macro-desc">Thanksgiving and holiday dinner parties (Nov-Dec) are peak hosting anxiety moments. The hands-off batch cook benefit is most compelling here. "Cook 10 perfect chicken breasts for Thanksgiving and actually enjoy the party."</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-type">Evergreen</div>
+      <div class="macro-title">Join 1 Million Sous Vide Cooks</div>
+      <div class="macro-desc">Platform milestone social proof event. 1M+ Anova home cooks is a specific, verifiable claim. Run as an always-on evergreen offer: "The cooking revolution that started in 2014 is still converting home cooks every day."</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-type">Evergreen</div>
+      <div class="macro-title">Meal Prep Sunday Campaign</div>
+      <div class="macro-desc">Target meal preppers with a weekly-routine reframe. Batch cook proteins Sunday, eat restaurant quality all week. Target r/MealPrepSunday audience profile. Weekly cadence makes it a habit angle, not just a product pitch.</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-type">Platform / Product Story</div>
+      <div class="macro-title">The 12-Year Kitchen Revolution</div>
+      <div class="macro-desc">Anova launched in 2014 and brought sous vide to the masses. Gen 3 is the culmination of 12 years of refinement. The origin story (started a home-cooking revolution) is a strong brand narrative, especially for skeptics who want proof of staying power.</div>
+    </div>
+    <div class="macro-card">
+      <div class="macro-type">Seasonal - Spring</div>
+      <div class="macro-title">Mother's Day / Spring Gifting</div>
+      <div class="macro-desc">Target the "gift for the home cook in your life" angle. Position as a premium but practical gift ($165 = justified by ruined steaks saved). Works for both food enthusiast gifts and self-purchase after gift-season browsing.</div>
+    </div>
+  </div>
+</div>
+
+<!-- RESEARCH NOTES -->
+<div class="section">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <div class="notes-title">Top Pain Points (from Research)</div>
+      <ul class="notes-list">
+        <li>Ruining expensive cuts by guessing temperatures (emotional + financial pain)</li>
+        <li>Inconsistent results - can't replicate the one perfect steak</li>
+        <li>Floating bags causing uneven cooking (beginner frustration)</li>
+        <li>Bag leaks diluting flavor and ruining texture</li>
+        <li>Time investment amplifies disappointment when results are bad</li>
+        <li>Searing failure after perfect sous vide cook (wet meat, wrong pan temp)</li>
+        <li>Residual cooking confusion - food continues cooking after removal</li>
+        <li>"Is it worth it?" paralysis before buying</li>
+        <li>BPA / plastic safety concerns during high-temp cooking</li>
+        <li>Dry, flavorless batch-cooked proteins for meal prep</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <div class="notes-title">Top Benefits (Product + Research)</div>
+      <ul class="notes-list">
+        <li>Edge-to-edge perfection - same temp from surface to center</li>
+        <li>Virtually impossible to overcook within normal timing windows</li>
+        <li>Restaurant-quality results at home (what 3-Michelin-star kitchens use)</li>
+        <li>Hands-off - set temp and walk away for 1-4 hours</li>
+        <li>WiFi remote monitoring via Anova app (dual-band Gen 3)</li>
+        <li>App-guided recipes (built-in chef expertise, free tier)</li>
+        <li>Works with any existing pot - no new vessel needed</li>
+        <li>Dishwasher-safe removable stainless steel skirt</li>
+        <li>Proven 12-year platform, 1M+ users, massive community</li>
+        <li>#sousvide 200M+ TikTok views - viral category with strong content flywheel</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <div class="notes-title">Competitor Angles (Winners DB, N=2)</div>
+      <div class="competitor-card">
+        <div class="comp-brand">Typhur Sous Vide Station <span class="comp-badge comp-w">w (Score 21)</span></div>
+        <div class="comp-angle">Angle: "Chef-Guided Precision" - All-in-one sous vide station removes technique friction with built-in chef recipes and touchscreen interface [Aspiration]</div>
+      </div>
+      <div class="competitor-card">
+        <div class="comp-brand">OmniKitchen <span class="comp-badge comp-wish">w-ish (Score 11)</span></div>
+        <div class="comp-angle">Angle: "Local #1 Claim" - SA market leader positioning for sous vide with regional authority framing [Social Proof]</div>
+      </div>
+      <div style="margin-top:10px; font-size:11px; color:#a0aec0;">Context rejects (not in winner set, noted as "!" - notable products with adjacent intent): Thermomix TM6 "Premium All-in-One [Aspiration]" (Score 52), Vermicular "Artisan Precision [Aspiration]" (Score 35). Dominant competitor angle theme: Aspiration / Premium. Minimal Pain, zero Contrarian in winner set.</div>
+    </div>
+    <div class="notes-card">
+      <div class="notes-title">Key Research Sources</div>
+      <ul class="notes-list">
+        <li>Amazon listing: Anova 3.0 WiFi - 5 product features extracted; reviews blocked by anti-bot</li>
+        <li>Reddit (r/sousvide, r/Cooking, r/MealPrepSunday): 15 specific pain points via web sources</li>
+        <li>YouTube: 56 videos identified; "Why I No Longer Cook Sous-Vide" (393K views) signals complexity objection is real and active</li>
+        <li>Google PAA: 10 consumer questions revealing confusion and fear</li>
+        <li>Anova lander: "Perfect results, every time" - precision, ease, versatility</li>
+        <li>Typhur lander: "Robotics Built for the Kitchen" - automation positioning</li>
+        <li>Price landscape: $20-$350 range; Anova 3.0 at $165-229 is mid-to-premium</li>
+        <li>Product DB Notes (AK50): steak content is category-best TikTok format; #sousvide 200M+ views; 0 TikTok organic wins for DTC currently (opportunity)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- UNIQUENESS LEGEND -->
+<div class="section">
+  <h2>Uniqueness Scoring Legend</h2>
+  <div class="legend">
+    <div class="legend-row">
+      <div class="legend-item">
+        <span class="freshness-badge fresh" style="margin:0;">Fresh 0/N</span>
+        <span>No competitor ad in the Winners DB uses this angle. Strongest differentiation - run these first.</span>
+      </div>
+      <div class="legend-item">
+        <span class="freshness-badge twist" style="margin:0;">Twist X/N</span>
+        <span>A competitor hits the same pain or benefit but frames it differently. This angle adds a fresh differentiator. Second-best - viable if emotionally stronger.</span>
+      </div>
+      <div class="legend-item">
+        <span class="freshness-badge crowded" style="margin:0;">Crowded X/N</span>
+        <span>One or more competitors already run essentially this angle. Differentiate further or drop from priority rotation.</span>
+      </div>
+    </div>
+    <div style="font-size:12px; color:#a0aec0; margin-top:12px;">N = 2 (total winner rows for "sous vide cooker" in the Meta Ad Winners tab of the Winners DB as of 06-16-2026). Denominator will grow as more winners are captured in future run-spy cycles.</div>
+  </div>
+</div>
+
+</div><!-- end .container -->
+
+<!-- FOOTER -->
+<div class="footer">
+  Marketing Angles Report | Portable Sous Vide Precision Cooker (WIFI) | Generated 06-16-2026 | Trace ID: marketing-angles-06-16-2026-r50b | VA Products (Andi) Row 50 | Winners DB N=2 for "sous vide cooker"
+</div>
+
+<script>
+function filterAngles(filter, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const rows = document.querySelectorAll('#anglesTable tbody tr');
+  rows.forEach(row => {
+    const cat = row.dataset.cat || '';
+    const uni = row.dataset.uni || '';
+    if (filter === 'all') { row.style.display = ''; return; }
+    if (filter === 'fresh') { row.style.display = uni === 'fresh' ? '' : 'none'; return; }
+    if (filter === 'twist') { row.style.display = uni === 'twist' ? '' : 'none'; return; }
+    row.style.display = cat.toLowerCase().includes(filter.toLowerCase()) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

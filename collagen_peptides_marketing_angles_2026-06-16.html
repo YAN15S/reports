@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collagen Peptides - Marketing Angles Report</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8f9fa;color:#1a1a2e;line-height:1.6}
+  .accent-bar{height:4px;background:linear-gradient(90deg,#1e3a5f,#2d7dd2,#1e3a5f)}
+  .header{background:#fff;padding:32px 40px 24px;border-bottom:1px solid #e5e7eb}
+  .header h1{font-size:1.8rem;font-weight:700;color:#1e3a5f;margin-bottom:4px}
+  .header .subtitle{color:#6b7280;font-size:0.95rem}
+  .header .meta{display:flex;gap:20px;margin-top:12px;font-size:0.85rem;color:#9ca3af}
+  .container{max-width:1200px;margin:0 auto;padding:32px 24px}
+  .summary-block{background:#fff;border-radius:12px;padding:28px;margin-bottom:32px;border:1px solid #e5e7eb;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+  .summary-block h2{font-size:1.1rem;font-weight:600;color:#1e3a5f;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em;font-size:.8rem}
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .summary-item h3{font-size:.75rem;font-weight:600;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+  .summary-item p{font-size:.95rem;color:#374151}
+  .primary-objection{background:#fef3c7;border-left:4px solid #f59e0b;padding:14px 18px;border-radius:0 8px 8px 0;margin-top:20px}
+  .primary-objection strong{color:#92400e;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em}
+  .primary-objection p{color:#78350f;margin-top:4px;font-size:.95rem}
+  .section-title{font-size:1.2rem;font-weight:700;color:#1e3a5f;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid #e5e7eb}
+  /* Top 3 Angles */
+  .top3-grid{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:40px}
+  .angle-card-top{background:#fff;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+  .angle-card-top .card-header{padding:18px 24px;display:flex;align-items:center;gap:16px;background:linear-gradient(135deg,#1e3a5f,#2d5a8e)}
+  .rank-badge{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.2rem;color:#fff;flex-shrink:0}
+  .card-header-text h3{color:#fff;font-size:1.05rem;font-weight:600;margin-bottom:2px}
+  .card-header-text .cat-badge{background:rgba(255,255,255,0.15);color:rgba(255,255,255,.9);font-size:.73rem;padding:2px 8px;border-radius:20px;display:inline-block}
+  .uniqueness-badge{margin-left:auto;padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:700;flex-shrink:0}
+  .fresh{background:#d1fae5;color:#065f46}
+  .twist{background:#dbeafe;color:#1e40af}
+  .crowded{background:#fee2e2;color:#991b1b}
+  .unscored{background:#f3f4f6;color:#6b7280}
+  .card-body{padding:22px 24px}
+  .card-body .insight{color:#374151;margin-bottom:14px;font-size:.95rem}
+  .card-body .hook-box{background:#f9fafb;border-left:3px solid #2d7dd2;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:14px;font-size:.9rem;color:#374151;font-style:italic}
+  .card-body .why-wins{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:12px 16px;margin-bottom:18px;font-size:.9rem;color:#166534}
+  .format-tag{display:inline-block;background:#f3f4f6;color:#4b5563;font-size:.75rem;padding:3px 10px;border-radius:20px;margin-bottom:16px}
+  .micro-hooks h4{font-size:.78rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+  .hook-item{padding:10px 14px;margin-bottom:8px;border-radius:8px;font-size:.88rem;color:#374151;border:1px solid #e5e7eb;background:#fff}
+  .hook-item .hook-type{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;display:block;margin-bottom:3px;color:#6b7280}
+  /* All 20 angles table */
+  .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+  .filter-btn{padding:6px 14px;border-radius:20px;border:1px solid #d1d5db;background:#fff;color:#374151;font-size:.82rem;cursor:pointer;transition:.15s}
+  .filter-btn.active,.filter-btn:hover{background:#1e3a5f;color:#fff;border-color:#1e3a5f}
+  .angles-grid{display:grid;grid-template-columns:1fr;gap:12px}
+  .angle-row{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:16px 20px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:start}
+  .angle-row.hidden{display:none}
+  .angle-num{font-size:.8rem;font-weight:700;color:#9ca3af;min-width:24px}
+  .angle-content h4{font-size:.92rem;font-weight:600;color:#1e3a5f;margin-bottom:4px}
+  .angle-content .cat-label{font-size:.72rem;color:#6b7280;margin-bottom:6px;display:block}
+  .angle-content .insight-text{font-size:.85rem;color:#4b5563;margin-bottom:6px}
+  .angle-content .hook-text{font-size:.83rem;color:#374151;font-style:italic;padding:8px 12px;background:#f9fafb;border-left:2px solid #d1d5db;border-radius:0 6px 6px 0}
+  .angle-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;min-width:120px}
+  /* Macro angles */
+  .macro-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:40px}
+  .macro-card{background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:18px 20px}
+  .macro-card h4{font-size:.9rem;font-weight:600;color:#1e3a5f;margin-bottom:6px}
+  .macro-card p{font-size:.85rem;color:#4b5563}
+  /* Research notes */
+  .research-block{background:#fff;border-radius:12px;border:1px solid #e5e7eb;padding:24px;margin-bottom:32px}
+  .research-block h3{font-size:.85rem;font-weight:600;color:#1e3a5f;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+  .pain-list,.benefit-list,.competitor-list{list-style:none;padding:0}
+  .pain-list li{padding:6px 0 6px 20px;font-size:.87rem;color:#374151;border-bottom:1px solid #f3f4f6;position:relative}
+  .pain-list li:before{content:"";position:absolute;left:4px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:#ef4444}
+  .benefit-list li{padding:6px 0 6px 20px;font-size:.87rem;color:#374151;border-bottom:1px solid #f3f4f6;position:relative}
+  .benefit-list li:before{content:"";position:absolute;left:4px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:#10b981}
+  .competitor-list li{padding:6px 0 6px 20px;font-size:.87rem;color:#374151;border-bottom:1px solid #f3f4f6;position:relative}
+  .competitor-list li:before{content:"";position:absolute;left:4px;top:50%;transform:translateY(-50%);width:6px;height:6px;border-radius:50%;background:#f59e0b}
+  .legend{background:#fff;border-radius:10px;border:1px solid #e5e7eb;padding:20px 24px;margin-top:32px}
+  .legend h3{font-size:.85rem;font-weight:600;color:#1e3a5f;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+  .legend-items{display:flex;gap:24px;flex-wrap:wrap}
+  .legend-item{display:flex;align-items:center;gap:8px;font-size:.85rem;color:#4b5563}
+  .legend-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+  footer{text-align:center;padding:24px;color:#9ca3af;font-size:.8rem;border-top:1px solid #e5e7eb;margin-top:40px}
+  @media(max-width:768px){
+    .summary-grid{grid-template-columns:1fr}
+    .macro-grid{grid-template-columns:1fr}
+    .angle-row{grid-template-columns:auto 1fr;gap:10px}
+    .angle-right{flex-direction:row;align-items:center;min-width:auto;grid-column:1/-1}
+    .header{padding:20px}
+  }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<div class="header">
+  <h1>Collagen Peptides &mdash; Marketing Angles</h1>
+  <div class="subtitle">Primal Harvest | ASIN B085GB45VK | VA Products (Andi) Row 131</div>
+  <div class="meta">
+    <span>Generated: 06-16-2026</span>
+    <span>N = 57 Meta competitor ads</span>
+    <span>Verdict: PASS (founder-approved)</span>
+    <span>Sell: $44.95 &bull; COGS: $4.68 &bull; Margin: $40.27</span>
+  </div>
+</div>
+<div class="container">
+  <!-- SUMMARY BLOCK -->
+  <div class="summary-block">
+    <h2>Product Brief</h2>
+    <div class="summary-grid">
+      <div class="summary-item">
+        <h3>Avatar</h3>
+        <p>Women 35-52, health-conscious, female-dominated. Has tried 1-2 collagen products before with no visible results. Noticing skin looking tired, hair thinning at the part, and joint stiffness in the morning. May be on a GLP-1 medication (Ozempic/Wegovy) or approaching perimenopause. Tracks protein, shops consciously, looks for evidence-backed products.</p>
+      </div>
+      <div class="summary-item">
+        <h3>Core Transformation</h3>
+        <p><strong>Before:</strong> Frustrated, self-editing -- declined activities, hiding in photos, layering clothing, spending on serums that don't penetrate. Tried collagen, got no results, wrote off the category.<br><br><strong>After:</strong> Consistent results at week 8-12. Hairdresser notices. Knees let her hike again. Skin bounces back in the morning. She's the one suggesting plans again.</p>
+      </div>
+      <div class="summary-item">
+        <h3>Competitive Context</h3>
+        <p>N=57 Meta competitor ads + 1 TikTok winner for "collagen peptides." Market is saturated on beauty/glow angles, post-40 skin/joints, and doctor-proof claims. White space remains in: GLP-1/Ozempic context, underdosing expose, hair-loss urgency countdown, identity (self-editing), and longevity framing.</p>
+      </div>
+    </div>
+    <div class="primary-objection">
+      <strong>Primary Objection</strong>
+      <p>"I've tried collagen before and saw no results. Why would this be different?"</p>
+    </div>
+  </div>
+
+  <!-- TOP 3 ANGLES -->
+  <h2 class="section-title">Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <!-- ANGLE 1 -->
+    <div class="angle-card-top">
+      <div class="card-header">
+        <div class="rank-badge">1</div>
+        <div class="card-header-text">
+          <h3>The Hairdresser Question</h3>
+          <span class="cat-badge">Social Proof / Tribe</span>
+        </div>
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+      </div>
+      <div class="card-body">
+        <p class="insight"><strong>Core insight:</strong> The most believable collagen proof isn't a before/after photo -- it's an unsolicited third-party observation from someone who sees your hair regularly. "My hairdresser asked what I changed" is a specific, credible, emotionally resonant moment that every woman who grew up hearing about hair health immediately trusts.</p>
+        <div class="hook-box">"3 months in. My hairdresser paused mid-cut and said: 'Your hair is noticeably thicker. What are you doing differently?' That's the moment I knew this was real."</div>
+        <span class="format-tag">Best format: UGC video / Testimonial</span>
+        <div class="card-body why-wins">
+          <strong>Why it wins:</strong> FRESH 0/57 -- no competitor in this search term's ad set uses the hairdresser observation angle. It pre-empts the primary objection ("does it actually work?") through third-party social proof more credible than brand claims. It's hyper-specific (hairdresser = hair expert), relatable (every woman has had this conversation), and emotionally resonant (unexpected validation). It covers the hair benefit which is underserved vs. the dominant skin/joint angles in the field.
+        </div>
+        <div class="micro-hooks">
+          <h4>3 Micro Hooks</h4>
+          <div class="hook-item"><span class="hook-type">Problem-first</span>"Nobody complimented my hair for years. Then my hairdresser stopped mid-cut and asked what I changed. I almost didn't believe her."</div>
+          <div class="hook-item"><span class="hook-type">Result-first</span>"I went from shedding handfuls to my hairdresser asking what I'm doing differently. 90 days. One scoop a day."</div>
+          <div class="hook-item"><span class="hook-type">Curiosity</span>"The moment I knew collagen was actually working wasn't in the mirror. It was at my hair appointment. Here's what she said."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANGLE 2 -->
+    <div class="angle-card-top">
+      <div class="card-header">
+        <div class="rank-badge">2</div>
+        <div class="card-header-text">
+          <h3>The GLP-1 Bill</h3>
+          <span class="cat-badge">Pain / Frustration</span>
+        </div>
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+      </div>
+      <div class="card-body">
+        <p class="insight"><strong>Core insight:</strong> Millions of women on GLP-1 medications (Ozempic, Wegovy, Mounjaro) are experiencing "Ozempic face" -- loose, sagging, aged-looking skin caused by rapid collagen depletion during weight loss. Their doctor prescribed the drug but never mentioned collagen replacement. This is a massive, growing, underserved audience with a very specific, painful problem and no product speaking directly to them.</p>
+        <div class="hook-box">"Six months on Ozempic. Down 28 pounds. But my skin looked 10 years older overnight. Nobody warned me that rapid weight loss depletes collagen this fast. Here's what my weight loss doctor added to my protocol."</div>
+        <span class="format-tag">Best format: UGC video / VSL</span>
+        <div class="card-body why-wins">
+          <strong>Why it wins:</strong> FRESH 0/57 -- only 1 very low-score competitor (score=19) briefly mentioned GLP-1; no competitor owns this angle. The GLP-1 user base is enormous and growing, experiencing a specific visible problem (loose skin, aged face) with no supplement brand speaking to them. It targets a real biological mechanism (collagen depletion during rapid fat loss), aligns with the product's COGS and margin economics, and is highly newsworthy and shareable. Very timely in 2026 with GLP-1 adoption at scale.
+        </div>
+        <div class="micro-hooks">
+          <h4>3 Micro Hooks</h4>
+          <div class="hook-item"><span class="hook-type">Problem-first</span>"Six months on Ozempic. Down 28 pounds. But my skin looked 10 years older. Nobody warned me about this side effect."</div>
+          <div class="hook-item"><span class="hook-type">Curiosity</span>"The thing your GLP-1 prescription doesn't come with. (But should.) A nurse told me. It changed everything."</div>
+          <div class="hook-item"><span class="hook-type">Contra</span>"Stop blaming the weight loss for your saggy skin. Your GLP-1 is depleting your collagen. Fix the root cause."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANGLE 3 -->
+    <div class="angle-card-top">
+      <div class="card-header">
+        <div class="rank-badge">3</div>
+        <div class="card-header-text">
+          <h3>The Dosing Lie</h3>
+          <span class="cat-badge">Pain / Frustration</span>
+        </div>
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+      </div>
+      <div class="card-body">
+        <p class="insight"><strong>Core insight:</strong> Most collagen supplements contain 2,000-5,000mg per serving when clinical research requires 10,000mg+ to produce measurable results. Women who "tried collagen and it didn't work" weren't taking a failing product -- they were being systematically underdosed by brands prioritizing profit margins over efficacy. This angle converts the biggest objection (tried it, failed) into a purchase trigger (you were betrayed, not wrong).</p>
+        <div class="hook-box">"I spent $400 on collagen supplements over 2 years. Zero results. I thought the whole category was a scam. Then I found out: every brand I'd tried was giving me 1/4 of the dose used in the actual clinical studies. They never told me that."</div>
+        <span class="format-tag">Best format: VSL / Static ad</span>
+        <div class="card-body why-wins">
+          <strong>Why it wins:</strong> FRESH 0/57 -- no competitor in this term's ad set runs the underdosing expose angle. It directly addresses the primary objection ("I tried collagen, it didn't work") by reframing the failure: the woman wasn't wrong to try collagen, the brand was wrong to underdose her. This is the most important conversion angle in a saturated category because it removes the "I've already been burned" barrier. Emotionally charged (betrayal + revelation), factually grounded (clinical studies do use 10g+), and differentiating.
+        </div>
+        <div class="micro-hooks">
+          <h4>3 Micro Hooks</h4>
+          <div class="hook-item"><span class="hook-type">Problem-first</span>"You didn't fail collagen. The brand failed you. Check the dose on your current bottle. Most give you 1/4 of what studies actually use."</div>
+          <div class="hook-item"><span class="hook-type">Result-first</span>"After 3 years of 'trying collagen' with zero results, I finally used a full-dose formula. Week 8 was completely different."</div>
+          <div class="hook-item"><span class="hook-type">Curiosity</span>"Why did collagen work for her and not you? It's almost certainly the dose. Most brands use 2-5g. Studies require 10g+. Are you getting the full amount?"</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /top3-grid -->
+  <!-- ALL 20 ANGLES -->
+  <h2 class="section-title">All 20 Angles</h2>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterAngles('all')">All (20)</button>
+    <button class="filter-btn" onclick="filterAngles('pain')">Pain / Frustration</button>
+    <button class="filter-btn" onclick="filterAngles('aspiration')">Aspiration / Identity</button>
+    <button class="filter-btn" onclick="filterAngles('contrarian')">Contrarian</button>
+    <button class="filter-btn" onclick="filterAngles('fear')">Fear / Urgency</button>
+    <button class="filter-btn" onclick="filterAngles('social')">Social Proof</button>
+    <button class="filter-btn fresh" onclick="filterAngles('fresh')">Fresh only</button>
+    <button class="filter-btn twist" onclick="filterAngles('twist')">Twist only</button>
+  </div>
+  <div class="angles-grid" id="anglesGrid">
+
+    <!-- PAIN 1: Dosing Lie -->
+    <div class="angle-row" data-cat="pain" data-unique="fresh">
+      <div class="angle-num">1</div>
+      <div class="angle-content">
+        <h4>The Dosing Lie</h4>
+        <span class="cat-label">Pain / Frustration</span>
+        <p class="insight-text">Most brands give you 2,000-5,000mg when clinical research requires 10,000mg+. Women who "tried collagen and it didn't work" were systematically underdosed, not failed by the category.</p>
+        <div class="hook-text">"I spent $400 on collagen over 2 years. Zero results. Then I found out every brand I'd tried was 1/4 the clinical dose."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">VSL</span>
+      </div>
+    </div>
+
+    <!-- PAIN 2: Serum Trap -->
+    <div class="angle-row" data-cat="pain" data-unique="twist">
+      <div class="angle-num">2</div>
+      <div class="angle-content">
+        <h4>The Serum Trap</h4>
+        <span class="cat-label">Pain / Frustration</span>
+        <p class="insight-text">Women spend $50-150 on topical collagen serums not knowing the molecule is too large to absorb through skin. External application is waste; rebuilding collagen requires internal supplementation.</p>
+        <div class="hook-text">"Stop spending $120 on collagen serums. The molecule is too large to absorb. Your skin can't get it from a cream. Drink it instead."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 3/57</span>
+        <span class="format-tag">Static</span>
+      </div>
+    </div>
+
+    <!-- PAIN 3: GLP-1 Bill -->
+    <div class="angle-row" data-cat="pain" data-unique="fresh">
+      <div class="angle-num">3</div>
+      <div class="angle-content">
+        <h4>The GLP-1 Bill</h4>
+        <span class="cat-label">Pain / Frustration</span>
+        <p class="insight-text">Rapid weight loss on GLP-1 drugs (Ozempic/Wegovy) depletes collagen stores, causing "Ozempic face" -- the loose, aged skin no one warned you about. Collagen peptides are the missing piece of the GLP-1 protocol.</p>
+        <div class="hook-text">"Down 28 pounds on Ozempic. But my skin looked 10 years older. Nobody warned me rapid weight loss depletes collagen this fast."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC</span>
+      </div>
+    </div>
+
+    <!-- PAIN 4: Joint Tax -->
+    <div class="angle-row" data-cat="pain" data-unique="twist">
+      <div class="angle-num">4</div>
+      <div class="angle-content">
+        <h4>The Joint Tax</h4>
+        <span class="cat-label">Pain / Frustration</span>
+        <p class="insight-text">Morning joint stiffness and aching knees aren't "just aging" -- they're collagen deficiency signals. By the time it hurts consistently, depletion has been accumulating for years. The body is warning you before the damage becomes irreversible.</p>
+        <div class="hook-text">"The morning stiffness that takes 20 minutes to go away. The knees that used to hike, now creak on stairs. That's not 'just getting older.' That's collagen deficiency."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 5/57</span>
+        <span class="format-tag">UGC / VSL</span>
+      </div>
+    </div>
+
+    <!-- ASPIRATION 5: The 32-Year-Old Body -->
+    <div class="angle-row" data-cat="aspiration" data-unique="fresh">
+      <div class="angle-num">5</div>
+      <div class="angle-content">
+        <h4>The 32-Year-Old Body</h4>
+        <span class="cat-label">Aspiration / Identity</span>
+        <p class="insight-text">Women aren't chasing abstract "youth" -- they want to get back to a specific version of themselves: the one with joint-free mornings, fast-growing hair, and skin that bounced back. This angle names that exact target instead of the generic anti-aging promise.</p>
+        <div class="hook-text">"I don't want to look 25. I want to feel the way I did at 32. Joint-free mornings. Hair that grew. Skin that bounced back after a bad night's sleep."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">Testimonial</span>
+      </div>
+    </div>
+
+    <!-- ASPIRATION 6: Active Again -->
+    <div class="angle-row" data-cat="aspiration" data-unique="fresh">
+      <div class="angle-num">6</div>
+      <div class="angle-content">
+        <h4>Active Again</h4>
+        <span class="cat-label">Aspiration / Identity</span>
+        <p class="insight-text">The real aspiration for most women isn't "better skin" -- it's being physically capable of the life they want: hiking, dancing, getting on the floor with grandkids. Collagen restores the body that allows the life.</p>
+        <div class="hook-text">"I stopped suggesting hikes because of my knees. I'd make excuses. Three months into daily collagen, I'm the one sending the trail links."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC</span>
+      </div>
+    </div>
+
+    <!-- ASPIRATION 7: Longevity First -->
+    <div class="angle-row" data-cat="aspiration" data-unique="fresh">
+      <div class="angle-num">7</div>
+      <div class="angle-content">
+        <h4>Longevity First</h4>
+        <span class="cat-label">Aspiration / Identity</span>
+        <p class="insight-text">In the Biohacking and Longevity sub-niche, collagen is a structural investment, not a beauty product. The quality of joints, tendons, and skin at 70 is built by the decisions made at 40. This angles at the long game instead of the short-term result.</p>
+        <div class="hook-text">"Collagen isn't anti-aging. It's structural maintenance. After 25, you lose 1% a year. Your 70-year-old self is watching what you do right now."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">Static / Carousel</span>
+      </div>
+    </div>
+
+    <!-- ASPIRATION 8: Self-Editing -->
+    <div class="angle-row" data-cat="aspiration" data-unique="fresh">
+      <div class="angle-num">8</div>
+      <div class="angle-content">
+        <h4>Stop Self-Editing</h4>
+        <span class="cat-label">Aspiration / Identity</span>
+        <p class="insight-text">The deepest cost of visible aging isn't vanity -- it's the way women quietly start shrinking: declining activities, covering up, skipping photos, suggesting fewer plans. This angle names the behavior she recognizes but never says out loud.</p>
+        <div class="hook-text">"I started wearing high-neck tops. Skipping swim days. Saying 'let's skip the photos.' I didn't notice I was doing it until I looked back at a year of small edits."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">Testimonial</span>
+      </div>
+    </div>
+
+    <!-- CONTRARIAN 9: Topical is Dead -->
+    <div class="angle-row" data-cat="contrarian" data-unique="twist">
+      <div class="angle-num">9</div>
+      <div class="angle-content">
+        <h4>Topical Is Dead</h4>
+        <span class="cat-label">Contrarian / Pattern Interrupt</span>
+        <p class="insight-text">The collagen molecule is too large to penetrate skin topically -- every expert knows it, most brands don't say it. Confronting this directly breaks the pattern of "which serum is best?" and reframes the conversation to oral supplementation.</p>
+        <div class="hook-text">"Your collagen serum doesn't work. Not because of the brand. Because the molecule is physically too large to penetrate skin. Every dermatologist knows this."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 3/57</span>
+        <span class="format-tag">Static</span>
+      </div>
+    </div>
+
+    <!-- CONTRARIAN 10: The Protein Gap -->
+    <div class="angle-row" data-cat="contrarian" data-unique="fresh">
+      <div class="angle-num">10</div>
+      <div class="angle-content">
+        <h4>The Protein Gap</h4>
+        <span class="cat-label">Contrarian / Pattern Interrupt</span>
+        <p class="insight-text">Health-conscious women who track protein don't realize collagen is a completely different amino acid profile (glycine-rich, targeting connective tissue) absent from whey, plant, or casein protein. Standard protein powders don't replace it.</p>
+        <div class="hook-text">"You've been careful about protein. But whey doesn't give your skin, joints, and tendons what they need. Collagen is a different protein entirely. And most people don't get any."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">Carousel</span>
+      </div>
+    </div>
+
+    <!-- CONTRARIAN 11: The Doctor Didn't Tell You -->
+    <div class="angle-row" data-cat="contrarian" data-unique="fresh">
+      <div class="angle-num">11</div>
+      <div class="angle-content">
+        <h4>The Doctor Didn't Tell You</h4>
+        <span class="cat-label">Contrarian / Pattern Interrupt</span>
+        <p class="insight-text">Medical professionals rarely recommend preventive collagen supplementation even though the evidence exists. Most women only hear about collagen's joint and structural benefits from other women who "stumbled onto it" -- positioning this as insider knowledge.</p>
+        <div class="hook-text">"My rheumatologist told me joint stiffness is 'just aging.' She didn't mention that 70% of joint cartilage is collagen. She didn't suggest replacing it."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC</span>
+      </div>
+    </div>
+
+    <!-- CONTRARIAN 12: Not a Beauty Product -->
+    <div class="angle-row" data-cat="contrarian" data-unique="twist">
+      <div class="angle-num">12</div>
+      <div class="angle-content">
+        <h4>Not a Beauty Product</h4>
+        <span class="cat-label">Contrarian / Pattern Interrupt</span>
+        <p class="insight-text">Repositions collagen from "beauty supplement" to "structural protein" -- joints are 70% collagen, tendons are collagen, gut lining is collagen. The skin benefits are real but secondary to a systemic structural need most women don't know about.</p>
+        <div class="hook-text">"I stopped thinking of collagen as a skin thing. Your joints are 70% collagen. Your gut lining is collagen. Your tendons are collagen. Skin glow is just what you see. The rest is what you feel."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 2/57</span>
+        <span class="format-tag">Static / Carousel</span>
+      </div>
+    </div>
+
+    <!-- FEAR 13: The Hairline Counter -->
+    <div class="angle-row" data-cat="fear" data-unique="fresh">
+      <div class="angle-num">13</div>
+      <div class="angle-content">
+        <h4>The Hairline Counter</h4>
+        <span class="cat-label">Fear / Urgency</span>
+        <p class="insight-text">Hair thinning has terrifying biology: the threshold for visible thinning is 50% density loss. By the time it's noticeable, the process has been running for years. This creates powerful preventive urgency around action before the window closes.</p>
+        <div class="hook-text">"Hair shedding more than usual? Dermatologists say you don't notice thinning until you've already lost half the density. By the time you see it, you've already been losing for years."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC / Testimonial</span>
+      </div>
+    </div>
+
+    <!-- FEAR 14: Compound Loss -->
+    <div class="angle-row" data-cat="fear" data-unique="twist">
+      <div class="angle-num">14</div>
+      <div class="angle-content">
+        <h4>Compound Loss</h4>
+        <span class="cat-label">Fear / Urgency</span>
+        <p class="insight-text">Collagen loss isn't linear -- it accelerates with age, stress, and menopause. Every year deferred compounds the structural gap. The 1% per year statistic understates the urgency; the rate increases.</p>
+        <div class="hook-text">"I thought 1% collagen loss per year was manageable. What I didn't know: after 40, the rate doubles. After menopause, it goes off a cliff."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 4/57</span>
+        <span class="format-tag">VSL / Carousel</span>
+      </div>
+    </div>
+
+    <!-- FEAR 15: Ozempic Face -->
+    <div class="angle-row" data-cat="fear" data-unique="fresh">
+      <div class="angle-num">15</div>
+      <div class="angle-content">
+        <h4>Ozempic Face</h4>
+        <span class="cat-label">Fear / Urgency</span>
+        <p class="insight-text">GLP-1 medications drive rapid collagen depletion during weight loss, causing accelerated skin aging. The "Ozempic face" phenomenon is real, and most GLP-1 prescribers don't mention collagen supplementation as a preventive measure.</p>
+        <div class="hook-text">"What your doctor didn't tell you about GLP-1 and your skin. Rapid weight loss depletes collagen at an accelerated rate. The loose skin isn't inevitable. Here's what stops it."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">VSL / UGC</span>
+      </div>
+    </div>
+
+    <!-- FEAR 16: The Window -->
+    <div class="angle-row" data-cat="fear" data-unique="twist">
+      <div class="angle-num">16</div>
+      <div class="angle-content">
+        <h4>The Window</h4>
+        <span class="cat-label">Fear / Urgency</span>
+        <p class="insight-text">Below a certain threshold, the body's ability to synthesize and lay down new collagen becomes increasingly limited, especially post-menopause. There is a rebuild window that is narrowing, and most women don't know it exists until it has already changed.</p>
+        <div class="hook-text">"At 45, I asked: 'Is it too late?' She said: 'No. But in 10 years, the answer changes.' There's a window to rebuild. Most women find out about it after it has narrowed."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 3/57</span>
+        <span class="format-tag">Testimonial / VSL</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL 17: The Hairdresser Question -->
+    <div class="angle-row" data-cat="social" data-unique="fresh">
+      <div class="angle-num">17</div>
+      <div class="angle-content">
+        <h4>The Hairdresser Question</h4>
+        <span class="cat-label">Social Proof / Tribe</span>
+        <p class="insight-text">The most believable collagen proof is an unsolicited third-party observation from someone who sees your hair regularly. A hairdresser noticing change -- without prompting -- is more credible than before/after photos or brand claims.</p>
+        <div class="hook-text">"3 months in. My hairdresser paused mid-cut and said, 'Your hair is noticeably thicker. What are you doing differently?' That's the moment I knew this was real."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL 18: Women Who Get It -->
+    <div class="angle-row" data-cat="social" data-unique="crowded">
+      <div class="angle-num">18</div>
+      <div class="angle-content">
+        <h4>Women Who Get It</h4>
+        <span class="cat-label">Social Proof / Tribe</span>
+        <p class="insight-text">Collagen is a "once you start you never stop" supplement for women who discover the difference. The tribe adoption angle creates belonging and FOMO through the lens of women who have already made it non-negotiable.</p>
+        <div class="hook-text">"There's a version of you that tried collagen for a month and stopped. And a version that gave it 90 days. The second version never stopped taking it."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge crowded">Crowded 8/57</span>
+        <span class="format-tag">Carousel</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL 19: The 90-Day Skeptic -->
+    <div class="angle-row" data-cat="social" data-unique="twist">
+      <div class="angle-num">19</div>
+      <div class="angle-content">
+        <h4>The 90-Day Skeptic</h4>
+        <span class="cat-label">Social Proof / Tribe</span>
+        <p class="insight-text">The skeptic-to-believer arc is more persuasive than pure testimonials because it pre-empts the "does this actually work?" objection before it forms. The ex-skeptic is the most relatable messenger for a market that has been burned before.</p>
+        <div class="hook-text">"My doctor told me to save my money. 'No evidence,' she said. I took it for 90 days anyway. At my next appointment, she asked what I'd done differently. I showed her the label."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge twist">Twist 2/57</span>
+        <span class="format-tag">UGC / Testimonial</span>
+      </div>
+    </div>
+
+    <!-- SOCIAL 20: The Nurse Speaks -->
+    <div class="angle-row" data-cat="social" data-unique="fresh">
+      <div class="angle-num">20</div>
+      <div class="angle-content">
+        <h4>The Nurse Speaks</h4>
+        <span class="cat-label">Social Proof / Tribe</span>
+        <p class="insight-text">Nurses and allied health workers as peer-recommenders carry massive credibility because they are perceived as recommending from patient outcomes, not marketing budgets. More relatable than doctor-fronted authority because they're seen daily by patients.</p>
+        <div class="hook-text">"I'm a registered nurse. I see what accelerated collagen depletion looks like -- in joints, recovery times, skin. I've recommended collagen peptides to every patient over 40 who asks about aging for three years."</div>
+      </div>
+      <div class="angle-right">
+        <span class="uniqueness-badge fresh">Fresh 0/57</span>
+        <span class="format-tag">UGC / Testimonial</span>
+      </div>
+    </div>
+
+  </div><!-- /angles-grid -->
+
+  <!-- MACRO ANGLES -->
+  <h2 class="section-title" style="margin-top:40px">Macro-Angles (Offers and Seasonal)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>New Year / January Reset</h4>
+      <p>Biggest collagen-buying month in the US. "New year, new protocol" framing aligns collagen with resolution energy. Pair with the longevity investment angle. Activate first week of January.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Mother's Day (Spring)</h4>
+      <p>Top supplement gift for women 40-65. "Give her the supplement she'd never buy herself" gift-giver angle. Also runs as self-care: "You've put yourself last long enough." Activate 2 weeks before May second Sunday.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Summer / Swimsuit Season</h4>
+      <p>Skin confidence peak urgency. Works both the appearance angle (skin elasticity, tightness) and the GLP-1 angle (women on Ozempic revealing skin after weight loss). Activate mid-May through June.</p>
+    </div>
+    <div class="macro-card">
+      <h4>BFCM / New Year Cellular Reset Bundle</h4>
+      <p>Multi-month supply bundle. "Stock up for the year" framing with the daily-habit message (collagen is cumulative -- consistency is the variable). Best for retention and CLTV. Activate first week of November.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Restock Event</h4>
+      <p>"Back in stock after selling out in 48 hours" for social proof and urgency. Pair with the tribe angle: women who know, know. Best used after a BFCM or New Year sale creates supply demand.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Evergreen Milestone (50,000 Daily Users)</h4>
+      <p>"50,000 women now take this every morning." Provides a rolling, updatable social proof anchor. Works with the tribe angle year-round. No expiry date on this angle.</p>
+    </div>
+    <div class="macro-card">
+      <h4>GLP-1 Prescription Season</h4>
+      <p>Evergreen and growing. Run alongside GLP-1 angle ads: "Already prescribed? Add this to your protocol." Programmatic targeting: GLP-1 interest audiences, weight loss, Ozempic, Wegovy. No seasonal dependency.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Back-to-Self (Fall / September)</h4>
+      <p>"Summer is over. The results are in." Fall reset energy works for women who started over summer and are seeing results -- or who want to start a new 90-day protocol before the year closes. Pairs with Before/After journey content.</p>
+    </div>
+  </div>
+
+  <!-- RESEARCH NOTES -->
+  <h2 class="section-title">Research Notes</h2>
+  <div class="research-block" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px">
+    <div>
+      <h3>Top Pain Points</h3>
+      <ul class="pain-list">
+        <li>Tried collagen 1-3x before, saw no results -- wrote off the category</li>
+        <li>Joint stiffness and morning aches limiting physical activities</li>
+        <li>Hair shedding more than usual; part line widening</li>
+        <li>Skin looking tired, lacking elasticity; deeper lines after 40</li>
+        <li>"Ozempic face" / loose skin during GLP-1 weight loss</li>
+        <li>Wasted $50-150+ on collagen serums that didn't absorb</li>
+        <li>Inconsistency -- started collagen, stopped, never got to week 8+</li>
+        <li>Bloating and digestive discomfort from low-quality collagen</li>
+        <li>Self-editing: shrinking socially, declining activities, hiding in photos</li>
+        <li>Confusion about types (marine vs bovine, gummies vs powder)</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Top Benefits (Proven)</h3>
+      <ul class="benefit-list">
+        <li>Skin elasticity and hydration improvement (clinically proven 8-12 weeks)</li>
+        <li>Reduced joint stiffness and improved mobility</li>
+        <li>Hair and nail thickness and strength</li>
+        <li>Gut lining support (glycine-rich amino profile)</li>
+        <li>Muscle protein synthesis support alongside resistance training</li>
+        <li>Collagen as connective tissue repair post-exercise</li>
+        <li>GLP-1 skin sagging prevention (counteracts rapid collagen depletion)</li>
+        <li>Natural protein boost (20g+ collagen peptides per serving)</li>
+        <li>Cumulative structural investment in joints and skin for longevity</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Competitor Angles (N=57)</h3>
+      <ul class="competitor-list">
+        <li>Post-40 / Menopausal skin and joints (dominant, 8+ competitors)</li>
+        <li>Skin glow / beauty from within (dominant, 10+ competitors)</li>
+        <li>Hair, skin and nails combined benefits listing (8+ competitors)</li>
+        <li>Clinical / doctor proof (5+ competitors)</li>
+        <li>Social proof numbers ("50,000 women", "87% saw results") (4+ competitors)</li>
+        <li>Joint pain relief ("Delete Joint Pain in 30 Days") (5+ competitors)</li>
+        <li>After 30 your body stops producing collagen (5+ competitors)</li>
+        <li>Clean / pure ingredients, no fillers (4+ competitors)</li>
+        <li>"Why 95% of collagen products don't work" (2+ competitors)</li>
+        <li>Collagen add-on / routine upgrade (3+ competitors)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- UNIQUENESS LEGEND -->
+  <div class="legend">
+    <h3>Uniqueness Scale</h3>
+    <div class="legend-items">
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#065f46"></div>
+        <strong>Fresh 0/57</strong> -- No competitor ad in the Winners DB runs this angle. Strongest differentiation.
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#1e40af"></div>
+        <strong>Twist N/57</strong> -- Competitors hit the same pain or benefit, but this angle adds a fresh differentiator or frame.
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot" style="background:#991b1b"></div>
+        <strong>Crowded N/57</strong> -- One or more competitors already run essentially this angle. Differentiate or deprioritize.
+      </div>
+    </div>
+    <p style="font-size:.82rem;color:#6b7280;margin-top:12px">Uniqueness scored against N=57 Meta Ad Winners for the search term "collagen peptides." Source: Apify spy run 06-16-2026. Marketing Angle column in Winners DB was empty (Audit Winners DB not yet run); competitor angles classified by parent from ad headlines, copy, and top lander analysis (Elavate, Key For Her, Smarter Reviews).</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Collagen Peptides Marketing Angles Report &bull; VA Products (Andi) Row 131 &bull; Generated 06-16-2026 &bull; Nova Capital Product Research System</p>
+  </footer>
+</div><!-- /container -->
+<script>
+function filterAngles(cat) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  document.querySelectorAll('.angle-row').forEach(row => {
+    if (cat === 'all') {
+      row.classList.remove('hidden');
+    } else if (cat === 'fresh') {
+      row.classList.toggle('hidden', row.dataset.unique !== 'fresh');
+    } else if (cat === 'twist') {
+      row.classList.toggle('hidden', row.dataset.unique !== 'twist');
+    } else {
+      row.classList.toggle('hidden', row.dataset.cat !== cat);
+    }
+  });
+}
+</script>
+</body>
+</html>

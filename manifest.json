@@ -1,12 +1,6 @@
 {
   "reports": [
     {
-      "file": "anti_aging_face_moisturizer_retinol_marketing_angles_2026-06-17.html",
-      "title": "Anti-Aging Face Moisturizer (Retinol/Collagen/HA) -- Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
       "file": "hydrogen_water_drinking_tablets_marketing_angles_2026-06-17.html",
       "title": "Hydrogen Water Drinking Tablets - Marketing Angles",
       "date": "2026-06-17",
@@ -39,6 +33,12 @@
     {
       "file": "collagen_peptide_gummies_marketing_angles_2026-06-17.html",
       "title": "Collagen Peptide Gummies Marketing Angles",
+      "date": "2026-06-17",
+      "type": "angles"
+    },
+    {
+      "file": "anti_aging_face_moisturizer_retinol_marketing_angles_2026-06-17.html",
+      "title": "Anti-Aging Face Moisturizer (Retinol/Collagen/HA) -- Marketing Angles",
       "date": "2026-06-17",
       "type": "angles"
     },

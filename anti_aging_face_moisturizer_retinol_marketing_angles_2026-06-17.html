@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-Aging Face Moisturizer (Retinol/Collagen/HA) -- Marketing Angles Report</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --accent: #0ea5e9;
+    --fresh: #059669;
+    --twist: #d97706;
+    --crowded: #dc2626;
+    --unscored: #6b7280;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .top-bar { background: var(--slate); height: 6px; width: 100%; }
+  .header { background: var(--card); padding: 2rem; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 1.8rem; font-weight: 700; color: var(--slate); }
+  .header .subtitle { color: var(--muted); margin-top: 0.25rem; font-size: 1rem; }
+  .header .meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  .summary-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .summary-item h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.5rem; }
+  .summary-item p { font-size: 0.95rem; color: var(--text); }
+  .primary-objection { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 1rem; margin-top: 0.5rem; font-weight: 600; color: #9a3412; font-size: 0.9rem; }
+  h2.section-title { font-size: 1.3rem; font-weight: 700; color: var(--slate); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+  .top3-grid { display: grid; gap: 1.5rem; }
+  .angle-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .angle-card-header { padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .rank-badge { background: var(--slate); color: white; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 20px; white-space: nowrap; }
+  .angle-name { font-size: 1.15rem; font-weight: 700; flex: 1; }
+  .cat-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; background: #f1f5f9; color: var(--muted); white-space: nowrap; }
+  .uniq-badge { font-size: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 12px; font-weight: 700; white-space: nowrap; }
+  .uniq-fresh { background: #d1fae5; color: #065f46; }
+  .uniq-twist { background: #fef3c7; color: #92400e; }
+  .uniq-crowded { background: #fee2e2; color: #991b1b; }
+  .uniq-unscored { background: #f1f5f9; color: var(--muted); }
+  .angle-card-body { padding: 1.5rem; }
+  .field-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.3rem; margin-top: 1rem; }
+  .field-value { font-size: 0.9rem; color: var(--text); }
+  .hook-box { background: #f8fafc; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin-top: 0.5rem; font-style: italic; font-size: 0.9rem; }
+  .why-box { background: #f0f9ff; border-radius: 8px; padding: 0.75rem 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: #0369a1; }
+  .micro-hooks { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+  .micro-hook { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; }
+  .micro-type { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
+  .micro-copy { font-size: 0.88rem; color: var(--text); }
+  .controls { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center; }
+  .filter-btn { padding: 0.35rem 0.9rem; border: 1px solid var(--border); border-radius: 20px; background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.8rem; transition: all 0.15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--slate); color: white; border-color: var(--slate); }
+  .angles-grid { display: grid; gap: 1rem; }
+  .angle-row { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }
+  .angle-row[data-hidden="true"] { display: none; }
+  .angle-row-header { display: flex; align-items: flex-start; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .angle-row-name { font-weight: 700; font-size: 0.95rem; flex: 1; min-width: 150px; }
+  .angle-row-insight { font-size: 0.85rem; color: var(--muted); }
+  .angle-row-hook { font-size: 0.85rem; margin-top: 0.4rem; color: var(--text); border-left: 2px solid var(--accent); padding-left: 0.6rem; font-style: italic; }
+  .angle-row-format { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }
+  .macro-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 0.4rem; }
+  .macro-card p { font-size: 0.85rem; color: var(--muted); }
+  .macro-tag { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 10px; background: #dbeafe; color: #1e40af; margin-bottom: 0.5rem; font-weight: 600; }
+  .macro-active { background: #dcfce7; color: #166534; }
+  .research-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+  .research-col h4 { font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.75rem; }
+  .research-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .research-col ul li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; }
+  .research-col ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+  .comp-tag { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 8px; margin: 0.15rem 0.15rem 0.15rem 0; }
+  .legend { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; margin-top: 2rem; }
+  .legend h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .legend-items { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+  .footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; }
+  @media (max-width: 600px) { .container { padding: 1rem; } .header { padding: 1rem; } }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Anti-Aging Face Moisturizer (Retinol / Collagen / HA) -- Marketing Angles</h1>
+  <div class="subtitle">Women 35-65 | Beauty &amp; Personal Care | Anti-Aging &amp; Skincare | ASIN B0BBSP2JNQ | $34.95</div>
+  <div class="meta">Generated: 06-17-2026 | Cycle: 2026-06-16 | Competitor set: unscored (0 rows for "retinol moisturizer" in Winners DB -- spy tool not run for this term) | Verdict: PASS (founder-approved 06-16-2026)</div>
+</div>
+<div class="container">
+
+<!-- SUMMARY BLOCK -->
+<div class="summary-block">
+  <div class="summary-item">
+    <h3>Avatar</h3>
+    <p>Sarah, 47. A working professional who looks put-together at the office but notices the mirror shows someone who looks "tired" even on good days. Has tried drugstore retinol (irritated skin, gave up) and expensive serums (no visible results). Wears makeup to cover fine lines and uneven tone. Wants to look 5-10 years younger without a complicated routine, without skin irritation, and without spending a fortune. Still hopeful, but skeptical.</p>
+  </div>
+  <div class="summary-item">
+    <h3>Core Transformation</h3>
+    <p><strong>Before:</strong> Dull, visibly aging skin with fine lines, lost firmness, and frustration from skincare that burned, peeled, or did nothing.<br><br><strong>After:</strong> Firmer, hydrated, more youthful-looking skin -- achieved with one simple formula instead of a cabinet full of single-ingredient serums.</p>
+  </div>
+  <div class="summary-item">
+    <h3>Primary Objection</h3>
+    <div class="primary-objection">"I've tried retinol before and it made my skin red and peeling. I've already wasted hundreds on serums that didn't work. I don't trust this is any different."</div>
+  </div>
+</div>
+
+<!-- TOP 3 ANGLES -->
+<h2 class="section-title">Top 3 Angles</h2>
+<div class="top3-grid">
+
+  <!-- ANGLE 1 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#1</span>
+      <span class="angle-name">Why Retinol Failed You</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Most women who gave up on retinol blame themselves or the ingredient -- the real problem is that retinol alone is incomplete. Paired with hyaluronic acid (to buffer irritation and restore hydration) and collagen (to support skin structure), it works the way it was supposed to. This angle validates her past failure and gives her a new framework, turning past frustration into renewed hope.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"Retinol made your skin red and peeling? That's not your skin rejecting it. That's what happens when retinol runs without the two ingredients it needs to work. You weren't wrong to try retinol. You were just using an incomplete formula."</div>
+
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">Educational VSL (60-90s) or static carousel (3-frame: the problem / why it happens / the fix)</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">Directly addresses the PRIMARY OBJECTION head-on in the first sentence. Validates her past experience (she's not the problem). Introduces the triple-formula as the logical solution. Teaches something new, which builds authority and trust in cold traffic. Skews to the 35-55 demo who has genuinely tried and failed with retinol before. Uniqueness: unscored (0 rows in Winners DB for "retinol moisturizer") -- fresh to this competitor set by default.</div>
+
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"Retinol made your skin red and peeling -- that's not your skin. That's what happens when retinol isn't paired with the two support ingredients it needs. Most formulas skip them to cut costs."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Result-first</div>
+          <div class="micro-copy">"I went from raw, irritated skin to smooth, firm, and hydrated in 30 days. The difference wasn't a different retinol. It was a formula that included hyaluronic acid AND collagen alongside it."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Curiosity</div>
+          <div class="micro-copy">"99% of women who say 'retinol doesn't work for me' are actually just missing these two supporting ingredients. Here's why your retinol was incomplete -- and what changes when it's not."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANGLE 2 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#2</span>
+      <span class="angle-name">Mirror Dread</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">The daily moment of confronting aging skin in the mirror is a private, recurring emotional punch. It's not vanity -- it's the gap between how she feels inside (capable, sharp, alive) and what she sees reflected back (tired, older, fading). This gap is the most intimate and emotionally raw entry point for this avatar.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"You're not old. But your skin is starting to look like you are. And every morning, the mirror reminds you. Not the big wrinkles -- the small ones that keep multiplying. The dullness that didn't used to be there. The face that looks tired even when you're not."</div>
+
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">Static ad (high-contrast close-up image with text overlay) or short UGC video (35-55 woman speaking directly to camera, no makeup, honest tone)</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">The "bleeding neck" signal is confirmed for this product -- meaning real emotional pain exists around aging skin. This angle goes straight to the identity cost (she doesn't recognize herself) rather than the surface problem (wrinkles). It stops the scroll because it names something private and specific. The hook avoids cliche ("fight aging") in favor of intimate, specific language. Uniqueness: unscored.</div>
+
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"You're not old. But your skin is starting to look like you are. And every morning, the mirror reminds you."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Result-first</div>
+          <div class="micro-copy">"I stopped dreading the bathroom mirror. After 8 weeks, I looked like myself again -- the version I actually remembered."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Contra</div>
+          <div class="micro-copy">"Stop covering up what you see in the mirror with more makeup. Start changing it. Your skin needs three things to reverse visible aging -- and most creams only give you one."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ANGLE 3 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#3</span>
+      <span class="angle-name">The Skeptic Who Tried It</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">The most persuasive testimonial for a skeptical, once-burned buyer comes from someone who shares her exact objection. When the testimonial opens with "I almost didn't try this," it bypasses the objection entirely by showing the buyer that someone exactly like her had the same hesitation -- and was surprised. 35,722 reviews at 4.6 stars is exceptional proof for a $34.95 product.</div>
+
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"I literally said 'one more face cream and I'm done' before ordering this. I'd tried three retinol serums in two years. All three irritated my skin. I ordered this as a last resort. Eight weeks later, my husband asked if I'd 'done something different.'"</div>
+
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">UGC video (authentic, no-filter, woman 40-55 speaking directly to camera) or testimonial screenshot carousel with before/after</div>
+
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">The 35,722-review proof point (4.6 stars) is exceptional for a $34.95 product and deserves to anchor a full creative. Using the PRIMARY OBJECTION as the testimonial opening ("I almost didn't try this") disarms skepticism while building anticipation. The husband noticing the change is a specific, believable, and emotionally resonant detail -- not generic praise. Uniqueness: unscored.</div>
+
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Social proof</div>
+          <div class="micro-copy">"I literally said 'one more cream and I'm done' before ordering this. It wasn't one more. It was the one that finally worked -- after 3 failed retinols and $200+ spent."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"I tried every retinol on the market. My skin burned. Peeled. Broke out. Then I switched to a formula that pairs retinol with hyaluronic acid AND collagen. Different result entirely."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Curiosity</div>
+          <div class="micro-copy">"I almost didn't try this because I thought I'd already tried everything. Turns out I hadn't tried a formula with all three anti-aging ingredients in one."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /top3-grid -->
+
+<!-- ALL 20 ANGLES -->
+<h2 class="section-title">All 20 Angles</h2>
+<div class="controls">
+  <button class="filter-btn active" onclick="filterAngles('all', this)">All</button>
+  <button class="filter-btn" onclick="filterAngles('pain', this)">Pain / Frustration</button>
+  <button class="filter-btn" onclick="filterAngles('aspiration', this)">Aspiration / Identity</button>
+  <button class="filter-btn" onclick="filterAngles('contrarian', this)">Contrarian</button>
+  <button class="filter-btn" onclick="filterAngles('fear', this)">Fear / Urgency</button>
+  <button class="filter-btn" onclick="filterAngles('social', this)">Social Proof</button>
+</div>
+<div class="angles-grid" id="anglesGrid">
+
+  <!-- CATEGORY 1: PAIN / FRUSTRATION -->
+  <div class="angle-row" data-cat="pain">
+    <div class="angle-row-header">
+      <span class="angle-row-name">1. Mirror Dread</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">The daily morning mirror moment -- she sees someone who looks tired and older than she feels inside. Intimate and emotionally raw.</div>
+    <div class="angle-row-hook">"You're not old. But your skin is starting to look like you are. And every morning, the mirror reminds you."</div>
+    <div class="angle-row-format">Format: Static or short UGC video | TOP 3 PICK</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain">
+    <div class="angle-row-header">
+      <span class="angle-row-name">2. Routine Overload</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">The painful irony of spending $300+ on separate serum, moisturizer, and retinol products that still don't deliver what one complete formula should.</div>
+    <div class="angle-row-hook">"I had a retinol serum, a hyaluronic acid moisturizer, AND a collagen cream. Three products. Three bottles. Zero visible results. Then I found the one formula that combines all three."</div>
+    <div class="angle-row-format">Format: UGC video or testimonial carousel</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain">
+    <div class="angle-row-header">
+      <span class="angle-row-name">3. Wasted Hundreds</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">The financial and emotional loss of buying expensive anti-aging products that underdelivered. Acknowledges the real cost of past disappointment.</div>
+    <div class="angle-row-hook">"Stop me if this sounds familiar: You've spent $89 on a 'miracle' retinol serum. Saw no change. Tried another brand. Nothing. This $34 formula is the one I wish I'd started with."</div>
+    <div class="angle-row-format">Format: Testimonial or VSL</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain">
+    <div class="angle-row-header">
+      <span class="angle-row-name">4. Invisible Progress</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Skincare that shows no visible change within a few weeks gets abandoned -- even if it is working. The frustration of "seeing nothing" is a product-category-wide problem.</div>
+    <div class="angle-row-hook">"Six weeks in and your skin looks exactly the same. Sound familiar? Most retinol creams take 12 weeks to work -- but only when they're in the right formula. Here's why the formula matters more than the ingredient."</div>
+    <div class="angle-row-format">Format: VSL or educational short video</div>
+  </div>
+
+  <!-- CATEGORY 2: ASPIRATION / IDENTITY -->
+  <div class="angle-row" data-cat="aspiration">
+    <div class="angle-row-header">
+      <span class="angle-row-name">5. Camera-Ready Confidence</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">She wants to feel confident in photos without filters or heavy makeup -- skin she's actually proud to show.</div>
+    <div class="angle-row-hook">"She stopped dreading photos. Eight weeks after starting this, she started taking selfies again. Not filtered. Not edited. Just her skin, looking better than it has in years."</div>
+    <div class="angle-row-format">Format: Before/after carousel or UGC testimonial</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration">
+    <div class="angle-row-header">
+      <span class="angle-row-name">6. Ageless Authority</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">She is sharp, credentialed, and confident in her professional life. She wants her face to match the authority she projects at work.</div>
+    <div class="angle-row-hook">"She's at the top of her field at 49. She dresses like it. She shows up like it. Now her skin matches it."</div>
+    <div class="angle-row-format">Format: Static or clean UGC video</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration">
+    <div class="angle-row-header">
+      <span class="angle-row-name">7. The Simple Routine</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">She envies women who look great without seemingly trying hard. She wants effortless results -- not a 15-step routine with 7 separate products.</div>
+    <div class="angle-row-hook">"Two minutes. One formula. Retinol, collagen, AND hyaluronic acid -- all in one. For women who want real results without turning their bathroom into a skincare lab."</div>
+    <div class="angle-row-format">Format: Static or short lifestyle video</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration">
+    <div class="angle-row-header">
+      <span class="angle-row-name">8. Years Younger Without Injections</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">She is not ready for Botox or filler but wants visible results. This formula is the credible, accessible middle path.</div>
+    <div class="angle-row-hook">"She was on a waitlist for a filler consultation. Then she tried this for 8 weeks. She cancelled the appointment."</div>
+    <div class="angle-row-format">Format: UGC testimonial or before/after carousel</div>
+  </div>
+
+  <!-- CATEGORY 3: CONTRARIAN / PATTERN INTERRUPT -->
+  <div class="angle-row" data-cat="contrarian">
+    <div class="angle-row-header">
+      <span class="angle-row-name">9. Why Retinol Failed You</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Most women blame themselves or the ingredient when retinol causes irritation -- the real problem is that retinol without HA and collagen is an incomplete formula. Validates past failure and creates a new framework. TOP 3 PICK.</div>
+    <div class="angle-row-hook">"Retinol made your skin red and peeling? That's not your skin rejecting it. That's what happens when retinol runs without the two ingredients it needs. You weren't wrong to try retinol. You were just using an incomplete formula."</div>
+    <div class="angle-row-format">Format: Educational VSL or 3-frame carousel | TOP 3 PICK</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian">
+    <div class="angle-row-header">
+      <span class="angle-row-name">10. The $200 Brand Myth</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Premium skincare brands charge $150+ for ingredients that cost $5 to produce. The price premium is marketing, not science. Calls out the status quo without attacking the customer.</div>
+    <div class="angle-row-hook">"The $190 retinol serum at Sephora uses the same active ingredients as this $34 formula. One key difference: this one includes all three anti-aging actives -- retinol, collagen, AND hyaluronic acid. The other one does not."</div>
+    <div class="angle-row-format">Format: Static carousel or VSL</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian">
+    <div class="angle-row-header">
+      <span class="angle-row-name">11. Stop Layering Four Products</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">The modern multi-step skincare routine is overcomplicated and often counterproductive -- some active ingredients conflict with each other when layered incorrectly.</div>
+    <div class="angle-row-hook">"Retinol serum. Vitamin C. Collagen cream. Hyaluronic acid. Four products that may be canceling each other out. One formula that actually works together -- because the formulator designed it that way."</div>
+    <div class="angle-row-format">Format: Educational carousel or short video</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian">
+    <div class="angle-row-header">
+      <span class="angle-row-name">12. Your Neck Is Aging First</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Women invest heavily in facial skincare but neglect their neck -- which shows visible aging faster than the face. This formula works for both, which is a genuine product differentiator.</div>
+    <div class="angle-row-hook">"You treat your face like royalty. Expensive serum. SPF. Night cream. But your neck is telling your age -- and you're not treating it at all. This is the formula that works for both."</div>
+    <div class="angle-row-format">Format: Static with close-up neck/face image, or short educational video</div>
+  </div>
+
+  <!-- CATEGORY 4: FEAR / URGENCY -->
+  <div class="angle-row" data-cat="fear">
+    <div class="angle-row-header">
+      <span class="angle-row-name">13. The Collagen Countdown</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">After 25, skin loses approximately 1% of its collagen every year. By 45, she has lost roughly 20%. The compound interest of inaction makes early action feel urgent.</div>
+    <div class="angle-row-hook">"After 25, you lose 1% of your skin's collagen every single year. By the time you feel it in the mirror, you've already lost years of firmness. The time to start was 5 years ago. The second-best time is today."</div>
+    <div class="angle-row-format">Format: Static or educational short video</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear">
+    <div class="angle-row-header">
+      <span class="angle-row-name">14. Dehydration Deepens Lines</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Chronically dehydrated skin makes fine lines look 3x deeper than they actually are. Most women over 40 are under-moisturizing. Hyaluronic acid is the fix and the product delivers it.</div>
+    <div class="angle-row-hook">"Dehydrated skin doesn't just feel dry. It makes every fine line look 3x deeper than it actually is. And most women over 40 are chronically under-moisturizing without knowing it."</div>
+    <div class="angle-row-format">Format: Static or educational carousel</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear">
+    <div class="angle-row-header">
+      <span class="angle-row-name">15. Time Compounds Against You</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Every year without proper skin correction makes the catch-up harder and the visible damage more permanent. The cost of inaction compounds.</div>
+    <div class="angle-row-hook">"The fine lines you ignore at 40 are the deep wrinkles you regret at 50. Skin correction gets significantly harder the longer you wait to start."</div>
+    <div class="angle-row-format">Format: VSL or before/after testimonial</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear">
+    <div class="angle-row-header">
+      <span class="angle-row-name">16. Summer Accelerates Aging</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Summer UV exposure dramatically accelerates collagen breakdown -- without daily repair and hydration, seasonal damage compounds year over year.</div>
+    <div class="angle-row-hook">"Every summer, UV exposure breaks down collagen faster than your skin can rebuild it. Without daily repair, the damage compounds -- and by fall, your skin looks older than it did in spring."</div>
+    <div class="angle-row-format">Format: Seasonal static or short video (activate June-August)</div>
+  </div>
+
+  <!-- CATEGORY 5: SOCIAL PROOF / TRIBE -->
+  <div class="angle-row" data-cat="social">
+    <div class="angle-row-header">
+      <span class="angle-row-name">17. 35,000 Women Can't Be Wrong</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Massive review volume (35,722 at 4.6 stars) validates the product more credibly than any brand claim. The proof is the message.</div>
+    <div class="angle-row-hook">"35,722 women over 35 have reviewed this. 4.6 out of 5 stars. Not a Sephora brand. Not a celebrity endorsement. Just women who tried it -- and kept buying it."</div>
+    <div class="angle-row-format">Format: Static or review-screenshot carousel</div>
+  </div>
+
+  <div class="angle-row" data-cat="social">
+    <div class="angle-row-header">
+      <span class="angle-row-name">18. The Skeptic Who Tried It</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">The most persuasive testimonial for a once-burned buyer comes from someone who started with the same objection -- and was surprised. Opens with the PRIMARY OBJECTION. TOP 3 PICK.</div>
+    <div class="angle-row-hook">"I literally said 'one more face cream and I'm done' before ordering this. Eight weeks later, my husband asked if I'd 'done something different.' I had. Just this."</div>
+    <div class="angle-row-format">Format: UGC video or testimonial screenshot | TOP 3 PICK</div>
+  </div>
+
+  <div class="angle-row" data-cat="social">
+    <div class="angle-row-header">
+      <span class="angle-row-name">19. Women Like You Are Seeing This</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Aspirational identification with the peer group (same age, same life stage, same time constraints) builds safety and removes the "this might not work for me" objection.</div>
+    <div class="angle-row-hook">"She's 52. She works full time. She doesn't have 45 minutes for a skincare routine. This is what 6 weeks looks like for her."</div>
+    <div class="angle-row-format">Format: UGC video or before/after with real customer details</div>
+  </div>
+
+  <div class="angle-row" data-cat="social">
+    <div class="angle-row-header">
+      <span class="angle-row-name">20. The Repeat Buyer Signal</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-unscored">Unscored</span>
+    </div>
+    <div class="angle-row-insight">Re-order behavior is the ultimate social proof -- someone who buys again is voting with their money, not just leaving a star rating.</div>
+    <div class="angle-row-hook">"Most people try a skincare product once. She's ordered this six times. 'My skin has never looked better at 48. I'm not stopping.'"</div>
+    <div class="angle-row-format">Format: UGC testimonial video or static</div>
+  </div>
+
+</div><!-- /angles-grid -->
+
+<!-- MACRO ANGLES -->
+<h2 class="section-title">Macro-Angles (Offers &amp; Seasonal)</h2>
+<div class="macro-grid">
+
+  <div class="macro-card">
+    <span class="macro-tag macro-active">ACTIVE NOW -- Summer</span>
+    <h4>Summer Skin Repair</h4>
+    <p>Activate June-August. UV exposure accelerates collagen loss and dehydration. Position as the daily repair formula for summer. Pair with the "Summer Accelerates Aging" angle (angle #16). Run 2 weeks before peak summer.</p>
+  </div>
+
+  <div class="macro-card">
+    <span class="macro-tag">Fall -- Back to Basics</span>
+    <h4>Back-to-Routine Reset</h4>
+    <p>September, post-summer. Women notice fall skin damage after a summer of outdoor exposure. "Your skin just endured 3 months of UV. Here's the reset formula." Activate late August.</p>
+  </div>
+
+  <div class="macro-card">
+    <span class="macro-tag">Spring -- Mother's Day</span>
+    <h4>Mother's Day Gift Angle</h4>
+    <p>Activate late April / early May. Positioned as the skincare gift for mothers who prioritize everyone else. "She finally gets the formula that works for her." Strong gifting hook for daughters buying for mothers 45-65.</p>
+  </div>
+
+  <div class="macro-card">
+    <span class="macro-tag">Winter -- New Year's</span>
+    <h4>New Year Skin Goal</h4>
+    <p>Activate late December. Resolution angle: "This year, the skin goal actually works." Targets women who set skincare intentions at New Year's but never followed through. Strong urgency via the "time compounds against you" narrative.</p>
+  </div>
+
+  <div class="macro-card">
+    <span class="macro-tag">Winter -- BFCM</span>
+    <h4>Black Friday Sale</h4>
+    <p>Already affordable at $34.95. BFCM angle: "The skincare that already outperforms $150 serums -- now even more accessible." Combine with the "35,000 women" proof and price-value angle. Runs November.</p>
+  </div>
+
+  <div class="macro-card">
+    <span class="macro-tag">Evergreen</span>
+    <h4>35,000+ Units Milestone</h4>
+    <p>The review count (35,722) is itself an evergreen milestone event. "Joined by over 35,000 women" is a proof-of-demand hook that never expires. Works year-round as a conversion booster in retargeting creative.</p>
+  </div>
+
+</div>
+
+<!-- RESEARCH NOTES -->
+<h2 class="section-title">Research Notes</h2>
+<div class="research-block">
+  <div class="research-grid">
+    <div class="research-col">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Retinol irritation / adjustment period -- 2-6 weeks of peeling, redness, burning; women abandon before seeing results</li>
+        <li>Purging confusion -- breakouts after starting retinol; unsure if normal or product rejection</li>
+        <li>Wasted money on expensive serums with no visible improvement within 4-6 weeks</li>
+        <li>Topical collagen skepticism -- informed buyers know collagen molecules cannot penetrate skin; view it as marketing</li>
+        <li>Photosensitivity anxiety -- fear of accelerated sun damage from retinol use in warmer months</li>
+        <li>Heavy / greasy textures that don't layer well under makeup</li>
+        <li>Results plateau after 2-3 months -- skin adapts, improvement stalls</li>
+        <li>The daily mirror moment -- seeing visible aging even when feeling young and sharp inside</li>
+      </ul>
+    </div>
+    <div class="research-col">
+      <h4>Top Benefits Sought</h4>
+      <ul>
+        <li>Visible wrinkle reduction -- fine lines and deep wrinkles noticeably smoother</li>
+        <li>Even, brighter skin tone -- reduction of age spots, sun damage, dullness</li>
+        <li>Firmer, more lifted appearance -- improved elasticity around jawline and cheeks</li>
+        <li>Hydration without heaviness -- plump skin that absorbs quickly and layers under makeup</li>
+        <li>Confidence in photos without filters or heavy concealer</li>
+      </ul>
+    </div>
+    <div class="research-col">
+      <h4>Competitor Angles in Market</h4>
+      <p style="font-size:0.82rem;color:var(--muted);margin-bottom:0.75rem;">Winners DB for "retinol moisturizer": 0 rows. Spy tool not run for this term. Uniqueness unscored. Competitor landscape inferred from market research.</p>
+      <div>
+        <span class="comp-tag">Before/After Transformation</span>
+        <span class="comp-tag">Anti-Irritation Retinol</span>
+        <span class="comp-tag">Affordable vs Luxury</span>
+        <span class="comp-tag">Triple-Ingredient Formula</span>
+        <span class="comp-tag">5-Step Routine Simplification</span>
+        <span class="comp-tag">Dermatologist Recommended</span>
+      </div>
+      <p style="font-size:0.8rem;color:var(--muted);margin-top:0.75rem;">Key competitors: Neutrogena Rapid Wrinkle Repair, Olay Retinol 24, La Roche-Posay, Drunk Elephant, SkinCeuticals. Alternatives pitched: Bakuchiol (retinol alternative), Niacinamide (for sensitive skin), Tretinoin (prescription).</p>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <h3>Uniqueness Legend</h3>
+  <div class="legend-items">
+    <div class="legend-item"><span class="uniq-badge uniq-fresh">Fresh 0/N</span> <span>No competitor ad in the Winners DB runs this angle. Strongest differentiation.</span></div>
+    <div class="legend-item"><span class="uniq-badge uniq-twist">Twist X/N</span> <span>Competitors hit the same pain or benefit but frame it differently. Fresh differentiator present.</span></div>
+    <div class="legend-item"><span class="uniq-badge uniq-crowded">Crowded X/N</span> <span>One or more competitors already run essentially this angle. Differentiate or drop.</span></div>
+    <div class="legend-item"><span class="uniq-badge uniq-unscored">Unscored</span> <span>Spy tool not run for "retinol moisturizer" -- 0 rows in Winners DB for this search term. Cannot score against real competitor set.</span></div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  Anti-Aging Face Moisturizer (Retinol/Collagen/HA) | Marketing Angles Report | 06-17-2026 | NOVA CAPITAL
+</div>
+
+<script>
+function filterAngles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.angle-row').forEach(row => {
+    if (cat === 'all' || row.dataset.cat === cat) {
+      row.removeAttribute('data-hidden');
+    } else {
+      row.setAttribute('data-hidden', 'true');
+    }
+  });
+}
+</script>
+</body>
+</html>

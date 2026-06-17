@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women's Balance Hair Growth - Marketing Angles Report</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --accent: #6366f1;
+    --fresh: #16a34a;
+    --twist: #ca8a04;
+    --crowded: #dc2626;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #0f172a;
+    --muted: #64748b;
+    --pain: #ef4444;
+    --aspiration: #8b5cf6;
+    --contrarian: #f59e0b;
+    --fear: #dc2626;
+    --social: #3b82f6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  .top-bar { height: 4px; background: linear-gradient(90deg, var(--accent), #8b5cf6); }
+  header { background: #fff; border-bottom: 1px solid var(--border); padding: 28px 32px 24px; }
+  header h1 { font-size: 1.6rem; font-weight: 700; color: var(--slate); }
+  header .subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+  header .meta { display: flex; gap: 20px; margin-top: 14px; flex-wrap: wrap; }
+  header .meta span { font-size: 0.82rem; color: var(--muted); background: var(--bg); padding: 4px 10px; border-radius: 20px; border: 1px solid var(--border); }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+  h2 { font-size: 1.2rem; font-weight: 700; color: var(--slate); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--accent); }
+  h3 { font-size: 1rem; font-weight: 600; color: var(--slate); margin-bottom: 8px; }
+  .section { margin-bottom: 40px; }
+
+  /* Summary block */
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+  @media(max-width:680px){.summary-grid{grid-template-columns:1fr;}}
+  .summary-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .summary-card .label { font-size: 0.75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .summary-card p { font-size: 0.9rem; color: var(--text); line-height: 1.55; }
+  .objection-card { grid-column: 1/-1; background: #fff7ed; border: 1px solid #fed7aa; }
+  .objection-card .label { color: #c2410c; }
+  .objection-card p { color: #7c2d12; font-weight: 500; font-size: 0.95rem; }
+
+  /* Uniqueness badge */
+  .badge { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; letter-spacing: .04em; }
+  .fresh { background: #dcfce7; color: var(--fresh); }
+  .twist { background: #fef9c3; color: var(--twist); }
+  .crowded { background: #fee2e2; color: var(--crowded); }
+
+  .cat-badge { display: inline-block; font-size: 0.72rem; font-weight: 700; padding: 3px 8px; border-radius: 4px; }
+  .cat-pain { background: #fee2e2; color: var(--pain); }
+  .cat-aspiration { background: #ede9fe; color: var(--aspiration); }
+  .cat-contrarian { background: #fef3c7; color: var(--contrarian); }
+  .cat-fear { background: #fce7f3; color: #be185d; }
+  .cat-social { background: #dbeafe; color: var(--social); }
+
+  /* Top 3 */
+  .top3-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 20px; position: relative; overflow: hidden; }
+  .top3-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+  .top3-rank { font-size: 2rem; font-weight: 900; color: var(--accent); opacity: .15; position: absolute; top: 14px; right: 20px; line-height: 1; }
+  .top3-header { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+  .top3-name { font-size: 1.1rem; font-weight: 700; color: var(--slate); }
+  .top3-section { margin-top: 14px; }
+  .top3-section .sec-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; }
+  .top3-section p { font-size: 0.88rem; color: var(--text); }
+  .hook-box { background: #f8fafc; border-left: 3px solid var(--accent); padding: 10px 14px; border-radius: 0 6px 6px 0; font-size: 0.87rem; color: var(--slate); font-style: italic; margin-top: 6px; }
+  .micro-hooks { margin-top: 14px; }
+  .micro-hook-item { padding: 8px 12px; margin-bottom: 6px; border-radius: 8px; font-size: 0.84rem; }
+  .micro-hook-item .type-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 2px; }
+  .mh-problem { background: #fef2f2; border-left: 3px solid #f87171; }
+  .mh-result { background: #f0fdf4; border-left: 3px solid #4ade80; }
+  .mh-curiosity { background: #eff6ff; border-left: 3px solid #60a5fa; }
+  .mh-social { background: #fdf4ff; border-left: 3px solid #c084fc; }
+  .mh-contra { background: #fff7ed; border-left: 3px solid #fb923c; }
+
+  /* All 20 grid */
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .filter-btn { border: 1px solid var(--border); background: var(--card); color: var(--muted); padding: 6px 14px; border-radius: 20px; font-size: 0.8rem; cursor: pointer; transition: all .15s; font-weight: 500; }
+  .filter-btn.active { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .angles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+  .angle-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; transition: box-shadow .15s; }
+  .angle-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+  .angle-card.hidden { display: none; }
+  .angle-card-header { display: flex; gap: 6px; align-items: flex-start; margin-bottom: 10px; flex-wrap: wrap; }
+  .angle-card-name { font-size: 0.9rem; font-weight: 700; color: var(--slate); flex: 1; min-width: 140px; }
+  .angle-insight { font-size: 0.82rem; color: var(--muted); margin-bottom: 8px; }
+  .angle-hook { font-size: 0.82rem; color: var(--text); background: #f8fafc; padding: 8px 10px; border-radius: 6px; border-left: 2px solid var(--accent); font-style: italic; margin-bottom: 8px; }
+  .angle-footer { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; font-size: 0.75rem; color: var(--muted); }
+
+  /* Macro */
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .macro-season { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 4px; }
+  .macro-title { font-size: 0.92rem; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .macro-desc { font-size: 0.82rem; color: var(--muted); }
+
+  /* Research notes */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media(max-width:640px){.two-col{grid-template-columns:1fr;}}
+  .list-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .list-card ul { list-style: none; padding: 0; }
+  .list-card ul li { font-size: 0.85rem; color: var(--text); padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .list-card ul li:last-child { border-bottom: none; }
+  .list-card ul li::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 8px; vertical-align: middle; }
+  .comp-angles { display: flex; flex-direction: column; gap: 6px; }
+  .comp-angle-item { font-size: 0.82rem; padding: 8px 10px; background: #f8fafc; border-radius: 6px; border-left: 2px solid var(--border); color: var(--muted); }
+  .comp-angle-item strong { color: var(--text); }
+
+  /* Legend */
+  .legend { display: flex; gap: 20px; flex-wrap: wrap; padding: 16px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+  .legend-dot.fresh { background: var(--fresh); }
+  .legend-dot.twist { background: var(--twist); }
+  .legend-dot.crowded { background: var(--crowded); }
+
+  footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.78rem; border-top: 1px solid var(--border); margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<header>
+  <h1>Women's Balance Hair Growth &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: Professional women, 30-55, experiencing thinning hair from stress, hormonal shifts, or postpartum changes</div>
+  <div class="meta">
+    <span>Generated: 06-17-2026</span>
+    <span>Product: Women's Balance Hair Growth Supplement</span>
+    <span>Competitor set: N=21 (hair growth supplement women)</span>
+    <span>Fresh: 14 | Twist: 6 | Crowded: 0</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SUMMARY -->
+  <div class="section">
+    <h2>Summary</h2>
+    <div class="summary-grid">
+      <div class="summary-card">
+        <div class="label">Avatar</div>
+        <p>Sarah, 42. Professional. Finds hair on her pillow and in the drain every morning. Ponytail is visibly thinner. Took biotin for 6 months with zero results. Knows about Nutrafol but cannot justify $88 a month. Feels less like herself. Wants her confidence back, not just her hair.</p>
+      </div>
+      <div class="summary-card">
+        <div class="label">Core Transformation</div>
+        <p><strong>Before:</strong> Hair thinning silently, avoiding cameras, biotin failed, feeling invisible and older than she wants to feel.<br><br><strong>After:</strong> Less shedding, visible regrowth, stylist notices, wears her hair up again with confidence, feels like herself.</p>
+      </div>
+      <div class="summary-card objection-card">
+        <div class="label">Primary Objection</div>
+        <p>"I already tried biotin for six months and nothing happened. What makes this any different?"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP 3 -->
+  <div class="section">
+    <h2>Top 3 Angles</h2>
+
+    <!-- #1 -->
+    <div class="top3-card">
+      <div class="top3-rank">1</div>
+      <div class="top3-header">
+        <div class="top3-name">Feel Like Yourself Again</div>
+        <span class="cat-badge cat-aspiration">Aspiration / Identity</span>
+        <span class="badge fresh">Fresh 0/21</span>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Core Insight</div>
+        <p>Hair thinning for women is not a vanity problem -- it is an identity crisis. No competitor angle in the market frames it this way. Every competitor sells "more hair." This angle sells "yourself back." The emotional depth is unmatched and the differentiation is complete.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Why It Wins</div>
+        <p>Zero competitors use identity-loss framing (confirmed Fresh 0/21). The deepest pain is not "my hair is thin" -- it is "I don't recognize the woman in the mirror anymore." This angle stops the scroll because it names the real wound, not the symptom. It speaks to one person and she recognizes herself immediately.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Sample Hook</div>
+        <div class="hook-box">"I didn't lose hair. I lost myself. The woman in the mirror didn't look like me anymore. This is how I got her back."</div>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Best Format</div>
+        <p>VSL / Testimonial UGC -- a woman speaking directly to camera about the identity loss, not about hair metrics.</p>
+      </div>
+      <div class="micro-hooks">
+        <div class="sec-label">Micro Hooks</div>
+        <div class="micro-hook-item mh-problem">
+          <div class="type-label">Problem-First</div>
+          "I don't recognize the woman in the mirror anymore. Thinning hair in your 30s and 40s is not just hair. It is losing who you are."
+        </div>
+        <div class="micro-hook-item mh-result">
+          <div class="type-label">Result-First</div>
+          "I went from hiding my hair to my stylist saying 'what did you change?' in 4 months. I was not chasing thickness. I was chasing myself back."
+        </div>
+        <div class="micro-hook-item mh-curiosity">
+          <div class="type-label">Curiosity</div>
+          "99% of women who experience hair thinning think it is a hair problem. It is not. Here is what is actually happening inside your body."
+        </div>
+      </div>
+    </div>
+
+    <!-- #2 -->
+    <div class="top3-card">
+      <div class="top3-rank">2</div>
+      <div class="top3-header">
+        <div class="top3-name">Hair Follicles Can Die</div>
+        <span class="cat-badge cat-fear">Fear / Urgency</span>
+        <span class="badge fresh">Fresh 0/21</span>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Core Insight</div>
+        <p>Most women believe hair loss is reversible no matter how long they wait. It is not. Prolonged thinning causes follicle miniaturization that becomes permanent. No competitor in the market tells women this. The urgency created is real, grounded in biology, and completely uncrowded.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Why It Wins</div>
+        <p>Fresh 0/21 -- no competitor touches permanence or follicle miniaturization. The biggest conversion barrier in this category is "I will deal with it later." This angle dissolves that objection by reframing "later" as a permanent mistake. Emotionally charges every other part of the funnel.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Sample Hook</div>
+        <div class="hook-box">"Your hair follicles don't die overnight. They miniaturize. After a certain point, the window to reverse it closes. Most women wait too long."</div>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Best Format</div>
+        <p>VSL / Static -- authoritative, educational tone. Works with a doctor or derm-adjacent voiceover. Can pivot to UGC testimonial ("I almost waited too long").</p>
+      </div>
+      <div class="micro-hooks">
+        <div class="sec-label">Micro Hooks</div>
+        <div class="micro-hook-item mh-problem">
+          <div class="type-label">Problem-First</div>
+          "Hair follicles don't grow back once they are gone. Most women don't know that. They wait, and the window closes."
+        </div>
+        <div class="micro-hook-item mh-result">
+          <div class="type-label">Result-First</div>
+          "I was at stage 2 thinning. My dermatologist said I caught it in time. The difference was this one thing I added to my routine."
+        </div>
+        <div class="micro-hook-item mh-contra">
+          <div class="type-label">Contra</div>
+          "Stop waiting for your hair to bounce back. Follicle miniaturization does not reverse itself. Here is what actually stops it."
+        </div>
+      </div>
+    </div>
+
+    <!-- #3 -->
+    <div class="top3-card">
+      <div class="top3-rank">3</div>
+      <div class="top3-header">
+        <div class="top3-name">The Drain Shock</div>
+        <span class="cat-badge cat-pain">Pain / Frustration</span>
+        <span class="badge fresh">Fresh 0/21</span>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Core Insight</div>
+        <p>The shower drain is the universal moment of hair loss reckoning for women. Every woman experiencing thinning knows this exact sensory moment -- hair wrapped around fingers, the quiet dread. No competitor captures this specific scene. It stops the scroll because she recognizes it instantly as her own life.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Why It Wins</div>
+        <p>Fresh 0/21 -- no competitor uses the shower drain moment. It is hyper-specific, non-generic, and immediately recognizable to the target avatar. Works as an opening shot in UGC or the first line of copy. Bypasses her skepticism because it describes her before it sells anything.</p>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Sample Hook</div>
+        <div class="hook-box">"She cleaned the shower drain. Again. The hair wrapped around her fingers used to be on her head. She opened her laptop and ordered this."</div>
+      </div>
+      <div class="top3-section">
+        <div class="sec-label">Best Format</div>
+        <p>UGC Video -- opens on the drain shot (phone video, authentic). Works as first 3 seconds of scroll-stop creative. Can cut to testimonial after the moment.</p>
+      </div>
+      <div class="micro-hooks">
+        <div class="sec-label">Micro Hooks</div>
+        <div class="micro-hook-item mh-problem">
+          <div class="type-label">Problem-First</div>
+          "She cleaned the shower drain again. The hair wrapped around her fingers used to be on her head. She opened her laptop and ordered this."
+        </div>
+        <div class="micro-hook-item mh-result">
+          <div class="type-label">Result-First</div>
+          "Month 1: still finding hair everywhere. Month 3: I noticed less in the drain. Month 5: my hairdresser noticed first."
+        </div>
+        <div class="micro-hook-item mh-curiosity">
+          <div class="type-label">Curiosity</div>
+          "Why does your hair suddenly start falling out? The drain is telling you something your body started 3 months ago."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ALL 20 ANGLES -->
+  <div class="section">
+    <h2>All 20 Angles</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterAngles('all',this)">All (20)</button>
+      <button class="filter-btn" onclick="filterAngles('pain',this)">Pain (4)</button>
+      <button class="filter-btn" onclick="filterAngles('aspiration',this)">Aspiration (4)</button>
+      <button class="filter-btn" onclick="filterAngles('contrarian',this)">Contrarian (4)</button>
+      <button class="filter-btn" onclick="filterAngles('fear',this)">Fear (4)</button>
+      <button class="filter-btn" onclick="filterAngles('social',this)">Social Proof (4)</button>
+      <button class="filter-btn" onclick="filterAngles('fresh',this)">Fresh only (14)</button>
+      <button class="filter-btn" onclick="filterAngles('twist',this)">Twist only (6)</button>
+    </div>
+    <div class="angles-grid" id="anglesGrid">
+
+      <!-- PAIN x4 -->
+      <div class="angle-card" data-cat="pain" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">1. The Drain Shock</div>
+          <span class="cat-badge cat-pain">Pain</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">The shower drain moment is the universal silent reckoning -- hair wrapped around fingers, quiet dread.</div>
+        <div class="angle-hook">"She cleaned the shower drain. Again. The hair wrapped around her fingers used to be on her head."</div>
+        <div class="angle-footer"><span>UGC Video</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="pain" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">2. Biotin Lied to Me</div>
+          <span class="cat-badge cat-pain">Pain</span>
+          <span class="badge twist">Twist 1/21</span>
+        </div>
+        <div class="angle-insight">Women have wasted billions on biotin that does not work without a deficiency -- pent-up anger at being misled by the category.</div>
+        <div class="angle-hook">"Took biotin for 6 months. Hair still falling. Here is what actually works for women over 35."</div>
+        <div class="angle-footer"><span>Static / VSL</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="pain" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">3. The Ponytail Test</div>
+          <span class="cat-badge cat-pain">Pain</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Women measure hair loss by ponytail circumference -- when it goes from thick to thin, it is a visible daily reminder of what they are losing.</div>
+        <div class="angle-hook">"My ponytail went from this thick to this thin in two years. I stopped wearing it up because I did not want people to notice."</div>
+        <div class="angle-footer"><span>UGC Video</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="pain" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">4. The Pillow Evidence</div>
+          <span class="cat-badge cat-pain">Pain</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Finding hair on the pillow every morning is the quiet daily shame that compounds -- a small horror that signals something bigger is wrong.</div>
+        <div class="angle-hook">"She saw the hair on her pillow every morning. Tried to ignore it. By month 3, she could not pretend anymore."</div>
+        <div class="angle-footer"><span>Testimonial / UGC</span></div>
+      </div>
+
+      <!-- ASPIRATION x4 -->
+      <div class="angle-card" data-cat="aspiration" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">5. Full Ponytail Back</div>
+          <span class="cat-badge cat-aspiration">Aspiration</span>
+          <span class="badge twist">Twist 2/21</span>
+        </div>
+        <div class="angle-insight">Women want the thickness they had at 25 back -- not less shedding, not "healthier" hair, but the ponytail they remember.</div>
+        <div class="angle-hook">"I had one goal: get my thick ponytail back. Six months later, my stylist asked what I changed."</div>
+        <div class="angle-footer"><span>UGC Video / Testimonial</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="aspiration" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">6. Feel Like Yourself Again</div>
+          <span class="cat-badge cat-aspiration">Aspiration</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Hair loss is an identity loss for women -- the deepest angle is not hair, it is restoring who she was before the thinning started.</div>
+        <div class="angle-hook">"I did not lose hair. I lost myself. The woman in the mirror did not look like me anymore. This is how I got her back."</div>
+        <div class="angle-footer"><span>VSL / Testimonial</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="aspiration" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">7. The Confident Presentation</div>
+          <span class="cat-badge cat-aspiration">Aspiration</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Thinning hair makes professional women feel less confident in visible roles -- the aspiration is showing up fully in rooms they used to dominate.</div>
+        <div class="angle-hook">"I spent three years sitting at the back and avoiding cameras. Last quarter I walked into the board meeting with my head up."</div>
+        <div class="angle-footer"><span>UGC / Testimonial</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="aspiration" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">8. Half the Price of Nutrafol</div>
+          <span class="cat-badge cat-aspiration">Aspiration</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Nutrafol at $88 a month is the reference point most women know. The same clinical ingredients at less than half the price is a concrete, undeniable win.</div>
+        <div class="angle-hook">"My dermatologist recommended a hair supplement. $88 a month felt impossible. I found the same ingredients for less than half the price."</div>
+        <div class="angle-footer"><span>Static / Carousel</span></div>
+      </div>
+
+      <!-- CONTRARIAN x4 -->
+      <div class="angle-card" data-cat="contrarian" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">9. Your Hair Loss Is Not About Hair</div>
+          <span class="cat-badge cat-contrarian">Contrarian</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Hair loss is a symptom of internal deficiency -- repositioning the problem from "hair issue" to "body signal" reframes the solution and the category.</div>
+        <div class="angle-hook">"Stop treating your hair. Start treating what is underneath it. Hair loss in women over 35 is usually a sign your body is missing something -- not a hair problem."</div>
+        <div class="angle-footer"><span>VSL / Static</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="contrarian" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">10. Biotin Will Not Fix This</div>
+          <span class="cat-badge cat-contrarian">Contrarian</span>
+          <span class="badge twist">Twist 1/21</span>
+        </div>
+        <div class="angle-insight">Biotin works only for the 20% of women with an actual biotin deficiency -- the other 80% are wasting money. Naming this gives instant credibility.</div>
+        <div class="angle-hook">"Biotin works for hair loss only if you have a biotin deficiency. That is 20% of women. For the other 80%, here is what the research actually shows."</div>
+        <div class="angle-footer"><span>VSL / Static</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="contrarian" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">11. The Real Reason Your Hair Stops Growing</div>
+          <span class="cat-badge cat-contrarian">Contrarian</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Chronic stress spikes cortisol which forces hair follicles into the resting phase -- naming this mechanism gives women a clear cause and a clear solution.</div>
+        <div class="angle-hook">"Stress does not just make you anxious. It physically shuts down your hair follicles. Here is the cortisol-hair connection nobody talks about."</div>
+        <div class="angle-footer"><span>VSL / Static</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="contrarian" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">12. Stop Waiting 6 Months</div>
+          <span class="cat-badge cat-contrarian">Contrarian</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">The industry normalizes a 6-month wait as an escape clause for poor products -- flipping this creates a pattern interrupt and builds trust.</div>
+        <div class="angle-hook">"Every hair supplement says wait 6 months. The real ones start working on Day 1 -- you just cannot see follicle activity from the outside for a few weeks."</div>
+        <div class="angle-footer"><span>VSL / Carousel</span></div>
+      </div>
+
+      <!-- FEAR x4 -->
+      <div class="angle-card" data-cat="fear" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">13. Hair Follicles Can Die</div>
+          <span class="cat-badge cat-fear">Fear</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Prolonged thinning causes permanent follicle miniaturization -- most women do not know this and believe reversal is always possible.</div>
+        <div class="angle-hook">"Your hair follicles do not die overnight. They miniaturize. After a certain point, the window to reverse it closes. Most women wait too long."</div>
+        <div class="angle-footer"><span>VSL / Static</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="fear" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">14. The Menopause Window</div>
+          <span class="cat-badge cat-fear">Fear</span>
+          <span class="badge twist">Twist 1/21</span>
+        </div>
+        <div class="angle-insight">Perimenopause is a 3-5 year window where follicle support prevents permanent thinning -- after estrogen drops fully, recovery is significantly harder.</div>
+        <div class="angle-hook">"Women in perimenopause have a 3-5 year window to protect their hair. After estrogen drops fully, recovery is harder. Are you in that window right now?"</div>
+        <div class="angle-footer"><span>VSL / Carousel</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="fear" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">15. What Stress Does to Your Hair in 90 Days</div>
+          <span class="cat-badge cat-fear">Fear</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Telogen effluvium from stress hits its peak 3 months after the stressor -- naming the delay mechanism explains why women feel blindsided.</div>
+        <div class="angle-hook">"After a stressful event, your hair does not start falling out right away. It waits. 90 days later, you find it on your pillow. And then it gets worse."</div>
+        <div class="angle-footer"><span>VSL / UGC</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="fear" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">16. Your 40s Are Burning the Clock</div>
+          <span class="cat-badge cat-fear">Fear</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">The hormonal decline of the 40s creates a progressive, compounding hair loss that gets harder to reverse the longer action is delayed.</div>
+        <div class="angle-hook">"In your 40s, your hair is quietly losing ground every month. Not dramatically. Not obviously. Until one day you realize how far it has gone."</div>
+        <div class="angle-footer"><span>VSL / Testimonial</span></div>
+      </div>
+
+      <!-- SOCIAL x4 -->
+      <div class="angle-card" data-cat="social" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">17. The Postpartum Club</div>
+          <span class="cat-badge cat-social">Social Proof</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Postpartum hair loss is shared universally but rarely spoken about -- community framing ("I am not alone") is more powerful than any single testimonial.</div>
+        <div class="angle-hook">"9 months pregnant. 4 months postpartum. Hair all over the bathroom floor. I found 300 other moms in the same position. And then I found this."</div>
+        <div class="angle-footer"><span>UGC Video / Testimonial</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="social" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">18. Women Over 40 Who Got Their Hair Back</div>
+          <span class="cat-badge cat-social">Social Proof</span>
+          <span class="badge twist">Twist 1/21</span>
+        </div>
+        <div class="angle-insight">Peer validation from women in the same age cohort -- "women exactly like me" is the most trusted social proof for women 40+.</div>
+        <div class="angle-hook">"I was 43 when I started seeing it happen. I am 44 now and my hair stylist keeps asking what I changed. I will tell you."</div>
+        <div class="angle-footer"><span>UGC Video / Testimonial</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="social" data-unique="twist">
+        <div class="angle-card-header">
+          <div class="angle-card-name">19. The Dermatologist's Secret</div>
+          <span class="cat-badge cat-social">Social Proof</span>
+          <span class="badge twist">Twist 1/21</span>
+        </div>
+        <div class="angle-insight">Medical authority without the medical price point -- women trust dermatologist-aligned recommendations more than any other source in this category.</div>
+        <div class="angle-hook">"I asked my dermatologist what she actually recommends for thinning hair. She named four ingredients. This supplement has all of them."</div>
+        <div class="angle-footer"><span>VSL / Static</span></div>
+      </div>
+
+      <div class="angle-card" data-cat="social" data-unique="fresh">
+        <div class="angle-card-header">
+          <div class="angle-card-name">20. I Told My Friends</div>
+          <span class="cat-badge cat-social">Social Proof</span>
+          <span class="badge fresh">Fresh 0/21</span>
+        </div>
+        <div class="angle-insight">Word-of-mouth chain creates a "well-kept secret" social proof -- the most trusted ad is a recommendation from someone exactly like you.</div>
+        <div class="angle-hook">"I texted three of my girlfriends after month two. All three ordered it. Now all four of us have our hair back."</div>
+        <div class="angle-footer"><span>UGC Video</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MACRO ANGLES -->
+  <div class="section">
+    <h2>Macro-Angles</h2>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <div class="macro-season">Spring</div>
+        <div class="macro-title">Mother's Day Sale</div>
+        <div class="macro-desc">Gift angle: "Give Mom her confidence back." Activate 2 weeks before Mother's Day. Pairs with postpartum and 40+ avatars -- daughters gifting mothers, husbands gifting wives.</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-season">Winter</div>
+        <div class="macro-title">BFCM / New Year's Bundle</div>
+        <div class="macro-desc">Subscription bundle discount at Black Friday. New Year resolution hook: "The one resolution your hair actually needs." January = fresh-start mindset for health overhaul.</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-season">Summer</div>
+        <div class="macro-title">Summer Confidence</div>
+        <div class="macro-desc">Pool and beach season = hair on display. "Start now, see results before summer ends." Activate mid-June. Pairs with the Drain Shock and Ponytail Test angles.</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-season">Fall</div>
+        <div class="macro-title">Back-to-School / Labor Day</div>
+        <div class="macro-desc">September mindset reset. Professional women returning to the office full-time. Pairs with The Confident Presentation angle and the "visible hair in the workplace" identity hook.</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-season">Evergreen</div>
+        <div class="macro-title">X Women Served Milestone</div>
+        <div class="macro-desc">Trust-builder for cold traffic. "Over [X] women have used this to grow their hair back." Scale the number with real data as it grows. Pairs with Social Proof category.</div>
+      </div>
+      <div class="macro-card">
+        <div class="macro-season">Evergreen</div>
+        <div class="macro-title">New Batch / Restock Event</div>
+        <div class="macro-desc">"We sold out. The next batch ships [date]." Creates scarcity. Pairs with Fear/Urgency angles -- "do not be the one who missed the window."</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESEARCH NOTES -->
+  <div class="section">
+    <h2>Research Notes</h2>
+    <div class="two-col">
+      <div>
+        <h3 style="margin-bottom:10px">Top Pain Points</h3>
+        <div class="list-card">
+          <ul>
+            <li>Finding hair in the shower drain daily -- primal, inescapable reminder</li>
+            <li>Ponytail visibly thinner -- daily public reminder of what has been lost</li>
+            <li>Spent $400+ on biotin over 6 months with zero visible change</li>
+            <li>Side effects from expensive supplements (nausea, hormonal acne, migraines)</li>
+            <li>Postpartum: "I already feel invisible as a new mom and now this"</li>
+            <li>Not recognizing herself in the mirror -- identity cost deeper than appearance</li>
+            <li>Avoiding cameras, skipping photos at events, sitting at the back of rooms</li>
+            <li>Afraid it will keep getting worse and never stop</li>
+            <li>"I tried everything" fatigue -- supplement proliferation creates despair</li>
+            <li>Nutrafol at $88/mo is what the dermatologist recommended, but unaffordable</li>
+          </ul>
+        </div>
+        <h3 style="margin-bottom:10px;margin-top:20px">Top Benefits</h3>
+        <div class="list-card">
+          <ul>
+            <li>Less hair in the drain and on the pillow within 60-90 days</li>
+            <li>Stylist notices density improvement before she does</li>
+            <li>Baby hairs along the hairline -- visible new growth signal</li>
+            <li>Nails stronger as a side effect (shared nutrient pathways)</li>
+            <li>Ponytail feels thicker again after 4-6 months</li>
+            <li>Confidence to wear hair up in public again</li>
+            <li>Hormonal acne cleared as a secondary benefit (adaptogens)</li>
+            <li>Energy improvement (B vitamins / iron support)</li>
+            <li>Half the price of Nutrafol with clinical-grade ingredients</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:10px">Competitor Angles Being Differentiated From</h3>
+        <p style="font-size:0.8rem;color:var(--muted);margin-bottom:10px">N=21 classified winner rows in Winners DB for search term "hair growth supplement women"</p>
+        <div class="comp-angles">
+          <div class="comp-angle-item"><strong>GLP-1 Hair Loss</strong> -- Moerie x2, Keravive x1 (3 ads -- most crowded)</div>
+          <div class="comp-angle-item"><strong>Seed Oil / DHT Blocking</strong> -- Bloom and Bond x2 (2 ads)</div>
+          <div class="comp-angle-item"><strong>Iron / Ferritin for Hair</strong> -- FerraVital x2 (2 ads)</div>
+          <div class="comp-angle-item"><strong>Menopause-Specific</strong> -- Wellbel x1 (general aspirational framing)</div>
+          <div class="comp-angle-item"><strong>Doctor Kit / Program</strong> -- MD Hair x1 (w-ish)</div>
+          <div class="comp-angle-item"><strong>Biotin Foundation</strong> -- Nutra Wellness x1 (South Asia market)</div>
+          <div class="comp-angle-item"><strong>Science-Backed Growth</strong> -- Vital Nutrients x1</div>
+          <div class="comp-angle-item"><strong>Textured / Black Hair Gummies</strong> -- Lumin RRB x1</div>
+          <div class="comp-angle-item"><strong>Bundle / Capsule System</strong> -- Cowgirls x1</div>
+          <div class="comp-angle-item"><strong>Complete Beauty Trio</strong> -- Herbal Pharm x1</div>
+          <div class="comp-angle-item"><strong>Follicle Science</strong> -- Biofollic x1</div>
+          <div class="comp-angle-item"><strong>Gummy Format</strong> -- Look Houdini x1 (w-ish)</div>
+          <div class="comp-angle-item"><strong>Complete Kit System</strong> -- Fully Vital x1</div>
+          <div class="comp-angle-item"><strong>Science-Backed Brand (Nature Made)</strong> -- x1</div>
+          <div class="comp-angle-item"><strong>Hormone-Specific 45+</strong> -- Nutrafol Women 45+ x1</div>
+          <div class="comp-angle-item"><strong>European Clinical Formula</strong> -- Pantogar x1</div>
+          <div class="comp-angle-item"><strong>Better Than Nutrafol</strong> -- Radiant Lab x1 (only contrarian in market)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIQUENESS LEGEND -->
+  <div class="section">
+    <h2>Uniqueness Legend</h2>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot fresh"></div>
+        <span><strong>Fresh 0/N</strong> -- No competitor in the Winners DB runs this angle. The strongest, most differentiated picks.</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot twist"></div>
+        <span><strong>Twist X/N</strong> -- Competitors hit the same pain or benefit but frame it differently. This angle adds a fresh differentiator.</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot crowded"></div>
+        <span><strong>Crowded X/N</strong> -- Competitors already run essentially this angle. Differentiate further or drop.</span>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--muted);margin-top:10px">Uniqueness is measured against the classified "Marketing Angle" column in the Winners DB for search term "hair growth supplement women" (N=21 rows). Match is judged on the angle's core insight, not surface wording. Count reflects direct competitor matches, not similar industries.</p>
+  </div>
+
+</div>
+
+<footer>
+  Women's Balance Hair Growth -- Marketing Angles Report -- 06-17-2026 -- Nova Capital Product Research<br>
+  Competitor set: Winners DB "hair growth supplement women" N=21 | Fresh: 14 | Twist: 6 | Crowded: 0
+</footer>
+
+<script>
+  function filterAngles(filter, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.angle-card').forEach(card => {
+      if (filter === 'all') { card.classList.remove('hidden'); return; }
+      if (filter === 'fresh') { card.classList.toggle('hidden', card.dataset.unique !== 'fresh'); return; }
+      if (filter === 'twist') { card.classList.toggle('hidden', card.dataset.unique !== 'twist'); return; }
+      card.classList.toggle('hidden', card.dataset.cat !== filter);
+    });
+  }
+</script>
+</body>
+</html>

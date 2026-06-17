@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collagen Peptide Gummies -- Marketing Angles Report</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --accent: #0ea5e9;
+    --fresh: #059669;
+    --twist: #d97706;
+    --crowded: #dc2626;
+    --unscored: #6b7280;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+  .top-bar { background: var(--slate); height: 6px; width: 100%; }
+  .header { background: var(--card); padding: 2rem; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 1.8rem; font-weight: 700; color: var(--slate); }
+  .header .subtitle { color: var(--muted); margin-top: 0.25rem; font-size: 1rem; }
+  .header .meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.5rem; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+  .summary-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+  .summary-item h3 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.5rem; }
+  .summary-item p { font-size: 0.95rem; color: var(--text); }
+  .primary-objection { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 8px; padding: 1rem; margin-top: 0.5rem; font-weight: 600; color: #9a3412; font-size: 0.9rem; }
+  h2.section-title { font-size: 1.3rem; font-weight: 700; color: var(--slate); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--border); }
+  .top3-grid { display: grid; gap: 1.5rem; }
+  .angle-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  .angle-card-header { padding: 1.2rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+  .rank-badge { background: var(--slate); color: white; font-weight: 700; font-size: 0.85rem; padding: 0.25rem 0.75rem; border-radius: 20px; white-space: nowrap; }
+  .angle-name { font-size: 1.15rem; font-weight: 700; flex: 1; }
+  .cat-badge { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; background: #f1f5f9; color: var(--muted); white-space: nowrap; }
+  .uniq-badge { font-size: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 12px; font-weight: 700; white-space: nowrap; }
+  .uniq-fresh { background: #d1fae5; color: #065f46; }
+  .uniq-twist { background: #fef3c7; color: #92400e; }
+  .uniq-crowded { background: #fee2e2; color: #991b1b; }
+  .uniq-unscored { background: #f1f5f9; color: var(--muted); }
+  .angle-card-body { padding: 1.5rem; }
+  .field-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.3rem; margin-top: 1rem; }
+  .field-value { font-size: 0.9rem; color: var(--text); }
+  .hook-box { background: #f8fafc; border-left: 3px solid var(--accent); padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; margin-top: 0.5rem; font-style: italic; font-size: 0.9rem; }
+  .why-box { background: #f0f9ff; border-radius: 8px; padding: 0.75rem 1rem; margin-top: 0.5rem; font-size: 0.9rem; color: #0369a1; }
+  .micro-hooks { display: grid; gap: 0.75rem; margin-top: 0.75rem; }
+  .micro-hook { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 0.75rem 1rem; }
+  .micro-type { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
+  .micro-copy { font-size: 0.88rem; color: var(--text); }
+  .controls { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center; }
+  .filter-btn { padding: 0.35rem 0.9rem; border: 1px solid var(--border); border-radius: 20px; background: var(--card); color: var(--muted); cursor: pointer; font-size: 0.8rem; transition: all 0.15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--slate); color: white; border-color: var(--slate); }
+  .angles-grid { display: grid; gap: 1rem; }
+  .angle-row { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }
+  .angle-row-header { display: flex; align-items: flex-start; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .angle-row-name { font-weight: 700; font-size: 0.95rem; flex: 1; min-width: 150px; }
+  .angle-row-insight { font-size: 0.85rem; color: var(--muted); }
+  .angle-row-hook { font-size: 0.85rem; margin-top: 0.4rem; color: var(--text); border-left: 2px solid var(--accent); padding-left: 0.6rem; font-style: italic; }
+  .angle-row-format { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.25rem; }
+  .macro-card h4 { font-size: 0.9rem; font-weight: 700; color: var(--slate); margin-bottom: 0.4rem; }
+  .macro-card p { font-size: 0.85rem; color: var(--muted); }
+  .macro-tag { display: inline-block; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 10px; background: #dbeafe; color: #1e40af; margin-bottom: 0.5rem; font-weight: 600; }
+  .macro-active { background: #dcfce7; color: #166534; }
+  .research-block { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; }
+  .research-col h4 { font-size: 0.85rem; font-weight: 700; color: var(--slate); margin-bottom: 0.75rem; }
+  .research-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .research-col ul li { font-size: 0.85rem; color: var(--muted); padding-left: 1rem; position: relative; }
+  .research-col ul li::before { content: "•"; position: absolute; left: 0; color: var(--accent); }
+  .comp-tag { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.75rem; padding: 0.15rem 0.5rem; border-radius: 8px; margin: 0.15rem 0.15rem 0.15rem 0; }
+  .legend { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; margin-top: 2rem; }
+  .legend h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .legend-items { display: flex; flex-wrap: wrap; gap: 1rem; }
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.82rem; }
+  .footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; }
+  @media (max-width: 600px) { .container { padding: 1rem; } .header { padding: 1rem; } }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Collagen Peptide Gummies -- Marketing Angles</h1>
+  <div class="subtitle">Women 35-52 | Health and Wellness | Sugar-free hydrolyzed collagen | ASIN B0BR7RQ9GZ | $34.95</div>
+  <div class="meta">Generated: 06-17-2026 | Re-scored against real N=6 Meta Ad winners (audit-winners 06-17-2026) | Verdict: PASS (founder-approved)</div>
+</div>
+<div class="container">
+
+<!-- SUMMARY BLOCK -->
+<div class="summary-block">
+  <div class="summary-item">
+    <h3>Avatar</h3>
+    <p>Women 35-52, health-conscious, keto-adjacent or metabolically aware. Has tried collagen at least once -- powder, capsules, or cheap gummies -- and saw no visible results. May be on a GLP-1 medication (Ozempic/Wegovy) and noticing skin changes. Invests in clean skincare but frustrated that her inside routine has not caught up.</p>
+  </div>
+  <div class="summary-item">
+    <h3>Core Transformation</h3>
+    <p><strong>Before:</strong> Spending money on collagen that never seems to work, unsure if the product is even reaching her skin, possibly undermining her own results with sugary supplements.<br><br>
+    <strong>After:</strong> Hair her hairdresser notices, skin her mirror confirms, and nails she stops picking at -- from a sugar-free formula built on the same cofactors her body needs to actually assemble collagen.</p>
+  </div>
+  <div class="summary-item">
+    <h3>PRIMARY OBJECTION</h3>
+    <div class="primary-objection">"I have tried collagen before -- powder, capsules, and gummies -- and nothing visible happened. Why would this be any different?"</div>
+    <p style="margin-top:0.75rem;font-size:0.85rem;color:#64748b;">Deeper fear: She has already wasted money on supplement promises. Another purchase risks confirming that she is the kind of person who falls for marketing.</p>
+  </div>
+</div>
+
+
+<!-- TOP 3 ANGLES -->
+<h2 class="section-title">Top 3 Angles</h2>
+<div class="top3-grid">
+
+  <!-- RANK 1 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#1</span>
+      <span class="angle-name">Sugar Destroys Collagen</span>
+      <span class="cat-badge">Contrarian / Pattern Interrupt</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Sugar triggers glycation -- a process that cross-links and stiffens collagen fibers in the skin. Most collagen gummies contain added sugar. Women taking sugary collagen gummies are actively undermining the results they are paying for. A sugar-free formula is not a nice-to-have; it is the only scientifically coherent choice.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"The sugar in your collagen gummy is destroying your collagen. That is not a typo. Added sugar triggers glycation -- it literally cross-links and hardens the collagen fibers in your skin. Most collagen gummies have it. This one does not."</div>
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">VSL / UGC video (reveal format: show label of a popular brand with sugar, then show sugar-free label side by side)</div>
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">All 6 competitors in the Winners DB run some variation of skin glow, skin elasticity, or joint relief -- none attack the sugar-glycation mechanism. This angle converts the product's primary differentiator (sugar-free) into a revelation that reframes every past purchase the avatar has made. The betrayal-revelation arc is the highest-performing DTC supplement format for repeat-trialist audiences. Fresh 0/6 means no competitor ad fatigue overlap whatsoever.</div>
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"Your collagen gummy has a dirty secret. The added sugar in most brands triggers glycation -- the same process that stiffens and breaks down collagen in your skin. You are paying to undo what you are trying to do."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Result-first</div>
+          <div class="micro-copy">"I switched to a sugar-free collagen gummy 90 days ago. Looking back, I understand now why the last three brands I tried did not work. The sugar was the reason."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Curiosity</div>
+          <div class="micro-copy">"Most collagen gummy labels have a flaw they will never advertise. Check the ingredient list. Find the sugar source. Then look up what glycation does to collagen fibers in your skin."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Social Proof</div>
+          <div class="micro-copy">"I almost gave up on collagen entirely. Then someone pointed out the sugar in my gummies. The ingredient that was supposed to fix my skin was feeding the exact process that ages it."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Contra</div>
+          <div class="micro-copy">"Stop taking collagen gummies with added sugar. Sugar causes glycation -- it cross-links and stiffens collagen fibers, making your skin less elastic over time. Your collagen supplement should not accelerate skin aging. Do this instead."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 2 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#2</span>
+      <span class="angle-name">The Hairdresser Confirmed</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">Third-party professional confirmation -- from someone who feels hair growth, shaft strength, and density every visit -- is more credible than any self-reported result or brand testimonial. The hairdresser did not know about the supplement. She noticed anyway. That specificity is disarming to a skeptical buyer who has heard too many collagen claims.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"I did not tell my hairdresser I was taking anything. She stopped mid-cut and asked what I had been doing differently. After years of collagen that did nothing, that was the only proof I needed."</div>
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">UGC video / testimonial (ideally filmed at or near a salon chair; the setting makes the claim feel organic and unscripted)</div>
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">None of the 6 Winners DB competitors use a third-party professional validation format. The Glow Goodies and Nature's Field ads run generic aspirational skin/elasticity copy. This angle bypasses the PRIMARY OBJECTION (collagen never worked before) by using an unsolicited third-party observation: she did not know what to look for, she just noticed. That is the most credible form of social proof for a supplement with subtle visible effects. Fresh 0/6.</div>
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"I had tried collagen twice. Powder. Capsules. Zero change. Until my hairdresser stopped mid-cut and said my hair had not felt like this in years. I had not touched my haircare routine. Just added two gummies a day."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Result-first</div>
+          <div class="micro-copy">"90 days in, my hairdresser noticed before I did. The texture. The density. She asked what I changed. I had not even told her about the gummies."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Curiosity</div>
+          <div class="micro-copy">"Why does your hairdresser notice collagen results before you do? Because she measures your hair growth rate, shaft strength, and density on every visit. Her hands don't lie. Yours can't either."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Social Proof</div>
+          <div class="micro-copy">"She has been doing my hair for seven years. She said 'I don't know what you are doing but please do not stop.' That comment, from someone who gets paid to be honest about your hair, meant more than any before-and-after photo."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Contra</div>
+          <div class="micro-copy">"Stop waiting to see collagen results in your own mirror. Your hair growth takes 6-8 weeks. Let your hairdresser be your progress report. She will notice before you do."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANK 3 -->
+  <div class="angle-card">
+    <div class="angle-card-header">
+      <span class="rank-badge">#3</span>
+      <span class="angle-name">The GLP-1 Skin Tax</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+    </div>
+    <div class="angle-card-body">
+      <div class="field-label">Core Insight</div>
+      <div class="field-value">GLP-1 medications (Ozempic, Wegovy) deplete collagen through three documented mechanisms: they reduce glucose uptake in adipose-derived stem cells, suppress estrogen production from dermal fat, and increase oxidative stress on collagen-producing fibroblasts. The result is "Ozempic face" -- facial hollowing and accelerated skin aging. Over 10 million US women are on GLP-1 drugs. No collagen brand is speaking directly to this audience.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook-box">"Ozempic worked. My face did not sign up for it. Rapid weight loss depletes your body's collagen-producing cells faster than they can recover. Women on GLP-1 medication need more collagen support. Here is why -- and what actually helps."</div>
+      <div class="field-label">Best Execution Format</div>
+      <div class="field-value">VSL / UGC video (ideally a woman who has been on a GLP-1 drug sharing her skin experience -- the before/after is the weight loss story plus the skin recovery story)</div>
+      <div class="field-label">Why It Wins</div>
+      <div class="why-box">Zero of the 6 collagen gummies competitors address GLP-1 users. All 6 run generic skin/joint/beauty angles. This angle targets a defined audience of 10 million+ US women with a named, documented problem ("Ozempic face"), a mechanistic explanation they can verify, and zero brand competition in the space. The sugar-free positioning pairs naturally (GLP-1 users avoid sugar). Fresh 0/6 in a competitor set where 5 of 6 winners run skin beauty aspirations with zero audience segmentation.</div>
+      <div class="field-label">Micro Hooks</div>
+      <div class="micro-hooks">
+        <div class="micro-hook">
+          <div class="micro-type">Problem-first</div>
+          <div class="micro-copy">"Ozempic worked. My face didn't ask for it. Weight loss at that speed pulls collagen from your skin. The cheekbones I lost were not on my plan. These gummies are what I wish someone had told me to start on day one."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Result-first</div>
+          <div class="micro-copy">"I lost 38 lbs on Wegovy. Then someone asked if I was getting enough sleep. I added collagen gummies. 90 days later, my face is catching up with the body I worked for."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Curiosity</div>
+          <div class="micro-copy">"Why does Ozempic age your face? GLP-1 medications suppress the stem cells that produce collagen in your skin. Your skin is starving for support while your body transforms. Most women on these drugs don't know this until they see it."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Social Proof</div>
+          <div class="micro-copy">"All my friends noticed the weight loss. Then my husband asked if I was sleeping okay. I started these. The difference in my skin over the next two months -- that was the part I hadn't planned for but am grateful for."</div>
+        </div>
+        <div class="micro-hook">
+          <div class="micro-type">Contra</div>
+          <div class="micro-copy">"Stop ignoring 'Ozempic face.' The collagen depletion side effect of GLP-1 drugs is documented in clinical research. It is also addressable. Your face does not have to pay for your transformation."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end top3-grid -->
+
+
+<!-- ALL 20 ANGLES -->
+<h2 class="section-title">All 20 Angles</h2>
+<div class="controls">
+  <button class="filter-btn active" onclick="filterAngles('all')">All</button>
+  <button class="filter-btn" onclick="filterAngles('pain')">Pain / Frustration</button>
+  <button class="filter-btn" onclick="filterAngles('aspiration')">Aspiration / Identity</button>
+  <button class="filter-btn" onclick="filterAngles('contrarian')">Contrarian</button>
+  <button class="filter-btn" onclick="filterAngles('fear')">Fear / Urgency</button>
+  <button class="filter-btn" onclick="filterAngles('social')">Social Proof</button>
+  <button class="filter-btn" onclick="filterAngles('fresh')">Fresh only</button>
+</div>
+<div class="angles-grid" id="anglesGrid">
+
+  <!-- PAIN / FRUSTRATION -->
+  <div class="angle-row" data-cat="pain" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">1. The Sugar Trap</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / VSL</span>
+    </div>
+    <div class="angle-row-insight">Most collagen gummies contain added sugar, which causes the glycation that destroys collagen fibers. Women are unknowingly paying for self-defeating supplements.</div>
+    <div class="angle-row-hook">"Check the ingredient list on your collagen gummies. Now look up what the sweetener or sugar source does to your skin's collagen overnight. That is the frustration I want you to feel -- and the reason this formula is sugar-free."</div>
+    <div class="angle-row-format">Format: Static / VSL | Pairs well with label comparison creative</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">2. The Supplement Pile</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC / Static</span>
+    </div>
+    <div class="angle-row-insight">Women take collagen, biotin, vitamin C, B12, and D3 from five separate bottles daily. The cognitive load and cost of managing multiple supplements creates real daily friction and abandonment.</div>
+    <div class="angle-row-hook">"I used to take six supplements every morning. Collagen. Biotin. Vitamin C. B12. Each a separate purchase, separate pill, separate decision. Now I take two gummies and I am done."</div>
+    <div class="angle-row-format">Format: UGC video / Static | Show the pill count visual</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">3. The Sticky Bottle</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC</span>
+    </div>
+    <div class="angle-row-insight">Gelatin gummies absorb humidity and fuse together in the bottle. Women open their collagen after 3 weeks and find an unusable clump -- then throw the bottle away and write off collagen entirely.</div>
+    <div class="angle-row-hook">"My last collagen gummies fused into one giant sticky mass by week three. I paid $30 to throw away a bottle of glue. That frustration is the real reason I started reading ingredient lists."</div>
+    <div class="angle-row-format">Format: UGC / Static</div>
+  </div>
+
+  <div class="angle-row" data-cat="pain" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">4. The Waiting Game</span>
+      <span class="cat-badge">Pain / Frustration</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">VSL / Testimonial</span>
+    </div>
+    <div class="angle-row-insight">Women commit to 90 days of collagen with no feedback loop -- no progress marker, no measurable signal, no way to distinguish results from placebo. The uncertainty drives abandonment before results appear.</div>
+    <div class="angle-row-hook">"Three months of collagen and I had no idea if it was working. No feedback. No way to tell if my skin looked different or if it was just the lighting. The gummies I use now come with a hairdresser test built in."</div>
+    <div class="angle-row-format">Format: VSL / Testimonial</div>
+  </div>
+
+  <!-- ASPIRATION / IDENTITY -->
+  <div class="angle-row" data-cat="aspiration" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">5. The Clean Beauty Body</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / Carousel</span>
+    </div>
+    <div class="angle-row-insight">She has already committed to clean skincare -- no parabens, no sulfates, nothing she cannot pronounce. The cognitive dissonance of taking a sugary collagen supplement while using a $90 clean face serum is the identity gap this angle closes.</div>
+    <div class="angle-row-hook">"I read every ingredient in my skincare. Retinoid. Niacinamide. No parabens, no junk. Then I looked at the ingredient list on my collagen gummies. Added sugar. My inside routine had not caught up with my outside one."</div>
+    <div class="angle-row-format">Format: Static / Carousel</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">6. The Low-Carb Life</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / UGC</span>
+    </div>
+    <div class="angle-row-insight">Keto and low-carb women cut sugar from every meal, every snack, every drink. The irony of their collagen supplement quietly adding sugar to their daily routine creates a visceral identity betrayal when they discover it.</div>
+    <div class="angle-row-hook">"I track my macros down to the gram. No sugar, no cheat days, no exceptions. Then I read the back of my collagen gummies. There it was. Sugar, in my health supplement, every single morning."</div>
+    <div class="angle-row-format">Format: Static / UGC</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">7. The GLP-1 Glow-Up</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC / Testimonial</span>
+    </div>
+    <div class="angle-row-insight">Women on Ozempic or Wegovy are losing weight and gaining a new identity -- but they are also losing collagen. The GLP-1 glow-up is incomplete without skin support. This is the missing piece in their transformation story.</div>
+    <div class="angle-row-hook">"The body transformation was real. The skin is catching up now. Women on weight-loss medication need collagen support more than almost anyone -- and no one tells us this at the prescription window."</div>
+    <div class="angle-row-format">Format: UGC / Testimonial</div>
+  </div>
+
+  <div class="angle-row" data-cat="aspiration" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">8. The Informed Woman</span>
+      <span class="cat-badge">Aspiration / Identity</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC / Static</span>
+    </div>
+    <div class="angle-row-insight">She is the woman who finally understood what collagen actually needs to work -- vitamin C as the synthesis cofactor, biotin for keratin support, sugar-free to prevent glycation -- while her peers are still buying whatever has the prettiest packaging.</div>
+    <div class="angle-row-hook">"At 43, I stopped buying collagen based on the label and started reading the science. Collagen without vitamin C is like a puzzle with half the pieces missing. That knowledge changed which product I chose."</div>
+    <div class="angle-row-format">Format: UGC / Static</div>
+  </div>
+
+  <!-- CONTRARIAN / PATTERN INTERRUPT -->
+  <div class="angle-row" data-cat="contrarian" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">9. Sugar Destroys Collagen</span>
+      <span class="cat-badge">Contrarian</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">VSL / UGC</span>
+    </div>
+    <div class="angle-row-insight">Sugar triggers glycation, which cross-links collagen fibers and makes skin less elastic -- the exact opposite of what collagen supplements promise. Most gummies contain added sugar, creating a self-defeating product at the category level.</div>
+    <div class="angle-row-hook">"The sugar in your collagen gummy is destroying your collagen. Not a metaphor. Glycation is a measurable molecular process. Check the label on yours. Now you understand why nothing changed."</div>
+    <div class="angle-row-format">Format: VSL / UGC | Best with label reveal creative</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">10. Collagen Needs Vitamin C</span>
+      <span class="cat-badge">Contrarian</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / Carousel</span>
+    </div>
+    <div class="angle-row-insight">Vitamin C is the essential cofactor for procollagen hydroxylation -- the step that stitches collagen peptides into functional collagen your skin can actually use. Without it, you are taking building materials without the adhesive. Most collagen products omit it.</div>
+    <div class="angle-row-hook">"Collagen peptides cannot build anything in your skin without vitamin C. Your body uses vitamin C to convert those peptides into real, functional collagen. Most collagen supplements do not include it. This one does."</div>
+    <div class="angle-row-format">Format: Static / Carousel | Scientific credibility angle</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">11. Stop Mixing Powder</span>
+      <span class="cat-badge">Contrarian</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC</span>
+    </div>
+    <div class="angle-row-insight">The collagen powder mixing ritual -- scoop, dissolve, deal with clumping, commit every morning -- is the number one reason women abandon collagen before seeing results. Compliance, not dose, is what decides outcomes at the consumer level.</div>
+    <div class="angle-row-hook">"You have never once skipped a gummy vitamin. You skip your collagen powder constantly. The best collagen supplement is the one you actually take every single day without thinking about it."</div>
+    <div class="angle-row-format">Format: UGC | Habit comparison visual</div>
+  </div>
+
+  <div class="angle-row" data-cat="contrarian" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">12. The Cofactor Stack</span>
+      <span class="cat-badge">Contrarian</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Carousel / Static</span>
+    </div>
+    <div class="angle-row-insight">Collagen synthesis requires a specific set of cofactors working together: vitamin C (hydroxylation), biotin (keratin formation), B12 (cell renewal), and adequate protein. Taking collagen alone without these cofactors is incomplete by design.</div>
+    <div class="angle-row-hook">"Collagen alone is missing the crew. Vitamin C, biotin, and B12 are what your body needs to convert collagen peptides into something your skin, hair, and nails can actually use. The full stack matters."</div>
+    <div class="angle-row-format">Format: Carousel / Static | Ingredient map visual</div>
+  </div>
+
+  <!-- FEAR / URGENCY -->
+  <div class="angle-row" data-cat="fear" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">13. The Collagen Cliff</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">VSL / Static</span>
+    </div>
+    <div class="angle-row-insight">Collagen production declines 1-2% per year after age 25. By 45, a woman has lost 20-30% of her natural production capacity. The deficit compounds. Every year of inaction widens the gap between what her skin has and what it needs.</div>
+    <div class="angle-row-hook">"After 25, you lose 1-2% of your collagen every year. At 45, that is 20-30% gone. You cannot reverse that loss. You can support what is left -- but the window to act is now, not when you can 'really see it.'"</div>
+    <div class="angle-row-format">Format: VSL / Static | Age progression data visual</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">14. The GLP-1 Skin Tax</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">VSL / UGC</span>
+    </div>
+    <div class="angle-row-insight">GLP-1 medications deplete collagen through three documented mechanisms: reduced ATP in collagen-producing stem cells, suppressed estrogen from dermal fat, and increased oxidative stress on fibroblasts. The result accumulates silently until "Ozempic face" is visible.</div>
+    <div class="angle-row-hook">"Ozempic worked. Your face did not get a vote. GLP-1 drugs suppress the stem cells that produce collagen in your skin. The transformation you earned is aging your face faster than it should. Here is what to do about it."</div>
+    <div class="angle-row-format">Format: VSL / UGC | GLP-1 segment targeting</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">15. Sugar Fast-Track to Aging</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / VSL</span>
+    </div>
+    <div class="angle-row-insight">Glycation is permanent at the molecular level. Every time sugar cross-links a collagen fiber, it stiffens it forever. Women taking sugary collagen gummies are not just failing to build collagen -- they are accelerating the exact aging process they are trying to reverse.</div>
+    <div class="angle-row-hook">"Glycated collagen does not unbend. Every time sugar cross-links your collagen fibers, those fibers stiffen permanently. Your anti-aging supplement may be one of your fastest aging risks. Check the label."</div>
+    <div class="angle-row-format">Format: Static / VSL | Molecular mechanism visual</div>
+  </div>
+
+  <div class="angle-row" data-cat="fear" data-uniq="twist">
+    <div class="angle-row-header">
+      <span class="angle-row-name">16. The Biotin Gap</span>
+      <span class="cat-badge">Fear / Urgency</span>
+      <span class="uniq-badge uniq-twist">Twist 1/6</span>
+      <span class="cat-badge">UGC / VSL</span>
+    </div>
+    <div class="angle-row-insight">Subclinical biotin deficiency is more common in women over 35 -- particularly those on restricted diets, GLP-1 medications, or with digestive absorption issues. Without adequate biotin, hair and nail responses to any collagen supplement are blunted or absent.</div>
+    <div class="angle-row-hook">"If your hair is not responding to collagen, you might be biotin-deficient. It is more common in women over 35 than most people know -- especially if you eat a restricted diet. 5000mcg of biotin plus collagen is the reason the results finally showed up for me."</div>
+    <div class="angle-row-format">Format: UGC / VSL | Note: Nature's Field (1 of 6 competitors) runs biotin+collagen as a general benefit; this angle goes deeper into deficiency urgency -- adjacent territory, different frame</div>
+  </div>
+
+  <!-- SOCIAL PROOF / TRIBE -->
+  <div class="angle-row" data-cat="social" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">17. The GLP-1 Community</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC / Testimonial</span>
+    </div>
+    <div class="angle-row-insight">Women on GLP-1 drugs share supplement recommendations intensely within their communities. A testimonial from a GLP-1 user about collagen support reaches an audience that has zero existing brand loyalty in this space and is actively searching for answers.</div>
+    <div class="angle-row-hook">"I lost 40 lbs on Wegovy. The unexpected part was my skin. Nobody in my GLP-1 group was talking about collagen support. I started. Now half my group does too."</div>
+    <div class="angle-row-format">Format: UGC / Testimonial | Community content format</div>
+  </div>
+
+  <div class="angle-row" data-cat="social" data-uniq="twist">
+    <div class="angle-row-header">
+      <span class="angle-row-name">18. The Skeptic Turned Believer</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-twist">Twist 1/6</span>
+      <span class="cat-badge">Testimonial / UGC</span>
+    </div>
+    <div class="angle-row-insight">The most powerful social proof for a skeptical repeat-trialist is someone exactly like her -- who had tried and dismissed collagen, wrote it off, and then had a specific, unexpected outcome with a formula that was meaningfully different.</div>
+    <div class="angle-row-hook">"I had tried collagen three times. Powder. Capsules. Cheap gummies. Each time, nothing visible. I had written it off entirely. The sugar-free, full-stack version changed that. I cannot fully explain it, but my hairdresser can."</div>
+    <div class="angle-row-format">Format: Testimonial / UGC | Note: Elavate (1 of 6 competitors) runs "fixes broken products" in the joint relief category -- both use prior-product-failure as a hook, different benefit territory</div>
+  </div>
+
+  <div class="angle-row" data-cat="social" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">19. The Hairdresser Confirmed</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">UGC / Testimonial</span>
+    </div>
+    <div class="angle-row-insight">Third-party professional validation from someone who measures hair growth rate, shaft strength, and density on every visit. The hairdresser did not know about the supplement. She noticed anyway. That unscripted professional observation is the most disarming possible form of social proof for a skeptical buyer.</div>
+    <div class="angle-row-hook">"She stopped mid-cut and asked what I had been doing differently. Seven years of appointments and she had never said that. I had not even mentioned the gummies."</div>
+    <div class="angle-row-format">Format: UGC / Testimonial</div>
+  </div>
+
+  <div class="angle-row" data-cat="social" data-uniq="fresh">
+    <div class="angle-row-header">
+      <span class="angle-row-name">20. The Low-Carb Squad</span>
+      <span class="cat-badge">Social Proof / Tribe</span>
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span class="cat-badge">Static / UGC</span>
+    </div>
+    <div class="angle-row-insight">The keto and low-carb community actively shares supplement finds that fit their dietary discipline. A sugar-free collagen gummy that fits keto macros while supporting skin and hair is a natural community share -- and builds word-of-mouth in a high-LTV audience.</div>
+    <div class="angle-row-hook">"Finally a collagen gummy that does not break my keto. No sugar, no guilt, and my hair has not felt this good in three years. My accountability group all swapped over."</div>
+    <div class="angle-row-format">Format: Static / UGC | Keto community targeting</div>
+  </div>
+
+</div><!-- end anglesGrid -->
+
+
+<!-- MACRO ANGLES -->
+<h2 class="section-title">Macro-Angles (Offers and Seasonal)</h2>
+<div class="macro-grid">
+
+  <div class="macro-card">
+    <div class="macro-tag macro-active">ACTIVE NOW -- June 2026</div>
+    <h4>Summer Skin Prep</h4>
+    <p>Activate 2 weeks before Memorial Day and run through July 4th. Angle: "The 90-day skin investment that starts now pays off at summer's end." UV exposure accelerates collagen degradation -- summer is the highest-urgency collagen window of the year.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">Q1 -- January</div>
+    <h4>GLP-1 Season</h4>
+    <p>New year GLP-1 prescription wave (January is peak GLP-1 start month). Position as the collagen partner for women starting or continuing Ozempic/Wegovy -- the supplement no one at the pharmacy recommends but every GLP-1 user eventually discovers.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">Q1 -- January</div>
+    <h4>New Year Collagen Commitment</h4>
+    <p>"This is the year the collagen actually works." Launch a 90-day challenge framing with the sugar-free differentiator as the reason prior years failed. Pair with a subscription offer.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">May</div>
+    <h4>Mother's Day / Daughter Gift</h4>
+    <p>"Give your mom the thing that actually works." Position as a gift from an informed daughter to a mother who has been taking collagen for years with mixed results -- with a note about the sugar-free difference.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">November</div>
+    <h4>BFCM Bundle</h4>
+    <p>Bundle collagen gummies with a companion product (vitamin C supplement, biotin, or skincare). Anchor on the cofactor stack story: "Everything your skin needs in one order." The bundle format justifies a higher AOV and reinforces the "full-stack" product positioning.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">Evergreen</div>
+    <h4>X Women Have Made the Switch</h4>
+    <p>Milestone evergreen event: "50,000 women switched from sugary collagen to this one." Activate when a meaningful unit count is reached. The "switch" framing emphasizes the sugar-free differentiator without leading with an ingredient claim.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">Evergreen</div>
+    <h4>New Product Launch (DTC Channel)</h4>
+    <p>If launching on DTC site: "The collagen gummy built differently." Launch announcement with the sugar-free reveal and the cofactor stack story. Early adopter pricing or subscription discount pairs with the skeptic-converted testimonial format.</p>
+  </div>
+
+  <div class="macro-card">
+    <div class="macro-tag">September</div>
+    <h4>Fall Beauty Reset</h4>
+    <p>Post-summer skin repair window. "Summer was hard on your skin. Start rebuilding now." The UV degradation narrative from Summer Skin Prep flips -- now it is repair, not prevention. Vitamin C + collagen + biotin as the recovery stack.</p>
+  </div>
+
+</div>
+
+
+<!-- RESEARCH NOTES -->
+<h2 class="section-title">Research Notes</h2>
+<div class="research-block">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;">
+
+    <div class="research-col">
+      <h4>Top Pain Points (grounded in research)</h4>
+      <ul>
+        <li>Tried collagen before and saw no visible results (most common complaint)</li>
+        <li>Sugar in most collagen gummies causes glycation -- actively degrades collagen</li>
+        <li>Gummies fuse and clump in the bottle after 3-4 weeks</li>
+        <li>No feedback loop: subtle changes too slow to attribute confidently to the supplement</li>
+        <li>Supplement pile fatigue: too many separate bottles, pills, and decisions</li>
+        <li>Bloating and digestive upset in first 2-4 weeks causes early abandonment</li>
+        <li>Skepticism about whether oral collagen reaches the skin at all</li>
+        <li>GLP-1 users experiencing accelerated collagen loss ("Ozempic face")</li>
+        <li>Biotin deficiency blunting hair/nail results in women over 35</li>
+        <li>Most products underdose vs clinical studies (industry-wide issue)</li>
+      </ul>
+    </div>
+
+    <div class="research-col">
+      <h4>Top Benefits (product-specific)</h4>
+      <ul>
+        <li>Sugar-free formula avoids glycation -- cofactor-complete by design</li>
+        <li>Multi-collagen types I, II, III, V, X -- comprehensive joint and skin coverage</li>
+        <li>Vitamin C included as the collagen synthesis cofactor (many products omit it)</li>
+        <li>5000mcg biotin for hair/nail keratin support</li>
+        <li>Methylated B12 for cellular renewal (bioavailable form)</li>
+        <li>Vitamins A, E, D3, B6 -- the full micronutrient support stack</li>
+        <li>Gummy format drives superior compliance vs powder (no mixing, no skipping)</li>
+        <li>4.5 stars / 1,429 reviews -- solid real-world validation</li>
+        <li>Hydrolyzed peptides (higher bioavailability vs intact collagen)</li>
+      </ul>
+    </div>
+
+    <div class="research-col">
+      <h4>Competitor Angles -- differentiate from these (N=6 classified winners)</h4>
+      <ul>
+        <li><span class="comp-tag">Glow Goodies x3</span> "Skin Glow: collagen gummies for glowing skin" -- generic skin aspirational, no mechanism, no differentiation hook</li>
+        <li><span class="comp-tag">Nature's Field x2</span> "Skin Elasticity: collagen and biotin gummies for skin tone and elasticity" -- benefit list format, positions biotin+collagen together</li>
+        <li><span class="comp-tag">Elavate x1</span> "Joint Relief: collagen that fixes broken products" -- contrarian hook, joint pain focus, "After 40" frame</li>
+        <li>Market is 5-of-6 dominated by generic skin beauty angles (glow + elasticity) with zero audience segmentation</li>
+        <li>Zero competitors address GLP-1 users, keto identity, sugar-glycation mechanism, or third-party validation</li>
+      </ul>
+    </div>
+
+    <div class="research-col">
+      <h4>Research Sources</h4>
+      <ul>
+        <li>Amazon listing B0BR7RQ9GZ (4.5 stars / 1,429 reviews, product bullets)</li>
+        <li>Clinical literature: collagen synthesis cofactors, glycation mechanism, GLP-1 collagen depletion (PMC/NIH)</li>
+        <li>Industry research: collagen gummies vs powder comparison, biotin deficiency prevalence</li>
+        <li>Spy JSON: 20 Meta candidates + 1 TikTok (collagen gummies search term)</li>
+        <li>Winners DB: 6 classified Meta Ad winners (audit-winners 06-17-2026) -- authoritative uniqueness source</li>
+        <li>Competitor landers: Elavate, Glow Goodies, Nature's Field</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<!-- UNIQUENESS LEGEND -->
+<div class="legend">
+  <h3>Uniqueness Legend -- measured against the Winners DB (N=6 Meta Ad winners for "collagen gummies", classified by audit-winners 06-17-2026)</h3>
+  <div class="legend-items">
+    <div class="legend-item">
+      <span class="uniq-badge uniq-fresh">Fresh 0/6</span>
+      <span>No competitor ad in the Winners DB runs this angle. 18 of 20 angles. All 3 top angles are Fresh. The strongest differentiation position.</span>
+    </div>
+    <div class="legend-item">
+      <span class="uniq-badge uniq-twist">Twist 1/6</span>
+      <span>Competitor hits adjacent territory but this angle adds a fresh differentiator. 2 of 20 angles: The Biotin Gap (adjacent to Nature's Field biotin+collagen benefit) and The Skeptic Turned Believer (adjacent to Elavate's prior-product-failure framing in joint relief).</span>
+    </div>
+    <div class="legend-item">
+      <span class="uniq-badge uniq-crowded">Crowded</span>
+      <span>One or more competitors already run essentially this angle. 0 of 20 angles.</span>
+    </div>
+  </div>
+  <p style="margin-top:0.75rem;font-size:0.8rem;color:#64748b;">N=6 drawn from Winners DB Meta Ad Ws column (authoritative count from audit-winners 06-17-2026 addendum). TikTok Organic Ws=0 for this search term (nurse_candie video classified under collagen peptides, not collagen gummies). Winners DB Marketing Angle column was classified by audit-winners before this run; competitor angles derived directly from those classified values. Re-generated 06-17-2026 to replace the 06-16-2026 report which used N=2 (pre-classification estimate).</p>
+</div>
+
+
+</div><!-- end container -->
+
+<div class="footer">
+  Collagen Peptide Gummies Marketing Angles | Generated 06-17-2026 | NOVA CAPITAL internal use only
+</div>
+
+<script>
+function filterAngles(cat) {
+  const rows = document.querySelectorAll('#anglesGrid .angle-row');
+  rows.forEach(row => {
+    const rowCat = row.getAttribute('data-cat');
+    const rowUniq = row.getAttribute('data-uniq');
+    let show = false;
+    if (cat === 'all') show = true;
+    else if (cat === 'fresh') show = rowUniq === 'fresh';
+    else show = rowCat === cat;
+    row.style.display = show ? '' : 'none';
+  });
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick').includes("'" + cat + "'")) btn.classList.add('active');
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Angles: Electrolytes Powder + Coconut Water</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --accent: #0ea5e9;
+    --fresh-bg: #d1fae5; --fresh-text: #065f46;
+    --twist-bg: #fef3c7; --twist-text: #92400e;
+    --crowded-bg: #fee2e2; --crowded-text: #991b1b;
+    --card-bg: #f8fafc;
+    --border: #e2e8f0;
+    --pain-col: #dc2626;
+    --aspiration-col: #7c3aed;
+    --contrarian-col: #0891b2;
+    --fear-col: #d97706;
+    --social-col: #059669;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; color: #334155; }
+  .top-bar { height: 5px; background: linear-gradient(90deg, #0ea5e9, #7c3aed); }
+  .header { background: #fff; padding: 32px 40px 24px; border-bottom: 1px solid var(--border); }
+  .header h1 { font-size: 26px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .header .subtitle { color: #64748b; font-size: 14px; margin-bottom: 4px; }
+  .header .date { color: #94a3b8; font-size: 13px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .stat-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 18px; text-align: center; }
+  .stat-card .num { font-size: 28px; font-weight: 700; color: var(--slate); }
+  .stat-card .lbl { font-size: 12px; color: #64748b; margin-top: 4px; }
+  .section { margin-bottom: 40px; }
+  .section-title { font-size: 18px; font-weight: 700; color: var(--slate); border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 16px; }
+  .summary-box { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 24px; margin-bottom: 32px; }
+  .summary-box h3 { font-size: 14px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .summary-box p { color: #334155; line-height: 1.6; font-size: 15px; margin-bottom: 16px; }
+  .summary-box .primary-obj { background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; padding: 14px; font-size: 14px; color: #b91c1c; font-weight: 500; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .badge-fresh { background: var(--fresh-bg); color: var(--fresh-text); }
+  .badge-twist { background: var(--twist-bg); color: var(--twist-text); }
+  .badge-crowded { background: var(--crowded-bg); color: var(--crowded-text); }
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 32px; }
+  .top3-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,.06); }
+  .top3-card-header { padding: 16px 20px 12px; border-bottom: 1px solid var(--border); }
+  .rank-badge { font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+  .top3-card h3 { font-size: 17px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .top3-card-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .cat-badge { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+  .cat-pain { background: #fee2e2; color: var(--pain-col); }
+  .cat-aspiration { background: #ede9fe; color: var(--aspiration-col); }
+  .cat-contrarian { background: #e0f2fe; color: var(--contrarian-col); }
+  .cat-fear { background: #fef3c7; color: var(--fear-col); }
+  .cat-social { background: #d1fae5; color: var(--social-col); }
+  .top3-card-body { padding: 18px 20px; }
+  .field-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; margin-top: 14px; margin-bottom: 4px; }
+  .field-label:first-child { margin-top: 0; }
+  .insight { font-size: 14px; color: #334155; line-height: 1.55; }
+  .hook { background: #f1f5f9; border-radius: 8px; padding: 12px; font-size: 14px; color: #1e293b; line-height: 1.6; font-style: italic; }
+  .why-wins { font-size: 14px; color: #334155; line-height: 1.55; }
+  .hooks-list { margin-top: 4px; }
+  .hooks-list li { font-size: 13px; color: #334155; line-height: 1.5; margin-bottom: 6px; padding-left: 12px; position: relative; }
+  .hooks-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; }
+  .hooks-list li.prob::before { background: var(--pain-col); }
+  .hooks-list li.res::before { background: var(--social-col); }
+  .hooks-list li.cur::before { background: var(--contrarian-col); }
+  .hooks-list li.soc::before { background: var(--aspiration-col); }
+  .hooks-list li.con::before { background: var(--fear-col); }
+  .all20-controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
+  .filter-btn { padding: 7px 16px; border: 1px solid var(--border); border-radius: 20px; background: #fff; cursor: pointer; font-size: 13px; color: #64748b; transition: all .15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .all20-grid { display: grid; gap: 10px; }
+  .angle-row { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; display: grid; grid-template-columns: 200px 90px 1fr 1fr 100px; gap: 12px; align-items: start; font-size: 13px; }
+  .angle-row-head { background: var(--slate); color: #fff; border-radius: 8px; padding: 10px 16px; display: grid; grid-template-columns: 200px 90px 1fr 1fr 100px; gap: 12px; font-size: 12px; font-weight: 600; }
+  .angle-name { font-weight: 600; color: var(--slate); }
+  .angle-insight { color: #475569; line-height: 1.4; }
+  .angle-hook { color: #475569; line-height: 1.4; font-style: italic; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .macro-card { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .macro-card h4 { font-size: 14px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+  .macro-card p { font-size: 13px; color: #475569; line-height: 1.5; }
+  .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .research-col h4 { font-size: 14px; font-weight: 700; color: var(--slate); margin-bottom: 10px; }
+  .research-col ul { padding-left: 18px; }
+  .research-col ul li { font-size: 13px; color: #475569; line-height: 1.5; margin-bottom: 6px; }
+  .competitor-list { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px; }
+  .comp-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; }
+  .comp-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .comp-angle { font-size: 13px; color: #334155; flex: 1; }
+  .legend { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: flex; gap: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #334155; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .sort-select { padding: 7px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; background: #fff; cursor: pointer; }
+  @media (max-width: 700px) {
+    .angle-row, .angle-row-head { grid-template-columns: 1fr; }
+    .research-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Marketing Angles: Electrolytes Powder + Coconut Water</h1>
+  <div class="subtitle">Search term: electrolyte powder &bull; MicroIngredients ASIN B0CG7TB55T &bull; $39.95 &bull; 4.2 stars / 2,455 reviews</div>
+  <div class="date">Generated 06-17-2026 &bull; Competitor set: N=42 (41 Meta Ad Winners + 1 TikTok Winner)</div>
+</div>
+<div class="container">
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat-card"><div class="num">20</div><div class="lbl">Angles Generated</div></div>
+    <div class="stat-card"><div class="num">42</div><div class="lbl">Competitor Ads</div></div>
+    <div class="stat-card"><div class="num" style="color:#065f46">12</div><div class="lbl">Fresh Angles</div></div>
+    <div class="stat-card"><div class="num" style="color:#92400e">5</div><div class="lbl">Twist Angles</div></div>
+    <div class="stat-card"><div class="num" style="color:#991b1b">3</div><div class="lbl">Crowded Angles</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="lbl">Top Picks (all Fresh)</div></div>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-box">
+    <h3>Avatar</h3>
+    <p><strong>Alex, 31.</strong> Unisex health-conscious individual who exercises 3-5x/week. Drinks 64oz+ of water daily but still wakes up groggy, crashes at 3pm, or cramps during workouts. Has burned through LMNT (too salty, $1.50/serving), Liquid IV (too sweet, stevia aftertaste), and jugs of coconut water (good but messy, perishable, and does not travel). Reads ingredient labels. Cares about non-GMO, sugar-free, and clean sourcing. Wants the natural story of coconut water without the inconvenience. BEFORE: bloated water-drinker who still feels dehydrated. AFTER: actually hydrated at the cellular level, performing better and thinking more clearly, with a routine that fits in a gym bag.</p>
+    <h3 style="margin-top:16px">Primary Objection</h3>
+    <div class="primary-obj">PRIMARY OBJECTION: "I already drink plenty of water -- I don't need another supplement."</div>
+  </div>
+
+  <!-- Top 3 -->
+  <div class="section">
+    <div class="section-title">Top 3 Angles</div>
+    <div class="top3-grid">
+
+      <!-- #1 -->
+      <div class="top3-card">
+        <div class="top3-card-header">
+          <div class="rank-badge">Rank 1</div>
+          <h3>The Water Trap</h3>
+          <div class="top3-card-meta">
+            <span class="cat-badge cat-pain">Pain / Frustration</span>
+            <span class="badge badge-fresh">Fresh 0/42</span>
+          </div>
+        </div>
+        <div class="top3-card-body">
+          <div class="field-label">Core Insight</div>
+          <p class="insight">Drinking 8 glasses of water a day and still feeling exhausted, foggy, or crampy is not a willpower problem. Water without electrolytes passes right through -- cells cannot absorb it without sodium, potassium, and magnesium to pull it in. The avatar is doing everything right and still failing, because they are missing the key ingredient.</p>
+          <div class="field-label">Sample Hook</div>
+          <div class="hook">"You drink 8 glasses a day and you are STILL exhausted. It is not you. Plain water cannot hydrate your cells without electrolytes to carry it in."</div>
+          <div class="field-label">Best Format</div>
+          <p class="insight">UGC video (relatable "I did everything right" story) or VSL opening with the paradox</p>
+          <div class="field-label">Why It Wins</div>
+          <p class="why-wins">Targets the single biggest objection (I drink enough water) and converts it into a purchase trigger. Zero competitors own this insight in the electrolyte powder space. The emotional hook is the specific frustration of doing the "right thing" and still feeling bad. Grounded in physiology (osmosis requires electrolyte gradient for cellular water uptake).</p>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="hooks-list">
+            <li class="prob">PROBLEM-FIRST: "You are drinking 8 glasses and still exhausted. It is not you. Water without electrolytes cannot enter your cells."</li>
+            <li class="res">RESULT-FIRST: "I stopped waking up groggy the week I added coconut water electrolytes. I had been drinking 3 liters of water and it was doing nothing."</li>
+            <li class="cur">CURIOSITY: "Why 8 glasses of water is not enough -- and what scientists actually say you need to hydrate at the cellular level."</li>
+            <li class="soc">SOCIAL PROOF: "I thought I was the healthiest drinker in the office. 3 liters a day. Still foggy by 10am. Then a nutritionist explained why."</li>
+            <li class="con">CONTRA: "Stop counting your glasses of water. Without electrolytes you are just flushing it out."</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- #2 -->
+      <div class="top3-card">
+        <div class="top3-card-header">
+          <div class="rank-badge">Rank 2</div>
+          <h3>The 3pm Crash</h3>
+          <div class="top3-card-meta">
+            <span class="cat-badge cat-pain">Pain / Frustration</span>
+            <span class="badge badge-fresh">Fresh 0/42</span>
+          </div>
+        </div>
+        <div class="top3-card-body">
+          <div class="field-label">Core Insight</div>
+          <p class="insight">The 3pm energy wall is not a caffeine problem. It is an electrolyte deficiency problem. Coffee dehydrates further, worsening the slump. The avatar reaches for a second coffee at 3pm, which makes the afternoon spiral worse. Repositioning the powder as the non-caffeinated fix for the mid-afternoon wall opens a completely new purchase occasion -- not post-workout, just mid-afternoon at a desk.</p>
+          <div class="field-label">Sample Hook</div>
+          <div class="hook">"Your 3pm crash is not a caffeine problem. It is an electrolyte problem. Coffee dehydrates you further. This fixes the root cause in 15 minutes."</div>
+          <div class="field-label">Best Format</div>
+          <p class="insight">Static/carousel (before/after energy timeline visual) or UGC video showing the moment of switching from coffee to electrolyte powder at 3pm</p>
+          <div class="field-label">Why It Wins</div>
+          <p class="why-wins">100% of the target demo experiences the 3pm slump. Zero competitors map electrolyte deficiency to this specific daily pain moment. Creates a new purchase occasion (not just post-workout) and positions this product against coffee -- a much weaker competitor than sports drinks. Emotionally charges because it validates that the avatar is NOT lazy or sleep-deprived.</p>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="hooks-list">
+            <li class="prob">PROBLEM-FIRST: "Your 3pm slump is not a sleep problem or a caffeine problem. Your body is running out of electrolytes and signaling with fatigue."</li>
+            <li class="res">RESULT-FIRST: "I stopped having 3pm walls the week I started dissolving coconut water electrolytes into my afternoon water. No second coffee needed."</li>
+            <li class="cur">CURIOSITY: "Scientists found the real cause of afternoon fatigue in office workers. It is not what you think -- and the fix takes 30 seconds."</li>
+            <li class="soc">SOCIAL PROOF: "My nutritionist told me the #1 sign of electrolyte deficiency is mid-afternoon energy crashes. I thought she was joking until I tried this."</li>
+            <li class="con">CONTRA: "Put down the 3pm coffee. You are dehydrating yourself more. Your body is asking for electrolytes, not caffeine."</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- #3 -->
+      <div class="top3-card">
+        <div class="top3-card-header">
+          <div class="rank-badge">Rank 3</div>
+          <h3>Coconut Water Cannot Hydrate You Alone</h3>
+          <div class="top3-card-meta">
+            <span class="cat-badge cat-contrarian">Contrarian / Pattern Interrupt</span>
+            <span class="badge badge-fresh">Fresh 0/42</span>
+          </div>
+        </div>
+        <div class="top3-card-body">
+          <div class="field-label">Core Insight</div>
+          <p class="insight">Plain coconut water contains only 30mg of sodium. During one hour of moderate exercise, the body loses 500-1,500mg. The "nature's sports drink" positioning of coconut water is overhyped. However, coconut water DOES contain natural potassium (600mg+), magnesium, and B vitamins that synthetic powders lack. The product's unique differentiator is that it combines coconut water's natural mineral profile with the sodium and electrolyte ratios plain coconut water cannot provide alone.</p>
+          <div class="field-label">Sample Hook</div>
+          <div class="hook">"Coconut water has 30mg of sodium. You lose up to 1,500mg per hour working out. That is why it never fully fixed your cramps. This does."</div>
+          <div class="field-label">Best Format</div>
+          <p class="insight">Static (before/after sodium comparison visual) or educational UGC from a creator who used to drink coconut water and switched</p>
+          <div class="field-label">Why It Wins</div>
+          <p class="why-wins">The avatar has likely tried or considered coconut water as a natural hydration solution and felt let down. This angle validates their instinct (coconut water IS good) while explaining the gap (sodium deficiency) and presenting this product as the logical next step. Only 1 of 42 competitors (FINAFLEX COCO IV) uses coconut water positioning -- and none challenge the plain coconut water myth. Grounded in verifiable nutrition data.</p>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="hooks-list">
+            <li class="prob">PROBLEM-FIRST: "Coconut water has 30mg sodium. Your sweat has 500mg sodium per hour. That is the gap plain coconut water cannot close."</li>
+            <li class="res">RESULT-FIRST: "I spent $8 a day on coconut water and kept cramping. Then I learned what coconut water is missing -- and found a powder that fills that gap."</li>
+            <li class="cur">CURIOSITY: "The myth about coconut water being nature's sports drink -- and why a clinical study found it does not outperform plain water for athletes."</li>
+            <li class="soc">SOCIAL PROOF: "Every trainer I know loves the IDEA of coconut water hydration. But they all use electrolyte powder because the sodium math just does not work out."</li>
+            <li class="con">CONTRA: "Coconut water is not wrong. It is just incomplete. Here is what you actually need to add to make it work."</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- All 20 Angles -->
+  <div class="section">
+    <div class="section-title">All 20 Angles</div>
+    <div class="all20-controls">
+      <button class="filter-btn active" onclick="filterAngles('all', this)">All</button>
+      <button class="filter-btn" onclick="filterAngles('Pain',this)">Pain / Frustration</button>
+      <button class="filter-btn" onclick="filterAngles('Aspiration',this)">Aspiration / Identity</button>
+      <button class="filter-btn" onclick="filterAngles('Contrarian',this)">Contrarian</button>
+      <button class="filter-btn" onclick="filterAngles('Fear',this)">Fear / Urgency</button>
+      <button class="filter-btn" onclick="filterAngles('Social',this)">Social Proof / Tribe</button>
+      <button class="filter-btn" onclick="filterAngles('Fresh',this)" style="border-color:#065f46;color:#065f46">Fresh Only</button>
+    </div>
+    <div class="angle-row-head">
+      <div>Angle Name</div><div>Category</div><div>Core Insight</div><div>Sample Hook</div><div>Uniqueness</div>
+    </div>
+    <div class="all20-grid" id="anglesGrid">
+
+      <div class="angle-row" data-cat="Pain" data-uniq="Fresh">
+        <div class="angle-name">1. The Water Trap</div>
+        <div><span class="cat-badge cat-pain">Pain</span></div>
+        <div class="angle-insight">Drinking water all day while still feeling exhausted -- because cells cannot absorb water without electrolytes to pull it in. The avatar is doing everything right and still failing.</div>
+        <div class="angle-hook">"You drink 8 glasses a day and you are STILL exhausted. Plain water cannot enter your cells without electrolytes."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Pain" data-uniq="Twist">
+        <div class="angle-name">2. The Expensive Salt</div>
+        <div><span class="cat-badge cat-pain">Pain</span></div>
+        <div class="angle-insight">LMNT is $45 for 30 servings ($1.50/serving). This product is $39.95 for 139 servings ($0.29/serving). The premium is in the marketing, not the minerals.</div>
+        <div class="angle-hook">"LMNT charges $1.50 a serving for electrolytes. This has more potassium from real coconut water for $0.29. Same minerals. One-fifth the cost."</div>
+        <div><span class="badge badge-twist">Twist 1/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Pain" data-uniq="Fresh">
+        <div class="angle-name">3. The 3pm Crash</div>
+        <div><span class="cat-badge cat-pain">Pain</span></div>
+        <div class="angle-insight">The afternoon energy wall is an electrolyte deficiency problem, not a caffeine problem. Coffee dehydrates further. The fix is 30 seconds and dissolves into existing water.</div>
+        <div class="angle-hook">"Your 3pm crash is not a caffeine problem. It is an electrolyte problem. This fixes the root cause -- not the symptom."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Pain" data-uniq="Twist">
+        <div class="angle-name">4. Cramp After Hydrating</div>
+        <div><span class="cat-badge cat-pain">Pain</span></div>
+        <div class="angle-insight">Cramping after a workout despite drinking water throughout is the definitive signal that electrolytes were missing -- specifically the 1,000mg potassium this product delivers from coconut water.</div>
+        <div class="angle-hook">"You drank water the whole workout. Then you cramped on the drive home. That is your body telling you water is not enough."</div>
+        <div><span class="badge badge-twist">Twist 2/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Aspiration" data-uniq="Twist">
+        <div class="angle-name">5. Coconut Water Evolved</div>
+        <div><span class="cat-badge cat-aspiration">Aspiration</span></div>
+        <div class="angle-insight">The avatar loves coconut water but hates the mess, perishability, and $5-8 per bottle cost. This product is coconut water's natural potassium + real electrolyte ratios in a travel-ready powder.</div>
+        <div class="angle-hook">"You already love coconut water. Now imagine it sugar-free, non-perishable, $0.29 a serving, and with the sodium your sweat actually needs."</div>
+        <div><span class="badge badge-twist">Twist 1/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Aspiration" data-uniq="Crowded">
+        <div class="angle-name">6. The Clean Stack</div>
+        <div><span class="cat-badge cat-aspiration">Aspiration</span></div>
+        <div class="angle-insight">Health-conscious label-readers know what xanthan gum, sucralose, and maltodextrin do in a "health drink." This product has none of them. Non-GMO, keto-friendly, clean sourcing.</div>
+        <div class="angle-hook">"No artificial sweeteners. No fillers. No ingredients you cannot pronounce. Just what your body actually needs to hydrate."</div>
+        <div><span class="badge badge-crowded">Crowded 5/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Aspiration" data-uniq="Crowded">
+        <div class="angle-name">7. The Athlete Who Hydrates Like a Pro</div>
+        <div><span class="cat-badge cat-aspiration">Aspiration</span></div>
+        <div class="angle-insight">Serious athletes use clinically grounded electrolyte ratios, not sugar-loaded sports drinks. This product matches the ratios that sports science recommends.</div>
+        <div class="angle-hook">"Serious athletes do not drink Gatorade. They use precise electrolyte ratios. This is what they actually use."</div>
+        <div><span class="badge badge-crowded">Crowded 5/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Aspiration" data-uniq="Fresh">
+        <div class="angle-name">8. The Keto/Paleo Insider</div>
+        <div><span class="cat-badge cat-aspiration">Aspiration</span></div>
+        <div class="angle-insight">The clean-eating community discovered electrolyte powders years before the influencer world caught on. Non-GMO, keto-friendly, coconut water-sourced potassium. This is what that community actually recommends.</div>
+        <div class="angle-hook">"The keto and paleo community figured out electrolyte powder long before the Instagram crowd. Here is what they have actually been using."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Contrarian" data-uniq="Fresh">
+        <div class="angle-name">9. Coconut Water Cannot Hydrate You Alone</div>
+        <div><span class="cat-badge cat-contrarian">Contrarian</span></div>
+        <div class="angle-insight">Plain coconut water contains only 30mg sodium. Sweat contains 500-1,500mg sodium per hour. The "nature's sports drink" claim is incomplete. This product adds what coconut water is missing.</div>
+        <div class="angle-hook">"Coconut water has 30mg of sodium. You lose 1,500mg per hour working out. That is why it never fixed your cramps."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Contrarian" data-uniq="Fresh">
+        <div class="angle-name">10. Your Sports Drink Is Sugar Water</div>
+        <div><span class="cat-badge cat-contrarian">Contrarian</span></div>
+        <div class="angle-insight">A standard Gatorade has 34g of sugar. The glycemic spike triggers insulin, which causes a secondary energy crash. Zero-sugar electrolyte powder replaces what sugar was masking.</div>
+        <div class="angle-hook">"There are 34 grams of sugar in a Gatorade. The energy you feel is a spike. What comes after is a crash. This has zero sugar."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Contrarian" data-uniq="Fresh">
+        <div class="angle-name">11. Stevia Is Not the Answer Either</div>
+        <div><span class="cat-badge cat-contrarian">Contrarian</span></div>
+        <div class="angle-insight">Most "healthy" electrolytes use stevia to replace sugar. Research links stevia to gut microbiome disruption and altered insulin signaling. This product uses no sweetener at all.</div>
+        <div class="angle-hook">"Most clean electrolytes just swapped sugar for stevia. Emerging research shows stevia disrupts gut bacteria. There is a better option."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Contrarian" data-uniq="Fresh">
+        <div class="angle-name">12. More Water Makes It Worse</div>
+        <div><span class="cat-badge cat-contrarian">Contrarian</span></div>
+        <div class="angle-insight">Overhydrating without electrolytes flushes sodium out of cells, worsening dehydration at the cellular level. Drinking more plain water can literally make you more depleted.</div>
+        <div class="angle-hook">"Drinking too much plain water when you are already electrolyte-depleted makes it worse. Your cells need sodium to absorb anything. Here is why."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Fear" data-uniq="Fresh">
+        <div class="angle-name">13. The Headache Signal</div>
+        <div><span class="cat-badge cat-fear">Fear</span></div>
+        <div class="angle-insight">By the time a headache appears, the body is already 2% dehydrated and cognitive function has dropped 10-15%. The headache is a late warning, not an early one.</div>
+        <div class="angle-hook">"When you get a headache, your body is already 2% dehydrated. Cognitive function has already dropped. It is not a warning -- it is a report."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Fear" data-uniq="Twist">
+        <div class="angle-name">14. Keto Dehydration Nobody Warns You About</div>
+        <div><span class="cat-badge cat-fear">Fear</span></div>
+        <div class="angle-insight">Low-carb diets flush water and electrolytes alongside glycogen. Keto flu, brain fog, and cramps are electrolyte depletion, not carb withdrawal. This product solves keto flu at the root.</div>
+        <div class="angle-hook">"Keto flu is not carb withdrawal. It is electrolyte depletion. Your body dumps sodium and potassium when you cut carbs. This fixes it."</div>
+        <div><span class="badge badge-twist">Twist 1/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Fear" data-uniq="Fresh">
+        <div class="angle-name">15. The Compounding Cost of Under-Hydration</div>
+        <div><span class="cat-badge cat-fear">Fear</span></div>
+        <div class="angle-insight">Poor cellular hydration means slower recovery, worse workout adaptation, more cortisol, and poorer sleep quality. What feels like a minor inconvenience compounds into slower progress over months.</div>
+        <div class="angle-hook">"Every day you are slightly dehydrated at the cellular level, your recovery is slower, your workouts adapt less, and you sleep worse. It compounds."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Fear" data-uniq="Fresh">
+        <div class="angle-name">16. Morning Hydration Window</div>
+        <div><span class="cat-badge cat-fear">Fear</span></div>
+        <div class="angle-insight">After 7-8 hours of sleep without water, waking dehydration is the default state. Coffee as the first beverage dehydrates further. A morning electrolyte drink corrects the overnight deficit before caffeine compounds it.</div>
+        <div class="angle-hook">"You wake up dehydrated. Then you drink coffee -- a diuretic. By 9am you are running on a deficit that compounds all day. Fix it in 30 seconds."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Social" data-uniq="Twist">
+        <div class="angle-name">17. 2,455 Label-Readers Found It</div>
+        <div><span class="cat-badge cat-social">Social Proof</span></div>
+        <div class="angle-insight">2,455 reviews from people who read ingredient labels before buying. 4.2 stars from a crowd that rejected LMNT and Liquid IV for their additives and found this.</div>
+        <div class="angle-hook">"2,455 people who read every ingredient label before buying -- and rated this 4.2 stars. These are not impulse buyers."</div>
+        <div><span class="badge badge-twist">Twist 1/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Social" data-uniq="Crowded">
+        <div class="angle-name">18. What Trainers Actually Use</div>
+        <div><span class="cat-badge cat-social">Social Proof</span></div>
+        <div class="angle-insight">Personal trainers and performance coaches do not use branded sports drinks for personal hydration. They use electrolyte powders with clean ratios. This is what that community reaches for.</div>
+        <div class="angle-hook">"Trainers sell sports drinks to clients. They drink electrolyte powder themselves. Here is what they actually use after their own sessions."</div>
+        <div><span class="badge badge-crowded">Crowded 4/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Social" data-uniq="Fresh">
+        <div class="angle-name">19. The Switcher Story</div>
+        <div><span class="cat-badge cat-social">Social Proof</span></div>
+        <div class="angle-insight">Real customer journey: tried LMNT (too salty), Liquid IV (too sweet), plain coconut water (good but impractical). Finally found coconut water-based electrolyte powder as the combination that solved all three problems.</div>
+        <div class="angle-hook">"LMNT: too salty. Liquid IV: too sweet. Plain coconut water: $8 a day and you still cramped. Then she found this -- and stopped trying everything else."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+      <div class="angle-row" data-cat="Social" data-uniq="Fresh">
+        <div class="angle-name">20. The Stocked-Up Signal</div>
+        <div><span class="cat-badge cat-social">Social Proof</span></div>
+        <div class="angle-insight">Demand-proof angle. Customers who stock up on multiples before a sell-out signal a product that overdelivers. The "bought extra before it ran out" testimonial is more credible than a review.</div>
+        <div class="angle-hook">"When someone buys three at once because they are scared of it selling out -- that is the review that actually means something."</div>
+        <div><span class="badge badge-fresh">Fresh 0/42</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Macro Angles -->
+  <div class="section">
+    <div class="section-title">Macro-Angles (Seasonal + Evergreen)</div>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <h4>Summer Heat (June-August)</h4>
+        <p>Primary selling season. Activate 2 weeks before peak heat. Angle: "Heat amplifies electrolyte loss by 3x. Your water routine needs an upgrade before the summer dehydration spiral starts." Best timing: Father's Day week and Independence Day.</p>
+      </div>
+      <div class="macro-card">
+        <h4>New Year Reset (January)</h4>
+        <p>"Before you buy the gym membership, fix your hydration. No workout routine works on a dehydrated body." Activate Jan 2-15. Positions electrolytes as the unsexy but essential foundation of every health resolution.</p>
+      </div>
+      <div class="macro-card">
+        <h4>BFCM Bulk Buy (November)</h4>
+        <p>139 servings = 4-5 months for most users. Frame as the smart pre-buy before price changes. "Stock up at the year's lowest price. 139 servings at $0.29 each -- versus $1.50/serving everywhere else." Drives AOV.</p>
+      </div>
+      <div class="macro-card">
+        <h4>Mother's Day (May)</h4>
+        <p>Active moms who push through tired and dehydrated. "She takes care of everyone. This takes 30 seconds and makes sure she is actually hydrated for the day." UGC gifting angle from adult children.</p>
+      </div>
+      <div class="macro-card">
+        <h4>Restock / Sold Out Event</h4>
+        <p>Leverage the "stocked up before sold out" TikTok signal. "Back in stock -- and going fast again. 139 servings, $0.29 each. Same formula that sold out last month." Activates FOMO without a discount.</p>
+      </div>
+      <div class="macro-card">
+        <h4>Evergreen Milestone</h4>
+        <p>"X bottles shipped to people who got tired of drinking water that was not actually hydrating them." Builds trust through volume. Pair with the Water Trap angle for maximum conversion on cold traffic.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Research Notes -->
+  <div class="section">
+    <div class="section-title">Research Notes</div>
+    <div class="research-grid">
+      <div class="research-col">
+        <h4>Top Pain Points (Verified in Research)</h4>
+        <ul>
+          <li>Drinking water all day but still feeling tired, foggy, or crampy</li>
+          <li>LMNT too salty (1,000mg sodium is too much for non-athletes), too expensive ($1.50/serving)</li>
+          <li>Liquid IV too sweet -- stevia and sucralose aftertaste widely reported</li>
+          <li>Plain coconut water insufficient sodium for athletic hydration (30mg vs 500-1,500mg lost/hr)</li>
+          <li>3pm energy crash blamed on sleep or caffeine, but electrolyte depletion is a primary driver</li>
+          <li>Muscle cramps after workouts despite consistent water intake</li>
+          <li>Powder clumping in storage; dissolution complaints specific to this ASIN</li>
+          <li>Coconut water laxative effect (loose stools from concentrated coconut water)</li>
+        </ul>
+      </div>
+      <div class="research-col">
+        <h4>Top Benefits (Verified in Research)</h4>
+        <ul>
+          <li>Natural potassium source (1,000mg from coconut water -- meaningful for cramp prevention)</li>
+          <li>Sugar-free: keto-friendly, diabetic-friendly, no spike-and-crash cycle</li>
+          <li>Clean ingredient label: non-GMO, no artificial sweeteners, no fillers</li>
+          <li>High serving count (139 servings/$39.95 = $0.29/serving vs $1.50 LMNT average)</li>
+          <li>Post-workout and post-illness recovery (effective for sweat, illness, heat)</li>
+          <li>Coconut water taste profile -- familiar, pleasant, naturally lemon-raspberry</li>
+          <li>Works for daily hydration, not just athletic use (positions as an everyday product)</li>
+        </ul>
+      </div>
+    </div>
+    <div style="margin-top:20px">
+      <h4 style="font-size:14px;font-weight:700;color:#1e293b;margin-bottom:12px">Competitor Angles Being Differentiated From (N=42)</h4>
+      <div class="competitor-list">
+        <div class="comp-item">
+          <span class="badge badge-crowded">Crowded ~25/42</span>
+          <span class="comp-angle">Standard electrolyte positioning / daily wellness / athletic recovery -- the overwhelming majority of competitor ads use generic hydration and performance language with no specific emotional hook or product differentiator.</span>
+        </div>
+        <div class="comp-item">
+          <span class="badge badge-crowded">Crowded 4-5/42</span>
+          <span class="comp-angle">Clean/no junk/real ingredients -- FlavCity, Skinny Mixes, Fringe, QNCH, Clean Nutrition all use ingredient transparency as their primary angle. Not unique territory.</span>
+        </div>
+        <div class="comp-item">
+          <span class="badge badge-crowded">Crowded 3-4/42</span>
+          <span class="comp-angle">Social proof by scale -- PureBulk (46,000+ reviews), HydroMate (1M customers), PURE Sports Nutrition. Scale-based trust signals are contested ground.</span>
+        </div>
+        <div class="comp-item">
+          <span class="badge badge-twist">Light 1/42</span>
+          <span class="comp-angle">Coconut water positioning -- FINAFLEX COCO IV uses coconut but frames it as "balanced + coconut." Does not challenge plain coconut water myth or own the coconut water upgrade story.</span>
+        </div>
+        <div class="comp-item">
+          <span class="badge badge-twist">Light 1/42</span>
+          <span class="comp-angle">GLP-1 hydration -- one content page (? classification) targets Ozempic/Wegovy users. The content angle is unowned territory for a direct product ad.</span>
+        </div>
+        <div class="comp-item">
+          <span class="badge badge-fresh">Fresh 0/42</span>
+          <span class="comp-angle">Water trap insight, 3pm crash, coconut water sodium math, sports drink sugar attack, overhydration paradox, headache signal, morning hydration window -- completely uncontested territory across all 42 competitor ads.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="section">
+    <div class="section-title">Uniqueness Legend</div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#065f46"></div><strong>Fresh:</strong> 0 competitors use this angle. Strongest differentiation. Top 3 should be Fresh.</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#92400e"></div><strong>Twist:</strong> Competitors touch the same pain or benefit but frame it differently. This adds a fresh differentiator.</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#991b1b"></div><strong>Crowded:</strong> Multiple competitors already run essentially this angle. Differentiate further before using.</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#64748b"></div>Count format: "Fresh 0/42" means 0 of 42 competitor ads use this angle. N=42 = 41 Meta Ad Winners + 1 TikTok Winner for search term "electrolyte powder".</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function filterAngles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#anglesGrid .angle-row').forEach(row => {
+    if (cat === 'all') { row.style.display = ''; return; }
+    if (cat === 'Fresh') { row.style.display = row.dataset.uniq === 'Fresh' ? '' : 'none'; return; }
+    row.style.display = row.dataset.cat === cat ? '' : 'none';
+  });
+}
+</script>
+
+</body>
+</html>

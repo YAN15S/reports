@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Winners: ROUTINE Morning Daily Hydration — 2026-07-01</title>
+<style>
+  :root {
+    --slate: #1e293b;
+    --accent: #3b82f6;
+    --accent-light: #dbeafe;
+    --green: #059669;
+    --amber: #d97706;
+    --red: #dc2626;
+    --gray-50: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-500: #64748b;
+    --gray-700: #334155;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--gray-50); color: var(--gray-700); }
+  .top-bar { height: 4px; background: var(--slate); }
+  header { background: #fff; border-bottom: 1px solid var(--gray-200); padding: 28px 40px 24px; }
+  header h1 { font-size: 22px; font-weight: 700; color: var(--slate); }
+  header .subtitle { font-size: 14px; color: var(--gray-500); margin-top: 4px; }
+  header .date { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 20px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .stat-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 18px 20px; }
+  .stat-card .label { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--gray-500); margin-bottom: 6px; }
+  .stat-card .value { font-size: 28px; font-weight: 700; color: var(--slate); }
+  .stat-card .sub { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+  .notice-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 8px; padding: 20px 24px; margin-bottom: 32px; }
+  .notice-box h3 { font-size: 14px; font-weight: 600; color: #92400e; margin-bottom: 8px; }
+  .notice-box p { font-size: 13px; color: #78350f; line-height: 1.6; }
+  .section-title { font-size: 16px; font-weight: 600; color: var(--slate); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--gray-200); }
+  .section-sub { font-size: 12px; color: var(--gray-500); font-weight: 400; margin-left: 8px; }
+  .brand-grid { display: grid; gap: 14px; margin-bottom: 40px; }
+  .brand-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 18px 22px; display: grid; grid-template-columns: 36px 1fr auto; gap: 14px; align-items: center; }
+  .brand-card .rank { font-size: 18px; font-weight: 700; color: var(--gray-500); text-align: center; }
+  .brand-card .info h4 { font-size: 14px; font-weight: 600; color: var(--slate); margin-bottom: 3px; }
+  .brand-card .info .meta { font-size: 12px; color: var(--gray-500); }
+  .brand-card .info a { color: var(--accent); text-decoration: none; font-size: 12px; }
+  .brand-card .info a:hover { text-decoration: underline; }
+  .brand-card .score-wrap { text-align: center; }
+  .brand-card .score-wrap .score { font-size: 22px; font-weight: 700; color: var(--slate); }
+  .brand-card .score-wrap .slabel { font-size: 11px; color: var(--gray-500); }
+  .rows-badge { display: inline-block; background: var(--accent-light); color: var(--accent); font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; margin-left: 8px; }
+  .signal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .signal-card { background: #fff; border: 1px solid var(--gray-200); border-radius: 8px; padding: 16px 18px; border-top: 3px solid var(--accent); }
+  .signal-card .prod { font-size: 13px; font-weight: 600; color: var(--slate); margin-bottom: 4px; }
+  .signal-card .angle { font-size: 12px; color: var(--gray-500); margin-bottom: 8px; font-style: italic; }
+  .signal-card .score-row { display: flex; align-items: center; gap: 10px; }
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 10px; }
+  .badge-contrarian { background: #fef3c7; color: #92400e; }
+  .badge-pain { background: #fee2e2; color: #991b1b; }
+  .badge-aspiration { background: #dcfce7; color: #166534; }
+  .badge-social { background: #ede9fe; color: #5b21b6; }
+  .badge-fear { background: #ffedd5; color: #9a3412; }
+  .score-pill { background: var(--gray-100); border-radius: 12px; padding: 2px 10px; font-size: 12px; font-weight: 600; color: var(--slate); }
+  .lander-link { color: var(--accent); text-decoration: none; font-size: 11px; }
+  .lander-link:hover { text-decoration: underline; }
+  .verdict-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 32px; }
+  .verdict-table th { background: var(--gray-100); text-align: left; padding: 8px 14px; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--gray-500); }
+  .verdict-table td { padding: 10px 14px; border-bottom: 1px solid var(--gray-200); vertical-align: top; }
+  .verdict-table tr:last-child td { border-bottom: none; }
+  .v-w { color: var(--green); font-weight: 700; }
+  .v-wish { color: var(--amber); font-weight: 700; }
+  .v-bang { color: var(--accent); font-weight: 700; }
+  .v-q { color: var(--gray-500); font-weight: 700; }
+  .v-kill { color: var(--red); font-weight: 700; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 32px; font-size: 12px; }
+  .leg-item { display: flex; align-items: center; gap: 6px; }
+  .leg-dot { width: 10px; height: 10px; border-radius: 50%; }
+  footer { background: #fff; border-top: 1px solid var(--gray-200); padding: 20px 40px; font-size: 12px; color: var(--gray-500); }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<header>
+  <h1>Other Winners Report: ROUTINE Morning Daily Hydration</h1>
+  <div class="subtitle">Meta Ads spy run — "!" rows only (other winning DTC products found alongside the reference product)</div>
+  <div class="date">Published 2026-07-01 | trace_run_id: audwin-routine-07-01-2026-130610 | Source: Meta Ad Winners DB</div>
+</header>
+<div class="container">
+
+  <!-- Summary Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="label">Total Rows Classified</div>
+      <div class="value">109</div>
+      <div class="sub">ROUTINE Morning Daily Hydration</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Reference Product Matches</div>
+      <div class="value">4</div>
+      <div class="sub">w (exact match)</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Close Matches</div>
+      <div class="value">3</div>
+      <div class="sub">w-ish (adjacent)</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Other Winners (!)</div>
+      <div class="value">58</div>
+      <div class="sub">Different DTC products, winning ads</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Unresolvable</div>
+      <div class="value">12</div>
+      <div class="sub">? (no lander URL)</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Kills</div>
+      <div class="value">32</div>
+      <div class="sub">Wrong product or market</div>
+    </div>
+  </div>
+
+  <!-- Cluster Notice -->
+  <div class="notice-box">
+    <h3>No lander clusters reached the 3-row threshold</h3>
+    <p>The Other Winners report clusters "!" rows by unique lander URL appearing in 3 or more rows. For this search term, no single "!" lander URL appeared 3+ times. The highest-frequency "!" landers were: <strong>shopeverly.shop/pages/tired-of-hair-shedding...</strong> (2 rows), <strong>try.shopeverly.shop/esl</strong> (2 rows), and <strong>nipandfab.com/products/enhanced-uv-protection-kit</strong> (2 rows). The remaining 55 "!" landers each appeared in exactly 1 row. Brand-level signal: Everly (pumpkin seed oil) appeared across 5 rows on 3 different lander URLs; Nip+Fab appeared across 3 rows on 2 different URLs; Obagi Medical appeared across 3 rows on 3 different URLs. This report surfaces the top-scoring "!" signals as context even though no tier thresholds are met.</p>
+  </div>
+
+  <!-- Brand-Level Signals (brands appearing 2+ rows, even across different URLs) -->
+  <div class="section-title">Brand-Level Signals <span class="section-sub">brands appearing in 2+ rows (different landers count)</span></div>
+  <div class="brand-grid">
+    <div class="brand-card">
+      <div class="rank">1</div>
+      <div class="info">
+        <h4>Everly (Pumpkin Seed Oil Softgels) <span class="rows-badge">5 rows</span></h4>
+        <div class="meta">5 ads across 3 lander variants | Women's bladder, sleep, hair health</div>
+        <a href="https://shopeverly.shop/pages/tired-of-hair-shedding-sleepless-nights-and-hair-loss" target="_blank">shopeverly.shop</a> &nbsp;|&nbsp; <a href="https://try.shopeverly.shop/esl" target="_blank">try.shopeverly.shop/esl</a> &nbsp;|&nbsp; <a href="https://try.shopeverly.shop/5-reasons-v1-cc" target="_blank">/5-reasons-v1-cc</a>
+      </div>
+      <div class="score-wrap">
+        <div class="score">30</div>
+        <div class="slabel">top score</div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="rank">2</div>
+      <div class="info">
+        <h4>Nip+Fab (Skincare Routines + UV Kit) <span class="rows-badge">3 rows</span></h4>
+        <div class="meta">3 ads across 2 lander URLs | UK skincare brand, celebrity influencer</div>
+        <a href="https://www.nipandfab.com/pages/complete-skincare-routines" target="_blank">Complete Skincare Routines</a> &nbsp;|&nbsp; <a href="https://www.nipandfab.com/products/enhanced-uv-protection-kit" target="_blank">Enhanced UV Protection Kit</a>
+      </div>
+      <div class="score-wrap">
+        <div class="score">54</div>
+        <div class="slabel">top score</div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="rank">3</div>
+      <div class="info">
+        <h4>Obagi Medical (Skincare Collection) <span class="rows-badge">3 rows</span></h4>
+        <div class="meta">3 ads across 3 lander URLs | Medical-grade DTC skincare, multiple influencers</div>
+        <a href="https://www.obagi.com/collections/bestsellers" target="_blank">Bestsellers</a> &nbsp;|&nbsp; <a href="https://www.obagi.com/collections/lip-therapy" target="_blank">Lip Therapy</a> &nbsp;|&nbsp; <a href="https://www.obagi.com/products/nu-gen-cellular-renewal-serum" target="_blank">Nu-Gen Serum</a>
+      </div>
+      <div class="score-wrap">
+        <div class="score">17</div>
+        <div class="slabel">top score</div>
+      </div>
+    </div>
+    <div class="brand-card">
+      <div class="rank">4</div>
+      <div class="info">
+        <h4>Correxiko (Marine Collagen) <span class="rows-badge">2 rows</span></h4>
+        <div class="meta">2 ads across 2 lander URLs | UK collagen brand, TV star Lisa Snowdon</div>
+        <a href="https://correxiko.com/collections/collagen-capsules/products" target="_blank">Collagen Capsules</a> &nbsp;|&nbsp; <a href="https://correxiko.com/collections/transformation-sale" target="_blank">Transformation Sale</a>
+      </div>
+      <div class="score-wrap">
+        <div class="score">10</div>
+        <div class="slabel">top score</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top ! Signals by Score -->
+  <div class="section-title">Top "!" Signals by Winner Score <span class="section-sub">highest-scoring single-row other winners</span></div>
+  <div class="signal-grid">
+    <div class="signal-card">
+      <div class="prod">Complete Skincare Routines by Nip+Fab</div>
+      <div class="angle">"Routine Results: celebrity 2-month transformation drives trust"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 54</span>
+        <span class="badge badge-social">Social Proof</span>
+        <a class="lander-link" href="https://www.nipandfab.com/pages/complete-skincare-routines" target="_blank">nipandfab.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Face Nak'd Clear Skin Glo Kit by FacNak'd</div>
+      <div class="angle">"Clean Slate: glow requires a perfectly clean canvas"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 52</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="https://www.facnakd.com/collections/kits/products/facnak-d-clear-skin-glo-kit" target="_blank">facnakd.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Yon-Ka Paris Men's Skincare</div>
+      <div class="angle">"French Botanical Science: outperforms trend-driven routines"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 51</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="https://us.yonka.com/" target="_blank">us.yonka.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Multi-Collagen Superblend by Elavate</div>
+      <div class="angle">"Joint Pain Secret: collagen as the missing key after 40"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 51</span>
+        <span class="badge badge-pain">Pain</span>
+        <a class="lander-link" href="https://elavate.com/products/collagen" target="_blank">elavate.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Aloe Vera Cosmetics (AU Natural Skincare)</div>
+      <div class="angle">"Natural Skincare: dermatologist-formulated aloe for chronic conditions"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 51</span>
+        <span class="badge badge-social">Social Proof</span>
+        <a class="lander-link" href="https://aloeveracosmetics.com.au/" target="_blank">aloeveracosmetics.com.au</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Hydrolyzed Collagen Peptides by Nature's Pantry</div>
+      <div class="angle">"One Scoop Solution: hair, skin, joints in one daily scoop"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 51</span>
+        <span class="badge badge-aspiration">Aspiration</span>
+        <a class="lander-link" href="https://www.naturespantrysupplies.com.au/collections/hydrolyzed-collagen" target="_blank">naturespantrysupplies.com.au</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">PRIMALS Filtered Showerhead</div>
+      <div class="angle">"Shower Sabotage: unfiltered water undoes skincare before it can work"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 38</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="https://try.primals.shop/" target="_blank">try.primals.shop</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Protein Facial Set by KORRES</div>
+      <div class="angle">"Skin Protein Theory: skin needs protein like muscles do"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 33</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="https://www.korres.com/products/protein-facial-set" target="_blank">korres.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Pumpkin Seed Oil Softgels by Everly</div>
+      <div class="angle">"Nocturia Relief: waking multiple times nightly addressed naturally"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 30</span>
+        <span class="badge badge-pain">Pain</span>
+        <a class="lander-link" href="https://shopeverly.shop/pages/tired-of-hair-shedding-sleepless-nights-and-hair-loss" target="_blank">shopeverly.shop</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Sun Powder by Dr. Teo Soleymani</div>
+      <div class="angle">"Inside-Out Sun Defense: internal UV supplement adds missing layer"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 18</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="https://drinksunpowder.com/pages/lp126" target="_blank">drinksunpowder.com</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">E27 Liquid Collagen by SpoiledBrain</div>
+      <div class="angle">"Try Before Buy: full-size bottle removes commitment risk"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 18</span>
+        <span class="badge badge-contrarian">Contrarian</span>
+        <a class="lander-link" href="http://lnk.to/Collagen" target="_blank">lnk.to/Collagen</a>
+      </div>
+    </div>
+    <div class="signal-card">
+      <div class="prod">Marine Collagen Coffee by Vital You</div>
+      <div class="angle">"Wake Up Beautiful: morning coffee + collagen in one cup"</div>
+      <div class="score-row">
+        <span class="score-pill">Score 13</span>
+        <span class="badge badge-aspiration">Aspiration</span>
+        <a class="lander-link" href="https://www.vitalyouare.com/collections/collagen-coffee" target="_blank">vitalyouare.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reference Product (w) Findings -->
+  <div class="section-title">Reference Product Matches (w) <span class="section-sub">morning daily hydration supplements confirmed</span></div>
+  <table class="verdict-table">
+    <thead>
+      <tr><th>Row</th><th>Brand / Product</th><th>Lander</th><th>Score</th><th>Price</th><th>Key Angle</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>713</td>
+        <td><span class="v-w">w</span> Waterboy Daily Hydration</td>
+        <td><a href="https://www.waterboy.com/products/daily-hydration" target="_blank" class="lander-link">waterboy.com/daily-hydration</a></td>
+        <td>51</td>
+        <td>$24.99</td>
+        <td>Morning Cheat Code [Aspiration]</td>
+      </tr>
+      <tr>
+        <td>721, 740, 741</td>
+        <td><span class="v-w">w</span> Watercolor Hydration Effervescent Tablets</td>
+        <td><a href="https://watercolor-hydration.com/products/skincare-formula-effervescent-tablets" target="_blank" class="lander-link">watercolor-hydration.com</a></td>
+        <td>38, 22, 22</td>
+        <td></td>
+        <td>Inside-Out Skincare [Contrarian]</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- w-ish -->
+  <div class="section-title">Close Matches (w-ish) <span class="section-sub">adjacent hydration products</span></div>
+  <table class="verdict-table">
+    <thead>
+      <tr><th>Row</th><th>Brand / Product</th><th>Lander</th><th>Score</th><th>Why w-ish</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>728</td>
+        <td><span class="v-wish">w-ish</span> Cadence 24-Hour Hydration Sachets</td>
+        <td><a href="https://us.usecadence.com/products/sachet-stack-variety-pack" target="_blank" class="lander-link">usecadence.com</a></td>
+        <td>29</td>
+        <td>Positioned as 24-hour system, not morning-specific</td>
+      </tr>
+      <tr>
+        <td>761</td>
+        <td><span class="v-wish">w-ish</span> Drink Magna Triple Magnesium Electrolyte</td>
+        <td><a href="https://www.drinkmagna.com/pages/try-island-punch" target="_blank" class="lander-link">drinkmagna.com</a></td>
+        <td>16</td>
+        <td>Primarily magnesium supplement, hydration is secondary angle</td>
+      </tr>
+      <tr>
+        <td>797</td>
+        <td><span class="v-wish">w-ish</span> Waterboy Weekend Recovery</td>
+        <td><a href="https://www.waterboy.com/products/weekend-recovery" target="_blank" class="lander-link">waterboy.com/weekend-recovery</a></td>
+        <td>10</td>
+        <td>Same DTC brand (Waterboy) but recovery formula, not morning routine</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Verdict Summary -->
+  <div class="section-title">Full Verdict Breakdown</div>
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--green)"></div> <strong>w</strong> — Reference product match (morning daily hydration supplement)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--amber)"></div> <strong>w-ish</strong> — Adjacent category (hydration-adjacent but different form/angle)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--accent)"></div> <strong>!</strong> — Other DTC winner (different product, winning ads)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--gray-500)"></div> <strong>?</strong> — Unresolvable (no lander URL to confirm product)</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--red)"></div> <strong>kill</strong> — Wrong product or market</div>
+  </div>
+  <table class="verdict-table">
+    <thead><tr><th>Verdict</th><th>Count</th><th>% of Total</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td><span class="v-w">w</span></td><td>4</td><td>3.7%</td><td>Waterboy Daily Hydration (1 row), Watercolor Hydration Effervescent (3 rows)</td></tr>
+      <tr><td><span class="v-wish">w-ish</span></td><td>3</td><td>2.8%</td><td>Cadence sachets, Drink Magna, Waterboy Weekend Recovery</td></tr>
+      <tr><td><span class="v-bang">!</span></td><td>58</td><td>53.2%</td><td>58 unique DTC products across beauty, collagen, skincare, supplement categories</td></tr>
+      <tr><td><span class="v-q">?</span></td><td>12</td><td>11.0%</td><td>No lander URL; cannot classify from ad copy alone</td></tr>
+      <tr><td><span class="v-kill">kill</span></td><td>32</td><td>29.4%</td><td>Wrong product (foot cream, dog food, etc.) or wrong market (India, Nigeria, Philippines)</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Scaling Notes -->
+  <div class="notice-box" style="background:#eff6ff; border-color:#bfdbfe;">
+    <h3 style="color:#1e40af;">Scaling Notes for the 38-term Back-fill</h3>
+    <p style="color:#1e3a8a;">1. <strong>High "!" rate (53%):</strong> This search term is generic enough that Meta captures a wide net of DTC brands. Expect similarly high "!" and "kill" rates on other broad terms. Narrow terms (brand + product) will flip the ratio toward "w."<br>
+    2. <strong>No Product DB mapping:</strong> "ROUTINE Morning Daily Hydration" matched no Product DB row by Notes term or Name. The 4 "w" rows cannot trigger a Meta Ad Ws write-back until a DB row is created or mapped. Flag for CEO before back-fill.<br>
+    3. <strong>14 no-lander rows (13%):</strong> Classified "?" by rule. At scale, 13% per term will leave a significant unresolvable tail. Consider scraping Ad Library URLs as a secondary source.<br>
+    4. <strong>Wrong-market kills:</strong> 11 of 32 kills are from non-US markets (India, Nigeria, Philippines, Sri Lanka). The spy tool is capturing non-geo-targeted ads. At scale, add a market filter step before fan-out.</p>
+  </div>
+
+</div>
+<footer>
+  Generated by Audit Winners DB (Agent 6) | trace_run_id: audwin-routine-07-01-2026-130610 | ROUTINE Morning Daily Hydration | 109 rows | 2026-07-01
+</footer>
+</body>
+</html>

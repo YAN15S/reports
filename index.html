@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Agent Reports</title>
 <style>
-  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --blue:#2563eb; }
+  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff; --blue:#2563eb; --red:#b91c1c; --green:#065f46; }
   * { box-sizing:border-box; }
   body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
   .accent { height:6px; background:var(--slate); }
   header { background:#fff; border-bottom:1px solid var(--line); padding:24px 20px; }
-  .wrap { max-width:920px; margin:0 auto; }
+  .wrap { max-width:920px; margin:0 auto; display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
   h1 { margin:0 0 4px; font-size:22px; }
   .sub { color:var(--muted); font-size:14px; }
   .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:18px auto 0; max-width:920px; padding:0 20px; }
@@ -19,22 +19,72 @@
   .filters::-webkit-scrollbar { display:none; }
   .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 11px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; flex-shrink:0; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
+  .btn { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 12px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .btn:hover { border-color:var(--slate); }
+  .btn:disabled { opacity:.5; cursor:default; }
+  #manageToggle.on { background:var(--slate); color:#fff; border-color:var(--slate); }
   main { max-width:920px; margin:18px auto 60px; padding:0 20px; }
   .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+  .card.arch { opacity:.6; }
   .card .t { font-weight:600; font-size:15px; }
   .card .t a { color:var(--ink); text-decoration:none; }
   .card .t a:hover { color:var(--blue); }
   .card .m { color:var(--muted); font-size:12px; margin-top:3px; }
+  .actions { display:flex; gap:6px; flex-shrink:0; }
+  .actions .btn { padding:5px 10px; font-size:12px; }
+  .actions .del { color:var(--red); border-color:#fecaca; }
+  .actions .del:hover { border-color:var(--red); }
   .badge { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; margin-left:8px; vertical-align:middle; }
   .badge.winners { background:#ecfdf5; color:#065f46; }
   .badge.angles { background:#fef3c7; color:#92400e; }
   .badge.vas { background:#f0f4ff; color:#1e40af; }
+  .badge.arch { background:#f1f5f9; color:#475569; }
   .empty { color:var(--muted); text-align:center; padding:40px 0; }
+  .panel { max-width:920px; margin:12px auto 0; padding:0 20px; }
+  .panel .box { background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+  .panel .row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .panel input { flex:1; min-width:180px; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
+  .panel .hint { color:var(--muted); font-size:12px; margin-top:8px; line-height:1.5; }
+  .panel .hint a { color:var(--blue); }
+  .who { color:var(--green); font-size:13px; font-weight:600; }
+  .msg { font-size:13px; margin-top:8px; }
+  .msg.err { color:var(--red); }
+  .msg.ok { color:var(--green); }
+  .hidden { display:none; }
 </style>
 </head>
 <body>
 <div class="accent"></div>
-<header><div class="wrap"><h1>Agent Reports</h1></div></header>
+<header><div class="wrap">
+  <div><h1>Agent Reports</h1></div>
+  <button id="manageToggle" class="btn">Manage</button>
+</div></header>
+
+<div class="panel hidden" id="panel">
+  <div class="box">
+    <div id="lockView">
+      <div class="row">
+        <input id="tok" type="password" placeholder="Paste GitHub token to manage" autocomplete="off">
+        <button id="unlock" class="btn">Unlock</button>
+        <button id="cancel" class="btn">Cancel</button>
+      </div>
+      <div class="hint">
+        Used only in this browser tab and never saved (it is gone when you refresh). Needs a
+        <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">GitHub token</a>
+        with <strong>repo</strong> access to this account. Managing lets you archive (hide, reversible) or delete (permanent) reports.
+      </div>
+      <div class="msg err hidden" id="lockMsg"></div>
+    </div>
+    <div id="unlockedView" class="hidden">
+      <div class="row" style="justify-content:space-between;">
+        <span class="who" id="who"></span>
+        <button id="lock" class="btn">Done</button>
+      </div>
+      <div class="msg hidden" id="actMsg"></div>
+    </div>
+  </div>
+</div>
+
 <div class="controls">
   <input id="q" type="search" placeholder="Filter by title...">
   <div class="filters" id="filters">
@@ -43,36 +93,177 @@
     <button data-type="angles">Angles</button>
     <button data-type="vas">VAs</button>
     <button data-type="other">Other</button>
+    <button data-type="archived">Archived</button>
   </div>
 </div>
 <main id="list"><div class="empty">Loading...</div></main>
+
 <script>
+  const API = "https://api.github.com";
+  const OWNER = location.hostname.split(".")[0];
+  const REPO = (location.pathname.split("/").filter(Boolean)[0]) || "reports";
+
   let REPORTS = [], typeFilter = "all";
-  const list = document.getElementById("list"), q = document.getElementById("q");
+  let TOKEN = null, LOGIN = null, manage = false, busy = false;
+
+  const $ = id => document.getElementById(id);
+  const list = $("list"), q = $("q");
+
+  function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function b64e(str){ return btoa(unescape(encodeURIComponent(str))); }
+  function b64d(str){ return decodeURIComponent(escape(atob(str))); }
+
   function render() {
     const term = q.value.trim().toLowerCase();
-    const rows = REPORTS.filter(r =>
-      (typeFilter === "all" || (r.type || "other") === typeFilter) &&
-      (!term || (r.title || "").toLowerCase().includes(term)));
+    const wantArch = typeFilter === "archived";
+    const rows = REPORTS.filter(r => {
+      const isArch = !!r.archived;
+      const matches = !term || (r.title || "").toLowerCase().includes(term);
+      if (wantArch) return isArch && matches;
+      return !isArch && (typeFilter === "all" || (r.type || "other") === typeFilter) && matches;
+    });
     if (!rows.length) { list.innerHTML = '<div class="empty">No reports match.</div>'; return; }
     list.innerHTML = rows.map(r => {
       const ty = (r.type || "other");
-      return '<div class="card"><div><div class="t"><a href="' + esc(r.file) + '">' + esc(r.title || r.file) + '</a>' +
-        '<span class="badge ' + ty + '">' + ty + '</span></div><div class="m">' +
-        esc(r.date || "") + '</div></div></div>';
+      const isArch = !!r.archived;
+      const f = esc(r.file);
+      let actions = "";
+      if (manage) {
+        const buttons = isArch
+          ? '<button class="btn" data-act="restore" data-file="' + f + '">Restore</button>'
+          : '<button class="btn" data-act="archive" data-file="' + f + '">Archive</button>';
+        actions = '<div class="actions">' + buttons +
+          '<button class="btn del" data-act="delete" data-file="' + f + '">Delete</button></div>';
+      }
+      return '<div class="card' + (isArch ? ' arch' : '') + '"><div><div class="t"><a href="' + f + '">' +
+        esc(r.title || r.file) + '</a><span class="badge ' + ty + '">' + ty + '</span>' +
+        (isArch ? '<span class="badge arch">archived</span>' : '') + '</div><div class="m">' +
+        esc(r.date || "") + '</div></div>' + actions + '</div>';
     }).join("");
   }
-  function esc(s){ return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-  document.getElementById("filters").addEventListener("click", e => {
+
+  async function loadManifest() {
+    const res = await fetch("manifest.json?t=" + Date.now(), { cache: "no-store" });
+    const d = await res.json();
+    REPORTS = d.reports || [];
+    render();
+  }
+
+  // ---- GitHub API (only used in manage mode, with the pasted token) ----
+  async function api(method, path, body) {
+    const res = await fetch(API + path, {
+      method,
+      headers: { "Authorization": "Bearer " + TOKEN, "Accept": "application/vnd.github+json" },
+      body: body ? JSON.stringify(body) : undefined
+    });
+    const txt = await res.text();
+    const j = txt ? JSON.parse(txt) : {};
+    if (!res.ok) throw new Error(j.message || ("HTTP " + res.status));
+    return j;
+  }
+  async function getManifest() {
+    const j = await api("GET", `/repos/${OWNER}/${REPO}/contents/manifest.json`);
+    return { sha: j.sha, data: JSON.parse(b64d(j.content)) };
+  }
+  async function putManifest(sha, data, note) {
+    await api("PUT", `/repos/${OWNER}/${REPO}/contents/manifest.json`, {
+      message: "manifest: " + note, sha, content: b64e(JSON.stringify(data, null, 2))
+    });
+  }
+  async function setArchived(file, val) {
+    const { sha, data } = await getManifest();
+    const r = (data.reports || []).find(x => x.file === file);
+    if (r) { if (val) r.archived = true; else delete r.archived; }
+    await putManifest(sha, data, (val ? "archive " : "restore ") + file);
+  }
+  async function deleteReport(file) {
+    try {
+      const f = await api("GET", `/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(file)}`);
+      await api("DELETE", `/repos/${OWNER}/${REPO}/contents/${encodeURIComponent(file)}`,
+        { message: "delete report " + file, sha: f.sha });
+    } catch (e) { /* file may already be gone; still prune the manifest */ }
+    const { sha, data } = await getManifest();
+    data.reports = (data.reports || []).filter(x => x.file !== file);
+    await putManifest(sha, data, "delete " + file);
+  }
+
+  function setMsg(el, text, kind) {
+    el.textContent = text;
+    el.className = "msg" + (kind ? " " + kind : "");
+    el.classList.toggle("hidden", !text);
+  }
+
+  async function doAction(act, file) {
+    if (busy) return;
+    if (act === "delete" && !confirm('Permanently delete "' + file + '"?\nThe live link will stop working. This cannot be undone.')) return;
+    busy = true; render();
+    setMsg($("actMsg"), "Working...", "");
+    try {
+      if (act === "archive") await setArchived(file, true);
+      else if (act === "restore") await setArchived(file, false);
+      else if (act === "delete") await deleteReport(file);
+      await loadManifest();
+      setMsg($("actMsg"), "Done.", "ok");
+    } catch (e) {
+      setMsg($("actMsg"), "Failed: " + e.message, "err");
+    } finally {
+      busy = false; render();
+    }
+  }
+
+  // ---- wiring ----
+  $("manageToggle").addEventListener("click", () => {
+    if (manage) return; // already unlocked; use Done to exit
+    $("panel").classList.toggle("hidden");
+    $("manageToggle").classList.toggle("on", !$("panel").classList.contains("hidden"));
+  });
+  $("cancel").addEventListener("click", () => {
+    $("panel").classList.add("hidden");
+    $("manageToggle").classList.remove("on");
+    setMsg($("lockMsg"), "", "");
+  });
+  $("unlock").addEventListener("click", async () => {
+    const tok = $("tok").value.trim();
+    if (!tok) return;
+    TOKEN = tok;
+    setMsg($("lockMsg"), "Checking token...", "");
+    try {
+      const u = await api("GET", "/user");
+      LOGIN = u.login;
+      manage = true;
+      $("tok").value = "";
+      $("lockView").classList.add("hidden");
+      $("unlockedView").classList.remove("hidden");
+      $("who").textContent = "Managing as " + LOGIN;
+      $("manageToggle").classList.add("on");
+      setMsg($("lockMsg"), "", "");
+      render();
+    } catch (e) {
+      TOKEN = null;
+      setMsg($("lockMsg"), "That token did not work: " + e.message, "err");
+    }
+  });
+  $("lock").addEventListener("click", () => {
+    TOKEN = null; LOGIN = null; manage = false;
+    $("unlockedView").classList.add("hidden");
+    $("lockView").classList.remove("hidden");
+    $("panel").classList.add("hidden");
+    $("manageToggle").classList.remove("on");
+    render();
+  });
+  list.addEventListener("click", e => {
+    const b = e.target.closest("button[data-act]");
+    if (b) doAction(b.dataset.act, b.dataset.file);
+  });
+  $("filters").addEventListener("click", e => {
     if (e.target.tagName !== "BUTTON") return;
     typeFilter = e.target.dataset.type;
     [...e.currentTarget.children].forEach(b => b.classList.toggle("on", b === e.target));
     render();
   });
   q.addEventListener("input", render);
-  fetch("manifest.json").then(r => r.json())
-    .then(d => { REPORTS = d.reports || []; render(); })
-    .catch(() => { list.innerHTML = '<div class="empty">No manifest yet.</div>'; });
+
+  loadManifest().catch(() => { list.innerHTML = '<div class="empty">No manifest yet.</div>'; });
 </script>
 </body>
 </html>

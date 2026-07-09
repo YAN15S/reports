@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Other Winners Report - 2026-07-09</title>
+<style>
+  :root {
+    --slate: #0f172a;
+    --accent: #2563eb;
+    --green: #16a34a;
+    --amber: #d97706;
+    --red: #dc2626;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --muted: #64748b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+  .top-bar { height: 4px; background: linear-gradient(90deg, #0f172a, #2563eb, #0891b2); }
+  .header { background: white; border-bottom: 1px solid var(--border); padding: 28px 40px; }
+  .header h1 { font-size: 1.6rem; font-weight: 700; color: var(--slate); }
+  .header .subtitle { color: var(--muted); margin-top: 4px; font-size: 0.95rem; }
+  .header .date { color: var(--muted); font-size: 0.85rem; margin-top: 8px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+  .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .stat-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-align: center; }
+  .stat-card .value { font-size: 2rem; font-weight: 700; color: var(--slate); }
+  .stat-card .label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .controls { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; align-items: center; }
+  .filter-btn { padding: 6px 14px; border: 1px solid var(--border); border-radius: 20px; background: white; cursor: pointer; font-size: 0.85rem; color: var(--muted); transition: all 0.15s; }
+  .filter-btn.active, .filter-btn:hover { background: var(--slate); color: white; border-color: var(--slate); }
+  .sort-select { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 0.85rem; color: var(--text); background: white; cursor: pointer; }
+  .label-sort { font-size: 0.85rem; color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; }
+  .card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .card-top { height: 4px; }
+  .card-body { padding: 20px; }
+  .card-rank { display: inline-block; background: var(--slate); color: white; font-size: 0.7rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-bottom: 10px; letter-spacing: 0.05em; }
+  .card-brand { font-size: 1rem; font-weight: 700; color: var(--slate); }
+  .card-product { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+  .tier-badge { font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; color: white; }
+  .low-conf-badge { font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+  .metrics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 14px 0; }
+  .metric { background: var(--bg); border-radius: 6px; padding: 8px 10px; }
+  .metric .m-val { font-size: 1.1rem; font-weight: 700; color: var(--slate); }
+  .metric .m-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+  .links { margin-top: 14px; display: flex; flex-direction: column; gap: 6px; }
+  .link-row { display: flex; gap: 8px; align-items: flex-start; }
+  .link-label { font-size: 0.72rem; color: var(--muted); width: 52px; flex-shrink: 0; padding-top: 1px; }
+  .link-url { font-size: 0.8rem; color: var(--accent); text-decoration: none; word-break: break-all; }
+  .link-url:hover { text-decoration: underline; }
+  .search-terms { margin-top: 12px; }
+  .tag { display: inline-block; background: #eff6ff; color: #2563eb; font-size: 0.7rem; padding: 2px 8px; border-radius: 4px; margin: 2px; }
+  .legend { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 40px; }
+  .legend h3 { font-size: 0.9rem; font-weight: 600; color: var(--slate); margin-bottom: 14px; }
+  .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+  .legend-item { display: flex; align-items: center; gap: 10px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .legend-text { font-size: 0.82rem; color: var(--text); }
+  .legend-sub { font-size: 0.75rem; color: var(--muted); }
+  .hidden { display: none; }
+  .source-note { font-size: 0.8rem; color: var(--muted); margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="header">
+  <h1>Other Winners Report</h1>
+  <div class="subtitle">Multi-product run: Lions Mane, L-Theanine+GABA, NMN, Glutathione, NAD+, Gut Health 4-in-1, Baby Thermometer, Baby Rocker, Changing Pad, Sound Machine</div>
+  <div class="date">Report date: 2026-07-09 &nbsp;|&nbsp; Source: Meta Ad Winners (362 rows classified) &nbsp;|&nbsp; TikTok: 0 ads this run</div>
+</div>
+<div class="container">
+  <div class="stats-grid">
+    <div class="stat-card"><div class="value">13</div><div class="label">Qualifying Brands</div></div>
+    <div class="stat-card"><div class="value">362</div><div class="label">Rows Classified</div></div>
+    <div class="stat-card"><div class="value">64</div><div class="label">Total Ads Counted</div></div>
+    <div class="stat-card"><div class="value">10</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="value">Meta only</div><div class="label">Ad Source</div></div>
+  </div>
+
+  <div class="controls">
+    <button class="filter-btn active" onclick="filterTier('all', this)">All Tiers</button>
+    <button class="filter-btn" onclick="filterTier('T3', this)">T3 Proven PMF</button>
+    <button class="filter-btn" onclick="filterTier('T2', this)">T2 Strong</button>
+    <button class="filter-btn" onclick="filterTier('T1', this)">T1 Early</button>
+    <span class="label-sort">Sort:</span>
+    <select class="sort-select" onchange="sortCards(this.value)">
+      <option value="rank">Rank</option>
+      <option value="score">Winner Score</option>
+      <option value="ads">Ad Count</option>
+    </select>
+  </div>
+
+  <div class="grid" id="card-grid">
+
+    <div class="card" data-tier="T3" data-rank="1" data-score="22.8" data-ads="12">
+      <div class="card-top" style="background: #16a34a;"></div>
+      <div class="card-body">
+        <div class="card-rank">#1</div>
+        <div class="card-brand">Rho Nutrition</div>
+        <div class="card-product">Liposomal Glutathione</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #16a34a;">Proven PMF</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">12</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">12</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">23</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=908249351584304" target="_blank">https://www.facebook.com/ads/library/?id=908249351584304...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://rhonutrition.com/products/liposomal-glutathione" target="_blank">https://rhonutrition.com/products/liposomal-glutathione</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">glutathione supplement</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T2" data-rank="2" data-score="17.6" data-ads="9">
+      <div class="card-top" style="background: #2563eb;"></div>
+      <div class="card-body">
+        <div class="card-rank">#2</div>
+        <div class="card-brand">Reform Technologies</div>
+        <div class="card-product">Matcha with Collagen</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #2563eb;">Strong Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">9</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">2</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">18</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=1677024853336297" target="_blank">https://www.facebook.com/ads/library/?id=1677024853336297...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://www.feelreformed.com/products/collagen-matcha" target="_blank">https://www.feelreformed.com/products/collagen-matcha</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">lions mane supplement</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T2" data-rank="3" data-score="16.6" data-ads="7">
+      <div class="card-top" style="background: #2563eb;"></div>
+      <div class="card-body">
+        <div class="card-rank">#3</div>
+        <div class="card-brand">Vasozi</div>
+        <div class="card-product">NAD+ Supplement</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #2563eb;">Strong Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">7</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">7</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">17</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=4443737209281439" target="_blank">https://www.facebook.com/ads/library/?id=4443737209281439...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://vasozi.com/products/nad2" target="_blank">https://vasozi.com/products/nad2</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">nicotinamide riboside</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="4" data-score="13.8" data-ads="5">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#4</div>
+        <div class="card-brand">The Longevity Store</div>
+        <div class="card-product">Longevity Complete</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">5</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">5</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">14</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=2264177977454392" target="_blank">https://www.facebook.com/ads/library/?id=2264177977454392...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://thelongevitystore.com/products/longevity-complete" target="_blank">https://thelongevitystore.com/products/longevity-complete</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">nicotinamide riboside</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="5" data-score="43.2" data-ads="4">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#5</div>
+        <div class="card-brand">Better Body Co</div>
+        <div class="card-product">Provitalize</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">43</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=1476034130212356" target="_blank">https://www.facebook.com/ads/library/?id=1476034130212356...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://thebbco.com/pages/pp-provitalize-j-sns" target="_blank">https://thebbco.com/pages/pp-provitalize-j-sns</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">probiotic prebiotic</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="6" data-score="18.2" data-ads="4">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#6</div>
+        <div class="card-brand">Cradlewise</div>
+        <div class="card-product">Smart Crib</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">18</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=2031523870792677" target="_blank">https://www.facebook.com/ads/library/?id=2031523870792677...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://cradlewise.com/product/smart-crib" target="_blank">https://cradlewise.com/product/smart-crib</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">baby rocker</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="7" data-score="25.0" data-ads="4">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#7</div>
+        <div class="card-brand">Remade</div>
+        <div class="card-product">Sleep Recovery Drink</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">25</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=4283930921861360" target="_blank">https://www.facebook.com/ads/library/?id=4283930921861360...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://getremade.com/" target="_blank">https://getremade.com/</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">l-theanine gaba</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="8" data-score="18.0" data-ads="4">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#8</div>
+        <div class="card-brand">tryrestural</div>
+        <div class="card-product">Study Program</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          <span class="low-conf-badge">Low Confidence ID</span>
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">4</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">1</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">18</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=955366613861739" target="_blank">https://www.facebook.com/ads/library/?id=955366613861739...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://restural.com/pages/study-42" target="_blank">https://restural.com/pages/study-42</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">lions mane supplement</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="9" data-score="26.3" data-ads="3">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#9</div>
+        <div class="card-brand">CS2</div>
+        <div class="card-product">CS2 Sleep Drink</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">26</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=1586174392553718" target="_blank">https://www.facebook.com/ads/library/?id=1586174392553718...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://drinkcs2.com/products/drink" target="_blank">https://drinkcs2.com/products/drink</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">l-theanine gaba</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="10" data-score="23.3" data-ads="3">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#10</div>
+        <div class="card-brand">Cymbiotika</div>
+        <div class="card-product">Liposomal Glutathione</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">23</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=1503805791244726" target="_blank">https://www.facebook.com/ads/library/?id=1503805791244726...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://cymbiotika.com/products/glutathione" target="_blank">https://cymbiotika.com/products/glutathione</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">glutathione supplement</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="11" data-score="15.0" data-ads="3">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#11</div>
+        <div class="card-brand">Avello</div>
+        <div class="card-product">Liposomal Glutathione</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">15</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=970388242405935" target="_blank">https://www.facebook.com/ads/library/?id=970388242405935...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://shopavello.com/products/liposomal-glutathione-supplement" target="_blank">https://shopavello.com/products/liposomal-glutathione-supple...</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">glutathione supplement</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="12" data-score="15.3" data-ads="3">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#12</div>
+        <div class="card-brand">Goli</div>
+        <div class="card-product">RENEW NAD+ Gummies</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">15</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=1365423668689538" target="_blank">https://www.facebook.com/ads/library/?id=1365423668689538...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://goli.com/pages/renew-nad" target="_blank">https://goli.com/pages/renew-nad</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">nicotinamide riboside</span> <span class="tag">probiotic prebiotic</span></div>
+      </div>
+    </div>
+
+    <div class="card" data-tier="T1" data-rank="13" data-score="17.7" data-ads="3">
+      <div class="card-top" style="background: #0891b2;"></div>
+      <div class="card-body">
+        <div class="card-rank">#13</div>
+        <div class="card-brand">Auri Nutrition</div>
+        <div class="card-product">Super Mushroom Focus Gummies</div>
+        <div class="badges">
+          <span class="tier-badge" style="background: #0891b2;">Early Validation</span>
+          
+        </div>
+        <div class="metrics">
+          <div class="metric"><div class="m-val">3</div><div class="m-label">Total Ads</div></div>
+          <div class="metric"><div class="m-val">1</div><div class="m-label">Winners</div></div>
+          <div class="metric"><div class="m-val">18</div><div class="m-label">Avg Score</div></div>
+        </div>
+        <div class="links">
+          <div class="link-row"><span class="link-label">Best Ad:</span><a class="link-url" href="https://www.facebook.com/ads/library/?id=973762288448459" target="_blank">https://www.facebook.com/ads/library/?id=973762288448459...</a></div>
+          <div class="link-row"><span class="link-label">Lander:</span><a class="link-url" href="https://www.tryauri.com/products/super-mushroom-focus-gummies" target="_blank">https://www.tryauri.com/products/super-mushroom-focus-gummie...</a></div>
+        </div>
+        <div class="search-terms" style="margin-top:12px;"><span class="tag">lions mane supplement</span></div>
+      </div>
+    </div>
+
+  </div><!-- end grid -->
+
+  <div class="legend">
+    <h3>Tier Legend (by total ad count across all tabs)</h3>
+    <div class="legend-grid">
+      <div class="legend-item"><div class="legend-dot" style="background:#0891b2;"></div><div><div class="legend-text">T1: Early Validation (3-5 ads)</div><div class="legend-sub">Minimal competition</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#2563eb;"></div><div><div class="legend-text">T2: Strong Validation (6-10 ads)</div><div class="legend-sub">Low stable competition</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#16a34a;"></div><div><div class="legend-text">T3: Proven PMF (11-20 ads)</div><div class="legend-sub">The sweet spot</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ea580c;"></div><div><div class="legend-text">T4: More Crowded (21-40 ads)</div><div class="legend-sub">Harder to enter</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#c026d3;"></div><div><div class="legend-text">T5: Increased Saturation (41-75 ads)</div><div class="legend-sub">Differentiator required</div></div></div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7c3aed;"></div><div><div class="legend-text">T6: Most Saturated (76+ ads)</div><div class="legend-sub">High barrier</div></div></div>
+    </div>
+    <div class="source-note" style="margin-top:14px;">Note: TikTok returned 0 ads this run. All counts are Meta Ad Winners only. Brands grouped by lander domain and identity (Shopify/JSON-LD/og:site_name). A brand qualifies with 3+ total ads and at least 1 row with winner token w, w-ish, or !.</div>
+  </div>
+</div>
+
+<script>
+let currentTier = 'all';
+let currentSort = 'rank';
+
+function filterTier(tier, btn) {
+  currentTier = tier;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFiltersSort();
+}
+
+function sortCards(val) {
+  currentSort = val;
+  applyFiltersSort();
+}
+
+function applyFiltersSort() {
+  const grid = document.getElementById('card-grid');
+  const cards = Array.from(grid.querySelectorAll('.card'));
+  
+  cards.forEach(c => {
+    const tier = c.dataset.tier;
+    c.classList.toggle('hidden', currentTier !== 'all' && tier !== currentTier);
+  });
+  
+  const visible = cards.filter(c => !c.classList.contains('hidden'));
+  visible.sort((a, b) => {
+    if (currentSort === 'rank') return parseInt(a.dataset.rank) - parseInt(b.dataset.rank);
+    if (currentSort === 'score') return parseFloat(b.dataset.score) - parseFloat(a.dataset.score);
+    if (currentSort === 'ads') return parseInt(b.dataset.ads) - parseInt(a.dataset.ads);
+    return 0;
+  });
+  
+  visible.forEach(c => grid.appendChild(c));
+}
+</script>
+</body>
+</html>

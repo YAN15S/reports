@@ -151,7 +151,7 @@
       return '<div class="card' + (isArch ? ' arch' : '') + '"><div><div class="t"><a href="' + f + '">' +
         esc(r.title || r.file) + '</a><span class="badge ' + ty + '">' + ty + '</span>' +
         (isArch ? '<span class="badge arch">archived</span>' : '') + '</div><div class="m">' +
-        esc(r.date || "") + '</div></div>' + actions + '</div>';
+        esc((r.date || "").replace(" ", "  ·  ")) + '</div></div>' + actions + '</div>';
     }).join("");
   }
 

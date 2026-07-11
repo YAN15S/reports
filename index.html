@@ -95,6 +95,10 @@
     <button data-type="other">Other</button>
     <button data-type="archived">Archived</button>
   </div>
+  <div class="filters" id="sortControls">
+    <button data-sort="recent" class="on">Most Recent</button>
+    <button data-sort="alpha">A-Z</button>
+  </div>
 </div>
 <main id="list"><div class="empty">Loading...</div></main>
 
@@ -103,7 +107,7 @@
   const OWNER = location.hostname.split(".")[0];
   const REPO = (location.pathname.split("/").filter(Boolean)[0]) || "reports";
 
-  let REPORTS = [], typeFilter = "all";
+  let REPORTS = [], typeFilter = "all", sortMode = "recent";
   let TOKEN = null, LOGIN = null, manage = false, busy = false;
 
   const $ = id => document.getElementById(id);
@@ -122,6 +126,11 @@
       if (wantArch) return isArch && matches;
       return !isArch && (typeFilter === "all" || (r.type || "other") === typeFilter) && matches;
     });
+    if (sortMode === "alpha") {
+      rows.sort((a, b) => (a.title || a.file || "").toLowerCase().localeCompare((b.title || b.file || "").toLowerCase()));
+    } else {
+      rows.sort((a, b) => (b.date || "").localeCompare(a.date || "") || (a.title || "").toLowerCase().localeCompare((b.title || "").toLowerCase()));
+    }
     if (!rows.length) { list.innerHTML = '<div class="empty">No reports match.</div>'; return; }
     list.innerHTML = rows.map(r => {
       const ty = (r.type || "other");
@@ -258,6 +267,12 @@
   $("filters").addEventListener("click", e => {
     if (e.target.tagName !== "BUTTON") return;
     typeFilter = e.target.dataset.type;
+    [...e.currentTarget.children].forEach(b => b.classList.toggle("on", b === e.target));
+    render();
+  });
+  $("sortControls").addEventListener("click", e => {
+    if (e.target.tagName !== "BUTTON") return;
+    sortMode = e.target.dataset.sort;
     [...e.currentTarget.children].forEach(b => b.classList.toggle("on", b === e.target));
     render();
   });

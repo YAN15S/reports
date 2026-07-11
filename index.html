@@ -20,6 +20,8 @@
   .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 11px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; flex-shrink:0; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
   .btn { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 12px; border-radius:8px; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .header-actions { display:flex; gap:8px; align-items:center; }
+  select.btn { appearance:auto; }
   .btn:hover { border-color:var(--slate); }
   .btn:disabled { opacity:.5; cursor:default; }
   #manageToggle.on { background:var(--slate); color:#fff; border-color:var(--slate); }
@@ -57,7 +59,13 @@
 <div class="accent"></div>
 <header><div class="wrap">
   <div><h1>Agent Reports</h1></div>
-  <button id="manageToggle" class="btn">Manage</button>
+  <div class="header-actions">
+    <select id="sortSel" class="btn" aria-label="Sort reports">
+      <option value="recent">Most Recent</option>
+      <option value="alpha">Alphabetical</option>
+    </select>
+    <button id="manageToggle" class="btn">Manage</button>
+  </div>
 </div></header>
 
 <div class="panel hidden" id="panel">
@@ -86,7 +94,7 @@
 </div>
 
 <div class="controls">
-  <input id="q" type="search" placeholder="Filter by title...">
+  <input id="q" type="search" placeholder="Search...">
   <div class="filters" id="filters">
     <button data-type="all" class="on">All</button>
     <button data-type="winners">Winners</button>
@@ -94,10 +102,6 @@
     <button data-type="vas">VAs</button>
     <button data-type="other">Other</button>
     <button data-type="archived">Archived</button>
-  </div>
-  <div class="filters" id="sortControls">
-    <button data-sort="recent" class="on">Most Recent</button>
-    <button data-sort="alpha">A-Z</button>
   </div>
 </div>
 <main id="list"><div class="empty">Loading...</div></main>
@@ -270,10 +274,8 @@
     [...e.currentTarget.children].forEach(b => b.classList.toggle("on", b === e.target));
     render();
   });
-  $("sortControls").addEventListener("click", e => {
-    if (e.target.tagName !== "BUTTON") return;
-    sortMode = e.target.dataset.sort;
-    [...e.currentTarget.children].forEach(b => b.classList.toggle("on", b === e.target));
+  $("sortSel").addEventListener("change", e => {
+    sortMode = e.target.value;
     render();
   });
   q.addEventListener("input", render);

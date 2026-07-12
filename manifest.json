@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "cooling-blanket_other_winners_2026-07-11.html",
+      "title": "cooling blanket - Other Winners",
+      "date": "2026-07-11 21:14:33",
+      "type": "winners"
+    },
+    {
       "file": "saffron-supplement_other_winners_2026-07-11.html",
       "title": "saffron supplement - Other Winners",
       "date": "2026-07-11 21:14:21",
@@ -118,12 +124,6 @@
       "file": "hydrogen-water-tablets_other_winners_2026-07-11.html",
       "title": "hydrogen water tablets - Other Winners",
       "date": "2026-07-11 21:08:01",
-      "type": "winners"
-    },
-    {
-      "file": "cooling-blanket_other_winners_2026-07-11.html",
-      "title": "cooling blanket - Other Winners",
-      "date": "2026-07-11 20:10:51",
       "type": "winners"
     },
     {

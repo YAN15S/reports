@@ -1,340 +1,334 @@
 {
-  "reports": [
-    {
-      "file": "liposomal_nad_supplement_other_winners_2026-07-15.html",
-      "title": "liposomal nad supplement - Other Winners (2026-07-15)",
-      "date": "2026-07-15 22:24:55",
-      "type": "winners"
-    },
-    {
-      "file": "heated_blanket_other_winners_2026-07-13.html",
-      "title": "Other Winners: heated blanket (2026-07-13)",
-      "date": "2026-07-13 11:33:41",
-      "type": "winners"
-    },
-    {
-      "file": "glynac_supplement_other_winners_2026-07-12.html",
-      "title": "Other Winners: glynac supplement (2026-07-12)",
-      "date": "2026-07-12 23:11:30",
-      "type": "winners"
-    },
-    {
-      "file": "collagen-peptides_other_winners_2026-07-11.html",
-      "title": "collagen peptides - Other Winners",
-      "date": "2026-07-11 23:05:00",
-      "type": "winners"
-    },
-    {
-      "file": "fish-finder_other_winners_2026-07-11.html",
-      "title": "fish finder - Other Winners",
-      "date": "2026-07-11 23:04:43",
-      "type": "winners"
-    },
-    {
-      "file": "handheld-steam-cleaner_other_winners_2026-07-11.html",
-      "title": "Handheld Steam Cleaner - Other Winners",
-      "date": "2026-07-11 23:04:25",
-      "type": "winners"
-    },
-    {
-      "file": "collagen-peptide-serum_other_winners_2026-07-11.html",
-      "title": "collagen peptide serum - Other Winners",
-      "date": "2026-07-11 23:04:03",
-      "type": "winners"
-    },
-    {
-      "file": "hair-growth-serum-roll-on_other_winners_2026-07-11.html",
-      "title": "Hair Growth Serum Roll On - Other Winners",
-      "date": "2026-07-11 23:03:49",
-      "type": "winners"
-    },
-    {
-      "file": "portable-espresso-maker_other_winners_2026-07-11.html",
-      "title": "Portable Espresso Maker - Other Winners",
-      "date": "2026-07-11 23:03:31",
-      "type": "winners"
-    },
-    {
-      "file": "neck-cervical-massager_other_winners_2026-07-11.html",
-      "title": "neck cervical massager - Other Winners",
-      "date": "2026-07-11 23:03:12",
-      "type": "winners"
-    },
-    {
-      "file": "ph-feminine-probiotic-gummies_other_winners_2026-07-11.html",
-      "title": "PH Feminine Probiotic Gummies - Other Winners",
-      "date": "2026-07-11 23:02:56",
-      "type": "winners"
-    },
-    {
-      "file": "tens-pain_other_winners_2026-07-11.html",
-      "title": "TENS pain - Other Winners",
-      "date": "2026-07-11 23:02:39",
-      "type": "winners"
-    },
-    {
-      "file": "collagen-gummies_other_winners_2026-07-11.html",
-      "title": "collagen gummies - Other Winners",
-      "date": "2026-07-11 23:02:26",
-      "type": "winners"
-    },
-    {
-      "file": "electrolyte-powder_other_winners_2026-07-11.html",
-      "title": "electrolyte powder - Other Winners",
-      "date": "2026-07-11 23:02:12",
-      "type": "winners"
-    },
-    {
-      "file": "routine-morning-daily-hydration_other_winners_2026-07-11.html",
-      "title": "ROUTINE Morning Daily Hydration - Other Winners",
-      "date": "2026-07-11 23:01:54",
-      "type": "winners"
-    },
-    {
-      "file": "debloat-supplement_other_winners_2026-07-11.html",
-      "title": "debloat supplement - Other Winners",
-      "date": "2026-07-11 23:01:36",
-      "type": "winners"
-    },
-    {
-      "file": "portable-blender_other_winners_2026-07-11.html",
-      "title": "portable blender - Other Winners",
-      "date": "2026-07-11 23:01:23",
-      "type": "winners"
-    },
-    {
-      "file": "dog-collagen-supplement_other_winners_2026-07-11.html",
-      "title": "dog collagen supplement - Other Winners",
-      "date": "2026-07-11 23:01:11",
-      "type": "winners"
-    },
-    {
-      "file": "saffron-supplement_other_winners_2026-07-11.html",
-      "title": "saffron supplement - Other Winners",
-      "date": "2026-07-11 23:00:58",
-      "type": "winners"
-    },
-    {
-      "file": "cooling-blanket_other_winners_2026-07-11.html",
-      "title": "cooling blanket - Other Winners",
-      "date": "2026-07-11 23:00:43",
-      "type": "winners"
-    },
-    {
-      "file": "collagen-coffee-creamer_other_winners_2026-07-11.html",
-      "title": "collagen coffee creamer - Other Winners",
-      "date": "2026-07-11 23:00:26",
-      "type": "winners"
-    },
-    {
-      "file": "electrolyte-drink-mix_other_winners_2026-07-11.html",
-      "title": "electrolyte drink mix - Other Winners",
-      "date": "2026-07-11 23:00:13",
-      "type": "winners"
-    },
-    {
-      "file": "resveratrol-supplement_other_winners_2026-07-11.html",
-      "title": "resveratrol supplement - Other Winners",
-      "date": "2026-07-11 22:59:59",
-      "type": "winners"
-    },
-    {
-      "file": "hydrogen-water-tablets_other_winners_2026-07-11.html",
-      "title": "hydrogen water tablets - Other Winners",
-      "date": "2026-07-11 22:59:46",
-      "type": "winners"
-    },
-    {
-      "file": "dian_decena_toptracker_review_2026-06-22.html",
-      "title": "TopTracker Review - Dian Decena - Jun 5-22 2026",
-      "date": "2026-06-22",
-      "type": "vas"
-    },
-    {
-      "file": "hydrogen_water_drinking_tablets_marketing_angles_2026-06-17.html",
-      "title": "Hydrogen Water Drinking Tablets - Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "womens_balance_hair_growth_marketing_angles_2026-06-17.html",
-      "title": "Women's Balance Hair Growth Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "spermidine_supplement_marketing_angles_2026-06-17.html",
-      "title": "Spermidine Supplement Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "collagen_peptides_marketing_angles_2026-06-17.html",
-      "title": "Collagen Peptides Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "electrolytes_powder_coconut_water_marketing_angles_2026-06-17.html",
-      "title": "Marketing Angles: Electrolytes Powder + Coconut Water",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "collagen_peptide_gummies_marketing_angles_2026-06-17.html",
-      "title": "Collagen Peptide Gummies Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "anti_aging_face_moisturizer_retinol_marketing_angles_2026-06-17.html",
-      "title": "Anti-Aging Face Moisturizer (Retinol/Collagen/HA) -- Marketing Angles",
-      "date": "2026-06-17",
-      "type": "angles"
-    },
-    {
-      "file": "indoor_golf_putting_practice_mat_marketing_angles_2026-06-16.html",
-      "title": "Indoor Golf Putting Practice Mat - Marketing Angles",
-      "date": "2026-06-16",
-      "type": "angles"
-    },
-    {
-      "file": "nasal_aspirator_electric_marketing_angles_2026-06-16.html",
-      "title": "Nasal Aspirator (Electric) - Marketing Angles",
-      "date": "2026-06-16",
-      "type": "angles"
-    },
-    {
-      "file": "sous_vide_precision_cooker_marketing_angles_2026-06-16.html",
-      "title": "Marketing Angles: Portable Sous Vide Precision Cooker (WIFI)",
-      "date": "2026-06-16",
-      "type": "angles"
-    },
-    {
-      "file": "glynac_supplement_complex_marketing_angles_2026-06-16.html",
-      "title": "GlyNAC Supplement Complex - Marketing Angles",
-      "date": "2026-06-16",
-      "type": "angles"
-    },
-    {
-      "file": "robot_vacuum_smart_mapping_marketing_angles_2026-06-15.html",
-      "title": "Marketing Angles: Robot Vacuum (Smart Mapping, Auto-Empty)",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "ergonomic_vertical_mouse_marketing_angles_2026-06-15.html",
-      "title": "Marketing Angles: Ergonomic Vertical Wireless Mouse",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "under_desk_elliptical_exerciser_marketing_angles_2026-06-15.html",
-      "title": "Under Desk Elliptical Exerciser Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "multi_peptide_hair_density_serum_marketing_angles_2026-06-15.html",
-      "title": "Multi-Peptide Hair Density Serum - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "hair_growth_serum_roll_on_marketing_angles_2026-06-15.html",
-      "title": "Hair Growth Serum Roll On - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "multi_collagen_peptide_powder_marketing_angles_2026-06-15.html",
-      "title": "Multi Collagen Peptide Powder - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "3_in_1_triple_fusion_back_massager_marketing_angles_2026-06-15.html",
-      "title": "3-in-1 Triple Fusion Back Massager - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "red_light_therapy_pad_belt_for_pets_marketing_angles_2026-06-15.html",
-      "title": "Red Light Therapy Pad/Belt for Pets -- Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "red_light_therapy_mat_for_pets_marketing_angles_2026-06-15.html",
-      "title": "Red Light Therapy Mat for Pets - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "peptide_brightening_lip_serum_marketing_angles_2026-06-15.html",
-      "title": "Peptide Brightening Lip Serum - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "ph_feminine_probiotic_report.html",
-      "title": "PH Feminine Probiotic Gummies Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "automatic_bottle_washer_sterilizer_dryer_marketing_angles_2026-06-15.html",
-      "title": "Automatic Bottle Washer / Sterilizer / Dryer -- Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "interactive_crawling_crab_toy_marketing_angles_2026-06-15.html",
-      "title": "Interactive Crawling Crab Toy -- Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "handheld_steam_cleaner_marketing_angles_2026-06-15.html",
-      "title": "Handheld Steam Cleaner -- Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "automatic_mouthwash_dispenser_marketing_angles_2026-06-15.html",
-      "title": "Automatic Mouthwash Dispenser -- Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "routine_morning_daily_hydration_marketing_angles_2026-06-15.html",
-      "title": "ROUTINE Morning Daily Hydration - Marketing Angles",
-      "date": "2026-06-15",
-      "type": "angles"
-    },
-    {
-      "file": "portable_espresso_maker_marketing_angles_2026-06-14.html",
-      "title": "Portable Espresso Maker -- Marketing Angles",
-      "date": "2026-06-14",
-      "type": "angles"
-    },
-    {
-      "file": "led_grow_light_indoor_plants_marketing_angles_2026-06-14.html",
-      "title": "LED Grow Light for Indoor Plants - Marketing Angles",
-      "date": "2026-06-14",
-      "type": "angles"
-    },
-    {
-      "file": "magnetic_spice_jars_marketing_angles_2026-06-14.html",
-      "title": "Magnetic Spice Jars - Marketing Angles",
-      "date": "2026-06-14",
-      "type": "angles"
-    },
-    {
-      "file": "wireless_castable_fish_finder_marketing_angles_2026-06-06.html",
-      "title": "Wireless Castable Fish Finder - Marketing Angles",
-      "date": "2026-06-06",
-      "type": "angles"
-    }
-  ]
+ "reports": [
+  {
+   "file": "liposomal_nad_supplement_other_winners_2026-07-15.html",
+   "title": "liposomal nad supplement - Other Winners (2026-07-15)",
+   "date": "2026-07-15 22:24:55",
+   "type": "winners"
+  },
+  {
+   "file": "heated_blanket_other_winners_2026-07-13.html",
+   "title": "Other Winners: heated blanket (2026-07-13)",
+   "date": "2026-07-13 11:33:41",
+   "type": "winners"
+  },
+  {
+   "file": "glynac_supplement_other_winners_2026-07-12.html",
+   "title": "Other Winners: glynac supplement (2026-07-12)",
+   "date": "2026-07-12 23:11:30",
+   "type": "winners"
+  },
+  {
+   "file": "collagen-peptides_other_winners_2026-07-11.html",
+   "title": "collagen peptides - Other Winners",
+   "date": "2026-07-11 23:05:00",
+   "type": "winners"
+  },
+  {
+   "file": "fish-finder_other_winners_2026-07-11.html",
+   "title": "fish finder - Other Winners",
+   "date": "2026-07-11 23:04:43",
+   "type": "winners"
+  },
+  {
+   "file": "handheld-steam-cleaner_other_winners_2026-07-11.html",
+   "title": "Handheld Steam Cleaner - Other Winners",
+   "date": "2026-07-11 23:04:25",
+   "type": "winners"
+  },
+  {
+   "file": "collagen-peptide-serum_other_winners_2026-07-11.html",
+   "title": "collagen peptide serum - Other Winners",
+   "date": "2026-07-11 23:04:03",
+   "type": "winners"
+  },
+  {
+   "file": "hair-growth-serum-roll-on_other_winners_2026-07-11.html",
+   "title": "Hair Growth Serum Roll On - Other Winners",
+   "date": "2026-07-11 23:03:49",
+   "type": "winners"
+  },
+  {
+   "file": "portable-espresso-maker_other_winners_2026-07-11.html",
+   "title": "Portable Espresso Maker - Other Winners",
+   "date": "2026-07-11 23:03:31",
+   "type": "winners"
+  },
+  {
+   "file": "neck-cervical-massager_other_winners_2026-07-11.html",
+   "title": "neck cervical massager - Other Winners",
+   "date": "2026-07-11 23:03:12",
+   "type": "winners"
+  },
+  {
+   "file": "ph-feminine-probiotic-gummies_other_winners_2026-07-11.html",
+   "title": "PH Feminine Probiotic Gummies - Other Winners",
+   "date": "2026-07-11 23:02:56",
+   "type": "winners"
+  },
+  {
+   "file": "tens-pain_other_winners_2026-07-11.html",
+   "title": "TENS pain - Other Winners",
+   "date": "2026-07-11 23:02:39",
+   "type": "winners"
+  },
+  {
+   "file": "collagen-gummies_other_winners_2026-07-11.html",
+   "title": "collagen gummies - Other Winners",
+   "date": "2026-07-11 23:02:26",
+   "type": "winners"
+  },
+  {
+   "file": "electrolyte-powder_other_winners_2026-07-11.html",
+   "title": "electrolyte powder - Other Winners",
+   "date": "2026-07-11 23:02:12",
+   "type": "winners"
+  },
+  {
+   "file": "routine-morning-daily-hydration_other_winners_2026-07-11.html",
+   "title": "ROUTINE Morning Daily Hydration - Other Winners",
+   "date": "2026-07-11 23:01:54",
+   "type": "winners"
+  },
+  {
+   "file": "debloat-supplement_other_winners_2026-07-11.html",
+   "title": "debloat supplement - Other Winners",
+   "date": "2026-07-11 23:01:36",
+   "type": "winners"
+  },
+  {
+   "file": "portable-blender_other_winners_2026-07-11.html",
+   "title": "portable blender - Other Winners",
+   "date": "2026-07-11 23:01:23",
+   "type": "winners"
+  },
+  {
+   "file": "dog-collagen-supplement_other_winners_2026-07-11.html",
+   "title": "dog collagen supplement - Other Winners",
+   "date": "2026-07-11 23:01:11",
+   "type": "winners"
+  },
+  {
+   "file": "saffron-supplement_other_winners_2026-07-11.html",
+   "title": "saffron supplement - Other Winners",
+   "date": "2026-07-11 23:00:58",
+   "type": "winners"
+  },
+  {
+   "file": "cooling-blanket_other_winners_2026-07-11.html",
+   "title": "cooling blanket - Other Winners",
+   "date": "2026-07-11 23:00:43",
+   "type": "winners"
+  },
+  {
+   "file": "collagen-coffee-creamer_other_winners_2026-07-11.html",
+   "title": "collagen coffee creamer - Other Winners",
+   "date": "2026-07-11 23:00:26",
+   "type": "winners"
+  },
+  {
+   "file": "electrolyte-drink-mix_other_winners_2026-07-11.html",
+   "title": "electrolyte drink mix - Other Winners",
+   "date": "2026-07-11 23:00:13",
+   "type": "winners"
+  },
+  {
+   "file": "resveratrol-supplement_other_winners_2026-07-11.html",
+   "title": "resveratrol supplement - Other Winners",
+   "date": "2026-07-11 22:59:59",
+   "type": "winners"
+  },
+  {
+   "file": "hydrogen-water-tablets_other_winners_2026-07-11.html",
+   "title": "hydrogen water tablets - Other Winners",
+   "date": "2026-07-11 22:59:46",
+   "type": "winners"
+  },
+  {
+   "file": "dian_decena_toptracker_review_2026-06-22.html",
+   "title": "TopTracker Review - Dian Decena - Jun 5-22 2026",
+   "date": "2026-06-22",
+   "type": "vas"
+  },
+  {
+   "file": "hydrogen_water_drinking_tablets_marketing_angles_2026-06-17.html",
+   "title": "Hydrogen Water Drinking Tablets - Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "womens_balance_hair_growth_marketing_angles_2026-06-17.html",
+   "title": "Women's Balance Hair Growth Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "spermidine_supplement_marketing_angles_2026-06-17.html",
+   "title": "Spermidine Supplement Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "collagen_peptides_marketing_angles_2026-06-17.html",
+   "title": "Collagen Peptides Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "electrolytes_powder_coconut_water_marketing_angles_2026-06-17.html",
+   "title": "Marketing Angles: Electrolytes Powder + Coconut Water",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "collagen_peptide_gummies_marketing_angles_2026-06-17.html",
+   "title": "Collagen Peptide Gummies Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "anti_aging_face_moisturizer_retinol_marketing_angles_2026-06-17.html",
+   "title": "Anti-Aging Face Moisturizer (Retinol/Collagen/HA) -- Marketing Angles",
+   "date": "2026-06-17",
+   "type": "angles"
+  },
+  {
+   "file": "indoor_golf_putting_practice_mat_marketing_angles_2026-06-16.html",
+   "title": "Indoor Golf Putting Practice Mat - Marketing Angles",
+   "date": "2026-06-16",
+   "type": "angles"
+  },
+  {
+   "file": "nasal_aspirator_electric_marketing_angles_2026-06-16.html",
+   "title": "Nasal Aspirator (Electric) - Marketing Angles",
+   "date": "2026-06-16",
+   "type": "angles"
+  },
+  {
+   "file": "sous_vide_precision_cooker_marketing_angles_2026-06-16.html",
+   "title": "Marketing Angles: Portable Sous Vide Precision Cooker (WIFI)",
+   "date": "2026-06-16",
+   "type": "angles"
+  },
+  {
+   "file": "glynac_supplement_complex_marketing_angles_2026-06-16.html",
+   "title": "GlyNAC Supplement Complex - Marketing Angles",
+   "date": "2026-06-16",
+   "type": "angles"
+  },
+  {
+   "file": "robot_vacuum_smart_mapping_marketing_angles_2026-06-15.html",
+   "title": "Marketing Angles: Robot Vacuum (Smart Mapping, Auto-Empty)",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "ergonomic_vertical_mouse_marketing_angles_2026-06-15.html",
+   "title": "Marketing Angles: Ergonomic Vertical Wireless Mouse",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "under_desk_elliptical_exerciser_marketing_angles_2026-06-15.html",
+   "title": "Under Desk Elliptical Exerciser Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "multi_peptide_hair_density_serum_marketing_angles_2026-06-15.html",
+   "title": "Multi-Peptide Hair Density Serum - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "hair_growth_serum_roll_on_marketing_angles_2026-06-15.html",
+   "title": "Hair Growth Serum Roll On - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "multi_collagen_peptide_powder_marketing_angles_2026-06-15.html",
+   "title": "Multi Collagen Peptide Powder - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "3_in_1_triple_fusion_back_massager_marketing_angles_2026-06-15.html",
+   "title": "3-in-1 Triple Fusion Back Massager - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "red_light_therapy_pad_belt_for_pets_marketing_angles_2026-06-15.html",
+   "title": "Red Light Therapy Pad/Belt for Pets -- Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "red_light_therapy_mat_for_pets_marketing_angles_2026-06-15.html",
+   "title": "Red Light Therapy Mat for Pets - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "peptide_brightening_lip_serum_marketing_angles_2026-06-15.html",
+   "title": "Peptide Brightening Lip Serum - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "ph_feminine_probiotic_report.html",
+   "title": "PH Feminine Probiotic Gummies Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "automatic_bottle_washer_sterilizer_dryer_marketing_angles_2026-06-15.html",
+   "title": "Automatic Bottle Washer / Sterilizer / Dryer -- Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "interactive_crawling_crab_toy_marketing_angles_2026-06-15.html",
+   "title": "Interactive Crawling Crab Toy -- Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "handheld_steam_cleaner_marketing_angles_2026-06-15.html",
+   "title": "Handheld Steam Cleaner -- Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "automatic_mouthwash_dispenser_marketing_angles_2026-06-15.html",
+   "title": "Automatic Mouthwash Dispenser -- Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "routine_morning_daily_hydration_marketing_angles_2026-06-15.html",
+   "title": "ROUTINE Morning Daily Hydration - Marketing Angles",
+   "date": "2026-06-15",
+   "type": "angles"
+  },
+  {
+   "file": "led_grow_light_indoor_plants_marketing_angles_2026-06-14.html",
+   "title": "LED Grow Light for Indoor Plants - Marketing Angles",
+   "date": "2026-06-14",
+   "type": "angles"
+  },
+  {
+   "file": "magnetic_spice_jars_marketing_angles_2026-06-14.html",
+   "title": "Magnetic Spice Jars - Marketing Angles",
+   "date": "2026-06-14",
+   "type": "angles"
+  },
+  {
+   "file": "wireless_castable_fish_finder_marketing_angles_2026-06-06.html",
+   "title": "Wireless Castable Fish Finder - Marketing Angles",
+   "date": "2026-06-06",
+   "type": "angles"
+  }
+ ]
 }

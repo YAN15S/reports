@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Other Winners: balm stick</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --slate: #334155; --slate-dark: #1e293b; --bg: #f8fafc; --card: #ffffff;
+    --text: #0f172a; --muted: #64748b; --border: #e2e8f0;
+    --tier1: #22c55e; --tier2: #16a34a; --tier3: #3b82f6; --tier4: #f59e0b; --tier5: #f97316; --tier6: #ef4444;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); }
+  .accent-bar { height: 6px; background: linear-gradient(90deg, var(--slate-dark), var(--slate)); }
+  header { background: #fff; padding: 28px 32px; border-bottom: 1px solid var(--border); }
+  header h1 { margin: 0 0 4px; font-size: 26px; }
+  header .subtitle { color: var(--muted); font-size: 15px; }
+  header .date { color: var(--muted); font-size: 13px; margin-top: 4px; }
+  .stats { display: flex; gap: 24px; padding: 20px 32px; background: #fff; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .stat { min-width: 140px; }
+  .stat .num { font-size: 24px; font-weight: 700; }
+  .stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .controls { padding: 16px 32px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .controls input, .controls select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; }
+  .controls button.tierbtn { padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: #fff; cursor: pointer; font-size: 13px; }
+  .controls button.tierbtn.active { background: var(--slate-dark); color: #fff; border-color: var(--slate-dark); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; padding: 8px 32px 32px; }
+  .cardw { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  .cardw .top { height: 5px; }
+  .cardw .body { padding: 16px; }
+  .cardw .rank { font-size: 12px; color: var(--muted); font-weight: 600; }
+  .cardw h3 { margin: 4px 0 2px; font-size: 17px; }
+  .cardw .product { color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .lowconf { color: var(--muted); font-size: 11px; font-style: italic; }
+  .cardw a.linkbtn { display: inline-block; margin: 4px 8px 0 0; font-size: 13px; color: #2563eb; text-decoration: none; }
+  .cardw a.linkbtn:hover { text-decoration: underline; }
+  .metaline { font-size: 12px; color: var(--muted); margin-top: 8px; }
+  footer { padding: 24px 32px 40px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+  .legend .item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); }
+  .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .note { font-size: 12px; color: var(--muted); margin-top: 16px; line-height: 1.5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b1220; --card:#111827; --text:#e5e7eb; --muted:#94a3b8; --border:#1f2937; }
+    header, .stats { background: #0f172a; }
+    .controls input, .controls select, .controls button.tierbtn { background:#111827; color:#e5e7eb; border-color:#1f2937; }
+  }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <h1>Other Winners: "balm stick"</h1>
+  <div class="subtitle">Competitor brands surfaced while auditing Winners DB for VA Products (Andi) r5 &mdash; Wrinkle Bounce Multi Balm Stick (KAHI)</div>
+  <div class="date">08-07-2026</div>
+</header>
+<div class="stats">
+  <div class="stat"><div class="num">7</div><div class="label">Qualifying Brands</div></div>
+  <div class="stat"><div class="num">38</div><div class="label">Total Ads Counted</div></div>
+  <div class="stat"><div class="num">168</div><div class="label">Rows Audited (Meta)</div></div>
+  <div class="stat"><div class="num">Meta Ads</div><div class="label">Source</div></div>
+</div>
+<div class="controls">
+  <input id="search" type="text" placeholder="Search brand or product...">
+  <select id="sortsel">
+    <option value="rank">Sort: Rank</option>
+    <option value="adcount">Sort: Ad Count</option>
+  </select>
+  <button class="tierbtn active" data-tier="all">All</button>
+  <button class="tierbtn" data-tier="1">Early validation</button>
+  <button class="tierbtn" data-tier="2">Strong validation</button>
+</div>
+<div class="grid" id="grid"></div>
+<footer>
+  <div class="legend">
+    <div class="item"><span class="dot" style="background:var(--tier1)"></span>3-5 ads: Early validation, minimal competition</div>
+    <div class="item"><span class="dot" style="background:var(--tier2)"></span>6-10 ads: Strong validation, low stable competition</div>
+    <div class="item"><span class="dot" style="background:var(--tier3)"></span>11-20 ads: Proven PMF (sweet spot)</div>
+    <div class="item"><span class="dot" style="background:var(--tier4)"></span>21-40 ads: More crowded, harder to enter</div>
+    <div class="item"><span class="dot" style="background:var(--tier5)"></span>41-75 ads: Increased saturation</div>
+    <div class="item"><span class="dot" style="background:var(--tier6)"></span>76+ ads: Most saturated</div>
+  </div>
+  <div class="note">
+    Clustered by BRAND+PRODUCT identity (not exact lander URL) across Meta Ad Winners + Meta Ad Rejects for search term "balm stick" (TikTok Winners had zero rows, TikTok Rejects contributed none). A brand qualifies with &ge;1 real winner row (w/w-ish/!) among 3+ total ads. Mad Rabbit Tattoo (2 ads, both "!") fell just short of the 3-ad threshold and is not shown. D'Alba and Dr. Melaxin are near-duplicate SKUs re-listed across many country-TLD Amazon ASINs / bundle variants &mdash; their high ad count reflects the same core product marketed broadly, not 10 distinct SKUs.
+  </div>
+</footer>
+<script>
+const DATA = [
+ {rank:1, brand:"D'Alba", product:"Piedmont White Truffle Double Serum / Under Eye Wrinkle Filler Balm Stick", adcount:10, score:52, bestad:"https://www.facebook.com/ads/library/?id=5507263346166133", lander:"https://amazon.ca/dp/B09SZ5JX2Y", tier:2, lowconf:false},
+ {rank:1, brand:"Dr. Melaxin", product:"Calcium Volume Multi Balm Stick (standalone + Radiant Blowout / Glass Skin bundle sets)", adcount:10, score:52, bestad:"https://www.facebook.com/ads/library/?id=1343950027603882", lander:"https://kahunaspa.com/products/dr-melaxin-radiant-blowout-set", tier:2, lowconf:false},
+ {rank:3, brand:"HER+ (tryher.com / femplus.co / hereforwomen.com)", product:"Calcium Volume Multi Balm / Collagen Plump & Repair Balm", adcount:5, score:52, bestad:"https://www.facebook.com/ads/library/?id=758385160600698", lander:"https://tryher.com/products/glow-balm", tier:1, lowconf:false},
+ {rank:4, brand:"VT Cosmetics", product:"PDRN Essence Stick Balm / Vegan PDRN Stick Balm", adcount:3, score:52, bestad:"https://www.facebook.com/ads/library/?id=740636282435162", lander:"https://www.elbeauty.gr/el/product/vt-pdrn-essence-stick-balm-stik-lampsis-me-pdrn/", tier:1, lowconf:false},
+ {rank:4, brand:"Maree", product:"Under Eye Balm Stick / Mono Eye Stick (7-in-1 Firmagen Complex)", adcount:3, score:52, bestad:"https://www.facebook.com/ads/library/?id=4536845363212930", lander:"https://amazonmareestick.com/?utm_source=m135", tier:1, lowconf:false},
+ {rank:4, brand:"KoreanAura", product:"Kalsiyum Destekli Genc Gorunum Balm (calcium multi-balm)", adcount:3, score:52, bestad:"https://www.facebook.com/ads/library/?id=1597915177981810", lander:"https://www.trykoreanaura.com/products/koreanaura-kalsiyum-destekli-genc-gorunum-balm", tier:1, lowconf:false},
+ {rank:4, brand:"Medicube", product:"PDRN Pink Collagen Volume Multi Balm Stick (Volufiline)", adcount:3, score:52, bestad:"https://www.facebook.com/ads/library/?id=4313485142238541", lander:"https://luxyourlife.com/products/medicube-pdrn-pink-collagen-volume-multi-balm-stick-volufiline-pdrn-nad-collagen-face-body-balm-for-under-eyes-neck-forehead-smile-lines-lips-plumping-radiance-line-care-k-beauty", tier:1, lowconf:false},
+];
+const tierColor = t => ["", "var(--tier1)","var(--tier2)","var(--tier3)","var(--tier4)","var(--tier5)","var(--tier6)"][t];
+const tierName = t => ["", "Early validation","Strong validation","Proven PMF","More crowded","Increased saturation","Most saturated"][t];
+function render(list) {
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  list.forEach(d => {
+    const el = document.createElement('div');
+    el.className = 'cardw';
+    el.innerHTML = `
+      <div class="top" style="background:${tierColor(d.tier)}"></div>
+      <div class="body">
+        <div class="rank">RANK #${d.rank}</div>
+        <h3>${d.brand}</h3>
+        <div class="product">${d.product}</div>
+        <span class="badge" style="background:${tierColor(d.tier)}">${tierName(d.tier)}</span>
+        ${d.lowconf ? '<div class="lowconf">low-confidence brand match (domain fallback)</div>' : ''}
+        <div>
+          <a class="linkbtn" href="${d.bestad}" target="_blank" rel="noopener">Best Ad &#8599;</a>
+          <a class="linkbtn" href="${d.lander}" target="_blank" rel="noopener">Lander &#8599;</a>
+        </div>
+        <div class="metaline">Ad Count: ${d.adcount} across tabs &middot; Winner Score: ${d.score}</div>
+      </div>`;
+    grid.appendChild(el);
+  });
+}
+render(DATA);
+document.getElementById('search').addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  render(DATA.filter(d => d.brand.toLowerCase().includes(q) || d.product.toLowerCase().includes(q)));
+});
+document.getElementById('sortsel').addEventListener('change', e => {
+  const v = e.target.value;
+  const sorted = [...DATA].sort((a,b) => v === 'adcount' ? b.adcount - a.adcount : a.rank - b.rank);
+  render(sorted);
+});
+document.querySelectorAll('.tierbtn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tierbtn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const t = btn.dataset.tier;
+    render(t === 'all' ? DATA : DATA.filter(d => String(d.tier) === t));
+  });
+});
+</script>
+</body>
+</html>

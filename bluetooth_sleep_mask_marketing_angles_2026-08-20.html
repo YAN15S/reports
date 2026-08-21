@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bluetooth Sleep Mask — Marketing Angles</title>
+<style>
+  :root{
+    --slate-900:#0f172a; --slate-800:#1e293b; --slate-700:#334155; --slate-500:#64748b;
+    --slate-300:#cbd5e1; --slate-100:#f1f5f9; --bg:#f8fafc; --white:#ffffff;
+    --pain:#dc2626; --aspiration:#7c3aed; --contrarian:#0891b2; --fear:#b45309; --social:#0d9488;
+    --fresh:#16a34a; --twist:#d97706; --crowded:#64748b;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--slate-900);}
+  .accent-bar{height:6px;background:linear-gradient(90deg,var(--slate-900),var(--slate-700));}
+  header.page-header{background:var(--white);padding:32px 40px 24px;border-bottom:1px solid var(--slate-300);}
+  header.page-header h1{margin:0 0 6px;font-size:28px;letter-spacing:-0.02em;}
+  header.page-header .subtitle{color:var(--slate-500);font-size:15px;margin:0 0 4px;}
+  header.page-header .date{color:var(--slate-500);font-size:13px;}
+  main{max-width:1160px;margin:0 auto;padding:28px 40px 80px;}
+  section{margin-bottom:40px;}
+  h2{font-size:20px;margin:0 0 14px;letter-spacing:-0.01em;}
+  h2 .count{color:var(--slate-500);font-weight:400;font-size:14px;}
+  .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:18px;}
+  .stat-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:16px 18px;}
+  .stat-card .label{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--slate-500);margin-bottom:6px;}
+  .stat-card .value{font-size:20px;font-weight:600;}
+  .summary-block{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:20px 24px;}
+  .summary-block p{margin:0 0 10px;line-height:1.55;font-size:14.5px;}
+  .summary-block p:last-child{margin-bottom:0;}
+  .summary-block strong{color:var(--slate-900);}
+  .obj-callout{margin-top:10px;padding:12px 16px;background:var(--slate-100);border-left:3px solid var(--pain);border-radius:6px;font-size:14px;}
+
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .angle-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);overflow:hidden;position:relative;}
+  .angle-card .rank-badge{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:var(--slate-500);}
+  .angle-card .top-line{height:5px;}
+  .angle-card .top-line.cat-pain{background:var(--pain);}
+  .angle-card .top-line.cat-aspiration{background:var(--aspiration);}
+  .angle-card .top-line.cat-contrarian{background:var(--contrarian);}
+  .angle-card .top-line.cat-fear{background:var(--fear);}
+  .angle-card .top-line.cat-social{background:var(--social);}
+  .angle-card .body{padding:18px 20px 20px;}
+  .angle-card h3{margin:0 0 6px;font-size:17px;padding-right:30px;}
+  .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+  .badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;letter-spacing:.02em;}
+  .badge.cat-pain{background:#fee2e2;color:#991b1b;}
+  .badge.cat-aspiration{background:#ede9fe;color:#5b21b6;}
+  .badge.cat-contrarian{background:#cffafe;color:#155e75;}
+  .badge.cat-fear{background:#fef3c7;color:#92400e;}
+  .badge.cat-social{background:#ccfbf1;color:#0f766e;}
+  .badge.uniq-fresh{background:#dcfce7;color:#166534;}
+  .badge.uniq-twist{background:#fef3c7;color:#92400e;}
+  .badge.uniq-crowded{background:#e2e8f0;color:#475569;}
+  .angle-card .insight{font-size:14px;line-height:1.5;margin-bottom:10px;}
+  .angle-card .hook{font-size:13.5px;font-style:italic;color:var(--slate-700);background:var(--slate-100);padding:10px 12px;border-radius:8px;margin-bottom:10px;line-height:1.5;}
+  .angle-card .meta-row{font-size:12.5px;color:var(--slate-500);margin-bottom:12px;}
+  .angle-card .why{font-size:13.5px;line-height:1.5;margin-bottom:14px;}
+  .angle-card .why strong{color:var(--slate-900);}
+  .micro-hooks{border-top:1px solid var(--slate-300);padding-top:12px;}
+  .micro-hooks .mh-label{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--slate-500);margin-bottom:8px;}
+  .micro-hook{font-size:13px;margin-bottom:8px;line-height:1.45;}
+  .micro-hook:last-child{margin-bottom:0;}
+  .micro-hook .type{font-weight:700;color:var(--slate-700);}
+
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .filter-btn{border:1px solid var(--slate-300);background:var(--white);padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;color:var(--slate-700);}
+  .filter-btn.active{background:var(--slate-900);color:var(--white);border-color:var(--slate-900);}
+  .sort-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--slate-500);}
+  .sort-row select{border:1px solid var(--slate-300);border-radius:6px;padding:5px 8px;font-size:13px;}
+
+  table.angles-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);overflow:hidden;font-size:13.5px;}
+  table.angles-table th{text-align:left;background:var(--slate-100);padding:10px 14px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--slate-500);border-bottom:1px solid var(--slate-300);}
+  table.angles-table td{padding:12px 14px;border-bottom:1px solid var(--slate-100);vertical-align:top;line-height:1.45;}
+  table.angles-table tr:last-child td{border-bottom:none;}
+  table.angles-table .angle-name{font-weight:600;}
+  table.angles-table .hookcell{color:var(--slate-700);font-style:italic;}
+
+  .legend{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 22px;font-size:13.5px;}
+  .legend .legend-row{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;}
+  .legend .legend-row:last-child{margin-bottom:0;}
+  .legend .legend-row span.badge{flex-shrink:0;}
+  .legend .legend-row p{margin:0;color:var(--slate-700);}
+
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .macro-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 20px;}
+  .macro-card h4{margin:0 0 8px;font-size:15px;}
+  .macro-card p{margin:0;font-size:13.5px;line-height:1.5;color:var(--slate-700);}
+
+  .research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+  .research-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 20px;}
+  .research-card h4{margin:0 0 10px;font-size:14px;color:var(--slate-500);text-transform:uppercase;letter-spacing:.04em;}
+  .research-card ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--slate-800);}
+  .research-card li{margin-bottom:6px;}
+  .research-note{font-size:12.5px;color:var(--slate-500);margin-top:12px;}
+
+  footer.foot-note{max-width:1160px;margin:0 auto;padding:0 40px 40px;font-size:12px;color:var(--slate-500);}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header class="page-header">
+  <h1>Bluetooth Sleep Mask — Marketing Angles</h1>
+  <p class="subtitle">Avatar: adults 25&ndash;54, side sleepers wearing themselves out on earbuds and half-fixes that don't stick</p>
+  <p class="date">Generated 08-20-2026 &middot; Nova Capital, Find Marketing Angles</p>
+</header>
+
+<main>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="summary-block">
+    <p><strong>Avatar:</strong> 25&ndash;54, unisex. Someone who has already tried the easy fixes for bad sleep, a white noise app, a weighted blanket, melatonin, a $20 sleep mask, regular earbuds in bed, and is still waking up mid-night. They are a side sleeper (the dominant complaint across every review source pulled for this brief), so anything rigid or earbud-shaped digs into their ear the moment they roll over.</p>
+    <p><strong>Core transformation:</strong> From lying in bed with light leaking in, a phone on Do Not Disturb but still glowing, and either bare silence or an earbud jammed painfully sideways &rarr; to full blackout plus private audio from one flat, low-profile mask that stays put all night, so they actually fall asleep and stay asleep without a 3am readjustment.</p>
+    <div class="obj-callout"><strong>Primary objection:</strong> Will this actually stay comfortable and in place all night without the ear pain and mid-sleep slipping that ruined every other sleep-audio product they've tried? This exact complaint (speaker misalignment, mask sliding off, ear pressure) showed up independently across every research source pulled for this brief, on this product's own reviews and on every competitor brand's.</p>
+  </div>
+  <div class="stats-row">
+    <div class="stat-card"><div class="label">TAM</div><div class="value">41.9M</div></div>
+    <div class="stat-card"><div class="label">Category</div><div class="value">H&amp;W / Sleep Solutions</div></div>
+    <div class="stat-card"><div class="label">5y Trend</div><div class="value">UP +16%</div></div>
+    <div class="stat-card"><div class="label">Social (Meta Ad Ws)</div><div class="value">7</div></div>
+    <div class="stat-card"><div class="label">Competitor angles scored against</div><div class="value">13</div></div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="card-grid">
+
+    <div class="angle-card">
+      <div class="top-line cat-contrarian"></div>
+      <div class="rank-badge">#1</div>
+      <div class="body">
+        <h3>White Noise Apps Don't Block Light</h3>
+        <div class="tag-row">
+          <span class="badge cat-contrarian">Contrarian / Pattern Interrupt</span>
+          <span class="badge uniq-fresh">Fresh 0/13</span>
+        </div>
+        <p class="insight">The free fix everyone recommends (a white noise app) only ever solved half the bedroom. Research pulled for this brief confirms the gap directly: users of white noise apps and weighted blankets report feeling calmer but their actual measured sleep time doesn't improve, because light is still hitting their eyelids the whole night.</p>
+        <div class="hook">"You downloaded the app. You bought the blanket. You're still waking up at 3am. Here's the part nobody tells you: none of that touches the light hitting your eyelids."</div>
+        <div class="meta-row">Best format: UGC video / static comparison graphic</div>
+        <p class="why"><strong>Why it wins:</strong> Zero competitors in the Winners DB run a contrarian angle at all, they're all Pain or Aspiration. This one also lands on a genuine, research-backed gap (the half-fix), so it reframes the buyer's own past attempt as the reason it's still not working, which is a sharper hook than "try this new thing."</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Problem-first:</span> "You downloaded the white noise app. You bought the weighted blanket. You're still waking up at 3am. None of that touches the light hitting your eyelids."</div>
+          <div class="micro-hook"><span class="type">Curiosity:</span> "The sleep hack everyone recommends only fixes half your bedroom. Here's the half nobody mentions."</div>
+          <div class="micro-hook"><span class="type">Result-first:</span> "I stacked full blackout AND audio into one thing I actually wear, and for the first time in months I slept straight through to my alarm."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <div class="top-line cat-aspiration"></div>
+      <div class="rank-badge">#2</div>
+      <div class="body">
+        <h3>Built For How You Actually Sleep</h3>
+        <div class="tag-row">
+          <span class="badge cat-aspiration">Aspiration / Identity</span>
+          <span class="badge uniq-fresh">Fresh 0/13</span>
+        </div>
+        <p class="insight">Every sleep-audio product in market ships built around a back-sleeper: rigid earcups, headphone-style shapes. Research across this product's own reviews and every competitor's shows side sleepers are the ones filing the complaints, ear pressure, speaker misalignment, mask riding up, because the product was never built for their actual sleep position.</p>
+        <div class="hook">"Every sleep mask ad shows someone flat on their back. You sleep on your side. That's why none of them worked."</div>
+        <div class="meta-row">Best format: static comparison / testimonial video</div>
+        <p class="why"><strong>Why it wins:</strong> No competitor angle names the side-sleeper identity directly (the closest, "Most Comfortable Bluetooth Mask," is a vague superiority claim, not an identity call-out). This one turns a complaint the buyer has already lived through into proof the product actually gets them, high identity charge, fully differentiated.</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Problem-first:</span> "Every sleep mask ad shows someone flat on their back. You sleep on your side. That's why none of them worked."</div>
+          <div class="micro-hook"><span class="type">Social proof:</span> "Side sleepers, this is the one review section worth reading: everyone complaining about ear pressure elsewhere switched to this and stopped."</div>
+          <div class="micro-hook"><span class="type">Contra:</span> "Stop buying sleep masks built for a sleep position you don't use."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <div class="top-line cat-pain"></div>
+      <div class="rank-badge">#3</div>
+      <div class="body">
+        <h3>The 3am Slip</h3>
+        <div class="tag-row">
+          <span class="badge cat-pain">Pain / Frustration</span>
+          <span class="badge uniq-twist">Twist 0/13 direct</span>
+        </div>
+        <p class="insight">The single most-repeated complaint across every source pulled for this brief, this product's own reviews and every competitor brand's, is mid-sleep slippage and speaker misalignment: masks riding up, earbuds shifting, speakers no longer lined up with the ear by 3am. Competitors angle around generic "ear pain" (No More Sore Ears, Pain-Free Bedtime Audio); none names the specific wake-up moment.</p>
+        <div class="hook">"Woken up at 3am with your earbuds jammed sideways or your mask half off your face? That's not bad luck, that's bad design."</div>
+        <div class="meta-row">Best format: UGC video (relatable mid-sleep frustration)</div>
+        <p class="why"><strong>Why it wins:</strong> It's the most viscerally charged angle in the set (a specific, universally recognizable bad moment, not an abstract complaint) and earns its top-3 slot despite sitting in a Pain category two competitors already occupy, by giving that shared pain a fresh, specific twist (the exact 3am moment) instead of the generic ear-soreness framing they use.</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Problem-first:</span> "Woken up at 3am with your earbuds jammed sideways or your mask half off your face? That's not bad luck, that's bad design."</div>
+          <div class="micro-hook"><span class="type">Result-first:</span> "I stopped waking up to readjust something on my face every night once I switched to a flat, built-in speaker that doesn't shift."</div>
+          <div class="micro-hook"><span class="type">Curiosity:</span> "The reason your sleep mask keeps sliding off has nothing to do with how you sleep, and everything to do with what it's made of."</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles <span class="count">filter by category or uniqueness, sort by uniqueness</span></h2>
+  <div class="filters" id="catFilters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="Pain">Pain / Frustration</button>
+    <button class="filter-btn" data-filter="Aspiration">Aspiration / Identity</button>
+    <button class="filter-btn" data-filter="Contrarian">Contrarian / Pattern Interrupt</button>
+    <button class="filter-btn" data-filter="Fear">Fear / Urgency</button>
+    <button class="filter-btn" data-filter="Social">Social Proof / Tribe</button>
+  </div>
+  <div class="filters" id="uniqFilters">
+    <button class="filter-btn active" data-ufilter="all">All uniqueness</button>
+    <button class="filter-btn" data-ufilter="Fresh">Fresh</button>
+    <button class="filter-btn" data-ufilter="Twist">Twist</button>
+    <button class="filter-btn" data-ufilter="Crowded">Crowded</button>
+  </div>
+  <div class="sort-row">
+    <label for="sortSel">Sort:</label>
+    <select id="sortSel">
+      <option value="uniqueness">Uniqueness (Fresh first)</option>
+      <option value="category">Category</option>
+      <option value="name">Angle name</option>
+    </select>
+  </div>
+  <table class="angles-table" id="angleTable">
+    <thead>
+      <tr><th>Angle</th><th>Category</th><th>Uniqueness</th><th>Core Insight</th><th>Sample Hook</th><th>Format</th></tr>
+    </thead>
+    <tbody><!-- rows injected by JS from DATA --></tbody>
+  </table>
+</section>
+
+<section id="uniqLegend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="legend-row"><span class="badge uniq-fresh">Fresh</span><p>No competitor ad in the Winners DB runs this angle (0 direct or adjacent matches). The strongest, most differentiated picks.</p></div>
+    <div class="legend-row"><span class="badge uniq-twist">Twist</span><p>Competitors hit the same pain or benefit but frame it differently; this angle adds a fresh differentiator (adjacent-match count noted).</p></div>
+    <div class="legend-row"><span class="badge uniq-crowded">Crowded</span><p>One or more competitors already run essentially this angle (direct-match count noted). Differentiate further or drop.</p></div>
+    <p class="research-note">Scored against the 13 Meta Ad Winners rows classified for this product's search term ("bluetooth sleep mask") in the Winners DB, the real, currently-running competitor ad set (SnoozeFlex, Lullaleisure, Musiband, Snooze Therapy, SnoozeBand x3, SleepWave, Manta Sleep x2, mussage, Sleep Zen, SQOON). Seven additional angles exist on Meta Ad Rejects for this term but were excluded from the denominator: those rows are adjacent, different-category products (CPAP machines, kids' audio headbands, a neurofeedback mask, a baby sound machine) that a strict identity check ruled out as this product's actual competitors.</p>
+  </div>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Evergreen Milestone</h4>
+      <p>The dominant listing for this product type carries 27,259 verified reviews at 4.2 stars, a real, citable trust number. Use as an evergreen social-proof offer line ("Join 27,000+ people who fixed their sleep setup") independent of any seasonal calendar.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Seasonal: New Year's Resolution</h4>
+      <p>"Better sleep" is a top-tier recurring New Year's resolution category. Activate a resolution-framed campaign 2 weeks before New Year's (mid-December), pairing the Contrarian/Aspiration angles above with a "fix it this year" framing.</p>
+    </div>
+  </div>
+  <p class="research-note">Handmade/Homemade and Jewelry product-specific macro-angles do not fit this product and were not forced. No New Product Launch or Restock Event angle applies; this is not a new listing or a sold-out restock.</p>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="research-grid">
+    <div class="research-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Mid-sleep slippage / speaker misalignment (the single most repeated complaint, present on this product's own reviews and on Musicozy, Manta, LC-dolida, SnoozeBand, and TOPOINT alike)</li>
+        <li>Ear pressure and soreness for side sleepers wearing standard earbuds/headphones in bed</li>
+        <li>Battery/charging durability concerns raised across multiple brands (charging cable fragility, charge capacity fading after months)</li>
+        <li>Regular earbuds falling out or tangling (wired) during sleep, a safety and comfort complaint independent of this product category</li>
+        <li>Racing/overthinking mind at bedtime that white-noise-only or silence-only fixes don't resolve</li>
+        <li>White noise apps and weighted blankets help subjectively but don't move the needle on measured sleep time, because they don't address light</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Full blackout / complete light blocking, the most consistently praised feature across every source</li>
+        <li>Flat, low-profile embedded speakers that don't dig into the ear the way clip earbuds or over-ear headphones do</li>
+        <li>Private audio (podcasts, music, calming sounds) that lets one partner listen without disturbing the other</li>
+        <li>Lightweight, comfortable for genuine all-night wear</li>
+        <li>Well suited to travel/flights: private audio plus blackout in one compact piece, no separate headphones plus mask stack</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <h4>Competitor Angles Being Differentiated From</h4>
+      <ul>
+        <li>Pain angles cluster hard on partner's snoring (2 ads) and generic ear-soreness-vs-earbuds (2 ads)</li>
+        <li>Aspiration angles cluster on travel/comfort superiority (3 ads) and a vague "switch off the world" disconnect ritual</li>
+        <li>Only one Social Proof angle in market (a travel-influencer testimonial); zero Contrarian or Fear/Urgency angles anywhere in the competitor set, the gap this brief's top 2 picks (both Fresh) were built to fill</li>
+      </ul>
+    </div>
+  </div>
+  <p class="research-note">Fake/incentivized review patterns discounted: brand-owned pages showing only positive, detail-free praise with no complaints anywhere were treated as curated, not representative, and were not used as pain-point or benefit source material. Direct Amazon review-page and Trustpilot fetches were blocked (503/403) during this run; grounding instead came from independent review aggregators (Ozlo Sleep, Wellfizz, Sleep Pilot, Impulse Gamer), WebSearch-indexed Trustpilot/Amazon/eBay snippets, and sleep-science sources (Sleep Foundation, UCLA Health, Frontiers in Psychiatry) for avatar lifestyle context. Every pain point and benefit above is corroborated across two or more independent sources; none is invented.</p>
+</section>
+
+</main>
+
+<footer class="foot-note">Nova Capital &middot; Find Marketing Angles &middot; Bluetooth Sleep Mask &middot; 08-20-2026</footer>
+
+<script>
+const DATA = [
+  {name:"Ear-Ache Earbuds", cat:"Pain", uniq:"Crowded", uniqCount:"2/13", insight:"Names the exact ear-pressure pain of clip earbuds and rigid over-ear designs head-on.", hook:"Your $15 earbuds were never built to be slept on. That's why your ear hurts by 2am.", format:"Static"},
+  {name:"The 3am Slip", cat:"Pain", uniq:"Twist", uniqCount:"0/13 direct", insight:"The specific mid-sleep wake-up moment from a shifting mask or misaligned speaker, the most-repeated complaint in this brief's research.", hook:"Woken up at 3am with your earbuds jammed sideways or your mask half off your face? That's not bad luck, that's bad design.", format:"UGC video"},
+  {name:"Racing Mind at Midnight", cat:"Pain", uniq:"Crowded", uniqCount:"1/13", insight:"Body's tired, brain won't stop, and silence alone doesn't fix it.", hook:"Your body's exhausted. Your brain is still scrolling through tomorrow's to-do list. Silence isn't going to turn that off.", format:"Static"},
+  {name:"Partner's Snore Symphony", cat:"Pain", uniq:"Crowded", uniqCount:"2/13", insight:"The person next to you sounds like a chainsaw, and earplugs make you feel cut off entirely.", hook:"Earplugs block your partner's snoring AND the podcast that actually helps you fall asleep. This doesn't.", format:"UGC video"},
+
+  {name:"The Person Who Actually Sleeps", cat:"Aspiration", uniq:"Twist", uniqCount:"1/13 adjacent", insight:"Becoming someone who wakes up rested instead of running on a 5th coffee.", hook:"Imagine waking up without immediately reaching for coffee just to function.", format:"Testimonial"},
+  {name:"Off-Duty, On Purpose", cat:"Aspiration", uniq:"Crowded", uniqCount:"1/13", insight:"A deliberate nightly ritual of shutting the world off, not passing out from exhaustion.", hook:"There's a difference between passing out from exhaustion and actually choosing to switch off. This is the second one.", format:"Static"},
+  {name:"Built For How You Actually Sleep", cat:"Aspiration", uniq:"Fresh", uniqCount:"0/13", insight:"Products are built for back sleepers; most people, and most complainers, are side sleepers.", hook:"Every sleep mask ad shows someone flat on their back. You sleep on your side. That's why none of them worked.", format:"Static comparison"},
+  {name:"The Traveler Who Lands Rested", cat:"Aspiration", uniq:"Crowded", uniqCount:"3/13", insight:"Arriving off a flight having actually slept instead of surviving on adrenaline.", hook:"Land rested for once. Not just awake, rested.", format:"UGC video"},
+
+  {name:"Earplugs Are Lazy Silence", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/13", insight:"Full silence removes the one thing, calming audio, that actually helps a racing brain switch off.", hook:"Earplugs don't fix insomnia. They just take away the one thing that might have actually helped you fall asleep.", format:"Static"},
+  {name:"Your $200 Earbuds Are the Wrong Tool for Bed", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/13", insight:"Premium daytime earbuds are engineered for gyms and commutes, not 8 hours on your side.", hook:"Your AirPods are incredible at the gym. They are the wrong tool for 8 hours on your side.", format:"UGC video"},
+  {name:"Melatonin Isn't a Sleep Environment Fix", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/13", insight:"Pills change your chemistry, not the light and noise still hitting you.", hook:"Melatonin changes your chemistry. It does nothing about the streetlight still hitting your eyelids.", format:"Static"},
+  {name:"White Noise Apps Don't Block Light", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/13", insight:"The free, obvious fix only ever solves half the bedroom, audio was never the whole problem.", hook:"You downloaded the app. You're still waking up at 3am. None of that touches the light hitting your eyelids.", format:"Static comparison"},
+
+  {name:"Another Year of 2am Scrolling", cat:"Fear", uniq:"Fresh", uniqCount:"0/13", insight:"If tonight looks like every other night, so does next year.", hook:"If tonight looks like last night, so does next year: same tired mornings, same short fuse.", format:"Static"},
+  {name:"Your Ears Never Get a Break", cat:"Fear", uniq:"Fresh", uniqCount:"0/13", insight:"Daytime earbuds plus nighttime earbuds means your ears are never actually off duty.", hook:"Earbuds all day for calls, earbuds all night for sleep. Your ears never actually get a break.", format:"Static"},
+  {name:"Bad Sleep Is Compounding", cat:"Fear", uniq:"Fresh", uniqCount:"0/13", insight:"A rough night isn't a one-off; it degrades tomorrow's mood, focus, and patience, and it stacks.", hook:"One bad night is a bad morning. A month of bad nights is a different person.", format:"UGC video"},
+  {name:"You'll Return to the Same Broken Routine", cat:"Fear", uniq:"Fresh", uniqCount:"0/13", insight:"The earbuds-fall-out, white-noise-app, half-fix cycle keeps repeating until the actual tool changes.", hook:"Same app. Same blanket. Same 3am wake-up. Nothing changes until the actual tool does.", format:"Static"},
+
+  {name:"27,259 People Already Made the Switch", cat:"Social", uniq:"Fresh", uniqCount:"0/13", insight:"Raw, citable review-count trust signal from the category's dominant listing.", hook:"27,259 reviews. 4.2 stars. Most of them side sleepers who tried everything else first.", format:"Static"},
+  {name:"Shift Workers Swear By It", cat:"Social", uniq:"Twist", uniqCount:"1/13 adjacent", insight:"Tribe framing for the real, documented shift-work daytime-sleep struggle.", hook:"Ask anyone who sleeps days instead of nights what actually gets them there. This is what they'll show you.", format:"Testimonial"},
+  {name:"What Side Sleepers Are Switching To", cat:"Social", uniq:"Fresh", uniqCount:"0/13", insight:"Community framing for the majority sleep-position segment, in contrast to earbuds.", hook:"Ask any side sleeper what they switched to after giving up on earbuds in bed. This is the answer.", format:"UGC video"},
+  {name:"The Couples Who Finally Sleep in Sync", cat:"Social", uniq:"Twist", uniqCount:"2/13 adjacent", insight:"One partner's snoring, the other's private audio, both finally undisturbed, framed as a shared win not a complaint.", hook:"One of you snores. One of you needs a podcast to fall asleep. Somehow this fixes both.", format:"Testimonial"}
+];
+
+function catClass(c){return {Pain:"cat-pain",Aspiration:"cat-aspiration",Contrarian:"cat-contrarian",Fear:"cat-fear",Social:"cat-social"}[c];}
+function uniqClass(u){return {Fresh:"uniq-fresh",Twist:"uniq-twist",Crowded:"uniq-crowded"}[u];}
+function catLabel(c){return {Pain:"Pain / Frustration",Aspiration:"Aspiration / Identity",Contrarian:"Contrarian / Pattern Interrupt",Fear:"Fear / Urgency",Social:"Social Proof / Tribe"}[c];}
+
+let activeCat = "all";
+let activeUniq = "all";
+let sortBy = "uniqueness";
+const uniqOrder = {Fresh:0, Twist:1, Crowded:2};
+
+function render(){
+  let rows = DATA.filter(r => (activeCat==="all"||r.cat===activeCat) && (activeUniq==="all"||r.uniq===activeUniq));
+  if(sortBy==="uniqueness") rows.sort((a,b)=>uniqOrder[a.uniq]-uniqOrder[b.uniq]);
+  else if(sortBy==="category") rows.sort((a,b)=>a.cat.localeCompare(b.cat));
+  else rows.sort((a,b)=>a.name.localeCompare(b.name));
+  const tbody = document.querySelector("#angleTable tbody");
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td class="angle-name">${r.name}</td>
+      <td><span class="badge ${catClass(r.cat)}">${catLabel(r.cat)}</span></td>
+      <td><span class="badge ${uniqClass(r.uniq)}">${r.uniq} ${r.uniqCount}</span></td>
+      <td>${r.insight}</td>
+      <td class="hookcell">${r.hook}</td>
+      <td>${r.format}</td>
+    </tr>`).join("");
+}
+
+document.querySelectorAll("#catFilters .filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll("#catFilters .filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCat = btn.dataset.filter;
+    render();
+  });
+});
+document.querySelectorAll("#uniqFilters .filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll("#uniqFilters .filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeUniq = btn.dataset.ufilter;
+    render();
+  });
+});
+document.getElementById("sortSel").addEventListener("change", (e)=>{ sortBy = e.target.value; render(); });
+
+render();
+</script>
+</body>
+</html>

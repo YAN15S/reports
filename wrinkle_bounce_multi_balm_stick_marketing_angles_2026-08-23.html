@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wrinkle Bounce Multi Balm Stick - Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --slate:#1e293b; --slate2:#334155; --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --sub:#475569;
+    --line:#e2e8f0; --fresh:#16a34a; --freshbg:#dcfce7; --twist:#d97706; --twistbg:#fef3c7;
+    --crowded:#dc2626; --crowdedbg:#fee2e2; --accent:#6366f1;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate2));}
+  header.page-header{background:var(--card);padding:28px 32px 22px;border-bottom:1px solid var(--line);}
+  header.page-header h1{margin:0 0 6px;font-size:1.6rem;}
+  header.page-header .subtitle{color:var(--sub);font-size:0.98rem;max-width:900px;line-height:1.5;}
+  header.page-header .date{color:#94a3b8;font-size:0.82rem;margin-top:10px;}
+  main{max-width:1180px;margin:0 auto;padding:24px 20px 60px;}
+  .summary-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:26px;}
+  .summary-block h2{margin-top:0;font-size:1.05rem;}
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px;}
+  .summary-grid .item h3{margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--sub);}
+  .summary-grid .item p{margin:0;line-height:1.55;font-size:0.93rem;}
+  .objection{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:0.93rem;line-height:1.55;}
+  .objection b{color:#c2410c;}
+  section{margin-bottom:34px;}
+  section > h2{font-size:1.15rem;margin-bottom:14px;border-left:4px solid var(--accent);padding-left:10px;}
+  .badge{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.03em;padding:3px 9px;border-radius:99px;text-transform:uppercase;}
+  .badge.fresh{background:var(--freshbg);color:var(--fresh);}
+  .badge.twist{background:var(--twistbg);color:var(--twist);}
+  .badge.crowded{background:var(--crowdedbg);color:var(--crowded);}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .top3-card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .top3-card .accent{height:5px;}
+  .top3-card .accent.fresh{background:var(--fresh);} .top3-card .accent.twist{background:var(--twist);} .top3-card .accent.crowded{background:var(--crowded);}
+  .top3-card .body{padding:18px 20px;}
+  .top3-card .rank{font-size:0.78rem;color:var(--sub);font-weight:700;letter-spacing:0.04em;}
+  .top3-card h3{margin:4px 0 8px;font-size:1.15rem;}
+  .top3-card .cat{font-size:0.78rem;color:var(--sub);margin-bottom:10px;}
+  .top3-card .insight{font-size:0.9rem;line-height:1.5;margin-bottom:10px;}
+  .top3-card .hook{background:#f1f5f9;border-radius:6px;padding:10px 12px;font-size:0.88rem;font-style:italic;line-height:1.5;margin-bottom:10px;}
+  .top3-card .why{font-size:0.85rem;line-height:1.5;color:var(--sub);margin-bottom:10px;}
+  .top3-card .fmt{font-size:0.78rem;color:var(--sub);margin-bottom:10px;}
+  .top3-card .hooks{margin:0;padding-left:18px;font-size:0.83rem;line-height:1.6;}
+  .top3-card .hooks li b{color:var(--accent);}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .filters button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:0.82rem;cursor:pointer;}
+  .filters button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:0.87rem;}
+  thead th{background:#f1f5f9;text-align:left;padding:10px 12px;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.03em;color:var(--sub);cursor:pointer;user-select:none;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;line-height:1.45;}
+  tbody tr.hidden{display:none;}
+  .legend{display:flex;flex-wrap:wrap;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:0.85rem;margin-top:14px;}
+  .legend .row{display:flex;gap:8px;align-items:baseline;}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .macro-card h4{margin:0 0 6px;font-size:0.95rem;}
+  .macro-card p{margin:0;font-size:0.87rem;line-height:1.5;color:var(--sub);}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .notes-card h4{margin:0 0 10px;font-size:0.92rem;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:0.85rem;line-height:1.55;}
+  .notes-card ul li{margin-bottom:6px;}
+  .src{color:#64748b;font-size:0.78rem;}
+  .compliance{background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;font-size:0.82rem;color:#991b1b;margin-top:10px;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="page-header">
+  <h1>Wrinkle Bounce Multi Balm Stick &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: women 28-55 with dry-to-normal, maturing skin (visible fine lines, deflated under-eyes, dehydration), who want an instant multi-use ritual and are wary of getting burned again by an overpriced, breakout-causing "miracle" balm.</div>
+  <div class="date">Published 2026-08-23 &middot; Product DB row 10</div>
+</header>
+
+<main>
+
+<div class="summary-block">
+  <h2>Summary</h2>
+  <div class="summary-grid">
+    <div class="item">
+      <h3>Avatar</h3>
+      <p>Women 28-55 (Age Demo 25-50+, Female-dominated per Product DB), skewing toward dry-to-normal, maturing skin. Has a drawer of half-used serums and creams that "soaked in and vanished by 3pm." Wants an effortless, fast ritual, not another 8-step routine, and is genuinely skeptical after a past rich balm or "miracle" K-beauty product either did nothing or broke her out.</p>
+    </div>
+    <div class="item">
+      <h3>Core Transformation</h3>
+      <p><b>Before:</b> dry, deflated, tired-looking skin and a resigned "I'll start a real routine eventually" mindset. <b>After:</b> an instant plumped, dewy "glass skin" glow from one 3-second swipe that doubles as eye cream, lip balm, neck cream, and makeup base &mdash; without the grease or breakouts of past rich-balm attempts, because it is being used by the skin type it was actually built for.</p>
+    </div>
+  </div>
+  <div class="objection"><b>PRIMARY OBJECTION:</b> "Is this just an overpriced, greasy K-beauty balm that's going to break me out or wreck my makeup like the last one did?" &mdash; grounded in this run's own research: independent reviewer/dermatology sources cite the balm as roughly 6x the per-gram price of Vaseline, "30-40% marketing markup," and real breakout/oiliness complaints concentrated specifically among oily and combination-skin users.</div>
+</div>
+
+<section>
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="top3-card">
+      <div class="accent fresh"></div>
+      <div class="body">
+        <div class="rank">RANK 1 &middot; Contrarian / Pattern Interrupt</div>
+        <h3>This Isn't For Everyone. That's The Point.</h3>
+        <div class="cat"><span class="badge fresh">Fresh 0/48</span></div>
+        <div class="insight">The category's hidden failure mode &mdash; oily/acne-prone buyers breaking out on a rich balm marketed as "for everyone" &mdash; becomes this product's biggest trust-builder the moment it openly says who it is <i>not</i> for.</div>
+        <div class="hook">"Oily or acne-prone skin? Skip this one, honestly. Dry, dehydrated, maturing skin? This is the only balm built for exactly that. No guessing, no bad reviews, no wasted $25."</div>
+        <div class="why"><b>Why it wins:</b> zero of the 48 competitor ads for this term disqualify their own buyer &mdash; it is the single most differentiated trust play available, and it is grounded directly in independently corroborated breakout complaints from oily-skin users (GoPicky, dodo-kbeauty, Wildlife Millions, Hwahae data) surfaced by this run's own research.</div>
+        <div class="fmt"><b>Format:</b> UGC video / testimonial (a real "who this is and isn't for" explainer)</div>
+        <ul class="hooks">
+          <li><b>Problem-first:</b> "Tried a rich balm before and broke out? You probably had the wrong skin type for it, not the wrong product."</li>
+          <li><b>Curiosity:</b> "The one skincare brand that will actually tell you NOT to buy their product."</li>
+          <li><b>Contra:</b> "Stop buying balms that promise to work for 'all skin types.' They don't. This one tells you the truth upfront."</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top3-card">
+      <div class="accent fresh"></div>
+      <div class="body">
+        <div class="rank">RANK 2 &middot; Fear / Urgency</div>
+        <h3>Another Year of Looking As Tired As You Feel</h3>
+        <div class="cat"><span class="badge fresh">Fresh 0/48</span></div>
+        <div class="insight">The real fear isn't a wrinkle count, it's the slow drift into looking (and feeling) permanently tired and deflated while telling yourself you'll "start a real routine" eventually.</div>
+        <div class="hook">"You said this would be the year you finally took care of your skin. It's month 8. Nothing's changed but the calendar."</div>
+        <div class="why"><b>Why it wins:</b> identity-drift and resignation are the most emotionally charged lever in direct response, and it is completely untouched by the competitor set &mdash; all 48 ads lead with instant-result claims (glow, lift, firmness), none with this identity-drift framing, so it converts procrastination into urgency without needing a medical claim.</div>
+        <div class="fmt"><b>Format:</b> VSL / UGC testimonial</div>
+        <ul class="hooks">
+          <li><b>Problem-first:</b> "Every morning you catch your reflection and think 'I really need to start taking care of my skin.' Then you don't."</li>
+          <li><b>Result-first:</b> "3 seconds a day for 30 days later, people started asking what changed."</li>
+          <li><b>Social proof:</b> "8,788 women stopped saying 'I'll start next week' and just started."</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top3-card">
+      <div class="accent fresh"></div>
+      <div class="body">
+        <div class="rank">RANK 3 &middot; Contrarian / Pattern Interrupt</div>
+        <h3>It's Not Fancy Vaseline. Here's The Actual Math.</h3>
+        <div class="cat"><span class="badge fresh">Fresh 0/48</span></div>
+        <div class="insight">The loudest real objection this run's research surfaced &mdash; independently, from two separate review/comparison sources &mdash; is price-vs-Vaseline skepticism. Naming it directly and doing the actual math disarms it instead of hoping cold traffic never thinks of it.</div>
+        <div class="hook">"Yes, it costs about 6x more per gram than Vaseline. Here's what Vaseline can't do: instant plumping, a multi-use formula that replaces your eye cream, lip balm, and neck cream, and a texture that won't sit like grease. Now the math looks different."</div>
+        <div class="why"><b>Why it wins:</b> this exact objection was raised, unprompted, by multiple independent third-party sources about this exact product (a Vaseline-comparison review and a dedicated "dupes" comparison page); no ad in the 48-row competitor set addresses it at all, so naming it first is a genuine pattern interrupt cold traffic will recognize.</div>
+        <div class="fmt"><b>Format:</b> static / carousel (side-by-side cost breakdown)</div>
+        <ul class="hooks">
+          <li><b>Curiosity:</b> "Everyone compares this to Vaseline. Nobody does the actual math. We did."</li>
+          <li><b>Contra:</b> "Stop comparing this to a $3 tub of petroleum jelly. It's not doing the same job."</li>
+          <li><b>Problem-first:</b> "'Why does this cost 6x more than Vaseline?' Fair question. Here's the honest answer."</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>All 20 Angles</h2>
+  <div class="filters" id="catFilters">
+    <button class="active" data-filter="cat" data-value="all">All Categories</button>
+    <button data-filter="cat" data-value="Pain">Pain</button>
+    <button data-filter="cat" data-value="Aspiration">Aspiration</button>
+    <button data-filter="cat" data-value="Contrarian">Contrarian</button>
+    <button data-filter="cat" data-value="Fear">Fear</button>
+    <button data-filter="cat" data-value="Social Proof">Social Proof</button>
+  </div>
+  <div class="filters" id="uniqFilters">
+    <button class="active" data-filter="uniq" data-value="all">All Uniqueness</button>
+    <button data-filter="uniq" data-value="Fresh">Fresh</button>
+    <button data-filter="uniq" data-value="Twist">Twist</button>
+    <button data-filter="uniq" data-value="Crowded">Crowded</button>
+  </div>
+  <div style="overflow-x:auto;">
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="cat">Category</th>
+        <th data-sort="uniq">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="fmt">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-cat="Pain" data-uniq="Fresh"><td>The 3-Minute Mirror Sigh</td><td>Pain</td><td><span class="badge fresh">Fresh 0/48</span></td><td>The trigger isn't a specific wrinkle, it's the daily moment of catching a tired, deflated reflection before the day even starts.</td><td>You catch your reflection in the elevator and there it is again: that dry, deflated "did I even sleep" look. One swipe, 3 seconds, gone before your coffee's cold.</td><td>UGC video</td></tr>
+      <tr data-cat="Pain" data-uniq="Fresh"><td>Skincare That Takes Too Long For A Life This Busy</td><td>Pain</td><td><span class="badge fresh">Fresh 0/48</span></td><td>The obstacle isn't wanting good skin, it's abandoning 5-step routines from sheer time pressure.</td><td>You didn't stop caring about your skin. You just don't have 12 minutes and 5 products every morning anymore.</td><td>Static</td></tr>
+      <tr data-cat="Pain" data-uniq="Twist"><td>Crepey Under-Eyes, Every Morning</td><td>Pain</td><td><span class="badge twist">Twist 2/48</span></td><td>Competitors sell an instant fill; this targets the actual daily texture complaint with consistent use, not a one-time trick.</td><td>It's not just under-eye circles. It's the crepey texture that makes you look tired even when you're not.</td><td>Close-up UGC</td></tr>
+      <tr data-cat="Pain" data-uniq="Twist"><td>Winter Skin That Drinks Every Cream And Still Looks Dry</td><td>Pain</td><td><span class="badge twist">Twist 1/48</span></td><td>The frustration isn't lack of effort, it's products that absorb and vanish without lasting hydration.</td><td>You've tried the $80 cream. It soaked in by noon and your skin was thirsty again by 3pm. This is built for 48-hour hold.</td><td>Testimonial</td></tr>
+
+      <tr data-cat="Aspiration" data-uniq="Crowded"><td>The Woman Who Has Her Glow Together</td><td>Aspiration</td><td><span class="badge crowded">Crowded 15/48</span></td><td>The aspiration isn't perfect skin, it's looking effortlessly put-together without anyone knowing the routine behind it.</td><td>She's not wearing 8 products. She's wearing one.</td><td>UGC / carousel</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Fresh"><td>Skincare That Fits In Your Coat Pocket, Not Your Cabinet</td><td>Aspiration</td><td><span class="badge fresh">Fresh 0/48</span></td><td>The identity shift is minimalism as mastery: not more products, the right one.</td><td>Her whole "skincare routine" fits in a coat pocket. Yours can too.</td><td>Static</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>Dewy, Not Done</td><td>Aspiration</td><td><span class="badge twist">Twist 15/48</span></td><td>The aspiration is a natural glow, explicitly not the overworked, over-filtered look most competitor ads push.</td><td>Not filtered. Not overdone. Just dewy.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>The Multi-Tasker Who Doesn't Need A 10-Step Shelf</td><td>Aspiration</td><td><span class="badge twist">Twist 3/48</span></td><td>Identity as the efficient woman who gets more from less, not the person with a cluttered vanity.</td><td>Face. Eyes. Lips. Neck. One stick, one swipe, one less thing to think about.</td><td>UGC demo</td></tr>
+
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>This Isn't For Everyone. That's The Point.</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/48</span></td><td>The category's hidden failure mode becomes this product's biggest trust-builder by naming who it is not for.</td><td>Oily or acne-prone skin? Skip this one, honestly. Dry, dehydrated, maturing skin? This is the only balm built for exactly that.</td><td>UGC / testimonial</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>It's Not Fancy Vaseline. Here's The Actual Math.</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Names the loudest real objection (price vs. Vaseline) directly and does the actual math instead of hoping buyers don't think of it.</td><td>Yes, it costs 6x more per gram than Vaseline. Here's what Vaseline can't do.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>We're Not Promising To Rebuild Your Collagen. We're Promising Something You Can See Today.</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Pre-empts the "topical PDRN/collagen can't really penetrate" skepticism by reframing the promise honestly as an instant ritual, not a clinical claim.</td><td>No, a balm can't rebuild your collagen overnight. What it can do: give you the plumped, dewy look in 3 seconds, every time you need it.</td><td>VSL / testimonial</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Twist"><td>Stop Layering Five Products When One Swipe Does The Job</td><td>Contrarian</td><td><span class="badge twist">Twist 3/48</span></td><td>Challenges the belief that more steps in a routine means better results.</td><td>More steps isn't more effective. It's just more stuff on your bathroom shelf.</td><td>Static</td></tr>
+
+      <tr data-cat="Fear" data-uniq="Fresh"><td>Another Year Of Looking As Tired As You Feel</td><td>Fear</td><td><span class="badge fresh">Fresh 0/48</span></td><td>The fear isn't a wrinkle count, it's the slow drift into permanently looking (and feeling) tired while meaning to "start a routine."</td><td>You said this would be the year you finally took care of your skin. It's month 8. Nothing's changed but the calendar.</td><td>VSL / UGC</td></tr>
+      <tr data-cat="Fear" data-uniq="Twist"><td>The Wrinkle You Ignore Today Is The One You'll Pay To Fix Later</td><td>Fear</td><td><span class="badge twist">Twist 3/48</span></td><td>Prevention-cost urgency, adjacent to the competitor cluster framing this as a non-invasive-procedure alternative.</td><td>Right now it's a fine line. In a few years, it's a $2,000 procedure. Or it's 3 seconds a day, starting today.</td><td>Static</td></tr>
+      <tr data-cat="Fear" data-uniq="Fresh"><td>What If Your Skin Never Gets The 30 Seconds It Needs?</td><td>Fear</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Frames the real risk as neglect and time-scarcity, not aging itself.</td><td>It's not that your skin is aging badly. It's that it's never gotten 30 seconds of real attention in years.</td><td>UGC</td></tr>
+      <tr data-cat="Fear" data-uniq="Fresh"><td>Don't Let One Bad Balm Scare You Off The One That Actually Fits</td><td>Fear</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Loss-aversion aimed at buyers who wrote off the whole category after a bad experience with a different rich balm.</td><td>That other balm broke you out because it wasn't made for your skin. This one was never meant to be for everyone; that's exactly why it works for yours.</td><td>Testimonial</td></tr>
+
+      <tr data-cat="Social Proof" data-uniq="Fresh"><td>8,788 Women Already Made This Their 3-Second Ritual</td><td>Social Proof</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Real, current review-count credibility as evergreen proof, a mechanism the competitor set doesn't lean on.</td><td>8,788 women already made this their 3-second ritual. Here's why.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Fresh"><td>The Balm K-Beauty Insiders Actually Reach For (Not The One Everyone's Reselling)</td><td>Social Proof</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Directly names and contrasts against the 9-ad "viral #1 bestseller" affiliate-reseller cluster dominating this term.</td><td>Everyone's reselling the "viral" one. This is the one people who actually know K-beauty reach for.</td><td>UGC</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Twist"><td>Real Before/After From Someone With Skin Like Yours</td><td>Social Proof</td><td><span class="badge twist">Twist 2/48</span></td><td>Grounded testimonial specificity versus competitors' generic before/after imagery claims.</td><td>"Life-changing for winter dryness" &mdash; not our words, a real reviewer's.</td><td>UGC / testimonial</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Fresh"><td>Word Spread Before The Ads Did</td><td>Social Proof</td><td><span class="badge fresh">Fresh 0/48</span></td><td>Organic word-of-mouth trust, contrasted with the paid-viral-affiliate noise dominating this term's ad set.</td><td>No paid influencer told her about this. Her sister did.</td><td>UGC</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend">
+    <div class="row"><span class="badge fresh">Fresh</span> no competitor ad uses this angle (0 matches) &mdash; the strongest, most differentiated picks.</div>
+    <div class="row"><span class="badge twist">Twist</span> competitors hit the same pain/benefit but frame it differently; this angle adds a fresh differentiator (count = adjacent matches).</div>
+    <div class="row"><span class="badge crowded">Crowded</span> one or more competitors already run essentially this angle (count = direct matches); differentiate further or drop.</div>
+    <div class="row" style="color:var(--sub);">Denominator = 48 genuine "w" (non-duplicate) competitor ads for the locked search term "balm stick" in the Winners DB, reconciling exactly against the Product DB's own Meta Ad Ws = 48.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Evergreen Milestone</h4>
+      <p>4.2&#9733; across 8,788 (live) Amazon reviews. Use as an evergreen trust element in ad copy and landing headers; refresh the count periodically as it climbs.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Giftable / Holiday Gifting</h4>
+      <p>Row carries the Giftable green flag; a luxurious, portable, K-beauty stick fits stocking-stuffer and self-care-gift positioning. Activate 2 weeks ahead of BFCM/Holiday.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Consumable / Recurring Ritual</h4>
+      <p>Row carries the Consumable/Recurring Revenue green flag. Frame subscribe-and-save as "keep the 3-second ritual going," not a generic reorder reminder.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points (this run's research)</h4>
+      <ul>
+        <li>Excessive oiliness / "oil slick" effect within ~15 minutes, concentrated in oily/combination-skin reviewers <span class="src">(GoPicky, dodo-kbeauty)</span></li>
+        <li>Breakouts / closed comedones after 1-2 weeks in acne-prone users; comedogenic ingredients flagged (isopropyl myristate) <span class="src">(dodo-kbeauty, Skin Type Solutions)</span></li>
+        <li>Price skepticism: ~6x the per-gram cost of Vaseline, "30-40% marketing markup" <span class="src">(dodo-kbeauty, Skinsort dupe comparison)</span></li>
+        <li>No visible long-term anti-aging change; dermatologists note topical PDRN/collagen molecules are too large to meaningfully penetrate <span class="src">(Dr. Oracle, GoPicky, Minji in Seoul)</span></li>
+        <li>Foundation pilling/separation when layered over the balm <span class="src">(dodo-kbeauty, Lemon8)</span></li>
+        <li>Uneven performance on combination skin (greasy T-zone, still-dry cheeks) <span class="src">(Wildlife Millions)</span></li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits (this run's research)</h4>
+      <ul>
+        <li>Instant "glass skin" / dewy glow, rated 4.4-4.6/5 specifically by dry-skin users <span class="src">(Hwahae-sourced review data)</span></li>
+        <li>Genuine multi-use: face, under-eye, lips, neck, makeup base &mdash; replaces several separate products <span class="src">(Amazon listing, Minji in Seoul)</span></li>
+        <li>Visible under-eye texture improvement with consistent use ("less crepey mornings"); works on smile lines and neck too <span class="src">(review synthesis)</span></li>
+        <li>Extremely convenient swipe-on, no-mess format; portable for purse/desk/travel <span class="src">(Amazon listing, Product DB Notes)</span></li>
+        <li>48-hour hydration claim; performs in tough conditions (post-workout, heated indoor air, cold-to-warm transitions) <span class="src">(Amazon listing, review synthesis)</span></li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Competitor Angles Being Differentiated From</h4>
+      <ul>
+        <li><b>Aspiration cluster (~15/48):</b> generic "instant lift / glow / Korean calcium balm" claims, no skin-type specificity.</li>
+        <li><b>Pain cluster (~14/48):</b> "fills sunken under-eyes / firms wrinkles instantly," results-only framing with no ritual or identity angle.</li>
+        <li><b>Social Proof cluster (9/48):</b> a single product ("viral #1 bestseller wrinkle filler balm stick") reposted near-verbatim by many different reseller/affiliate pages, not genuinely independent brand voices.</li>
+        <li><b>Fear cluster (~3/48):</b> "non-invasive alternative to procedures" / needle-free framing.</li>
+        <li>None of the 48 ads disqualify their own buyer, address the Vaseline price comparison, or pre-empt the topical-penetration skepticism &mdash; the basis for this report's top 3 picks.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="compliance">Compliance note: all claims above stay within what the product's own listing states (PDRN + Collagen formulation, 48-hour hydration, instant plumping/glow). No angle claims permanent wrinkle removal or a clinical/medical outcome; route final ad copy through the standard cosmetics-claim compliance pass before shipping.</div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var catBtns = document.querySelectorAll('#catFilters button');
+  var uniqBtns = document.querySelectorAll('#uniqFilters button');
+  var rows = document.querySelectorAll('#angleTable tbody tr');
+  var state = {cat:'all', uniq:'all'};
+
+  function apply(){
+    rows.forEach(function(r){
+      var okCat = state.cat === 'all' || r.getAttribute('data-cat') === state.cat;
+      var okUniq = state.uniq === 'all' || r.getAttribute('data-uniq') === state.uniq;
+      r.classList.toggle('hidden', !(okCat && okUniq));
+    });
+  }
+  catBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      catBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      state.cat = b.getAttribute('data-value');
+      apply();
+    });
+  });
+  uniqBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      uniqBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      state.uniq = b.getAttribute('data-value');
+      apply();
+    });
+  });
+
+  var uniqOrder = {'Fresh':0,'Twist':1,'Crowded':2};
+  document.querySelectorAll('#angleTable thead th').forEach(function(th, idx){
+    th.addEventListener('click', function(){
+      var tbody = document.querySelector('#angleTable tbody');
+      var rowsArr = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      var key = th.getAttribute('data-sort');
+      rowsArr.sort(function(a,b){
+        if(key === 'uniq'){
+          return uniqOrder[a.getAttribute('data-uniq')] - uniqOrder[b.getAttribute('data-uniq')];
+        }
+        var ta = a.children[idx].textContent.trim().toLowerCase();
+        var tb = b.children[idx].textContent.trim().toLowerCase();
+        return ta.localeCompare(tb);
+      });
+      rowsArr.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

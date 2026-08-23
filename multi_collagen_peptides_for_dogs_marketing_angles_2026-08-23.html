@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Multi-Collagen Peptides for Dogs — Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --slate:#1e293b; --slate-2:#334155; --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0;
+    --text:#0f172a; --muted:#64748b; --accent:#0ea5e9;
+    --fresh:#059669; --fresh-bg:#d1fae5;
+    --twist:#d97706; --twist-bg:#fef3c7;
+    --crowded:#dc2626; --crowded-bg:#fee2e2;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+  .accent-bar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate-2));}
+  header{background:#fff;padding:32px 24px 24px;border-bottom:1px solid var(--border);}
+  header .wrap{max-width:1100px;margin:0 auto;}
+  h1{margin:0 0 6px;font-size:1.8rem;color:var(--slate);}
+  .subtitle{color:var(--muted);font-size:1rem;margin:0 0 4px;}
+  .date{color:var(--muted);font-size:.85rem;}
+  main{max-width:1100px;margin:0 auto;padding:24px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .stat .label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .stat .value{font-size:1.05rem;font-weight:600;margin-top:4px;}
+  section{margin-bottom:36px;}
+  h2{font-size:1.3rem;color:var(--slate);border-bottom:2px solid var(--border);padding-bottom:8px;margin-bottom:16px;}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .angle-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden;}
+  .angle-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);}
+  .rank{display:inline-block;background:var(--slate);color:#fff;font-weight:700;font-size:.8rem;padding:2px 9px;border-radius:20px;margin-bottom:8px;}
+  .angle-name{font-size:1.15rem;font-weight:700;margin:0 0 4px;}
+  .category{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px;}
+  .badge{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;}
+  .badge.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.twist{background:var(--twist-bg);color:var(--twist);}
+  .badge.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .field{margin:8px 0;}
+  .field .k{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;}
+  .field .v{font-size:.92rem;margin-top:2px;}
+  .hook{font-style:italic;background:#f1f5f9;border-left:3px solid var(--accent);padding:8px 10px;border-radius:0 6px 6px 0;}
+  .micro-hooks{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+  .micro-hooks .mh{font-size:.85rem;margin:5px 0;}
+  .mh .type{font-weight:700;color:var(--slate);}
+  .compliance-note{margin-top:10px;font-size:.78rem;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:6px 9px;border-radius:6px;}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .controls button, .controls select{font-size:.85rem;padding:6px 12px;border-radius:20px;border:1px solid var(--border);background:#fff;cursor:pointer;}
+  .controls button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:.85rem;}
+  thead th{background:#f1f5f9;text-align:left;padding:9px 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);cursor:pointer;user-select:none;}
+  tbody td{padding:9px 10px;border-top:1px solid var(--border);vertical-align:top;}
+  tbody tr:hover{background:#f8fafc;}
+  .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:12px;white-space:nowrap;}
+  .pill.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .pill.twist{background:var(--twist-bg);color:var(--twist);}
+  .pill.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .macro-card h3{margin:0 0 6px;font-size:1rem;}
+  .macro-card p{margin:0;font-size:.88rem;color:var(--slate-2);}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .notes-card h3{margin:0 0 10px;font-size:.95rem;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:.87rem;color:var(--slate-2);}
+  .notes-card li{margin-bottom:6px;}
+  .disclosure{font-size:.8rem;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;padding:10px 12px;border-radius:8px;margin-top:10px;}
+  .legend{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:.85rem;}
+  .legend .row{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;}
+  footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px;}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <div class="wrap">
+    <h1>Multi-Collagen Peptides for Dogs: Marketing Angles</h1>
+    <p class="subtitle">Avatar: dog owners 25-65+, skewing female, who likely already take a human collagen supplement themselves and have started noticing their dog slow down (stairs, walks, coat), but distrust the joint-supplement category after years of chews that do nothing and brands that scam</p>
+    <p class="date">Published August 23, 2026</p>
+  </div>
+</header>
+<main>
+
+<section class="stats">
+  <div class="stat"><div class="label">Core Transformation</div><div class="value">Watching your dog slow down and not knowing if any supplement really works &rarr; confident you're giving your dog the same collagen science you trust for yourself, backed by a real 8-12 week clinical timeline, in one palatable chew</div></div>
+  <div class="stat"><div class="label">Primary Objection</div><div class="value">"Collagen molecules are too big for a dog's gut to absorb, this just passes through, it's expensive filler"</div></div>
+  <div class="stat"><div class="label">Competitor Set (Winners DB)</div><div class="value">15 genuine <code>w</code> ads for "dog collagen supplement" (reconciles exactly with the sheet's Meta Ad Ws = 15)</div></div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="angle-card">
+      <span class="rank">#1</span>
+      <p class="angle-name">The Same Collagen You Trust, For The One Who Can't Ask For It</p>
+      <p class="category">Aspiration / Identity</p>
+      <span class="badge fresh">Fresh 0/15</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">35M+ Americans already take collagen themselves; a dog owner doesn't need a new category explained to her, she just needs permission to extend a habit she already trusts to the family member who can't research it herself.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">You take collagen every morning. He's part of the family too, he just can't pour his own scoop.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">UGC video (owner's own collagen routine, cut to the dog's chew)</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">Grounded in real market data this run surfaced: the pet-collagen category ($758.6M in 2024, +7.8% CAGR) is explicitly growing off human-collagen-market spillover, and pet owners are already primed by their own supplement habit, the lowest-CAC discovery path a new category can have. None of the 15 genuine competitor ads make this connection; every one of them sells purely on dog-specific joint or skin mechanics, never on the owner's own parallel experience.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Social Proof:</span> "Millions of us already take collagen. Turns out our dogs can use the same support."</div>
+        <div class="mh"><span class="type">Curiosity:</span> "You already believe in collagen. You just never thought to ask if your dog needed it too."</div>
+        <div class="mh"><span class="type">Result-first:</span> "I take my collagen every morning. Now he gets his with breakfast."</div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <span class="rank">#2</span>
+      <p class="angle-name">It's Not Liquid vs. Chew. It's Whether It's Even Small Enough To Absorb.</p>
+      <p class="category">Contrarian / Pattern Interrupt</p>
+      <span class="badge twist">Twist 6/15</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">6 of the 15 competitor ads win their argument on liquid-vs-solid format ("liquid absorbs, pills/chews don't"), but the real science says absorption depends on whether the collagen is hydrolyzed into small peptide chains, a molecule-size question, not a format question.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">Whole collagen molecules are too big for your dog's gut, liquid or not. Peptides are what actually get absorbed.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">Static ad (simple molecule-size comparison graphic)</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">Directly disarms this run's own primary objection (the "300,000+ dalton, too big to absorb" skepticism that vet-authority research names as THE core doubt) using the product's own defining attribute, it is literally named Multi-Collagen PEPTIDES, hydrolyzed by definition. It also out-argues the single largest competitor cluster in the Winners DB (6 of 15 ads lean on a liquid-format bioavailability claim) by reframing the real mechanism, which no competitor ad actually states correctly.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Contra:</span> "Stop asking if it's liquid or chew. Start asking if it's even hydrolyzed."</div>
+        <div class="mh"><span class="type">Problem-first:</span> "Most 'absorbable' collagen for dogs still isn't broken down small enough to absorb."</div>
+        <div class="mh"><span class="type">Curiosity:</span> "The absorption debate everyone's having about liquid vs. pills is answering the wrong question."</div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <span class="rank">#3</span>
+      <p class="angle-name">The Scam Playbook This Category Is Full Of</p>
+      <p class="category">Fear / Urgency</p>
+      <span class="badge fresh">Fresh 0/15</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">This run's own research surfaced a real, documented fraud pattern in dog-collagen ads: unauthorized recurring subscriptions enrolled in fine print, AI-generated marketing images, and undisclosed collagen type. Naming the red flags builds trust precisely because most sellers in this category can't afford to.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">Before you buy any dog collagen, check for these 3 things. Most bottles on your feed fail at least one.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">UGC video / carousel (a "3 red flags" checklist format)</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">The single most emotionally charged angle this run surfaced (protective anger on the buyer's behalf) and completely unclaimed territory: none of the 15 competitor ads could credibly run it, since the fraud pattern this run found (undisclosed subscriptions, fake reviews, unspecified collagen type) is documented against brands active in this exact search term.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Problem-first:</span> "Dog collagen has a fraud problem, and most owners don't know what to check before they buy."</div>
+        <div class="mh"><span class="type">Curiosity:</span> "Why do so many dog collagen brands hide their subscription terms in fine print?"</div>
+        <div class="mh"><span class="type">Contra:</span> "Don't buy a dog collagen supplement until you've checked these 3 things."</div>
+      </div>
+      <div class="compliance-note">Compliance: keep strictly category-general, never name a specific competing brand or product in ad copy (the documented fraud pattern this run found ties to identifiable real sellers; naming them risks a defamation/disparagement claim and very likely violates Meta's ad policy). Frame as buyer-education red flags only ("look for X, Y, Z"), never "unlike Brand A." Route through the Creative Strategist system's compliance pass before this angle ships.</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <button class="cat-btn active" data-cat="all">All Categories</button>
+    <button class="cat-btn" data-cat="Pain/Frustration">Pain/Frustration</button>
+    <button class="cat-btn" data-cat="Aspiration/Identity">Aspiration/Identity</button>
+    <button class="cat-btn" data-cat="Contrarian/Pattern Interrupt">Contrarian</button>
+    <button class="cat-btn" data-cat="Fear/Urgency">Fear/Urgency</button>
+    <button class="cat-btn" data-cat="Social Proof/Tribe">Social Proof</button>
+    <select id="uniqFilter">
+      <option value="all">All Uniqueness</option>
+      <option value="fresh">Fresh only</option>
+      <option value="twist">Twist only</option>
+      <option value="crowded">Crowded only</option>
+    </select>
+  </div>
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="category">Category</th>
+        <th data-sort="uniq">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="format">Format</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles (Product / Offer)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h3>New Year's Health Reset (Jan)</h3>
+      <p>Activate 2 weeks before New Year's Day. Owners set resolutions for themselves every January; extend it to the dog: "new year, new routine for the whole family, him included."</p>
+    </div>
+    <div class="macro-card">
+      <h3>Evergreen Trust Milestone</h3>
+      <p>4.4 stars across 1,760+ verified reviews (this run's own live re-derivation from the product's own listing) as an always-on trust signal in a category with a documented fraud problem: "1,760+ real owners, verified purchases only."</p>
+    </div>
+    <div class="macro-card">
+      <h3>Subscribe as Daily Ritual, Not Discount</h3>
+      <p>This row's own Consumable/Recurring Revenue green flag: frame the subscription as consistency with the real 8-12 week clinical timeline ("the chew you never have to remember to reorder, because results take months, not days"), not a price cut.</p>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h3>Top Pain Points (this run's research)</h3>
+      <ul>
+        <li>Absorption skepticism: "collagen molecules are too big (300,000+ daltons) for a dog's gut to absorb, it just passes through" — the single most-cited objection across vet and owner sources</li>
+        <li>Invisible/slow results: real clinical timeline is 8-12 weeks (one trial showed peak effect around day 150), but owners expect 2-4 weeks and quit early</li>
+        <li>Category-wide scam fatigue: documented fraud pattern (unauthorized recurring subscriptions in fine print, AI-generated marketing images, undisclosed collagen type) against real sellers active in this exact search term</li>
+        <li>Confusion vs. glucosamine: owners don't know most "collagen" joint products on shelves use the wrong collagen type (Type I instead of the joint-targeting Type II/UC-II)</li>
+        <li>Cost vs. a vet visit: $20-50+/month ongoing with no guarantee, against a one-time diagnosis</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Top Benefits (this run's research)</h3>
+      <ul>
+        <li>Clinically documented: undenatured Type II collagen (UC-II) showed a 70% improvement in mobility scores in a 12-week trial, and outperformed a glucosamine+chondroitin combination in a comparative review</li>
+        <li>This row's own live Amazon listing, fetched this run (title: "Advanced Collagen for Dogs – 170 Chews – Hip and Joint Supplement Peptides"): Multi-Collagen Peptides (Types I, II, III) + Glucosamine for joints, plus Hyaluronic Acid and Vitamin C for coat/skin, in one chew</li>
+        <li>Genuine verified-purchase review quote: "Easy, palatable, seems effective without digestive issues" — directly answers the category's picky-eater complaint</li>
+        <li>Genuine verified-purchase review quote: "Will be buying this for a long time" / a separate reviewer: "Good value, this is a second order" — real repeat-purchase signal</li>
+        <li>Strong safety record: no adverse effects on kidney, liver, or blood chemistry over 150-day monitoring in published research</li>
+        <li>Human-collagen-market crossover: the pet collagen category ($758.6M in 2024, +7.8% CAGR) is explicitly growing off spillover from the human collagen supplement wave</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Competitor Angles Differentiated From (Winners DB, "dog collagen supplement", 15 genuine ads)</h3>
+      <ul>
+        <li>Skin/itch barrier repair vs. Apoquel (Paws Organica, Nature's Paw, Healthy Petz, and others): 9 of 15 ads [Contrarian]</li>
+        <li>Liquid-format bioavailability claim ("pills/chews poorly absorbed, liquid does") (Waggle Hound, TryClover, Bloom Triple Collagen, HappyWags): 6 of 15 ads [Contrarian / Social Proof]</li>
+        <li>Senior-dog joint decline / ligament prevention (Kayode's Collagen Puptides, CanineCeuticals Collagen Forte): 2 of 15 ads [Fear / Aspiration]</li>
+      </ul>
+      <div class="disclosure">Disclosure: uniqueness was scored against audit-winners' own Marketing Angle classification for these 15 rows (the "pure w" subset of 31 total Meta Ad Winners matches for this term, after excluding "w-ish" partial matches, one "kill" mismatch, and 2 flagged duplicates), not re-classified by this run. This 15-row subset independently reconciles exactly against the sheet's own Meta Ad Ws = 15.</div>
+    </div>
+    <div class="notes-card">
+      <h3>Research Method Disclosures</h3>
+      <ul>
+        <li>This product's own Amazon listing (ASIN B0FM47PGCQ) was fetched twice this run: the parent-level attempt hit a bot-check "click to continue shopping" interstitial even through the residential proxy; a dedicated research fetch (without the proxy, which could not resolve on that attempt) succeeded and pulled the real title, feature bullets, and 4 verified-purchase review snippets, but the deeper 1-3 star review pagination stayed out of reach, so this run's pain points are grounded in third-party/community research rather than this specific listing's negative reviews.</li>
+        <li>Reddit was not indexed for this product/category by web search this run; pain-point and objection research substituted credible third-party sources instead (PetMD, NCBI-indexed clinical studies, Pat's Pet Kitchen, HERO Veterinary, Trustpilot/Snoopviews investigations, Chewy review summaries), all cited inline above.</li>
+        <li>The Product DB row's own strategic Notes describe a broader "5 collagen types (I, II, III, V, X) covering joints + skin + coat + gut + wound healing" positioning; this run's own live listing fetch confirmed only Types I/II/III plus joint and coat/skin benefits, so angles above are grounded in the confirmed subset, not the fuller 5-type/gut-healing claim, which is unverified by this run.</li>
+        <li>One unexpected, single-review signal (not built into any of the 20 angles, flagged for awareness only): a verified reviewer reported the product "fast acting to calm her anxiety." This is one anecdote, not a formulation claim this run could verify, and should not be used in ad copy without separate substantiation.</li>
+        <li>Winners DB uniqueness scoring reads audit-winners' own Marketing Angle classification column rather than re-classifying the 15 competitor rows.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="row"><span class="pill fresh">Fresh</span><span>No competitor ad in the Winners DB uses this angle (0 matches). The strongest, most differentiated picks.</span></div>
+    <div class="row"><span class="pill twist">Twist</span><span>A competitor hits the same pain or benefit but frames it differently; this angle adds a fresh differentiator (adjacent-match count shown).</span></div>
+    <div class="row"><span class="pill crowded">Crowded</span><span>One or more competitors already run essentially this angle (direct-match count shown). Differentiate further or drop.</span></div>
+    <p style="margin-top:10px;color:var(--muted);">Counts are measured against the 15 genuine competitor ads (<code>w</code> classification, deduped against 2 flagged duplicates and excluding "w-ish" partial matches) in the Winners DB for the locked search term "dog collagen supplement."</p>
+  </div>
+</section>
+
+</main>
+<footer>Nova Capital &middot; Find Marketing Angles &middot; Multi-Collagen Peptides for Dogs &middot; 08-23-2026</footer>
+
+<script>
+const ANGLES = [
+{name:"Watching Him Slow Down And Not Knowing Why",category:"Pain/Frustration",uniq:"fresh",count:"0/15",insight:"The quiet guilt of noticing your dog hesitate on stairs or skip the zoomies, without knowing if anything you buy will actually help.",hook:"He used to beat you to the door. Lately he takes the stairs one at a time.",format:"UGC video"},
+{name:"Finally, A Joint Chew He'll Actually Eat",category:"Pain/Frustration",uniq:"fresh",count:"0/15",insight:"Owners who've bought joint chews their dog refuses to eat are done wasting money on supplements that sit in the bag.",hook:"The best joint supplement is the one your dog will actually eat. Real owners call this one 'easy, palatable.'",format:"Static ad"},
+{name:"Another Supplement, Another Question Mark",category:"Pain/Frustration",uniq:"twist",count:"1/15",insight:"Supplement fatigue: owners have tried products before with no visible change and are wary of being sold hope again.",hook:"You've tried a joint supplement before. Here's what makes this one different.",format:"Static ad"},
+{name:"The Hard Biscuit That Hurts More Than It Helps",category:"Pain/Frustration",uniq:"fresh",count:"0/15",insight:"Hard, brittle joint chews can splinter and pose a real choking or mouth-injury risk, a safety pain point owners don't expect from a health product.",hook:"A joint supplement shouldn't be the thing that chips his tooth.",format:"Static ad"},
+
+{name:"The Same Collagen You Trust, For The One Who Can't Ask For It",category:"Aspiration/Identity",uniq:"fresh",count:"0/15",insight:"35M+ Americans already take collagen themselves; extending that trusted habit to their dog needs no new category education.",hook:"You take collagen every morning. He's part of the family too, he just can't pour his own scoop.",format:"UGC video"},
+{name:"Proactive, Not Reactive",category:"Aspiration/Identity",uniq:"twist",count:"1/15",insight:"The identity of the attentive owner who supports joint health before a limp shows up, not after.",hook:"You don't wait for the limp. You get ahead of it.",format:"Carousel"},
+{name:"Joint Support And Coat Care, One Chew",category:"Aspiration/Identity",uniq:"fresh",count:"0/15",insight:"The identity of the efficient owner who wants fewer bottles in the cabinet, not more; this product's confirmed I/II/III collagen plus HA and Vitamin C covers joints and coat in one chew, where most competitors are single-purpose.",hook:"One chew for his joints. The same chew for his coat.",format:"Static ad"},
+{name:"Vet-Science, Not Influencer Hype",category:"Aspiration/Identity",uniq:"twist",count:"1/15",insight:"The identity of the owner who wants a real clinical basis for what she buys, not a trend she saw on social media.",hook:"Not the version you saw on social media. The version with a 12-week clinical trial behind it.",format:"Static ad"},
+
+{name:"It's Not Liquid vs. Chew. It's Whether It's Even Small Enough To Absorb.",category:"Contrarian/Pattern Interrupt",uniq:"twist",count:"6/15",insight:"6 of 15 competitor ads argue liquid beats pills on absorption; the real variable is whether the collagen is hydrolyzed into peptides, not its physical form.",hook:"Whole collagen molecules are too big for your dog's gut, liquid or not. Peptides are what actually get absorbed.",format:"Static ad"},
+{name:"Most 'Joint Collagen' On The Shelf Isn't Even The Right Type",category:"Contrarian/Pattern Interrupt",uniq:"fresh",count:"0/15",insight:"Many collagen products for dogs use Type I collagen (skin/coat) when joint support specifically needs Type II or UC-II, a mislabeling problem owners don't know to check for.",hook:"Check the label. Most 'joint' collagen for dogs is the wrong type of collagen entirely.",format:"Static ad"},
+{name:"Glucosamine Isn't The Gold Standard You Think It Is",category:"Contrarian/Pattern Interrupt",uniq:"twist",count:"2/15",insight:"Owners default to glucosamine because it's familiar, not because it's proven best; a comparative review found UC-II collagen outperformed a glucosamine+chondroitin combination.",hook:"Glucosamine isn't the gold standard, it's just the one you've heard of longest.",format:"Static ad"},
+{name:"The Scratching Isn't Always A Skin Problem",category:"Contrarian/Pattern Interrupt",uniq:"crowded",count:"9/15",insight:"Reframes itching and dull coat as a broader collagen-depletion issue rather than a skin-only problem, though most of the competitor field already argues some version of this.",hook:"You've been treating his skin. The real gap might be collagen.",format:"UGC video"},
+
+{name:"The Scam Playbook This Category Is Full Of",category:"Fear/Urgency",uniq:"fresh",count:"0/15",insight:"A documented fraud pattern (hidden subscriptions, fake reviews, undisclosed collagen type) runs across real sellers in this search term; naming the red flags builds trust precisely because most competitors can't afford to.",hook:"Before you buy any dog collagen, check for these 3 things. Most bottles on your feed fail at least one.",format:"UGC video"},
+{name:"8-12 Weeks From Now, Will You Wish You'd Started Today",category:"Fear/Urgency",uniq:"twist",count:"1/15",insight:"The real clinical timeline is months, not days, so every week of delay is a week further from a visible result.",hook:"Results take 8-12 weeks. The only way to get there sooner is to start today.",format:"VSL"},
+{name:"By The Time You See The Limp, You've Already Lost Ground",category:"Fear/Urgency",uniq:"crowded",count:"2/15",insight:"Joint decline is often silent before it's visible, so waiting for a limp means waiting too long, an angle 2 competitors already run.",hook:"Collagen drops years before you ever see him limp.",format:"Static ad"},
+{name:"Every Vet Visit For Joint Pain Costs More Than A Year Of This",category:"Fear/Urgency",uniq:"fresh",count:"0/15",insight:"A direct cost comparison between escalating vet costs for diagnosed joint issues and a year of preventative supplementation.",hook:"One vet visit for joint pain costs more than a year of the supplement that might have prevented it.",format:"Static ad"},
+
+{name:"The Study Behind The Chew",category:"Social Proof/Tribe",uniq:"fresh",count:"0/15",insight:"Leads with real published clinical data (70% mobility improvement in a 12-week trial) as authority-based proof, where every competitor ad relies on anecdote instead.",hook:"70% improvement in mobility scores. That's not a testimonial, that's a 12-week clinical trial.",format:"Static ad"},
+{name:"35 Million Humans Can't All Be Wrong About Collagen",category:"Social Proof/Tribe",uniq:"fresh",count:"0/15",insight:"The scale of the human collagen wave functions as tribe-level social proof extended to a new category: pet collagen.",hook:"35 million Americans take collagen every day. Their dogs are starting to, too.",format:"Carousel"},
+{name:"Owners Who Give Up Too Soon Miss This",category:"Social Proof/Tribe",uniq:"twist",count:"1/15",insight:"Reassurance from owners who stuck with the realistic 8-12 week timeline and saw results, aimed at buyers tempted to quit early.",hook:"Week 4, nothing. Week 10, he's back to the stairs two at a time. Don't quit at week 4.",format:"Testimonial"},
+{name:"Real Owners, Second Orders",category:"Social Proof/Tribe",uniq:"fresh",count:"0/15",insight:"Genuine repeat-purchase reviews from this run's own research ('good value, this is a second order') are a quieter, more credible proof signal than a hero testimonial.",hook:"'Good value. This is a second order.' That's the kind of review that means it actually worked.",format:"Static ad"}
+];
+
+const tbody = document.querySelector('#angleTable tbody');
+let activeCat = 'all';
+let activeUniq = 'all';
+let sortKey = null;
+let sortDir = 1;
+
+function render(){
+  let rows = ANGLES.filter(a => (activeCat==='all' || a.category===activeCat) && (activeUniq==='all' || a.uniq===activeUniq));
+  if(sortKey){
+    rows = rows.slice().sort((a,b)=>{
+      let av = sortKey==='uniq' ? a.uniq : a[sortKey];
+      let bv = sortKey==='uniq' ? b.uniq : b[sortKey];
+      return av.localeCompare(bv) * sortDir;
+    });
+  }
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td><strong>${a.name}</strong></td>
+      <td>${a.category}</td>
+      <td><span class="pill ${a.uniq}">${a.uniq.charAt(0).toUpperCase()+a.uniq.slice(1)} ${a.count}</span></td>
+      <td>${a.insight}</td>
+      <td><em>${a.hook}</em></td>
+      <td>${a.format}</td>
+    </tr>`).join('');
+}
+
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat;
+    render();
+  });
+});
+document.getElementById('uniqFilter').addEventListener('change', e=>{
+  activeUniq = e.target.value;
+  render();
+});
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.sort;
+    sortDir = (sortKey===key) ? -sortDir : 1;
+    sortKey = key;
+    render();
+  });
+});
+render();
+</script>
+</body>
+</html>

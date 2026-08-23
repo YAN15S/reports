@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Silk Collagen Peptide Serum &mdash; Marketing Angles</title>
+<style>
+  :root{
+    --slate-900:#0f172a; --slate-800:#1e293b; --slate-700:#334155; --slate-500:#64748b;
+    --slate-300:#cbd5e1; --slate-100:#f1f5f9; --bg:#f8fafc; --white:#ffffff;
+    --pain:#dc2626; --aspiration:#7c3aed; --contrarian:#0891b2; --fear:#b45309; --social:#0d9488;
+    --fresh:#16a34a; --twist:#d97706; --crowded:#64748b;
+    --radius:12px;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--slate-900);}
+  .accent-bar{height:6px;background:linear-gradient(90deg,var(--slate-900),var(--slate-700));}
+  header.page-header{background:var(--white);padding:32px 40px 24px;border-bottom:1px solid var(--slate-300);}
+  header.page-header h1{margin:0 0 6px;font-size:28px;letter-spacing:-0.02em;}
+  header.page-header .subtitle{color:var(--slate-500);font-size:15px;margin:0 0 4px;}
+  header.page-header .date{color:var(--slate-500);font-size:13px;}
+  main{max-width:1160px;margin:0 auto;padding:28px 40px 80px;}
+  section{margin-bottom:40px;}
+  h2{font-size:20px;margin:0 0 14px;letter-spacing:-0.01em;}
+  h2 .count{color:var(--slate-500);font-weight:400;font-size:14px;}
+  .stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:18px;}
+  .stat-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:16px 18px;}
+  .stat-card .label{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--slate-500);margin-bottom:6px;}
+  .stat-card .value{font-size:20px;font-weight:600;}
+  .summary-block{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:20px 24px;}
+  .summary-block p{margin:0 0 10px;line-height:1.55;font-size:14.5px;}
+  .summary-block p:last-child{margin-bottom:0;}
+  .summary-block strong{color:var(--slate-900);}
+  .obj-callout{margin-top:10px;padding:12px 16px;background:var(--slate-100);border-left:3px solid var(--pain);border-radius:6px;font-size:14px;}
+
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .angle-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);overflow:hidden;position:relative;}
+  .angle-card .rank-badge{position:absolute;top:14px;right:14px;font-size:12px;font-weight:700;color:var(--slate-500);}
+  .angle-card .top-line{height:5px;}
+  .angle-card .top-line.cat-pain{background:var(--pain);}
+  .angle-card .top-line.cat-aspiration{background:var(--aspiration);}
+  .angle-card .top-line.cat-contrarian{background:var(--contrarian);}
+  .angle-card .top-line.cat-fear{background:var(--fear);}
+  .angle-card .top-line.cat-social{background:var(--social);}
+  .angle-card .body{padding:18px 20px 20px;}
+  .angle-card h3{margin:0 0 6px;font-size:17px;padding-right:30px;}
+  .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+  .badge{display:inline-block;font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;letter-spacing:.02em;}
+  .badge.cat-pain{background:#fee2e2;color:#991b1b;}
+  .badge.cat-aspiration{background:#ede9fe;color:#5b21b6;}
+  .badge.cat-contrarian{background:#cffafe;color:#155e75;}
+  .badge.cat-fear{background:#fef3c7;color:#92400e;}
+  .badge.cat-social{background:#ccfbf1;color:#0f766e;}
+  .badge.uniq-fresh{background:#dcfce7;color:#166534;}
+  .badge.uniq-twist{background:#fef3c7;color:#92400e;}
+  .badge.uniq-crowded{background:#e2e8f0;color:#475569;}
+  .angle-card .insight{font-size:14px;line-height:1.5;margin-bottom:10px;}
+  .angle-card .hook{font-size:13.5px;font-style:italic;color:var(--slate-700);background:var(--slate-100);padding:10px 12px;border-radius:8px;margin-bottom:10px;line-height:1.5;}
+  .angle-card .meta-row{font-size:12.5px;color:var(--slate-500);margin-bottom:12px;}
+  .angle-card .why{font-size:13.5px;line-height:1.5;margin-bottom:14px;}
+  .angle-card .why strong{color:var(--slate-900);}
+  .micro-hooks{border-top:1px solid var(--slate-300);padding-top:12px;}
+  .micro-hooks .mh-label{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--slate-500);margin-bottom:8px;}
+  .micro-hook{font-size:13px;margin-bottom:8px;line-height:1.45;}
+  .micro-hook:last-child{margin-bottom:0;}
+  .micro-hook .type{font-weight:700;color:var(--slate-700);}
+
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+  .filter-btn{border:1px solid var(--slate-300);background:var(--white);padding:6px 14px;border-radius:999px;font-size:13px;cursor:pointer;color:var(--slate-700);}
+  .filter-btn.active{background:var(--slate-900);color:var(--white);border-color:var(--slate-900);}
+  .sort-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px;color:var(--slate-500);}
+  .sort-row select{border:1px solid var(--slate-300);border-radius:6px;padding:5px 8px;font-size:13px;}
+
+  table.angles-table{width:100%;border-collapse:collapse;background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);overflow:hidden;font-size:13.5px;}
+  table.angles-table th{text-align:left;background:var(--slate-100);padding:10px 14px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--slate-500);border-bottom:1px solid var(--slate-300);}
+  table.angles-table td{padding:12px 14px;border-bottom:1px solid var(--slate-100);vertical-align:top;line-height:1.45;}
+  table.angles-table tr:last-child td{border-bottom:none;}
+  table.angles-table .angle-name{font-weight:600;}
+  table.angles-table .hookcell{color:var(--slate-700);font-style:italic;}
+
+  .legend{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 22px;font-size:13.5px;}
+  .legend .legend-row{display:flex;align-items:baseline;gap:10px;margin-bottom:8px;}
+  .legend .legend-row:last-child{margin-bottom:0;}
+  .legend .legend-row span.badge{flex-shrink:0;}
+  .legend .legend-row p{margin:0;color:var(--slate-700);}
+
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .macro-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 20px;}
+  .macro-card h4{margin:0 0 8px;font-size:15px;}
+  .macro-card p{margin:0;font-size:13.5px;line-height:1.5;color:var(--slate-700);}
+
+  .research-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+  .research-card{background:var(--white);border:1px solid var(--slate-300);border-radius:var(--radius);padding:18px 20px;}
+  .research-card h4{margin:0 0 10px;font-size:14px;color:var(--slate-500);text-transform:uppercase;letter-spacing:.04em;}
+  .research-card ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;color:var(--slate-800);}
+  .research-card li{margin-bottom:6px;}
+  .research-note{font-size:12.5px;color:var(--slate-500);margin-top:12px;}
+
+  footer.foot-note{max-width:1160px;margin:0 auto;padding:0 40px 40px;font-size:12px;color:var(--slate-500);}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header class="page-header">
+  <h1>Silk Collagen Peptide Serum &mdash; Marketing Angles</h1>
+  <p class="subtitle">Avatar: women 25&ndash;65+, most vividly voiced by women in their late 40s&ndash;60s facing perimenopausal skin change and burned out on peptide/collagen serums that overpromised</p>
+  <p class="date">Generated 08-23-2026 &middot; Nova Capital, Find Marketing Angles</p>
+</header>
+
+<main>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="summary-block">
+    <p><strong>Avatar:</strong> Women 25&ndash;65+, most vividly voiced in this run's research by women in their late 40s to 60s navigating perimenopause/post-menopause skin change: increasing dryness and sensitivity, and the first real loss of firmness. She has already tried multiple peptide and collagen serums that promised more than they delivered, is skincare-literate enough to be skeptical of "peptide" as a buzzword, and is weighing gentler at-home options against the cost, risk, and downtime of Botox or fillers. She trusts Korean skincare's reputation for real formulation over Western marketing hype, but has also been burned by counterfeit "K-beauty" listings online (this product's own reviews confirm the fear), so authenticity matters almost as much as the ingredient list.</p>
+    <p><strong>Core transformation:</strong> From skin that has grown duller, drier, and less firm than it used to be, and a graveyard of half-used serums that either did nothing or she couldn't stick with &rarr; to a two-minute, twice-daily ritual with a silky, fast-absorbing serum she actually finishes the bottle on, with visibly smoother, firmer, better-hydrated skin to show for it 8&ndash;12 weeks in.</p>
+    <div class="obj-callout"><strong>Primary objection:</strong> "I've bought serums that oversold and underdelivered before, so a wrinkle-erasing ad claim makes me MORE skeptical, not less. Prove this one is different with something other than a dramatic before/after." Grounded directly in this product's own reviews ("didn't really notice a difference in wrinkles like the ad that I saw"; "Not worth the hype, didn't notice any difference") and independent research confirming peptide/collagen marketing routinely overstates modest, gradual effects.</p>
+  </div>
+  <div class="stats-row">
+    <div class="stat-card"><div class="label">TAM</div><div class="value">71.2M</div></div>
+    <div class="stat-card"><div class="label">Category</div><div class="value">Beauty &amp; Personal Care / Anti-Aging</div></div>
+    <div class="stat-card"><div class="label">5y Trend</div><div class="value">UP +58%</div></div>
+    <div class="stat-card"><div class="label">Social (Meta Ad Ws)</div><div class="value">9</div></div>
+    <div class="stat-card"><div class="label">Competitor angles scored against</div><div class="value">16</div></div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="card-grid">
+
+    <div class="angle-card">
+      <div class="top-line cat-social"></div>
+      <div class="rank-badge">#1</div>
+      <div class="body">
+        <h3>Too Sick To Care, Until This</h3>
+        <div class="tag-row">
+          <span class="badge cat-social">Social Proof / Tribe</span>
+          <span class="badge uniq-fresh">Fresh 0/16</span>
+        </div>
+        <p class="insight">A verified-purchase reviewer of this exact product, self-described as terminally ill, wrote that this was "the first time in my life I've stuck with a routine because it's that good," and that she'd started using it while she "looked like death" from illness, not vanity. No competitor ad in the Winners DB for this term touches self-care-through-hardship; every one of the 16 competitor ads sells transformation, none sells the act of showing up for yourself when everything else has fallen away.</p>
+        <div class="hook">"She wasn't trying to look younger. She was too sick to care about her skin at all &mdash; until this became the one routine she couldn't quit."</div>
+        <div class="meta-row">Best format: UGC video (real testimonial, minimally produced)</div>
+        <p class="why"><strong>Why it wins:</strong> It is the single most emotionally charged material this brief surfaced, a real, specific, verified story, not a manufactured one, and it sits in territory zero competitors occupy. Reframing "consistency" as the actual win (not the wrinkle result) also pre-empts the primary objection: it never claims a dramatic transformation, so it can't be accused of overselling one.</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Social proof:</span> "One reviewer put it plainly: 'I was terminally ill and looked like death &mdash; this is the first time in my life I've stuck with a routine because it's that good.'"</div>
+          <div class="micro-hook"><span class="type">Curiosity:</span> "The one thing a sick, exhausted woman couldn't quit &mdash; and it wasn't for the reason you'd think."</div>
+          <div class="micro-hook"><span class="type">Result-first:</span> "She didn't start this to look younger. She started it because it was the only routine she could actually stick with. Here's what two minutes a day did anyway."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <div class="top-line cat-pain"></div>
+      <div class="rank-badge">#2</div>
+      <div class="body">
+        <h3>The Serum That Doesn't Lie</h3>
+        <div class="tag-row">
+          <span class="badge cat-pain">Pain / Frustration</span>
+          <span class="badge uniq-fresh">Fresh 0/16</span>
+        </div>
+        <p class="insight">This product's own critical reviews say it plainly: "didn't really notice a difference in wrinkles like the ad that I saw" and "Not worth the hype, didn't notice any difference." Independent research confirms this is the norm across the category (overstated "almost like Botox" claims, subtle not dramatic real-world results). No competitor in the Winners DB names this frustration; all 16 sell the dramatic promise instead of confronting the skepticism it creates.</p>
+        <div class="hook">"I stopped believing serum ads three bottles ago. This one earns trust with real reviews instead of a dramatic before/after &mdash; and that's exactly why it worked."</div>
+        <div class="meta-row">Best format: Static comparison (ad claim vs. real reviewer language)</div>
+        <p class="why"><strong>Why it wins:</strong> It attacks the primary objection head-on instead of dancing around it, which is a stronger trust move than any benefit claim, and it is fully unclaimed territory: every competitor ad in this set sells the dream, none addresses the buyer's accumulated skepticism about whether "peptide" claims are even real.</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Problem-first:</span> "Tired of serum ads promising overnight miracles that never show up in the mirror?"</div>
+          <div class="micro-hook"><span class="type">Contra:</span> "Stop expecting a wrinkle to vanish overnight. Start expecting your skin to actually get better, quietly, week by week."</div>
+          <div class="micro-hook"><span class="type">Curiosity:</span> "We read every 3-star review before running this ad. Here's why their honesty is the reason it's worth trying."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <div class="top-line cat-contrarian"></div>
+      <div class="rank-badge">#3</div>
+      <div class="body">
+        <h3>Peptides Can't Penetrate Skin?</h3>
+        <div class="tag-row">
+          <span class="badge cat-contrarian">Contrarian / Pattern Interrupt</span>
+          <span class="badge uniq-fresh">Fresh 0/16</span>
+        </div>
+        <p class="insight">A real, recurring skeptical objection surfaced in independent research: topical collagen and peptide molecules are "too large to penetrate skin," making the whole category sound like a scam to research-minded buyers. No competitor ad in the Winners DB engages this objection; they either assert results ("Best Firming Serum") or lean on ingredient-count claims ("30 Peptides + 5 Types of Collagen") without ever answering the skeptic directly.</p>
+        <div class="hook">"Dermatologists will tell you topical collagen molecules are too big to penetrate skin. So why do 1,800+ reviewers say this one actually works?"</div>
+        <div class="meta-row">Best format: Static explainer / short VSL</div>
+        <p class="why"><strong>Why it wins:</strong> It is a genuine pattern interrupt built directly from the buyer's own unspoken doubt (does any of this even work?), a proven cold-scroll stopper, and it is completely unclaimed: every competitor angle asserts a benefit, none takes on the skepticism that makes a cold stranger scroll past a benefit claim in the first place.</p>
+        <div class="micro-hooks">
+          <div class="mh-label">Micro Hooks</div>
+          <div class="micro-hook"><span class="type">Curiosity:</span> "Dermatologists will tell you topical collagen molecules are too big to penetrate skin. So why do 1,800+ reviewers say this one works?"</div>
+          <div class="micro-hook"><span class="type">Contra:</span> "Stop assuming 'peptide' is just a marketing word. Here's the actual delivery science, and the reviews that back it up."</div>
+          <div class="micro-hook"><span class="type">Result-first:</span> "I went from skeptical about peptides to seeing visibly softer lines in 8 weeks. Here's exactly what changed."</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles <span class="count">filter by category or uniqueness, sort by uniqueness</span></h2>
+  <div class="filters" id="catFilters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="Pain">Pain / Frustration</button>
+    <button class="filter-btn" data-filter="Aspiration">Aspiration / Identity</button>
+    <button class="filter-btn" data-filter="Contrarian">Contrarian / Pattern Interrupt</button>
+    <button class="filter-btn" data-filter="Fear">Fear / Urgency</button>
+    <button class="filter-btn" data-filter="Social">Social Proof / Tribe</button>
+  </div>
+  <div class="filters" id="uniqFilters">
+    <button class="filter-btn active" data-ufilter="all">All uniqueness</button>
+    <button class="filter-btn" data-ufilter="Fresh">Fresh</button>
+    <button class="filter-btn" data-ufilter="Twist">Twist</button>
+    <button class="filter-btn" data-ufilter="Crowded">Crowded</button>
+  </div>
+  <div class="sort-row">
+    <label for="sortSel">Sort:</label>
+    <select id="sortSel">
+      <option value="uniqueness">Uniqueness (Fresh first)</option>
+      <option value="category">Category</option>
+      <option value="name">Angle name</option>
+    </select>
+  </div>
+  <table class="angles-table" id="angleTable">
+    <thead>
+      <tr><th>Angle</th><th>Category</th><th>Uniqueness</th><th>Core Insight</th><th>Sample Hook</th><th>Format</th></tr>
+    </thead>
+    <tbody><!-- rows injected by JS from DATA --></tbody>
+  </table>
+</section>
+
+<section id="uniqLegend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="legend-row"><span class="badge uniq-fresh">Fresh</span><p>No competitor ad in the Winners DB runs this angle (0 direct or adjacent matches). The strongest, most differentiated picks.</p></div>
+    <div class="legend-row"><span class="badge uniq-twist">Twist</span><p>Competitors hit the same pain or benefit but frame it differently; this angle adds a fresh differentiator (adjacent-match count noted).</p></div>
+    <div class="legend-row"><span class="badge uniq-crowded">Crowded</span><p>One or more competitors already run essentially this angle (direct-match count noted). Differentiate further or drop.</p></div>
+    <p class="research-note">Scored against the 16 Winners DB rows classified as genuine, currently-running competitor ads for this product's locked search term ("collagen peptide serum"): 9 Meta Ad Winners rows (token "w") and 7 "w-ish" rows, spanning advertisers GlassLab (3 ads), Korean Skincare Reviews (3 ads), Emily Williams (2 ads), Isomers Skincare (2 ads), Geek&amp;Gorgeous, Maelove, Jessica Lundgren, Navaro, Saeskyn, and Ruby S. Jones (1 ad each). 23 additional Meta Ad Winners rows and 3 TikTok Winners rows for this term were classified "kill" (not genuine peptide/lip-serum competitors, e.g. off-target or unrelated products) and excluded from the denominator, matching the count already on the product row (Meta Ad Ws = 9).</p>
+  </div>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Evergreen Milestone</h4>
+      <p>This product's own Amazon listing carries 1,838 verified reviews at 4.5 stars, a real, citable trust number pulled live this run. Use as an evergreen social-proof offer line ("Join 1,800+ women who stuck with this routine") independent of any seasonal calendar.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Replenishment Ritual (Subscribe &amp; Save)</h4>
+      <p>At the label's recommended dosage (1mL AM / 2mL PM), one 40mL bottle lasts roughly two weeks, a real, reviewer-confirmed consumption rate. A subscribe-and-save offer fits naturally: frame it as "never let the ritual lapse" rather than a discount, since the #1 angle in this brief is built on consistency, not price.</p>
+    </div>
+  </div>
+  <p class="research-note">Seasonal, New Product Launch, Restock Event, Handmade/Homemade, and Jewelry macro-angles do not fit this product and were not forced.</p>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="research-grid">
+    <div class="research-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Ad claims read as dramatic ("erase wrinkles") while real results are subtle and gradual; two of this product's own critical reviews say exactly this</li>
+        <li>No immediate sensory feedback (no tingle, no peel), so buyers assume "it's not working" and quit around week 2&ndash;4, before real change shows</li>
+        <li>Fear of counterfeit "K-beauty" dupes online; one verified reviewer describes returning a fake peptide product that was "basically water with gold flecks"</li>
+        <li>Price volatility feels unfair: the same listing seen at $60 one day and $37 the next erodes trust in the purchase itself</li>
+        <li>Real monthly cost (~$45&ndash;50 at the labeled dosage) creates budget guilt against an uncertain payoff</li>
+        <li>Aging, sensitized skin reacts poorly to harsher actives like retinol, leaving buyers stuck avoiding the ingredients they're told actually work</li>
+        <li>Skepticism that topical peptides/collagen can even penetrate skin at a molecular level</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Silky, fast-absorbing, non-sticky-once-dry texture that layers invisibly under the rest of a routine and under makeup</li>
+        <li>Real hydration and next-morning glow, repeatedly confirmed independent of the anti-aging claim</li>
+        <li>Gradual, cumulative firming and softening of fine lines with consistent use (dermatologist-referenced peptide science, not just a marketing word)</li>
+        <li>Skin barrier support beyond cosmetics: one reviewer used it on a sunburn and reported the burn faded noticeably faster</li>
+        <li>Genuine K-beauty formulation halo ("Korean skin care just delivers") that reads as trustworthy versus Western marketing hype</li>
+        <li>Precision dropper applicator gives controlled, low-waste dosing, and reviewers confirm "a little goes a long way"</li>
+      </ul>
+    </div>
+    <div class="research-card">
+      <h4>Competitor Angles Being Differentiated From</h4>
+      <ul>
+        <li>10 of 16 competitor ads lean on Korean silk protein / "glass skin" / needle-free lift positioning (GlassLab, Korean Skincare Reviews, Saeskyn, Navaro, Emily Williams' personalization quiz)</li>
+        <li>4 of 16 sell a multi-peptide "science stack" claim (Geek&amp;Gorgeous "6 peptides, 1 formula", Maelove "4 peptide classes", Isomers "4 Matrixyl technologies")</li>
+        <li>2 of 16 run a long-form "Surgery In A Bottle" advertorial positioning the product against $5,000&ndash;$23,000 facelifts/Botox (Jessica Lundgren, Ruby S. Jones, both funneling to the same olavita.co lander)</li>
+        <li>Zero competitor ads address buyer skepticism directly, engage the "does this even work" scientific objection, or touch self-care/consistency as an emotional payoff on its own; those gaps are what this brief's top 3 picks were built to fill</li>
+      </ul>
+    </div>
+  </div>
+  <p class="research-note">Grounding sources this run: a live proxied fetch of this product's own Amazon listing (feature bullets + 13 embedded reviews, spanning 5-star praise through one 3-star "not worth the hype"), a Winners DB pull of all 16 genuine competitor ads classified under the locked search term, and independent WebSearch/WebFetch research on peptide-serum skepticism, common buyer questions, and one professional third-party review of this exact product (Arktastic). Fake-review discounting: three short, low-context, back-to-back Canada-region reviews (Ness, Robynne, Dana O'Day, each one line, no usage specifics) were treated as low-value and NOT used as angle grounding, though nothing here confirms them as inauthentic (all carry Verified Purchase); every pain point and benefit above traces instead to a review or source with specific usage context. Reddit could not be read directly (WebSearch's site:reddit.com operator returned no indexed threads this run); peptide/collagen skepticism was instead corroborated across three independent expert/analysis sources (Healthline, Physionic, Okoa Skin) rather than invented.</p>
+</section>
+
+</main>
+
+<footer class="foot-note">Nova Capital &middot; Find Marketing Angles &middot; Silk Collagen Peptide Serum &middot; 08-23-2026</footer>
+
+<script>
+const DATA = [
+  {name:"The Serum That Doesn't Lie", cat:"Pain", uniq:"Fresh", uniqCount:"0/16", insight:"Names the exact frustration this product's own critical reviews voice: ads promise dramatic wrinkle-erasing results, real results are quiet and gradual.", hook:"I stopped believing serum ads three bottles ago. This one earns trust with real reviews instead of a dramatic before/after.", format:"Static comparison"},
+  {name:"The Fake Dupe Fear", cat:"Pain", uniq:"Fresh", uniqCount:"0/16", insight:"Speaks to the real fear of buying a counterfeit 'K-beauty' serum online, grounded in a verified reviewer's story of returning a fake.", hook:"She returned a peptide serum that was basically water with gold flecks in it. Here's how to know you're getting the real thing.", format:"UGC video"},
+  {name:"Retinol Was Too Harsh", cat:"Pain", uniq:"Fresh", uniqCount:"0/16", insight:"For sensitized, aging skin that reacts to harsher actives, positions this as the gentle alternative that still does something.", hook:"Your skin can't handle retinol anymore. That doesn't mean it has to handle nothing.", format:"Testimonial"},
+  {name:"The $50-a-Month Guilt", cat:"Pain", uniq:"Fresh", uniqCount:"0/16", insight:"Names the quiet budget guilt of spending on skincare that might not work, reframes cost per finished bottle vs. abandoned ones.", hook:"You've spent more than this on serums you quit after two weeks. This is the one you'll actually finish.", format:"Static"},
+
+  {name:"Quietly Ageless", cat:"Aspiration", uniq:"Twist", uniqCount:"10/16 adjacent", insight:"Rejects the dramatic 'glass skin transformation' framing 10 of 16 competitors use in favor of subtle, tasteful, unmistakably real change.", hook:"Not a new face. Just yours, quietly better rested-looking, week after week.", format:"Static"},
+  {name:"The Ritual That Held Her Together", cat:"Aspiration", uniq:"Fresh", uniqCount:"0/16", insight:"Identity-level framing built from the same real testimonial as the #1 pick: self-care as an anchor through hard seasons, not vanity.", hook:"Some routines are about looking younger. Hers was about proving to herself she could still show up for something.", format:"UGC video"},
+  {name:"K-Beauty, Not K-Hype", cat:"Aspiration", uniq:"Crowded", uniqCount:"8/16", insight:"Identity as someone discerning enough to choose real Korean formulation science over Western marketing noise.", hook:"You can tell the difference between real K-beauty science and a marketing buzzword. That's exactly why you're reading this.", format:"Static"},
+  {name:"Skin That Earns Compliments", cat:"Aspiration", uniq:"Fresh", uniqCount:"0/16", insight:"The identity of being asked 'what do you do differently' and getting to just say thank you, grounded in a real reviewer's line.", hook:"'I get compliments on my skin all the time' isn't a tagline. It's what one reviewer actually wrote.", format:"UGC video"},
+
+  {name:"Peptides Can't Penetrate Skin?", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/16", insight:"Directly names and answers the most common scientific skepticism about the entire category instead of avoiding it.", hook:"Dermatologists will tell you topical collagen molecules are too big to penetrate skin. So why do 1,800+ reviewers say this one works?", format:"Static explainer"},
+  {name:"You Don't Need To Feel It", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/16", insight:"Reframes 'no tingle, no peel, so it's not working' as the opposite of proof; harsh actives you can feel are often irritation.", hook:"If a serum burns or tingles, that's not it working. That's your skin barrier under attack.", format:"Static"},
+  {name:"Stop Buying $10 Peptide Serums", cat:"Contrarian", uniq:"Fresh", uniqCount:"0/16", insight:"Contrarian cost framing: cheap serums often use token peptide concentrations that do nothing, so the 'savings' buys nothing twice.", hook:"That $10 peptide serum isn't a bargain. It's a second bottle of nothing.", format:"Static comparison"},
+  {name:"This Isn't A Botox Alternative", cat:"Contrarian", uniq:"Twist", uniqCount:"2/16 direct", insight:"Rejects the 'needle-free facelift' comparison 2 of 16 competitors run, repositioning the product as its own category rather than a Botox stand-in.", hook:"This was never trying to be Botox in a bottle. It's something simpler: a routine that actually works.", format:"Static comparison"},
+
+  {name:"12 Weeks Of Doing Nothing", cat:"Fear", uniq:"Fresh", uniqCount:"0/16", insight:"Names the compounding cost of inaction (thinning, dullness, further loss of firmness) against 12 weeks of consistent peptide use.", hook:"Your skin in 12 weeks looks different depending on one thing: whether you started today or kept waiting.", format:"Static"},
+  {name:"Every Abandoned Bottle", cat:"Fear", uniq:"Fresh", uniqCount:"0/16", insight:"Most serums 'fail' because people quit at week two, not because the formula failed; names the real reason past attempts didn't work.", hook:"That serum you gave up on wasn't the problem. Two weeks was never enough time for it to work.", format:"Static"},
+  {name:"Before You Book Botox", cat:"Fear", uniq:"Crowded", uniqCount:"2/16", insight:"Urgency to try the lower-risk, reversible option first, aligned to a real reviewer who considered Botox but held off.", hook:"Before you book that Botox consult, one reviewer tried this instead. Here's what she said happened.", format:"UGC video"},
+  {name:"Counterfeits Are Getting Better", cat:"Fear", uniq:"Fresh", uniqCount:"0/16", insight:"Urgency angle on the authenticity theme: buy verified before wasting money on a convincing fake, per this product's own review base.", hook:"The fake versions of this serum are getting harder to spot. Here's exactly how to know you're getting the real one.", format:"Static"},
+
+  {name:"Too Sick To Care, Until This", cat:"Social", uniq:"Fresh", uniqCount:"0/16", insight:"The single most emotionally charged real testimonial this brief surfaced, reframed as social proof of the ritual, not a miracle claim.", hook:"She wasn't trying to look younger. She was too sick to care about her skin at all, until this became the one routine she couldn't quit.", format:"UGC video"},
+  {name:"The Serum Post-Menopausal Skin Tolerates", cat:"Social", uniq:"Fresh", uniqCount:"0/16", insight:"Peer proof from a detailed, credible 52-year-old reviewer account: dry, sensitive, post-menopausal skin that actually tolerated it well.", hook:"52, post-menopausal, sensitive skin, and this is the peptide serum she says actually delivers.", format:"Testimonial"},
+  {name:"One Bottle, Two Routines", cat:"Social", uniq:"Fresh", uniqCount:"0/16", insight:"Value-tribe proof from reviewers who confirm a little goes a long way, stretching one bottle across roughly two full routines.", hook:"'I've gone through 2 bottles. A little goes a long way,' one reviewer wrote. Here's why that matters for your wallet.", format:"UGC video"},
+  {name:"Dermatologist-Referenced, Customer-Confirmed", cat:"Social", uniq:"Twist", uniqCount:"1/16 adjacent", insight:"Combines dermatologist-referenced peptide science with a real customer result, an authority-plus-proof combo only loosely echoed by one competitor's award-badge claim.", hook:"A dermatologist explained why peptides help build collagen. Then a customer showed the forehead line to prove it.", format:"Static"}
+];
+
+function catClass(c){return {Pain:"cat-pain",Aspiration:"cat-aspiration",Contrarian:"cat-contrarian",Fear:"cat-fear",Social:"cat-social"}[c];}
+function uniqClass(u){return {Fresh:"uniq-fresh",Twist:"uniq-twist",Crowded:"uniq-crowded"}[u];}
+function catLabel(c){return {Pain:"Pain / Frustration",Aspiration:"Aspiration / Identity",Contrarian:"Contrarian / Pattern Interrupt",Fear:"Fear / Urgency",Social:"Social Proof / Tribe"}[c];}
+
+let activeCat = "all";
+let activeUniq = "all";
+let sortBy = "uniqueness";
+const uniqOrder = {Fresh:0, Twist:1, Crowded:2};
+
+function render(){
+  let rows = DATA.filter(r => (activeCat==="all"||r.cat===activeCat) && (activeUniq==="all"||r.uniq===activeUniq));
+  if(sortBy==="uniqueness") rows.sort((a,b)=>uniqOrder[a.uniq]-uniqOrder[b.uniq]);
+  else if(sortBy==="category") rows.sort((a,b)=>a.cat.localeCompare(b.cat));
+  else rows.sort((a,b)=>a.name.localeCompare(b.name));
+  const tbody = document.querySelector("#angleTable tbody");
+  tbody.innerHTML = rows.map(r => `
+    <tr>
+      <td class="angle-name">${r.name}</td>
+      <td><span class="badge ${catClass(r.cat)}">${catLabel(r.cat)}</span></td>
+      <td><span class="badge ${uniqClass(r.uniq)}">${r.uniq} ${r.uniqCount}</span></td>
+      <td>${r.insight}</td>
+      <td class="hookcell">${r.hook}</td>
+      <td>${r.format}</td>
+    </tr>`).join("");
+}
+
+document.querySelectorAll("#catFilters .filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll("#catFilters .filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeCat = btn.dataset.filter;
+    render();
+  });
+});
+document.querySelectorAll("#uniqFilters .filter-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll("#uniqFilters .filter-btn").forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    activeUniq = btn.dataset.ufilter;
+    render();
+  });
+});
+document.getElementById("sortSel").addEventListener("change", (e)=>{ sortBy = e.target.value; render(); });
+
+render();
+</script>
+</body>
+</html>

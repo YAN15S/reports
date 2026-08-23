@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3-in-1 Triple Fusion Back Massager - Marketing Angles</title>
+<style>
+  :root {
+    --slate: #334155;
+    --slate-dark: #1e293b;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --fresh: #059669;
+    --fresh-bg: #ecfdf5;
+    --twist: #d97706;
+    --twist-bg: #fffbeb;
+    --crowded: #dc2626;
+    --crowded-bg: #fef2f2;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .accent-bar { height: 6px; background: linear-gradient(90deg, var(--slate-dark), var(--slate)); }
+  header {
+    background: var(--card);
+    padding: 32px 24px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  header .wrap { max-width: 1100px; margin: 0 auto; }
+  header h1 { margin: 0 0 6px; font-size: 1.7rem; }
+  header .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 4px; }
+  header .date { color: var(--muted); font-size: 0.85rem; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  section { margin-bottom: 40px; }
+  h2 { font-size: 1.25rem; border-bottom: 2px solid var(--border); padding-bottom: 8px; margin-bottom: 16px; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .stat-card .label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-bottom: 6px; }
+  .stat-card .value { font-size: 0.98rem; }
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .badge.fresh { color: var(--fresh); background: var(--fresh-bg); }
+  .badge.twist { color: var(--twist); background: var(--twist-bg); }
+  .badge.crowded { color: var(--crowded); background: var(--crowded-bg); }
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .angle-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    position: relative;
+    border-top: 4px solid var(--slate);
+  }
+  .angle-card .rank { font-size: 0.78rem; color: var(--muted); font-weight: 700; letter-spacing: .05em; }
+  .angle-card h3 { margin: 4px 0 6px; font-size: 1.15rem; }
+  .angle-card .cat { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+  .angle-card .field-label { font-size: 0.72rem; text-transform: uppercase; color: var(--muted); margin-top: 12px; margin-bottom: 3px; letter-spacing: .04em; }
+  .angle-card .hook { font-style: italic; }
+  .micro-hooks { margin-top: 6px; padding-left: 0; list-style: none; }
+  .micro-hooks li { margin-bottom: 6px; font-size: 0.9rem; }
+  .micro-hooks .type { font-weight: 700; text-transform: uppercase; font-size: 0.68rem; color: var(--slate); margin-right: 6px; }
+  .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+  .controls select, .controls input {
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    background: var(--card);
+  }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 0.85rem; vertical-align: top; }
+  th { background: var(--slate-dark); color: white; cursor: pointer; user-select: none; font-size: 0.75rem; text-transform: uppercase; letter-spacing: .03em; }
+  th:hover { background: var(--slate); }
+  tr:hover td { background: #f1f5f9; }
+  .table-wrap { overflow-x: auto; }
+  .legend { display: flex; gap: 24px; flex-wrap: wrap; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; font-size: 0.85rem; }
+  .legend .item { display: flex; align-items: flex-start; gap: 8px; max-width: 320px; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .macro-card h4 { margin: 0 0 6px; font-size: 1rem; }
+  .macro-card .tag { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .notes-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .notes-card h4 { margin-top: 0; font-size: 0.95rem; }
+  .notes-card ul { margin: 8px 0 0; padding-left: 20px; }
+  .notes-card li { margin-bottom: 6px; font-size: 0.88rem; }
+  .divergence-note { font-size: 0.82rem; color: var(--muted); background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 12px 16px; }
+  footer { text-align: center; color: var(--muted); font-size: 0.78rem; padding: 24px; }
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <div class="wrap">
+    <h1>3-in-1 Triple Fusion Back Massager &mdash; Marketing Angles</h1>
+    <div class="subtitle">Avatar: unisex, 25-65+, chronic low-back / sciatica pain, has cycled through chiropractors, pills, injections and heating pads without lasting relief</div>
+    <div class="date">Refreshed 2026-08-23</div>
+  </div>
+</header>
+
+<main>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="stats">
+    <div class="stat-card">
+      <div class="label">Avatar</div>
+      <div class="value">Unisex, 25-65+. Desk-job or physically demanding work has produced chronic lower-back pain or sciatica. Has tried physical therapy, chiropractors, steroid injections, heating pads and pills, all temporary or ineffective. Feels caught between "keep taking pills" and "eventually you'll need surgery." Skeptical of gadget ads after being burned before.</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Core Transformation</div>
+      <div class="value"><strong>Before:</strong> Afraid to sit, stand or lie down without pain, cycling through doctors who only prescribe more pills and copays that don't add up to an answer.<br><br><strong>After:</strong> 15 minutes each evening at home, decompressing the spine directly, sitting through a full movie or car ride again without shifting.</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Primary Objection</div>
+      <div class="value">"This looks like every other back gadget ad with a scripted testimonial, so how do I know it actually reaches the disc/nerve compression causing my real pain instead of just rubbing sore muscles?"</div>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="angle-card">
+      <div class="rank">RANK 1</div>
+      <h3>This Isn't a Massager</h3>
+      <div class="cat">Contrarian / Pattern Interrupt &middot; <span class="badge fresh">Fresh 0/7</span></div>
+      <div class="field-label">Core Insight</div>
+      <div>Most back massagers only ever touch surface muscle; if the pain comes from a compressed disc pinching a nerve, muscle-only vibration never reaches the actual cause. Traction is the mechanism that creates physical space for the nerve.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook">"Most back massagers only ever touch your muscles. If your pain comes from a compressed disc, that's not even where the problem lives."</div>
+      <div class="field-label">Best Format</div>
+      <div>Educational carousel / short-form video demonstrating the traction mechanism</div>
+      <div class="field-label">Why It Wins</div>
+      <div>Directly names the single most sophisticated real objection this research surfaced (does this help real nerve compression or just muscle tightness), and no competitor ad in the Winners DB frames the mechanism this way.</div>
+      <div class="field-label">Micro Hooks</div>
+      <ul class="micro-hooks">
+        <li><span class="type">Problem-first</span>Tired of massagers that feel nice for ten minutes and change nothing about your actual pain?</li>
+        <li><span class="type">Curiosity</span>99% of back massager ads never explain the difference between a massage and a decompression. Here's why it matters.</li>
+        <li><span class="type">Contra</span>Stop buying vibration. Start buying traction.</li>
+      </ul>
+    </div>
+
+    <div class="angle-card">
+      <div class="rank">RANK 2</div>
+      <h3>Stop Trusting the Perfect Testimonial</h3>
+      <div class="cat">Contrarian / Pattern Interrupt &middot; <span class="badge fresh">Fresh 0/7</span></div>
+      <div class="field-label">Core Insight</div>
+      <div>Buyers in this category have been burned by scripted, too-perfect testimonial ads. Trust now comes from unpolished, specific, sometimes mixed reviews, not a flawless story.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook">"Every ad for one of these tells the same 'I couldn't believe it' story. Read the boring, specific reviews instead, that's the real picture."</div>
+      <div class="field-label">Best Format</div>
+      <div>UGC video / review-screenshot carousel</div>
+      <div class="field-label">Why It Wins</div>
+      <div>Turns category-wide ad fatigue into a trust differentiator: every one of the 7 competitor winners in the Winners DB runs a polished VSL or advertorial-style testimonial (one competitor brand surfaced in research with a BBB F-rating for undisclosed charges), so a brand that undercuts its own genre stands out immediately.</div>
+      <div class="field-label">Micro Hooks</div>
+      <ul class="micro-hooks">
+        <li><span class="type">Social proof</span>Not the 5-star script. Real review: "took two weeks, not two days, but I finally slept through the night."</li>
+        <li><span class="type">Curiosity</span>The reviews that convinced us weren't the perfect ones. Here's what they said instead.</li>
+        <li><span class="type">Contra</span>If every review sounds like a movie trailer, be suspicious. Look for the ones that mention what didn't work first.</li>
+      </ul>
+    </div>
+
+    <div class="angle-card">
+      <div class="rank">RANK 3</div>
+      <h3>Every Position Hurts</h3>
+      <div class="cat">Pain / Frustration &middot; <span class="badge fresh">Fresh 0/7</span></div>
+      <div class="field-label">Core Insight</div>
+      <div>Sciatica-level back pain doesn't have a "safe position." It follows the sufferer into sitting, standing, and lying down, which is what makes it feel inescapable rather than manageable.</div>
+      <div class="field-label">Sample Hook</div>
+      <div class="hook">"Sitting hurts. Standing hurts. Lying down hurts. When pain has no safe position left, the problem isn't your posture, it's what's happening at the disc."</div>
+      <div class="field-label">Best Format</div>
+      <div>Static ad / testimonial video</div>
+      <div class="field-label">Why It Wins</div>
+      <div>Grounded directly in this row's own verified research ("Sitting, standing up, lying down, it all hurt") and confirmed by this run's independent pain research; universally recognizable to the avatar and not claimed by any of the 7 competitor ads.</div>
+      <div class="field-label">Micro Hooks</div>
+      <ul class="micro-hooks">
+        <li><span class="type">Problem-first</span>Is there anywhere your back doesn't hurt anymore? For a lot of people, the honest answer is no.</li>
+        <li><span class="type">Result-first</span>I went from dreading every position to sitting through an entire dinner without shifting once.</li>
+        <li><span class="type">Social proof</span>Forty million people in the US deal with exactly this. You're not the one person nothing works for.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <select id="filterCat">
+      <option value="">All Categories</option>
+      <option value="Pain / Frustration">Pain / Frustration</option>
+      <option value="Aspiration / Identity">Aspiration / Identity</option>
+      <option value="Contrarian / Pattern Interrupt">Contrarian / Pattern Interrupt</option>
+      <option value="Fear / Urgency">Fear / Urgency</option>
+      <option value="Social Proof / Tribe">Social Proof / Tribe</option>
+    </select>
+    <select id="filterUniq">
+      <option value="">All Uniqueness</option>
+      <option value="Fresh">Fresh</option>
+      <option value="Twist">Twist</option>
+      <option value="Crowded">Crowded</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-key="name">Angle</th>
+        <th data-key="cat">Category</th>
+        <th data-key="uniq">Uniqueness</th>
+        <th data-key="insight">Core Insight</th>
+        <th data-key="hook">Hook</th>
+        <th data-key="format">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- rows injected by JS from ANGLES data -->
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="item"><span class="badge fresh">Fresh</span><span>No competitor ad in the Winners DB uses this angle (0 matches). The strongest, most differentiated picks.</span></div>
+    <div class="item"><span class="badge twist">Twist</span><span>Competitors hit the same pain or benefit but frame it differently; this angle adds a fresh differentiator (adjacent-match count noted).</span></div>
+    <div class="item"><span class="badge crowded">Crowded</span><span>One or more competitors already run essentially this angle (direct-match count noted). Differentiate further or drop.</span></div>
+  </div>
+  <p style="color:var(--muted); font-size:0.82rem; margin-top:10px;">Denominator = 7, the count of genuine competitor winner ads in the Winners DB for the locked search term "3-in-1 triple fusion back massager" (5 additional Meta Ad Winners rows for this term were classified <em>kill</em>, off-target products, and excluded from the competitor set).</p>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <div class="tag">Evergreen Event</div>
+      <h4>40M+ Sciatica Sufferers</h4>
+      <div>A recurring belonging/proof anchor (not a sale): "You are one of 40 million Americans dealing with this exact pain," reused across ad refreshes as social proof rather than a novelty stat.</div>
+    </div>
+    <div class="macro-card">
+      <div class="tag">Gift / Giftable (matches this row's Green Flag)</div>
+      <h4>Give Them Their Evenings Back</h4>
+      <div>Father's Day / Mother's Day framing: buy it for a parent, partner or coworker who has been quietly suffering. No competitor ad in the Winners DB uses a gifting angle at all.</div>
+    </div>
+    <div class="macro-card">
+      <div class="tag">Seasonal (activate ~2 weeks before Labor Day)</div>
+      <h4>Built For The Desk-Job Body</h4>
+      <div>Back-to-school / return-to-office timing: reframes the product around the sedentary-work pain cycle research surfaced, positioned as the fix that fits the same 15-minute window as a coffee break.</div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Pain follows sufferers into every position: sitting, standing, lying down, with no safe position left</li>
+        <li>"Tried everything" fatigue: PT, chiropractors, steroid injections, heating pads, all temporary or ineffective</li>
+        <li>Feeling trapped between "take more pills" and "eventually you'll need surgery"</li>
+        <li>Doctor visits that end in "here's more pain meds" with no real progress on the underlying cause</li>
+        <li>Single-therapy devices "pull right back": chiro decompresses but muscles re-tighten within hours; heat boosts blood flow but doesn't create disc space; massage relaxes muscle but the disc stays compressed</li>
+        <li>Deep skepticism that an at-home gadget can touch real nerve/disc compression rather than just surface muscle tightness</li>
+        <li>Practical gadget frustrations from comparable products: weak heat output, short battery life, overly firm massage nodes</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Traction physically creates space for a compressed nerve, distinct from muscle-only massage</li>
+        <li>Combining traction, heat and vibration closes the "does one thing" gap that makes single therapies wear off fast</li>
+        <li>Real buyer language on comparable tri-therapy devices: relief described as "a pressure valve opening up," ability to postpone or avoid surgery consultations, sitting through a movie again without shifting</li>
+        <li>Fits a 15-minute evening routine, low friction, can multitask (light household tasks) during use</li>
+        <li>At-home and private: no clinic visit, no explaining the pain to a stranger</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Competitor Angles Being Differentiated From (Winners DB, 7 rows)</h4>
+      <ul>
+        <li><strong>SpinaLax</strong> (Pain): one device replaces separate traction, vibration and heat remedies</li>
+        <li><strong>SmoothSpine</strong> (Pain, long-form VSL): "why single therapies fail" narrative, sciatica-specific, cites $800-$3,000 wasted on chiro/pain management, disc-rehydration science, ends in surgery postponed indefinitely</li>
+        <li><strong>TheraSpine</strong> (Social Proof, Dutch market, 2 rows): "3 ways against back pain," generic proven-by-everyday-sufferers framing</li>
+        <li><strong>Back Hero USA</strong> (Pain): "3 Therapies. 1 Device. Zero Back Pain," treats the cause not the symptom, clinic-level relief at home</li>
+        <li><strong>Alamaraat AE</strong> (Aspiration): "15-Minute Back Fix... without doctor visits," brief desk-job context</li>
+        <li><strong>SmoothSpine</strong> (Social Proof, scoliosis variant): decompress the crushed spine, disc rehydration, root cause not symptoms</li>
+      </ul>
+      <p style="font-size:0.82rem; color:var(--muted); margin-top:10px;">Every competitor ad reads as a polished testimonial/VSL/advertorial. None pre-empt the muscle-vs-disc mechanism objection directly, none undercut their own genre on trust, and none use a gifting or workplace-tribe frame, the gaps the top 3 picks fill.</p>
+    </div>
+  </div>
+  <div class="divergence-note" style="margin-top:16px;">
+    <strong>Research divergences (disclosed):</strong> The product's own AliExpress listing was blocked by a reCAPTCHA challenge on every attempt this run (no reviews recovered from the exact sourcing listing). Reddit is not well indexed by web search; pain-point and objection research substituted clinical/forum sources (Harvard Health, HealthUnlocked, peer-reviewed pain-management literature). YouTube comments are anti-bot protected and returned no content; sentiment was substituted from third-party review aggregators and cross-platform ratings. All substitutions are disclosed per source above; no review, quote, or comment was invented.
+  </div>
+</section>
+
+</main>
+
+<footer>3-in-1 Triple Fusion Back Massager &middot; Marketing Angles Report &middot; Generated 2026-08-23</footer>
+
+<script>
+const ANGLES = [
+  {name:"The Single-Therapy Trap", cat:"Pain / Frustration", uniq:"Crowded", uniqCount:"1/7", insight:"Chiro, heat, and massage alone each treat only one piece of the problem and the relief pulls right back.", hook:"Chiropractors decompress you, but by the drive home your muscles have pulled everything right back into compression.", format:"VSL / testimonial"},
+  {name:"Every Position Hurts", cat:"Pain / Frustration", uniq:"Fresh", uniqCount:"0/7", insight:"Sciatica-level pain has no safe position; it follows the sufferer into sitting, standing and lying down.", hook:"Sitting hurts. Standing hurts. Lying down hurts. The problem isn't your posture, it's your compressed disc.", format:"Static / carousel"},
+  {name:"The Copay Cycle", cat:"Pain / Frustration", uniq:"Twist", uniqCount:"1/7", insight:"Repeat doctor visits end in more pain meds instead of addressing the disc itself.", hook:"Another copay. Another 'take this and come back in 3 weeks.' At some point you stop expecting an answer.", format:"UGC video"},
+  {name:"Drawer Full of Failed Fixes", cat:"Pain / Frustration", uniq:"Fresh", uniqCount:"0/7", insight:"Buyers have a literal graveyard of heating pads, gadgets and pill bottles that didn't work.", hook:"Heating pad: didn't reach it. Cushion: too soft. Pills: wore off by 3pm. This is the one still plugged in three months later.", format:"UGC / testimonial photo"},
+  {name:"Sit Through the Whole Movie", cat:"Aspiration / Identity", uniq:"Crowded", uniqCount:"1/7", insight:"The win isn't 'pain-free,' it's getting back small identity-defining moments.", hook:"Not managing pain. Actually sitting through an entire movie without shifting once.", format:"UGC video"},
+  {name:"The Person Who Fixed It At Home", cat:"Aspiration / Identity", uniq:"Twist", uniqCount:"1/7", insight:"Identity shift from patient waiting on a doctor to person who solved it themself.", hook:"You didn't wait for a referral or a copay. You fixed it in your living room, 15 minutes a night.", format:"Testimonial / static"},
+  {name:"Built For The Desk-Job Body", cat:"Aspiration / Identity", uniq:"Twist", uniqCount:"1/7", insight:"Modern sedentary work created this pain; the fix fits the same 15-minute window as a coffee break.", hook:"Eight hours in a chair built this pain. Fifteen minutes on the couch can undo a day of it.", format:"UGC / carousel"},
+  {name:"Give Them Their Evenings Back", cat:"Aspiration / Identity", uniq:"Fresh", uniqCount:"0/7", insight:"Giftable framing: buying it for a partner or parent who has been quietly suffering.", hook:"She never complains about her back. Get her the 15 minutes that actually helps.", format:"Static / gift-guide carousel"},
+  {name:"This Isn't a Massager", cat:"Contrarian / Pattern Interrupt", uniq:"Fresh", uniqCount:"0/7", insight:"Most gadgets only massage muscle; this one also creates physical traction space for the nerve.", hook:"Most back massagers only ever touch your muscles. If your pain comes from a compressed disc, that's not even where the problem lives.", format:"VSL / educational carousel"},
+  {name:"Why Your Chiropractor Keeps Seeing You Again", cat:"Contrarian / Pattern Interrupt", uniq:"Twist", uniqCount:"1/7", insight:"Repeat visits aren't proof it's working, they're proof the relief doesn't last.", hook:"If one visit fully fixed compression, you wouldn't need a standing weekly appointment. That's not a fix, it's a subscription.", format:"Static / carousel"},
+  {name:"Stop Trusting the Perfect Testimonial", cat:"Contrarian / Pattern Interrupt", uniq:"Fresh", uniqCount:"0/7", insight:"Ad-fatigue itself becomes the trust angle: read the boring, specific reviews, not the scripted ones.", hook:"Every ad for one of these says the same 'I couldn't believe it' story. Read the real, boring reviews instead.", format:"UGC / review-screenshot carousel"},
+  {name:"Heat Alone Never Decompressed a Disc", cat:"Contrarian / Pattern Interrupt", uniq:"Fresh", uniqCount:"0/7", insight:"Heat feels good but doesn't create the physical space that traction does.", hook:"A heating pad relaxes the muscle around the disc. It does nothing to the disc itself.", format:"Educational static / carousel"},
+  {name:"The Untreated-Disc Timeline", cat:"Fear / Urgency", uniq:"Twist", uniqCount:"1/7", insight:"Compression compounds the longer it's ignored, narrowing options toward surgery.", hook:"Nerve pain that gets worse this year usually got ignored last year.", format:"Static / testimonial"},
+  {name:"One More Missed Weekend", cat:"Fear / Urgency", uniq:"Fresh", uniqCount:"0/7", insight:"Urgency framed around lost time with family, not scare tactics.", hook:"Another weekend on the couch instead of at the lake with your kids.", format:"UGC video"},
+  {name:"Before It Becomes a Surgery Conversation", cat:"Fear / Urgency", uniq:"Crowded", uniqCount:"1/7", insight:"Names the fear people have but don't say out loud: this could end in surgery.", hook:"Nobody wants to hear the word 'surgery' at a back appointment. This is the step people take before that conversation.", format:"Testimonial / VSL"},
+  {name:"The Real Cost of Waiting", cat:"Fear / Urgency", uniq:"Crowded", uniqCount:"2/7", insight:"Reframes cost around time and mobility rather than dollars spent on clinic visits.", hook:"This isn't about the price tag. It's about how much longer you're willing to plan your day around your back.", format:"Static"},
+  {name:"The 3-Star Reviews Tell the Real Story", cat:"Social Proof / Tribe", uniq:"Fresh", uniqCount:"0/7", insight:"Balanced, specific reviews build more trust than perfect 5-star scripts.", hook:"Not the perfect 5-star story. Real review: 'took two weeks, not two days, but I finally slept through the night.'", format:"Review-carousel / UGC"},
+  {name:"Cross-Platform Verified", cat:"Social Proof / Tribe", uniq:"Fresh", uniqCount:"0/7", insight:"Nearly 1,000 verified ratings across other storefronts is third-party proof, not a self-hosted testimonial.", hook:"Almost 1,000 people rated this on a store that isn't even ours. That's not an ad script, that's a paper trail.", format:"Static / stat-card"},
+  {name:"The Coworkers Who Compared Notes", cat:"Social Proof / Tribe", uniq:"Fresh", uniqCount:"0/7", insight:"Workplace-tribe framing: a shared complaint turning into a shared fix.", hook:"It started as one coworker mentioning her back. Now three people at the office use the same 15 minutes after lunch.", format:"UGC group video"},
+  {name:"Sciatica Sufferers Aren't Alone", cat:"Social Proof / Tribe", uniq:"Twist", uniqCount:"2/7", insight:"40M+ Americans deal with sciatica; belonging to that group, not being uniquely broken.", hook:"Forty million people in the US deal with this exact pain. You are not the one person this doesn't work for.", format:"Static / testimonial carousel"}
+];
+
+const tbody = document.querySelector("#angleTable tbody");
+function render() {
+  const catF = document.getElementById("filterCat").value;
+  const uniqF = document.getElementById("filterUniq").value;
+  tbody.innerHTML = "";
+  ANGLES.filter(a => (!catF || a.cat === catF) && (!uniqF || a.uniq === uniqF)).forEach(a => {
+    const tr = document.createElement("tr");
+    const badgeClass = a.uniq.toLowerCase();
+    tr.innerHTML = `<td><strong>${a.name}</strong></td><td>${a.cat}</td><td><span class="badge ${badgeClass}">${a.uniq} ${a.uniqCount}</span></td><td>${a.insight}</td><td><em>${a.hook}</em></td><td>${a.format}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+document.getElementById("filterCat").addEventListener("change", render);
+document.getElementById("filterUniq").addEventListener("change", render);
+
+let sortState = {};
+document.querySelectorAll("#angleTable th").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.key;
+    sortState.key = key;
+    sortState.dir = sortState.key === key && sortState.dir === 1 ? -1 : 1;
+    ANGLES.sort((a, b) => (a[key] > b[key] ? 1 : -1) * sortState.dir);
+    render();
+  });
+});
+
+render();
+</script>
+</body>
+</html>

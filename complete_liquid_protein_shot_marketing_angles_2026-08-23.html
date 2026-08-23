@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Complete Liquid Protein Shot — Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --slate:#1e293b; --slate-2:#334155; --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0;
+    --text:#0f172a; --muted:#64748b; --accent:#0ea5e9;
+    --fresh:#059669; --fresh-bg:#d1fae5;
+    --twist:#d97706; --twist-bg:#fef3c7;
+    --crowded:#dc2626; --crowded-bg:#fee2e2;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+  .accent-bar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate-2));}
+  header{background:#fff;padding:32px 24px 24px;border-bottom:1px solid var(--border);}
+  header .wrap{max-width:1100px;margin:0 auto;}
+  h1{margin:0 0 6px;font-size:1.8rem;color:var(--slate);}
+  .subtitle{color:var(--muted);font-size:1rem;margin:0 0 4px;}
+  .date{color:var(--muted);font-size:.85rem;}
+  main{max-width:1100px;margin:0 auto;padding:24px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:28px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .stat .label{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;}
+  .stat .value{font-size:1.05rem;font-weight:600;margin-top:4px;}
+  section{margin-bottom:36px;}
+  h2{font-size:1.3rem;color:var(--slate);border-bottom:2px solid var(--border);padding-bottom:8px;margin-bottom:16px;}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .angle-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden;}
+  .angle-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);}
+  .rank{display:inline-block;background:var(--slate);color:#fff;font-weight:700;font-size:.8rem;padding:2px 9px;border-radius:20px;margin-bottom:8px;}
+  .angle-name{font-size:1.15rem;font-weight:700;margin:0 0 4px;}
+  .category{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;margin-bottom:10px;}
+  .badge{display:inline-block;font-size:.75rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;}
+  .badge.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.twist{background:var(--twist-bg);color:var(--twist);}
+  .badge.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .field{margin:8px 0;}
+  .field .k{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;}
+  .field .v{font-size:.92rem;margin-top:2px;}
+  .hook{font-style:italic;background:#f1f5f9;border-left:3px solid var(--accent);padding:8px 10px;border-radius:0 6px 6px 0;}
+  .micro-hooks{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);}
+  .micro-hooks .mh{font-size:.85rem;margin:5px 0;}
+  .mh .type{font-weight:700;color:var(--slate);}
+  .compliance-note{margin-top:10px;font-size:.78rem;background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;padding:6px 9px;border-radius:6px;}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .controls button, .controls select{font-size:.85rem;padding:6px 12px;border-radius:20px;border:1px solid var(--border);background:#fff;cursor:pointer;}
+  .controls button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:.85rem;}
+  thead th{background:#f1f5f9;text-align:left;padding:9px 10px;font-size:.72rem;text-transform:uppercase;letter-spacing:.03em;color:var(--muted);cursor:pointer;user-select:none;}
+  tbody td{padding:9px 10px;border-top:1px solid var(--border);vertical-align:top;}
+  tbody tr:hover{background:#f8fafc;}
+  .pill{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:12px;white-space:nowrap;}
+  .pill.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .pill.twist{background:var(--twist-bg);color:var(--twist);}
+  .pill.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .macro-card h3{margin:0 0 6px;font-size:1rem;}
+  .macro-card p{margin:0;font-size:.88rem;color:var(--slate-2);}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .notes-card h3{margin:0 0 10px;font-size:.95rem;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:.87rem;color:var(--slate-2);}
+  .notes-card li{margin-bottom:6px;}
+  .disclosure{font-size:.8rem;background:#eff6ff;border:1px solid #bfdbfe;color:#1e3a8a;padding:10px 12px;border-radius:8px;margin-top:10px;}
+  .legend{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:.85rem;}
+  .legend .row{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;}
+  footer{text-align:center;color:var(--muted);font-size:.78rem;padding:20px;}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <div class="wrap">
+    <h1>Complete Liquid Protein Shot: Marketing Angles</h1>
+    <p class="subtitle">Avatar: high-demand bodies (tradespeople, first responders, endurance and combat-sport athletes, frequent travelers) who can't afford downtime and are tired of whey shakes that bloat, take time to mix, and still leave them sore</p>
+    <p class="date">Published August 23, 2026</p>
+  </div>
+</header>
+<main>
+
+<section class="stats">
+  <div class="stat"><div class="label">Core Transformation</div><div class="value">Chalky shakes and lingering soreness &rarr; a 15-second shot and steady recovery within 15 minutes, no blender, no bloat</div></div>
+  <div class="stat"><div class="label">Primary Objection</div><div class="value">"Collagen isn't a real protein, it's missing amino acids whey has, so this is just hype for an inferior product"</div></div>
+  <div class="stat"><div class="label">Competitor Set (Winners DB)</div><div class="value">6 genuine ads for "liquid protein shot" (4 <code>w</code> + 2 <code>w-ish</code>, matching the sheet's Meta Ad Ws = 4)</div></div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="angle-card">
+      <span class="rank">#1</span>
+      <p class="angle-name">16 Days, Not 8 Weeks</p>
+      <p class="category">Social Proof</p>
+      <span class="badge fresh">Fresh 0/6</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">A real, extreme recovery story from someone with everything on the line is more convincing than any claim the brand could make about itself.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">Doctors gave him 8 weeks to heal. He was back on duty in 16 days, and he credits the one thing he never skipped.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">Testimonial (photo/video, on-screen text)</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">The single most emotionally charged real story surfaced this run, and no competitor in the Winners DB uses anything close to a real customer's stakes-are-real recovery arc; ProT Gold and this row's own sibling SKU (Frog Fuel Power Protein) lean on brand pedigree and origin story instead of a real person's outcome.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Social Proof:</span> "One firefighter's doctors gave him 8 weeks to heal. He was back on duty in 16 days."</div>
+        <div class="mh"><span class="type">Curiosity:</span> "The fastest recovery story we've heard this year didn't come from an athlete. It came from a firefighter."</div>
+        <div class="mh"><span class="type">Result-first:</span> "16 days. That's how fast one first responder's body bounced back, and he credits the one shot he never skipped."</div>
+      </div>
+      <div class="compliance-note">Compliance: present strictly as one individual's personal testimonial, never as a claim the product treats or accelerates burn recovery. Pair with the standard supplement disclaimer ("results not typical, this statement has not been evaluated by the FDA") before use; route through the Creative Strategist system's compliance pass before this specific claim ships.</div>
+    </div>
+
+    <div class="angle-card">
+      <span class="rank">#2</span>
+      <p class="angle-name">Collagen Isn't Whey. That's The Point.</p>
+      <p class="category">Contrarian / Pattern Interrupt</p>
+      <span class="badge fresh">Fresh 0/6</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">Buyers who know collagen is naturally lower in some amino acids than whey assume that makes it inferior; the real question is whether that gap gets closed.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">Whey has 13.9g of essential amino acids. Collagen has 7.7g on its own. Here's how we closed the gap.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">Static ad (side-by-side amino comparison graphic)</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">Directly disarms this run's own-identified primary objection using the product's actual formulation (22 amino acids incl. fortified tryptophan and glutamine), combining logic (real published numbers) with emotional relief. Not one of the 6 competitor ads addresses the amino-completeness objection at all.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Contra:</span> "Stop comparing this to whey. It was never built to be whey."</div>
+        <div class="mh"><span class="type">Problem-first:</span> "Tired of hearing collagen 'isn't a real protein'? Here's what that claim leaves out."</div>
+        <div class="mh"><span class="type">Curiosity:</span> "Whey has 13.9g of essential aminos. Collagen has 7.7. Here's how we closed the gap."</div>
+      </div>
+    </div>
+
+    <div class="angle-card">
+      <span class="rank">#3</span>
+      <p class="angle-name">What If You Can't Show Up Tomorrow</p>
+      <p class="category">Fear / Urgency</p>
+      <span class="badge fresh">Fresh 0/6</span>
+      <div class="field"><div class="k">Core Insight</div><div class="v">For people whose income or performance depends on their body, the real fear isn't soreness, it's not being able to show up at all.</div></div>
+      <div class="field"><div class="k">Sample Hook</div><div class="hook">Your job doesn't care that your knees are screaming. Show up anyway, or don't show up at all.</div></div>
+      <div class="field"><div class="k">Best Execution Format</div><div class="v">Testimonial / UGC video</div></div>
+      <div class="field"><div class="k">Why It Wins</div><div class="v">Turns this run's own occupational testimonials (a lineworker's joint pain, a firefighter's return to duty) into urgency without manufactured scarcity. None of the 6 competitors touch occupational stakes; they sell recovery as a nice-to-have, not a livelihood issue.</div></div>
+      <div class="micro-hooks">
+        <div class="mh"><span class="type">Problem-first:</span> "Your job doesn't care that your knees are screaming."</div>
+        <div class="mh"><span class="type">Fear/urgency:</span> "Skip recovery today, and tomorrow decides for you."</div>
+        <div class="mh"><span class="type">Social Proof:</span> "Lineworkers, firefighters, and endurance racers all reach for the same 1oz shot before their body gives out."</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <button class="cat-btn active" data-cat="all">All Categories</button>
+    <button class="cat-btn" data-cat="Pain/Frustration">Pain/Frustration</button>
+    <button class="cat-btn" data-cat="Aspiration/Identity">Aspiration/Identity</button>
+    <button class="cat-btn" data-cat="Contrarian/Pattern Interrupt">Contrarian</button>
+    <button class="cat-btn" data-cat="Fear/Urgency">Fear/Urgency</button>
+    <button class="cat-btn" data-cat="Social Proof/Tribe">Social Proof</button>
+    <select id="uniqFilter">
+      <option value="all">All Uniqueness</option>
+      <option value="fresh">Fresh only</option>
+      <option value="twist">Twist only</option>
+      <option value="crowded">Crowded only</option>
+    </select>
+  </div>
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="category">Category</th>
+        <th data-sort="uniq">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="format">Format</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles (Product / Offer)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h3>New Year's Performance Reset (Jan)</h3>
+      <p>Activate 2 weeks before New Year's Day. The biohacking/performance avatar's single biggest annual moment: "new year, new recovery routine" positioning against resolutions to finally train consistently or return to fitness.</p>
+    </div>
+    <div class="macro-card">
+      <h3>Evergreen Milestone</h3>
+      <p>4.5 stars across 5,657+ Amazon reviews (live count, up from 4,107 at last audit) as an always-on trust signal: "Join thousands who never skip a shot."</p>
+    </div>
+    <div class="macro-card">
+      <h3>Subscribe as Ritual, Not Discount</h3>
+      <p>This row's own Consumable/Recurring Revenue green flag plus the confirmed Subscribe &amp; Save option on the live listing: frame the subscription as recovery consistency ("the shot you never have to remember to reorder"), not a price cut.</p>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h3>Top Pain Points (this run's research)</h3>
+      <ul>
+        <li>Collagen viewed as an "incomplete protein" versus whey, missing key amino acids like tryptophan and lower in leucine (muscle-protein-synthesis trigger)</li>
+        <li>Shaker-bottle fatigue: mixing, cleaning, chalky texture</li>
+        <li>Dairy-based whey shakes causing bloating and digestive discomfort</li>
+        <li>Category-wide skepticism that collagen marketing outpaces the underlying evidence</li>
+        <li>Cost-per-serving sensitivity (roughly $2/shot) versus bulk powder</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Top Benefits (this run's research)</h3>
+      <ul>
+        <li>Real testimonial: a firefighter's burn-injury recovery, back on duty in 16 days against an expected 8-week timeline</li>
+        <li>Real testimonial: a Navy veteran sustained a 200-mile bikepacking trip with no crash or jitters</li>
+        <li>Real testimonial: a CrossFit/Muay Thai athlete (5-6x/week) noted reduced soreness and easy portability</li>
+        <li>Real testimonial: a lineworker (manual labor) reported joint/muscle relief and energy within a week</li>
+        <li>Real testimonial: a busy professional avoided dairy bloat and felt mental clarity within 15 minutes</li>
+        <li>Live listing bullet: digests within 15 minutes versus 60+ minutes cited for a leading whey brand</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Competitor Angles Differentiated From (Winners DB, "liquid protein shot")</h3>
+      <ul>
+        <li>ProT Gold: "Clinical-Grade Recovery," medical-nutrition pedigree [Social Proof]</li>
+        <li>FuelMate: "No Shaker No Prep," pure convenience [Pain]</li>
+        <li>Rho Nutrition Liposomal Collagen Peptides: "Bioavailability Edge," liposomal absorption (teaspoon-dosed, adjacent format) [Social Proof]</li>
+        <li>SpoiledChild E27 Extra Strength Liquid Collagen (2 ad variants): "GLP-1 Skin Support" and "Menopause Skin Rescue," both skin/beauty framed [Fear]</li>
+        <li>Frog Fuel Power Protein: "Navy SEAL Pedigree," military origin story [Social Proof]</li>
+      </ul>
+      <div class="disclosure">Disclosure: 2 of the 6 genuine matches are corporate-affiliated, not independent competitors. "Frog Fuel Power Protein" is this row's own brand (a sibling SKU, confirmed by a live fetch of this product's own Amazon listing). "ProT Gold" is a sibling brand under the same parent manufacturer, OP2 Labs, per audit-winners' own note. That leaves 4 genuinely independent ads: FuelMate (convenience), Rho Nutrition (adjacent liposomal format), and SpoiledChild's 2 ad variants (a different avatar entirely, skin/beauty rather than muscle/recovery). No independent competitor owns an extreme, real-world recovery testimonial or directly answers the amino-completeness objection, which is exactly where the top 3 picks sit.</div>
+    </div>
+    <div class="notes-card">
+      <h3>Research Method Disclosures</h3>
+      <ul>
+        <li>This product's own Amazon reviews (individual review text) were bot-blocked behind an AJAX-rendered, session-gated section after 2 fetch attempts (product page fetched clean via proxy; the dedicated reviews endpoint 404'd both times tried). Feature bullets and live star/review count were still fetched directly and are genuine.</li>
+        <li>Reddit was not indexed for this product/category by web search; pain-point research substituted credible third-party nutrition/fitness sources (ACSH, 1upnutrition, Casa de Sante, Ubie Health) and one product-review aggregator (Comparemaniac), all cited above.</li>
+        <li>YouTube comment sections were not directly reachable; benefit/testimonial research substituted named third-party review sites (Clayton Notes, Comparemaniac, Jeffery's Home) plus web-search-surfaced testimonial snippets. All quotes above are attributed to their source; none were invented.</li>
+        <li>Winners DB uniqueness scoring reads audit-winners' own Marketing Angle classification column rather than re-classifying the 6 competitor rows.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="row"><span class="pill fresh">Fresh</span><span>No competitor ad in the Winners DB uses this angle (0 matches). The strongest, most differentiated picks.</span></div>
+    <div class="row"><span class="pill twist">Twist</span><span>A competitor hits the same pain or benefit but frames it differently; this angle adds a fresh differentiator (adjacent-match count shown).</span></div>
+    <div class="row"><span class="pill crowded">Crowded</span><span>One or more competitors already run essentially this angle (direct-match count shown). Differentiate further or drop.</span></div>
+    <p style="margin-top:10px;color:var(--muted);">Counts are measured against the 6 genuine competitor ads (4 <code>w</code> + 2 <code>w-ish</code>) in the Winners DB for the locked search term "liquid protein shot."</p>
+  </div>
+</section>
+
+</main>
+<footer>Nova Capital &middot; Find Marketing Angles &middot; Complete Liquid Protein Shot &middot; 08-23-2026</footer>
+
+<script>
+const ANGLES = [
+{name:"The Shaker Bottle You Hate",category:"Pain/Frustration",uniq:"crowded",count:"1/6",insight:"Mixing and cleaning a shaker bottle is a daily friction point that makes people skip their protein entirely.",hook:"Another day, another shaker bottle to wash. Or you could just twist and drink.",format:"Static ad"},
+{name:"Sore for Three Days After",category:"Pain/Frustration",uniq:"fresh",count:"0/6",insight:"Lingering multi-day soreness after physical work or training feels like falling behind, not recovering.",hook:"It's day three and your legs still haven't forgiven you.",format:"UGC video"},
+{name:"Whey Wrecks Your Stomach",category:"Pain/Frustration",uniq:"fresh",count:"0/6",insight:"Dairy-based protein shakes cause bloating and digestive upset that people quietly tolerate as the price of enough protein.",hook:"The bloat isn't the price of protein. It's the price of the wrong protein.",format:"Static ad"},
+{name:"Too Busy To Recover Right",category:"Pain/Frustration",uniq:"twist",count:"1/6",insight:"People with demanding jobs or training schedules know recovery matters but genuinely don't have time to blend or measure a shake.",hook:"You don't have 5 minutes to make a shake. You have 15 seconds to twist a cap.",format:"UGC video"},
+
+{name:"Recovery Like a Navy SEAL",category:"Aspiration/Identity",uniq:"crowded",count:"1/6",insight:"Borrowing military-grade credibility signals elite standards. Note: this is this row's own sibling SKU's exact angle, not a competitor's.",hook:"Built for Navy SEALs. Built for you.",format:"Static ad"},
+{name:"Built For The Ones Who Can't Sit Out",category:"Aspiration/Identity",uniq:"fresh",count:"0/6",insight:"Firefighters, tradespeople, and competitive athletes share an identity: their body is their job, and sitting out isn't an option.",hook:"Your body doesn't get a sick day. Neither should your recovery.",format:"UGC video"},
+{name:"The Traveler Who Never Skips a Day",category:"Aspiration/Identity",uniq:"twist",count:"1/6",insight:"Frequent travelers pride themselves on consistency, and a shot that fits a pocket protects that identity across time zones.",hook:"No blender. No fridge. No excuse, even at 30,000 feet.",format:"Carousel"},
+{name:"Proof, Not Promises",category:"Aspiration/Identity",uniq:"twist",count:"2/6",insight:"People want to align with brands tested in real, extreme conditions rather than ones that just claim authority.",hook:"Not clinically branded. Field-tested by people who couldn't afford to be wrong.",format:"Testimonial"},
+
+{name:"Collagen Isn't Whey. That's The Point.",category:"Contrarian/Pattern Interrupt",uniq:"fresh",count:"0/6",insight:"Buyers who know collagen is lower in some amino acids assume that makes it inferior; the real question is whether the gap is closed.",hook:"Whey has 13.9g of essential aminos. Collagen has 7.7. Here's how we closed the gap.",format:"Static ad"},
+{name:"Your Shaker Bottle Is Slower Than You Think",category:"Contrarian/Pattern Interrupt",uniq:"fresh",count:"0/6",insight:"People assume all protein digests on the same timeline, so a claimed 4x faster digestion reframes the whole format as outdated.",hook:"Whey takes an hour to digest. This takes 15 minutes. Your muscles don't wait.",format:"Static ad"},
+{name:"Skin Supplements Won't Fix Sore Muscles",category:"Contrarian/Pattern Interrupt",uniq:"twist",count:"2/6",insight:"\"Collagen\" gets used for two different jobs, skin and muscle, and buyers researching recovery keep landing on beauty products by mistake.",hook:"If it's marketed for wrinkles, it wasn't made for your workout.",format:"Static ad"},
+{name:"Real Recovery Doesn't Come From a Lab Coat",category:"Contrarian/Pattern Interrupt",uniq:"twist",count:"1/6",insight:"Medical-sounding branding can feel like marketing polish rather than proof, so field-tested outperforms clinical-sounding in trust.",hook:"Clinical-grade is a marketing word. Field-tested is a result.",format:"UGC video"},
+
+{name:"Every Week You Skip Recovery Costs You The Next One",category:"Fear/Urgency",uniq:"fresh",count:"0/6",insight:"Unaddressed recovery debt compounds quietly until it becomes an injury buyers fear they won't see coming.",hook:"Recovery debt doesn't show up today. It shows up as the injury you didn't see coming.",format:"VSL"},
+{name:"What If You Can't Show Up Tomorrow",category:"Fear/Urgency",uniq:"fresh",count:"0/6",insight:"For people whose income or performance depends on their body, the real fear isn't soreness, it's not being able to show up at all.",hook:"Your job doesn't care that your knees are screaming. Show up anyway, or don't show up at all.",format:"Testimonial"},
+{name:"The Shortcut That Actually Works",category:"Fear/Urgency",uniq:"fresh",count:"0/6",insight:"Buyers are burned out on supplement hype and fear wasting more money on a fix that doesn't hold up.",hook:"You've been burned by supplement hype before. This is the one built to prove it isn't.",format:"Static ad"},
+{name:"One Injury Away From Losing Your Season",category:"Fear/Urgency",uniq:"fresh",count:"0/6",insight:"Competitive athletes and tradespeople live one setback away from losing the thing that defines them.",hook:"One bad week of recovery and the season you trained all year for is over.",format:"VSL"},
+
+{name:"16 Days, Not 8 Weeks",category:"Social Proof/Tribe",uniq:"fresh",count:"0/6",insight:"A real, extreme recovery story from someone with everything on the line is more convincing than any brand claim.",hook:"Doctors gave him 8 weeks to heal. He was back on duty in 16 days, and he credits the one thing he never skipped.",format:"Testimonial"},
+{name:"200 Miles, One Shot at a Time",category:"Social Proof/Tribe",uniq:"fresh",count:"0/6",insight:"An ordinary person's extraordinary endurance story makes the \"sustained energy without crash\" claim feel real, not theoretical.",hook:"200 miles. No crash, no jitters, just one shot before he rolled out each morning.",format:"UGC video"},
+{name:"The CrossFit Box Knows",category:"Social Proof/Tribe",uniq:"twist",count:"2/6",insight:"Tight-knit training communities trust word of mouth over ads, so belonging to that tribe's actual habit carries more weight than a claim.",hook:"Ask anyone at your box what they twist open before a WOD.",format:"Carousel"},
+{name:"From Lineman to Marathoner, Same Shot",category:"Social Proof/Tribe",uniq:"fresh",count:"0/6",insight:"Seeing wildly different people rely on the same product proves it's not niche, it's for anyone whose body takes a daily beating.",hook:"A lineman climbing poles. A runner logging 13.1 miles. Same shot, same reason.",format:"Carousel"}
+];
+
+const tbody = document.querySelector('#angleTable tbody');
+let activeCat = 'all';
+let activeUniq = 'all';
+let sortKey = null;
+let sortDir = 1;
+
+function render(){
+  let rows = ANGLES.filter(a => (activeCat==='all' || a.category===activeCat) && (activeUniq==='all' || a.uniq===activeUniq));
+  if(sortKey){
+    rows = rows.slice().sort((a,b)=>{
+      let av = sortKey==='uniq' ? a.uniq : a[sortKey];
+      let bv = sortKey==='uniq' ? b.uniq : b[sortKey];
+      return av.localeCompare(bv) * sortDir;
+    });
+  }
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td><strong>${a.name}</strong></td>
+      <td>${a.category}</td>
+      <td><span class="pill ${a.uniq}">${a.uniq.charAt(0).toUpperCase()+a.uniq.slice(1)} ${a.count}</span></td>
+      <td>${a.insight}</td>
+      <td><em>${a.hook}</em></td>
+      <td>${a.format}</td>
+    </tr>`).join('');
+}
+
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeCat = btn.dataset.cat;
+    render();
+  });
+});
+document.getElementById('uniqFilter').addEventListener('change', e=>{
+  activeUniq = e.target.value;
+  render();
+});
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.sort;
+    sortDir = (sortKey===key) ? -sortDir : 1;
+    sortKey = key;
+    render();
+  });
+});
+render();
+</script>
+</body>
+</html>

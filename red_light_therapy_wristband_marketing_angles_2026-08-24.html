@@ -1,0 +1,339 @@
+<title>Red Light Therapy Wristband, Marketing Angles</title>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bar: #1e293b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --sub: #64748b;
+    --border: #e2e8f0;
+    --fresh: #16a34a;
+    --fresh-bg: #dcfce7;
+    --twist: #d97706;
+    --twist-bg: #fef3c7;
+    --crowded: #dc2626;
+    --crowded-bg: #fee2e2;
+    --accent: #0ea5e9;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { height:6px; background: linear-gradient(90deg,#1e293b,#0ea5e9); }
+  header.hero { background:#fff; padding:28px 32px; border-bottom:1px solid var(--border); }
+  header.hero h1 { margin:0 0 6px; font-size:1.7rem; }
+  header.hero .subtitle { color:var(--sub); font-size:1rem; margin-bottom:4px; }
+  header.hero .date { color:var(--sub); font-size:0.85rem; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
+  section { padding:28px 0; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:8px; }
+  .stat-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+  .stat-card h3 { margin:0 0 6px; font-size:0.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); }
+  .stat-card p { margin:0; font-size:0.98rem; line-height:1.5; }
+  .stat-card.objection { border-left:4px solid var(--crowded); }
+  .stat-card.transform { border-left:4px solid var(--accent); }
+  .stat-card.avatar { border-left:4px solid var(--fresh); }
+  .stat-card.founder { border-left:4px solid var(--twist); }
+  h2.section-title { font-size:1.25rem; margin:0 0 4px; }
+  .section-sub { color:var(--sub); font-size:0.88rem; margin-bottom:18px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:999px; font-size:0.74rem; font-weight:600; letter-spacing:.02em; }
+  .badge.fresh { background:var(--fresh-bg); color:var(--fresh); }
+  .badge.twist { background:var(--twist-bg); color:var(--twist); }
+  .badge.crowded { background:var(--crowded-bg); color:var(--crowded); }
+  .top3-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; }
+  .top-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; position:relative; overflow:hidden; }
+  .top-card::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--accent); }
+  .top-card .rank { font-size:0.74rem; color:var(--sub); font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .top-card h3 { margin:6px 0 4px; font-size:1.2rem; }
+  .top-card .cat { font-size:0.8rem; color:var(--sub); margin-bottom:10px; }
+  .top-card .insight { font-size:0.92rem; margin:10px 0; }
+  .top-card .hook { background:#f1f5f9; border-radius:8px; padding:10px 12px; font-size:0.88rem; font-style:italic; margin:10px 0; }
+  .top-card .why { font-size:0.85rem; color:var(--sub); margin:10px 0; }
+  .top-card .format { font-size:0.78rem; color:var(--sub); }
+  .micro { margin-top:12px; border-top:1px solid var(--border); padding-top:10px; }
+  .micro h4 { font-size:0.75rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); margin:0 0 8px; }
+  .micro-hook { font-size:0.84rem; margin-bottom:6px; }
+  .micro-hook b { color:var(--accent); font-size:0.72rem; text-transform:uppercase; margin-right:4px; }
+  .controls { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .controls select, .controls input { padding:7px 10px; border:1px solid var(--border); border-radius:8px; font-size:0.85rem; background:#fff; }
+  table.angles { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  table.angles th { text-align:left; font-size:0.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); background:#f1f5f9; padding:10px 12px; cursor:pointer; user-select:none; }
+  table.angles td { padding:10px 12px; font-size:0.86rem; border-top:1px solid var(--border); vertical-align:top; }
+  table.angles tr:hover td { background:#f8fafc; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; margin-top:16px; font-size:0.82rem; color:var(--sub); }
+  .legend span.dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; }
+  .dot.fresh { background:var(--fresh); }
+  .dot.twist { background:var(--twist); }
+  .dot.crowded { background:var(--crowded); }
+  .macro-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+  .macro-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+  .macro-card h4 { margin:0 0 6px; font-size:0.95rem; }
+  .macro-card p { margin:0; font-size:0.84rem; color:var(--sub); }
+  .notes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+  .notes-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+  .notes-card h4 { margin:0 0 10px; font-size:0.95rem; }
+  .notes-card ul { margin:0; padding-left:18px; font-size:0.85rem; line-height:1.6; }
+  .notes-card ul li { margin-bottom:4px; }
+  .comp-row { font-size:0.83rem; margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  .comp-row:last-child { border-bottom:none; }
+  .comp-row .adv { font-weight:600; }
+  .comp-row .tag { font-size:0.72rem; color:var(--sub); }
+  footer { text-align:center; color:var(--sub); font-size:0.78rem; padding:24px 0 40px; }
+</style>
+
+<div class="topbar"></div>
+<header class="hero">
+  <h1>Red Light Therapy Wristband, Marketing Angles</h1>
+  <div class="subtitle">Avatar: women 35 to 65 with chronic wrist/hand pain (carpal tunnel, arthritis, repetitive strain) who already tried a splint and OTC pills, and are skeptical of red light gadgets after being burned by hype</div>
+  <div class="date">Report date: 08-24-2026</div>
+</header>
+
+<div class="wrap">
+
+<section id="founder-note">
+  <div class="stat-card founder">
+    <h3>Founder Override</h3>
+    <p>This row's AI Verdict is <b>KILL: QC, Social Media</b> (the product's own Amazon listing carries a 3.1&#9733; / 56-review QC fail, and Meta Ad Ws=1 / TikTok Ws=0 misses the social-proof bar). The founder explicitly requested marketing angles anyway. Angles below are built on the product's real category strengths (dual-wavelength LED, heat + vibration, a genuine price/value gap versus premium competitors) rather than on this specific listing's weak review count, and every angle is honest about that gap rather than pretending it away.</p>
+  </div>
+</section>
+
+<section id="summary">
+  <h2 class="section-title">Summary</h2>
+  <div class="section-sub">The avatar, the transformation, and the objection every angle has to answer.</div>
+  <div class="summary-grid">
+    <div class="stat-card avatar">
+      <h3>Avatar</h3>
+      <p>Women 35 to 65 (Age Demo 25-65+, Female-dominated per the Product DB row) living with chronic wrist or hand pain from carpal tunnel, arthritis, or repetitive strain (office typing, assembly work, crafting, or playing an instrument). Already tried a wrist splint (relief, but it restricts the hand she needs for work or hobbies) and OTC pain relievers (temporary at best). Burned before by cheap red light gadgets that promised a lot and changed nothing, so she is specifically skeptical of this category, not just price-sensitive. A meaningful secondary buyer is her adult daughter or spouse, shopping for a parent's or partner's hands.</p>
+    </div>
+    <div class="stat-card transform">
+      <h3>Core Transformation</h3>
+      <p>From hands that go numb mid-task, wake her up at night, and force a choice between a restrictive splint and a temporary pill, to 15 to 20 minutes of at-home light, heat, and vibration therapy that keeps her hands working for the job, the craft, or the instrument she doesn't want to give up.</p>
+    </div>
+    <div class="stat-card objection">
+      <h3>Primary Objection</h3>
+      <p>"I've tried a red light gadget (or heard the hype) before and nothing changed, so how is this one any different from an underpowered toy."</p>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2 class="section-title">Top 3 Angles</h2>
+  <div class="section-sub">Most emotionally charged and most differentiated from the 2 competitor ads captured in the Winners DB for "red light therapy glove."</div>
+  <div class="top3-grid">
+
+    <div class="top-card">
+      <div class="rank">Rank 1 &middot; Contrarian / Pattern Interrupt</div>
+      <h3>Most Red Light Gadgets Are Underpowered Junk</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/2</span></div>
+      <p class="insight"><b>Core insight:</b> real skepticism about this category centers on cheap, single-wavelength devices that do nothing; naming that failure mode directly, then pointing to a dual-wavelength (660nm + 850nm) plus heat and vibration spec, disarms the objection before it's spoken.</p>
+      <p class="hook">"Most red light gadgets under $50 don't have enough power to do anything. This one runs two clinical wavelengths, plus heat and vibration, for less than a copay."</p>
+      <p class="why"><b>Why it wins:</b> directly answers the PRIMARY OBJECTION instead of ignoring it, and neither captured competitor ad (Maysama, Kovaria) addresses category skepticism at all, both simply assert their own device works.</p>
+      <p class="format">Best format: static / spec comparison carousel</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Problem-first</b>Tired of red light gadgets that promise the world and change nothing?</div>
+        <div class="micro-hook"><b>Contra</b>Stop buying single-wavelength red light toys. If it doesn't say two wavelengths plus heat, it's not doing enough.</div>
+        <div class="micro-hook"><b>Curiosity</b>There's one spec that separates a real red light therapy device from a $20 toy. Most people never check it.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">Rank 2 &middot; Fear / Urgency</div>
+      <h3>The Job You Can't Do With Numb Hands</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/2</span></div>
+      <p class="insight"><b>Core insight:</b> for repetitive-motion workers (assembly, typing, musicians), hand pain is not abstract discomfort, it's a direct threat to the work itself, a sharper and more specific fear than generic "arthritis pain" messaging.</p>
+      <p class="hook">"Your hands go numb by 2pm and you still have six hours of work left. Tomorrow it happens again."</p>
+      <p class="why"><b>Why it wins:</b> reframes the pain as a career/income threat, not a wellness inconvenience; neither competitor ad targets working hands or a workday scenario, both use generic pain or aging language.</p>
+      <p class="format">Best format: UGC testimonial video</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Problem-first</b>Your hands go numb by 2pm and you still have six hours of work left.</div>
+        <div class="micro-hook"><b>Result-first</b>I went from dropping my coffee mug every morning to a full pain-free workday in three weeks.</div>
+        <div class="micro-hook"><b>Social proof</b>An assembly-line worker told us she almost asked for a transfer over her wrist pain. She tried this on her 15-minute breaks instead.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">Rank 3 &middot; Contrarian / Pattern Interrupt</div>
+      <h3>Why Pay $499 For One Wavelength</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/2</span></div>
+      <p class="insight"><b>Core insight:</b> a real competitor in this exact search term (Maysama) sells a single-wavelength LED glove for $499; this device runs two wavelengths plus heat and vibration for $59.95, a concrete, verifiable value contrast neither ad in the category makes.</p>
+      <p class="hook">"A $499 red light glove uses one wavelength. This uses two, plus heat and vibration, for $59.95."</p>
+      <p class="why"><b>Why it wins:</b> grounded in real captured competitor pricing (not invented), gives a cold scroller a concrete number to react to, and no ad in the captured set makes a price or value comparison at all.</p>
+      <p class="format">Best format: static comparison / carousel</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Curiosity</b>One of the best-known red light hand devices costs $499. Here's what it actually does that a $59.95 device doesn't.</div>
+        <div class="micro-hook"><b>Contra</b>Don't pay $499 for a name. Pay for two wavelengths, heat, and vibration.</div>
+        <div class="micro-hook"><b>Result-first</b>Same class of dual-wavelength light therapy the premium brands use, for less than a dinner out.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2 class="section-title">All 20 Angles</h2>
+  <div class="section-sub">Filter by category or uniqueness, or click a column header to sort.</div>
+  <div class="controls">
+    <select id="catFilter">
+      <option value="">All Categories</option>
+      <option>Pain / Frustration</option>
+      <option>Aspiration / Identity</option>
+      <option>Contrarian / Pattern Interrupt</option>
+      <option>Fear / Urgency</option>
+      <option>Social Proof / Tribe</option>
+    </select>
+    <select id="uniqFilter">
+      <option value="">All Uniqueness</option>
+      <option>Fresh</option>
+      <option>Twist</option>
+      <option>Crowded</option>
+    </select>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="angles" id="angleTable">
+    <thead>
+      <tr>
+        <th data-key="name">Angle</th>
+        <th data-key="cat">Category</th>
+        <th data-key="uniq">Uniqueness</th>
+        <th data-key="insight">Core Insight</th>
+        <th data-key="hook">Hook</th>
+        <th data-key="format">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-cat="Pain / Frustration" data-uniq="Twist"><td>The 3am Wrist Wake-Up</td><td>Pain / Frustration</td><td><span class="badge twist">Twist 1/2</span></td><td>Nighttime numbness/pain disrupts sleep; a splint alone doesn't stop it since sleep position still flexes the wrist.</td><td>It's not the pain at your desk that gets you. It's waking up at 3am because your wrist won't let you sleep.</td><td>Testimonial / static</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Fresh"><td>Jar Lids You Can't Open Anymore</td><td>Pain / Frustration</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Grip-strength loss turns small daily tasks into a daily reminder of the problem.</td><td>You used to twist a jar lid without thinking. Now you hand it to someone else.</td><td>UGC video</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Fresh"><td>Typing Through The Burn</td><td>Pain / Frustration</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Office workers push through wrist pain to hit deadlines instead of stopping.</td><td>Your wrist has been burning since lunch. You still have three more hours of typing.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Fresh"><td>The Splint That Traps You</td><td>Pain / Frustration</td><td><span class="badge fresh">Fresh 0/2</span></td><td>The standard fix costs you the use of your hand while you wear it, so relief and function trade off against each other.</td><td>The splint helps the pain. It also means you can't cook, type, or play for as long as you're wearing it.</td><td>UGC / before-after</td></tr>
+
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>Hands That Still Work For You</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 1/2</span></td><td>Functional identity (keep doing the job or craft), a different lever than a competitor's aging/vanity framing.</td><td>This isn't about how your hands look. It's about what they can still do.</td><td>UGC testimonial</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>Give Grandma Her Hands Back</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 1/2</span></td><td>Gifting/caregiving frame on the same "aging hands" topic a competitor uses, but functional rather than vanity-driven.</td><td>She stopped knitting because her hands hurt too much. This is the gift that gets her back to it.</td><td>UGC testimonial video</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Fresh"><td>The Musician Who Didn't Quit</td><td>Aspiration / Identity</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Musicians, a high-motivation, hands-as-livelihood niche neither competitor ad speaks to.</td><td>Every guitarist knows a player who quit because of their hands. This is how some of them didn't.</td><td>UGC video / testimonial</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>Pain Management On Your Terms</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 1/2</span></td><td>Independence from pills and appointments, same drug-free lever a competitor uses, framed as control rather than as a product claim.</td><td>You don't need a prescription or an appointment. You need 15 minutes and an outlet.</td><td>Static</td></tr>
+
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>Why Pay $499 For One Wavelength</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Direct value contrast against a real $499 captured competitor ad running the same search term.</td><td>A $499 red light glove uses one wavelength. This uses two, plus heat and vibration, for $59.95.</td><td>Static comparison / carousel</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>Your Splint Is Treating The Wrong Thing</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Splints immobilize, they don't restore circulation, a contrarian reframe of the default first-line fix.</td><td>A splint holds your wrist still. It doesn't do anything about what's actually causing the pain underneath it.</td><td>Static</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>Most Red Light Gadgets Are Underpowered Junk</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Names the category's real failure mode (underpowered, single-wavelength devices) before the customer can raise it.</td><td>Most red light gadgets under $50 don't have enough power to do anything. This one does.</td><td>Static / spec comparison carousel</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>Stop Waiting For The Doctor To Say It's Bad Enough</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Challenges the wait-and-see instinct that keeps people managing pain with nothing instead of trying an early, low-risk step.</td><td>You don't need a diagnosis to start dealing with the pain. You need to stop waiting.</td><td>Static / VSL</td></tr>
+
+      <tr data-cat="Fear / Urgency" data-uniq="Twist"><td>Every Flare-Up Is A Warning Shot</td><td>Fear / Urgency</td><td><span class="badge twist">Twist 1/2</span></td><td>Progression framing, a sharper edge on the chronic-pain undertone a competitor ad already carries.</td><td>Every flare-up isn't random. It's your wrist telling you it's getting worse, not better.</td><td>Static</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Fresh"><td>The Job You Can't Do With Numb Hands</td><td>Fear / Urgency</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Reframes hand pain as a career/income threat, not a wellness inconvenience.</td><td>Your hands go numb by 2pm and you still have six hours of work left.</td><td>UGC testimonial video</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Fresh"><td>What A Missed Season Feels Like</td><td>Fear / Urgency</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Hobbyists (musicians, crafters, golfers) losing an entire season of the activity they love to untreated pain.</td><td>Last season you skipped the workshop table entirely. Don't let this one go the same way.</td><td>Video / testimonial</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Fresh"><td>Before It's Surgery</td><td>Fear / Urgency</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Names the feared endpoint (carpal tunnel surgery) as a reason to act early. Compliance-sensitive: frame as "before it gets to that point," never as preventing, treating, or curing a diagnosed condition.</td><td>Nobody wants to hear "it might be time for surgery." Most people never even tried this first.</td><td>Static</td></tr>
+
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>The Skeptic's 2-Week Log</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/2</span></td><td>A doubter who tracked daily use and changed their mind, addressing the "gradual, not overnight" honesty gap in the category.</td><td>I didn't believe it would do anything. I used it anyway, every night, for two weeks. Here's what changed.</td><td>UGC testimonial video</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>What Assembly-Line Workers Are Using On Break</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/2</span></td><td>Blue-collar repetitive-strain tribe, untouched by either captured competitor ad.</td><td>On the line, wrist pain isn't optional to ignore. This is what a few of them started doing on break.</td><td>UGC video</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>Musicians Are Quietly Switching To This</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/2</span></td><td>A specific, high-motivation niche community, real and untapped, per this row's own strategic notes.</td><td>Guitarists, pianists, and violinists don't talk about wrist pain publicly. In their own groups, they do.</td><td>UGC / testimonial</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>The Office Worker's Desk-Drawer Secret</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/2</span></td><td>White-collar typist tribe, low-key adoption framing rather than a public testimonial.</td><td>It's not on anyone's desk. It's in the drawer, ready for the moment their wrist starts to ache.</td><td>Static / carousel</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend">
+    <div><span class="dot fresh"></span><b>Fresh</b>: 0 of the 2 competitor ads captured for this term use this angle.</div>
+    <div><span class="dot twist"></span><b>Twist</b>: a competitor hits the same pain or benefit, this angle frames it differently.</div>
+    <div><span class="dot crowded"></span><b>Crowded</b>: one or more competitors already run essentially this angle.</div>
+    <div>Denominator = 2 competitor ads captured in the Winners DB for "red light therapy glove" (1 confirmed exact match "w", 1 "w-ish" same-utility match; see Research Notes). TikTok Winners = 0 rows for this term, not counted.</div>
+  </div>
+</section>
+
+<section id="macro">
+  <h2 class="section-title">Macro-Angles</h2>
+  <div class="section-sub">Offer and seasonal angles that genuinely fit this product.</div>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Fall / Winter Seasonal</h4>
+      <p>Cold weather is a well-documented trigger for joint and arthritis flare-ups. Activate 2 weeks before the first seasonal cold snap.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Gift Occasions</h4>
+      <p>Mother's Day and Christmas. This row's Gender field is Female-dominated and its own strategic notes flag gifting (an adult child buying for a parent's arthritis, or a spouse buying for a partner's wrist strain) as a real secondary buyer stream. Frame it functionally/caregiving (Give Grandma Her Hands Back), not vanity, since the vanity/aging-hands lever is already claimed by a competitor ad (Maysama).</p>
+    </div>
+    <div class="macro-card">
+      <h4>Evergreen Milestone</h4>
+      <p>Not yet available: no verified units-sold or review-count figure exists for this SKU that would support an honest milestone claim (the listing's own count, 56 reviews, is the QC-failing figure). Revisit once a real number exists.</p>
+    </div>
+  </div>
+  <p style="font-size:0.82rem;color:var(--sub);margin-top:14px;">Not used: New Product Launch and Restock Event (no launch/restock scheduled this cycle); Handmade/Jewelry product-specific angles (do not fit an electronic wellness device).</p>
+</section>
+
+<section id="notes">
+  <h2 class="section-title">Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Nighttime pain/numbness disrupts sleep; a wrist splint only partially helps since sleep position still flexes the joint (Reddit r/carpaltunnel and related threads).</li>
+        <li>Loss of grip strength on daily tasks (jars, grasping, fine motor work); chronic cases show thumb-base muscle atrophy (Reddit, cross-checked against a published carpal tunnel medical overview).</li>
+        <li>Repetitive-motion jobs (assembly, typing, music) trigger and worsen symptoms; flare-ups can stop core job tasks entirely (Reddit).</li>
+        <li>Splints provide relief but restrict movement, cutting into the work and hobbies people still want to do (Reddit failed-treatment reports).</li>
+        <li>Real, specific skepticism about red light therapy: burned before by "cure it in a week" marketing on cheap sub-$50 devices that reviewers say "did nothing" (Reddit and an aggregated Reddit-scam discussion).</li>
+        <li>This SKU's own Amazon rating (3.1&#9733; / 56 reviews, the row's QC-fail figure) trails the category's better-regarded AliExpress top seller (4.5&#9733; / 12 reviews), a live proof gap the copy routes around with category-level credibility (dual-wavelength spec, FDA-cleared-class comparisons) rather than this listing's own star rating.</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Dual-wavelength (660nm red + 850nm near-infrared) LED is the credible/effective spec cited across reviewer aggregators and this product's own AliExpress top-seller listing (700 orders, marketed for tenosynovitis and office-worker wrist pain).</li>
+        <li>Heat + vibration massage combined with LED is a genuine differentiator: neither captured competitor ad (Maysama glove, Kovaria wrap) mentions a vibration function.</li>
+        <li>Reviewer/aggregator consensus: noticeable stiffness reduction reported after roughly 2 weeks of consistent daily use, not instantly, an honest expectation-setter rather than an overnight-miracle claim.</li>
+        <li>Wireless, rechargeable, with an auto shutoff (~20 min), low-friction to use while working, watching TV, or at a desk.</li>
+        <li>Musicians, surgeons, and other hands-as-livelihood professionals are a real, distinct, high-motivation buyer segment this row's own strategic notes flag as untapped, and the research confirms repetitive strain is a genuine trigger for that group.</li>
+      </ul>
+    </div>
+    <div class="notes-card" style="grid-column:1/-1;">
+      <h4>Competitor Angles in Market (Winners DB, search term "red light therapy glove", 2 ads captured)</h4>
+      <div class="comp-row"><span class="adv">Maysama</span> (w, confirmed exact match) <span class="tag">Aspiration</span> &middot; "Ageless Hands": positions aging hands as the giveaway of age, the LED glove as the youthful fix. $499, glove form, video ad, 103 days running.</div>
+      <div class="comp-row"><span class="adv">Kovaria (TheraWrap)</span> (w-ish, same utility, wrap not glove) <span class="tag">Pain</span> &middot; "Chronic Hand Pain": names burning arthritis/carpal tunnel pain that steals sleep, "Triple Therapy" light restoring circulation, drug-free/natural framing, 90-day money-back guarantee. Wrap form, 84 days running.</div>
+      <p style="font-size:0.8rem;color:var(--sub);margin-top:10px;">Both captured ads are light-only positioning (no vibration mentioned in either ad copy), and both skew premium-adjacent. Neither addresses category skepticism about underpowered devices, neither makes a price/value comparison, and neither speaks to working hands or a career-identity angle. The gifting/aging-hands topic is already claimed by Maysama on a vanity lever, so this row's gifting angle (Give Grandma Her Hands Back) leans caregiving/functional instead, scored Twist rather than Fresh for that reason.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>Red Light Therapy Wristband, Marketing Angles &middot; Find Marketing Angles agent &middot; 08-24-2026 &middot; Founder override, AI Verdict KILL: QC, Social Media</footer>
+
+<script>
+(function(){
+  var table = document.getElementById('angleTable');
+  var tbody = table.querySelector('tbody');
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+  var catSel = document.getElementById('catFilter');
+  var uniqSel = document.getElementById('uniqFilter');
+
+  function applyFilter(){
+    var c = catSel.value, u = uniqSel.value;
+    rows.forEach(function(r){
+      var show = (!c || r.getAttribute('data-cat') === c) && (!u || r.getAttribute('data-uniq') === u);
+      r.style.display = show ? '' : 'none';
+    });
+  }
+  catSel.addEventListener('change', applyFilter);
+  uniqSel.addEventListener('change', applyFilter);
+
+  var uniqRank = { 'Fresh': 0, 'Twist': 1, 'Crowded': 2 };
+  table.querySelectorAll('th').forEach(function(th, idx){
+    var dir = 1;
+    th.addEventListener('click', function(){
+      dir *= -1;
+      var key = th.getAttribute('data-key');
+      rows.sort(function(a, b){
+        var av, bv;
+        if (key === 'uniq') {
+          av = uniqRank[a.getAttribute('data-uniq')];
+          bv = uniqRank[b.getAttribute('data-uniq')];
+        } else {
+          av = a.children[idx].textContent.trim().toLowerCase();
+          bv = b.children[idx].textContent.trim().toLowerCase();
+        }
+        if (av < bv) return -1 * dir;
+        if (av > bv) return 1 * dir;
+        return 0;
+      });
+      rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+})();
+</script>

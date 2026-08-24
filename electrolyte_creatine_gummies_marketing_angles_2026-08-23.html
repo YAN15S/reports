@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Electrolyte Creatine Gummies — Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ink:#1b2430; --sub:#5b6672; --line:#e4e8ec; --bg:#f6f7f9; --card:#ffffff;
+    --accent:#2f3b52; --fresh:#1f8a52; --fresh-bg:#e6f5ec; --twist:#b5750a; --twist-bg:#fdf1dd;
+    --crowded:#b0332e; --crowded-bg:#fbe6e5;
+    --pain:#8a2b2b; --asp:#1b5fa8; --con:#6a3fa0; --fear:#a1461f; --social:#1c7a6d;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .accent-bar{height:6px;background:linear-gradient(90deg,#2f3b52,#4a5a7a);}
+  header{background:#fff;border-bottom:1px solid var(--line);padding:28px 32px 22px;}
+  header h1{margin:0 0 6px;font-size:26px;letter-spacing:-0.01em;}
+  header .subtitle{color:var(--sub);font-size:15px;margin-bottom:4px;}
+  header .date{color:var(--sub);font-size:13px;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px 60px;}
+  .summary{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 26px;margin:26px 0;}
+  .summary h2{margin:0 0 14px;font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);}
+  .summary .row{display:flex;gap:28px;flex-wrap:wrap;}
+  .summary .cell{flex:1;min-width:240px;}
+  .summary .cell .k{font-size:12px;color:var(--sub);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px;}
+  .summary .cell .v{font-size:15px;line-height:1.5;}
+  .obj{background:var(--fresh-bg);border-left:4px solid var(--fresh);padding:12px 16px;border-radius:6px;font-size:15px;line-height:1.5;}
+  section{margin:38px 0;}
+  section > h2{font-size:19px;margin:0 0 16px;}
+  .cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .angle-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;position:relative;overflow:hidden;}
+  .angle-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;}
+  .angle-card.cat-Pain::before{background:var(--pain);}
+  .angle-card.cat-Aspiration::before{background:var(--asp);}
+  .angle-card.cat-Contrarian::before{background:var(--con);}
+  .angle-card.cat-Fear::before{background:var(--fear);}
+  .angle-card.cat-Social::before{background:var(--social);}
+  .rank{display:inline-block;font-size:12px;font-weight:700;color:#fff;background:var(--accent);border-radius:20px;padding:2px 10px;margin-bottom:10px;}
+  .angle-card h3{margin:0 0 4px;font-size:18px;}
+  .cat-label{font-size:12px;color:var(--sub);margin-bottom:10px;}
+  .badge{display:inline-block;font-size:12px;font-weight:600;border-radius:20px;padding:3px 10px;margin-bottom:12px;}
+  .badge.Fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.Twist{background:var(--twist-bg);color:var(--twist);}
+  .badge.Crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .angle-card p{font-size:14px;line-height:1.55;margin:8px 0;}
+  .angle-card .label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--sub);margin:12px 0 3px;}
+  .hook{font-style:italic;background:#f6f7f9;border-radius:6px;padding:10px 12px;font-size:13.5px;}
+  .micro{list-style:none;margin:6px 0 0;padding:0;font-size:13px;}
+  .micro li{padding:6px 0;border-top:1px solid var(--line);}
+  .micro li:first-child{border-top:none;}
+  .micro b{color:var(--accent);text-transform:capitalize;}
+  .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center;}
+  .controls button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font-size:13px;cursor:pointer;color:var(--ink);}
+  .controls button.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+  .controls select{border:1px solid var(--line);border-radius:20px;padding:6px 12px;font-size:13px;background:#fff;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:13.5px;}
+  thead th{text-align:left;background:#eef0f3;padding:10px 12px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);cursor:pointer;user-select:none;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  tbody tr:hover{background:#fafbfc;}
+  .pill{display:inline-block;font-size:11px;font-weight:600;border-radius:14px;padding:2px 9px;}
+  .pill.Fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .pill.Twist{background:var(--twist-bg);color:var(--twist);}
+  .pill.Crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .catpill{font-size:11px;color:var(--sub);}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .macro-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .macro-card h4{margin:0 0 6px;font-size:15px;}
+  .macro-card .tag{font-size:11px;color:#fff;background:var(--accent);border-radius:12px;padding:2px 9px;display:inline-block;margin-bottom:8px;}
+  .macro-card p{font-size:13.5px;line-height:1.5;margin:0;color:#333;}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .notes-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;}
+  .notes-card h4{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);}
+  .notes-card ul{margin:0;padding-left:18px;font-size:13.5px;line-height:1.6;}
+  .notes-card li{margin-bottom:8px;}
+  .src{color:var(--sub);font-size:11.5px;}
+  .comp-table td, .comp-table th{font-size:13px;}
+  .legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:13.5px;line-height:1.6;}
+  .legend b.Fresh{color:var(--fresh);} .legend b.Twist{color:var(--twist);} .legend b.Crowded{color:var(--crowded);}
+  footer{color:var(--sub);font-size:12px;text-align:center;padding:20px;}
+</style>
+</head>
+<body>
+<div class="accent-bar"></div>
+<header>
+  <h1>Electrolyte Creatine Gummies — Marketing Angles</h1>
+  <div class="subtitle">Active, health-optimizing adult (18-60, unisex) juggling separate creatine + electrolyte supplements, unsure the convenient format actually delivers a real dose</div>
+  <div class="date">Report date: August 23, 2026</div>
+</header>
+
+<div class="wrap">
+
+<section class="summary">
+  <h2>Summary</h2>
+  <div class="row">
+    <div class="cell">
+      <div class="k">Avatar</div>
+      <div class="v">18-60, unisex, active health-optimizer in the Biohacking &amp; Longevity niche. Already takes (or should take) both creatine and electrolytes but runs them as two separate powders: a shaker bottle for creatine, a mix packet or drink for electrolytes. Price-aware, taste-sensitive, and increasingly skeptical of gummy supplements after hearing that many creatine gummy brands under-dose the label claim.</div>
+    </div>
+    <div class="cell">
+      <div class="k">Core Transformation</div>
+      <div class="v"><b>Before:</b> two separate supplements, a daily mixing ritual, inconsistent taste, and quiet doubt about whether the "easy" gummy format is really dosed right. <b>After:</b> one gummy that verifiably delivers both real creatine and real electrolytes, no shaker, no chalky taste, no guessing.</div>
+    </div>
+  </div>
+  <div class="k" style="margin-top:18px;">Primary Objection</div>
+  <div class="obj">"Is this gummy actually dosed with real creatine and electrolytes, or is it a candy-coated placebo like the brands I've read got called out for under-dosing?"</div>
+</section>
+
+<section>
+  <h2>Top 3 Angles</h2>
+  <div class="cards3">
+
+    <div class="angle-card cat-Contrarian">
+      <span class="rank">#1</span>
+      <h3>Your Creatine Powder Is the Placebo</h3>
+      <div class="cat-label">Contrarian / Pattern Interrupt</div>
+      <span class="badge Fresh">Fresh 0/5</span>
+      <p><b>Core insight:</b> Multiple creatine gummy brands have been called out for shipping doses far below the label claim, so the format itself carries a trust deficit this product can resolve by proving its dose upfront.</p>
+      <div class="label">Sample Hook</div>
+      <div class="hook">"Reports keep surfacing that most creatine gummies barely contain any real creatine. Here's how to check yours actually works before you waste another month training on a placebo."</div>
+      <div class="label">Best Format</div><p>Static / carousel (ingredient panel + third-party test callout) or UGC explainer video</p>
+      <div class="label">Why It Wins</div>
+      <p>Directly names the single biggest objection this run's research surfaced (documented creatine-gummy dosage-fraud complaints), and none of the 5 winning competitor ads for this term even sell a creatine product, let alone address dosing trust. It pattern-interrupts the "powder = trustworthy, gummy = weak" assumption head-on.</p>
+      <div class="label">Micro Hooks</div>
+      <ul class="micro">
+        <li><b>curiosity:</b> "Why do lawsuits keep hitting creatine gummy brands? (Hint: it's not the gummy part.)"</li>
+        <li><b>problem-first:</b> "You've been training hard for weeks and still don't feel stronger. Maybe it's not you. Maybe your gummy never had real creatine to begin with."</li>
+        <li><b>contra:</b> "Stop assuming 'gummy' means 'weaker dose.' Check the mg per serving before you buy another bottle."</li>
+      </ul>
+    </div>
+
+    <div class="angle-card cat-Fear">
+      <span class="rank">#2</span>
+      <h3>The Bloat Everyone Warns You About</h3>
+      <div class="cat-label">Fear / Urgency (myth-bust)</div>
+      <span class="badge Fresh">Fresh 0/5</span>
+      <p><b>Core insight:</b> Water-retention/"bloat" fear is a commonly cited reason people, especially outside the bodybuilder identity, avoid creatine entirely and miss its real strength and recovery benefits.</p>
+      <div class="label">Sample Hook</div>
+      <div class="hook">"Everyone warned you creatine makes you 'puffy.' Here's what's actually happening in your muscles, and why the right dose with the right electrolytes changes the story."</div>
+      <div class="label">Best Format</div><p>UGC video / testimonial, myth-bust explainer style</p>
+      <div class="label">Why It Wins</div>
+      <p>Addresses an objection unique to creatine that none of the 5 Winners DB competitors (all pure electrolyte plays) could ever face, so it is structurally impossible for them to have already claimed it. High emotional charge for anyone who has avoided creatine out of appearance or identity fear.</p>
+      <div class="label">Micro Hooks</div>
+      <ul class="micro">
+        <li><b>result-first:</b> "I started taking this 6 weeks ago scared of the 'creatine bloat.' Never happened. Just faster recovery and fewer cramps."</li>
+        <li><b>curiosity:</b> "Is 'creatine bloat' even real, or is everyone just repeating the same myth?"</li>
+        <li><b>social proof:</b> "'I was the person telling everyone creatine wasn't for me. This is the first time I've actually stuck with it.'"</li>
+      </ul>
+    </div>
+
+    <div class="angle-card cat-Aspiration">
+      <span class="rank">#3</span>
+      <h3>Strength Without the Gym-Bro Label</h3>
+      <div class="cat-label">Aspiration / Identity</div>
+      <span class="badge Fresh">Fresh 0/5</span>
+      <p><b>Core insight:</b> Creatine's benefits (strength, recovery, cognitive support) apply to anyone optimizing their health, not just competitive lifters, but category messaging still skews toward a narrow bodybuilder identity that alienates a broader unisex audience.</p>
+      <div class="label">Sample Hook</div>
+      <div class="hook">"Creatine isn't just for the gym-bro crowd anymore. It's one of the most researched supplements for everyday strength, recovery, and focus, in a gummy that also covers your hydration."</div>
+      <div class="label">Best Format</div><p>Static / carousel, lifestyle imagery across ages and genders</p>
+      <div class="label">Why It Wins</div>
+      <p>Speaks directly to this product's unisex, 18-60, Biohacking &amp; Longevity avatar. No competitor ad in the Winners DB set targets identity or who-it's-for at all, they lead with occasion, tech, or convenience, so this angle owns a fully open lane.</p>
+      <div class="label">Micro Hooks</div>
+      <ul class="micro">
+        <li><b>problem-first:</b> "You skipped creatine for years because it felt like 'not your thing.' Here's what you've been missing."</li>
+        <li><b>result-first:</b> "More energy in your workouts. Fewer cramps on long days. One gummy, not two supplements, not a shaker bottle."</li>
+        <li><b>contra:</b> "Creatine isn't a bodybuilding supplement. It's one of the most well-researched compounds for everyday strength and recovery, at any age."</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <span style="font-size:12.5px;color:var(--sub);margin-right:4px;">Category:</span>
+    <button class="filter-cat active" data-cat="all">All</button>
+    <button class="filter-cat" data-cat="Pain">Pain</button>
+    <button class="filter-cat" data-cat="Aspiration">Aspiration</button>
+    <button class="filter-cat" data-cat="Contrarian">Contrarian</button>
+    <button class="filter-cat" data-cat="Fear">Fear</button>
+    <button class="filter-cat" data-cat="Social">Social Proof</button>
+    <span style="font-size:12.5px;color:var(--sub);margin:0 4px 0 14px;">Uniqueness:</span>
+    <select id="uq-filter">
+      <option value="all">All</option>
+      <option value="Fresh">Fresh</option>
+      <option value="Twist">Twist</option>
+      <option value="Crowded">Crowded</option>
+    </select>
+  </div>
+  <table id="angles-table">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="cat">Category</th>
+        <th data-sort="uq">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="fmt">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-cat="Pain" data-uq="Twist"><td>The Mixing Ritual You Secretly Hate</td><td class="catpill">Pain</td><td><span class="pill Twist">Twist 2/5</span></td><td>Two separate powders every morning is a hassle nobody enjoys.</td><td>"Shaker bottle in one hand, powder scoop in the other. Again."</td><td>UGC video</td></tr>
+      <tr data-cat="Pain" data-uq="Fresh"><td>Bad-Tasting Electrolytes, Again</td><td class="catpill">Pain</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Most electrolyte products are functional but genuinely unpleasant to drink or chew.</td><td>"It works. It also tastes like a chemistry set. Not anymore."</td><td>Static</td></tr>
+      <tr data-cat="Pain" data-uq="Fresh"><td>Creatine Bloat, But Make It Worse</td><td class="catpill">Pain</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Bloat fear keeps many people from ever starting creatine.</td><td>"Nobody warns you the mixing is worse than the bloat you're scared of."</td><td>UGC video</td></tr>
+      <tr data-cat="Pain" data-uq="Fresh"><td>Wondering If Your Gummy Actually Has Creatine In It</td><td class="catpill">Pain</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Buyers now quietly doubt gummy-format supplements after dosage-fraud reports.</td><td>"You take it every day. You have no idea if it's actually working."</td><td>Static / carousel</td></tr>
+      <tr data-cat="Aspiration" data-uq="Twist"><td>The Optimized Stack, Simplified</td><td class="catpill">Aspiration</td><td><span class="pill Twist">Twist 2/5</span></td><td>Being "dialed in" means fewer, smarter inputs, not more bottles on the counter.</td><td>"The optimized stack isn't more supplements. It's fewer, better ones."</td><td>Carousel</td></tr>
+      <tr data-cat="Aspiration" data-uq="Fresh"><td>Strength Without the Gym-Bro Label</td><td class="catpill">Aspiration</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Creatine's benefits are for anyone optimizing health, not just competitive lifters.</td><td>"Creatine isn't just for the gym-bro crowd anymore."</td><td>Static / carousel</td></tr>
+      <tr data-cat="Aspiration" data-uq="Twist"><td>Recovery Like an Athlete, Life Like a Normal Person</td><td class="catpill">Aspiration</td><td><span class="pill Twist">Twist 1/5</span></td><td>Elite-level recovery tools belong in an everyday routine, not just an athlete's.</td><td>"You don't have to be sponsored to recover like one."</td><td>UGC video</td></tr>
+      <tr data-cat="Aspiration" data-uq="Twist"><td>Two Wins In One Gummy</td><td class="catpill">Aspiration</td><td><span class="pill Twist">Twist 2/5</span></td><td>Consolidating two supplement categories into one is a bigger claim than simple no-mix convenience.</td><td>"Hydration and strength support. One gummy, not two routines."</td><td>Static</td></tr>
+      <tr data-cat="Contrarian" data-uq="Crowded"><td>Skip the Powder Aisle Entirely</td><td class="catpill">Contrarian</td><td><span class="pill Crowded">Crowded 2/5</span></td><td>The whole powder-mixing category is a solved problem now.</td><td>"The powder aisle called. It wants its monopoly back."</td><td>Static</td></tr>
+      <tr data-cat="Contrarian" data-uq="Fresh"><td>Your Creatine Powder Is the Placebo</td><td class="catpill">Contrarian</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Dosage-fraud reports mean the "trusted" powder format has its own credibility problem.</td><td>"Reports keep surfacing that most creatine gummies barely contain any real creatine."</td><td>Static / carousel</td></tr>
+      <tr data-cat="Contrarian" data-uq="Fresh"><td>Hydration Isn't the Whole Story</td><td class="catpill">Contrarian</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Electrolytes alone miss the muscle and cellular-water support creatine adds.</td><td>"Hydration gets you halfway. Here's the other half nobody sells you."</td><td>Static</td></tr>
+      <tr data-cat="Contrarian" data-uq="Twist"><td>Stop Timing Two Different Supplements</td><td class="catpill">Contrarian</td><td><span class="pill Twist">Twist 1/5</span></td><td>Splitting creatine and electrolytes into separate timing rituals is an arbitrary habit, not a requirement.</td><td>"Why are you taking these at two different times of day?"</td><td>Carousel</td></tr>
+      <tr data-cat="Fear" data-uq="Fresh"><td>What Under-Dosed Creatine Costs You</td><td class="catpill">Fear</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Consistent training with an under-dosed supplement quietly wastes months of effort.</td><td>"Three months of consistent training. Zero extra strength. Here's why."</td><td>UGC video</td></tr>
+      <tr data-cat="Fear" data-uq="Twist"><td>Cramping Mid-Workout Because You Skipped Electrolytes</td><td class="catpill">Fear</td><td><span class="pill Twist">Twist 1/5</span></td><td>Skipping electrolytes derails a workout at the worst possible moment.</td><td>"The cramp always hits at rep 8. Every time."</td><td>UGC video</td></tr>
+      <tr data-cat="Fear" data-uq="Fresh"><td>The Bloat Everyone Warns You About</td><td class="catpill">Fear</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Bloat fear stops people from ever trying creatine, missing real benefits.</td><td>"Everyone warned you creatine makes you 'puffy.' Here's what's actually happening."</td><td>UGC video / testimonial</td></tr>
+      <tr data-cat="Fear" data-uq="Fresh"><td>Falling Off Your Supplement Routine (Again)</td><td class="catpill">Fear</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Complicated multi-product routines have measurably worse adherence than a single format.</td><td>"You've quit your supplement routine before. Here's the format people actually stick with."</td><td>Static</td></tr>
+      <tr data-cat="Social" data-uq="Fresh"><td>What the 91% Who Stick With It Know</td><td class="catpill">Social Proof</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>A published adherence study found gummy-format users stayed consistent far more than powder users.</td><td>"91.7% stuck with it. Powder users? 78.4%. The format matters."</td><td>Static / carousel</td></tr>
+      <tr data-cat="Social" data-uq="Twist"><td>Real Reviews: "The First Electrolyte I Actually Want to Take"</td><td class="catpill">Social Proof</td><td><span class="pill Twist">Twist 1/5</span></td><td>Genuine verified-buyer language is more persuasive than brand copy.</td><td>"'This is the first electrolyte that I actually want to take.'"</td><td>Static (review screenshot style)</td></tr>
+      <tr data-cat="Social" data-uq="Fresh"><td>Biohackers Already Replaced Their Stack</td><td class="catpill">Social Proof</td><td><span class="pill Fresh">Fresh 0/5</span></td><td>Early-adopter health optimizers are already consolidating routines like this.</td><td>"The biohacking crowd already ditched the two-bottle routine. Here's what they switched to."</td><td>UGC video</td></tr>
+      <tr data-cat="Social" data-uq="Twist"><td>Why Athletes Reach for This Mid-Run</td><td class="catpill">Social Proof</td><td><span class="pill Twist">Twist 2/5</span></td><td>Real usage context from active buyers reaching for it during exercise.</td><td>"'When I feel low on electrolytes I reach for these, and they work pretty quickly.'"</td><td>UGC video</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <span class="tag">New Product Launch</span>
+      <h4>First gummy to combine creatine + electrolytes in one dose</h4>
+      <p>This product is genuinely new to the market it is entering: none of the 5 confirmed winning ads for "electrolyte gummies" sell a creatine-combo product. Launch messaging can claim the first-to-combine position directly instead of competing on a shared feature.</p>
+    </div>
+    <div class="macro-card">
+      <span class="tag">Seasonal — Labor Day / Fall Reset</span>
+      <h4>New season, new stack</h4>
+      <p>Labor Day (Sept 7, 2026) lands about two weeks out from this report, the window the Angle System calls for activating a seasonal push. Frame it as a routine-reset moment: swap two separate supplements for one gummy heading into fall training blocks.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Taste divisiveness on existing electrolyte gummies: verified 3-star review, "They feel like they work to hydrate but they do not taste very good." <span class="src">Amazon, Plant People WonderHydrate Electrolyte Gummies (B0FCHG5DH2)</span></li>
+        <li>Price sensitivity even from satisfied buyers: verified review, "I love the taste... The cost is a little pricey." <span class="src">Amazon, B0FCHG5DH2</span></li>
+        <li>Dosage-fraud skepticism specific to creatine gummies: "99% of creatine gummies have no creatine in them." <span class="src">Slickdeals user comment, creatine gummies deal thread, Aug 2026</span></li>
+        <li>Water retention / bloat fear as a reason people avoid creatine, especially outside the bodybuilder identity. <span class="src">ubiehealth.com/doctors-note/creatine-gummies-5-facts; bouncenutrition.com/blogs/news/are-creatine-gummies-bad-for-you</span></li>
+        <li>Digestive discomfort (cramping, bloating) reported as dose-dependent. <span class="src">consistentreviews.com/creatine-gummies-side-effects</span></li>
+        <li>Cost-per-serving objection vs. bulk powder ($0.98+ vs $0.61-$1.25/serving). <span class="src">bouncenutrition.com/blogs/news/electrolyte-gummies-vs-powder</span></li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Quick-acting hydration during activity: verified 5-star review, "when I feel low on electrolytes I reach for these and they work pretty quickly." <span class="src">Amazon, B0FCHG5DH2</span></li>
+        <li>Taste as a category-switch driver: verified 5-star review, "This is the first electrolyte that I actually want to take." <span class="src">Amazon, B0FCHG5DH2</span></li>
+        <li>No mixing, travel-convenient format vs. powders and shaker bottles. <span class="src">Amazon listing bullets, B0FCHG5DH2</span></li>
+        <li>Adherence and satisfaction data favors gummy format: 91.7% adherence and 9.1/10 satisfaction vs. 78.4% and 6.3/10 for monohydrate powder, at equivalent efficacy. <span class="src">beStrong Creatine Gummies Study (n=140)</span></li>
+        <li>Broadening age relevance: lean muscle, energy, and cognitive-recovery framing resonates beyond the traditional bodybuilder demographic. <span class="src">accio.com/business/creatine_tiktok_trend</span></li>
+      </ul>
+    </div>
+    <div class="notes-card" style="grid-column:1/-1;">
+      <h4>Competitor Angles (Winners DB, "electrolyte gummies", n=5 confirmed winners)</h4>
+      <div style="overflow-x:auto;">
+      <table class="comp-table">
+        <thead><tr><th>Advertiser</th><th>Category</th><th>Angle (as classified by Audit Winners DB)</th></tr></thead>
+        <tbody>
+          <tr><td>Rehydr8</td><td>Pain</td><td>Hangover Recovery Gummies — reframes hydration for a high-urgency social occasion (post-drinking recovery)</td></tr>
+          <tr><td>Loaded Candy</td><td>Aspiration</td><td>Pocket Hydration Gummies — leads with portability/convenience vs. powder for active adults</td></tr>
+          <tr><td>Day One</td><td>Pain</td><td>Condition-Specific Electrolytes — targets POTS patients with clinical-style specificity</td></tr>
+          <tr><td>Known Nutrition</td><td>Contrarian</td><td>No-Mix Convenience — positions against powder and shakers, zero-prep framing</td></tr>
+          <tr><td>Seattle Gummy Company</td><td>Aspiration</td><td>Sports Hydration Tech — proprietary delivery system for athletes mid-activity</td></tr>
+          <tr><td>Myprotein (w-ish, likely powder format)</td><td>Aspiration</td><td>Athlete Performance Electrolytes — targets sweat replacement under training intensity</td></tr>
+        </tbody>
+      </table>
+      </div>
+      <p style="font-size:12.5px;color:var(--sub);margin-top:10px;">None of the 6 competitor ads sell a creatine-combo product, and none address dosing trust, bloat fear, or a broader non-bodybuilder identity, which is why those three themes anchor the top 3 picks above.</p>
+    </div>
+  </div>
+</section>
+
+<section class="legend">
+  <b>Uniqueness legend</b> (scored against the 5 confirmed "w" winner ads in the Winners DB for "electrolyte gummies"):<br>
+  <b class="Fresh">Fresh</b> — no competitor ad uses this angle (0 matches). The strongest, most differentiated picks.<br>
+  <b class="Twist">Twist</b> — competitors hit the same pain or benefit but frame it differently; this angle adds a fresh differentiator (adjacent-match count shown).<br>
+  <b class="Crowded">Crowded</b> — one or more competitors already run essentially this angle (direct-match count shown). Differentiate further or drop.
+</section>
+
+</div>
+<footer>Nova Capital — Find Marketing Angles — Electrolyte Creatine Gummies — Aug 23, 2026</footer>
+
+<script>
+(function(){
+  var catBtns = document.querySelectorAll('.filter-cat');
+  var uqSel = document.getElementById('uq-filter');
+  var rows = document.querySelectorAll('#angles-table tbody tr');
+  var activeCat = 'all';
+  function applyFilter(){
+    var uq = uqSel.value;
+    rows.forEach(function(r){
+      var catOk = activeCat === 'all' || r.getAttribute('data-cat') === activeCat;
+      var uqOk = uq === 'all' || r.getAttribute('data-uq') === uq;
+      r.style.display = (catOk && uqOk) ? '' : 'none';
+    });
+  }
+  catBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      catBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      activeCat = b.getAttribute('data-cat');
+      applyFilter();
+    });
+  });
+  uqSel.addEventListener('change', applyFilter);
+
+  var uqRank = {Fresh:0, Twist:1, Crowded:2};
+  document.querySelectorAll('#angles-table thead th').forEach(function(th, idx){
+    th.addEventListener('click', function(){
+      var tbody = document.querySelector('#angles-table tbody');
+      var arr = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      var key = th.getAttribute('data-sort');
+      arr.sort(function(a,b){
+        var av, bv;
+        if(key === 'uq'){ av = uqRank[a.getAttribute('data-uq')]; bv = uqRank[b.getAttribute('data-uq')]; }
+        else { av = a.children[idx].textContent.trim().toLowerCase(); bv = b.children[idx].textContent.trim().toLowerCase(); }
+        return av < bv ? -1 : av > bv ? 1 : 0;
+      });
+      arr.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+})();
+</script>
+</body>
+</html>

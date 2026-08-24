@@ -1,0 +1,339 @@
+<title>Peptide Brightening Lip Serum, Marketing Angles</title>
+<meta charset="utf-8">
+<style>
+  :root {
+    --bar: #1e293b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --sub: #64748b;
+    --border: #e2e8f0;
+    --fresh: #16a34a;
+    --fresh-bg: #dcfce7;
+    --twist: #d97706;
+    --twist-bg: #fef3c7;
+    --crowded: #dc2626;
+    --crowded-bg: #fee2e2;
+    --accent: #0ea5e9;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  .topbar { height:6px; background: linear-gradient(90deg,#1e293b,#0ea5e9); }
+  header.hero { background:#fff; padding:28px 32px; border-bottom:1px solid var(--border); }
+  header.hero h1 { margin:0 0 6px; font-size:1.7rem; }
+  header.hero .subtitle { color:var(--sub); font-size:1rem; margin-bottom:4px; }
+  header.hero .date { color:var(--sub); font-size:0.85rem; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 24px; }
+  section { padding:28px 0; }
+  .summary-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; margin-top:8px; }
+  .stat-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+  .stat-card h3 { margin:0 0 6px; font-size:0.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); }
+  .stat-card p { margin:0; font-size:0.98rem; line-height:1.5; }
+  .stat-card.objection { border-left:4px solid var(--crowded); }
+  .stat-card.transform { border-left:4px solid var(--accent); }
+  .stat-card.avatar { border-left:4px solid var(--fresh); }
+  h2.section-title { font-size:1.25rem; margin:0 0 4px; }
+  .section-sub { color:var(--sub); font-size:0.88rem; margin-bottom:18px; }
+  .badge { display:inline-block; padding:3px 10px; border-radius:999px; font-size:0.74rem; font-weight:600; letter-spacing:.02em; }
+  .badge.fresh { background:var(--fresh-bg); color:var(--fresh); }
+  .badge.twist { background:var(--twist-bg); color:var(--twist); }
+  .badge.crowded { background:var(--crowded-bg); color:var(--crowded); }
+  .top3-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px; }
+  .top-card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; position:relative; overflow:hidden; }
+  .top-card::before { content:""; position:absolute; top:0; left:0; right:0; height:4px; background:var(--accent); }
+  .top-card .rank { font-size:0.74rem; color:var(--sub); font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+  .top-card h3 { margin:6px 0 4px; font-size:1.2rem; }
+  .top-card .cat { font-size:0.8rem; color:var(--sub); margin-bottom:10px; }
+  .top-card .insight { font-size:0.92rem; margin:10px 0; }
+  .top-card .hook { background:#f1f5f9; border-radius:8px; padding:10px 12px; font-size:0.88rem; font-style:italic; margin:10px 0; }
+  .top-card .why { font-size:0.85rem; color:var(--sub); margin:10px 0; }
+  .top-card .format { font-size:0.78rem; color:var(--sub); }
+  .micro { margin-top:12px; border-top:1px solid var(--border); padding-top:10px; }
+  .micro h4 { font-size:0.75rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); margin:0 0 8px; }
+  .micro-hook { font-size:0.84rem; margin-bottom:6px; }
+  .micro-hook b { color:var(--accent); font-size:0.72rem; text-transform:uppercase; margin-right:4px; }
+  .controls { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .controls select, .controls input { padding:7px 10px; border:1px solid var(--border); border-radius:8px; font-size:0.85rem; background:#fff; }
+  table.angles { width:100%; border-collapse:collapse; background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  table.angles th { text-align:left; font-size:0.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--sub); background:#f1f5f9; padding:10px 12px; cursor:pointer; user-select:none; }
+  table.angles td { padding:10px 12px; font-size:0.86rem; border-top:1px solid var(--border); vertical-align:top; }
+  table.angles tr:hover td { background:#f8fafc; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; margin-top:16px; font-size:0.82rem; color:var(--sub); }
+  .legend span.dot { display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:6px; }
+  .dot.fresh { background:var(--fresh); }
+  .dot.twist { background:var(--twist); }
+  .dot.crowded { background:var(--crowded); }
+  .macro-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; }
+  .macro-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+  .macro-card h4 { margin:0 0 6px; font-size:0.95rem; }
+  .macro-card p { margin:0; font-size:0.84rem; color:var(--sub); }
+  .notes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; }
+  .notes-card { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px 18px; }
+  .notes-card h4 { margin:0 0 10px; font-size:0.95rem; }
+  .notes-card ul { margin:0; padding-left:18px; font-size:0.85rem; line-height:1.6; }
+  .notes-card ul li { margin-bottom:4px; }
+  .comp-row { font-size:0.83rem; margin-bottom:8px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  .comp-row:last-child { border-bottom:none; }
+  .comp-row .adv { font-weight:600; }
+  .comp-row .tag { font-size:0.72rem; color:var(--sub); }
+  footer { text-align:center; color:var(--sub); font-size:0.78rem; padding:24px 0 40px; }
+</style>
+
+<div class="topbar"></div>
+<header class="hero">
+  <h1>Peptide Brightening Lip Serum, Marketing Angles</h1>
+  <div class="subtitle">Avatar: women 18-55+, everyday makeup wearers into K-beauty/J-beauty-adjacent "skinified" cosmetics, who feel self-conscious about dull, dark, or uneven bare lips and are tired of gloss that ghosts by lunch or promises a plump it never delivers</div>
+  <div class="date">Report date: 08-24-2026 &middot; Refresh of a stale 06-15-2026 report, regenerated against the current Winners DB competitor set</div>
+</header>
+
+<div class="wrap">
+
+<section id="summary">
+  <h2 class="section-title">Summary</h2>
+  <div class="section-sub">The avatar, the transformation, and the objection every angle has to answer.</div>
+  <div class="summary-grid">
+    <div class="stat-card avatar">
+      <h3>Avatar</h3>
+      <p>Women, 18-55+, an everyday makeup wearer who treats her face like a skincare project but has historically treated her lips as an afterthought. She's into the K-beauty/J-beauty "skinified cosmetics" trend and shops Amazon and TikTok Shop for both. She's self-conscious about how her bare lips look, dull, dark, patchy, or two-toned, and feels "unfinished" without full lipstick. She has cycled through drugstore glosses that are either sticky or dry her out, tingling "plumping" glosses that just irritate without real results, and slow-acting whitening/kojic treatments that took months with nothing to show. She's wary of another product joining that pile, and specifically doubts two claims from direct experience with products like this one: that a serum will actually visibly brighten her lip tone, and that "peptides" will actually plump anything.</p>
+    </div>
+    <div class="stat-card transform">
+      <h3>Core Transformation</h3>
+      <p>From lips that look dull, uneven, or patchy without full-coverage lipstick, reapplied every twenty minutes, tasting or feeling like the usual gloss compromise, to naturally brighter, evenly-toned, glossy, hydrated lips she's comfortable wearing bare or under makeup, with a serum that's honest about what it does (glow, hydration, tone) instead of overselling what it doesn't (instant dramatic plumping).</p>
+    </div>
+    <div class="stat-card objection">
+      <h3>Primary Objection</h3>
+      <p>"I've bought brightening or plumping lip products before that did nothing after weeks of use, so why would this one actually work?"</p>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2 class="section-title">Top 3 Angles</h2>
+  <div class="section-sub">Most emotionally charged and most differentiated from the 63 competitor ads classified in the Winners DB for "lips peptide" (62 Meta Ad Winners + 1 TikTok Winner).</div>
+  <div class="top3-grid">
+
+    <div class="top-card">
+      <div class="rank">Rank 1 &middot; Pain / Frustration</div>
+      <h3>Stop Reapplying Every 20 Minutes</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/63</span></div>
+      <p class="insight"><b>Core insight:</b> longevity is the single most negative-skewing attribute in this exact product's own Amazon reviews (101 customers mention it, 70 negative, "constantly reapplying," "doesn't last on their lips"), yet not one of the 63 competitor ads captured for this term leads with reapplication fatigue.</p>
+      <p class="hook">"Stop buying lip tints that ghost you by lunch. This one's actually built to stay."</p>
+      <p class="why"><b>Why it wins:</b> targets the most emotionally loaded daily annoyance in the category (checking your lips in every mirror you pass) and it's the exact complaint verified-purchase reviewers name most about products in this space; zero competitor ad owns it, they all sell shine, color, or plumping instead.</p>
+      <p class="format">Best format: UGC video (a real day, tracked hour by hour)</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Problem-first</b>Tired of checking your lips in every mirror you pass because the tint disappeared an hour ago?</div>
+        <div class="micro-hook"><b>Result-first</b>I stopped carrying lip gloss in my bag altogether once this started actually lasting through my coffee.</div>
+        <div class="micro-hook"><b>Contra</b>Stop buying lip tints that ghost you by lunch. This one's actually built to stay.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">Rank 2 &middot; Contrarian / Pattern Interrupt</div>
+      <h3>Brightening Doesn't Happen Overnight (And That's OK)</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/63</span></div>
+      <p class="insight"><b>Core insight:</b> pigmentation/brightening is the second most-doubted attribute in this product's own reviews (100 mentions, 38 negative, "too soon to see any brightening," "doesn't work at all"), and clinical sources confirm real lip-brightening takes 4-8 weeks, while every competitor ad in the set either promises fast results ("Plump Lips in 15 Days," "See Results In 28 Days") or says nothing about timeline at all.</p>
+      <p class="hook">"You've tried the 'brightens in days' lip serums before. They didn't. This one tells you the truth upfront."</p>
+      <p class="why"><b>Why it wins:</b> directly neutralizes the PRIMARY OBJECTION at the door; radical honesty is a pattern interrupt against a market where every ad oversells speed, and it's the only angle in this set built to convert skeptics rather than just excite enthusiasts who'll bounce off disappointment in week two.</p>
+      <p class="format">Best format: VSL (honest expectation-setting, then real week-by-week proof)</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Curiosity</b>Here's the thing every "brightening" lip serum ad won't tell you about how long it actually takes.</div>
+        <div class="micro-hook"><b>Social proof</b>"Too soon to see any brightening" — one honest review after day 2. Here's what week 3 looked like.</div>
+        <div class="micro-hook"><b>Problem-first</b>You've tried the "brightens in days" lip serums before. They didn't. This one tells you the truth upfront.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">Rank 3 &middot; Fear / Urgency</div>
+      <h3>Don't Let A $12 Impulse Buy Become Another Drawer Regret</h3>
+      <div class="cat"><span class="badge fresh">Fresh 0/63</span></div>
+      <p class="insight"><b>Core insight:</b> value-for-money is the third most-doubted attribute in this product's own reviews (123 mentions, 50 negative, "not worth the money," "false advertising"), a live, proven risk with this exact category, but no competitor ad names the buyer's own sunk-cost fear before asking for the sale, they all sell confidence instead of answering doubt.</p>
+      <p class="hook">"Stop impulse-buying lip serums that end up in your junk drawer by week two. Do this instead."</p>
+      <p class="why"><b>Why it wins:</b> taps a near-universal cold-DTC-buyer fear (wasting money on another gimmick) that this exact product's own reviews prove is a real risk in this category, then flips it into urgency to buy the one that's honest about what it does; zero of 63 competitor ads address this fear directly.</p>
+      <p class="format">Best format: UGC video (skeptic-to-convert testimonial)</p>
+      <div class="micro">
+        <h4>Micro Hooks</h4>
+        <div class="micro-hook"><b>Curiosity</b>The $12 lip serum decision most people get wrong (and how to not be one of them).</div>
+        <div class="micro-hook"><b>Result-first</b>I almost didn't buy another "miracle" lip serum. This is the one that finally earned its spot on my counter.</div>
+        <div class="micro-hook"><b>Contra</b>Stop impulse-buying lip serums that end up in your junk drawer by week two. Do this instead.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2 class="section-title">All 20 Angles</h2>
+  <div class="section-sub">Filter by category or uniqueness, or click a column header to sort.</div>
+  <div class="controls">
+    <select id="catFilter">
+      <option value="">All Categories</option>
+      <option>Pain / Frustration</option>
+      <option>Aspiration / Identity</option>
+      <option>Contrarian / Pattern Interrupt</option>
+      <option>Fear / Urgency</option>
+      <option>Social Proof / Tribe</option>
+    </select>
+    <select id="uniqFilter">
+      <option value="">All Uniqueness</option>
+      <option>Fresh</option>
+      <option>Twist</option>
+      <option>Crowded</option>
+    </select>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="angles" id="angleTable">
+    <thead>
+      <tr>
+        <th data-key="name">Angle</th>
+        <th data-key="cat">Category</th>
+        <th data-key="uniq">Uniqueness</th>
+        <th data-key="insight">Core Insight</th>
+        <th data-key="hook">Hook</th>
+        <th data-key="format">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-cat="Pain / Frustration" data-uniq="Fresh"><td>Stop Reapplying Every 20 Minutes</td><td>Pain / Frustration</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Longevity is the #1 negative-skewing attribute in this product's own reviews (70/101 negative); no competitor ad leads with reapplication fatigue.</td><td>Stop buying lip tints that ghost you by lunch. This one's actually built to stay.</td><td>UGC video</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Twist"><td>Bare Lips, But Embarrassed</td><td>Pain / Frustration</td><td><span class="badge twist">Twist 2/63</span></td><td>The identity-pain of feeling unfinished/self-conscious about dark or uneven lips without full lipstick; adjacent to 2 competitor "Dark Lips Aren't Forever" ads that target pigmentation as pain but not the social self-consciousness.</td><td>You reach for lipstick even for a five-minute errand. It's time your bare lips didn't need the backup.</td><td>Testimonial</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Fresh"><td>Tired Of Gloss That Tastes Like Chemicals</td><td>Pain / Frustration</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Real reviews call out fake-rose or chemical taste as a silent dealbreaker; no competitor ad addresses taste/smell failure at all.</td><td>Great color, terrible taste, is a trade real reviewers keep warning each other about. This one isn't that trade.</td><td>UGC video</td></tr>
+      <tr data-cat="Pain / Frustration" data-uniq="Twist"><td>The Cracked-Lip Cycle Never Ends</td><td>Pain / Frustration</td><td><span class="badge twist">Twist 1/63</span></td><td>Lip-licking creates a self-worsening dryness loop most balms don't break; distinct from the set's single dryness-adjacent contrarian angle.</td><td>Licking your lips when they're dry only makes them drier. Here's the actual off-ramp.</td><td>Static</td></tr>
+
+      <tr data-cat="Aspiration / Identity" data-uniq="Crowded"><td>Your Lips, Just Better Rested</td><td>Aspiration / Identity</td><td><span class="badge crowded">Crowded 20+/63</span></td><td>Everyday "lips but better" glow; the most crowded territory in the entire set (roughly a third of all 63 competitor ads run some version of this).</td><td>Your lips, but like they just had a really good week.</td><td>Carousel</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>One Step Before Everything Else</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 3/63</span></td><td>Positions as the pre-makeup base step that preps lipstick/liner application, a real reviewer-confirmed use case; adjacent to 3 competitor "combo/ritual" ads that stack products rather than frame a routine step.</td><td>The step before your lipstick that makes your lipstick look better.</td><td>Static</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>The Skincare Step Your Routine Forgot</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 1/63</span></td><td>She treats her whole face like skincare but forgets her lips; adjacent to 1 competitor's generic "skincare obsession" framing without the forgotten-step insight.</td><td>Ten-step routine for your face. Zero steps for your lips. Let's fix that.</td><td>UGC video</td></tr>
+      <tr data-cat="Aspiration / Identity" data-uniq="Twist"><td>K-Beauty's Best Kept Lip Secret</td><td>Aspiration / Identity</td><td><span class="badge twist">Twist 1/63</span></td><td>Rides the same SEA/K-beauty trust halo proven to work for other products in this catalog; adjacent to 1 competitor's "first local J-beauty" national-pride framing, different mechanism (import-trend halo, not local pride).</td><td>The lip serum every K-beauty girlie already knows about, and you're about to.</td><td>UGC video</td></tr>
+
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Crowded"><td>Most "Plumping" Glosses Just Sting You</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge crowded">Crowded 1/63</span></td><td>The tingle is the trick, not the treatment; essentially the same insight as 1 competitor's "Plump Without The Tingle" ad, would need a fresh science-backed twist to earn a top-3 slot.</td><td>That tingling sensation isn't your lips plumping. It's an irritant. Here's what actual peptides feel like: nothing, just results.</td><td>Static</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>Brightening Doesn't Happen Overnight (And That's OK)</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Honest expectation-setting on the real 4-8 week timeline; no competitor ad sets an honest slow timeline, they all promise speed or say nothing.</td><td>You've tried the "brightens in days" lip serums before. They didn't. This one tells you the truth upfront.</td><td>VSL</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Twist"><td>This Isn't A Lipstick Replacement, And That's The Point</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge twist">Twist 1/63</span></td><td>Reframes the sheer tint as a feature, not a shortcoming; adjacent to 1 competitor's "works over lipstick" angle, complementary not competing insight.</td><td>This won't replace your lipstick. It'll make the days you skip lipstick actually work.</td><td>Static</td></tr>
+      <tr data-cat="Contrarian / Pattern Interrupt" data-uniq="Fresh"><td>The Only Ingredient List That Matters Is The One On The Cap</td><td>Contrarian / Pattern Interrupt</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Calls out vague "peptide" buzzword marketing, leads with real ingredient specifics (Vitamin C, HA, squalane, ceramides, shea butter); no competitor ad runs an ingredient-transparency angle.</td><td>"Peptides" is doing a lot of marketing work for brands that won't tell you which ones. Here's exactly what's in ours.</td><td>Static</td></tr>
+
+      <tr data-cat="Fear / Urgency" data-uniq="Twist"><td>Filler Prices Without The Needle</td><td>Fear / Urgency</td><td><span class="badge twist">Twist 1/63</span></td><td>Anchors on the real dollar cost of injectables, not just needle-fear; adjacent to 1 competitor's "No Needle, No Risk" ad which doesn't use the price mechanism.</td><td>Lip filler runs $500-800 a syringe. This is what "fuller-looking" costs when you're not paying for a needle.</td><td>Testimonial</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Fresh"><td>What Your Bare Lips Are Silently Saying</td><td>Fear / Urgency</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Fear of others' unspoken judgment of dull or dark lips; no competitor ad frames the fear as external perception rather than self-perception.</td><td>Nobody says anything. They don't have to. Bare, dull lips get noticed even when the rest of you looks put together.</td><td>UGC video</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Fresh"><td>Don't Let A $12 Impulse Buy Become Another Drawer Regret</td><td>Fear / Urgency</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Names the sunk-cost fear before she buys, then answers it; verified live risk in this exact product's reviews (50/123 value mentions negative); no competitor ad addresses buyer's regret directly.</td><td>Stop impulse-buying lip serums that end up in your junk drawer by week two. Do this instead.</td><td>UGC video</td></tr>
+      <tr data-cat="Fear / Urgency" data-uniq="Twist"><td>Your Lips Age Too, Most Routines Ignore It</td><td>Fear / Urgency</td><td><span class="badge twist">Twist 1/63</span></td><td>Systemic-neglect aging framing, broader than 1 competitor's single-symptom "vertical lip lines" ad.</td><td>You moisturize your face every night. When's the last time you did anything for your lips?</td><td>Static</td></tr>
+
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>62 Brands Are Selling You The Same Glossy Promise</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Names the category crowding directly and anchors on our own verified-purchase review stats instead of vague clinical claims; no competitor ad calls out market saturation.</td><td>62 lip serums are running the same "shine first, plump second" ad right now. Here's the one with the reviews to back it up.</td><td>Carousel</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Twist"><td>The Reviewers Who Almost Returned It (Then Didn't)</td><td>Social Proof / Tribe</td><td><span class="badge twist">Twist 3/63</span></td><td>A skepticism-to-conversion narrative arc, more credible than a flat 5-star quote; adjacent to the set's broader 8-ad testimonial-social-proof cluster which doesn't use this specific device.</td><td>"Too soon to see brightening," she wrote at day 2. She didn't ask for a refund. Here's why.</td><td>Testimonial</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Crowded"><td>The Lip Step Skincare-Obsessed Girls Don't Skip Anymore</td><td>Social Proof / Tribe</td><td><span class="badge crowded">Crowded 2/63</span></td><td>Tribal bandwagon framing for the skincare-community buyer; essentially the same insight as 2 competitor "skincare obsession" ads.</td><td>Every skincare girlie has a 10-step face routine now. This is the lip step they added.</td><td>UGC video</td></tr>
+      <tr data-cat="Social Proof / Tribe" data-uniq="Fresh"><td>Real Reviews, Real Pump Problems, Real Fixes</td><td>Social Proof / Tribe</td><td><span class="badge fresh">Fresh 0/63</span></td><td>Radically transparent about a real reported complaint (a stuck dispenser) and how it's handled; no competitor ad addresses a negative review publicly, that transparency is the whole differentiator.</td><td>Yes, we saw the review about the applicator sticking. Here's what changed and how we make it right if yours does too.</td><td>Static</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend">
+    <div><span class="dot fresh"></span><b>Fresh</b>: 0 of the 63 competitor ads captured for this term use this angle.</div>
+    <div><span class="dot twist"></span><b>Twist</b>: a competitor hits the same pain or benefit, this angle frames it differently.</div>
+    <div><span class="dot crowded"></span><b>Crowded</b>: one or more competitors already run essentially this angle.</div>
+    <div>Denominator = 63 competitor ads classified for "lips peptide" in the Winners DB (62 Meta Ad Winners, all is_duplicate=FALSE, plus 1 TikTok Winner); the sheet's stored Meta Ad Ws = 61 / TikTok Organic Ws = 1 from the prior audit-winners pass is close but not identical to today's live re-census, which is the source of truth here per the Angle System doc.</div>
+  </div>
+</section>
+
+<section id="macro">
+  <h2 class="section-title">Macro-Angles</h2>
+  <div class="section-sub">Offer and seasonal angles that genuinely fit this product.</div>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Winter Dry-Lips Season</h4>
+      <p>Cold, dry weather is literally when the core pain (chapped, dry lips) peaks, one of this exact product's own real reviews says "My lips have been super dry lately (thanks winter)." Activate 2 weeks before winter onset; pairs naturally with a BFCM push.</p>
+    </div>
+    <div class="macro-card">
+      <h4>New Product Launch</h4>
+      <p>This is a fresh addition to the store's own line for a cold audience that hasn't seen it before; standard debut framing (new arrival, first-batch urgency) applies at launch.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Evergreen Unit-Sold Milestone</h4>
+      <p>Queued for post-launch once real sales data exists (e.g. "10,000 sold"), not usable yet, flagged here so it isn't lost.</p>
+    </div>
+  </div>
+  <p style="font-size:0.82rem;color:var(--sub);margin-top:14px;">Not used: Restock Event (no stockout history yet); Handmade/Jewelry product-specific angles (mass-manufactured cosmetic, doesn't fit).</p>
+</section>
+
+<section id="notes">
+  <h2 class="section-title">Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>Longevity/reapplication: the #1 negative attribute in this product's own Amazon reviews, 101 customers mention it, 70 negative ("constantly reapplying," "doesn't stay on the lips").</li>
+        <li>Fake or absent plumping: multiple reviews explicitly call out no plumping effect despite the peptide claim ("Nice shine NO PLUMP! Don't waste your money," "absolutely no plumping effect").</li>
+        <li>Pigmentation/brightening skepticism: 100 mentions, 38 negative ("too soon to see any brightening," "doesn't work at all"); external dermatology sources confirm the real timeline is 4-8 weeks, a gap no competitor ad addresses honestly.</li>
+        <li>Value-for-money doubt at the ~$10-13 Amazon price point: 123 mentions, 50 negative ("not worth the money," "false advertising").</li>
+        <li>Bad taste/smell as a silent dealbreaker even when texture and color are praised ("tastes like fake roses," "tastes like chemicals").</li>
+        <li>Packaging/dispenser defects (pump not dispensing, cap loosening in a bag) and, more broadly, a self-worsening dry-chapped-lips cycle from lip-licking that most balms don't break (dermatology/clinical sources, Reddit itself was blocked to direct scraping this run).</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Texture: smooth, described as feeling "like Vaseline," blends and glides on easily.</li>
+        <li>Non-sticky and lightweight, the most-praised differentiator versus typical glosses (95 mentions, 75 positive).</li>
+        <li>Deep hydration for severely dry lips, "gone after one use," no white flaking or peeling reported.</li>
+        <li>Natural sheer tint that flatters without looking like full-coverage lipstick, "your lips but better."</li>
+        <li>Doubles as a pre-makeup skincare step, smooths later lipstick/liner application.</li>
+        <li>Works well layered under an occlusive overnight mask; one detailed real review calls it "the missing step" when Laneige/abib-style lip masks alone weren't working.</li>
+      </ul>
+    </div>
+    <div class="notes-card" style="grid-column:1/-1;">
+      <h4>Competitor Angles in Market (Winners DB, search term "lips peptide", 63 ads classified)</h4>
+      <div class="comp-row"><span class="adv">Category-wide pattern</span> <span class="tag">Aspiration, ~52% of set</span> &middot; Glossy sensory-payoff sequencing ("Shine First, Plump Second" alone runs 5x), all-in-one/combo formats, skincare-in-disguise framing, brand-cult new-shade drops.</div>
+      <div class="comp-row"><span class="adv">Paula's Choice</span> (w x3) <span class="tag">Social Proof</span> &middot; Clinically Proven Peptide Formula, leads with clinical-stat framing for volume/plump/smooth.</div>
+      <div class="comp-row"><span class="adv">Elixir Makeup</span> (w x3) <span class="tag">Aspiration</span> &middot; Deep Hydration Combo, lip liner + treatment bundle for all-day hydration.</div>
+      <div class="comp-row"><span class="adv">Let's Hyphen</span> (w x3) <span class="tag">Aspiration / Social Proof</span> &middot; New Vitamin Peptide Formula, Obsessed Not Sponsored, and Life Together Not Just Lips, a reformulated staple riding creator-authentic UGC.</div>
+      <div class="comp-row"><span class="adv">TheDermaCo</span> (w x2) <span class="tag">Pain</span> &middot; Dark Lips Aren't Forever, targets lip pigmentation directly as the core pain.</div>
+      <div class="comp-row"><span class="adv">Runway Rogue Beauty</span> (w) <span class="tag">Social Proof</span> &middot; Clinically Proven Plump, cites specific clinical stats (40% volume, 29% fewer lines) as the hook.</div>
+      <div class="comp-row"><span class="adv">wehavelooselips</span> (w) <span class="tag">Fear</span> &middot; No Needle No Risk, positions against injectable filler, the set's only direct filler-fear angle.</div>
+      <div class="comp-row"><span class="adv">Rebuilt Skin</span> (w) <span class="tag">Fear</span> &middot; Fix Vertical Lip Lines, the set's only aging-specific angle.</div>
+      <div class="comp-row"><span class="adv">Farmhouse Fresh Goods</span> (w) <span class="tag">Contrarian</span> &middot; Plump Without The Tingle, contrasts with typical tingling lip plumpers.</div>
+      <p style="font-size:0.8rem;color:var(--sub);margin-top:10px;">This is a saturated, sensory/glossy-benefit-driven set: Aspiration and Social Proof together account for roughly three quarters of all 63 ads, almost all selling shine, texture, or clinical-stat plumping. Real white spaces: nobody owns the #1 verified pain point (reapplication/longevity fatigue), nobody sets an honest slower timeline for brightening against every competitor's fast-results promise, nobody names the buyer's own sunk-cost/regret fear before the sale, and filler-fear/needle-fear territory is nearly untouched (1 of 63 ads). Reddit was blocked to direct scraping this run; general lip-care pain-point research fell back to dermatology/clinical sources (Clinikally, AAD, Glacial Ridge) rather than live user posts, flagged as a lower-confidence substitute for that one source only.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>Peptide Brightening Lip Serum, Marketing Angles &middot; Find Marketing Angles agent &middot; 08-24-2026</footer>
+
+<script>
+(function(){
+  var table = document.getElementById('angleTable');
+  var tbody = table.querySelector('tbody');
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+  var catSel = document.getElementById('catFilter');
+  var uniqSel = document.getElementById('uniqFilter');
+
+  function applyFilter(){
+    var c = catSel.value, u = uniqSel.value;
+    rows.forEach(function(r){
+      var show = (!c || r.getAttribute('data-cat') === c) && (!u || r.getAttribute('data-uniq') === u);
+      r.style.display = show ? '' : 'none';
+    });
+  }
+  catSel.addEventListener('change', applyFilter);
+  uniqSel.addEventListener('change', applyFilter);
+
+  var uniqRank = { 'Fresh': 0, 'Twist': 1, 'Crowded': 2 };
+  table.querySelectorAll('th').forEach(function(th, idx){
+    var dir = 1;
+    th.addEventListener('click', function(){
+      dir *= -1;
+      var key = th.getAttribute('data-key');
+      rows.sort(function(a, b){
+        var av, bv;
+        if (key === 'uniq') {
+          av = uniqRank[a.getAttribute('data-uniq')];
+          bv = uniqRank[b.getAttribute('data-uniq')];
+        } else {
+          av = a.children[idx].textContent.trim().toLowerCase();
+          bv = b.children[idx].textContent.trim().toLowerCase();
+        }
+        if (av < bv) return -1 * dir;
+        if (av > bv) return 1 * dir;
+        return 0;
+      });
+      rows.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+})();
+</script>

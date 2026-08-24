@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LED Red Light Therapy Wrap — Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --slate: #1e293b;
+    --slate-dark: #0f172a;
+    --accent: #dc2626;
+    --fresh: #16a34a;
+    --twist: #d97706;
+    --crowded: #64748b;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --border: #e2e8f0;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .top-bar { height: 6px; background: linear-gradient(90deg, var(--slate-dark), var(--slate)); }
+  header {
+    background: #fff;
+    padding: 32px 40px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { margin: 0 0 6px; font-size: 26px; }
+  header .subtitle { color: var(--text-light); font-size: 15px; margin-bottom: 4px; }
+  header .date { color: var(--text-light); font-size: 13px; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 40px 60px; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin: 28px 0;
+  }
+  .stat {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+  }
+  .stat .num { font-size: 22px; font-weight: 700; }
+  .stat .label { font-size: 12px; color: var(--text-light); text-transform: uppercase; letter-spacing: .03em; }
+  section { margin: 40px 0; }
+  h2 { font-size: 19px; border-bottom: 2px solid var(--slate); padding-bottom: 8px; }
+  .summary-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px;
+  }
+  .summary-card p { margin: 8px 0; line-height: 1.55; }
+  .summary-card .label { font-weight: 700; color: var(--slate-dark); }
+  .obj { background: #fef2f2; border-left: 4px solid var(--accent); padding: 12px 16px; border-radius: 6px; margin-top: 12px;}
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+  .angle-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 18px 20px; position: relative; overflow: hidden;
+  }
+  .angle-card::before {
+    content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  }
+  .angle-card.fresh::before { background: var(--fresh); }
+  .angle-card.twist::before { background: var(--twist); }
+  .angle-card.crowded::before { background: var(--crowded); }
+  .rank { font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; }
+  .angle-card h3 { margin: 4px 0 8px; font-size: 18px; }
+  .badge {
+    display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px;
+    color: #fff; text-transform: uppercase; letter-spacing: .03em;
+  }
+  .badge.fresh { background: var(--fresh); }
+  .badge.twist { background: var(--twist); }
+  .badge.crowded { background: var(--crowded); }
+  .category-pill {
+    display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 20px;
+    background: var(--slate); color: #fff; margin-left: 6px;
+  }
+  .angle-card .field { margin: 10px 0; font-size: 13.5px; line-height: 1.5; }
+  .angle-card .field .k { font-weight: 700; display: block; font-size: 11px; text-transform: uppercase; color: var(--text-light); margin-bottom: 2px;}
+  .hook-quote { font-style: italic; background: #f1f5f9; padding: 8px 10px; border-radius: 6px; }
+  .micro-hooks { display: flex; flex-direction: column; gap: 6px; margin-top: 6px; }
+  .micro-hook { font-size: 12.5px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 6px 9px; }
+  .micro-hook .type { font-weight: 700; color: var(--slate); text-transform: uppercase; font-size: 10px; margin-right: 6px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .controls input, .controls select {
+    padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px;
+  }
+  .controls input { flex: 1; min-width: 200px; }
+  table { width: 100%; border-collapse: collapse; background: var(--card-bg); border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 13px; vertical-align: top; }
+  th { background: var(--slate-dark); color: #fff; cursor: pointer; user-select: none; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; }
+  th:hover { background: var(--slate); }
+  tr:hover td { background: #f8fafc; }
+  .table-wrap { overflow-x: auto; }
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .macro-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .macro-card h4 { margin: 0 0 6px; font-size: 14.5px; }
+  .macro-card p { margin: 0; font-size: 13px; color: var(--text-light); line-height: 1.5; }
+  .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .research-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px; }
+  .research-card h4 { margin: 0 0 10px; font-size: 14px; text-transform: uppercase; letter-spacing: .02em; color: var(--slate); }
+  .research-card ul { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.65; }
+  .research-card li { margin-bottom: 6px; }
+  .src { color: var(--text-light); font-size: 11px; }
+  .legend { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 14px; font-size: 13px; }
+  .legend .item { display: flex; align-items: center; gap: 7px; }
+  .legend .dot { width: 11px; height: 11px; border-radius: 50%; }
+  .legend .dot.fresh { background: var(--fresh); }
+  .legend .dot.twist { background: var(--twist); }
+  .legend .dot.crowded { background: var(--crowded); }
+  footer { text-align: center; color: var(--text-light); font-size: 12px; padding: 30px 0 10px; }
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<header>
+  <h1>LED Red Light Therapy Wrap — Marketing Angles</h1>
+  <div class="subtitle">Avatar: woman, 25&ndash;65+, desk/screen-heavy daily routine, chronic neck &amp; shoulder tension from &quot;tech neck&quot; posture</div>
+  <div class="date">Generated 08-23-2026 &middot; NOVA CAPITAL Find Marketing Angles</div>
+</header>
+
+<div class="container">
+
+<div class="stats">
+  <div class="stat"><div class="num">20</div><div class="label">Angles Generated</div></div>
+  <div class="stat"><div class="num">17</div><div class="label">Meta Winners Scored Against</div></div>
+  <div class="stat"><div class="num">13</div><div class="label">Fresh Angles (0 matches)</div></div>
+  <div class="stat"><div class="num">$112.95</div><div class="label">Est. Sell Price</div></div>
+</div>
+
+<section>
+  <h2>Summary</h2>
+  <div class="summary-card">
+    <p><span class="label">Avatar:</span> A woman, roughly 25&ndash;65+, whose day is dominated by a phone or a screen &mdash; desk job, WFH, or just heavy phone use &mdash; and who ends most days with a tight, aching neck and shoulders and, often, a tension headache by early evening. She has already tried a heating pad, a massage gun, stretches, a new pillow, maybe a chiropractor, and reaches for ibuprofen more nights than she'd like to admit. She's seen red light therapy ads before, but every one of them is selling a belly-toning belt, not something for the part of her that actually hurts.</p>
+    <p><span class="label">Core transformation:</span> Hunched over a screen all day, locked-up neck and shoulders by evening, reaching for pain pills out of habit &rarr; ten minutes wrapped around her neck at her desk or on the couch, and the tightness is gone before dinner, no pill required.</p>
+    <div class="obj"><span class="label">Primary objection:</span> &quot;This is probably just another red-light gimmick that'll overheat, die in a few months, and do nothing my $15 heating pad doesn't already do.&quot; &mdash; grounded in real, documented complaints in this category: battery failure within 4&ndash;6 months, overheating/auto-shutoff, and widespread Reddit skepticism about whether red light therapy actually works.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid" id="top3"></div>
+</section>
+
+<section>
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search angle name or insight...">
+    <select id="catFilter">
+      <option value="">All Categories</option>
+      <option value="Pain/Frustration">Pain/Frustration</option>
+      <option value="Aspiration/Identity">Aspiration/Identity</option>
+      <option value="Contrarian/Pattern Interrupt">Contrarian/Pattern Interrupt</option>
+      <option value="Fear/Urgency">Fear/Urgency</option>
+      <option value="Social Proof/Tribe">Social Proof/Tribe</option>
+    </select>
+    <select id="uniqFilter">
+      <option value="">All Uniqueness</option>
+      <option value="Fresh">Fresh</option>
+      <option value="Twist">Twist</option>
+      <option value="Crowded">Crowded</option>
+    </select>
+  </div>
+  <div class="table-wrap">
+    <table id="angleTable">
+      <thead>
+        <tr>
+          <th data-sort="name">Angle</th>
+          <th data-sort="category">Category</th>
+          <th data-sort="uniq">Uniqueness</th>
+          <th data-sort="insight">Core Insight</th>
+          <th data-sort="hook">Hook</th>
+          <th data-sort="format">Format</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <div class="legend">
+    <div class="item"><span class="dot fresh"></span> Fresh &mdash; 0 of the 17 Meta Ad Winners for &quot;red light therapy wrap&quot; use this angle</div>
+    <div class="item"><span class="dot twist"></span> Twist &mdash; competitors hit a similar pain/benefit, this angle frames it differently</div>
+    <div class="item"><span class="dot crowded"></span> Crowded &mdash; 1+ competitors already run essentially this angle</div>
+  </div>
+</section>
+
+<section>
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid" id="macro"></div>
+</section>
+
+<section>
+  <h2>Research Notes</h2>
+  <div class="research-grid">
+    <div class="research-card" id="painpoints"></div>
+    <div class="research-card" id="benefits"></div>
+    <div class="research-card" id="competitor"></div>
+  </div>
+</section>
+
+</div>
+<footer>NOVA CAPITAL &middot; internal use only &middot; Find Marketing Angles agent</footer>
+
+<script>
+const angles = [
+  {rank:1, name:"Red Light Belts Are Solving The Wrong Problem", category:"Contrarian/Pattern Interrupt", uniq:"Fresh", uniqCount:"0/17",
+   insight:"The entire red light therapy ad category is fighting over bellies and backs while the pain that's actually stopping desk-bound women is in their neck.",
+   hook:"Scroll through any red light therapy ad and it's all about your stomach. What about the ache that's actually stopping you, in your neck?",
+   format:"Pattern-interrupt static / carousel", top:true,
+   why:"Directly names the blind spot in the competitive set (all 17 Meta winners for this term target waist/belly/back) and turns the avatar's own ad-fatigue into the hook. Nothing in the Winners DB does this.",
+   micro:[
+     {type:"Problem-first", text:"Every red light therapy ad in your feed is aimed at your stomach. Your actual pain is in your neck."},
+     {type:"Curiosity", text:"Scroll through 20 red light therapy ads and count how many mention your neck. We'll wait."},
+     {type:"Contra", text:"Stop buying belly wraps for neck pain. Wear the wrap built for the part of you that actually hurts."}
+   ]},
+  {rank:2, name:"The 6 PM Neck Crunch", category:"Pain/Frustration", uniq:"Fresh", uniqCount:"0/17",
+   insight:"By the end of a screen-heavy day, her neck locks up right when she has the least time left to deal with it.",
+   hook:"Your neck doesn't wait for a good time to hurt. By 6pm your shoulders are up by your ears and dinner still isn't made.",
+   format:"UGC video", top:true,
+   why:"Visceral, specific, tied to real desk-worker testimony found in research (evening stiffness, tension headaches by 3pm). No competitor ad names this exact daily moment.",
+   micro:[
+     {type:"Problem-first", text:"By 6pm your shoulders are up by your ears and dinner still isn't made."},
+     {type:"Result-first", text:"Ten minutes wrapped around her neck before dinner, and the tightness is gone before the table is set."},
+     {type:"Social proof", text:"“I didn't realize how tense I was until I stopped being tense.” — a desk worker, three weeks in."}
+   ]},
+  {rank:3, name:"Your Kids Notice When You're Not All There", category:"Fear/Urgency", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Chronic neck pain doesn't just hurt, it quietly steals her presence at home, and her family feels the distraction even if they can't name the cause.",
+   hook:"Your kids don't know you have a headache. They just know you're distracted again.",
+   format:"UGC emotional testimonial", top:true,
+   why:"Stacks identity, fear, and family stakes on top of a real pain point (tension headaches from neck strain), which no waist/weight-loss competitor angle touches.",
+   micro:[
+     {type:"Problem-first", text:"Your kids don't know you have a headache. They just know you're distracted again."},
+     {type:"Curiosity", text:"The real reason you keep tuning out at dinner has nothing to do with being tired."},
+     {type:"Result-first", text:"Ten minutes after work, and she's actually present for bath time instead of gritting through it."}
+   ]},
+  {rank:4, name:"Tension Headache Starts in Your Neck", category:"Pain/Frustration", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Women blame stress or screen time for headaches, missing that the root is neck muscle tension from posture.",
+   hook:"That headache creeping up the back of your skull by 3pm? It's not stress. It's your neck.",
+   format:"Static ad, anatomy-style visual"},
+  {rank:5, name:"The Ibuprofen Habit You Didn't Choose", category:"Pain/Frustration", uniq:"Twist", uniqCount:"2/17",
+   insight:"Reaching for pain relievers nightly becomes an invisible routine women don't question until they try to stop.",
+   hook:"You've popped ibuprofen after work so many nights it doesn't even register as a habit anymore.",
+   format:"Testimonial"},
+  {rank:6, name:"Nothing Fixes It For Long", category:"Pain/Frustration", uniq:"Twist", uniqCount:"1/17",
+   insight:"Massage guns, chiropractor visits, and stretches all help for an hour, then the tightness creeps back by afternoon.",
+   hook:"Massage gun, chiropractor, stretches, hot shower. You've tried it all. By 2pm tomorrow, you're right back where you started.",
+   format:"UGC before/after-day video"},
+  {rank:7, name:"The Woman Who Isn't Hunched Over By Friday", category:"Aspiration/Identity", uniq:"Fresh", uniqCount:"0/17",
+   insight:"She wants to be the person whose posture and energy don't visibly decline as the week wears on.",
+   hook:"Monday-you and Friday-you shouldn't look like two different people.",
+   format:"Carousel, before/after posture"},
+  {rank:8, name:"Present at Dinner, Not Just There", category:"Aspiration/Identity", uniq:"Fresh", uniqCount:"0/17",
+   insight:"She wants to actually be engaged with her family in the evening instead of quietly managing pain.",
+   hook:"You want to be at the table for dinner, not just sitting there rubbing your neck.",
+   format:"UGC testimonial"},
+  {rank:9, name:"Handles It Herself", category:"Aspiration/Identity", uniq:"Twist", uniqCount:"4/17",
+   insight:"Identity of the capable woman who doesn't need to book an appointment or wait for anyone to fix her pain.",
+   hook:"You don't need an appointment. You need ten minutes and this wrap.",
+   format:"Static / product demo"},
+  {rank:10, name:"Still Sharp After 8 Hours of Screens", category:"Aspiration/Identity", uniq:"Fresh", uniqCount:"0/17",
+   insight:"She associates neck tension with feeling foggy and drained by end of day, and wants to protect her focus, not just her body.",
+   hook:"Your neck holds more tension than you realize, and it's dragging your focus down with it by 3pm.",
+   format:"VSL"},
+  {rank:11, name:"It's Not Your Pillow", category:"Contrarian/Pattern Interrupt", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Women blame their mattress or pillow for morning stiffness when the real cause is 8+ hours of forward head posture during the day.",
+   hook:"You bought a new pillow. Twice. Your neck still hurts because the problem isn't your bed, it's the 6 hours you spend looking down at your phone.",
+   format:"Contrarian static"},
+  {rank:12, name:"Your Posture Damage Happens at Work, Not the Gym", category:"Contrarian/Pattern Interrupt", uniq:"Fresh", uniqCount:"0/17",
+   insight:"People invest in fitness and wellness outside of work while ignoring the 8 hours of posture damage happening at their desk, which undoes the rest.",
+   hook:"You do yoga twice a week. You spend 40 hours a week undoing it at your desk.",
+   format:"UGC"},
+  {rank:13, name:"Pain Pills Mute the Signal, Not the Cause", category:"Contrarian/Pattern Interrupt", uniq:"Twist", uniqCount:"1/17",
+   insight:"Reframes pain relievers as a delay tactic, not a fix, applied specifically to neck tension rather than general joint pain.",
+   hook:"Ibuprofen doesn't heal your neck. It just tells your brain to stop complaining for a few hours.",
+   format:"VSL / educational"},
+  {rank:14, name:"Forward Head Posture Doesn't Reverse Itself", category:"Fear/Urgency", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Untreated 'tech neck' compounds cervical strain over years, not just a bad day; clinical language creates legitimate urgency.",
+   hook:"Every year of unaddressed ‘tech neck’ adds more strain to your cervical spine. It doesn't undo itself when you finally look up.",
+   format:"Educational static, clinical framing"},
+  {rank:15, name:"The Habit You're Building Without Noticing", category:"Fear/Urgency", uniq:"Twist", uniqCount:"1/17",
+   insight:"Nightly pain-pill reliance can quietly become routine before it's registered as a pattern worth breaking.",
+   hook:"The nights you reach for a pill without thinking about it are the nights that add up.",
+   format:"Testimonial"},
+  {rank:16, name:"The Longer You Wait, The Higher The Bill", category:"Fear/Urgency", uniq:"Twist", uniqCount:"3/17",
+   insight:"Physical therapy and massage costs compound the longer someone avoids addressing chronic neck tension at home.",
+   hook:"A single massage session costs more than a month of this wrap. Wait a year and you'll have paid for ten of them.",
+   format:"Static comparison"},
+  {rank:17, name:"Desk Workers Are Switching From Heating Pads", category:"Social Proof/Tribe", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Positions as the natural upgrade path for the many remote/hybrid desk workers currently relying on heating pads or drugstore patches.",
+   hook:"If you're one of the 60% of office workers dealing with neck pain, you've probably tried a heating pad already. Here's what desk workers are switching to instead.",
+   format:"Stat-led carousel / UGC"},
+  {rank:18, name:"The Wrap Recommended By People Who Sit All Day", category:"Social Proof/Tribe", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Peer-to-peer trust from other WFH/desk-bound people, not influencers or clinicians.",
+   hook:"I didn't believe a wrap could help my neck until three coworkers on my team all had one.",
+   format:"Testimonial / UGC"},
+  {rank:19, name:"Real Reviews, Not Just the Ad", category:"Social Proof/Tribe", uniq:"Twist", uniqCount:"1/17",
+   insight:"Acknowledges category-wide skepticism about red light gadgets and leans into transparent, verifiable proof instead of hype.",
+   hook:"We know red light gadgets get a bad rap online. Here's what happens when real desk workers actually wear this for 3 weeks.",
+   format:"Testimonial compilation / VSL"},
+  {rank:20, name:"She Started, Then Her Whole Team Did", category:"Social Proof/Tribe", uniq:"Fresh", uniqCount:"0/17",
+   insight:"Workplace-driven word of mouth; one person's relief becomes a shared office ritual.",
+   hook:"One person on our team started wearing this at her desk. Within a month, half the team had one.",
+   format:"UGC / office-setting video"}
+];
+
+const macro = [
+  {name:"BFCM / Holiday Gifting", body:"Fits: the Product DB flags this product as Giftable. Position as a gift for the desk-bound person in your life (partner, coworker, parent). Activate 2 weeks before Black Friday."},
+  {name:"New Year Wellness Reset", body:"Fits: January health-resolution demand pairs naturally with a 'fix the pain you've been ignoring all year' framing."},
+  {name:"Back to Desk (Labor Day / Back-to-School)", body:"Fits: return-to-office and return-to-routine season is exactly when desk posture pain resurfaces after a looser summer schedule."},
+  {name:"Evergreen Units-Sold Milestone", body:"Hold for later: activate once real unit-sold volume exists to cite (e.g. '10,000 necks relieved')."},
+  {name:"Restock Event", body:"Standard: if the product ever sells out, run a restock campaign off the waitlist."}
+];
+
+function uniqClass(u){ return u.toLowerCase(); }
+
+function renderTop3(){
+  const el = document.getElementById('top3');
+  angles.filter(a=>a.top).sort((a,b)=>a.rank-b.rank).forEach(a=>{
+    const card = document.createElement('div');
+    card.className = 'angle-card ' + uniqClass(a.uniq);
+    card.innerHTML = `
+      <div class="rank">Rank #${a.rank}</div>
+      <h3>${a.name}</h3>
+      <span class="badge ${uniqClass(a.uniq)}">${a.uniq} ${a.uniqCount}</span>
+      <span class="category-pill">${a.category}</span>
+      <div class="field"><span class="k">Core Insight</span>${a.insight}</div>
+      <div class="field"><span class="k">Sample Hook</span><div class="hook-quote">${a.hook}</div></div>
+      <div class="field"><span class="k">Best Format</span>${a.format}</div>
+      <div class="field"><span class="k">Why It Wins</span>${a.why}</div>
+      <div class="field"><span class="k">Micro Hooks</span>
+        <div class="micro-hooks">
+          ${a.micro.map(m=>`<div class="micro-hook"><span class="type">${m.type}</span>${m.text}</div>`).join('')}
+        </div>
+      </div>
+    `;
+    el.appendChild(card);
+  });
+}
+
+function renderTable(list){
+  const tbody = document.querySelector('#angleTable tbody');
+  tbody.innerHTML = '';
+  list.forEach(a=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${a.name}</strong></td>
+      <td>${a.category}</td>
+      <td><span class="badge ${uniqClass(a.uniq)}">${a.uniq} ${a.uniqCount}</span></td>
+      <td>${a.insight}</td>
+      <td>${a.hook}</td>
+      <td>${a.format}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function applyFilters(){
+  const q = document.getElementById('search').value.toLowerCase();
+  const cat = document.getElementById('catFilter').value;
+  const uniq = document.getElementById('uniqFilter').value;
+  let list = angles.filter(a=>{
+    const matchQ = !q || a.name.toLowerCase().includes(q) || a.insight.toLowerCase().includes(q);
+    const matchCat = !cat || a.category === cat;
+    const matchUniq = !uniq || a.uniq === uniq;
+    return matchQ && matchCat && matchUniq;
+  });
+  renderTable(list);
+}
+
+document.getElementById('search').addEventListener('input', applyFilters);
+document.getElementById('catFilter').addEventListener('change', applyFilters);
+document.getElementById('uniqFilter').addEventListener('change', applyFilters);
+
+let sortState = {key:null, dir:1};
+document.querySelectorAll('#angleTable th').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.sort;
+    sortState.dir = (sortState.key === key) ? -sortState.dir : 1;
+    sortState.key = key;
+    const keyMap = {name:'name', category:'category', uniq:'uniq', insight:'insight', hook:'hook', format:'format'};
+    angles.sort((a,b)=>{
+      const av = (a[keyMap[key]]||'').toString().toLowerCase();
+      const bv = (b[keyMap[key]]||'').toString().toLowerCase();
+      return av > bv ? sortState.dir : av < bv ? -sortState.dir : 0;
+    });
+    applyFilters();
+  });
+});
+
+function renderMacro(){
+  const el = document.getElementById('macro');
+  macro.forEach(m=>{
+    const card = document.createElement('div');
+    card.className = 'macro-card';
+    card.innerHTML = `<h4>${m.name}</h4><p>${m.body}</p>`;
+    el.appendChild(card);
+  });
+}
+
+function renderResearch(){
+  document.getElementById('painpoints').innerHTML = `
+    <h4>Top Pain Points</h4>
+    <ul>
+      <li>Evening neck/shoulder stiffness and tension headaches from "tech neck" desk/phone posture <span class="src">(desk-worker testimony; comfytemp.com blog; reddotled.com)</span></li>
+      <li>Category-wide skepticism: "is this a scam," overpromised results, market flooded with cheap rebranded units <span class="src">(ubiehealth.com Reddit-skepticism summary)</span></li>
+      <li>Battery failure within 4-6 months, overheating / auto-shutoff, hot cords <span class="src">(redlighttherapy.expert; Walmart Rebelduck reviews)</span></li>
+      <li>Poor one-size-fits-all sizing, velcro wears out around 3 months <span class="src">(redlighttherapy.expert)</span></li>
+      <li>Results take 2-6 weeks of consistent use, not immediate like a pill <span class="src">(infrared-light-therapy.com)</span></li>
+      <li>Won't replace diet/exercise for the weight-loss claims some competitors push <span class="src">(infrared-light-therapy.com; category ad copy)</span></li>
+    </ul>`;
+  document.getElementById('benefits').innerHTML = `
+    <h4>Top Benefits (grounded)</h4>
+    <ul>
+      <li>Neck pain relief specifically: 2009 Lancet systematic review found reduced acute/chronic neck pain lasting up to 22 weeks; a 2025 meta-analysis ranked light/laser therapy #1 among 6 physical-therapy modalities for neck pain <span class="src">(comfytemp.com blog; curayou.com)</span></li>
+      <li>Reduced inflammation, increased local blood circulation <span class="src">(infrared-light-therapy.com)</span></li>
+      <li>Faster muscle/tissue recovery, relief from myofascial trigger points <span class="src">(familyfirstchiropractor.com; neuroathletics.substack.com)</span></li>
+      <li>Fast acute relief within first few sessions for some users <span class="src">(infrared-light-therapy.com)</span></li>
+      <li>Unexpected skin-smoothing side benefit reported by users <span class="src">(Hooga review, blog.revgear.com)</span></li>
+    </ul>`;
+  document.getElementById('competitor').innerHTML = `
+    <h4>Competitor Angles Differentiated From</h4>
+    <ul>
+      <li>Nushape / Be Pain Free / UltraLux / Lifepro AllevaRed: "clinic-grade, skip the appointment" convenience framing, all body/joint <span class="src">4/17 Meta winners</span></li>
+      <li>Nomend LumaLean / Nura Beam (x4 ad variants): circulation &rarr; cortisol &rarr; belly-fat weight-loss framing <span class="src">5/17 Meta winners</span></li>
+      <li>Capriccio "Firmly": saggy-skin tightening, social-proof quote <span class="src">3/17 Meta winners</span></li>
+      <li>UltraLux / Lifepro / Nomend: contrarian "pills don't fix the cause, cells do" science-authority framing <span class="src">3/17 Meta winners</span></li>
+      <li><strong>Zero of 17 winners address the neck.</strong> Comfytemp (the #1 Amazon competitor, 126 LEDs) explicitly markets lower back/waist/shoulders/knees, not neck. This is the whitespace the top 3 angles are built on.</li>
+      <li>TikTok: 0 winners for this term (4 candidates killed as off-type: cat therapy, general skincare, LED panels, unrelated brand review); no TikTok competitor angles exist to differentiate from.</li>
+    </ul>`;
+}
+
+renderTop3();
+renderTable(angles);
+renderMacro();
+renderResearch();
+</script>
+</body>
+</html>

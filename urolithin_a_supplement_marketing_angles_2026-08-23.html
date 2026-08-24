@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urolithin A Supplement — Marketing Angles</title>
+<style>
+  :root{
+    --accent:#1e293b; --accent2:#334155;
+    --fresh:#0f9d58; --fresh-bg:#e6f4ea;
+    --twist:#e8a33d; --twist-bg:#fdf3e2;
+    --crowded:#c0392b; --crowded-bg:#fbe9e7;
+    --pain:#c0392b; --aspiration:#7d5ba6; --contrarian:#0f9d58; --fear:#b8860b; --social:#2f6fa8;
+    --bg:#f6f7f9; --card:#ffffff; --text:#1a1f29; --muted:#5b6472; --border:#e3e6eb;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--accent),var(--accent2));}
+  header.hero{background:#fff;padding:32px 6vw 24px;border-bottom:1px solid var(--border);}
+  header.hero h1{margin:0 0 6px;font-size:1.9rem;letter-spacing:-0.01em;}
+  header.hero .subtitle{color:var(--muted);font-size:1.02rem;margin:0 0 4px;}
+  header.hero .date{color:var(--muted);font-size:0.85rem;}
+  main{padding:28px 6vw 60px;max-width:1280px;margin:0 auto;}
+  section{margin-bottom:40px;}
+  h2{font-size:1.25rem;margin:0 0 14px;border-left:4px solid var(--accent);padding-left:10px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
+  .stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .stat-card .label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:6px;}
+  .stat-card .value{font-size:0.98rem;line-height:1.45;}
+  .stat-card.objection{border-left:4px solid var(--crowded);}
+  .badge{display:inline-block;font-size:0.72rem;font-weight:600;padding:3px 9px;border-radius:20px;letter-spacing:0.02em;}
+  .badge.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.twist{background:var(--twist-bg);color:#96691f;}
+  .badge.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .cat-pill{display:inline-block;font-size:0.68rem;font-weight:600;padding:2px 8px;border-radius:5px;color:#fff;}
+  .cat-pain{background:var(--pain);} .cat-aspiration{background:var(--aspiration);}
+  .cat-contrarian{background:var(--contrarian);} .cat-fear{background:var(--fear);} .cat-social{background:var(--social);}
+
+  .top3{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .top-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;position:relative;overflow:hidden;}
+  .top-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);}
+  .top-card .rank{font-size:0.75rem;color:var(--muted);font-weight:700;letter-spacing:0.05em;margin-bottom:6px;}
+  .top-card h3{margin:0 0 8px;font-size:1.15rem;}
+  .top-card .meta-row{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap;}
+  .top-card .insight{font-size:0.9rem;color:var(--text);margin-bottom:10px;}
+  .top-card .hook{background:#f4f5f7;border-left:3px solid var(--accent2);padding:10px 12px;font-size:0.88rem;font-style:italic;margin-bottom:10px;border-radius:0 6px 6px 0;}
+  .top-card .why{font-size:0.85rem;color:var(--muted);margin-bottom:12px;}
+  .top-card .format{font-size:0.78rem;color:var(--muted);margin-bottom:10px;}
+  .micro{border-top:1px dashed var(--border);padding-top:10px;margin-top:6px;}
+  .micro .mh{font-size:0.7rem;font-weight:700;text-transform:uppercase;color:var(--muted);letter-spacing:0.04em;margin-bottom:6px;}
+  .micro-item{font-size:0.83rem;margin-bottom:7px;}
+  .micro-item b{color:var(--accent2);font-weight:600;}
+
+  .controls{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+  .controls select,.controls input{padding:7px 10px;border:1px solid var(--border);border-radius:7px;font-size:0.85rem;background:#fff;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:0.85rem;}
+  thead th{text-align:left;background:#f0f2f5;padding:10px 12px;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--muted);cursor:pointer;user-select:none;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--border);vertical-align:top;}
+  tbody tr:hover{background:#fafbfc;}
+  .angle-name{font-weight:600;}
+  .legend{display:flex;gap:22px;flex-wrap:wrap;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:0.85rem;}
+  .legend .item{display:flex;gap:8px;align-items:flex-start;max-width:320px;}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .macro-card .m-title{font-weight:600;margin-bottom:4px;}
+  .macro-card .m-body{font-size:0.85rem;color:var(--muted);}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .notes-card h4{margin:0 0 10px;font-size:0.95rem;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:0.85rem;color:var(--text);}
+  .notes-card li{margin-bottom:6px;}
+  .divergence{background:#fff8e1;border:1px solid #f0d78c;border-radius:8px;padding:12px 14px;font-size:0.82rem;color:#6b5217;margin-top:14px;}
+  footer{padding:20px 6vw 40px;color:var(--muted);font-size:0.78rem;text-align:center;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="hero">
+  <h1>Urolithin A Supplement — Marketing Angles</h1>
+  <p class="subtitle">Avatar: 25–65+, health-conscious and biohacker-adjacent, supplement-fatigued from longevity products that showed no felt result, secretly hoping this one is different</p>
+  <p class="date">Published 2026-08-23</p>
+</header>
+<main>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="stats">
+    <div class="stat-card">
+      <div class="label">Avatar</div>
+      <div class="value">25–65+, unisex, health-conscious and longevity-curious. Splits into two real segments seen in research: (1) active/fitness-minded biohackers chasing recovery and performance edge, already fatigued from NMN/NAD+/collagen-style supplements that never showed a felt effect; (2) a smaller but real illness-recovery / chronic-fatigue (PEM) segment who aren't optimizing, they're trying to get back to baseline. Both are skeptical by default and want proof beyond "I feel amazing," because they've been burned before.</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Core Transformation</div>
+      <div class="value"><b>Before:</b> jaded, low-trust, paying for supplements that show zero felt result, unsure if cellular aging can even be addressed. <b>After:</b> taking a science-grounded action that shows up in measurable markers (strength %, inflammation, HRV) even before it's felt day to day, with real energy, recovery, and "good days" returning.</div>
+    </div>
+    <div class="stat-card objection">
+      <div class="label">Primary Objection</div>
+      <div class="value">"I've tried longevity supplements before and felt nothing, so why would $75+/month buy a different result this time?"</div>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3">
+
+    <div class="top-card">
+      <div class="rank">RANK 1</div>
+      <h3>Your Gut Stopped Making This At 30</h3>
+      <div class="meta-row"><span class="cat-pill cat-contrarian">Contrarian / Pattern Interrupt</span><span class="badge fresh">Fresh 0/3</span></div>
+      <div class="insight"><b>Core insight:</b> Only about a third of people's gut microbiome can efficiently convert plant compounds (pomegranate, walnuts, berries) into Urolithin A, and that conversion rate drops with age, so eating "healthy" for this specific benefit is often pointless. None of the 3 competitor winners explain this mechanism; all three simply assert "Urolithin A does X."</div>
+      <div class="hook">"Eating pomegranates for 'cellular health' probably isn't doing what you think. Most guts can't make the conversion, and it only gets worse after 30."</div>
+      <div class="format">Best format: static / carousel (stat-led education)</div>
+      <div class="why"><b>Why it wins:</b> a genuine, verifiable biology fact reframes the whole category as broken (food doesn't work for most people) rather than pitching "another supplement to try." It's a scroll-stopping pattern interrupt with zero competitor overlap.</div>
+      <div class="micro">
+        <div class="mh">Micro Hooks</div>
+        <div class="micro-item"><b>Problem-first:</b> You've been eating pomegranates and walnuts for "cellular health" for years. For most people, that food never converts into anything your cells can use.</div>
+        <div class="micro-item"><b>Curiosity:</b> Only about 1 in 3 people's gut bacteria can actually turn plant compounds into Urolithin A. Here's how to know if you're one of them, and what to do if you're not.</div>
+        <div class="micro-item"><b>Contra:</b> Stop eating more "antioxidant" foods hoping your gut will figure it out. Skip the conversion your microbiome was never built to do.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">RANK 2</div>
+      <h3>The Good Days Are Coming Back</h3>
+      <div class="meta-row"><span class="cat-pill cat-aspiration">Aspiration / Identity</span><span class="badge fresh">Fresh 0/3</span></div>
+      <div class="insight"><b>Core insight:</b> A real illness-recovery / chronic-fatigue (post-exertional malaise) subgroup found meaningful relief, reporting more "good days than bad" for the first time in a long time. All 3 competitor winners target performance/aging optimization for already-functional people; none speak to someone trying to get back to baseline.</div>
+      <div class="hook">"You don't want to biohack your life. You just want to feel like you again."</div>
+      <div class="format">Best format: testimonial / VSL</div>
+      <div class="why"><b>Why it wins:</b> it's the most emotionally raw angle in the set, grounded directly in real user quotes ("my PEM days have shortened, I'm having more good days than usual"), and it opens a completely untouched buyer segment competitors aren't speaking to at all.</div>
+      <div class="micro">
+        <div class="mh">Micro Hooks</div>
+        <div class="micro-item"><b>Problem-first:</b> Some mornings you can't get off the couch, and no amount of coffee or willpower fixes that kind of tired.</div>
+        <div class="micro-item"><b>Result-first:</b> One month in, and I'm having more good days than bad ones for the first time in a year.</div>
+        <div class="micro-item"><b>Social proof:</b> "My PEM days have shortened. I'm having more good days than usual." That's not a fitness testimonial. That's someone getting their life back.</div>
+      </div>
+    </div>
+
+    <div class="top-card">
+      <div class="rank">RANK 3</div>
+      <h3>Skeptics Who Changed Their Mind After The Blood Work</h3>
+      <div class="meta-row"><span class="cat-pill cat-social">Social Proof / Tribe</span><span class="badge fresh">Fresh 0/3</span></div>
+      <div class="insight"><b>Core insight:</b> The dominant real objection in research is "I felt no effect" and "I suspect it's not going to work," said almost verbatim by multiple people. This angle names that exact doubt out loud and resolves it with measurable markers instead of arguing against the skepticism. All 3 competitor winners open from confident authority, none open by admitting the buyer's doubt first.</div>
+      <div class="hook">"They didn't feel different. Then they saw their own inflammation markers."</div>
+      <div class="format">Best format: testimonial / VSL</div>
+      <div class="why"><b>Why it wins:</b> it directly defuses the exact objection this product's own reviews surface most, and it earns trust by agreeing with the skeptic first instead of overselling, the opposite move of every competitor ad in the set.</div>
+      <div class="micro">
+        <div class="mh">Micro Hooks</div>
+        <div class="micro-item"><b>Problem-first:</b> You don't feel different in week one. That's usually where people give up and call it a scam.</div>
+        <div class="micro-item"><b>Curiosity:</b> They didn't feel anything different for weeks. Then they saw their own inflammation markers.</div>
+        <div class="micro-item"><b>Contra:</b> Stop waiting to "feel it working." The cellular renewal shows up in your bloodwork long before it shows up in your mood.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search angle name or insight...">
+    <select id="filterCat">
+      <option value="">All categories</option>
+      <option value="Pain / Frustration">Pain / Frustration</option>
+      <option value="Aspiration / Identity">Aspiration / Identity</option>
+      <option value="Contrarian / Pattern Interrupt">Contrarian / Pattern Interrupt</option>
+      <option value="Fear / Urgency">Fear / Urgency</option>
+      <option value="Social Proof / Tribe">Social Proof / Tribe</option>
+    </select>
+    <select id="filterUniq">
+      <option value="">All uniqueness</option>
+      <option value="Fresh">Fresh</option>
+      <option value="Twist">Twist</option>
+      <option value="Crowded">Crowded</option>
+    </select>
+  </div>
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-key="name">Angle</th>
+        <th data-key="cat">Category</th>
+        <th data-key="uniq">Uniqueness</th>
+        <th data-key="insight">Core Insight</th>
+        <th data-key="hook">Hook</th>
+        <th data-key="format">Format</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="item"><span class="badge fresh">Fresh</span><span>No competitor ad uses this angle (0 matches against the 3 Meta Ad Winners on "urolithin a supplement"). The strongest, most differentiated picks.</span></div>
+    <div class="item"><span class="badge twist">Twist</span><span>A competitor hits the same pain or benefit, but this angle frames it differently and adds a real differentiator (count of adjacent matches noted).</span></div>
+    <div class="item"><span class="badge crowded">Crowded</span><span>One or more competitors already run essentially this angle (count of direct matches noted). Differentiate further or drop.</span></div>
+  </div>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <div class="m-title">New Year Wellness Reset (Winter)</div>
+      <div class="m-body">Activate ~2 weeks before New Year. Longevity/healthy-aging positioning fits the "new year, better cells" resolution window better than most product categories; pair with the gut-conversion education angle for a "start the year your cells can actually use" framing.</div>
+    </div>
+    <div class="macro-card">
+      <div class="m-title">Gift For The Parent Who Has Everything</div>
+      <div class="m-body">Row carries the Giftable green flag. Mother's Day / Father's Day / holiday gifting for aging or health-conscious parents; "the gift of more good days" ties naturally to the chronic-fatigue-adjacent Rank 2 angle without forcing an unrelated hook.</div>
+    </div>
+    <div class="macro-card">
+      <div class="m-title">Never Run Out (Subscription)</div>
+      <div class="m-body">Row carries the Consumable/Recurring Revenue green flag, and all 3 competitor winners already run subscribe-and-save offers, so this is validated market behavior, not a guess. Frame around the "cellular cleanup that needs continuous input" mechanism from Rank 1 rather than a generic discount push.</div>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points</h4>
+      <ul>
+        <li>"No effect on me at all" / "I suspect it's not going to work" — the dominant skepticism theme across Amazon 1-3★ and Reddit.</li>
+        <li>Price objection: "$75-125/month" seen as expensive relative to an unproven personal result; several say "worth trying once, won't rebuy at this price."</li>
+        <li>Slow, unclear results timeline: clinical trials measure over 4 months, but buyers expect to feel something in 2-8 weeks and often don't.</li>
+        <li>Confusion vs. other longevity supplements already tried and abandoned (NMN, NAD+, CoQ10) — supplement fatigue is real.</li>
+        <li>Minor logistics/side-effect complaints: softgel leakage in shipping, mild GI discomfort, occasional afternoon energy dips, near-expiry stock.</li>
+        <li>Only an estimated 30-40% of people's gut microbiome efficiently converts food-based ellagitannins into Urolithin A, which most buyers don't know.</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits</h4>
+      <ul>
+        <li>Muscle strength and endurance gains (12-15% in trials over weeks to months).</li>
+        <li>Clinically documented cellular/mitochondrial renewal via mitophagy (Nature Aging trials).</li>
+        <li>Faster recovery, reduced post-workout soreness, anti-inflammatory effect (lower CRP).</li>
+        <li>Real reported energy and HRV improvements from actual users, not just marketing copy.</li>
+        <li>A distinct illness-recovery / chronic-fatigue subgroup reporting shortened PEM (post-exertional malaise) episodes and more "good days," an unmarketed benefit pocket.</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Competitor Angles (Winners DB, N=3)</h4>
+      <ul>
+        <li><b>Timeline (Mitopure, our own product's brand):</b> "Mitophagy on Demand — the only Urolithin A with 6 clinical trials proving cellular renewal" [Social Proof]. Headline: "#1 Dr Recommended Urolithin A Supplement." 72 days running, our own manufacturer's ad.</li>
+        <li><b>ForYouth:</b> "Age in Reverse — 500mg daily Urolithin A activates your cell's own cleanup system to reverse aging from within" [Aspiration]. Headline: "Muscle Recovery in Hours, Not Days."</li>
+        <li><b>Onset:</b> "Cellular Age Reset — Urolithin A triggers mitophagy, the cellular cleaning process that declines after age 30" [Fear], targeted at peptide-stack users. Headline: "Double Your Peptide Results."</li>
+        <li>All 3 lean on the same core mechanism claim (mitophagy / cellular renewal via clinical trials) with different emotional wrappers. None explain the gut-conversion bottleneck, none address supplement-fatigue skepticism directly, and none touch the illness-recovery segment. That whitespace is where the top 3 picks above sit.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="divergence"><b>Research note:</b> this product's own manufacturer, Timeline (Mitopure), is itself the #1 Meta Ad Winner for this exact search term, and a rejected Meta ad in the same Winners DB pull (Healthy Aging Hub) runs an Amazon affiliate ad for this exact ASIN (B0F5FPSDQV). Direct Amazon review text and YouTube comments were not fetchable live (blocked / lazy-loaded), so those two legs lean on secondary aggregator sources (Medino's Reddit compilation, InnerBody, Timeline's own published review stats) rather than a first-party scrape; flagged here rather than papered over. AliExpress carries a real top-seller listing (178 orders) despite this row's AI Audit reading "AE = ABSENT (untapped)," a discrepancy from the audit step, not this run, noted for whoever next touches that cell.</div>
+</section>
+
+</main>
+<footer>Find Marketing Angles &middot; Nova Capital &middot; 2026-08-23</footer>
+
+<script>
+const ANGLES = [
+ {name:"Tired Of Supplements That Do Nothing", cat:"Pain / Frustration", uniq:"Twist 1/3", insight:"Buyers are jaded from past longevity supplements (NMN, collagen, etc.) that showed zero felt effect.", hook:"You've swallowed capsules for months and felt... nothing. Here's the one difference that actually shows up in blood work.", format:"UGC video"},
+ {name:"The Energy Crash Nobody Warns You About", cat:"Pain / Frustration", uniq:"Crowded 1/3", insight:"Afternoon energy dips people assume are just normal aging.", hook:"By 3pm your battery's dead and coffee stopped working years ago.", format:"Static"},
+ {name:"Why $75 A Month Doesn't Feel Worth It Yet", cat:"Pain / Frustration", uniq:"Fresh 0/3", insight:"Price/timeline objection: cellular renewal doesn't show up on a scale, so the value is hard to feel.", hook:"Cellular renewal doesn't show up on a scale, so how do you know it's working?", format:"Testimonial / VSL"},
+ {name:"The Good Days And Bad Days", cat:"Pain / Frustration", uniq:"Fresh 0/3", insight:"Chronic fatigue / illness-recovery pain point: unpredictable energy, some days unusable.", hook:"Some mornings you can't get off the couch. This is for getting more of the mornings you can.", format:"UGC / testimonial"},
+
+ {name:"Age Like Someone Who Knows Something You Don't", cat:"Aspiration / Identity", uniq:"Crowded 1/3", insight:"Identity: being the informed one who found the real science while others chase fads.", hook:"Everyone else is guessing. You read the mitophagy papers.", format:"Static / carousel"},
+ {name:"The Good Days Are Coming Back", cat:"Aspiration / Identity", uniq:"Fresh 0/3", insight:"Chronic-fatigue/burnout identity: becoming someone who feels like themselves again, not 'optimized.'", hook:"You don't want to biohack your life. You just want to feel like you again.", format:"Testimonial / VSL"},
+ {name:"Built To Outlast The Trend", cat:"Aspiration / Identity", uniq:"Twist 1/3", insight:"Identity: investing in real longevity science instead of chasing whichever supplement trends this month.", hook:"NMN was the trend two years ago. This is the mechanism your cells actually run on.", format:"Static"},
+ {name:"Reverse Aging From Where It Actually Starts", cat:"Aspiration / Identity", uniq:"Crowded 1/3", insight:"Aspiration to age backward at the cellular level.", hook:"Your cells decide how old you feel before your mirror does.", format:"Video / VSL"},
+
+ {name:"Your Gut Stopped Making This At 30", cat:"Contrarian / Pattern Interrupt", uniq:"Fresh 0/3", insight:"Most people's microbiome can't efficiently convert ellagitannins into Urolithin A, and it worsens with age, so eating 'healthy' for this often does nothing.", hook:"Eating pomegranates for 'cellular health' probably isn't doing what you think. Most guts can't make the conversion.", format:"Static / carousel"},
+ {name:"Stop Optimizing. Start Repairing.", cat:"Contrarian / Pattern Interrupt", uniq:"Twist 1/3", insight:"Contrarian vs. the biohacking obsession with adding more stacks; this is maintenance, not another performance hack.", hook:"You don't need another performance hack. You need your cells to finish taking out the trash.", format:"Static"},
+ {name:"The Supplement That Skips The Supplement Aisle Logic", cat:"Contrarian / Pattern Interrupt", uniq:"Twist 1/3", insight:"Most supplements just add nutrients; this triggers a process your body already runs.", hook:"This isn't a vitamin. It's the ingredient your cells were already looking for.", format:"Carousel"},
+ {name:"Peptides Won't Fix Broken Mitochondria", cat:"Contrarian / Pattern Interrupt", uniq:"Crowded 1/3", insight:"Contrarian to peptide-stacking crowd; damaged mitochondria waste the rest of the stack.", hook:"You can inject all the peptides you want. If the mitochondria running them are damaged, you're wasting the stack.", format:"Static"},
+
+ {name:"Cellular Cleanup Slows Down Every Year After 30", cat:"Fear / Urgency", uniq:"Crowded 1/3", insight:"Natural mitophagy decline with age.", hook:"Your cells' garbage disposal system is already losing power. It doesn't wait for a diagnosis.", format:"Static"},
+ {name:"You Can't Out-Train Damaged Mitochondria", cat:"Fear / Urgency", uniq:"Twist 1/3", insight:"For the fitness-focused: pushing hard on damaged cells risks burnout and diminishing returns.", hook:"The harder you train on damaged cells, the faster you break down, not build up.", format:"UGC video"},
+ {name:"What If The Fatigue Never Fully Lifts", cat:"Fear / Urgency", uniq:"Fresh 0/3", insight:"Fear angle for the illness-recovery audience: unaddressed cellular energy issues may mean 'good days' don't return.", hook:"If nothing changes at the cellular level, this might just be your baseline now.", format:"Testimonial"},
+ {name:"The Damage Is Invisible Until It Isn't", cat:"Fear / Urgency", uniq:"Twist 1/3", insight:"Mitochondrial damage compounds silently for years before symptoms show up.", hook:"By the time you feel it, you've been losing ground for years.", format:"Static"},
+
+ {name:"The One Supplement Longevity Researchers Actually Take Themselves", cat:"Social Proof / Tribe", uniq:"Twist 1/3", insight:"Authority-by-association: researchers/insiders using it personally, not just citing trials.", hook:"Ask a mitochondrial biologist what they personally take. This is usually the answer.", format:"Testimonial / VSL"},
+ {name:"Athletes Stopped Asking If It Works. They Just Take It.", cat:"Social Proof / Tribe", uniq:"Crowded 1/3", insight:"Tribe: performance-focused community adoption.", hook:"The debate's over in most locker rooms. It's just part of the stack now.", format:"UGC / carousel"},
+ {name:"Recovering, Not Optimizing: A Different Kind Of User", cat:"Social Proof / Tribe", uniq:"Fresh 0/3", insight:"Tribe: illness-recovery / chronic-fatigue community sharing quiet wins, not gym PRs.", hook:"This community isn't chasing PRs. They're just trying to have more good days than bad ones.", format:"Testimonial / UGC"},
+ {name:"Skeptics Who Changed Their Mind After The Blood Work", cat:"Social Proof / Tribe", uniq:"Fresh 0/3", insight:"Social proof built on people who started doubtful and were convinced by measurable markers, not a feeling.", hook:"They didn't feel different. Then they saw their own numbers.", format:"Testimonial / VSL"}
+];
+
+function uniqClass(u){ return u.startsWith("Fresh") ? "fresh" : u.startsWith("Twist") ? "twist" : "crowded"; }
+function catClass(c){
+  if(c.startsWith("Pain")) return "cat-pain";
+  if(c.startsWith("Aspiration")) return "cat-aspiration";
+  if(c.startsWith("Contrarian")) return "cat-contrarian";
+  if(c.startsWith("Fear")) return "cat-fear";
+  return "cat-social";
+}
+
+let sortKey = null, sortAsc = true;
+
+function render(){
+  const q = document.getElementById('search').value.toLowerCase();
+  const fc = document.getElementById('filterCat').value;
+  const fu = document.getElementById('filterUniq').value;
+  let rows = ANGLES.filter(a=>{
+    const matchQ = !q || a.name.toLowerCase().includes(q) || a.insight.toLowerCase().includes(q);
+    const matchC = !fc || a.cat === fc;
+    const matchU = !fu || a.uniq.startsWith(fu);
+    return matchQ && matchC && matchU;
+  });
+  if(sortKey){
+    rows = rows.slice().sort((a,b)=>{
+      let x = a[sortKey], y = b[sortKey];
+      return sortAsc ? x.localeCompare(y) : y.localeCompare(x);
+    });
+  }
+  const tbody = document.querySelector('#angleTable tbody');
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td class="angle-name">${a.name}</td>
+      <td><span class="cat-pill ${catClass(a.cat)}">${a.cat}</span></td>
+      <td><span class="badge ${uniqClass(a.uniq)}">${a.uniq}</span></td>
+      <td>${a.insight}</td>
+      <td><em>${a.hook}</em></td>
+      <td>${a.format}</td>
+    </tr>`).join('');
+}
+
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('filterCat').addEventListener('change', render);
+document.getElementById('filterUniq').addEventListener('change', render);
+document.querySelectorAll('#angleTable thead th').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.key;
+    if(sortKey === key) sortAsc = !sortAsc; else { sortKey = key; sortAsc = true; }
+    render();
+  });
+});
+render();
+</script>
+</body>
+</html>

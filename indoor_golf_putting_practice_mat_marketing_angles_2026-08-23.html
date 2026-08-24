@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Indoor Golf Putting Practice Mat - Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root{
+    --slate:#1e293b; --slate2:#334155; --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --sub:#475569;
+    --line:#e2e8f0; --fresh:#16a34a; --freshbg:#dcfce7; --twist:#d97706; --twistbg:#fef3c7;
+    --crowded:#dc2626; --crowdedbg:#fee2e2; --accent:#6366f1;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate2));}
+  header.page-header{background:var(--card);padding:28px 32px 22px;border-bottom:1px solid var(--line);}
+  header.page-header h1{margin:0 0 6px;font-size:1.6rem;}
+  header.page-header .subtitle{color:var(--sub);font-size:0.98rem;max-width:900px;line-height:1.5;}
+  header.page-header .date{color:#94a3b8;font-size:0.82rem;margin-top:10px;}
+  main{max-width:1180px;margin:0 auto;padding:24px 20px 60px;}
+  .summary-block{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 24px;margin-bottom:26px;}
+  .summary-block h2{margin-top:0;font-size:1.05rem;}
+  .summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px;}
+  .summary-grid .item h3{margin:0 0 6px;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--sub);}
+  .summary-grid .item p{margin:0;line-height:1.55;font-size:0.93rem;}
+  .objection{background:#fff7ed;border:1px solid #fed7aa;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:0.93rem;line-height:1.55;}
+  .objection b{color:#c2410c;}
+  .divergence{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 16px;margin-top:14px;font-size:0.87rem;line-height:1.55;color:#1e3a5f;}
+  .divergence b{color:#1d4ed8;}
+  section{margin-bottom:34px;}
+  section > h2{font-size:1.15rem;margin-bottom:14px;border-left:4px solid var(--accent);padding-left:10px;}
+  .badge{display:inline-block;font-size:0.72rem;font-weight:700;letter-spacing:0.03em;padding:3px 9px;border-radius:99px;text-transform:uppercase;}
+  .badge.fresh{background:var(--freshbg);color:var(--fresh);}
+  .badge.twist{background:var(--twistbg);color:var(--twist);}
+  .badge.crowded{background:var(--crowdedbg);color:var(--crowded);}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;}
+  .top3-card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  .top3-card .accent{height:5px;}
+  .top3-card .accent.fresh{background:var(--fresh);} .top3-card .accent.twist{background:var(--twist);} .top3-card .accent.crowded{background:var(--crowded);}
+  .top3-card .body{padding:18px 20px;}
+  .top3-card .rank{font-size:0.78rem;color:var(--sub);font-weight:700;letter-spacing:0.04em;}
+  .top3-card h3{margin:4px 0 8px;font-size:1.15rem;}
+  .top3-card .cat{font-size:0.78rem;color:var(--sub);margin-bottom:10px;}
+  .top3-card .insight{font-size:0.9rem;line-height:1.5;margin-bottom:10px;}
+  .top3-card .hook{background:#f1f5f9;border-radius:6px;padding:10px 12px;font-size:0.88rem;font-style:italic;line-height:1.5;margin-bottom:10px;}
+  .top3-card .why{font-size:0.85rem;line-height:1.5;color:var(--sub);margin-bottom:10px;}
+  .top3-card .fmt{font-size:0.78rem;color:var(--sub);margin-bottom:10px;}
+  .top3-card .hooks{margin:0;padding-left:18px;font-size:0.83rem;line-height:1.6;}
+  .top3-card .hooks li b{color:var(--accent);}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .filters button{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:6px 14px;font-size:0.82rem;cursor:pointer;}
+  .filters button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:0.87rem;}
+  thead th{background:#f1f5f9;text-align:left;padding:10px 12px;font-size:0.76rem;text-transform:uppercase;letter-spacing:0.03em;color:var(--sub);cursor:pointer;user-select:none;}
+  tbody td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;line-height:1.45;}
+  tbody tr.hidden{display:none;}
+  .legend{display:flex;flex-wrap:wrap;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:0.85rem;margin-top:14px;}
+  .legend .row{display:flex;gap:8px;align-items:baseline;}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .macro-card h4{margin:0 0 6px;font-size:0.95rem;}
+  .macro-card p{margin:0;font-size:0.87rem;line-height:1.5;color:var(--sub);}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;}
+  .notes-card h4{margin:0 0 10px;font-size:0.92rem;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:0.85rem;line-height:1.55;}
+  .notes-card ul li{margin-bottom:6px;}
+  .src{color:#64748b;font-size:0.78rem;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="page-header">
+  <h1>Indoor Golf Putting Practice Mat &mdash; Marketing Angles</h1>
+  <div class="subtitle">Avatar: golfers 30-65, male-dominated, who can't get to the course as often as they'd like, own (or have tried) a cheap mat that felt like carpet and taught nothing, and are genuinely skeptical a flat indoor mat can transfer to real greens.</div>
+  <div class="date">Published 2026-08-23 &middot; Product DB row 14 &middot; REFRESH of a stale 2026-06-16 report</div>
+</header>
+
+<main>
+
+<div class="summary-block">
+  <h2>Summary</h2>
+  <div class="summary-grid">
+    <div class="item">
+      <h3>Avatar</h3>
+      <p>Golfers 30-65 (Age Demo per Product DB), male-dominated, playing regularly but not daily; short-game strokes bleed away between rounds because the course is the only place they ever practice putting. Many have already tried a cheap ($20-40) mat that rolled inconsistently and taught bad habits, or have seen a premium ($370-700) mat and balked at the price. A meaningful slice of demand is gift-driven (spouse/kids buying "for the golfer" in their life).</p>
+    </div>
+    <div class="item">
+      <h3>Core Transformation</h3>
+      <p><b>Before:</b> missing makeable short putts because the only practice reps happen on the course, once a week at best, with strokes that never get grooved. <b>After:</b> a confident, repeatable putting stroke built from daily home reps on a true, consistent surface, so the 3-6 footers that used to lip out start dropping on the course, without needing real grass or a $400+ mat to get there.</p>
+    </div>
+  </div>
+  <div class="objection"><b>PRIMARY OBJECTION:</b> "A flat indoor mat can't replicate a real green, so practicing on one won't actually lower my scores." &mdash; grounded in this run's own research: independent golf-review sources describe mat surfaces as "too forgiving" (mishits roll true when they wouldn't on grass), rolling "nothing like actual grass" with no break or grain variation, and a reviewer's own uncertainty ("too early to tell if I've taken any strokes off my game").</div>
+  <div class="divergence"><b>Divergence noted:</b> the row's AI Audit cell labels the Social readout "Search Term: 'golf'", but the Product DB's own Notes field locks the Product/Social term as "putting mat" ("golf" is the separate Market term used for Trends/YouTube). The Winners DB has zero rows under "golf" and 9 under "putting mat" (7 classified "w", 2 "w-ish"), which is what actually reconciles against the sheet's Meta Ad Ws = 7. This report scores uniqueness against the live 9-row "putting mat" competitor set; the "golf" label in the audit cell is a shorthand mislabel, not a data gap, and is left for the owning audit step to relabel, not corrected here.</div>
+</div>
+
+<section>
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="top3-card">
+      <div class="accent fresh"></div>
+      <div class="body">
+        <div class="rank">RANK 1 &middot; Contrarian / Pattern Interrupt</div>
+        <h3>Real Grass Is Overrated For This One Skill</h3>
+        <div class="cat"><span class="badge fresh">Fresh 0/9</span></div>
+        <div class="insight">The primary objection assumes realism is the whole game; the actual research shows short-putt improvement comes from repeatable reps, not grass, so the angle disarms the objection by conceding the premise and reframing the win.</div>
+        <div class="hook">"Tired of hearing 'a mat can't replicate real grass'? For putting, it doesn't need to. Pros make 9 out of 10 putts from 5 feet, and it has nothing to do with what's under their feet."</div>
+        <div class="why"><b>Why it wins:</b> zero of the 9 competitor winners for "putting mat" run a contrarian angle; every one of them leans INTO realism claims (green speed matching, "truest roll," "authentic green conditions"). This is the only angle that meets cold traffic's real skepticism head-on instead of dodging it, and it's grounded directly in this run's research on short-putt make-rates from repeated practice.</div>
+        <div class="fmt"><b>Format:</b> UGC video / testimonial (a real golfer explaining why they stopped caring about grass-matching)</div>
+        <ul class="hooks">
+          <li><b>Problem-first:</b> "Tired of hearing 'a mat can't replicate real grass'? For putting, it doesn't need to."</li>
+          <li><b>Curiosity:</b> "Pros make 9 out of 10 putts from 5 feet, and it has nothing to do with grass."</li>
+          <li><b>Contra:</b> "Stop waiting for green fees to fix your short putts. Fix them on your garage floor."</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top3-card">
+      <div class="accent fresh"></div>
+      <div class="body">
+        <div class="rank">RANK 2 &middot; Fear / Urgency</div>
+        <h3>The 3-Footer You'll Miss In Front Of Everyone</h3>
+        <div class="cat"><span class="badge fresh">Fresh 0/9</span></div>
+        <div class="insight">The sharpest, most specific fear isn't "my handicap won't improve," it's the social sting of missing a short putt everyone in the group expected you to make.</div>
+        <div class="hook">"Nothing kills a round like missing the putt everyone expected you to make. Walk up to every 3-footer knowing it's dropping, because you've made it a thousand times already."</div>
+        <div class="why"><b>Why it wins:</b> none of the 9 competitor winners run a fear/urgency angle at all, and none touch the social-embarrassment dimension specifically; every ad in the set frames the benefit as personal skill or realism, never the public moment of missing in front of a foursome, which is the single most emotionally charged, differentiated lever available here.</div>
+        <div class="fmt"><b>Format:</b> UGC video / testimonial</div>
+        <ul class="hooks">
+          <li><b>Problem-first:</b> "Nothing kills a round like missing the putt everyone expected you to make."</li>
+          <li><b>Result-first:</b> "Walk up to every 3-footer knowing it's dropping, because you've made it a thousand times already."</li>
+          <li><b>Social proof:</b> "Golfers who practice these putts at home stop 3-putting in front of their foursome."</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="top3-card">
+      <div class="accent twist"></div>
+      <div class="body">
+        <div class="rank">RANK 3 &middot; Pain / Frustration</div>
+        <h3>Cheap Mats Taught You To Putt Wrong</h3>
+        <div class="cat"><span class="badge twist">Twist 1/9</span></div>
+        <div class="insight">Pre-empts the "I already tried a mat and it didn't work" objection by reframing the failure: it wasn't the concept, it was a cheap mat's inconsistent roll teaching a bad stroke.</div>
+        <div class="hook">"That $20 mat you tried? It wasn't teaching you to putt, it was teaching you to guess. A flat, true roll every time, so what you practice is what actually happens on the green."</div>
+        <div class="why"><b>Why it wins:</b> directly grounded in this run's own research ("cheap mats develop grooves and wonky rolls fast," "unrealistic ball roll from inconsistent fiber density teaches poor habits"). Adjacent to PrimePutt's "No Ramps No Curls" (also a flat-surface-accuracy pain claim), so it's scored Twist, not Fresh, but it earns the top-3 slot because it's the only angle that validates a buyer's specific past disappointment with a real, credible reason, rather than just claiming a flatter surface.</div>
+        <div class="fmt"><b>Format:</b> static / carousel (side-by-side "wonky roll vs true roll")</div>
+        <ul class="hooks">
+          <li><b>Problem-first:</b> "That $20 mat you tried? It wasn't teaching you to putt, it was teaching you to guess."</li>
+          <li><b>Result-first:</b> "A flat, true roll every time, so what you practice is what actually happens on the green."</li>
+          <li><b>Contra:</b> "Stop blaming your stroke. Your old mat's inconsistent roll was the real problem."</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>All 20 Angles</h2>
+  <div class="filters" id="catFilters">
+    <button class="active" data-filter="cat" data-value="all">All Categories</button>
+    <button data-filter="cat" data-value="Pain">Pain</button>
+    <button data-filter="cat" data-value="Aspiration">Aspiration</button>
+    <button data-filter="cat" data-value="Contrarian">Contrarian</button>
+    <button data-filter="cat" data-value="Fear">Fear</button>
+    <button data-filter="cat" data-value="Social Proof">Social Proof</button>
+  </div>
+  <div class="filters" id="uniqFilters">
+    <button class="active" data-filter="uniq" data-value="all">All Uniqueness</button>
+    <button data-filter="uniq" data-value="Fresh">Fresh</button>
+    <button data-filter="uniq" data-value="Twist">Twist</button>
+    <button data-filter="uniq" data-value="Crowded">Crowded</button>
+  </div>
+  <div style="overflow-x:auto;">
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="cat">Category</th>
+        <th data-sort="uniq">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="fmt">Format</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-cat="Pain" data-uniq="Fresh"><td>Lost The 3 Strokes You Didn't Have To Lose</td><td>Pain</td><td><span class="badge fresh">Fresh 0/9</span></td><td>The strokes bleeding away aren't from a weak swing, they're from short putts that were never grooved through real practice.</td><td>Your driver isn't costing you strokes. The 3-footer you didn't practice is.</td><td>Static</td></tr>
+      <tr data-cat="Pain" data-uniq="Twist"><td>You Can't Practice What You Can't Access</td><td>Pain</td><td><span class="badge twist">Twist 1/9</span></td><td>The frustration is course-access scarcity itself: putting only ever gets practiced once a week, on the course, under pressure.</td><td>Between rounds, your putting stroke goes cold. It doesn't have to.</td><td>UGC video</td></tr>
+      <tr data-cat="Pain" data-uniq="Twist"><td>Cheap Mats Taught You To Putt Wrong</td><td>Pain</td><td><span class="badge twist">Twist 1/9</span></td><td>Reframes a past bad mat experience: it wasn't the concept that failed, it was an inconsistent roll teaching a bad stroke.</td><td>That $20 mat you tried? It wasn't teaching you to putt, it was teaching you to guess.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Pain" data-uniq="Crowded"><td>The 60% Of Golf Nobody Practices</td><td>Pain</td><td><span class="badge crowded">Crowded 1/9</span></td><td>Short game is the majority of strokes and the least-practiced skill, framed as a neglect problem rather than a feature.</td><td>You've spent hundreds on your swing. You've spent nothing on the putts that actually decide your score.</td><td>Static</td></tr>
+
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>Practice Like The Pros Warm Up</td><td>Aspiration</td><td><span class="badge twist">Twist 1/9</span></td><td>Identity aspiration: the pre-round tour-pro putting routine, now available at home every day, not just before a round.</td><td>Tour pros putt for 30 minutes before every round. You can too, every single day.</td><td>UGC video</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>The Golfer Who's Always Ready</td><td>Aspiration</td><td><span class="badge twist">Twist 2/9</span></td><td>Confidence as identity: never walking up to a green rusty, always dialed in regardless of when the last round was.</td><td>Other golfers warm up on the practice green and hope. You already know your stroke is dialed in.</td><td>Testimonial</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>Turn Dead Time Into Strokes Off Your Handicap</td><td>Aspiration</td><td><span class="badge twist">Twist 1/9</span></td><td>Reframes idle evenings/TV time as productive practice time, a time-efficiency identity rather than a space one.</td><td>15 minutes in front of the TV is 15 minutes closer to a lower handicap.</td><td>UGC video</td></tr>
+      <tr data-cat="Aspiration" data-uniq="Twist"><td>Your Garage, Your Green</td><td>Aspiration</td><td><span class="badge twist">Twist 2/9</span></td><td>Ownership/status identity: having your own practice green is its own kind of golf-guy flex among friends.</td><td>Every golfer wants a home green. Now yours actually has one.</td><td>Static / carousel</td></tr>
+
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>You Don't Need A Real Green To Fix A Real Problem</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Directly challenges the premise that realism is required, reframing the goal as repeatable reps, not grass-matching.</td><td>Every ad for a putting mat brags about "real green feel." Here's what actually fixes your putting: reps.</td><td>Static</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>Stimpmeter Obsession Is A Distraction</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Pattern-interrupts the spec-war (exact green-speed matching) competitors lean on, arguing consistency beats speed-matching.</td><td>Nobody asks what Stimpmeter your home green runs. They ask if you made the putt.</td><td>UGC video</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>The $400 Mat Won't Fix You. The Rep Count Will.</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Directly challenges the premium-pricing logic in this category by reframing volume of practice as the real driver, not price tier.</td><td>A $700 mat doesn't putt for you. Reps do. Get the reps in without the price tag.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Contrarian" data-uniq="Fresh"><td>Real Grass Is Overrated For This One Skill</td><td>Contrarian</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Concedes the realism premise and reframes the win around make-rate from repeated practice, not surface authenticity.</td><td>Tired of hearing "a mat can't replicate real grass"? For putting, it doesn't need to.</td><td>UGC video / testimonial</td></tr>
+
+      <tr data-cat="Fear" data-uniq="Fresh"><td>Every Season You Don't Fix Your Putting Is A Season You Play The Same Round</td><td>Fear</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Loss-aversion aimed at stagnation: without deliberate practice, next season's scorecard looks like this season's.</td><td>Same swing thoughts, same 3-putts, same score. Nothing changes unless you actually practice the part that's failing.</td><td>VSL</td></tr>
+      <tr data-cat="Fear" data-uniq="Fresh"><td>The 3-Footer You'll Miss In Front Of Everyone</td><td>Fear</td><td><span class="badge fresh">Fresh 0/9</span></td><td>The sharpest fear is the public moment of missing a short putt the group expected you to make.</td><td>Nothing kills a round like missing the putt everyone expected you to make.</td><td>UGC video / testimonial</td></tr>
+      <tr data-cat="Fear" data-uniq="Fresh"><td>Off-Season Rust Costs You Your Opening Round</td><td>Fear</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Seasonal urgency: skip winter practice and pay for it with a cold, rusty stroke on the first round back.</td><td>The golfers who keep practicing through winter are the ones who don't need 3 rounds to shake off the rust.</td><td>Static</td></tr>
+      <tr data-cat="Fear" data-uniq="Fresh"><td>Your Handicap Isn't Going Down On Its Own</td><td>Fear</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Passive-inaction fear: time alone doesn't lower a handicap, deliberate practice does, and the clock keeps running either way.</td><td>Another year of golf. Same handicap. Nothing changes unless you actually do something different.</td><td>Testimonial</td></tr>
+
+      <tr data-cat="Social Proof" data-uniq="Twist"><td>The Mat Golfers Actually Keep Using</td><td>Social Proof</td><td><span class="badge twist">Twist 1/9</span></td><td>Peer/customer-use proof (ongoing satisfaction, not a one-time review), a different proof-type than the competitor set's pro-endorsement claim.</td><td>Not a gadget that gets used twice and forgotten. Golfers who buy this are still using it a year later.</td><td>Static / carousel</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Crowded"><td>The Gift Every Golfer Actually Wants (Not Another Sleeve Of Balls)</td><td>Social Proof</td><td><span class="badge crowded">Crowded 1/9</span></td><td>Gift-giver framing, differentiated from generic golf-gift cliches by naming what golfers are tired of receiving.</td><td>He doesn't need another dozen balls. He needs somewhere to actually get better.</td><td>Static</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Fresh"><td>Foursomes Talk. Yours Will Be Talking About Your Putting.</td><td>Social Proof</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Peer social pressure reframed positively: your regular group notices when your short game visibly improves.</td><td>Your foursome noticed you stopped 3-putting. They're going to ask what changed.</td><td>UGC video</td></tr>
+      <tr data-cat="Social Proof" data-uniq="Fresh"><td>The Golfers Comparing Notes On What Actually Worked</td><td>Social Proof</td><td><span class="badge fresh">Fresh 0/9</span></td><td>Community/tribe discovery framing: golfers trading real results, not marketing claims, about what actually moved their putting.</td><td>Golf forums are full of "what actually worked" threads. This is the answer that keeps coming up.</td><td>UGC / testimonial</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend">
+    <div class="row"><span class="badge fresh">Fresh</span> no competitor ad uses this angle (0 matches) &mdash; the strongest, most differentiated picks.</div>
+    <div class="row"><span class="badge twist">Twist</span> competitors hit the same pain/benefit but frame it differently; this angle adds a fresh differentiator (count = adjacent matches).</div>
+    <div class="row"><span class="badge crowded">Crowded</span> one or more competitors already run essentially this angle (count = direct matches); differentiate further or drop.</div>
+    <div class="row" style="color:var(--sub);">Denominator = 9 classified competitor rows (7 "w" + 2 "w-ish") for the locked Product/Social term "putting mat" in the Winners DB, which reconciles against the Product DB's Meta Ad Ws = 7 ("w"-only count); see the divergence note above on the "golf" vs "putting mat" term label.</div>
+  </div>
+</section>
+
+<section>
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h4>Holiday / Father's Day Gift Push</h4>
+      <p>Gift framing is one of the strongest signals across every research source: this run's Amazon benchmark listing's top featured review reads "Perfect gift for a golfer," the AliExpress top-seller leads its title with "Gift for Golfer," and 2 of the 9 Winners DB competitors (Explanar's "Golf Gift Bundling," Wellputt's coach-endorsed positioning) lean on gifting. Activate 2 weeks ahead of Father's Day, Christmas, and BFCM.</p>
+    </div>
+    <div class="macro-card">
+      <h4>Off-Season / Winter Practice Sale</h4>
+      <p>Ties directly to the Fear-category "Off-Season Rust" angle: position a winter sale as the fix for spring rust, when golfers are off the course and most receptive to an at-home training purchase.</p>
+    </div>
+    <div class="macro-card">
+      <h4>BFCM Sale</h4>
+      <p>Validated in-category: this exact product's own current live ad (Chiputt, row 817 in the Winners DB "putting mat" set) already runs "Best Price as Black Friday!" bundling promo, so a BFCM sale push is a proven-converting seasonal angle in this niche, not a speculative one.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h4>Top Pain Points (this run's research)</h4>
+      <ul>
+        <li>Unrealistic ball roll on cheap/low-grade mats: "develop grooves and wonky rolls pretty fast" (12-24 months), teaching poor habits rather than improving stroke <span class="src">(BirdieBall, Bulger Brothers)</span></li>
+        <li>Category-level skepticism that a flat mat transfers to real greens: "too forgiving" (mishits roll true when they wouldn't on grass), "rolls nothing like actual grass" <span class="src">(Golf.com, BirdieBall)</span></li>
+        <li>Reviewer uncertainty on real transfer: "too early to tell if I've taken any strokes off my game" <span class="src">(PluggedInGolf)</span></li>
+        <li>Price tiering creates real friction: budget mats ~$20-70 feel disposable, premium mats $370-700 (PrimePutt, Puttr) price out casual buyers <span class="src">(WickedSmartGolf, Breaking Eighty)</span></li>
+        <li>Setup/storage friction on larger or platform-style mats (awkward stance distance, hard to store) <span class="src">(WickedSmartGolf AirBreak review)</span></li>
+        <li>Amazon benchmark listing complaints: "poor value" (2-star), missing/defective parts, product warping <span class="src">(Amazon B07YQ7935B featured reviews)</span></li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Top Benefits (this run's research)</h4>
+      <ul>
+        <li>Genuine skill transfer for short putts with consistent reps: pros make ~90% from 5 feet off practiced repetition <span class="src">(BirdieBall research synthesis)</span></li>
+        <li>Strong "gift for a golfer" resonance across both the Amazon benchmark listing's top review and the AliExpress top-seller's own title framing <span class="src">(Amazon, AliExpress)</span></li>
+        <li>Home/garage/office practice convenience is the #1 repeated draw: golfers value being able to putt "anytime, anywhere" without a course trip <span class="src">(AliExpress reviews, Amazon featured reviews)</span></li>
+        <li>4.6&#9733;/~1,700 reviews on the Amazon category-benchmark listing and 4.9&#9733;/328 reviews + 2,000+ sold on the AliExpress top seller both signal durable category demand <span class="src">(Amazon, AliExpress)</span></li>
+        <li>Flat, consistent surfaces (no ramps/curls) are explicitly called out as a trust-builder once buyers have been burned by an inconsistent cheap mat <span class="src">(PrimePutt competitor ad, review synthesis)</span></li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h4>Competitor Angles Being Differentiated From</h4>
+      <ul>
+        <li><b>Aspiration cluster (5/9):</b> "authentic green conditions," "truest roll available," "anytime anywhere practice," "spec-led realism" (Stimpmeter/pin-count specs), "golf gift bundling."</li>
+        <li><b>Pain cluster (3/9):</b> "no ramps or curls" (flat-surface accuracy), "direction training" (alignment lines/distance markers), and this exact product's own current live ad, "Complete Short Game System" (two mats, putting + chipping, in one purchase).</li>
+        <li><b>Social Proof cluster (1/9):</b> Wellputt's coach-endorsement (Cameron McCormick / Jordan Spieth's coach) and awards positioning.</li>
+        <li>None of the 9 competitors run a Contrarian or Fear/Urgency angle at all, none directly disarm the "does practicing on a mat actually work" skepticism, and none touch the social-embarrassment moment of missing a short putt in front of others, the basis for this report's top 3 picks.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  var catBtns = document.querySelectorAll('#catFilters button');
+  var uniqBtns = document.querySelectorAll('#uniqFilters button');
+  var rows = document.querySelectorAll('#angleTable tbody tr');
+  var state = {cat:'all', uniq:'all'};
+
+  function apply(){
+    rows.forEach(function(r){
+      var okCat = state.cat === 'all' || r.getAttribute('data-cat') === state.cat;
+      var okUniq = state.uniq === 'all' || r.getAttribute('data-uniq') === state.uniq;
+      r.classList.toggle('hidden', !(okCat && okUniq));
+    });
+  }
+  catBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      catBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      state.cat = b.getAttribute('data-value');
+      apply();
+    });
+  });
+  uniqBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      uniqBtns.forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      state.uniq = b.getAttribute('data-value');
+      apply();
+    });
+  });
+
+  var uniqOrder = {'Fresh':0,'Twist':1,'Crowded':2};
+  document.querySelectorAll('#angleTable thead th').forEach(function(th, idx){
+    th.addEventListener('click', function(){
+      var tbody = document.querySelector('#angleTable tbody');
+      var rowsArr = Array.prototype.slice.call(tbody.querySelectorAll('tr'));
+      var key = th.getAttribute('data-sort');
+      rowsArr.sort(function(a,b){
+        if(key === 'uniq'){
+          return uniqOrder[a.getAttribute('data-uniq')] - uniqOrder[b.getAttribute('data-uniq')];
+        }
+        var ta = a.children[idx].textContent.trim().toLowerCase();
+        var tb = b.children[idx].textContent.trim().toLowerCase();
+        return ta.localeCompare(tb);
+      });
+      rowsArr.forEach(function(r){ tbody.appendChild(r); });
+    });
+  });
+})();
+</script>
+
+</body>
+</html>

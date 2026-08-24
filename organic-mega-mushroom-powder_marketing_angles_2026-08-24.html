@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Organic Mega Mushroom Powder — Marketing Angles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --slate: #1e293b;
+    --slate-dark: #0f172a;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-mute: #64748b;
+    --fresh: #059669;
+    --fresh-bg: #ecfdf5;
+    --twist: #b45309;
+    --twist-bg: #fffbeb;
+    --crowded: #b91c1c;
+    --crowded-bg: #fef2f2;
+    --accent: #4f46e5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .topbar { height: 6px; background: linear-gradient(90deg, var(--slate-dark), var(--slate)); }
+  header.hero {
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 32px 24px 24px;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  header.hero h1 { margin: 0 0 6px; font-size: 1.7rem; }
+  header.hero .subtitle { color: var(--text-mute); font-size: 1rem; margin: 0 0 4px; }
+  header.hero .date { color: var(--text-mute); font-size: 0.85rem; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin: 20px auto;
+    max-width: 1180px;
+    padding: 0 24px;
+  }
+  .stat {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .stat .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-mute); margin-bottom: 4px; }
+  .stat .value { font-size: 1.15rem; font-weight: 600; }
+  main { max-width: 1180px; margin: 0 auto; padding: 8px 24px 60px; }
+  section { margin-top: 40px; }
+  section h2 { font-size: 1.3rem; margin-bottom: 4px; }
+  section .section-sub { color: var(--text-mute); font-size: 0.88rem; margin-bottom: 16px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em;
+    padding: 3px 9px; border-radius: 999px;
+  }
+  .badge.fresh { color: var(--fresh); background: var(--fresh-bg); }
+  .badge.twist { color: var(--twist); background: var(--twist-bg); }
+  .badge.crowded { color: var(--crowded); background: var(--crowded-bg); }
+
+  .top3-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+  .top3-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; display: flex; flex-direction: column;
+  }
+  .top3-card .accent { height: 5px; }
+  .top3-card .accent.fresh { background: var(--fresh); }
+  .top3-card .accent.twist { background: var(--twist); }
+  .top3-card .accent.crowded { background: var(--crowded); }
+  .top3-card .body { padding: 18px 20px 20px; }
+  .rank-pill {
+    display: inline-block; width: 26px; height: 26px; border-radius: 50%;
+    background: var(--slate-dark); color: #fff; text-align: center; line-height: 26px;
+    font-weight: 700; font-size: 0.85rem; margin-right: 8px;
+  }
+  .top3-card h3 { margin: 10px 0 4px; font-size: 1.15rem; }
+  .cat-tag { color: var(--accent); font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.02em; }
+  .top3-card .insight { margin: 10px 0; font-size: 0.92rem; }
+  .top3-card .hook {
+    background: var(--bg); border-left: 3px solid var(--accent); padding: 10px 12px;
+    font-style: italic; font-size: 0.9rem; margin: 10px 0; border-radius: 0 6px 6px 0;
+  }
+  .top3-card .why { font-size: 0.86rem; color: var(--text-mute); margin: 10px 0; }
+  .top3-card .field-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-mute); margin-top: 12px; }
+  .micro-hooks { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 6px; }
+  .micro-hooks li { font-size: 0.85rem; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; }
+  .micro-hooks .type { font-weight: 700; text-transform: uppercase; font-size: 0.68rem; color: var(--accent); display: block; margin-bottom: 2px; }
+  .format-line { font-size: 0.82rem; margin-top: 8px; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center; }
+  .controls select, .controls input {
+    padding: 7px 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85rem; background: #fff;
+  }
+  .controls input { flex: 1; min-width: 180px; }
+  .filter-btn {
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: #fff;
+    font-size: 0.8rem; cursor: pointer; color: var(--text);
+  }
+  .filter-btn.active { background: var(--slate-dark); color: #fff; border-color: var(--slate-dark); }
+
+  table.angle-table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  table.angle-table th, table.angle-table td { padding: 10px 12px; text-align: left; font-size: 0.86rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  table.angle-table th { background: var(--bg); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-mute); cursor: pointer; user-select: none; }
+  table.angle-table tbody tr:hover { background: #fafafa; }
+  table.angle-table td.hook-cell { font-style: italic; color: var(--text-mute); }
+  .table-wrap { overflow-x: auto; }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 20px; background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 20px; font-size: 0.85rem; margin-top: 16px;
+  }
+  .legend .item { display: flex; align-items: flex-start; gap: 8px; max-width: 320px; }
+
+  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+  .macro-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .macro-card .tag { font-size: 0.72rem; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 6px; }
+  .macro-card h4 { margin: 0 0 6px; font-size: 1rem; }
+  .macro-card p { margin: 0; font-size: 0.87rem; color: var(--text-mute); }
+
+  .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .notes-card { background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+  .notes-card h4 { margin: 0 0 10px; font-size: 0.95rem; }
+  .notes-card ul { margin: 0; padding-left: 18px; font-size: 0.86rem; }
+  .notes-card li { margin-bottom: 6px; }
+  .competitor-row { display: flex; justify-content: space-between; gap: 10px; font-size: 0.85rem; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .competitor-row:last-child { border-bottom: none; }
+  .competitor-row .angle-name { font-weight: 600; }
+  .competitor-row .meta { color: var(--text-mute); font-size: 0.78rem; }
+
+  footer { text-align: center; color: var(--text-mute); font-size: 0.78rem; padding: 30px 24px 50px; }
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header class="hero">
+  <div class="wrap">
+    <h1>Organic Mega Mushroom Powder — Marketing Angles</h1>
+    <p class="subtitle">Avatar: 38-55, health-conscious professional, unisex, already invested in wellness/biohacking, running on borrowed coffee-energy, jaded by a mushroom or greens product that "did nothing"</p>
+    <p class="date">Generated 08-24-2026</p>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat"><div class="label">Product</div><div class="value">Organic Mega Mushroom Powder</div></div>
+  <div class="stat"><div class="label">Category</div><div class="value">Health &amp; Wellness / Biohacking</div></div>
+  <div class="stat"><div class="label">Competitor Ads Scored Against</div><div class="value">4 (Meta Ad Library)</div></div>
+  <div class="stat"><div class="label">Primary Objection</div><div class="value">"It won't actually work"</div></div>
+</div>
+
+<main>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p class="section-sub">The avatar, the core transformation, and the objection every angle has to clear.</p>
+    <div class="notes-grid">
+      <div class="notes-card">
+        <h4>Avatar</h4>
+        <p>38-55, unisex, health-conscious professional already active in wellness/biohacking (Age Demo 25-54 per Product DB, sharpened by research skew). Drinks coffee to get through the day, has a supplement drawer with a few bottles that "didn't move the needle," and is curious but skeptical of the next mushroom or longevity product after being burned before.</p>
+      </div>
+      <div class="notes-card">
+        <h4>Core Transformation</h4>
+        <p><strong>Before:</strong> running on borrowed coffee-energy, a supplement drawer full of things that quietly stopped mattering, unsure if a mushroom product is real medicine or filler in a jar.<br><strong>After:</strong> one trusted daily scoop, already inside an existing ritual (coffee/tea/smoothie), restoring steady energy, focus and immune resilience without adding a new routine or another bottle that fails silently.</p>
+      </div>
+      <div class="notes-card">
+        <h4>Primary Objection</h4>
+        <p>They don't believe this mushroom powder will actually do anything, having already been burned by a product that turned out to be mostly filler with nothing to show for months of use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="top3">
+    <h2>Top 3 Angles</h2>
+    <p class="section-sub">Ranked by emotional charge and differentiation from the 4 competitor ads captured in the Winners DB for "mushroom powder supplement."</p>
+    <div class="top3-grid">
+
+      <div class="top3-card">
+        <div class="accent fresh"></div>
+        <div class="body">
+          <span class="rank-pill">1</span><span class="cat-tag">Contrarian / Pattern Interrupt</span>
+          <h3>Pills Aren't the Upgrade You Think They Are</h3>
+          <span class="badge fresh">Fresh 0/4</span>
+          <p class="insight"><strong>Core insight:</strong> Buyers assume a capsule is the more "serious" or convenient format, but this product's own formulation is higher concentration, faster-absorbing, and gentler on the stomach than a pill, so the format people treat as premium is actually the diluted one.</p>
+          <div class="hook">"You think the pill is the upgrade. It's actually the diluted version of what you actually need."</div>
+          <p class="why"><strong>Why it wins:</strong> none of the 4 competitor ads in the Winners DB touch the pills-vs-powder debate at all; they compete against other powders and blends. This objection surfaced independently in outside research (Real Mushrooms / Enrichd articles on the live "powder vs capsule" buyer question) and is directly grounded in the product's own verified Amazon bullet ("higher concentration, quicker absorption, easier on the stomach"), never an invented claim.</p>
+          <div class="field-label">Best execution format</div>
+          <div class="format-line">Static comparison graphic / carousel (pill vs. scoop side by side)</div>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="micro-hooks">
+            <li><span class="type">Problem-first</span>Still swallowing a capsule and hoping it dissolves fast enough to matter? There's a faster way in.</li>
+            <li><span class="type">Curiosity</span>The "premium" mushroom format everyone assumes is best is actually the weakest way to take it. Here's why.</li>
+            <li><span class="type">Contra</span>Stop reaching for the pill bottle. A capsule shell has to break down before anything inside it can work. A scoop skips that step.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="top3-card">
+        <div class="accent twist"></div>
+        <div class="body">
+          <span class="rank-pill">2</span><span class="cat-tag">Pain / Frustration</span>
+          <h3>Did Nothing For Me</h3>
+          <span class="badge twist">Twist 1/4</span>
+          <p class="insight"><strong>Core insight:</strong> A large share of this avatar already tried a mushroom product (capsule or mycelium-based) and felt nothing after weeks of consistent use, so they've quietly written the whole category off. Naming that exact experience, instead of pretending it's new territory, earns permission to be heard.</p>
+          <div class="hook">"If a mushroom supplement already let you down, you're not wrong to be skeptical. Most of what's sold isn't built to do anything."</div>
+          <p class="why"><strong>Why it wins:</strong> this exact "no effect" complaint showed up independently across three separate research pulls (a real Four Sigmatic customer review, general community skepticism about which mushroom does what, and it is the entire premise of the highest-performing competitor VSL in the Winners DB). It earns Twist rather than Crowded because the resolution here leans on this product's already-substantiated claims (USDA Organic, 7-species whole blend, added vitamin/mineral stack, powder absorption) instead of repeating the unverifiable lab extraction-ratio claim the top competitor uses.</p>
+          <div class="field-label">Best execution format</div>
+          <div class="format-line">UGC testimonial video</div>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="micro-hooks">
+            <li><span class="type">Problem-first</span>Tried a mushroom supplement before and felt absolutely nothing? You're not imagining it. Most of them are built that way.</li>
+            <li><span class="type">Result-first</span>I stopped feeling my 3pm crash within two weeks, after two other mushroom products did nothing for months.</li>
+            <li><span class="type">Social proof</span>5,160 reviews in, and "finally one that actually works" is the sentence that keeps showing up.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="top3-card">
+        <div class="accent fresh"></div>
+        <div class="body">
+          <span class="rank-pill">3</span><span class="cat-tag">Pain / Frustration</span>
+          <h3>The Stomach Trade-Off</h3>
+          <span class="badge fresh">Fresh 0/4</span>
+          <p class="insight"><strong>Core insight:</strong> Some mushroom products, capsules especially, cause real physical discomfort (bloating, GI distress), a visceral and easy-to-avoid reason to switch that has nothing to do with whether the ingredients "work."</p>
+          <div class="hook">"Your last supplement left your stomach worse off than before you started. This one is built to go down easy."</div>
+          <p class="why"><strong>Why it wins:</strong> grounded directly in a real Trustpilot complaint about GI distress from a mushroom product, and directly answered by this product's own bullet claim ("easier on the stomach"). None of the 4 competitor ads mention digestive comfort at all, leaving this lane completely open.</p>
+          <div class="field-label">Best execution format</div>
+          <div class="format-line">Static / UGC</div>
+          <div class="field-label">Micro Hooks</div>
+          <ul class="micro-hooks">
+            <li><span class="type">Problem-first</span>Bloating, stomach discomfort, that heavy capsule feeling. If that's what "taking your supplements" feels like, something's wrong with the supplement, not you.</li>
+            <li><span class="type">Curiosity</span>The reason some mushroom pills upset your stomach has nothing to do with the mushrooms.</li>
+            <li><span class="type">Result-first</span>Same seven mushrooms, none of the stomach drama. Just dissolves into whatever you're already drinking.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="all20">
+    <h2>All 20 Angles</h2>
+    <p class="section-sub">Filter by category or uniqueness band, or click a column header to sort.</p>
+    <div class="controls">
+      <input type="text" id="searchBox" placeholder="Search angle name or insight...">
+      <select id="catFilter">
+        <option value="">All categories</option>
+        <option value="Pain / Frustration">Pain / Frustration</option>
+        <option value="Aspiration / Identity">Aspiration / Identity</option>
+        <option value="Contrarian / Pattern Interrupt">Contrarian / Pattern Interrupt</option>
+        <option value="Fear / Urgency">Fear / Urgency</option>
+        <option value="Social Proof / Tribe">Social Proof / Tribe</option>
+      </select>
+      <button class="filter-btn active" data-band="">All</button>
+      <button class="filter-btn" data-band="Fresh">Fresh</button>
+      <button class="filter-btn" data-band="Twist">Twist</button>
+      <button class="filter-btn" data-band="Crowded">Crowded</button>
+    </div>
+    <div class="table-wrap">
+    <table class="angle-table" id="angleTable">
+      <thead>
+        <tr>
+          <th data-key="name">Angle</th>
+          <th data-key="category">Category</th>
+          <th data-key="unique">Uniqueness</th>
+          <th data-key="insight">Core Insight</th>
+          <th data-key="hook">Hook</th>
+          <th data-key="format">Format</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    </div>
+    <div class="legend">
+      <div class="item"><span class="badge fresh">Fresh</span><span>No competitor ad in the Winners DB uses this angle (0 matches). The strongest, most differentiated picks.</span></div>
+      <div class="item"><span class="badge twist">Twist</span><span>A competitor hits the same pain or benefit but frames it differently; this angle adds a fresh differentiator (adjacent-match count shown).</span></div>
+      <div class="item"><span class="badge crowded">Crowded</span><span>One or more competitors already run essentially this angle (direct-match count shown). Differentiate further or drop.</span></div>
+      <div class="item">Denominator = 4 Meta Ad Library ads captured in the Winners DB for "mushroom powder supplement." TikTok returned no organic winners for this term, so no TikTok angles factor into the count.</div>
+    </div>
+  </section>
+
+  <section id="macro">
+    <h2>Macro-Angles</h2>
+    <p class="section-sub">Offers and seasonal hooks that genuinely fit this product; nothing forced.</p>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <div class="tag">Seasonal</div>
+        <h4>Immune-Season Lead-In</h4>
+        <p>Activate ~2 weeks before flu season ramps (late September). Ties directly to the Fear/Urgency "Immune System Isn't Waiting" and "Missing the Window" angles: immune support takes weeks to build, so starting after symptoms appear is already late.</p>
+      </div>
+      <div class="macro-card">
+        <div class="tag">Seasonal</div>
+        <h4>New Year Reset</h4>
+        <p>January wellness-resolution window fits this Biohacking &amp; Longevity avatar's existing reset behavior. Pairs well with "One Scoop, Whole Cabinet" (consolidating a cluttered routine).</p>
+      </div>
+      <div class="macro-card">
+        <div class="tag">Evergreen Milestone</div>
+        <h4>5,160+ Reviews and Counting</h4>
+        <p>An always-on social-proof campaign built on the product's real, established Amazon review count (4.5&#9733;, 5,160 reviews) — most competitor ads in this set run on brand-new pages, one with only 43 Page Likes, so scale itself is a differentiator.</p>
+      </div>
+    </div>
+    <p class="section-sub" style="margin-top:14px;">Skipped as not a fit this run: Restock Event (no evidence of a stockout), Handmade/Jewelry product-specific angles (not applicable to a supplement).</p>
+  </section>
+
+  <section id="research">
+    <h2>Research Notes</h2>
+    <div class="notes-grid">
+      <div class="notes-card">
+        <h4>Top Pain Points</h4>
+        <ul>
+          <li>"No effect" / delayed results even after weeks of consistent use, sometimes after doubling the dose (Four Sigmatic customer review; echoed across community discussion).</li>
+          <li>Distrust that a mushroom powder contains real mushroom vs. mycelium/grain filler.</li>
+          <li>GI discomfort / stomach distress reported from some mushroom products (Trustpilot).</li>
+          <li>Format friction: pills seen as more convenient/pre-measured, powder seen as messier but faster-absorbing (Real Mushrooms, Enrichd).</li>
+          <li>Price/value skepticism against a $47.95 price point with an unproven ROI.</li>
+        </ul>
+      </div>
+      <div class="notes-card">
+        <h4>Top Benefits</h4>
+        <ul>
+          <li>USDA Organic, Non-GMO, vegan-friendly (Amazon listing bullets).</li>
+          <li>7-species blend (reishi, chaga, lion's mane, cordyceps, turkey tail, shiitake, maitake) plus B-complex, C, D vitamins and minerals — broader stack than most single- or dual-species competitor products.</li>
+          <li>Powder format: higher concentration, quicker absorption, easier on the stomach than pills (Amazon bullets, directly rebuts the pills-are-superior objection).</li>
+          <li>Fits an existing ritual (tea, smoothie, or coffee) — no new routine required.</li>
+          <li>Established social proof: 4.5&#9733; / 5,160 reviews on the top Amazon listing, plus a 10oz / 284-day supply with an included scoop for consistent dosing.</li>
+        </ul>
+      </div>
+      <div class="notes-card">
+        <h4>Competitor Angles Being Differentiated From (Winners DB, "mushroom powder supplement")</h4>
+        <div class="competitor-row"><div><div class="angle-name">Ancient Mushroom Power</div><div class="meta">PurelyB Tiger Milk Mushroom</div></div><div class="meta">Aspiration &middot; heritage/tradition, easy daily dose</div></div>
+        <div class="competitor-row"><div><div class="angle-name">Mushroom-Powered Morning</div><div class="meta">MicroIngredients Mushroom Coffee (w-ish)</div></div><div class="meta">Pain &middot; coffee-format convenience, no crash</div></div>
+        <div class="competitor-row"><div><div class="angle-name">Five Mushroom Synergy</div><div class="meta">Earth's Mushrooms 5 Power Blend</div></div><div class="meta">Aspiration &middot; cellular-energy VSL, purity/extraction-ratio proof</div></div>
+        <div class="competitor-row"><div><div class="angle-name">Mushroom Potency Guarantee</div><div class="meta">Real Mushrooms Focus Power Duo</div></div><div class="meta">Social Proof &middot; verified beta-glucan %, no starch filler</div></div>
+        <p style="margin-top:10px;color:var(--text-mute);font-size:0.82rem;">TikTok Winners: no organic winner found for this search term (0 rows) — TikTok angles are not part of this differentiation set.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>Nova Capital &middot; Find Marketing Angles &middot; Organic Mega Mushroom Powder &middot; 08-24-2026</footer>
+
+<script>
+const ANGLES = [
+  {name:"The Supplement Drawer Graveyard", category:"Pain / Frustration", unique:"Twist 1/4", band:"Twist", insight:"Buying yet another separate bottle doesn't fix a routine that's already fragmented and half-working.", hook:"Another bottle for the graveyard, or one scoop that actually replaces the shelf?", format:"Carousel"},
+  {name:"Borrowed Energy, Real Debt", category:"Pain / Frustration", unique:"Crowded 1/4", band:"Crowded", insight:"The third coffee isn't energy, it's a loan against tomorrow's crash.", hook:"That third coffee isn't giving you energy. It's borrowing it, and charging interest by 2pm.", format:"UGC video"},
+  {name:"Did Nothing For Me", category:"Pain / Frustration", unique:"Twist 1/4", band:"Twist", insight:"A large share of buyers already tried a mushroom product and felt nothing; naming that burn earns permission to be heard.", hook:"If a mushroom supplement already let you down, you're not wrong to be skeptical.", format:"UGC testimonial"},
+  {name:"The Stomach Trade-Off", category:"Pain / Frustration", unique:"Fresh 0/4", band:"Fresh", insight:"Capsule GI discomfort is a visceral, easy-to-avoid reason to switch that has nothing to do with efficacy.", hook:"Your last supplement left your stomach worse off than before you started.", format:"Static / UGC"},
+
+  {name:"One Scoop, Whole Cabinet", category:"Aspiration / Identity", unique:"Twist 1/4", band:"Twist", insight:"Becoming the person who simplified a cluttered wellness routine into one trusted ritual.", hook:"Trade five bottles for one scoop. Same results, way less clutter.", format:"Carousel"},
+  {name:"Still Sharp, Still Steady", category:"Aspiration / Identity", unique:"Twist 1/4", band:"Twist", insight:"Becoming someone whose energy and focus hold steady all day without needing to explain their tiredness.", hook:"Show up at 4pm the same way you showed up at 9am.", format:"UGC / testimonial"},
+  {name:"The Ritual That Doesn't Ask For More", category:"Aspiration / Identity", unique:"Twist 1/4", band:"Twist", insight:"Upgrading your health without adding a new habit to maintain.", hook:"You already have the ritual. This just makes it work harder.", format:"Static"},
+  {name:"Backed By 5,160 People Who Didn't Quit On It", category:"Aspiration / Identity", unique:"Fresh 0/4", band:"Fresh", insight:"Choosing a proven, widely-used product instead of gambling on an unverified new brand.", hook:"5,160 reviews and 4.5 stars later, this isn't the new kid on the shelf.", format:"Social proof carousel"},
+
+  {name:"Pills Aren't the Upgrade You Think They Are", category:"Contrarian / Pattern Interrupt", unique:"Fresh 0/4", band:"Fresh", insight:"The format people treat as premium (capsules) is actually the diluted, slower-absorbing one.", hook:"You think the pill is the upgrade. It's actually the diluted version of what you actually need.", format:"Static comparison"},
+  {name:"Normal Isn't the Same As Fine", category:"Contrarian / Pattern Interrupt", unique:"Crowded 1/4", band:"Crowded", insight:"Afternoon fatigue and brain fog aren't just 'getting older,' they're a solvable input problem.", hook:"You didn't get older. You got used to running on empty.", format:"UGC / testimonial"},
+  {name:"The Label Test You're Not Running", category:"Contrarian / Pattern Interrupt", unique:"Twist 2/4", band:"Twist", insight:"Most buyers trust mushroom-product marketing without checking one already-verifiable thing: the organic certification.", hook:"Before you buy another mushroom powder, check one thing: does it actually say USDA Organic?", format:"Static"},
+  {name:"You Don't Need a New Routine, You Need a Better Input", category:"Contrarian / Pattern Interrupt", unique:"Fresh 0/4", band:"Fresh", insight:"Fixing energy and focus doesn't require a lifestyle overhaul, just a better input into the ritual you already run.", hook:"You don't need a new routine. You need to upgrade the one you already have.", format:"Carousel"},
+
+  {name:"The Slow Fade You're Calling Normal", category:"Fear / Urgency", unique:"Crowded 1/4", band:"Crowded", insight:"Unaddressed low energy and focus don't stay flat, they compound quietly until 'tired' becomes the baseline.", hook:"You didn't wake up exhausted today. You've been getting there for months.", format:"UGC / testimonial"},
+  {name:"A Bottle That Does Nothing Has a Real Cost", category:"Fear / Urgency", unique:"Twist 1/4", band:"Twist", insight:"The real cost of an ineffective supplement isn't the money, it's the months spent waiting to find out it failed.", hook:"The real cost of a supplement that doesn't work isn't the $40. It's the 3 months you waited to find out.", format:"Static"},
+  {name:"Your Immune System Isn't Waiting for Flu Season", category:"Fear / Urgency", unique:"Fresh 0/4", band:"Fresh", insight:"Immune resilience is built or eroded daily, so waiting until you're sick to care is already too late.", hook:"Your immune system doesn't wait for flu season to start slipping. Neither should you.", format:"Static / seasonal"},
+  {name:"Missing the Window Before a Big Season", category:"Fear / Urgency", unique:"Fresh 0/4", band:"Fresh", insight:"Real energy and immune support takes weeks to build, so starting after symptoms show up is already behind schedule.", hook:"Immune and energy support takes weeks to build. Flu season doesn't wait for you to start.", format:"Seasonal static"},
+
+  {name:"5,160 People Didn't Just Buy It Once", category:"Social Proof / Tribe", unique:"Fresh 0/4", band:"Fresh", insight:"A large, established review base signals people are staying, not just trying once and moving on.", hook:"5,160 reviews in, people aren't just buying this. They're staying.", format:"Carousel"},
+  {name:"The Coworker Who Stopped Needing a Third Coffee", category:"Social Proof / Tribe", unique:"Twist 1/4", band:"Twist", insight:"A relatable peer who visibly changed is more convincing than a founder story.", hook:"My coworker stopped ordering a third coffee. Turns out it wasn't willpower.", format:"UGC video"},
+  {name:"Real Reviews, Read the 3-Stars", category:"Social Proof / Tribe", unique:"Fresh 0/4", band:"Fresh", insight:"Inviting skeptical buyers to read the nuanced, most-trustworthy reviews builds more credibility than only showcasing 5-star praise.", hook:"Don't just read the 5-star reviews. Read the 3-star ones. That's where the real answer is.", format:"Static / UGC"},
+  {name:"The Format Switch Real Buyers Are Making", category:"Social Proof / Tribe", unique:"Fresh 0/4", band:"Fresh", insight:"A visible peer trend of switching from pills to powder validates the format choice through behavior, not just argument.", hook:"More people are switching from pills to powder for one simple reason: your body doesn't have to fight a capsule shell first.", format:"Static comparison"}
+];
+
+const tbody = document.querySelector("#angleTable tbody");
+let sortKey = null, sortDir = 1;
+
+function bandClass(b) { return b === "Fresh" ? "fresh" : b === "Twist" ? "twist" : "crowded"; }
+
+function render() {
+  const q = document.getElementById("searchBox").value.toLowerCase();
+  const cat = document.getElementById("catFilter").value;
+  const bandBtn = document.querySelector(".filter-btn.active");
+  const band = bandBtn ? bandBtn.dataset.band : "";
+  let rows = ANGLES.filter(a =>
+    (!cat || a.category === cat) &&
+    (!band || a.band === band) &&
+    (a.name.toLowerCase().includes(q) || a.insight.toLowerCase().includes(q))
+  );
+  if (sortKey) {
+    rows = rows.slice().sort((a, b) => (a[sortKey] > b[sortKey] ? 1 : -1) * sortDir);
+  }
+  tbody.innerHTML = rows.map(a => `
+    <tr>
+      <td><strong>${a.name}</strong></td>
+      <td>${a.category}</td>
+      <td><span class="badge ${bandClass(a.band)}">${a.unique}</span></td>
+      <td>${a.insight}</td>
+      <td class="hook-cell">"${a.hook}"</td>
+      <td>${a.format}</td>
+    </tr>
+  `).join("");
+}
+
+document.getElementById("searchBox").addEventListener("input", render);
+document.getElementById("catFilter").addEventListener("change", render);
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  });
+});
+document.querySelectorAll("#angleTable th").forEach(th => {
+  th.addEventListener("click", () => {
+    const key = th.dataset.key;
+    sortDir = (sortKey === key) ? -sortDir : 1;
+    sortKey = key;
+    render();
+  });
+});
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cooling Blanket - Marketing Angles</title>
+<style>
+  :root{
+    --slate:#1e293b; --slate2:#334155; --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --sub:#64748b;
+    --border:#e2e8f0; --fresh:#059669; --fresh-bg:#d1fae5; --twist:#d97706; --twist-bg:#fef3c7;
+    --crowded:#dc2626; --crowded-bg:#fee2e2; --accent:#2563eb;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate2));}
+  header{background:#fff;border-bottom:1px solid var(--border);padding:32px 24px;}
+  header .inner{max-width:1100px;margin:0 auto;}
+  h1{margin:0 0 6px;font-size:28px;letter-spacing:-0.01em;}
+  .subtitle{color:var(--sub);font-size:15px;margin:0 0 4px;}
+  .date{color:var(--sub);font-size:13px;}
+  main{max-width:1100px;margin:0 auto;padding:24px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .stat .num{font-size:22px;font-weight:700;}
+  .stat .label{font-size:12px;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;}
+  section{margin-bottom:36px;}
+  h2{font-size:19px;border-bottom:2px solid var(--slate);padding-bottom:8px;margin-bottom:16px;}
+  .summary-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;}
+  .summary-card div{margin-bottom:10px;}
+  .summary-card .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);margin-bottom:2px;}
+  .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;}
+  .badge.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.twist{background:var(--twist-bg);color:var(--twist);}
+  .badge.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
+  .top-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+  .top-card .accent{height:4px;background:var(--slate);}
+  .top-card.fresh .accent{background:var(--fresh);}
+  .top-card.twist .accent{background:var(--twist);}
+  .top-card .body{padding:18px;}
+  .rank{font-size:12px;color:var(--sub);font-weight:700;letter-spacing:.04em;}
+  .angle-name{font-size:18px;font-weight:700;margin:4px 0 8px;}
+  .cat-tag{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;display:inline-block;}
+  .field{margin-bottom:10px;}
+  .field .lbl{font-size:11px;text-transform:uppercase;color:var(--sub);letter-spacing:.03em;margin-bottom:2px;}
+  .field .val{font-size:13.5px;line-height:1.45;}
+  .hook{background:#f1f5f9;border-radius:6px;padding:8px 10px;margin-bottom:6px;font-size:13px;}
+  .hook .htype{font-size:10.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.03em;}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .controls button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer;color:var(--ink);}
+  .controls button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  select{border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:13px;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{background:#f1f5f9;cursor:pointer;user-select:none;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--sub);}
+  th:hover{color:var(--ink);}
+  tr:last-child td{border-bottom:none;}
+  .angle-cell{font-weight:600;}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .macro-card h3{margin:0 0 6px;font-size:15px;}
+  .macro-card p{margin:0;font-size:13px;color:var(--sub);line-height:1.5;}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;}
+  .notes-card h3{margin:0 0 10px;font-size:14px;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:var(--slate2);}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:13px;}
+  .legend .item{display:flex;align-items:center;gap:8px;}
+  .compliance-note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;font-size:13px;color:#92400e;margin-top:14px;}
+  .divergence{background:#f1f5f9;border-left:3px solid var(--sub);padding:10px 14px;font-size:13px;color:var(--slate2);border-radius:0 8px 8px 0;margin-top:10px;}
+  footer{text-align:center;color:var(--sub);font-size:12px;padding:20px;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header>
+  <div class="inner">
+    <h1>Cooling Blanket</h1>
+    <p class="subtitle">Avatar: women 35 to 55 in perimenopause or menopause with night sweats, secondary hot sleepers 25 to 55; already tried fans, AC, and cooling products that faded fast</p>
+    <p class="date">Marketing Angles Report, August 24, 2026</p>
+  </div>
+</header>
+<main>
+
+<div class="stats">
+  <div class="stat"><div class="num">20</div><div class="label">Angles Generated</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">Top Picks</div></div>
+  <div class="stat"><div class="num">33</div><div class="label">Competitor Ads Scored Against</div></div>
+  <div class="stat"><div class="num">9</div><div class="label">Fresh (0 matches)</div></div>
+  <div class="stat"><div class="num">7</div><div class="label">Twist</div></div>
+  <div class="stat"><div class="num">4</div><div class="label">Crowded</div></div>
+</div>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="summary-card">
+    <div>
+      <div class="lbl">Avatar</div>
+      <div>A woman 35 to 55, most often perimenopausal or menopausal, whose internal thermostat now misfires at night. She wakes two to three times a night drenched in sweat, sometimes stripping and changing the sheets mid-night. She has already tried fans, cranking the AC (with the electric bill to show for it), and moisture-wicking pajamas. She may have already bought a cheaper cooling blanket that felt cool for the first few nights, then lost its cooling after a few washes, or a premium electric cooling system ($150 to $200+) with a chiller unit or app that broke, kinked, or made a noise like a small fridge running all night. Her partner often runs cold while she runs hot, so the thermostat becomes a nightly negotiation. She is tired, foggy, and a little embarrassed the next day, and she is skeptical of anything claiming to be "cooling" because she has been let down before.</div>
+    </div>
+    <div>
+      <div class="lbl">Core Transformation</div>
+      <div><strong>Before:</strong> waking up repeatedly drenched in sweat, exhausted and irritable the next day, having already burned money on a fan, a higher AC bill, or a cooling product that quit working. <strong>After:</strong> getting into bed and feeling cool immediately, sleeping through the night dry, and waking up rested, without an app, a chiller unit, or a subscription.</div>
+    </div>
+    <div>
+      <div class="lbl">Primary Objection</div>
+      <div>"It will feel cool for five minutes and then trap heat like every other 'cooling' thing I have tried." This is the single most repeated pattern across every source researched: competitors' own customers report the cooling fading after the first few nights or after a few washes, and outside reviewers describe the gap between "feels less warm" and "actually cold."</div>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="top-card fresh">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 1</div>
+        <div class="angle-name">The Blanket Women Going Through "The Change" Are Actually Talking About</div>
+        <span class="cat-tag">Social Proof / Tribe</span>
+        <div><span class="badge fresh">Fresh 0/33</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Menopause night sweats are the single biggest, most emotionally intense driver of this category (research puts pain intensity at 7 to 8 out of 10, and a 30 to 40 million woman market), yet zero of the 33 competitor ads captured for this term name menopause, "the change," or hot flashes directly. Every one of them talks to a generic "hot sleeper."</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">Ask any woman in perimenopause what she actually sleeps under now. It is not the $200 gadget with the app.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">UGC testimonial video, woman 40s to 50s speaking directly to camera</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It names the exact person in the mirror instead of talking around her, which no competitor ad does, and the specificity itself reads as social proof: "this is made for people like me," not "this is made for anyone hot."</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Problem-first</div>Waking up at 3am with soaked sheets again? You are not imagining it, and you are not alone.</div>
+          <div class="hook"><div class="htype">Social proof</div>Ask any woman in perimenopause what she sleeps under now. It is not a $200 gadget.</div>
+          <div class="hook"><div class="htype">Curiosity</div>There is a reason one blanket keeps coming up in menopause forums, and it is not the one running the most ads.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-card fresh">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 2</div>
+        <div class="angle-name">It's Not You, It's Your Thermostat</div>
+        <span class="cat-tag">Contrarian / Pattern Interrupt</span>
+        <div><span class="badge fresh">Fresh 0/33</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Health research grounding this run describes menopause night sweats as the body's temperature regulation misfiring, not a personal failing. Every competitor ad frames the fix around fabric tech; none reframes the problem itself in a way that removes the self-blame ("why does this keep happening to me").</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">Your body is not broken. Its internal thermostat is just misfiring, and a regular blanket only makes it worse.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">Static graphic with a short explainer caption, or a calm-voiceover UGC video</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It is the most emotionally validating angle in the set: it answers the unspoken "what is wrong with me" before selling the product, which builds trust fast with a skeptical cold audience.</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Problem-first</div>Your body is not broken. Its internal thermostat is just misfiring, and a regular blanket makes it worse.</div>
+          <div class="hook"><div class="htype">Curiosity</div>The real reason you overheat at night has nothing to do with willpower, or your bedroom's temperature setting.</div>
+          <div class="hook"><div class="htype">Result-first</div>I stopped blaming myself for waking up drenched the night I switched blankets.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-card fresh">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 3</div>
+        <div class="angle-name">No App. No Chiller. No 2AM Repair Job.</div>
+        <span class="cat-tag">Contrarian / Pattern Interrupt</span>
+        <div><span class="badge fresh">Fresh 0/33</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Research surfaced concrete, repeated complaints about premium electric cooling systems: controllers failing under 18 months, tubing kinking around 8 months and voiding the warranty, and chiller units loud enough to sound like a small fridge. None of the 33 competitor ads (all simple cooling fabric, like this product) contrast themselves against that premium tier, even though it is the exact alternative a comparison shopper is weighing.</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">Stop paying $200 for a cooling system with a chiller unit that dies in a year. This is just fabric that works.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">Carousel or comparison-style static (simple blanket vs. tubes/app/chiller unit)</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It preempts the most expensive objection ("why not just buy the $200 system") with a real, specific failure story rather than a vague "simpler is better" claim, and it is the clearest logical complement to Rank 1 and 2's emotional angles.</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Contra</div>Stop paying $200 for a cooling system with a chiller unit that dies in a year. This is just fabric that works.</div>
+          <div class="hook"><div class="htype">Problem-first</div>Bought the "smart" cooling bed system. The tubing kinked in eight months and voided the warranty.</div>
+          <div class="hook"><div class="htype">Result-first</div>Went from a chiller unit that sounded like a mini fridge all night to a blanket that just, quietly, works.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="compliance-note">Compliance note: Rank 1 and Rank 2 reference menopause and the body's temperature regulation as an audience and comfort framing only, no treatment, cure, or symptom-relief claim is made. Recommend a light compliance pass on the final ad copy before spend, consistent with house practice on health-adjacent audiences.</div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <button class="cat-btn active" data-cat="all">All Categories</button>
+    <button class="cat-btn" data-cat="Pain / Frustration">Pain / Frustration</button>
+    <button class="cat-btn" data-cat="Aspiration / Identity">Aspiration / Identity</button>
+    <button class="cat-btn" data-cat="Contrarian / Pattern Interrupt">Contrarian</button>
+    <button class="cat-btn" data-cat="Fear / Urgency">Fear / Urgency</button>
+    <button class="cat-btn" data-cat="Social Proof / Tribe">Social Proof</button>
+  </div>
+  <div class="controls">
+    <button class="uni-btn active" data-uni="all">All Uniqueness</button>
+    <button class="uni-btn" data-uni="Fresh">Fresh</button>
+    <button class="uni-btn" data-uni="Twist">Twist</button>
+    <button class="uni-btn" data-uni="Crowded">Crowded</button>
+  </div>
+  <table id="angles-table">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="cat">Category</th>
+        <th data-sort="uni">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="format">Format</th>
+      </tr>
+    </thead>
+    <tbody id="angles-body"></tbody>
+  </table>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles (Product / Offer)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h3>Late-Summer Heat Sale</h3>
+      <p>Live now through Labor Day. Cooling and hot-sleep pain is highest during the current heat window; use urgency framing tied to the remaining warm weeks rather than a hard discount.</p>
+    </div>
+    <div class="macro-card">
+      <h3>New Product Launch</h3>
+      <p>This is a new SKU entering the catalog. A launch framing ("just landed," first-batch social proof once real reviews exist) fits cleanly and buys time before an evergreen-milestone angle is honest to run.</p>
+    </div>
+    <div class="macro-card">
+      <h3>Evergreen Event (future)</h3>
+      <p>An "X units sold" or "X women switched" milestone angle fits this product well once real sales data exists. Do not activate yet, there is no real number to cite.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h3>Top Pain Points</h3>
+      <ul>
+        <li>Waking up 2 to 3+ times a night drenched, sometimes stripping and changing sheets mid-night</li>
+        <li>Cooling that fades fast: "slightly cool to touch but doesn't stay cool overnight," cooling effect dropping roughly 50% within minutes on tested competitor products</li>
+        <li>Expectation mismatch: products that feel "less warm" rather than actively cold</li>
+        <li>Durability loss after washing: pilling, shedding, cooling feel fading after a few wash cycles</li>
+        <li>Premium electric systems failing: controller failure under 18 months, tubing kinking around 8 months (voids warranty), chiller noise compared to a small fridge</li>
+        <li>Fabric jargon confusion (Q-Max ratings, bamboo vs. minky vs. ice silk) with no clear signal on what actually works</li>
+        <li>Partner temperature mismatch, one runs hot, one runs cold</li>
+        <li>Daytime fatigue, fog, and mood impact from repeated night wakings (grounded in general sleep/menopause health sources, not product-specific reviews)</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Top Benefits</h3>
+      <ul>
+        <li>Waking up dry instead of drenched, sleeping through the 3am wake-up</li>
+        <li>Immediate cool-to-touch sensation on contact, no waiting</li>
+        <li>No batteries, app, or chiller unit to fail</li>
+        <li>Lightweight, does not trap heat the way a traditional comforter does</li>
+        <li>Machine washable and simple to care for versus premium systems' complex maintenance</li>
+        <li>Mid-market price ($49.95) versus the $80 to $200+ premium electric cooling segment</li>
+        <li>Simple to understand and use, no fabric-science literacy required</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Competitor Angles Being Differentiated From</h3>
+      <ul>
+        <li>Dual-Layer Airflow ("standard comforters trap heat by design") is the single most repeated angle, 6 of 33 competitor ads, all near-identical wording (Mellow and its affiliates)</li>
+        <li>Generic "cooling fabric dissipates body heat, stop waking up overheated" Pain framing appears across roughly a third of all ads</li>
+        <li>Bamboo Viscose Luxury / hotel-comfort Aspiration framing appears twice, word for word</li>
+        <li>Cold Comforter Feel (dual-sided hot/cold design for couples) appears 3 times</li>
+        <li>TikTok-viral Social Proof framing appears twice</li>
+        <li>Zero of the 33 ads name menopause or "the change" directly, zero use Fear/Urgency framing at all, and zero contrast against premium electric cooling systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="item"><span class="badge fresh">Fresh</span> No competitor ad in the Winners DB uses this angle (0 matches out of 33 captured "w" ads for "cooling blanket")</div>
+    <div class="item"><span class="badge twist">Twist</span> Competitors hit the same pain or benefit but frame it differently, this angle adds a real differentiator (count shown is the adjacent-match count)</div>
+    <div class="item"><span class="badge crowded">Crowded</span> One or more competitors already run essentially this angle (count shown is the direct-match count)</div>
+  </div>
+  <div class="divergence">Denominator note: N = 33, the rows classified "w" (true winner match) for search term "cooling blanket" in the Meta Ad Winners tab as of this run's read. 12 additional "w-ish" rows and 6 "kill" rows for the same term were excluded from N as partial or non-matches. TikTok Winners carries zero rows for this term (spy found no TikTok winner), so TikTok is not part of the competitor set.</div>
+</section>
+
+</main>
+<footer>Nova Capital / Find Marketing Angles &middot; Cooling Blanket &middot; August 24, 2026</footer>
+
+<script>
+const angles = [
+  {name:"The 3AM Sheet Change", cat:"Pain / Frustration", uni:"Twist", count:"11/33", insight:"Names the literal ritual of waking, stripping, and changing soaked sheets mid-night, more visceral than the generic 'stop waking up overheated' framing roughly 11 of 33 ads use.", hook:"Some nights you don't just wake up hot. You get up and change the sheets.", format:"UGC video"},
+  {name:"Cooling That Actually Survives the Wash", cat:"Pain / Frustration", uni:"Fresh", count:"0/33", insight:"Directly answers the number one grounded objection (cooling fades after a few washes) that no competitor ad addresses in its hook, even though it's a top complaint about their own products.", hook:"Most 'cooling' blankets stop cooling after the third wash. This one doesn't.", format:"Static with wash-count callout"},
+  {name:"You Already Tried the Fan", cat:"Pain / Frustration", uni:"Twist", count:"1/33", insight:"Agitates the documented already-tried-and-failed pattern (fan, AC, cheaper blankets). Only one competitor ad (Ice Blankets, 'without gadgets or fans') touches this directly.", hook:"The fan didn't work. The AC bill did nothing but go up. This is different.", format:"UGC video"},
+  {name:"The Cooling That Isn't", cat:"Pain / Frustration", uni:"Fresh", count:"0/33", insight:"Names the gimmick skepticism directly instead of just asserting the product works, a pattern-interrupt no competitor ad risks.", hook:"Most 'cooling' blankets just feel less warm. This one feels cold.", format:"Static, bold claim"},
+  {name:"Sleep Like You're 25 Again", cat:"Aspiration / Identity", uni:"Twist", count:"2/33", insight:"Adjacent to the Bamboo Viscose Luxury / hotel-comfort aspiration cluster (2 of 33) but reframes around reclaiming younger, unbroken sleep rather than luxury hospitality.", hook:"Remember sleeping through the whole night without waking up once? You can again.", format:"UGC testimonial"},
+  {name:"The Version of You Who Isn't Exhausted", cat:"Aspiration / Identity", uni:"Fresh", count:"0/33", insight:"Ties the product to a daytime identity shift (sharper, less foggy) rather than a nighttime comfort claim, a connection no competitor ad makes.", hook:"This isn't really about the blanket. It's about not being exhausted by 10am.", format:"Static or VSL"},
+  {name:"Cool Girl, Actually", cat:"Aspiration / Identity", uni:"Twist", count:"2/33", insight:"Playful identity spin adjacent to the two TikTok-viral Social Proof ads, but framed as personal composure rather than trend participation.", hook:"Unbothered isn't a personality trait. It's a good blanket.", format:"UGC video, light tone"},
+  {name:"Hotel Sheets, Bedroom Prices", cat:"Aspiration / Identity", uni:"Crowded", count:"2/33", insight:"Near-identical to Luxome's 'hotel-level comfort at home' claim used twice already. Only earns a top-3 slot with a sharp price-contrast twist, which this run did not find strong enough to promote.", hook:"Hotel sheets, without the hotel bill.", format:"Static"},
+  {name:"No App. No Chiller. No 2AM Repair Job.", cat:"Contrarian / Pattern Interrupt", uni:"Fresh", count:"0/33", insight:"Contrasts against the premium electric cooling segment's documented failure points (controller, tubing, noise), a comparison no competitor ad in this fabric-only set makes.", hook:"Stop paying $200 for a cooling system with a chiller unit that dies in a year.", format:"Carousel comparison"},
+  {name:"Cooling Fabric Isn't Rocket Science", cat:"Contrarian / Pattern Interrupt", uni:"Twist", count:"2/33", insight:"Debunks the Q-Max / Arc-Chill jargon that 2 of 33 competitor ads lean on for credibility, taking the opposite stance.", hook:"You don't need a Q-Max rating to know if you're cold. You just need this.", format:"Static, myth-bust style"},
+  {name:"It's Not You, It's Your Thermostat", cat:"Contrarian / Pattern Interrupt", uni:"Fresh", count:"0/33", insight:"Reframes night sweats as a biological misfire rather than a personal failing, the most identity-relieving reframe in the set and unused by any competitor ad.", hook:"Your body is not broken. Its internal thermostat is just misfiring.", format:"Static or calm UGC"},
+  {name:"Your Blanket Is the Problem, Not Your Body", cat:"Contrarian / Pattern Interrupt", uni:"Crowded", count:"6/33", insight:"Too close to Dual-Layer Airflow's core insight ('standard comforters trap heat by design'), the single most repeated angle in the competitor set.", hook:"It was never you. It was the blanket trapping the heat.", format:"Static"},
+  {name:"Bad Sleep Isn't Just Tiring, It's Aging You", cat:"Fear / Urgency", uni:"Fresh", count:"0/33", insight:"Ties chronic sleep disruption to broader wellbeing stakes. Fear / Urgency is entirely unused across all 33 competitor ads. Compliance-sensitive, keep hook soft, no disease or aging-reversal claim.", hook:"Chronic bad sleep doesn't just make you tired. It changes how you show up the next day, every day.", format:"Static, soft framing"},
+  {name:"Every Night You Wait Is Another Night Lost", cat:"Fear / Urgency", uni:"Fresh", count:"0/33", insight:"Straightforward loss-aversion urgency, a category with zero competitor presence.", hook:"Another hot, broken night of sleep is optional now.", format:"Static"},
+  {name:"Your Partner Notices Before You Do", cat:"Fear / Urgency", uni:"Twist", count:"3/33", insight:"Sharper emotional edge on the couple's-conflict territory that 3 of 33 ads touch through dual-sided design claims, but none frame as a relationship-strain fear.", hook:"You think it's just you overheating. Ask your partner how many times you kicked the covers off last night.", format:"UGC video"},
+  {name:"Stock Up Before Summer Hits", cat:"Fear / Urgency", uni:"Twist", count:"1/33", insight:"Seasonal urgency adjacent to Neptune Blanket's 'Summer Sleep Solution' (1 of 33), reframed as anticipatory stock-up rather than in-season relief.", hook:"Next summer's heat wave will not wait for you to shop.", format:"Static, seasonal"},
+  {name:"The Blanket Women Going Through 'The Change' Are Actually Talking About", cat:"Social Proof / Tribe", uni:"Fresh", count:"0/33", insight:"Directly names the menopause audience, the single biggest research-grounded segment for this product, unused by any of the 33 competitor ads.", hook:"Ask any woman in perimenopause what she sleeps under now. It's not the $200 gadget.", format:"UGC testimonial"},
+  {name:"I Bought 3 'Cooling' Blankets Before This One Worked", cat:"Social Proof / Tribe", uni:"Fresh", count:"0/33", insight:"Testimonial pattern grounded in the real 'already tried and failed' behavior seen across sources; no competitor ad frames itself as the answer after prior cooling-product failures.", hook:"I bought three 'cooling' blankets before I found the one that actually stayed cool.", format:"UGC testimonial"},
+  {name:"The Cooling Blanket Nurses and Teachers Swear By", cat:"Social Proof / Tribe", uni:"Fresh", count:"0/33", insight:"Occupational social proof (people on their feet in hot conditions all day) is unused by any competitor ad in this set.", hook:"Ask a nurse coming off a 12-hour shift what she wants to sleep under.", format:"UGC testimonial"},
+  {name:"TikTok's Favorite Night-Sweat Fix, Minus the Hype", cat:"Social Proof / Tribe", uni:"Crowded", count:"2/33", insight:"Directly overlaps the two existing TikTok-viral Social Proof ads (Hannah-Rose Bentley, CloudDream) in framing.", hook:"Yes, it's the one from TikTok. No, that's not why it works.", format:"UGC video"}
+];
+
+const tbody = document.getElementById('angles-body');
+function uniClass(u){ return u.toLowerCase(); }
+function render(list){
+  tbody.innerHTML = '';
+  list.forEach(a=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="angle-cell">${a.name}</td>
+      <td>${a.cat}</td>
+      <td><span class="badge ${uniClass(a.uni)}">${a.uni} ${a.count}</span></td>
+      <td>${a.insight}</td>
+      <td>${a.hook}</td>
+      <td>${a.format}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+render(angles);
+
+let curCat = 'all', curUni = 'all';
+function applyFilters(){
+  let list = angles;
+  if(curCat !== 'all') list = list.filter(a=>a.cat===curCat);
+  if(curUni !== 'all') list = list.filter(a=>a.uni===curUni);
+  render(list);
+}
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    curCat = btn.dataset.cat;
+    applyFilters();
+  });
+});
+document.querySelectorAll('.uni-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.uni-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    curUni = btn.dataset.uni;
+    applyFilters();
+  });
+});
+
+let sortDir = {};
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.sort;
+    const map = {name:'name',cat:'cat',uni:'uni',insight:'insight',hook:'hook',format:'format'};
+    sortDir[key] = !sortDir[key];
+    let list = angles.slice();
+    if(curCat !== 'all') list = list.filter(a=>a.cat===curCat);
+    if(curUni !== 'all') list = list.filter(a=>a.uni===curUni);
+    list.sort((a,b)=> sortDir[key] ? a[map[key]].localeCompare(b[map[key]]) : b[map[key]].localeCompare(a[map[key]]));
+    render(list);
+  });
+});
+</script>
+</body>
+</html>

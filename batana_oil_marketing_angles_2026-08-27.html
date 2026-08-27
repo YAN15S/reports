@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batana Oil - Marketing Angles</title>
+<style>
+  :root{
+    --slate:#1e293b; --slate2:#334155; --bg:#f8fafc; --card:#ffffff; --ink:#0f172a; --sub:#64748b;
+    --border:#e2e8f0; --fresh:#059669; --fresh-bg:#d1fae5; --twist:#d97706; --twist-bg:#fef3c7;
+    --crowded:#dc2626; --crowded-bg:#fee2e2; --accent:#2563eb;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate2));}
+  header{background:#fff;border-bottom:1px solid var(--border);padding:32px 24px;}
+  header .inner{max-width:1100px;margin:0 auto;}
+  h1{margin:0 0 6px;font-size:28px;letter-spacing:-0.01em;}
+  .subtitle{color:var(--sub);font-size:15px;margin:0 0 4px;}
+  .date{color:var(--sub);font-size:13px;}
+  main{max-width:1100px;margin:0 auto;padding:24px;}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-bottom:28px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+  .stat .num{font-size:22px;font-weight:700;}
+  .stat .label{font-size:12px;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;}
+  section{margin-bottom:36px;}
+  h2{font-size:19px;border-bottom:2px solid var(--slate);padding-bottom:8px;margin-bottom:16px;}
+  .summary-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;}
+  .summary-card div{margin-bottom:10px;}
+  .summary-card .lbl{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);margin-bottom:2px;}
+  .badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;font-weight:700;}
+  .badge.fresh{background:var(--fresh-bg);color:var(--fresh);}
+  .badge.twist{background:var(--twist-bg);color:var(--twist);}
+  .badge.crowded{background:var(--crowded-bg);color:var(--crowded);}
+  .top3-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}
+  .top-card{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+  .top-card .accent{height:4px;background:var(--slate);}
+  .top-card.fresh .accent{background:var(--fresh);}
+  .top-card.twist .accent{background:var(--twist);}
+  .top-card .body{padding:18px;}
+  .rank{font-size:12px;color:var(--sub);font-weight:700;letter-spacing:.04em;}
+  .angle-name{font-size:18px;font-weight:700;margin:4px 0 8px;}
+  .cat-tag{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;display:inline-block;}
+  .field{margin-bottom:10px;}
+  .field .lbl{font-size:11px;text-transform:uppercase;color:var(--sub);letter-spacing:.03em;margin-bottom:2px;}
+  .field .val{font-size:13.5px;line-height:1.45;}
+  .hook{background:#f1f5f9;border-radius:6px;padding:8px 10px;margin-bottom:6px;font-size:13px;}
+  .hook .htype{font-size:10.5px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.03em;}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .controls button{border:1px solid var(--border);background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;cursor:pointer;color:var(--ink);}
+  .controls button.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  select{border:1px solid var(--border);border-radius:6px;padding:6px 10px;font-size:13px;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:13px;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{background:#f1f5f9;cursor:pointer;user-select:none;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--sub);}
+  th:hover{color:var(--ink);}
+  tr:last-child td{border-bottom:none;}
+  .angle-cell{font-weight:600;}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .macro-card h3{margin:0 0 6px;font-size:15px;}
+  .macro-card p{margin:0;font-size:13px;color:var(--sub);line-height:1.5;}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;}
+  .notes-card h3{margin:0 0 10px;font-size:14px;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:var(--slate2);}
+  .legend{display:flex;flex-wrap:wrap;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;font-size:13px;}
+  .legend .item{display:flex;align-items:center;gap:8px;}
+  .compliance-note{background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:12px 14px;font-size:13px;color:#92400e;margin-top:14px;}
+  .divergence{background:#f1f5f9;border-left:3px solid var(--sub);padding:10px 14px;font-size:13px;color:var(--slate2);border-radius:0 8px 8px 0;margin-top:10px;}
+  footer{text-align:center;color:var(--sub);font-size:12px;padding:20px;}
+</style>
+</head>
+<body>
+<div class="topbar"></div>
+<header>
+  <div class="inner">
+    <h1>Batana Oil</h1>
+    <p class="subtitle">Avatar: women 25 to 44 with thinning, damaged, or textured/low-porosity hair who have cycled through rosemary oil, castor oil, and biotin with no lasting change, and are wary of the fake batana oil flooding TikTok</p>
+    <p class="date">Marketing Angles Report, August 27, 2026</p>
+  </div>
+</header>
+<main>
+
+<div class="stats">
+  <div class="stat"><div class="num">20</div><div class="label">Angles Generated</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">Top Picks</div></div>
+  <div class="stat"><div class="num">36</div><div class="label">Competitor Ads Scored Against</div></div>
+  <div class="stat"><div class="num">11</div><div class="label">Fresh (0 matches)</div></div>
+  <div class="stat"><div class="num">6</div><div class="label">Twist</div></div>
+  <div class="stat"><div class="num">3</div><div class="label">Crowded</div></div>
+</div>
+
+<section id="summary">
+  <h2>Summary</h2>
+  <div class="summary-card">
+    <div>
+      <div class="lbl">Avatar</div>
+      <div>A woman 25 to 44 (a meaningful secondary male audience exists for hairline/beard restoration, per market research) with thinning, damaged, over-processed, or textured/low-porosity hair. She has already tried rosemary oil (the current "it" ingredient, subtle and slow), castor oil (thick, greasy, hard to wash out), and biotin gummies (no visible change), and none of it moved the needle. She found batana oil through TikTok, where it is one of the biggest hair trends of the year, but she has also seen the warnings: dermatologist and consumer-safety articles reporting that roughly 70% of "batana oil" sold online is not real, that AI-generated fake-influencer videos have been running ads for over two years, and that genuine reviewers on Trustpilot describe getting crystallized, off-color, or diluted product. She wants to believe this is the one that finally works, but she is one disappointing purchase away from writing off hair oils entirely.</div>
+    </div>
+    <div>
+      <div class="lbl">Core Transformation</div>
+      <div><strong>Before:</strong> cycling through hyped oils and supplements with no real change to show for it, now hesitant to try batana oil because of viral warnings about fakes and scam ads. <strong>After:</strong> confidently using a verified raw, single-ingredient batana oil as part of a real routine, watching hair get visibly thicker, softer, and less broken month over month, no longer wondering if she got scammed.</div>
+    </div>
+    <div>
+      <div class="lbl">Primary Objection</div>
+      <div>"Is this actually real, pure batana oil worth the wait and the money, or another TikTok-hyped product that turns out to be fake or just does nothing?" This exact fear (authenticity plus efficacy skepticism) is independently confirmed across Trustpilot reviews of adjacent brands, a dermatologist-sourced AOL article, and WebMD, and it is a fear zero of the 36 competitor ads scored against this term address.</div>
+    </div>
+  </div>
+</section>
+
+<section id="top3">
+  <h2>Top 3 Angles</h2>
+  <div class="top3-grid">
+
+    <div class="top-card fresh">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 1</div>
+        <div class="angle-name">The Real Cost of Fake Batana Oil</div>
+        <span class="cat-tag">Fear / Urgency</span>
+        <div><span class="badge fresh">Fresh 0/36</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Research independently confirms (dermatologist-sourced press coverage, Trustpilot complaint patterns, and consumer-safety reporting) that a large share of "batana oil" sold online is not genuine Honduran batana oil, and that AI-generated fake-influencer ads have run for over two years. Every one of the 36 competitor ads scored for "batana oil" sells hair-loss fear or a discount; zero name the authenticity risk that is the actual thing holding this exact buyer back.</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">About 70% of the "batana oil" sold online isn't real. Here's what happens when you use the fake stuff for six months: nothing.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">Educational/exposé-style UGC video, talking head with on-screen proof points</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It directly pre-empts the Primary Objection instead of ignoring it like every competitor ad does, which builds trust with a cold, skeptical audience faster than any benefit claim could, and it is grounded in three independent real sources, not invention.</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Problem-first</div>Tired of buying hair oil that does nothing? There's a reason: it might not even be real batana oil.</div>
+          <div class="hook"><div class="htype">Curiosity</div>70% of the batana oil sold online right now isn't actually from Honduras. Here's how to tell.</div>
+          <div class="hook"><div class="htype">Social proof</div>"I was skeptical because I've heard of so many dupes, but I think I got it right this time." Verified buyer, one of 2,638 reviews.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-card fresh">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 2</div>
+        <div class="angle-name">Batana Oil Doesn't Regrow Hair. Here's What It Actually Does.</div>
+        <span class="cat-tag">Contrarian / Pattern Interrupt</span>
+        <div><span class="badge fresh">Fresh 0/36</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Dermatologists quoted in this run's research are explicit: there is no clinical trial evidence that batana oil regrows hair, and "anyone telling you it's a proven treatment for hair loss is trying to scam you." Every competitor ad in the set oversells (DHT-blocking, regrowth-adjacent claims like "Naturally Block DHT" and "Antidht Growth Booster" appear 4 times); none says plainly what the product does not do.</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">No oil regrows hair overnight. Here's the honest, un-hyped truth about what six weeks of batana oil actually looks like.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">Talking-head video, calm and direct tone</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It is the single most differentiated angle against the DHT-blocking / regrowth-claim cluster, it directly defuses Objection 2, and it is the safest angle for Meta ad standards since it avoids the regrowth-claim language the row's own compliance check already flagged as higher-scrutiny.</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Problem-first</div>Sick of hair oils that promise regrowth and deliver nothing? Let's be honest about what this actually does.</div>
+          <div class="hook"><div class="htype">Result-first</div>Six weeks in: my hair isn't "regrown," it's thicker, softer, and finally stopped breaking at the ends. That's the real result.</div>
+          <div class="hook"><div class="htype">Contra</div>Stop believing any oil that promises to regrow hair overnight. Here's the honest, un-hyped truth about batana oil.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-card twist">
+      <div class="accent"></div>
+      <div class="body">
+        <div class="rank">RANK 3</div>
+        <div class="angle-name">She Tried It for 5 Months Before She Told Anyone</div>
+        <span class="cat-tag">Social Proof / Tribe</span>
+        <div><span class="badge twist">Twist 6/36</span></div>
+        <div class="field" style="margin-top:10px;"><div class="lbl">Core Insight</div><div class="val">Six competitor ads lean on raw numeric social proof ("50,000+ customer transformations," star ratings like "4.7 stars"). This angle uses the same trust lever but earns it through patience and restraint instead of a flexed number, grounded in a real reviewer's own words ("I'll come back in a few months to give an update").</div></div>
+        <div class="field"><div class="lbl">Sample Hook</div><div class="val">She didn't post about it until month 5. That's when we knew it was real.</div></div>
+        <div class="field"><div class="lbl">Best Execution Format</div><div class="val">UGC testimonial, dated-diary style</div></div>
+        <div class="field"><div class="lbl">Why It Wins</div><div class="val">It is the most emotionally charged Social Proof angle available (patience and restraint read as more credible than a big number to a buyer who has been burned by hype before), and it adds a genuine differentiator to a crowded sub-pattern rather than repeating it, which is what earns it a top-3 slot over a plain numeric flex.</div></div>
+        <div class="field"><div class="lbl">Micro Hooks</div>
+          <div class="hook"><div class="htype">Result-first</div>She didn't post about it until month 5. That's when she knew it was real.</div>
+          <div class="hook"><div class="htype">Social proof</div>"I'll come back in a few months to give an update." Real reviewer, no rush, no hype, just patience.</div>
+          <div class="hook"><div class="htype">Curiosity</div>Why did it take her five months to finally post about her hair oil? Because she wanted to be sure first.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="compliance-note">Compliance note: this row's own audit already flags hair-regrowth-claim language as higher-scrutiny on Meta; the report's copy (including Rank 1 and Rank 2) is written around "thickening," "conditioning," and "less breakage," never "regrows hair." Recommend a light compliance pass on final ad copy before spend, same as house practice on any health/beauty-adjacent claim.</div>
+</section>
+
+<section id="all20">
+  <h2>All 20 Angles</h2>
+  <div class="controls">
+    <button class="cat-btn active" data-cat="all">All Categories</button>
+    <button class="cat-btn" data-cat="Pain / Frustration">Pain / Frustration</button>
+    <button class="cat-btn" data-cat="Aspiration / Identity">Aspiration / Identity</button>
+    <button class="cat-btn" data-cat="Contrarian / Pattern Interrupt">Contrarian</button>
+    <button class="cat-btn" data-cat="Fear / Urgency">Fear / Urgency</button>
+    <button class="cat-btn" data-cat="Social Proof / Tribe">Social Proof</button>
+  </div>
+  <div class="controls">
+    <button class="uni-btn active" data-uni="all">All Uniqueness</button>
+    <button class="uni-btn" data-uni="Fresh">Fresh</button>
+    <button class="uni-btn" data-uni="Twist">Twist</button>
+    <button class="uni-btn" data-uni="Crowded">Crowded</button>
+  </div>
+  <table id="angles-table">
+    <thead>
+      <tr>
+        <th data-sort="name">Angle</th>
+        <th data-sort="cat">Category</th>
+        <th data-sort="uni">Uniqueness</th>
+        <th data-sort="insight">Core Insight</th>
+        <th data-sort="hook">Hook</th>
+        <th data-sort="format">Format</th>
+      </tr>
+    </thead>
+    <tbody id="angles-body"></tbody>
+  </table>
+</section>
+
+<section id="macro">
+  <h2>Macro-Angles (Product / Offer)</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h3>Origin / Sourcing Story</h3>
+      <p>Batana oil is a genuinely rare, traditionally hand-harvested Honduran/Miskito ingredient, a real and differentiated origin story that also happens to be the direct rebuttal to the authenticity fear. Run this as a standing content pillar (harvesting process, "this is where it actually comes from"), not a one-off ad.</p>
+    </div>
+    <div class="macro-card">
+      <h3>Evergreen Milestone</h3>
+      <p>"2,638+ verified reviews and counting" is a real, citable number today. Pairs naturally with Rank 1's authenticity framing: review count as trust signal, not just a vanity flex.</p>
+    </div>
+    <div class="macro-card">
+      <h3>New Year's Hair Goals (Winter)</h3>
+      <p>Self-care and "hair goals" resolutions are a natural seasonal fit for a hair-growth-adjacent oil; activate 2 weeks before New Year's, framed around consistency and patience (ties to Rank 3) rather than a quick-fix promise.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h3>Top Pain Points</h3>
+      <ul>
+        <li>Years of rosemary oil, castor oil, and biotin gummies with no real change in thickness or breakage</li>
+        <li>Fear of buying a fake batana oil: independently reported that ~70% of "batana oil" sold online is not genuine, and AI-generated fake-influencer ads have run for 2+ years</li>
+        <li>Slow, hard-to-judge progress ("used since December and it works" vs. "5 months, no difference" on an adjacent brand), never sure if the wait is worth it</li>
+        <li>Product inconsistency on adjacent brands: crystallized texture, wrong color, batch variance (Trustpilot)</li>
+        <li>Small-pot-for-the-price complaint (this row's own 1-star review: "does not even fill half the container")</li>
+        <li>Not sure it applies to their specific hair type ("can it be any batana oil or a specific brand, I have low porosity hair" - real TikTok buyer comment)</li>
+        <li>Overclaim fatigue: tired of brands promising regrowth when dermatologists confirm no clinical trials support that claim</li>
+        <li>Off-putting raw scent on adjacent brands ("burnt coffee," "unusual notes")</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Top Benefits</h3>
+      <ul>
+        <li>Deep-conditions dry or textured hair, soft and smooth, "creamy and not greasy"</li>
+        <li>Less frizz and breakage, more manageable curls</li>
+        <li>Soothes an itchy, irritated scalp ("no more itchy scalp")</li>
+        <li>Visible thickening over time, "baby hairs growing" at the hairline</li>
+        <li>Genuine cross-cultural appeal: verified reviews from the US, Mexico, Egypt, Saudi Arabia, South Africa, and the UAE</li>
+        <li>Raw, single-ingredient, pure sourcing (versus the many blended "batana + rosemary/castor/moringa" competitor formulas)</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Competitor Angles Being Differentiated From</h3>
+      <ul>
+        <li>Offer/discount Aspiration framing (Buy 1 Get 1, flash sales, "sale ends midnight") dominates, 46 of 81 Meta "w"/"w-ish" ads, almost entirely price- or urgency-flex hooks translated across many languages</li>
+        <li>Hair-loss-stopping Fear framing ("How Black Men Are Stopping Hair Loss," "Thought You Were Going Bald," Spanish "Se te cae el pelo") appears 6 times</li>
+        <li>DHT-blocking pseudo-mechanism framing ("Anti-DHT growth booster," "Naturally Block DHT") appears 4 times</li>
+        <li>Raw numeric Social Proof ("50,000+ customer transformations," star-rating call-outs) appears 6+ times</li>
+        <li>Zero of the 36 scored competitor ads address authenticity/counterfeit risk, honest non-overclaim framing, patience/long-timeline proof, or hair-type specificity (e.g. low porosity)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="legend">
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="item"><span class="badge fresh">Fresh</span> No competitor ad in the Winners DB uses this angle (0 matches out of 36 confirmed "w" ads for "batana oil")</div>
+    <div class="item"><span class="badge twist">Twist</span> Competitors hit the same pain or benefit but frame it differently, this angle adds a real differentiator (count shown is the adjacent-match count)</div>
+    <div class="item"><span class="badge crowded">Crowded</span> One or more competitors already run essentially this angle (count shown is the direct-match count)</div>
+  </div>
+  <div class="divergence">Denominator note: N = 36, the rows classified "w" (true winner match) for search term "batana oil" across the Meta Ad Winners (35) and TikTok Winners (1) tabs, matching this row's own AI Audit Social figure. An additional 46 Meta + 1 TikTok "w-ish" rows (partial/blend matches, e.g. brands blending batana with rosemary or castor oil) were read for context on crowding but excluded from N as non-exact matches, per the "w"-only Social gating convention.</div>
+</section>
+
+</main>
+<footer>Nova Capital / Find Marketing Angles &middot; Batana Oil &middot; August 27, 2026</footer>
+
+<script>
+const angles = [
+  {name:"The Rosemary Oil Graveyard", cat:"Pain / Frustration", uni:"Fresh", count:"0/36", insight:"Names the exact tried-and-failed cycle (rosemary oil, castor oil, biotin) with no competitor equivalent; every competitor pain-adjacent hook sells a generic result, not this specific fatigue.", hook:"Rosemary oil didn't work. Castor oil was too greasy. Biotin did nothing. Here's what 2,638 people found instead.", format:"UGC before/after"},
+  {name:"Half-Empty Pot Rage", cat:"Pain / Frustration", uni:"Fresh", count:"0/36", insight:"Addresses the real value-for-money complaint (this row's own 1-star review: container half-empty) that zero competitor ads touch.", hook:"Tired of paying for a hair oil pot that's half air? This 4oz jar lasts months, not weeks.", format:"Static comparison"},
+  {name:"The 3pm Scalp Itch", cat:"Pain / Frustration", uni:"Fresh", count:"0/36", insight:"Scalp irritation is a real, specific reviewer pain point ('no more itchy scalp') never used as a competitor hook.", hook:"If your scalp itches by 3pm every day, your 'hydrating' shampoo isn't hydrating anything.", format:"UGC video"},
+  {name:"Frizz That Won't Quit", cat:"Pain / Frustration", uni:"Twist", count:"2/36", insight:"Adjacent to the 'Stronger Hair Instantly' / 'Restore Softness' result-first cluster, but reframed as agitating the daily frizz problem first rather than leading with the fix.", hook:"Humidity ruins your hair before 9am. Here's the 2-minute fix that actually holds.", format:"UGC video"},
+  {name:"The Woman Whose Hair Just Works", cat:"Aspiration / Identity", uni:"Crowded", count:"15/36", insight:"Overlaps the large generic-confidence Aspiration cluster ('Discover Secret Thick, Shiny Hair,' 'Vitalidad Capilar') that makes up most of the competitor set.", hook:"Imagine never thinking about your hair again, because it just looks good.", format:"Lifestyle UGC"},
+  {name:"Thick Enough to Stop Hiding the Part", cat:"Aspiration / Identity", uni:"Twist", count:"3/36", insight:"Specific hairline-hiding behavior insight, thematically adjacent to the hair-loss Fear cluster but reframed as a confidence Aspiration instead of a fear.", hook:"I stopped parting my hair to the side to hide the thinning. Then I found this.", format:"Testimonial"},
+  {name:"Salon Hair, Zero Salon Bill", cat:"Aspiration / Identity", uni:"Fresh", count:"0/36", insight:"No competitor ad makes a cost-versus-salon-treatment comparison.", hook:"This is the $12-a-month replacement for a $200 keratin treatment.", format:"Static/carousel"},
+  {name:"Grandma's Ritual, My Routine", cat:"Aspiration / Identity", uni:"Twist", count:"1/36", insight:"Heritage/ritual framing is nearly unused; the closest competitor ad ('The Day Nigerians Discovered') gestures at cultural origin but does not build a ritual/identity angle around it.", hook:"My grandmother did this every Sunday. Now I do it every Sunday too.", format:"VSL/story"},
+  {name:"Batana Oil Doesn't Regrow Hair. Here's What It Actually Does.", cat:"Contrarian / Pattern Interrupt", uni:"Fresh", count:"0/36", insight:"See Rank 2 above.", hook:"No oil regrows hair overnight. Here's the honest, un-hyped truth about what six weeks of batana oil actually looks like.", format:"Talking-head video"},
+  {name:"Stop Buying the $9.99 Batana Oil", cat:"Contrarian / Pattern Interrupt", uni:"Fresh", count:"0/36", insight:"Directly targets the authenticity/price-tell fear (genuine batana oil costs more; suspiciously cheap listings are the fakes) that no competitor ad addresses.", hook:"If your batana oil is under $15, it's probably not real batana oil. Here's how to tell.", format:"Educational carousel"},
+  {name:"You Don't Need a 7-Step Routine", cat:"Contrarian / Pattern Interrupt", uni:"Crowded", count:"1/36", insight:"Directly overlaps one existing competitor ad ('You Don't Need 5 Products'), same simplicity-contrarian mechanism.", hook:"You don't need 7 products. You need one raw ingredient, used consistently.", format:"Static"},
+  {name:"Thick Oil Isn't 'More Effective'", cat:"Contrarian / Pattern Interrupt", uni:"Fresh", count:"0/36", insight:"Texture-myth education (thicker paste does not mean better absorption) is unused by any competitor ad.", hook:"Thinking a thicker paste means it works better? That's not how your scalp absorbs anything.", format:"Educational"},
+  {name:"The Real Cost of Fake Batana Oil", cat:"Fear / Urgency", uni:"Fresh", count:"0/36", insight:"See Rank 1 above.", hook:"About 70% of the batana oil sold online isn't real. Here's what six months of the fake stuff gets you: nothing.", format:"Educational/expose video"},
+  {name:"Every Month You Wait Is a Month of Breakage", cat:"Fear / Urgency", uni:"Twist", count:"1/36", insight:"Adjacent to one competitor's scarcity-urgency hook ('Get It Before It Runs Out') but reframed as biological urgency (breakage/split ends) rather than stock urgency.", hook:"Split ends don't heal. They just get cut off. Start before your next trim.", format:"UGC video"},
+  {name:"The AI Scam Ads Are Everywhere", cat:"Fear / Urgency", uni:"Fresh", count:"0/36", insight:"Meta-commentary on documented AI-generated fake-influencer batana oil ads; zero competitor ads acknowledge this, let alone use it as a differentiator.", hook:"That 'influencer' raving about batana oil? It might be AI. Here's how we're different.", format:"Transparency video"},
+  {name:"Thinning Doesn't Wait for You to Be Ready", cat:"Fear / Urgency", uni:"Crowded", count:"5/36", insight:"Directly overlaps the hair-loss-stopping Fear cluster ('Thought You Were Going Bald,' 'Se te cae el pelo,' 'Frena la caida') already run 5 times.", hook:"The longer thinning goes untreated, the harder it is to reverse.", format:"Testimonial"},
+  {name:"2,638 Reviews Can't All Be Fake", cat:"Social Proof / Tribe", uni:"Twist", count:"3/36", insight:"Adjacent to the raw numeric Social Proof cluster (customer counts, star ratings) but reframes toward review-count-as-authenticity-proof rather than a scale flex.", hook:"2,638 real reviews. Read the 3-star ones first, that's where the truth is.", format:"UI screenshot carousel"},
+  {name:"From Egypt to South Africa to Texas", cat:"Social Proof / Tribe", uni:"Fresh", count:"0/36", insight:"The genuine cross-cultural review spread (US, Mexico, Egypt, Saudi Arabia, UAE, South Africa) found in this row's own reviews has no competitor equivalent; competitor ads run single-country/single-language, not a cross-cultural framing.", hook:"Women on four continents use this the exact same way. Here's why.", format:"Map/carousel"},
+  {name:"She Tried It for 5 Months Before She Told Anyone", cat:"Social Proof / Tribe", uni:"Twist", count:"6/36", insight:"See Rank 3 above.", hook:"She didn't post about it until month 5. That's when we knew it was real.", format:"UGC testimonial"},
+  {name:"Ask Anyone With Low-Porosity Hair", cat:"Social Proof / Tribe", uni:"Fresh", count:"0/36", insight:"Directly answers a real buyer question captured in TikTok comments ('I have low porosity hair, does it work for that?'); no competitor ad speaks to hair-type specificity at all.", hook:"Low-porosity hair is the hardest to treat. Here's what actually absorbs.", format:"UGC"}
+];
+
+const tbody = document.getElementById('angles-body');
+function uniClass(u){ return u.toLowerCase(); }
+function render(list){
+  tbody.innerHTML = '';
+  list.forEach(a=>{
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="angle-cell">${a.name}</td>
+      <td>${a.cat}</td>
+      <td><span class="badge ${uniClass(a.uni)}">${a.uni} ${a.count}</span></td>
+      <td>${a.insight}</td>
+      <td>${a.hook}</td>
+      <td>${a.format}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+render(angles);
+
+let curCat = 'all', curUni = 'all';
+function applyFilters(){
+  let list = angles;
+  if(curCat !== 'all') list = list.filter(a=>a.cat===curCat);
+  if(curUni !== 'all') list = list.filter(a=>a.uni.toLowerCase()===curUni.toLowerCase());
+  render(list);
+}
+document.querySelectorAll('.cat-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    curCat = btn.dataset.cat;
+    applyFilters();
+  });
+});
+document.querySelectorAll('.uni-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    document.querySelectorAll('.uni-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    curUni = btn.dataset.uni;
+    applyFilters();
+  });
+});
+
+let sortDir = {};
+document.querySelectorAll('th[data-sort]').forEach(th=>{
+  th.addEventListener('click', ()=>{
+    const key = th.dataset.sort;
+    const map = {name:'name',cat:'cat',uni:'uni',insight:'insight',hook:'hook',format:'format'};
+    sortDir[key] = !sortDir[key];
+    let list = angles.slice();
+    if(curCat !== 'all') list = list.filter(a=>a.cat===curCat);
+    if(curUni !== 'all') list = list.filter(a=>a.uni.toLowerCase()===curUni.toLowerCase());
+    list.sort((a,b)=> sortDir[key] ? a[map[key]].localeCompare(b[map[key]]) : b[map[key]].localeCompare(a[map[key]]));
+    render(list);
+  });
+});
+</script>
+</body>
+</html>

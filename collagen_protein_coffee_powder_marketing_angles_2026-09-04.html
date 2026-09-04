@@ -1,0 +1,301 @@
+<title>Collagen Protein Coffee Powder — Marketing Angles</title>
+<style>
+  :root{
+    --slate:#1e293b; --slate2:#334155; --ink:#0f172a; --sub:#64748b;
+    --bg:#f8fafc; --card:#ffffff; --border:#e2e8f0;
+    --fresh:#16a34a; --freshbg:#dcfce7;
+    --twist:#d97706; --twistbg:#fef3c7;
+    --crowded:#dc2626; --crowdedbg:#fee2e2;
+    --accent:#4f46e5;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);}
+  .topbar{height:6px;background:linear-gradient(90deg,var(--slate),var(--slate2));}
+  header{background:#fff;border-bottom:1px solid var(--border);padding:28px 24px 22px;}
+  header .wrap{max-width:1100px;margin:0 auto;}
+  header h1{margin:0 0 6px;font-size:26px;letter-spacing:-.02em;}
+  header .sub{color:var(--sub);font-size:15px;margin-bottom:4px;}
+  header .date{color:var(--sub);font-size:13px;}
+  .wrap{max-width:1100px;margin:0 auto;padding:24px;}
+  .summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:28px;}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px 18px;}
+  .stat .label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--sub);font-weight:600;margin-bottom:6px;}
+  .stat .value{font-size:14px;line-height:1.5;}
+  h2{font-size:19px;margin:36px 0 14px;letter-spacing:-.01em;}
+  h2 .count{color:var(--sub);font-weight:400;font-size:14px;}
+  .top3{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:16px;}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden;}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);}
+  .card.rank1::before{background:#4f46e5;}
+  .card.rank2::before{background:#7c3aed;}
+  .card.rank3::before{background:#a855f7;}
+  .rank-badge{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:var(--slate2);border-radius:20px;padding:3px 10px;margin-bottom:10px;}
+  .angle-name{font-size:17px;font-weight:700;margin:0 0 4px;}
+  .cat-tag{font-size:11px;color:var(--sub);text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;}
+  .badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;border-radius:20px;padding:3px 10px;margin-bottom:12px;}
+  .badge.fresh{color:var(--fresh);background:var(--freshbg);}
+  .badge.twist{color:var(--twist);background:var(--twistbg);}
+  .badge.crowded{color:var(--crowded);background:var(--crowdedbg);}
+  .card p{font-size:13.5px;line-height:1.55;margin:6px 0;}
+  .card .hook{background:#f1f5f9;border-left:3px solid var(--accent);padding:8px 12px;font-style:italic;font-size:13px;border-radius:0 6px 6px 0;margin:8px 0;}
+  .card .field{margin:8px 0;}
+  .card .field b{font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--sub);display:block;margin-bottom:2px;}
+  .micro{margin-top:10px;border-top:1px dashed var(--border);padding-top:10px;}
+  .micro-item{font-size:12.5px;margin-bottom:6px;}
+  .micro-item .type{font-weight:700;color:var(--slate2);}
+  .controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .btn{border:1px solid var(--border);background:#fff;border-radius:20px;padding:6px 13px;font-size:12.5px;cursor:pointer;color:var(--ink);}
+  .btn.active{background:var(--slate);color:#fff;border-color:var(--slate);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;font-size:13px;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top;}
+  th{background:#f1f5f9;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);cursor:pointer;user-select:none;}
+  tr:last-child td{border-bottom:none;}
+  .pill{display:inline-block;font-size:11px;font-weight:700;border-radius:20px;padding:2px 8px;white-space:nowrap;}
+  .pill.fresh{color:var(--fresh);background:var(--freshbg);}
+  .pill.twist{color:var(--twist);background:var(--twistbg);}
+  .pill.crowded{color:var(--crowded);background:var(--crowdedbg);}
+  .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .macro-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .macro-card h3{margin:0 0 6px;font-size:15px;}
+  .macro-card p{font-size:13px;color:var(--sub);margin:0;line-height:1.5;}
+  .notes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;}
+  .notes-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+  .notes-card h3{margin:0 0 8px;font-size:14px;}
+  .notes-card ul{margin:0;padding-left:18px;font-size:13px;line-height:1.6;color:#334155;}
+  .legend{display:flex;flex-wrap:wrap;gap:18px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 18px;font-size:13px;margin-top:10px;}
+  .legend .item{display:flex;align-items:center;gap:8px;}
+  .legend .dot{width:10px;height:10px;border-radius:50%;}
+  footer{max-width:1100px;margin:10px auto 40px;padding:0 24px;font-size:12px;color:var(--sub);}
+</style>
+
+<div class="topbar"></div>
+<header>
+  <div class="wrap">
+    <h1>Collagen Protein Coffee Powder — Marketing Angles</h1>
+    <div class="sub">Avatar: US adults 25-54, unisex, coffee-drinkers noticing early signs of skin/joint/hair aging, skeptical of past supplement fads</div>
+    <div class="date">Published 09-04-2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="summary">
+    <div class="stat">
+      <div class="label">Avatar</div>
+      <div class="value">US adult 25-54, either gender (TAM skews 55.8% female / 44.2% male, genuinely near-unisex), has an established daily coffee habit, has tried and abandoned a standalone collagen powder or gummy before, is starting to notice early-stage skin/joint/hair aging signs rather than being in a menopause-specific crisis. Skeptical of wellness hype, responsive to real mechanism-level proof.</div>
+    </div>
+    <div class="stat">
+      <div class="label">Core Transformation</div>
+      <div class="value"><b>Before:</b> quietly noticing early aging signs, with a graveyard of half-used, forgotten collagen supplements in the cabinet. <b>After:</b> getting a full clinical dose of 5-type collagen every day with zero extra steps, because it rides the coffee they already make.</div>
+    </div>
+    <div class="stat">
+      <div class="label">Primary Objection</div>
+      <div class="value">"I've tried collagen/wellness products before and they did nothing but drain my wallet and get abandoned in a cabinet — why would this be different?"</div>
+    </div>
+  </div>
+
+  <h2>Top 3 Angles</h2>
+  <div class="top3">
+
+    <div class="card rank1">
+      <span class="rank-badge">RANK 1</span>
+      <div class="angle-name">Collagen Isn't Just a Women's Word</div>
+      <div class="cat-tag">Contrarian / Pattern Interrupt</div>
+      <span class="badge fresh">● Fresh 0/9</span>
+      <div class="field"><b>Core Insight</b><p>All 9 competitor winner ads for this exact search term explicitly say "British Women" — none address the ~44% of this product's own measured audience that is male. Collagen decline starts for everyone by their mid-20s, not just women over 40.</p></div>
+      <div class="hook">"Every collagen ad you've scrolled past was written for someone else. Collagen loss starts for everyone by their mid-20s — not just women over 40. Here's what one scoop in your coffee actually does."</div>
+      <div class="field"><b>Best Format</b><p>UGC video (male or mixed-gender creator) or static text-forward ad</p></div>
+      <div class="field"><b>Why It Wins</b><p>Claims an entire audience segment (roughly 44% of this product's own TAM) that literally every ad in the Winners DB competitor set ignores by name — a genuine pattern interrupt for cold traffic, since nobody else in the category is saying it.</p></div>
+      <div class="micro">
+        <div class="micro-item"><span class="type">Problem-first:</span> Tired of every "anti-aging" ad assuming you're a 45-year-old woman? Collagen loss doesn't check your gender at the door.</div>
+        <div class="micro-item"><span class="type">Curiosity:</span> The one wellness category that's 99% marketed to women, even though the science applies to everyone. Here's what changes when you actually read the label.</div>
+        <div class="micro-item"><span class="type">Contra:</span> Stop assuming collagen "isn't for you." It's not a beauty product — it's a protein your body stops making enough of by 25, regardless of who you are.</div>
+      </div>
+    </div>
+
+    <div class="card rank2">
+      <span class="rank-badge">RANK 2</span>
+      <div class="angle-name">One More Thing To Remember</div>
+      <div class="cat-tag">Pain / Frustration</div>
+      <span class="badge fresh">● Fresh 0/9</span>
+      <div class="field"><b>Core Insight</b><p>Real research signal (Amazon, Reddit-adjacent forums) shows the most common reason people quit collagen isn't that it doesn't work — it's that a separate powder/gummy/pill is one more step they eventually forget. A coffee-based format survives because it rides a habit that never gets skipped.</p></div>
+      <div class="hook">"Be honest: how many half-used tubs of collagen powder are sitting in your cabinet right now? You didn't stop believing in it. You just forgot it wasn't part of your routine yet."</div>
+      <div class="field"><b>Best Format</b><p>UGC testimonial, or static before/after visual (cluttered supplement shelf vs. one coffee mug)</p></div>
+      <div class="field"><b>Why It Wins</b><p>Grounded directly in real complaint signal (forgotten/abandoned supplements) and in this product's own verified structural advantage (Product Index: fills a void, saves time). None of the 9 competitor ads frame the problem as adherence/forgetting — they all lead with a results narrative instead.</p></div>
+      <div class="micro">
+        <div class="micro-item"><span class="type">Problem-first:</span> The real reason your last collagen powder didn't "work": you stopped taking it after 3 weeks. This one you can't forget, because it's already in your coffee.</div>
+        <div class="micro-item"><span class="type">Result-first:</span> I didn't add a new step to my morning. I just upgraded the coffee I was already making — and 8 weeks later my skin and joints noticed.</div>
+        <div class="micro-item"><span class="type">Social proof:</span> The reviewers who actually stuck with a collagen routine for 3+ months all say the same thing: it only worked because they stopped having to remember it.</div>
+      </div>
+    </div>
+
+    <div class="card rank3">
+      <span class="rank-badge">RANK 3</span>
+      <div class="angle-name">Actually, Heat Doesn't Kill It</div>
+      <div class="cat-tag">Contrarian / Pattern Interrupt</div>
+      <span class="badge fresh">● Fresh 0/9</span>
+      <div class="field"><b>Core Insight</b><p>The most-Googled objection in this category — "does hot coffee destroy the collagen?" — is false. Hydrolyzed collagen peptides don't break down until roughly 572°F; coffee tops out around 185°F. None of the 9 competitor ads engage this objection at all.</p></div>
+      <div class="hook">"Yes, we get asked this constantly: does hot coffee destroy the collagen? No. Collagen peptides don't break down until 572°F. Your coffee maxes out at 185°F. You've been getting the full dose the whole time."</div>
+      <div class="field"><b>Best Format</b><p>Static myth-vs-fact graphic, or a short VSL walking through the number</p></div>
+      <div class="field"><b>Why It Wins</b><p>Resolves the single most commonly raised doubt in the category with a specific, checkable number instead of an emotional appeal — pairs logical proof with the emotional relief of "I haven't been wasting my money," directly countering the skepticism this research surfaced repeatedly ("is this just hype," "jury's still out").</p></div>
+      <div class="micro">
+        <div class="micro-item"><span class="type">Curiosity:</span> Everyone assumes hot coffee destroys collagen. The actual temperature it takes to break down is 3x hotter than your coffee maker gets. Here's the math.</div>
+        <div class="micro-item"><span class="type">Contra:</span> Stop pouring your collagen into iced coffee "just in case." The heat-destroys-it myth isn't real, and skipping your hot coffee is the only thing you'd be losing.</div>
+        <div class="micro-item"><span class="type">Problem-first:</span> Worried you're wasting your collagen by putting it in hot coffee? You're not the first to ask — and the science says you're in the clear.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>All 20 Angles <span class="count" id="count20"></span></h2>
+  <div class="controls" id="catControls"></div>
+  <div class="controls" id="uniqControls"></div>
+  <div style="overflow-x:auto;">
+  <table id="angleTable">
+    <thead>
+      <tr>
+        <th data-k="name">Angle</th>
+        <th data-k="cat">Category</th>
+        <th data-k="uniq">Uniqueness</th>
+        <th data-k="insight">Core Insight</th>
+        <th data-k="hook">Hook</th>
+        <th data-k="fmt">Format</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  </div>
+
+  <h2>Uniqueness Legend</h2>
+  <div class="legend">
+    <div class="item"><span class="dot" style="background:var(--fresh)"></span><b>Fresh</b>&nbsp;— 0 of the 9 Winners DB competitor ads for "multi collagen coffee" run this angle.</div>
+    <div class="item"><span class="dot" style="background:var(--twist)"></span><b>Twist</b>&nbsp;— competitors hit the same pain/benefit, but this angle frames it differently (adjacent-match count shown).</div>
+    <div class="item"><span class="dot" style="background:var(--crowded)"></span><b>Crowded</b>&nbsp;— one or more competitors already run essentially this angle (direct-match count shown).</div>
+  </div>
+  <p style="font-size:12.5px;color:var(--sub);margin-top:8px;">N = 9: all 9 Meta Ad Winners rows in the Winners DB for search term "multi collagen coffee" (TikTok Winners = 0 rows for this term, so the whole competitor set is these 9 Meta ads, all one brand — Elavate Multi-Collagen Superblend — running via 9 different affiliate/influencer accounts).</p>
+
+  <h2>Macro-Angles</h2>
+  <div class="macro-grid">
+    <div class="macro-card">
+      <h3>New Year's Reset (activate mid-December)</h3>
+      <p>Only clean seasonal fit for this product right now. "New year, new coffee ritual" positioning fits a habit-stacking wellness product well for the January resolution window; activate ads 2 weeks before New Year's.</p>
+    </div>
+    <div class="macro-card">
+      <h3>Not yet applicable</h3>
+      <p>New Product Launch, Restock Event, and Evergreen unit-sold milestone all require data this run does not have (no launch date, no live sales count). Handmade/Jewelry product-specific angles do not apply to a supplement powder. None invented here.</p>
+    </div>
+  </div>
+
+  <h2>Research Notes</h2>
+  <div class="notes-grid">
+    <div class="notes-card">
+      <h3>Top Pain Points</h3>
+      <ul>
+        <li>Forgetting to take a separate collagen powder/gummy; abandoned tubs in the cabinet (Amazon, forums)</li>
+        <li>Taste inconsistency: some find the chocolate mocha too sweet (Stevia), others find it bland; doesn't dissolve well in cold drinks (Amazon reviews)</li>
+        <li>Skepticism it "does nothing" / "just marketing hype," results take 8-12 weeks not overnight (Reddit-adjacent forums, YouTube Q&A)</li>
+        <li>"Does heat from coffee destroy the collagen?" — the single most repeated objection (YouTube, blogs)</li>
+        <li>One reviewer flagged no published third-party heavy-metal testing on the chocolate variant — a real quality-transparency concern to route to Compliance/QC, not used in ad copy this run</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Top Benefits</h3>
+      <ul>
+        <li>5 collagen types (I, II, III, V, X) for skin, hair, nails, joints in one scoop (product listing)</li>
+        <li>Real usage signal: faster nail growth, reduced joint stiffness, smoother skin reported after 4-8 weeks of consistent use (Amazon, forums)</li>
+        <li>Removes the separate-purchase/separate-step friction by riding an existing coffee habit (Product DB Index finding, corroborated by forum "I just add it to my coffee and don't think about it" quotes)</li>
+        <li>Backed by real RCTs: 5-10g hydrolyzed collagen daily improves skin hydration/elasticity/wrinkle depth in 4-12 weeks; hydrolyzed peptides are stable well past coffee temperature (572°F degradation point vs. ~185°F coffee)</li>
+      </ul>
+    </div>
+    <div class="notes-card">
+      <h3>Competitor Angles Differentiated From</h3>
+      <ul>
+        <li><b>Elavate (9/9 of the Winners DB set for this term):</b> "Glowing Skin After 40" aspiration (5/9), "Pain-Free Joints After 40" (2/9), "Mass Adoption Proof" / adoption-count social proof (2/9) — all via UK-targeted affiliate/influencer UGC, all speaking only to "British women," none addressing men, none referencing coffee as the delivery ritual, none addressing the heat-destroys-collagen objection.</li>
+        <li><b>Vital Proteins Collagen Creamer:</b> anti-aging + clean-label daily-routine convenience</li>
+        <li><b>Bulletproof Collagen:</b> grass-fed, biohacking/performance positioning</li>
+        <li><b>Kitu Super Creamer:</b> keto/zero-sugar convenience</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>Report for Agent Products r53 "Collagen Protein Coffee Powder" (canonical: Codeage Multi Collagen Powder, Chocolate Mocha Coffee, 5 Types, 14 oz). Generated by Find Marketing Angles, 09-04-2026.</footer>
+</div>
+
+<script>
+const ANGLES = [
+ {name:"The Supplement Graveyard",cat:"Pain / Frustration",uniq:"twist",uniqLabel:"Twist 1/9",insight:"Half-used jars of collagen powder/gummies pile up because you forgot, every time, not because they didn't work.",hook:"Stop starting supplements you're not going to finish. Here's the one that survives because it's already in your coffee.",fmt:"UGC video"},
+ {name:"Cold Coffee Clump",cat:"Pain / Frustration",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Cheap collagen powders clump, turn gritty, and ruin the one relaxing part of your morning.",hook:"If your collagen powder turns your coffee into a science experiment, you're using the wrong one.",fmt:"Static"},
+ {name:"The Aging You Can't See Yet",cat:"Pain / Frustration",uniq:"twist",uniqLabel:"Twist 1/9",insight:"The subtle stuff — skin losing a little bounce, joints a touch stiffer — shows up well before 40, earlier than competitors' framing.",hook:"You're not 'old.' But your skin and joints already know something's changing. Here's what to do about it in your 30s, not your 50s.",fmt:"UGC video"},
+ {name:"One More Thing To Remember",cat:"Pain / Frustration",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"A separate supplement step is mental load most people don't sustain past a few weeks.",hook:"Be honest: how many half-used tubs of collagen are sitting in your cabinet right now?",fmt:"UGC testimonial"},
+ {name:"The Effortless Morning Ritual",cat:"Aspiration / Identity",uniq:"twist",uniqLabel:"Twist 5/9",insight:"Becoming someone whose self-care runs on autopilot, not willpower — adjacent to competitors' result-only 'glowing skin' framing.",hook:"Self-care that doesn't require a personality change. Just the coffee you already make.",fmt:"Static"},
+ {name:"Coffee That Works As Hard As You Do",cat:"Aspiration / Identity",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Identity of a high-functioning person who upgrades what already works instead of adding new habits.",hook:"You don't need a new morning routine. You need your current one to do more.",fmt:"Static"},
+ {name:"Aging On Your Own Terms",cat:"Aspiration / Identity",uniq:"twist",uniqLabel:"Twist 2/9",insight:"Staying capable and mobile at any age — broader than competitors' 'look young for your age, women 40+' framing, and gender-neutral.",hook:"This isn't about looking 25 again. It's about still being able to do everything you do now, ten years from now.",fmt:"VSL"},
+ {name:"Built In, Not Bolted On",cat:"Aspiration / Identity",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Identity of someone whose health routine is seamlessly integrated into life, not a separate self-improvement project.",hook:"The best health habit is the one you don't have to think about. This one's already built into your coffee.",fmt:"Carousel"},
+ {name:"Actually, Heat Doesn't Kill It",cat:"Contrarian / Pattern Interrupt",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Hydrolyzed collagen degrades at ~572°F; coffee tops out ~185°F. The #1 objection in the category is a myth.",hook:"Does hot coffee destroy the collagen? No. Here's the actual number.",fmt:"Static"},
+ {name:"Collagen Isn't Just a Women's Word",cat:"Contrarian / Pattern Interrupt",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Every competitor ad for this term says 'British women.' Collagen loss starts for everyone by their mid-20s.",hook:"Collagen loss doesn't check your gender at the door. Neither should this.",fmt:"UGC video"},
+ {name:"You Don't Need Another Supplement",cat:"Contrarian / Pattern Interrupt",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Reframes the product as an upgrade to something you already drink, not a new thing to add, undercutting supplement fatigue.",hook:"This isn't a new supplement. It's your same coffee, doing one more job.",fmt:"Static"},
+ {name:"Skip The Shake, Keep The Coffee",cat:"Contrarian / Pattern Interrupt",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Every competitor ad frames Elavate as its own standalone chocolate drink. This challenges the idea you need a separate shake at all.",hook:"You don't need a new drink to get your collagen. You need a better version of the one you already have.",fmt:"Static"},
+ {name:"The Damage Compounds Quietly",cat:"Fear / Urgency",uniq:"twist",uniqLabel:"Twist 2/9",insight:"Collagen production drops ~1%/year starting in your mid-20s — earlier and more urgent than competitors' 'after 40' framing.",hook:"By the time you notice it in the mirror, you've been losing it for 15 years.",fmt:"VSL"},
+ {name:"Still Buying Separate Bottles?",cat:"Fear / Urgency",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"The cost and clutter of buying collagen, joint support, and skin serums separately resolves into one coffee-based habit.",hook:"How many separate bottles are you buying to do what one scoop already does?",fmt:"Carousel"},
+ {name:"What Your Joints Are Telling You",cat:"Fear / Urgency",uniq:"twist",uniqLabel:"Twist 2/9",insight:"Everyday stiffness (stairs, getting up off the floor) as an early warning sign, not 'just getting older' — earlier than competitors' menopause-specific joint-pain framing.",hook:"That stiffness on the stairs isn't 'just getting older.' It's a signal — and it starts earlier than you think.",fmt:"UGC video"},
+ {name:"One Cup Away From Falling Behind",cat:"Fear / Urgency",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Plays on the idea that people already seeing results started months ago — a FOMO/urgency mechanic competitors don't use (they lean on adoption stats, not urgency).",hook:"The people whose skin and joints you're jealous of started this months ago. Today's a fine day to catch up.",fmt:"Static"},
+ {name:"The Espresso Machine Upgrade Everyone's Making",cat:"Social Proof / Tribe",uniq:"twist",uniqLabel:"Twist 2/9",insight:"Reframes adoption as a kitchen-counter habit upgrade (like switching to oat milk) rather than a raw brand-adoption number.",hook:"It's the quiet upgrade everyone's kitchen counter is getting this year.",fmt:"UGC video"},
+ {name:"4.1 Stars, 250+ Real Reviews, Zero Hype",cat:"Social Proof / Tribe",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Anchors trust in a real, public, verifiable Amazon rating and review count rather than an affiliate-network adoption claim.",hook:"Not a follower count. Not an affiliate script. 250+ real reviews, 4.1 stars.",fmt:"Static"},
+ {name:"Ask The Person Whose Coffee You're Jealous Of",cat:"Social Proof / Tribe",uniq:"twist",uniqLabel:"Twist 5/9",insight:"Tribe-envy angle built around the coffee ritual itself rather than the skin result alone, adjacent to competitors' UGC 'glowing skin' cluster.",hook:"Ever wonder why their morning coffee seems to be working harder than yours?",fmt:"UGC testimonial"},
+ {name:"Not Sponsored. Just Add It To Your Coffee.",cat:"Social Proof / Tribe",uniq:"fresh",uniqLabel:"Fresh 0/9",insight:"Meta-commentary contrast against the competitor set's visible affiliate-marketing pattern (9 near-identical scripted UGC ads across different accounts).",hook:"No affiliate code. No sponsored tag. Just what's actually in our coffee this month.",fmt:"UGC video"},
+];
+
+const cats = [...new Set(ANGLES.map(a=>a.cat))];
+const uniqs = [{k:"fresh",label:"Fresh"},{k:"twist",label:"Twist"},{k:"crowded",label:"Crowded"}];
+let activeCat = null, activeUniq = null, sortKey = null, sortDir = 1;
+
+function pill(a){return `<span class="pill ${a.uniq}">${a.uniqLabel}</span>`;}
+
+function render(){
+  let rows = ANGLES.filter(a => (!activeCat || a.cat===activeCat) && (!activeUniq || a.uniq===activeUniq));
+  if(sortKey){
+    rows = rows.slice().sort((a,b)=>{
+      let av=a[sortKey], bv=b[sortKey];
+      if(sortKey==="uniq"){ const order={fresh:0,twist:1,crowded:2}; av=order[a.uniq]; bv=order[b.uniq]; }
+      if(av<bv) return -1*sortDir; if(av>bv) return 1*sortDir; return 0;
+    });
+  }
+  document.getElementById("count20").textContent = `(${rows.length} of ${ANGLES.length})`;
+  document.querySelector("#angleTable tbody").innerHTML = rows.map(a=>`
+    <tr>
+      <td><b>${a.name}</b></td>
+      <td>${a.cat}</td>
+      <td>${pill(a)}</td>
+      <td>${a.insight}</td>
+      <td>${a.hook}</td>
+      <td>${a.fmt}</td>
+    </tr>`).join("");
+}
+
+document.getElementById("catControls").innerHTML = `<button class="btn active" data-c="">All Categories</button>` +
+  cats.map(c=>`<button class="btn" data-c="${c}">${c}</button>`).join("");
+document.getElementById("uniqControls").innerHTML = `<button class="btn active" data-u="">All Uniqueness</button>` +
+  uniqs.map(u=>`<button class="btn" data-u="${u.k}">${u.label}</button>`).join("");
+
+document.getElementById("catControls").addEventListener("click", e=>{
+  if(e.target.tagName!=="BUTTON") return;
+  activeCat = e.target.dataset.c || null;
+  [...document.getElementById("catControls").children].forEach(b=>b.classList.toggle("active", b===e.target));
+  render();
+});
+document.getElementById("uniqControls").addEventListener("click", e=>{
+  if(e.target.tagName!=="BUTTON") return;
+  activeUniq = e.target.dataset.u || null;
+  [...document.getElementById("uniqControls").children].forEach(b=>b.classList.toggle("active", b===e.target));
+  render();
+});
+document.querySelectorAll("#angleTable th[data-k]").forEach(th=>{
+  th.addEventListener("click", ()=>{
+    const k = th.dataset.k;
+    if(sortKey===k) sortDir*=-1; else { sortKey=k; sortDir=1; }
+    render();
+  });
+});
+
+render();
+</script>

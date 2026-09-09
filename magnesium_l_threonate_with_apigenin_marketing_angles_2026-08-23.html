@@ -1,462 +1,136 @@
-<title>Magnesium L-Threonate with Apigenin — Marketing Angles</title>
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magnesium L-Threonate with Apigenin: Marketing Angles</title>
 <style>
-  :root {
-    --slate: #1e293b;
-    --slate-dark: #0f172a;
-    --bg: #f4f6f9;
-    --card: #ffffff;
-    --ink: #1e2530;
-    --ink-soft: #5b6472;
-    --border: #e2e6ec;
-    --fresh: #0f9d58;
-    --fresh-bg: #e6f7ee;
-    --twist: #c77b00;
-    --twist-bg: #fdf1dc;
-    --crowded: #b3261e;
-    --crowded-bg: #fce8e6;
-    --accent: #3b5bdb;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-  }
-  .topbar { height: 6px; background: linear-gradient(90deg, var(--slate-dark), var(--slate), var(--accent)); }
-  header.hero {
-    background: var(--card);
-    padding: 28px 32px 22px;
-    border-bottom: 1px solid var(--border);
-  }
-  header.hero h1 { margin: 0 0 6px; font-size: 1.65rem; letter-spacing: -0.01em; }
-  header.hero .subtitle { color: var(--ink-soft); font-size: 1rem; margin-bottom: 4px; }
-  header.hero .date { color: var(--ink-soft); font-size: 0.85rem; }
-  main { max-width: 1180px; margin: 0 auto; padding: 24px 20px 64px; }
-  section { margin-bottom: 34px; }
-  h2 { font-size: 1.15rem; margin: 0 0 14px; display: flex; align-items: center; gap: 8px; }
-  h2::before { content: ""; width: 4px; height: 18px; background: var(--accent); border-radius: 2px; display: inline-block; }
-
-  .summary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 14px;
-  }
-  .stat-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-  }
-  .stat-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-soft); margin-bottom: 6px; font-weight: 600; }
-  .stat-card .value { font-size: 0.95rem; line-height: 1.45; }
-  .stat-card .value b { color: var(--slate-dark); }
-
-  .badge {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 3px 9px;
-    border-radius: 999px;
-    letter-spacing: 0.01em;
-  }
-  .badge.fresh { background: var(--fresh-bg); color: var(--fresh); }
-  .badge.twist { background: var(--twist-bg); color: var(--twist); }
-  .badge.crowded { background: var(--crowded-bg); color: var(--crowded); }
-
-  .cat-pill {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 2px 8px;
-    border-radius: 6px;
-    background: #eef1fa;
-    color: #3b4a8f;
-  }
-
-  .top3-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 16px;
-  }
-  .top-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    padding-top: 5px;
-  }
-  .top-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-  }
-  .top-card.rank-1::before { background: linear-gradient(90deg,#f0b429,#f7d774); }
-  .top-card.rank-2::before { background: linear-gradient(90deg,#94a3b8,#cbd5e1); }
-  .top-card.rank-3::before { background: linear-gradient(90deg,#c2793a,#e0a672); }
-  .top-card .inner { padding: 18px 20px 20px; }
-  .top-card .rank-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-  .top-card .rank-num { font-size: 0.75rem; font-weight: 800; color: var(--ink-soft); letter-spacing: 0.05em; }
-  .top-card h3 { margin: 4px 0 8px; font-size: 1.15rem; }
-  .top-card .meta-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
-  .top-card p.insight { font-size: 0.88rem; color: var(--ink); margin: 8px 0; line-height: 1.5; }
-  .top-card .hook {
-    background: #f8f9fc;
-    border-left: 3px solid var(--accent);
-    padding: 10px 12px;
-    font-size: 0.85rem;
-    font-style: italic;
-    margin: 10px 0;
-    border-radius: 0 6px 6px 0;
-  }
-  .top-card .format-line { font-size: 0.78rem; color: var(--ink-soft); margin-bottom: 8px; }
-  .top-card .why { font-size: 0.82rem; color: var(--ink-soft); line-height: 1.5; margin: 8px 0 12px; }
-  .top-card .micro-hooks { border-top: 1px dashed var(--border); padding-top: 10px; margin-top: 10px; }
-  .top-card .micro-hooks .mh-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--accent); letter-spacing: 0.04em; }
-  .top-card .micro-hooks p { font-size: 0.82rem; margin: 3px 0 10px; line-height: 1.4; }
-
-  .controls { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
-  .controls select, .controls input {
-    padding: 7px 10px;
-    border: 1px solid var(--border);
-    border-radius: 7px;
-    font-size: 0.85rem;
-    background: var(--card);
-  }
-  .controls input { flex: 1; min-width: 180px; }
-
-  table.angles-table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; font-size: 0.85rem; }
-  table.angles-table th, table.angles-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
-  table.angles-table th { background: #f8f9fc; cursor: pointer; user-select: none; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-soft); }
-  table.angles-table th:hover { color: var(--accent); }
-  table.angles-table tr:last-child td { border-bottom: none; }
-  table.angles-table .name-cell { font-weight: 600; min-width: 180px; }
-  table.angles-table .hook-cell { color: var(--ink-soft); max-width: 320px; }
-
-  .macro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
-  .macro-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; border-top: 3px solid var(--accent); }
-  .macro-card h4 { margin: 0 0 6px; font-size: 0.98rem; }
-  .macro-card p { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.5; margin: 0; }
-  .macro-card .tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--accent); letter-spacing: 0.04em; }
-
-  .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-  .notes-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
-  .notes-card h4 { margin: 0 0 10px; font-size: 0.9rem; }
-  .notes-card ul { margin: 0; padding-left: 18px; font-size: 0.83rem; color: var(--ink-soft); line-height: 1.6; }
-  .notes-card ul li { margin-bottom: 6px; }
-  .notes-card ul li b { color: var(--ink); }
-
-  .legend {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 20px;
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .legend .item { display: flex; align-items: center; gap: 8px; }
-  footer { text-align: center; padding: 30px 0 10px; color: var(--ink-soft); font-size: 0.75rem; }
+  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff;
+          --fresh:#065f46; --fresh-bg:#ecfdf5; --twist:#92400e; --twist-bg:#fef3c7; --crowded:#991b1b; --crowded-bg:#fee2e2; --unscored:#475569; --unscored-bg:#f1f5f9; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  .accent { height:6px; background:var(--slate); }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:22px 20px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  h1 { margin:0 0 4px; font-size:24px; }
+  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:8px; }
+  .sub { color:var(--muted); font-size:14px; }
+  .date { color:var(--muted); font-size:13px; margin-top:4px; }
+  main { padding:20px; }
+  section { margin-bottom:28px; }
+  h2 { font-size:18px; margin:0 0 4px; }
+  .lead { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
+  .kv { display:grid; grid-template-columns:150px 1fr; gap:8px 16px; font-size:14px; }
+  .kv dt { color:var(--muted); font-weight:600; }
+  .kv dd { margin:0; }
+  .top { border-left:4px solid var(--slate); margin-bottom:12px; }
+  .top .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+  .rank { font-size:13px; font-weight:700; color:#fff; background:var(--slate); border-radius:6px; padding:2px 8px; }
+  .top h3 { margin:0; font-size:17px; }
+  .chip { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
+  .u { border:0; font-weight:600; }
+  .u.Fresh { background:var(--fresh-bg); color:var(--fresh); }
+  .u.Twist { background:var(--twist-bg); color:var(--twist); }
+  .u.Crowded { background:var(--crowded-bg); color:var(--crowded); }
+  .u.Unscored { background:var(--unscored-bg); color:var(--unscored); }
+  .row { font-size:14px; margin:6px 0; }
+  .row b { color:var(--muted); font-weight:600; margin-right:6px; }
+  .quote { font-size:15px; font-style:italic; margin:8px 0; padding:8px 12px; background:var(--bg); border-radius:8px; }
+  .hooks { margin:10px 0 0; padding:0; list-style:none; }
+  .hooks li { display:grid; grid-template-columns:110px 1fr; gap:10px; font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
+  .hooks li span { color:var(--muted); font-weight:600; font-size:12px; padding-top:2px; }
+  .filters { display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:6px 11px; border-radius:8px; font-size:13px; cursor:pointer; }
+  .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
+  .group { margin-bottom:14px; }
+  .group h3 { font-size:14px; color:var(--muted); margin:0 0 6px; text-transform:uppercase; letter-spacing:.04em; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px; }
+  td { padding:10px 12px; border-top:1px solid var(--line); vertical-align:top; }
+  tr:first-child td { border-top:0; }
+  td.n { width:34%; font-weight:600; }
+  td.n small { display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px; }
+  td.b { width:120px; white-space:nowrap; }
+  td.h small { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
+  tr.hide { display:none; }
+  .legend { font-size:12px; color:var(--muted); margin-top:10px; }
+  ul.plain { margin:0; padding-left:18px; font-size:14px; }
+  ul.plain li { margin:4px 0; }
+  ul.plain b { font-weight:600; }
+  .cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
+  .cols h3 { font-size:14px; margin:0 0 6px; }
+  .sources { font-size:12px; color:var(--muted); margin-top:12px; }
+  footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
+  @media (max-width:720px) { .kv { grid-template-columns:1fr; } .cols { grid-template-columns:1fr; } .hooks li { grid-template-columns:1fr; } td.b { white-space:normal; } }
 </style>
+</head>
+<body>
+<div class="accent"></div>
+<header><div class="wrap">
+  <h1>Magnesium L-Threonate with Apigenin<small>Marketing angles</small></h1>
+  <div class="sub">Adults 30 to 65+, mind won&#x27;t shut off at night, brain fog creeping in, burned by melatonin before</div>
+  <div class="date">08-23-2026</div>
+</div></header>
+<main class="wrap">
 
-<div class="topbar"></div>
-<header class="hero">
-  <h1>Magnesium L-Threonate with Apigenin — Marketing Angles</h1>
-  <div class="subtitle">Adults 30&ndash;65+, mind won't shut off at night, brain fog creeping in, burned by melatonin before</div>
-  <div class="date">Published 08-23-2026 &middot; Products tab row 4 &middot; Find Marketing Angles</div>
-</header>
-
-<main>
-
-<section id="summary">
-  <h2>Summary</h2>
-  <div class="summary-grid">
-    <div class="stat-card">
-      <div class="label">Avatar</div>
-      <div class="value">Adults <b>30&ndash;65+</b>, unisex, sharpened by this run's research toward high-stress professionals and midlife adults whose minds race at bedtime and who wake at 3am unable to reset. Most have already cycled through <b>melatonin</b> (worked, then stopped; morning grogginess; vivid dreams) and possibly magnesium oxide (GI upset) or glycinate ("does nothing specific"). Increasingly worried that chronic bad sleep is starting to look like early brain fog, not just tiredness. Skeptical of supplement hype; wants real doses, not a proprietary blend, before paying a premium.</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Core Transformation</div>
-      <div class="value"><b>Before:</b> racing mind at bedtime, 3am wake-ups, melatonin-hangover mornings, creeping brain fog. <b>After:</b> falls asleep because the mind actually quiets, sleeps through the night, wakes up clear instead of foggy, no dependency spiral.</div>
-    </div>
-    <div class="stat-card">
-      <div class="label">Primary Objection</div>
-      <div class="value">"I've cycled through melatonin, magnesium, and other 'natural' fixes with no lasting change, and this looks like another expensive bottle promising the same blood-brain-barrier claim everyone else makes."</div>
-    </div>
-  </div>
+<section>
+  <h2>Who we are selling to</h2>
+  <div class="card"><dl class="kv">
+    <dt>Avatar</dt><dd>Adults 30 to 65+, unisex, sharpened toward high-stress professionals and midlife adults whose minds race at bedtime and who wake at 3am unable to reset. Most have already cycled through melatonin (worked, then stopped; morning grogginess; vivid dreams) and possibly magnesium oxide (GI upset) or glycinate (&quot;does nothing specific&quot;). Increasingly worried chronic bad sleep looks like early brain fog. Skeptical of supplement hype; wants real doses, not a proprietary blend, before paying a premium.</dd>
+    <dt>Before</dt><dd>Racing mind at bedtime, 3am wake-ups, melatonin-hangover mornings, creeping brain fog.</dd>
+    <dt>After</dt><dd>Falls asleep because the mind actually quiets, sleeps through the night, wakes up clear instead of foggy, no dependency spiral.</dd>
+    <dt>Biggest objection</dt><dd>I&#x27;ve cycled through melatonin, magnesium, and other &#x27;natural&#x27; fixes with no lasting change, and this looks like another expensive bottle promising the same blood-brain-barrier claim everyone else makes.</dd>
+  </dl></div>
 </section>
 
-<section id="uniqueness-legend-top">
-  <div class="legend">
-    <div class="item"><span class="badge fresh">Fresh</span> No competitor in the Winners DB set runs this angle (0 matches). Strongest, most differentiated.</div>
-    <div class="item"><span class="badge twist">Twist</span> Competitors hit the same pain/benefit but frame it differently; count = adjacent matches.</div>
-    <div class="item"><span class="badge crowded">Crowded</span> One or more competitors already run essentially this angle; count = direct matches.</div>
-    <div class="item">Denominator: <b>N = 45</b> genuine Winners DB rows for search term "magnesium l-threonate" (13 <code>w</code> + 32 <code>w-ish</code>, spanning Meta Ad Winners + Meta Ad Rejects; the 13 <code>w</code> subset reconciles exactly against the sheet's Meta Ad Ws = 13). TikTok: 1 row for this term, classified <code>kill</code> (not genuine); sheet TikTok Ws = 0, consistent.</div>
-  </div>
+<section>
+  <h2>Top 3 angles</h2>
+  <p class="lead">The most emotionally charged angles that competitors are not already running. Test these first.</p>
+  <div class="card top"><div class="head"><span class="rank">#1</span><h3>Another Year of &#x27;I&#x27;ll Fix My Sleep Eventually&#x27;</h3><span class="chip">Fear / Urgency</span><span class="chip u Fresh">Fresh 0/45</span></div><div class="row"><b>Why this one</b>This is the single most emotionally loaded angle in the set and grounded directly in this run&#x27;s own research on chronic-insomnia hopelessness. None of the 45 competitor ads attempt an identity-drift angle, they stay benefit-focused, so it interrupts the exact resignation pattern that keeps a skeptical buyer from trying one more (pricier) thing.</div><div class="quote">At some point &#x27;I&#x27;m just a bad sleeper&#x27; stopped being a phase and became who you are. It doesn&#x27;t have to.</div><div class="row"><b>Insight</b>Chronic-insomnia sufferers describe a demoralizing cycle of trying, failing, and normalizing exhaustion as identity; naming that drift plainly interrupts passive acceptance.</div><div class="row"><b>Format</b>Testimonial</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>Another year of telling yourself &#x27;I&#x27;ll fix my sleep eventually&#x27;? That eventually keeps not coming.</div></li><li><span>Curiosity</span><div>There&#x27;s a moment where &#x27;bad sleeper&#x27; stops being a phase and becomes an identity. Here&#x27;s how to catch it before it sticks.</div></li><li><span>Contra</span><div>Stop waiting for a better week to start sleeping better. There isn&#x27;t one coming on its own.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#2</span><h3>Your Mind Isn&#x27;t Broken, It&#x27;s Just Loud</h3><span class="chip">Contrarian / Pattern Interrupt</span><span class="chip u Fresh">Fresh 0/45</span></div><div class="row"><b>Why this one</b>It directly pre-empts this product&#x27;s own primary objection (why is this different when melatonin didn&#x27;t work) with a mechanism distinction fully absent from the 45 competitor angles. It also validates racing thoughts, the single most-cited real pain point in this run&#x27;s Reddit/health-forum research.</div><div class="quote">Melatonin resets your clock. It does nothing for the voice in your head at 11pm still running through your day.</div><div class="row"><b>Insight</b>The category treats insomnia as a circadian problem (melatonin&#x27;s job), but for many the real issue is a racing, anxious mind, a different pathway entirely.</div><div class="row"><b>Format</b>Static</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>It&#x27;s 11pm, you&#x27;re exhausted, and your brain is still replaying today&#x27;s meeting. That&#x27;s not a sleep problem, that&#x27;s a loud-mind problem.</div></li><li><span>Result-first</span><div>I stopped trying to force myself to sleep and started actually quieting my mind first. Everything changed.</div></li><li><span>Curiosity</span><div>Melatonin resets your clock. It does nothing for the voice in your head. Here&#x27;s the difference nobody explains.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#3</span><h3>The 3AM Wide-Awake Loop</h3><span class="chip">Pain / Frustration</span><span class="chip u Fresh">Fresh 0/45</span></div><div class="row"><b>Why this one</b>Sleep-maintenance insomnia (roughly 1 in 5 insomniacs, per this run&#x27;s research) is a distinct, well-documented pain point that none of the 45 competitor ads target directly, they all pitch generic &#x27;better sleep&#x27; or falling-asleep framing. Naming the specific hour and sensation is viscerally concrete in a way abstract BBB-crossing claims aren&#x27;t.</div><div class="quote">It&#x27;s not that you can&#x27;t fall asleep. It&#x27;s that you wake up at 3am and your brain won&#x27;t let you back in.</div><div class="row"><b>Insight</b>For people with sleep-maintenance insomnia, falling asleep isn&#x27;t the problem, staying asleep is; they wake at 3am and lie there 20-40 min unable to reset.</div><div class="row"><b>Format</b>UGC video</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>You fall asleep fine. It&#x27;s 3am, wide awake, staring at the ceiling for 40 minutes, that&#x27;s the real problem.</div></li><li><span>Social proof</span><div>1 in 5 people with insomnia wake in the middle of the night and can&#x27;t get back to sleep. If that&#x27;s you, you&#x27;re not broken, and there&#x27;s a reason for it.</div></li><li><span>Result-first</span><div>I used to lose an hour every night to the 3am wake-up. Now I fall back asleep in minutes.</div></li></ul></div>
 </section>
 
-<section id="top3">
-  <h2>Top 3 Angles</h2>
-  <div class="top3-grid">
-
-    <div class="top-card rank-1">
-      <div class="inner">
-        <div class="rank-row"><span class="rank-num">RANK 1</span><span class="badge fresh">Fresh 0/45</span></div>
-        <h3>Another Year of "I'll Fix My Sleep Eventually"</h3>
-        <div class="meta-row"><span class="cat-pill">Fear / Urgency</span></div>
-        <p class="insight">Chronic-insomnia sufferers describe a demoralizing cycle: try something, fail, and eventually normalize exhaustion as identity ("I'm just a bad sleeper"). Naming that drift plainly interrupts passive acceptance.</p>
-        <div class="hook">"At some point 'I'm just a bad sleeper' stopped being a phase and became who you are. It doesn't have to."</div>
-        <div class="format-line">Best format: Testimonial / UGC video</div>
-        <p class="why"><b>Why it wins:</b> This is the single most emotionally loaded angle in the set and grounded directly in this run's own research on chronic-insomnia hopelessness. None of the 45 competitor ads attempt an identity-drift angle, they stay benefit-focused, so it interrupts the exact resignation pattern that keeps a skeptical buyer from trying one more (pricier) thing.</p>
-        <div class="micro-hooks">
-          <div class="mh-label">Problem-first</div>
-          <p>"Another year of telling yourself 'I'll fix my sleep eventually'? That eventually keeps not coming."</p>
-          <div class="mh-label">Curiosity</div>
-          <p>"There's a moment where 'bad sleeper' stops being a phase and becomes an identity. Here's how to catch it before it sticks."</p>
-          <div class="mh-label">Contra</div>
-          <p>"Stop waiting for a better week to start sleeping better. There isn't one coming on its own."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="top-card rank-2">
-      <div class="inner">
-        <div class="rank-row"><span class="rank-num">RANK 2</span><span class="badge fresh">Fresh 0/45</span></div>
-        <h3>Your Mind Isn't Broken, It's Just Loud</h3>
-        <div class="meta-row"><span class="cat-pill">Contrarian / Pattern Interrupt</span></div>
-        <p class="insight">The category treats insomnia as a circadian problem (melatonin's job), but for many people the real issue is a racing, anxious mind at bedtime, a different pathway entirely. Naming that distinction reframes what "the right fix" even looks like.</p>
-        <div class="hook">"Melatonin resets your clock. It does nothing for the voice in your head at 11pm still running through your day."</div>
-        <div class="format-line">Best format: Static</div>
-        <p class="why"><b>Why it wins:</b> It directly pre-empts this product's own primary objection ("why is this different, does it actually work when melatonin didn't") with a mechanism distinction that is fully absent from the 45 competitor angles, most of which just repeat "crosses the blood-brain barrier" without explaining what problem that actually solves. It also validates racing thoughts, the single most-cited real pain point in this run's Reddit/health-forum research.</p>
-        <div class="micro-hooks">
-          <div class="mh-label">Problem-first</div>
-          <p>"It's 11pm, you're exhausted, and your brain is still replaying today's meeting. That's not a sleep problem, that's a loud-mind problem."</p>
-          <div class="mh-label">Result-first</div>
-          <p>"I stopped trying to force myself to sleep and started actually quieting my mind first. Everything changed."</p>
-          <div class="mh-label">Curiosity</div>
-          <p>"Melatonin resets your clock. It does nothing for the voice in your head. Here's the difference nobody explains."</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="top-card rank-3">
-      <div class="inner">
-        <div class="rank-row"><span class="rank-num">RANK 3</span><span class="badge fresh">Fresh 0/45</span></div>
-        <h3>The 3AM Wide-Awake Loop</h3>
-        <div class="meta-row"><span class="cat-pill">Pain / Frustration</span></div>
-        <p class="insight">For people with sleep-maintenance insomnia, falling asleep isn't the problem, staying asleep is. They wake at 3am and lie there 20-40 minutes unable to reset, a distinct pain point the whole category ignores in favor of generic "better sleep" claims.</p>
-        <div class="hook">"It's not that you can't fall asleep. It's that you wake up at 3am and your brain won't let you back in."</div>
-        <div class="format-line">Best format: UGC video</div>
-        <p class="why"><b>Why it wins:</b> Sleep-maintenance insomnia (roughly 1 in 5 insomniacs, per this run's research) is a distinct, well-documented pain point that none of the 45 competitor ads target directly, they all pitch generic "better sleep" or falling-asleep framing. Naming the specific hour and sensation is viscerally concrete in a way abstract BBB-crossing claims aren't.</p>
-        <div class="micro-hooks">
-          <div class="mh-label">Problem-first</div>
-          <p>"You fall asleep fine. It's 3am, wide awake, staring at the ceiling for 40 minutes, that's the real problem."</p>
-          <div class="mh-label">Social proof</div>
-          <p>"1 in 5 people with insomnia wake in the middle of the night and can't get back to sleep. If that's you, you're not broken, and there's a reason for it."</p>
-          <div class="mh-label">Result-first</div>
-          <p>"I used to lose an hour every night to the 3am wake-up. Now I fall back asleep in minutes."</p>
-        </div>
-      </div>
-    </div>
-
+<section>
+  <h2>All 20 angles</h2>
+  <p class="lead">Four per category. Uniqueness is measured against the 45 competitor ads in the Winners DB for "magnesium l-threonate".</p>
+  <div class="filters" id="filters">
+    <button class="on" data-band="all">All</button>
+    <button data-band="Fresh">Fresh 14</button>
+    <button data-band="Twist">Twist 5</button>
+    <button data-band="Crowded">Crowded 1</button>
   </div>
+  <div class="group"><h3>Pain / Frustration</h3><table><tr data-band="Fresh"><td class="n">The 3AM Wide-Awake Loop<small>For people with sleep-maintenance insomnia, falling asleep isn&#x27;t the problem, staying asleep is; they wake at 3am and lie there 20-40 min unable to reset.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">It&#x27;s not that you can&#x27;t fall asleep. It&#x27;s that you wake up at 3am and your brain won&#x27;t let you back in.<small>UGC video</small></td></tr><tr data-band="Fresh"><td class="n">Paying Premium for Nothing<small>A recurring real complaint is spending on magnesium and &#x27;not feeling anything&#x27;; naming that fear directly builds more trust than avoiding it.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">You&#x27;ve probably taken a magnesium that did nothing. This is the ingredient list, dosed exactly like the studies used, no proprietary blend to hide behind.<small>Carousel</small></td></tr><tr data-band="Twist"><td class="n">Melatonin Hangover, Every Morning<small>Melatonin users trade one problem (can&#x27;t sleep) for another (waking up groggy, foggy), and most sleep-aid marketing ignores that trade-off.</small></td><td class="b"><span class="chip u Twist">Twist 1/45</span></td><td class="h">You didn&#x27;t sign up to trade insomnia for a 9am fog. Melatonin hangovers are real, and they&#x27;re why we left melatonin out completely.<small>Static</small></td></tr><tr data-band="Crowded"><td class="n">Regular Magnesium Never Reaches Your Brain<small>Most people&#x27;s mental model of &#x27;I take magnesium&#x27; doesn&#x27;t account for common forms barely reaching the brain, and oxide often causing GI upset instead of helping sleep.</small></td><td class="b"><span class="chip u Crowded">Crowded 13/45</span></td><td class="h">That magnesium in your cabinet? Most of it never reaches your brain, and the kind that does upset your stomach is the kind on sale.<small>Static</small></td></tr></table></div><div class="group"><h3>Aspiration / Identity</h3><table><tr data-band="Fresh"><td class="n">Built for the Sandwich-Stress Years<small>Adults 40-65 report the compounding toll of chronic bad sleep on their ability to function across career, family, and aging-parent demands at once.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">Your 40s and 50s ask more of your brain than any other decade. Give it more than &#x27;just take some magnesium.&#x27;<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">The Full Stack, Not the Starter Kit<small>People serious about fixing sleep eventually end up buying 3-4 separate supplements; positioning this as the &#x27;graduated&#x27; choice taps the identity of someone who&#x27;s already done their homework.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">If you&#x27;ve already tried plain magnesium, this is what comes next: the same ingredients serious sleepers stack manually, already combined.<small>Carousel</small></td></tr><tr data-band="Fresh"><td class="n">Recovery Isn&#x27;t Just for Your Body<small>&#x27;Recovery&#x27; language is normalized for physical training but rarely applied to the brain; reframing nightly brain-magnesium support as recovery training taps a familiar, aspirational frame.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">You&#x27;d never skip recovery after a hard workout. Your brain needs the same thing after a hard day.<small>UGC video</small></td></tr><tr data-band="Twist"><td class="n">Wake Up Sharp Again<small>The buyer isn&#x27;t just chasing sleep, they&#x27;re chasing the mental clarity they had before bad sleep and brain fog crept in; sleep is the means, sharpness is the identity payoff.</small></td><td class="b"><span class="chip u Twist">Twist 10/45</span></td><td class="h">This isn&#x27;t about getting more hours of sleep. It&#x27;s about waking up and actually feeling like yourself again.<small>Testimonial</small></td></tr></table></div><div class="group"><h3>Contrarian / Pattern Interrupt</h3><table><tr data-band="Fresh"><td class="n">Your Mind Isn&#x27;t Broken, It&#x27;s Just Loud<small>The category treats insomnia as a circadian problem (melatonin&#x27;s job), but for many the real issue is a racing, anxious mind, a different pathway entirely.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">Melatonin resets your clock. It does nothing for the voice in your head at 11pm still running through your day.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">The Ingredient Everyone Copies, Nobody Doses Right<small>Magnesium L-threonate is now a common ad claim, but effective doses require real concentration, so &#x27;has L-threonate&#x27; and &#x27;has enough to matter&#x27; are different products.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">A lot of bottles can say &#x27;magnesium L-threonate&#x27; on the label. Fewer say how much, because the amount that matters isn&#x27;t cheap.<small>Carousel</small></td></tr><tr data-band="Fresh"><td class="n">Stop Trusting the Blood-Brain-Barrier Line<small>&#x27;Crosses the blood-brain barrier&#x27; has become the category&#x27;s most repeated, least-explained claim; naming that fatigue differentiates through honesty instead of repeating the same hook.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">&#x27;Crosses the blood-brain barrier&#x27; is on every bottle now. Here&#x27;s what that phrase actually means, and what it doesn&#x27;t promise.<small>VSL</small></td></tr><tr data-band="Twist"><td class="n">We Left Out Melatonin On Purpose<small>Nearly every sleep product defaults to melatonin; deliberately excluding it and explaining why is a pattern interrupt against the category&#x27;s default ingredient.</small></td><td class="b"><span class="chip u Twist">Twist 1/45</span></td><td class="h">Every sleep aisle bets on melatonin. We bet against it, on purpose, here&#x27;s why.<small>VSL</small></td></tr></table></div><div class="group"><h3>Fear / Urgency</h3><table><tr data-band="Fresh"><td class="n">The Melatonin Problem Nobody Checks the Label For<small>An independent study found most tested melatonin supplements didn&#x27;t match their labeled dose, a credibility risk most buyers have never heard of.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">Most melatonin bottles don&#x27;t contain what the label says. We publish our exact doses so you&#x27;re never guessing.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">Another Year of &#x27;I&#x27;ll Fix My Sleep Eventually&#x27;<small>Chronic-insomnia sufferers describe a demoralizing cycle of trying, failing, and normalizing exhaustion as identity; naming that drift plainly interrupts passive acceptance.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">At some point &#x27;I&#x27;m just a bad sleeper&#x27; stopped being a phase and became who you are. It doesn&#x27;t have to.<small>Testimonial</small></td></tr><tr data-band="Fresh"><td class="n">GI Upset Isn&#x27;t a Magnesium Side Effect<small>People who got diarrhea/cramping from cheap magnesium oxide often conclude magnesium itself doesn&#x27;t agree with them, and give up on the whole mineral.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">If magnesium gave you a stomachache before, it wasn&#x27;t magnesium&#x27;s fault. It was the $4 form doing exactly what it&#x27;s known for.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">Bad Sleep Is Aging Your Brain Faster<small>Research ties chronic poor sleep quality to accelerated cognitive-decline markers at older ages, reframing &#x27;I&#x27;ll catch up on sleep eventually&#x27; as a compounding risk.</small></td><td class="b"><span class="chip u Twist">Twist 2/45</span></td><td class="h">Every year of bad sleep isn&#x27;t neutral. It&#x27;s quietly speeding up the brain changes you&#x27;re trying to avoid.<small>VSL</small></td></tr></table></div><div class="group"><h3>Social Proof / Tribe</h3><table><tr data-band="Fresh"><td class="n">Made By People Who Read the Studies<small>cGMP-certified, Made-in-USA, non-GMO, clean-label facts are real and verifiable; buyers burned by the melatonin mislabeling scandal respond to manufacturing transparency.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">cGMP-certified. Made in the USA. No proprietary blend to hide behind. That&#x27;s not a slogan, that&#x27;s what&#x27;s on the label.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">The Stack People Graduate To<small>A recognizable pattern shows people trying plain magnesium or melatonin first, then moving to a combined stack once those stop working, positioning this at a known &#x27;next step.&#x27;</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">There&#x27;s a pattern in every sleep forum: plain magnesium first, then melatonin, then eventually people land here. Skip the middle two.<small>UGC video</small></td></tr><tr data-band="Fresh"><td class="n">Real Doses, Not a Proprietary Blend<small>The category&#x27;s credibility problem (mislabeled melatonin, thin evidence on trendy actives) makes &#x27;we show every milligram&#x27; a trust signal rather than a boring label detail.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/45</span></td><td class="h">Most sleep blends hide behind &#x27;proprietary formula.&#x27; Every milligram in this one is on the label because we&#x27;re not afraid of the math.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">4.4 Stars, 1,700+ People Who Ditched Melatonin<small>The product&#x27;s own verified rating and review volume is real, available proof a large group has already made this switch, lowering first-purchase risk.</small></td><td class="b"><span class="chip u Twist">Twist 6/45</span></td><td class="h">1,700+ reviews later, this is what the people who got tired of melatonin switched to.<small>Carousel</small></td></tr></table></div>
+  <div class="legend"><b>Fresh</b> = no competitor ad runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 45 competitor ads. N = 45 genuine Winners DB rows for search term &quot;magnesium l-threonate&quot; (13 w + 32 w-ish), spanning Meta Ad Winners + Meta Ad Rejects; the 13 w subset reconciles exactly against the sheet&#x27;s Meta Ad Ws = 13. TikTok: 1 row, classified kill, not genuine.</div>
 </section>
 
-<section id="all20">
-  <h2>All 20 Angles</h2>
-  <div class="controls">
-    <input type="text" id="searchBox" placeholder="Filter by name, insight, or hook...">
-    <select id="catFilter">
-      <option value="">All categories</option>
-      <option value="Pain / Frustration">Pain / Frustration</option>
-      <option value="Aspiration / Identity">Aspiration / Identity</option>
-      <option value="Contrarian / Pattern Interrupt">Contrarian / Pattern Interrupt</option>
-      <option value="Fear / Urgency">Fear / Urgency</option>
-      <option value="Social Proof / Tribe">Social Proof / Tribe</option>
-    </select>
-    <select id="uniqFilter">
-      <option value="">All uniqueness</option>
-      <option value="Fresh">Fresh</option>
-      <option value="Twist">Twist</option>
-      <option value="Crowded">Crowded</option>
-    </select>
-  </div>
-  <table class="angles-table" id="anglesTable">
-    <thead>
-      <tr>
-        <th data-key="name">Angle</th>
-        <th data-key="category">Category</th>
-        <th data-key="uniq">Uniqueness</th>
-        <th data-key="insight">Core Insight</th>
-        <th data-key="hook">Hook</th>
-        <th data-key="format">Format</th>
-      </tr>
-    </thead>
-    <tbody id="anglesBody"></tbody>
-  </table>
+<section>
+  <h2>Offers that fit</h2>
+  <p class="lead">Macro-angles: a reason for a sale. Only the ones that genuinely fit this product.</p>
+  <div class="card"><ul class="plain"><li><b>4.4 Stars / 1,700+ Reviews.</b> The product&#x27;s own live-verified rating (4.4 stars, 1,746 reviews at fetch time) is real, available proof at scale. Run as an ongoing milestone campaign, refreshing the count periodically rather than a one-off post.</li><li><b>The Nightly Reset Ritual.</b> Research shows these ingredients need consistent nightly use to build an effect (weeks, not one dose). Frame subscribe-and-save as an adherence tool, &quot;don&#x27;t break the ritual,&quot; not a discount gimmick. Matches this row&#x27;s own Green Flag (Consumable/Recurring Revenue).</li><li><b>New-Season Reset.</b> Back-to-School / Labor Day (September): position as a sleep-and-mental-clarity reset for people returning to demanding routines after summer. A softer secondary fit at New Year&#x27;s for the resolution-season &quot;fix your sleep&quot; angle.</li></ul><div class="legend">Other macro-angles were not forced.</div></div>
 </section>
 
-<section id="macro">
-  <h2>Macro-Angles</h2>
-  <div class="macro-grid">
-    <div class="macro-card">
-      <div class="tag">Evergreen</div>
-      <h4>4.4&#9733; / 1,700+ Reviews</h4>
-      <p>The product's own live-verified rating (4.4&#9733;, 1,746 reviews at fetch time) is real, available proof at scale. Run as an ongoing milestone campaign, refreshing the count periodically rather than a one-off post.</p>
-    </div>
-    <div class="macro-card">
-      <div class="tag">Consumable / Recurring Revenue</div>
-      <h4>The Nightly Reset Ritual</h4>
-      <p>Research shows these ingredients need consistent nightly use to build an effect (weeks, not one dose). Frame subscribe-and-save as an adherence tool, "don't break the ritual," not a discount gimmick. Matches this row's own Green Flag (Consumable/Recurring Revenue).</p>
-    </div>
-    <div class="macro-card">
-      <div class="tag">Seasonal (activate ~2 weeks prior)</div>
-      <h4>New-Season Reset</h4>
-      <p>Back-to-School / Labor Day (September): position as a sleep-and-mental-clarity reset for people returning to demanding routines after summer. A softer secondary fit at New Year's for the resolution-season "fix your sleep" angle.</p>
-    </div>
+<section>
+  <h2>What the research said</h2>
+  <div class="cols">
+    <div class="card"><h3>Top pain points</h3><ul class="plain"><li>Melatonin morning grogginess/hangover, the #1 recurring complaint across sleep-health sources.</li><li>Melatonin tolerance, works for the first months, then stops.</li><li>Vivid/disturbing dreams from melatonin, tied to REM-boosting effect.</li><li>Racing thoughts / mind won&#x27;t shut off at bedtime, an anxiety-pathway problem melatonin doesn&#x27;t touch.</li><li>3am waking, can&#x27;t fall back asleep, sleep-maintenance insomnia, ~1 in 5 insomniacs.</li><li>Brain fog / cognitive-decline fear tied to chronic poor sleep, especially ages 50-70.</li><li>Magnesium oxide GI/laxative side effects, drives people to abandon magnesium entirely.</li><li>&quot;Tried everything&quot; chronic-insomnia hopelessness, the identity-drift pattern behind Rank 1.</li><li>Melatonin mislabeling, a cited study found most tested products didn&#x27;t match their labeled dose.</li><li>Price-to-efficacy skepticism, real reviews on comparable Magtein products reporting &quot;don&#x27;t feel anything.&quot;</li></ul></div>
+    <div class="card"><h3>Top benefits</h3><ul class="plain"><li>Melatonin-free, no grogginess, the product&#x27;s own headline claim.</li><li>Liposomal delivery for enhanced absorption (rare among competitors, 2/45).</li><li>Full 5-active stack in one capsule: Magnesium L-Threonate + Phosphatidylserine, L-Theanine, Chamomile Extract, Valerian Root Extract, Apigenin.</li><li>Dual claim: supports sleep AND cognitive function (memory, focus, mental clarity), not sleep alone.</li><li>Clean-label facts: cGMP-certified, Made in USA, non-GMO, vegan, sugar-free, gluten-free.</li><li>4.4 stars / 1,746 reviews (live fetch; sheet recorded 4.4 stars/1,597, drift consistent with organic review growth since the last audit).</li></ul></div>
+    <div class="card"><h3>What competitors run</h3><ul class="plain"><li>&quot;Only magnesium that crosses the blood-brain barrier&quot;, the single most repeated hook (13+/45), run near-verbatim by Natima, muscle-zone.pl, mstnutrition.ua, Amix, Nature&#x27;s Bounty, and others.</li><li>Multi-form magnesium &quot;system&quot; blends (~8/45): Clearly.eu, L Cell, Best Supplement Finds, Gold Seal, Melixir, TrueSupps, Autoimmune Institute, Health Synergy.</li><li>Mainstream-brand trust/heritage framing (~6/45): Nature&#x27;s Bounty, Bluebonnet, Boost4Life, Bulk Nutrients, Qunol, NOW Foods.</li><li>Cortisol/stress fear framing (2/45): Melixir &quot;Cortisol Detective&quot;, Envitamin &quot;Cortisol Ends Here&quot;.</li><li>Liposomal/absorption-tech framing (2/45): LivLong, LivOn Labs Lypo-Spheric.</li><li>Melatonin-free framing (1/45): Nobā Health, &quot;the only sleep supplement in Europe, no grogginess&quot;.</li><li>Multi-SKU stack bundle (1/45, adjacent format): Phytoceutics sells L-threonate and apigenin as three separate products, not one capsule, the closest adjacent match to this product&#x27;s single-capsule stack, and still not a direct match.</li></ul></div>
   </div>
-</section>
-
-<section id="research-notes">
-  <h2>Research Notes</h2>
-  <div class="notes-grid">
-    <div class="notes-card">
-      <h4>Top Pain Points</h4>
-      <ul>
-        <li><b>Melatonin morning grogginess/hangover</b> &mdash; the #1 recurring complaint across sleep-health sources.</li>
-        <li><b>Melatonin tolerance</b> &mdash; works for the first months, then stops.</li>
-        <li><b>Vivid/disturbing dreams</b> from melatonin, tied to REM-boosting effect.</li>
-        <li><b>Racing thoughts / mind won't shut off</b> at bedtime, an anxiety-pathway problem melatonin doesn't touch.</li>
-        <li><b>3am waking, can't fall back asleep</b> &mdash; sleep-maintenance insomnia, ~1 in 5 insomniacs.</li>
-        <li><b>Brain fog / cognitive-decline fear</b> tied to chronic poor sleep, especially ages 50-70.</li>
-        <li><b>Magnesium oxide GI/laxative side effects</b> &mdash; drives people to abandon magnesium entirely.</li>
-        <li><b>"Tried everything" chronic-insomnia hopelessness</b> &mdash; the identity-drift pattern behind Rank 1.</li>
-        <li><b>Melatonin mislabeling</b> &mdash; a cited study found most tested products didn't match their labeled dose.</li>
-        <li><b>Price-to-efficacy skepticism</b> &mdash; real reviews on comparable Magtein products reporting "don't feel anything."</li>
-      </ul>
-    </div>
-    <div class="notes-card">
-      <h4>Top Benefits (this product's own listing, live-verified)</h4>
-      <ul>
-        <li><b>Melatonin-free, no grogginess</b> &mdash; the product's own headline claim.</li>
-        <li><b>Liposomal delivery</b> for enhanced absorption (rare among competitors, 2/45).</li>
-        <li><b>Full 5-active stack in one capsule:</b> Magnesium L-Threonate + Phosphatidylserine, L-Theanine, Chamomile Extract, Valerian Root Extract, Apigenin.</li>
-        <li><b>Dual claim:</b> supports sleep AND cognitive function (memory, focus, mental clarity), not sleep alone.</li>
-        <li><b>Clean-label facts:</b> cGMP-certified, Made in USA, non-GMO, vegan, sugar-free, gluten-free.</li>
-        <li><b>4.4&#9733; / 1,746 reviews</b> (live fetch; sheet recorded 4.4&#9733;/1,597, drift consistent with organic review growth since the last audit).</li>
-      </ul>
-    </div>
-    <div class="notes-card">
-      <h4>Competitor Angles Being Differentiated From (Winners DB, 45 genuine rows)</h4>
-      <ul>
-        <li><b>"Only magnesium that crosses the blood-brain barrier"</b> &mdash; the single most repeated hook (13+/45), run near-verbatim by Natima, muscle-zone.pl, mstnutrition.ua, Amix, Nature's Bounty, For Youth, Faunus Plant, Aronia Charlottenburg, Boost4Life, NOW Foods, Qunol, and others.</li>
-        <li><b>Multi-form magnesium "system" blends</b> (~8/45): Clearly.eu, L Cell, Best Supplement Finds, Gold Seal, Melixir, TrueSupps, Autoimmune Institute, Health Synergy.</li>
-        <li><b>Mainstream-brand trust/heritage framing</b> (~6/45): Nature's Bounty, Bluebonnet, Boost4Life, Bulk Nutrients, Qunol, NOW Foods.</li>
-        <li><b>Cortisol/stress fear framing</b> (2/45): Melixir "Cortisol Detective", Envitamin "Cortisol Ends Here".</li>
-        <li><b>Liposomal/absorption-tech framing</b> (2/45): LivLong, LivOn Labs Lypo-Spheric.</li>
-        <li><b>Melatonin-free framing</b> (1/45): Nobā Health, "the only sleep supplement in Europe, no grogginess".</li>
-        <li><b>Multi-SKU stack bundle</b> (1/45, adjacent format): Phytoceutics sells L-threonate and apigenin as three separate products, not one capsule, the closest adjacent match to this product's single-capsule stack, and still not a direct match.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="uniqueness-legend-bottom">
-  <h2>Uniqueness Legend</h2>
-  <div class="legend">
-    <div class="item"><span class="badge fresh">Fresh</span> 0 matches in the Winners DB competitor set for this search term.</div>
-    <div class="item"><span class="badge twist">Twist</span> competitors hit the same pain/benefit, framed differently; count = adjacent matches.</div>
-    <div class="item"><span class="badge crowded">Crowded</span> direct match(es) already running; count = direct matches.</div>
-    <div class="item">Scored against <b>N = 45</b> genuine rows (13 <code>w</code> + 32 <code>w-ish</code>) for search term "magnesium l-threonate" across the Winners DB Meta Ad Winners + Meta Ad Rejects tabs (full recensus).</div>
-  </div>
+  <div class="sources">Assembled from this run&#x27;s own stated grounding, scattered across the report rather than one paragraph: Reddit/health-forum research on chronic-insomnia hopelessness and racing-mind sleep problems, a live-verified product listing (4.4 stars, 1,746 reviews, cross-checked against the sheet&#x27;s 4.4 stars/1,597), a cited study on melatonin label-dose mismatches, and a full recensus of the Winners DB (45 genuine rows, Meta Ad Winners + Meta Ad Rejects) for search term magnesium l-threonate.</div>
 </section>
 
 </main>
-
-<footer>Find Marketing Angles &middot; Nova Capital &middot; generated 08-23-2026</footer>
-
+<footer>Nova Capital, Find Marketing Angles. Magnesium L-Threonate with Apigenin, 08-23-2026.</footer>
 <script>
-const ANGLES = [
-  {name:"The 3AM Wide-Awake Loop", category:"Pain / Frustration", uniq:"Fresh", count:0, insight:"For people with sleep-maintenance insomnia, falling asleep isn't the problem, staying asleep is; they wake at 3am and lie there 20-40 min unable to reset.", hook:"It's not that you can't fall asleep. It's that you wake up at 3am and your brain won't let you back in.", format:"UGC video"},
-  {name:"Melatonin Hangover, Every Morning", category:"Pain / Frustration", uniq:"Twist", count:1, insight:"Melatonin users trade one problem (can't sleep) for another (waking up groggy, foggy), and most sleep-aid marketing ignores that trade-off.", hook:"You didn't sign up to trade insomnia for a 9am fog. Melatonin hangovers are real, and they're why we left melatonin out completely.", format:"Static"},
-  {name:"Paying Premium for Nothing", category:"Pain / Frustration", uniq:"Fresh", count:0, insight:"A recurring real complaint is spending on magnesium and 'not feeling anything'; naming that fear directly builds more trust than avoiding it.", hook:"You've probably taken a magnesium that did nothing. This is the ingredient list, dosed exactly like the studies used, no proprietary blend to hide behind.", format:"Carousel"},
-  {name:"Regular Magnesium Never Reaches Your Brain", category:"Pain / Frustration", uniq:"Crowded", count:13, insight:"Most people's mental model of 'I take magnesium' doesn't account for common forms barely reaching the brain, and oxide often causing GI upset instead of helping sleep.", hook:"That magnesium in your cabinet? Most of it never reaches your brain, and the kind that does upset your stomach is the kind on sale.", format:"Static"},
-  {name:"Wake Up Sharp Again", category:"Aspiration / Identity", uniq:"Twist", count:10, insight:"The buyer isn't just chasing sleep, they're chasing the mental clarity they had before bad sleep and brain fog crept in; sleep is the means, sharpness is the identity payoff.", hook:"This isn't about getting more hours of sleep. It's about waking up and actually feeling like yourself again.", format:"Testimonial"},
-  {name:"Built for the Sandwich-Stress Years", category:"Aspiration / Identity", uniq:"Fresh", count:0, insight:"Adults 40-65 report the compounding toll of chronic bad sleep on their ability to function across career, family, and aging-parent demands at once.", hook:"Your 40s and 50s ask more of your brain than any other decade. Give it more than 'just take some magnesium.'", format:"Static"},
-  {name:"The Full Stack, Not the Starter Kit", category:"Aspiration / Identity", uniq:"Fresh", count:0, insight:"People serious about fixing sleep eventually end up buying 3-4 separate supplements; positioning this as the 'graduated' choice taps the identity of someone who's already done their homework.", hook:"If you've already tried plain magnesium, this is what comes next: the same ingredients serious sleepers stack manually, already combined.", format:"Carousel"},
-  {name:"Recovery Isn't Just for Your Body", category:"Aspiration / Identity", uniq:"Fresh", count:0, insight:"'Recovery' language is normalized for physical training but rarely applied to the brain; reframing nightly brain-magnesium support as recovery training taps a familiar, aspirational frame.", hook:"You'd never skip recovery after a hard workout. Your brain needs the same thing after a hard day.", format:"UGC video"},
-  {name:"We Left Out Melatonin On Purpose", category:"Contrarian / Pattern Interrupt", uniq:"Twist", count:1, insight:"Nearly every sleep product defaults to melatonin; deliberately excluding it and explaining why is a pattern interrupt against the category's default ingredient.", hook:"Every sleep aisle bets on melatonin. We bet against it, on purpose, here's why.", format:"VSL"},
-  {name:"Your Mind Isn't Broken, It's Just Loud", category:"Contrarian / Pattern Interrupt", uniq:"Fresh", count:0, insight:"The category treats insomnia as a circadian problem (melatonin's job), but for many the real issue is a racing, anxious mind, a different pathway entirely.", hook:"Melatonin resets your clock. It does nothing for the voice in your head at 11pm still running through your day.", format:"Static"},
-  {name:"The Ingredient Everyone Copies, Nobody Doses Right", category:"Contrarian / Pattern Interrupt", uniq:"Fresh", count:0, insight:"Magnesium L-threonate is now a common ad claim, but effective doses require real concentration, so 'has L-threonate' and 'has enough to matter' are different products.", hook:"A lot of bottles can say 'magnesium L-threonate' on the label. Fewer say how much, because the amount that matters isn't cheap.", format:"Carousel"},
-  {name:"Stop Trusting the Blood-Brain-Barrier Line", category:"Contrarian / Pattern Interrupt", uniq:"Fresh", count:0, insight:"'Crosses the blood-brain barrier' has become the category's most repeated, least-explained claim; naming that fatigue differentiates through honesty instead of repeating the same hook.", hook:"'Crosses the blood-brain barrier' is on every bottle now. Here's what that phrase actually means, and what it doesn't promise.", format:"VSL"},
-  {name:"Bad Sleep Is Aging Your Brain Faster", category:"Fear / Urgency", uniq:"Twist", count:2, insight:"Research ties chronic poor sleep quality to accelerated cognitive-decline markers at older ages, reframing 'I'll catch up on sleep eventually' as a compounding risk.", hook:"Every year of bad sleep isn't neutral. It's quietly speeding up the brain changes you're trying to avoid.", format:"VSL"},
-  {name:"The Melatonin Problem Nobody Checks the Label For", category:"Fear / Urgency", uniq:"Fresh", count:0, insight:"An independent study found most tested melatonin supplements didn't match their labeled dose, a credibility risk most buyers have never heard of.", hook:"Most melatonin bottles don't contain what the label says. We publish our exact doses so you're never guessing.", format:"Static"},
-  {name:"Another Year of 'I'll Fix My Sleep Eventually'", category:"Fear / Urgency", uniq:"Fresh", count:0, insight:"Chronic-insomnia sufferers describe a demoralizing cycle of trying, failing, and normalizing exhaustion as identity; naming that drift plainly interrupts passive acceptance.", hook:"At some point 'I'm just a bad sleeper' stopped being a phase and became who you are. It doesn't have to.", format:"Testimonial"},
-  {name:"GI Upset Isn't a Magnesium Side Effect, It's a Wrong-Form Problem", category:"Fear / Urgency", uniq:"Fresh", count:0, insight:"People who got diarrhea/cramping from cheap magnesium oxide often conclude magnesium itself doesn't agree with them, and give up on the whole mineral.", hook:"If magnesium gave you a stomachache before, it wasn't magnesium's fault. It was the $4 form doing exactly what it's known for.", format:"Static"},
-  {name:"4.4 Stars, 1,700+ People Who Ditched Melatonin", category:"Social Proof / Tribe", uniq:"Twist", count:6, insight:"The product's own verified rating and review volume is real, available proof a large group has already made this switch, lowering first-purchase risk.", hook:"1,700+ reviews later, this is what the people who got tired of melatonin switched to.", format:"Carousel"},
-  {name:"Made By People Who Read the Studies, Not Just the Trends", category:"Social Proof / Tribe", uniq:"Fresh", count:0, insight:"cGMP-certified, Made-in-USA, non-GMO, clean-label facts are real and verifiable; buyers burned by the melatonin mislabeling scandal respond to manufacturing transparency.", hook:"cGMP-certified. Made in the USA. No proprietary blend to hide behind. That's not a slogan, that's what's on the label.", format:"Static"},
-  {name:"The Stack People Graduate To", category:"Social Proof / Tribe", uniq:"Fresh", count:0, insight:"A recognizable pattern shows people trying plain magnesium or melatonin first, then moving to a combined stack once those stop working, positioning this at a known 'next step.'", hook:"There's a pattern in every sleep forum: plain magnesium first, then melatonin, then eventually people land here. Skip the middle two.", format:"UGC video"},
-  {name:"Real Doses, Not a Proprietary Blend", category:"Social Proof / Tribe", uniq:"Fresh", count:0, insight:"The category's credibility problem (mislabeled melatonin, thin evidence on trendy actives) makes 'we show every milligram' a trust signal rather than a boring label detail.", hook:"Most sleep blends hide behind 'proprietary formula.' Every milligram in this one is on the label because we're not afraid of the math.", format:"Static"}
-];
-
-function badgeHTML(u, c) {
-  const cls = u.toLowerCase();
-  return `<span class="badge ${cls}">${u} ${c}/45</span>`;
-}
-
-function render(list) {
-  const body = document.getElementById("anglesBody");
-  body.innerHTML = list.map(a => `
-    <tr>
-      <td class="name-cell">${a.name}</td>
-      <td><span class="cat-pill">${a.category}</span></td>
-      <td>${badgeHTML(a.uniq, a.count)}</td>
-      <td>${a.insight}</td>
-      <td class="hook-cell">${a.hook}</td>
-      <td>${a.format}</td>
-    </tr>
-  `).join("");
-}
-
-let sortKey = null, sortAsc = true;
-function applyFilters() {
-  const q = document.getElementById("searchBox").value.toLowerCase();
-  const cat = document.getElementById("catFilter").value;
-  const uniq = document.getElementById("uniqFilter").value;
-  let list = ANGLES.filter(a => {
-    const matchesQ = !q || (a.name + a.insight + a.hook).toLowerCase().includes(q);
-    const matchesCat = !cat || a.category === cat;
-    const matchesUniq = !uniq || a.uniq === uniq;
-    return matchesQ && matchesCat && matchesUniq;
-  });
-  if (sortKey) {
-    list = list.slice().sort((a, b) => {
-      let av = sortKey === "uniq" ? a.uniq : a[sortKey];
-      let bv = sortKey === "uniq" ? b.uniq : b[sortKey];
-      av = String(av).toLowerCase(); bv = String(bv).toLowerCase();
-      if (av < bv) return sortAsc ? -1 : 1;
-      if (av > bv) return sortAsc ? 1 : -1;
-      return 0;
-    });
-  }
-  render(list);
-}
-
-document.getElementById("searchBox").addEventListener("input", applyFilters);
-document.getElementById("catFilter").addEventListener("change", applyFilters);
-document.getElementById("uniqFilter").addEventListener("change", applyFilters);
-document.querySelectorAll("#anglesTable th").forEach(th => {
-  th.addEventListener("click", () => {
-    const key = th.dataset.key;
-    if (sortKey === key) { sortAsc = !sortAsc; } else { sortKey = key; sortAsc = true; }
-    applyFilters();
-  });
-});
-
-render(ANGLES);
+(function(){
+  var btns=document.querySelectorAll('#filters button');
+  var rows=document.querySelectorAll('tr[data-band]');
+  btns.forEach(function(b){ b.addEventListener('click',function(){
+    btns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
+    var band=b.getAttribute('data-band');
+    rows.forEach(function(r){ r.classList.toggle('hide', band!=='all' && r.getAttribute('data-band')!==band); });
+    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('tr[data-band]:not(.hide)') ? '' : 'none'; });
+  });});
+})();
 </script>
+</body>
+</html>

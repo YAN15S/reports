@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
+      "title": "Cooling Blanket: Marketing Angles",
+      "date": "2026-09-09 18:43:41",
+      "type": "angles"
+    },
+    {
       "file": "complete_liquid_protein_shot_marketing_angles_2026-08-23.html",
       "title": "Complete Liquid Protein Shot: Marketing Angles",
       "date": "2026-09-09 18:43:33",
@@ -106,12 +112,6 @@
       "file": "organic-mega-mushroom-powder_marketing_angles_2026-08-24.html",
       "title": "Organic Mega Mushroom Powder - Marketing Angles",
       "date": "2026-08-24 11:28:17",
-      "type": "angles"
-    },
-    {
-      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
-      "title": "Cooling Blanket - Marketing Angles",
-      "date": "2026-08-24 11:06:24",
       "type": "angles"
     },
     {

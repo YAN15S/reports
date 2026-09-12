@@ -5,63 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cordless Red Light Knee Massager: Marketing Angles</title>
 <style>
-  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff;
-          --fresh:#065f46; --fresh-bg:#ecfdf5; --twist:#92400e; --twist-bg:#fef3c7; --crowded:#991b1b; --crowded-bg:#fee2e2; --unscored:#475569; --unscored-bg:#f1f5f9; }
+  :root { --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f4f6fa; --card:#fff; --slate:#1e293b; --link:#1d4ed8;
+          --fresh:#065f46; --fresh-bg:#d1fae5; --twist:#92400e; --twist-bg:#fde68a; --crowded:#991b1b; --crowded-bg:#fecaca; --unscored:#475569; --unscored-bg:#e2e8f0;
+          --c1:#dbeafe; --c1i:#1e40af; --c2:#ede9fe; --c2i:#5b21b6; --c3:#ffedd5; --c3i:#9a3412; --c4:#fee2e2; --c4i:#991b1b; --c5:#dcfce7; --c5i:#166534; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.45; font-size:14px; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover { text-decoration:underline; }
   .accent { height:6px; background:var(--slate); }
-  header { background:#fff; border-bottom:1px solid var(--line); padding:22px 20px; }
-  .wrap { max-width:960px; margin:0 auto; }
-  h1 { margin:0 0 4px; font-size:24px; }
-  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:8px; }
-  .sub { color:var(--muted); font-size:14px; }
-  .date { color:var(--muted); font-size:13px; margin-top:4px; }
-  main { padding:20px; }
-  section { margin-bottom:28px; }
-  h2 { font-size:18px; margin:0 0 4px; }
-  .lead { color:var(--muted); font-size:13px; margin:0 0 12px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
-  .kv { display:grid; grid-template-columns:150px 1fr; gap:8px 16px; font-size:14px; }
-  .kv dt { color:var(--muted); font-weight:600; }
-  .kv dd { margin:0; }
-  .top { border-left:4px solid var(--slate); margin-bottom:12px; }
-  .top .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
-  .rank { font-size:13px; font-weight:700; color:#fff; background:var(--slate); border-radius:6px; padding:2px 8px; }
-  .top h3 { margin:0; font-size:17px; }
-  .chip { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
-  .u { border:0; font-weight:600; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:24px 20px 18px; }
+  .wrap { max-width:1040px; margin:0 auto; }
+  h1 { margin:0 0 6px; font-size:26px; letter-spacing:-.01em; }
+  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:10px; }
+  .sub { color:var(--muted); font-size:14px; max-width:760px; }
+  .meta { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
+  .date { color:var(--muted); font-size:13px; }
+  nav.toc a { margin-left:16px; font-size:13px; font-weight:600; }
+  main { padding:24px 20px 8px; }
+  section { margin-bottom:36px; }
+  h2 { font-size:19px; margin:0 0 2px; }
+  .lead { color:var(--muted); font-size:13px; margin:0 0 14px; }
+  .g2 { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .g3 { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+  .g4 { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; display:flex; flex-direction:column; min-width:0; }
+  .card h3 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px; font-weight:700; }
+  .tile { min-height:120px; }
+  .tile p, .avatar p { margin:0; font-size:14px; }
+  .avatar { margin-bottom:14px; }
+  .g2, .g3, .g4 { margin-bottom:14px; }
+  .sub-h { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 10px; font-weight:700; }
+  .q { font-size:13.5px; border-left:4px solid var(--slate); }
+  .q p { margin:0 0 8px; font-style:italic; }
+  .q .src { margin-top:auto; white-space:normal; }
+  .comp { font-size:13.5px; }
+  .comp .src { margin-top:auto; padding-top:6px; }
+  .strip { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin:0 0 20px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; text-align:center; }
+  .stat .v { font-size:24px; font-weight:700; line-height:1.1; }
+  .stat .l { color:var(--muted); font-size:12px; margin-top:4px; text-transform:uppercase; letter-spacing:.05em; }
+  ul.plain { margin:0; padding-left:18px; }
+  ul.plain li { margin:0 0 8px; }
+  ul.plain li:last-child { margin-bottom:0; }
+  .src { font-size:12px; color:var(--muted); white-space:nowrap; }
+  .voice { gap:8px; }
+  .voice blockquote { margin:0 0 8px; padding:8px 12px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13.5px; }
+  .voice blockquote:last-child { margin-bottom:0; }
+  .voice blockquote .src { display:block; margin-top:3px; white-space:normal; }
+  table.cov { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13px; margin-top:14px; }
+  table.cov td, table.cov th { padding:8px 12px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+  table.cov th { color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.06em; border-top:0; background:#fafbfc; }
+  table.cov td:first-child { font-weight:600; width:22%; }
+  table.cov td:last-child { width:10%; white-space:nowrap; }
+  .chip { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap; line-height:1.3; }
   .u.Fresh { background:var(--fresh-bg); color:var(--fresh); }
   .u.Twist { background:var(--twist-bg); color:var(--twist); }
   .u.Crowded { background:var(--crowded-bg); color:var(--crowded); }
   .u.Unscored { background:var(--unscored-bg); color:var(--unscored); }
-  .row { font-size:14px; margin:6px 0; }
-  .row b { color:var(--muted); font-weight:600; margin-right:6px; }
-  .quote { font-size:15px; font-style:italic; margin:8px 0; padding:8px 12px; background:var(--bg); border-radius:8px; }
-  .hooks { margin:10px 0 0; padding:0; list-style:none; }
-  .hooks li { display:grid; grid-template-columns:110px 1fr; gap:10px; font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
-  .hooks li span { color:var(--muted); font-weight:600; font-size:12px; padding-top:2px; }
-  .filters { display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
-  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:6px 11px; border-radius:8px; font-size:13px; cursor:pointer; }
+  .cat { font-weight:600; }
+  .cat.k1 { background:var(--c1); color:var(--c1i); } .cat.k2 { background:var(--c2); color:var(--c2i); } .cat.k3 { background:var(--c3); color:var(--c3i); } .cat.k4 { background:var(--c4); color:var(--c4i); } .cat.k5 { background:var(--c5); color:var(--c5i); }
+  .top { border-top:5px solid var(--slate); }
+  .top .head { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .rank { width:30px; height:30px; border-radius:50%; background:var(--slate); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex:0 0 30px; }
+  .top h4 { margin:0; font-size:16px; line-height:1.25; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .hook { font-size:14px; font-style:italic; padding:10px 12px; background:var(--bg); border-radius:8px; margin:0 0 10px; }
+  .why { font-size:13px; color:var(--ink); margin:0 0 10px; }
+  .why b, .fmt b { color:var(--muted); font-weight:600; margin-right:4px; }
+  .fmt { font-size:12px; color:var(--muted); margin-top:auto; padding-top:8px; }
+  .hooks { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
+  .hooks li { font-size:13px; padding:7px 0; border-bottom:1px solid var(--line); }
+  .hooks li span { display:block; color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:2px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 13px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
-  .group { margin-bottom:14px; }
-  .group h3 { font-size:14px; color:var(--muted); margin:0 0 6px; text-transform:uppercase; letter-spacing:.04em; }
-  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px; }
-  td { padding:10px 12px; border-top:1px solid var(--line); vertical-align:top; }
-  tr:first-child td { border-top:0; }
-  td.n { width:34%; font-weight:600; }
-  td.n small { display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px; }
-  td.b { width:120px; white-space:nowrap; }
-  td.h small { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
-  tr.hide { display:none; }
-  .legend { font-size:12px; color:var(--muted); margin-top:10px; }
-  ul.plain { margin:0; padding-left:18px; font-size:14px; }
-  ul.plain li { margin:4px 0; }
-  ul.plain b { font-weight:600; }
-  .cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
-  .cols h3 { font-size:14px; margin:0 0 6px; }
-  .sources { font-size:12px; color:var(--muted); margin-top:12px; }
+  .group { margin-bottom:22px; }
+  .group h3 { display:flex; align-items:center; gap:10px; font-size:14px; margin:0 0 10px; }
+  .group h3 .chip { font-size:12px; }
+  .angle { min-height:150px; }
+  .angle .name { font-weight:700; font-size:15px; margin:0 0 8px; line-height:1.3; }
+  .angle .hook { margin-bottom:8px; font-size:13.5px; }
+  .angle .ins { font-size:12.5px; color:var(--muted); margin:0; }
+  .angle.hide { display:none; }
+  .legend { font-size:12px; color:var(--muted); margin-top:12px; }
   footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
-  @media (max-width:720px) { .kv { grid-template-columns:1fr; } .cols { grid-template-columns:1fr; } .hooks li { grid-template-columns:1fr; } td.b { white-space:normal; } }
+  @media (max-width:860px) { .g3, .g4, .strip { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+  @media (max-width:560px) { .g2, .g3, .g4, .strip { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
 </head>
 <body>
@@ -69,53 +98,55 @@
 <header><div class="wrap">
   <h1>Cordless Red Light Knee Massager<small>Marketing angles</small></h1>
   <div class="sub">a woman 55 to 65+ (or her adult daughter buying as a gift) living with daily knee pain who has already tried painkillers, supplements, and a cheap brace</div>
-  <div class="date">08-23-2026</div>
+  <div class="meta"><div class="date">08-23-2026, search term "red light knee massager"</div>
+  <nav class="toc"><a href="#research">1. Research</a><a href="#top3">2. Top 3 angles</a><a href="#all20">3. All 20 angles</a></nav></div>
 </div></header>
 <main class="wrap">
 
-<section>
-  <h2>Who we are selling to</h2>
-  <div class="card"><dl class="kv">
-    <dt>Avatar</dt><dd>Female, 55 to 65+, arthritis-stage knee pain (a large secondary buyer is her adult daughter shopping as a gift for Mother&#x27;s or Father&#x27;s Day, Christmas, or a post-knee-replacement recovery). Already tried OTC painkillers and glucosamine with little effect, wary of injections and surgery, values staying independent and active without another expensive appointment.</dd>
-    <dt>Before</dt><dd>Wincing on every stair and planning the day around her knee</dd>
-    <dt>After</dt><dd>Moving through an ordinary day, walking the dog, gardening, playing with the grandkids, without thinking about it</dd>
-    <dt>Biggest objection</dt><dd>&quot;I&#x27;ve already tried pills, a brace, and other gadgets that didn&#x27;t really work, so why would this one be any different.&quot;</dd>
-  </dl></div>
+<section id="research">
+  <h2>1. Research</h2>
+  <p class="lead">What real people said, with the source behind every line.</p>
+  <div class="strip">
+    <div class="stat"><div class="v">7</div><div class="l">competitor brands in market</div></div>
+    <div class="stat"><div class="v">14 / 4 / 2</div><div class="l">fresh / twist / crowded angles</div></div>
+    <div class="stat"><div class="v">n/a</div><div class="l">sources read</div></div>
+  </div>
+  <div class="card avatar"><h3>Avatar</h3><p>Female, 55 to 65+, arthritis-stage knee pain (a large secondary buyer is her adult daughter shopping as a gift for Mother&#x27;s or Father&#x27;s Day, Christmas, or a post-knee-replacement recovery). Already tried OTC painkillers and glucosamine with little effect, wary of injections and surgery, values staying independent and active without another expensive appointment.</p></div>
+  <div class="g3">
+    <div class="card tile"><h3>Before</h3><p>Wincing on every stair and planning the day around her knee</p></div>
+    <div class="card tile"><h3>After</h3><p>Moving through an ordinary day, walking the dog, gardening, playing with the grandkids, without thinking about it</p></div>
+    <div class="card tile"><h3>Biggest objection</h3><p>&quot;I&#x27;ve already tried pills, a brace, and other gadgets that didn&#x27;t really work, so why would this one be any different.&quot;</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Pain points</h3><ul class="plain"><li>Chronic ache flares on standing and stairs; morning stiffness is the worst part of the day.</li><li>Sleep disruption, can&#x27;t get comfortable, wakes up sore (about a third of arthritis sufferers report this).</li><li>Already tried acetaminophen (minimal relief per Harvard Health) and glucosamine (no measurable benefit per a published Arthritis &amp; Rheumatology study).</li><li>Fear of surgery: arthroscopic surgery does not improve degenerative knee arthritis and may raise future knee-replacement risk (BMJ).</li><li>Existing cheap knee wraps run cooler than advertised, straps too short for larger legs, and batteries die fast (consumer review aggregator).</li><li>Identity cost: activity and mood both suffer, the quiet feeling of &quot;getting old before her time.&quot;</li></ul></div>
+    <div class="card"><h3>Benefits</h3><ul class="plain"><li>Reported rapid relief within minutes of use, and reduced morning stiffness.</li><li>Better range of motion and flexibility from the heat component.</li><li>Reported use in post-knee-replacement recovery routines.</li><li>Thin, discreet, cordless design, wearable under clothing during the day.</li><li>Triple therapy (heat, 660nm red light, vibration/compression) in one device, three independently-supported modalities most single-mode competitors do not combine.</li><li>FSA/HSA eligible, feels like already-earmarked money rather than a new expense.</li></ul></div>
+  </div>
+  <h3 class="sub-h">Customer voice</h3>
+  <div class="g3 voice"><div class="card q"><p class="legend">No verbatim quotes recorded for this report.</p></div></div>
+  <h3 class="sub-h">What competitors run</h3>
+  <div class="g2"><div class="card comp">Levide (confirmed match) Social Proof: 90-day risk-free trial + 150,000-customer social proof, leads with pain-of-limitation.<div></div></div><div class="card comp">LifeForm Co. (audited kill, wrong body part per Winners DB classification, not counted in the differentiation set): generic pain/heat/red light.<div></div></div><div class="card comp">Gladiora (confirmed match) Pain: 4-in-1 combination (heat, vibration, red light, laser) targeting daily knee pain.<div></div></div><div class="card comp">Light Vitalize (confirmed match) Social Proof / Authority: &quot;3 clinically proven methods&quot; framing, a named-doctor quote, 60-day money-back guarantee.<div></div></div><div class="card comp">Trendy Storee (partial match, Arabic-market ad) Pain: infrared heat/vibration, joint stiffness callout, 50% off urgency.<div></div></div><div class="card comp">Al Aras Lab (confirmed match) Contrarian: positions red light massager as an alternative to painkillers, 60-day guarantee.<div></div></div><div class="card comp">Sakerouo (confirmed match) Aspiration: self-care ritual framing, &quot;knees deserve a break.&quot;<div></div></div><div class="card comp">Two clear white spaces nothing in this competitor set touches: FSA/HSA eligibility, and gifting to a parent. Guarantees (60 to 90 day money-back) are now a category norm across 3 of the 7 ads.<div></div></div></div>
+  <div class="legend">Denominator of 7 competitor ads captured in the Winners DB for &quot;red light knee massager&quot; (5 confirmed matches, 1 confirmed off-target, 1 partial match; see Research Notes).</div>
+  <table class="cov"><tr><th>Source</th><th>What was read</th><th>Link</th></tr><tr><td colspan="3" class="legend">Source coverage not recorded for this report.</td></tr></table>
+  <div class="legend">Winners DB pull of the 7 competitor ads captured for &quot;red light knee massager&quot; (Research Notes, with match status per ad: confirmed match, partial match, or audited kill). Pain-point citations named inline in the report: Harvard Health (acetaminophen relief), a published Arthritis &amp; Rheumatology study (glucosamine), BMJ (arthroscopic surgery risk), and a consumer review aggregator (competitor knee-wrap complaints). The report names no other source list.</div>
 </section>
 
-<section>
-  <h2>Top 3 angles</h2>
-  <p class="lead">The most emotionally charged angles that competitors are not already running. Test these first.</p>
-  <div class="card top"><div class="head"><span class="rank">#1</span><h3>Bought For Mom, She Won&#x27;t Give It Back</h3><span class="chip">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/7</span></div><div class="row"><b>Why this one</b>Matches the product&#x27;s own flagged strategic strength (gifting is its single highest-conversion emotional narrative) and zero of the 7 captured competitor ads use a gifting frame, they all sell to the sufferer directly.</div><div class="quote">I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one.</div><div class="row"><b>Insight</b>Gifting-driven social proof, unclaimed by any competitor ad.</div><div class="row"><b>Format</b>UGC testimonial video</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>My mom&#x27;s knees ached every time she stood up from her chair. I didn&#x27;t know what else to try.</div></li><li><span>Social proof</span><div>I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one, because she won&#x27;t give hers back.</div></li><li><span>Curiosity</span><div>The gift I got my mom for her knees ended up being the one she uses more than her cane.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#2</span><h3>The 3AM Knee</h3><span class="chip">Pain / Frustration</span><span class="chip u Fresh">Fresh 0/7</span></div><div class="row"><b>Why this one</b>Sleep disruption is a uniquely vivid, universal, and unclaimed pain point, none of the 7 competitor ads mention it, and it hits harder than the generic &quot;stiff, aching knees&quot; language every competitor already uses.</div><div class="quote">It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am.</div><div class="row"><b>Insight</b>Knee pain disrupts sleep, not just daytime activity.</div><div class="row"><b>Format</b>Testimonial / static</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am because your knee won&#x27;t let you sleep.</div></li><li><span>Result-first</span><div>I went from waking up every night with a throbbing knee to sleeping straight through, in under two weeks.</div></li><li><span>Contra</span><div>Stop popping another painkiller at 3am. Put this on for 15 minutes instead.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#3</span><h3>Your FSA Money Disappears Dec 31</h3><span class="chip">Fear / Urgency</span><span class="chip u Fresh">Fresh 0/7</span></div><div class="row"><b>Why this one</b>Combines a logical hook (real pre-tax savings, a real deadline) with an emotional one (finally spend that &quot;wasted&quot; money on something that helps), and it is a white space no competitor is touching.</div><div class="quote">That FSA balance you forgot about? It expires this year.</div><div class="row"><b>Insight</b>FSA/HSA use-it-or-lose-it urgency, a real deadline tied to a real, unclaimed differentiator.</div><div class="row"><b>Format</b>Static / carousel</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Curiosity</span><div>That FSA balance sitting in your account right now? Most people forget it expires Dec 31, and lose it.</div></li><li><span>Problem-first</span><div>Knee pain doesn&#x27;t take a holiday, and neither does your FSA deadline.</div></li><li><span>Result-first</span><div>I used my leftover FSA dollars on this instead of losing them, and now my knees thank me every morning.</div></li></ul></div>
+<section id="top3">
+  <h2>2. Top 3 angles</h2>
+  <p class="lead">The most emotionally charged angles competitors are not already running. Test these first.</p>
+  <div class="g3"><div class="card top"><div class="head"><span class="rank">1</span><h4>Bought For Mom, She Won&#x27;t Give It Back</h4></div><div class="tags"><span class="chip cat k5">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/7</span></div><p class="hook">I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one.</p><p class="why"><b>Why</b>Matches the product&#x27;s own flagged strategic strength (gifting is its single highest-conversion emotional narrative) and zero of the 7 captured competitor ads use a gifting frame, they all sell to the sufferer directly.</p><ul class="hooks"><li><span>Problem-first</span>My mom&#x27;s knees ached every time she stood up from her chair. I didn&#x27;t know what else to try.</li><li><span>Social proof</span>I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one, because she won&#x27;t give hers back.</li><li><span>Curiosity</span>The gift I got my mom for her knees ended up being the one she uses more than her cane.</li></ul><div class="fmt"><b>Format</b>UGC testimonial video</div></div><div class="card top"><div class="head"><span class="rank">2</span><h4>The 3AM Knee</h4></div><div class="tags"><span class="chip cat k1">Pain / Frustration</span><span class="chip u Fresh">Fresh 0/7</span></div><p class="hook">It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am.</p><p class="why"><b>Why</b>Sleep disruption is a uniquely vivid, universal, and unclaimed pain point, none of the 7 competitor ads mention it, and it hits harder than the generic &quot;stiff, aching knees&quot; language every competitor already uses.</p><ul class="hooks"><li><span>Problem-first</span>It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am because your knee won&#x27;t let you sleep.</li><li><span>Result-first</span>I went from waking up every night with a throbbing knee to sleeping straight through, in under two weeks.</li><li><span>Contra</span>Stop popping another painkiller at 3am. Put this on for 15 minutes instead.</li></ul><div class="fmt"><b>Format</b>Testimonial / static</div></div><div class="card top"><div class="head"><span class="rank">3</span><h4>Your FSA Money Disappears Dec 31</h4></div><div class="tags"><span class="chip cat k4">Fear / Urgency</span><span class="chip u Fresh">Fresh 0/7</span></div><p class="hook">That FSA balance you forgot about? It expires this year.</p><p class="why"><b>Why</b>Combines a logical hook (real pre-tax savings, a real deadline) with an emotional one (finally spend that &quot;wasted&quot; money on something that helps), and it is a white space no competitor is touching.</p><ul class="hooks"><li><span>Curiosity</span>That FSA balance sitting in your account right now? Most people forget it expires Dec 31, and lose it.</li><li><span>Problem-first</span>Knee pain doesn&#x27;t take a holiday, and neither does your FSA deadline.</li><li><span>Result-first</span>I used my leftover FSA dollars on this instead of losing them, and now my knees thank me every morning.</li></ul><div class="fmt"><b>Format</b>Static / carousel</div></div></div>
 </section>
 
-<section>
-  <h2>All 20 angles</h2>
-  <p class="lead">Four per category. Uniqueness is measured against the 7 competitor ads in the Winners DB for "red light knee massager".</p>
+<section id="all20">
+  <h2>3. All 20 angles</h2>
+  <p class="lead">Four per category. Uniqueness is measured against 7 competitor brands in the Winners DB.</p>
   <div class="filters" id="filters">
-    <button class="on" data-band="all">All</button>
+    <button class="on" data-band="all">All 20</button>
     <button data-band="Fresh">Fresh 14</button>
     <button data-band="Twist">Twist 4</button>
     <button data-band="Crowded">Crowded 2</button>
   </div>
-  <div class="group"><h3>Pain / Frustration</h3><table><tr data-band="Fresh"><td class="n">The Stairs Test<small>Every staircase becomes a dreaded decision point.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">You used to run up the stairs. Now you count them.<small>UGC video / testimonial</small></td></tr><tr data-band="Fresh"><td class="n">The 3AM Knee<small>Knee pain disrupts sleep, not just daytime activity.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am.<small>Testimonial / static</small></td></tr><tr data-band="Fresh"><td class="n">The Garden You Gave Up<small>Kneeling and hobby loss as an identity cost, not just a symptom.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">You used to kneel in that garden for hours. Now you can&#x27;t kneel at all.<small>UGC / before-after</small></td></tr><tr data-band="Twist"><td class="n">The Pills Aren&#x27;t Working Either<small>Names the specific failed treatments (acetaminophen, glucosamine) rather than a generic &quot;nothing worked.&quot;</small></td><td class="b"><span class="chip u Twist">Twist 1/7</span></td><td class="h">Acetaminophen barely touches it. Glucosamine did nothing. Here&#x27;s what actually calms a flare.<small>Static / carousel</small></td></tr></table></div><div class="group"><h3>Aspiration / Identity</h3><table><tr data-band="Fresh"><td class="n">Walk the Dog Again<small>A small, concrete daily win instead of an abstract &quot;relief&quot; promise.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Not a marathon. Just a walk around the block, pain-free.<small>UGC / testimonial</small></td></tr><tr data-band="Fresh"><td class="n">Back on the Floor With the Grandkids<small>Family identity moment, getting down and back up.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Get down on the floor and actually get back up.<small>Testimonial video</small></td></tr><tr data-band="Fresh"><td class="n">Independence, Not a Miracle<small>Reframes the product as self-management, not a cure, honest positioning competitors avoid.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">You don&#x27;t need to be fixed. You need your knees to stop making decisions for you.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">Move Like You&#x27;re Not 60<small>Reclaiming a mobile self-image, not chasing youth.</small></td><td class="b"><span class="chip u Twist">Twist 1/7</span></td><td class="h">You&#x27;re not trying to feel young. You&#x27;re trying to feel like yourself again.<small>UGC video</small></td></tr></table></div><div class="group"><h3>Contrarian / Pattern Interrupt</h3><table><tr data-band="Fresh"><td class="n">Surgery Isn&#x27;t the Next Step<small>Cites published findings that arthroscopic surgery does not improve degenerative knee arthritis. Compliance-sensitive, needs medical-claim review before use.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Studies show knee surgery often doesn&#x27;t fix arthritis pain. There&#x27;s a lower-risk first move.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">Your Knee Brace Is a Bandage<small>Contrarian jab at bracing specifically, a category none of the 7 ads compare against.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">A brace holds your knee still. It doesn&#x27;t actually treat the pain underneath it.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">Skip the Copay<small>At-home alternative to another paid PT visit.</small></td><td class="b"><span class="chip u Twist">Twist 1/7</span></td><td class="h">Before you book another appointment and wait six weeks, try this at home for 15 minutes.<small>Static / VSL</small></td></tr><tr data-band="Crowded"><td class="n">Heat Alone Isn&#x27;t Enough<small>Positions multi-therapy against single-mode relief. Most competitor ads already lead with a therapy combo.</small></td><td class="b"><span class="chip u Crowded">Crowded 3/7</span></td><td class="h">A heating pad soothes for ten minutes. It doesn&#x27;t touch inflammation. Here&#x27;s what does three things at once.<small>Comparison carousel</small></td></tr></table></div><div class="group"><h3>Fear / Urgency</h3><table><tr data-band="Fresh"><td class="n">Before It Gets Worse<small>Progression framing. Compliance-sensitive, avoid implying diagnosis or guaranteed outcomes.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Right now it&#x27;s stiffness. Left alone, it doesn&#x27;t get easier on its own.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">Your FSA Money Disappears Dec 31<small>FSA/HSA use-it-or-lose-it urgency, a real deadline tied to a real, unclaimed differentiator.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">That FSA balance you forgot about? It expires this year.<small>Static / carousel</small></td></tr><tr data-band="Fresh"><td class="n">One More Winter On Bad Knees<small>Seasonal cold-worsens-pain hook, ties to a Fall/Winter macro-angle.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Cold weather makes it worse. Don&#x27;t spend another winter dreading the driveway.<small>Video</small></td></tr><tr data-band="Fresh"><td class="n">What Happens If You Just Wait<small>Cost of inaction over time, distinct from the relief-now framing every competitor uses.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">Every year you &quot;get used to it&quot; is a year you move less. That adds up.<small>Static</small></td></tr></table></div><div class="group"><h3>Social Proof / Tribe</h3><table><tr data-band="Fresh"><td class="n">Bought For Mom, She Won&#x27;t Give It Back<small>Gifting-driven social proof, unclaimed by any competitor ad.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one.<small>UGC testimonial video</small></td></tr><tr data-band="Fresh"><td class="n">The Knee Wrap Recovering Patients Actually Use<small>Post-surgery recovery peer proof, a segment no competitor ad addresses.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/7</span></td><td class="h">People recovering from knee replacement say this is part of their routine now.<small>Testimonial</small></td></tr><tr data-band="Twist"><td class="n">What Physical Therapists Won&#x27;t Tell You<small>Authority framing built on cited published research, not an invented spokesperson (unlike a competitor&#x27;s named-doctor claim).</small></td><td class="b"><span class="chip u Twist">Twist 1/7</span></td><td class="h">PT costs real money and takes months. Here&#x27;s the at-home therapy backed by the same research.<small>Static, cited sources only</small></td></tr><tr data-band="Crowded"><td class="n">1,500+ Reviews Can&#x27;t All Be Wrong<small>Direct review-count social proof, the same mechanic Levide and Light Vitalize both already run.</small></td><td class="b"><span class="chip u Crowded">Crowded 2/7</span></td><td class="h">1,500+ people with knee pain like yours already made the switch.<small>Carousel of reviews</small></td></tr></table></div>
-  <div class="legend"><b>Fresh</b> = no competitor ad runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 7 competitor ads. Denominator of 7 competitor ads captured in the Winners DB for &quot;red light knee massager&quot; (5 confirmed matches, 1 confirmed off-target, 1 partial match; see Research Notes).</div>
-</section>
-
-<section>
-  <h2>Offers that fit</h2>
-  <p class="lead">Macro-angles: a reason for a sale. Only the ones that genuinely fit this product.</p>
-  <div class="card"><ul class="plain"><li><b>Use It Or Lose It (FSA/HSA).</b> Year-end FSA/HSA deadline campaign. Activate 2 weeks before Dec 31. Directly ties to the product&#x27;s FDA-cleared, FSA-eligible status, a real and unclaimed differentiator.</li><li><b>Gift Occasions.</b> Mother&#x27;s Day, Father&#x27;s Day, Christmas, and &quot;get well soon&quot; post-surgery gifting. The strongest emotional buyer in this niche is often the adult child, not the sufferer.</li><li><b>Fall / Winter Seasonal.</b> Cold weather worsening joint pain is a real, recurring seasonal hook (One More Winter On Bad Knees angle). Activate with the first cold snap.</li><li><b>Evergreen Milestone.</b> 1,500+ verified reviews is a real, honest number (not inflated) worth using as an ongoing trust marker as it grows.</li></ul><div class="legend">Not used: New Product Launch and Restock Event (no launch/restock scheduled this cycle); Handmade/Jewelry angles (do not fit an electronic wellness device).</div></div>
-</section>
-
-<section>
-  <h2>What the research said</h2>
-  <div class="cols">
-    <div class="card"><h3>Top pain points</h3><ul class="plain"><li>Chronic ache flares on standing and stairs; morning stiffness is the worst part of the day.</li><li>Sleep disruption, can&#x27;t get comfortable, wakes up sore (about a third of arthritis sufferers report this).</li><li>Already tried acetaminophen (minimal relief per Harvard Health) and glucosamine (no measurable benefit per a published Arthritis &amp; Rheumatology study).</li><li>Fear of surgery: arthroscopic surgery does not improve degenerative knee arthritis and may raise future knee-replacement risk (BMJ).</li><li>Existing cheap knee wraps run cooler than advertised, straps too short for larger legs, and batteries die fast (consumer review aggregator).</li><li>Identity cost: activity and mood both suffer, the quiet feeling of &quot;getting old before her time.&quot;</li></ul></div>
-    <div class="card"><h3>Top benefits</h3><ul class="plain"><li>Reported rapid relief within minutes of use, and reduced morning stiffness.</li><li>Better range of motion and flexibility from the heat component.</li><li>Reported use in post-knee-replacement recovery routines.</li><li>Thin, discreet, cordless design, wearable under clothing during the day.</li><li>Triple therapy (heat, 660nm red light, vibration/compression) in one device, three independently-supported modalities most single-mode competitors do not combine.</li><li>FSA/HSA eligible, feels like already-earmarked money rather than a new expense.</li></ul></div>
-    <div class="card"><h3>What competitors run</h3><ul class="plain"><li>Levide (confirmed match) Social Proof: 90-day risk-free trial + 150,000-customer social proof, leads with pain-of-limitation.</li><li>LifeForm Co. (audited kill, wrong body part per Winners DB classification, not counted in the differentiation set): generic pain/heat/red light.</li><li>Gladiora (confirmed match) Pain: 4-in-1 combination (heat, vibration, red light, laser) targeting daily knee pain.</li><li>Light Vitalize (confirmed match) Social Proof / Authority: &quot;3 clinically proven methods&quot; framing, a named-doctor quote, 60-day money-back guarantee.</li><li>Trendy Storee (partial match, Arabic-market ad) Pain: infrared heat/vibration, joint stiffness callout, 50% off urgency.</li><li>Al Aras Lab (confirmed match) Contrarian: positions red light massager as an alternative to painkillers, 60-day guarantee.</li><li>Sakerouo (confirmed match) Aspiration: self-care ritual framing, &quot;knees deserve a break.&quot;</li><li>Two clear white spaces nothing in this competitor set touches: FSA/HSA eligibility, and gifting to a parent. Guarantees (60 to 90 day money-back) are now a category norm across 3 of the 7 ads.</li></ul></div>
-  </div>
-  <div class="sources">Winners DB pull of the 7 competitor ads captured for &quot;red light knee massager&quot; (Research Notes, with match status per ad: confirmed match, partial match, or audited kill). Pain-point citations named inline in the report: Harvard Health (acetaminophen relief), a published Arthritis &amp; Rheumatology study (glucosamine), BMJ (arthroscopic surgery risk), and a consumer review aggregator (competitor knee-wrap complaints). The report names no other source list.</div>
+  <div class="group"><h3><span class="chip cat k1">Pain / Frustration</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">The Stairs Test</p><p class="hook">You used to run up the stairs. Now you count them.</p><p class="ins">Every staircase becomes a dreaded decision point.</p><div class="fmt"><b>Format</b>UGC video / testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">The 3AM Knee</p><p class="hook">It&#x27;s not the pain during the day that gets you. It&#x27;s waking up at 3am.</p><p class="ins">Knee pain disrupts sleep, not just daytime activity.</p><div class="fmt"><b>Format</b>Testimonial / static</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">The Garden You Gave Up</p><p class="hook">You used to kneel in that garden for hours. Now you can&#x27;t kneel at all.</p><p class="ins">Kneeling and hobby loss as an identity cost, not just a symptom.</p><div class="fmt"><b>Format</b>UGC / before-after</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/7</span></div><p class="name">The Pills Aren&#x27;t Working Either</p><p class="hook">Acetaminophen barely touches it. Glucosamine did nothing. Here&#x27;s what actually calms a flare.</p><p class="ins">Names the specific failed treatments (acetaminophen, glucosamine) rather than a generic &quot;nothing worked.&quot;</p><div class="fmt"><b>Format</b>Static / carousel</div></div></div></div><div class="group"><h3><span class="chip cat k2">Aspiration / Identity</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Walk the Dog Again</p><p class="hook">Not a marathon. Just a walk around the block, pain-free.</p><p class="ins">A small, concrete daily win instead of an abstract &quot;relief&quot; promise.</p><div class="fmt"><b>Format</b>UGC / testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Back on the Floor With the Grandkids</p><p class="hook">Get down on the floor and actually get back up.</p><p class="ins">Family identity moment, getting down and back up.</p><div class="fmt"><b>Format</b>Testimonial video</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Independence, Not a Miracle</p><p class="hook">You don&#x27;t need to be fixed. You need your knees to stop making decisions for you.</p><p class="ins">Reframes the product as self-management, not a cure, honest positioning competitors avoid.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/7</span></div><p class="name">Move Like You&#x27;re Not 60</p><p class="hook">You&#x27;re not trying to feel young. You&#x27;re trying to feel like yourself again.</p><p class="ins">Reclaiming a mobile self-image, not chasing youth.</p><div class="fmt"><b>Format</b>UGC video</div></div></div></div><div class="group"><h3><span class="chip cat k3">Contrarian / Pattern Interrupt</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Surgery Isn&#x27;t the Next Step</p><p class="hook">Studies show knee surgery often doesn&#x27;t fix arthritis pain. There&#x27;s a lower-risk first move.</p><p class="ins">Cites published findings that arthroscopic surgery does not improve degenerative knee arthritis. Compliance-sensitive, needs medical-claim review before use.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Your Knee Brace Is a Bandage</p><p class="hook">A brace holds your knee still. It doesn&#x27;t actually treat the pain underneath it.</p><p class="ins">Contrarian jab at bracing specifically, a category none of the 7 ads compare against.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/7</span></div><p class="name">Skip the Copay</p><p class="hook">Before you book another appointment and wait six weeks, try this at home for 15 minutes.</p><p class="ins">At-home alternative to another paid PT visit.</p><div class="fmt"><b>Format</b>Static / VSL</div></div><div class="card angle" data-band="Crowded"><div class="tags"><span class="chip u Crowded">Crowded 3/7</span></div><p class="name">Heat Alone Isn&#x27;t Enough</p><p class="hook">A heating pad soothes for ten minutes. It doesn&#x27;t touch inflammation. Here&#x27;s what does three things at once.</p><p class="ins">Positions multi-therapy against single-mode relief. Most competitor ads already lead with a therapy combo.</p><div class="fmt"><b>Format</b>Comparison carousel</div></div></div></div><div class="group"><h3><span class="chip cat k4">Fear / Urgency</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Before It Gets Worse</p><p class="hook">Right now it&#x27;s stiffness. Left alone, it doesn&#x27;t get easier on its own.</p><p class="ins">Progression framing. Compliance-sensitive, avoid implying diagnosis or guaranteed outcomes.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Your FSA Money Disappears Dec 31</p><p class="hook">That FSA balance you forgot about? It expires this year.</p><p class="ins">FSA/HSA use-it-or-lose-it urgency, a real deadline tied to a real, unclaimed differentiator.</p><div class="fmt"><b>Format</b>Static / carousel</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">One More Winter On Bad Knees</p><p class="hook">Cold weather makes it worse. Don&#x27;t spend another winter dreading the driveway.</p><p class="ins">Seasonal cold-worsens-pain hook, ties to a Fall/Winter macro-angle.</p><div class="fmt"><b>Format</b>Video</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">What Happens If You Just Wait</p><p class="hook">Every year you &quot;get used to it&quot; is a year you move less. That adds up.</p><p class="ins">Cost of inaction over time, distinct from the relief-now framing every competitor uses.</p><div class="fmt"><b>Format</b>Static</div></div></div></div><div class="group"><h3><span class="chip cat k5">Social Proof / Tribe</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">Bought For Mom, She Won&#x27;t Give It Back</p><p class="hook">I bought this for my mom&#x27;s arthritis. Now I&#x27;ve had to order a second one.</p><p class="ins">Gifting-driven social proof, unclaimed by any competitor ad.</p><div class="fmt"><b>Format</b>UGC testimonial video</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/7</span></div><p class="name">The Knee Wrap Recovering Patients Actually Use</p><p class="hook">People recovering from knee replacement say this is part of their routine now.</p><p class="ins">Post-surgery recovery peer proof, a segment no competitor ad addresses.</p><div class="fmt"><b>Format</b>Testimonial</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/7</span></div><p class="name">What Physical Therapists Won&#x27;t Tell You</p><p class="hook">PT costs real money and takes months. Here&#x27;s the at-home therapy backed by the same research.</p><p class="ins">Authority framing built on cited published research, not an invented spokesperson (unlike a competitor&#x27;s named-doctor claim).</p><div class="fmt"><b>Format</b>Static, cited sources only</div></div><div class="card angle" data-band="Crowded"><div class="tags"><span class="chip u Crowded">Crowded 2/7</span></div><p class="name">1,500+ Reviews Can&#x27;t All Be Wrong</p><p class="hook">1,500+ people with knee pain like yours already made the switch.</p><p class="ins">Direct review-count social proof, the same mechanic Levide and Light Vitalize both already run.</p><div class="fmt"><b>Format</b>Carousel of reviews</div></div></div></div>
+  <div class="legend"><b>Fresh</b> = no competitor runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 7 competitor brands.</div>
 </section>
 
 </main>
@@ -123,12 +154,12 @@
 <script>
 (function(){
   var btns=document.querySelectorAll('#filters button');
-  var rows=document.querySelectorAll('tr[data-band]');
+  var cards=document.querySelectorAll('.angle[data-band]');
   btns.forEach(function(b){ b.addEventListener('click',function(){
     btns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
     var band=b.getAttribute('data-band');
-    rows.forEach(function(r){ r.classList.toggle('hide', band!=='all' && r.getAttribute('data-band')!==band); });
-    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('tr[data-band]:not(.hide)') ? '' : 'none'; });
+    cards.forEach(function(c){ c.classList.toggle('hide', band!=='all' && c.getAttribute('data-band')!==band); });
+    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('.angle[data-band]:not(.hide)') ? '' : 'none'; });
   });});
 })();
 </script>

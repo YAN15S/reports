@@ -5,63 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bassinet with Auto-Rocking: Marketing Angles</title>
 <style>
-  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff;
-          --fresh:#065f46; --fresh-bg:#ecfdf5; --twist:#92400e; --twist-bg:#fef3c7; --crowded:#991b1b; --crowded-bg:#fee2e2; --unscored:#475569; --unscored-bg:#f1f5f9; }
+  :root { --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f4f6fa; --card:#fff; --slate:#1e293b; --link:#1d4ed8;
+          --fresh:#065f46; --fresh-bg:#d1fae5; --twist:#92400e; --twist-bg:#fde68a; --crowded:#991b1b; --crowded-bg:#fecaca; --unscored:#475569; --unscored-bg:#e2e8f0;
+          --c1:#dbeafe; --c1i:#1e40af; --c2:#ede9fe; --c2i:#5b21b6; --c3:#ffedd5; --c3i:#9a3412; --c4:#fee2e2; --c4i:#991b1b; --c5:#dcfce7; --c5i:#166534; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.45; font-size:14px; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover { text-decoration:underline; }
   .accent { height:6px; background:var(--slate); }
-  header { background:#fff; border-bottom:1px solid var(--line); padding:22px 20px; }
-  .wrap { max-width:960px; margin:0 auto; }
-  h1 { margin:0 0 4px; font-size:24px; }
-  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:8px; }
-  .sub { color:var(--muted); font-size:14px; }
-  .date { color:var(--muted); font-size:13px; margin-top:4px; }
-  main { padding:20px; }
-  section { margin-bottom:28px; }
-  h2 { font-size:18px; margin:0 0 4px; }
-  .lead { color:var(--muted); font-size:13px; margin:0 0 12px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
-  .kv { display:grid; grid-template-columns:150px 1fr; gap:8px 16px; font-size:14px; }
-  .kv dt { color:var(--muted); font-weight:600; }
-  .kv dd { margin:0; }
-  .top { border-left:4px solid var(--slate); margin-bottom:12px; }
-  .top .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
-  .rank { font-size:13px; font-weight:700; color:#fff; background:var(--slate); border-radius:6px; padding:2px 8px; }
-  .top h3 { margin:0; font-size:17px; }
-  .chip { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
-  .u { border:0; font-weight:600; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:24px 20px 18px; }
+  .wrap { max-width:1040px; margin:0 auto; }
+  h1 { margin:0 0 6px; font-size:26px; letter-spacing:-.01em; }
+  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:10px; }
+  .sub { color:var(--muted); font-size:14px; max-width:760px; }
+  .meta { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
+  .date { color:var(--muted); font-size:13px; }
+  nav.toc a { margin-left:16px; font-size:13px; font-weight:600; }
+  main { padding:24px 20px 8px; }
+  section { margin-bottom:36px; }
+  h2 { font-size:19px; margin:0 0 2px; }
+  .lead { color:var(--muted); font-size:13px; margin:0 0 14px; }
+  .g2 { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .g3 { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+  .g4 { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; display:flex; flex-direction:column; min-width:0; }
+  .card h3 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px; font-weight:700; }
+  .tile { min-height:120px; }
+  .tile p, .avatar p { margin:0; font-size:14px; }
+  .avatar { margin-bottom:14px; }
+  .g2, .g3, .g4 { margin-bottom:14px; }
+  .sub-h { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 10px; font-weight:700; }
+  .q { font-size:13.5px; border-left:4px solid var(--slate); }
+  .q p { margin:0 0 8px; font-style:italic; }
+  .q .src { margin-top:auto; white-space:normal; }
+  .comp { font-size:13.5px; }
+  .comp .src { margin-top:auto; padding-top:6px; }
+  .strip { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin:0 0 20px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; text-align:center; }
+  .stat .v { font-size:24px; font-weight:700; line-height:1.1; }
+  .stat .l { color:var(--muted); font-size:12px; margin-top:4px; text-transform:uppercase; letter-spacing:.05em; }
+  ul.plain { margin:0; padding-left:18px; }
+  ul.plain li { margin:0 0 8px; }
+  ul.plain li:last-child { margin-bottom:0; }
+  .src { font-size:12px; color:var(--muted); white-space:nowrap; }
+  .voice { gap:8px; }
+  .voice blockquote { margin:0 0 8px; padding:8px 12px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13.5px; }
+  .voice blockquote:last-child { margin-bottom:0; }
+  .voice blockquote .src { display:block; margin-top:3px; white-space:normal; }
+  table.cov { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13px; margin-top:14px; }
+  table.cov td, table.cov th { padding:8px 12px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+  table.cov th { color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.06em; border-top:0; background:#fafbfc; }
+  table.cov td:first-child { font-weight:600; width:22%; }
+  table.cov td:last-child { width:10%; white-space:nowrap; }
+  .chip { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap; line-height:1.3; }
   .u.Fresh { background:var(--fresh-bg); color:var(--fresh); }
   .u.Twist { background:var(--twist-bg); color:var(--twist); }
   .u.Crowded { background:var(--crowded-bg); color:var(--crowded); }
   .u.Unscored { background:var(--unscored-bg); color:var(--unscored); }
-  .row { font-size:14px; margin:6px 0; }
-  .row b { color:var(--muted); font-weight:600; margin-right:6px; }
-  .quote { font-size:15px; font-style:italic; margin:8px 0; padding:8px 12px; background:var(--bg); border-radius:8px; }
-  .hooks { margin:10px 0 0; padding:0; list-style:none; }
-  .hooks li { display:grid; grid-template-columns:110px 1fr; gap:10px; font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
-  .hooks li span { color:var(--muted); font-weight:600; font-size:12px; padding-top:2px; }
-  .filters { display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
-  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:6px 11px; border-radius:8px; font-size:13px; cursor:pointer; }
+  .cat { font-weight:600; }
+  .cat.k1 { background:var(--c1); color:var(--c1i); } .cat.k2 { background:var(--c2); color:var(--c2i); } .cat.k3 { background:var(--c3); color:var(--c3i); } .cat.k4 { background:var(--c4); color:var(--c4i); } .cat.k5 { background:var(--c5); color:var(--c5i); }
+  .top { border-top:5px solid var(--slate); }
+  .top .head { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .rank { width:30px; height:30px; border-radius:50%; background:var(--slate); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex:0 0 30px; }
+  .top h4 { margin:0; font-size:16px; line-height:1.25; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .hook { font-size:14px; font-style:italic; padding:10px 12px; background:var(--bg); border-radius:8px; margin:0 0 10px; }
+  .why { font-size:13px; color:var(--ink); margin:0 0 10px; }
+  .why b, .fmt b { color:var(--muted); font-weight:600; margin-right:4px; }
+  .fmt { font-size:12px; color:var(--muted); margin-top:auto; padding-top:8px; }
+  .hooks { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
+  .hooks li { font-size:13px; padding:7px 0; border-bottom:1px solid var(--line); }
+  .hooks li span { display:block; color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:2px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 13px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
-  .group { margin-bottom:14px; }
-  .group h3 { font-size:14px; color:var(--muted); margin:0 0 6px; text-transform:uppercase; letter-spacing:.04em; }
-  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px; }
-  td { padding:10px 12px; border-top:1px solid var(--line); vertical-align:top; }
-  tr:first-child td { border-top:0; }
-  td.n { width:34%; font-weight:600; }
-  td.n small { display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px; }
-  td.b { width:120px; white-space:nowrap; }
-  td.h small { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
-  tr.hide { display:none; }
-  .legend { font-size:12px; color:var(--muted); margin-top:10px; }
-  ul.plain { margin:0; padding-left:18px; font-size:14px; }
-  ul.plain li { margin:4px 0; }
-  ul.plain b { font-weight:600; }
-  .cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
-  .cols h3 { font-size:14px; margin:0 0 6px; }
-  .sources { font-size:12px; color:var(--muted); margin-top:12px; }
+  .group { margin-bottom:22px; }
+  .group h3 { display:flex; align-items:center; gap:10px; font-size:14px; margin:0 0 10px; }
+  .group h3 .chip { font-size:12px; }
+  .angle { min-height:150px; }
+  .angle .name { font-weight:700; font-size:15px; margin:0 0 8px; line-height:1.3; }
+  .angle .hook { margin-bottom:8px; font-size:13.5px; }
+  .angle .ins { font-size:12.5px; color:var(--muted); margin:0; }
+  .angle.hide { display:none; }
+  .legend { font-size:12px; color:var(--muted); margin-top:12px; }
   footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
-  @media (max-width:720px) { .kv { grid-template-columns:1fr; } .cols { grid-template-columns:1fr; } .hooks li { grid-template-columns:1fr; } td.b { white-space:normal; } }
+  @media (max-width:860px) { .g3, .g4, .strip { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+  @media (max-width:560px) { .g2, .g3, .g4, .strip { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
 </head>
 <body>
@@ -69,53 +98,55 @@
 <header><div class="wrap">
   <h1>Bassinet with Auto-Rocking<small>Marketing angles</small></h1>
   <div class="sub">exhausted new/expecting mother, 25-44, weighing a $1,695 SNOO against this bedside auto-rocker</div>
-  <div class="date">08-24-2026</div>
+  <div class="meta"><div class="date">08-24-2026, search term "baby rocker"</div>
+  <nav class="toc"><a href="#research">1. Research</a><a href="#top3">2. Top 3 angles</a><a href="#all20">3. All 20 angles</a></nav></div>
 </div></header>
 <main class="wrap">
 
-<section>
-  <h2>Who we are selling to</h2>
-  <div class="card"><dl class="kv">
-    <dt>Avatar</dt><dd>A first-time or second-time mother, 25-44, 0-6 months postpartum, sleep-deprived, who has priced out the $1,695 SNOO and is looking for a way to get hands-free auto-rocking without that price tag or its subscription.</dd>
-    <dt>Before</dt><dd>Up every 20-45 minutes rocking baby by hand, running the math on whether a $1,695 bassinet is worth it.</dd>
-    <dt>After</dt><dd>Baby self-soothes in a bedside auto-rocker for a fraction of the cost, parent gets real stretches of sleep back.</dd>
-    <dt>Biggest objection</dt><dd>Is this worth $300+, and is it actually safe, versus just doing it myself or saving for the SNOO? Value/price is the objection these angles answer; safety claims are deliberately out of scope.</dd>
-  </dl></div>
+<section id="research">
+  <h2>1. Research</h2>
+  <p class="lead">What real people said, with the source behind every line.</p>
+  <div class="strip">
+    <div class="stat"><div class="v">25</div><div class="l">competitor brands in market</div></div>
+    <div class="stat"><div class="v">13 / 7 / 0</div><div class="l">fresh / twist / crowded angles</div></div>
+    <div class="stat"><div class="v">n/a</div><div class="l">sources read</div></div>
+  </div>
+  <div class="card avatar"><h3>Avatar</h3><p>A first-time or second-time mother, 25-44, 0-6 months postpartum, sleep-deprived, who has priced out the $1,695 SNOO and is looking for a way to get hands-free auto-rocking without that price tag or its subscription.</p></div>
+  <div class="g3">
+    <div class="card tile"><h3>Before</h3><p>Up every 20-45 minutes rocking baby by hand, running the math on whether a $1,695 bassinet is worth it.</p></div>
+    <div class="card tile"><h3>After</h3><p>Baby self-soothes in a bedside auto-rocker for a fraction of the cost, parent gets real stretches of sleep back.</p></div>
+    <div class="card tile"><h3>Biggest objection</h3><p>Is this worth $300+, and is it actually safe, versus just doing it myself or saving for the SNOO? Value/price is the objection these angles answer; safety claims are deliberately out of scope.</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Pain points</h3><ul class="plain"><li>Extreme sleep deprivation described by parents as &quot;the most desperate, helpless, exhausted life stage&quot; (Fortune, SNOO-parent quote).</li><li>SNOO&#x27;s $1,695 price is a hard wall; even used units run $500-900.</li><li>SNOO&#x27;s retroactive $20/month subscription, including on secondhand units, drew direct backlash.</li><li>Short useful lifespan (~5-6 months) before a separate crib purchase is needed.</li><li>Soothing mismatch: motion/white-noise settings &quot;too loud, or not loud enough&quot; for some babies.</li><li>Assembly/mechanical gripes across the category (wheel/remote/motor noise complaints).</li><li>A minority of babies resist the motion outright; worth pre-empting, not hiding.</li></ul></div>
+    <div class="card"><h3>Benefits</h3><ul class="plain"><li>Hands-free auto-rocking is the recurring, cross-source &quot;lifesaver&quot; claim when it works.</li><li>All-in-one: rocker + sound + safe bedside sleep space in one purchase.</li><li>Bedside/co-sleeping proximity for night feeds without full co-sleep risk (also this row&#x27;s own Winners DB cluster: &quot;Bedside Bonding Rocker,&quot; &quot;Keep Them Close Without Missing a Bite&quot;).</li><li>Adjustable height for easier bedside access.</li></ul></div>
+  </div>
+  <h3 class="sub-h">Customer voice</h3>
+  <div class="g3 voice"><div class="card q"><p class="legend">No verbatim quotes recorded for this report.</p></div></div>
+  <h3 class="sub-h">What competitors run</h3>
+  <div class="g2"><div class="card comp">Crowded (~8/25): &quot;automatic rocking so parents can finally sleep&quot; / &quot;baby sleeps, so do we.&quot;<div></div></div><div class="card comp">Crowded (~7/25): &quot;16-mode / multi-mode swing+rocker versatility.&quot;<div></div></div><div class="card comp">Lighter presence: Scandinavian/nursery aesthetic (2/25), bedside night-feed proximity (3/25), cry-activated response tech (1/25), infant-to-toddler growth framing (1/25), budget/clearance framing (2/25).<div></div></div><div class="card comp">Whitespace (0/25): no competitor runs a direct cost/value comparison against the $1,695 category leader, and none runs a &quot;no subscription&quot; angle.<div></div></div></div>
+  <div class="legend">The Meta Ad Winners rows for search term &quot;baby rocker&quot; (this row&#x27;s locked Social search term); TikTok Winners had 0 rows for this term.</div>
+  <table class="cov"><tr><th>Source</th><th>What was read</th><th>Link</th></tr><tr><td colspan="3" class="legend">Source coverage not recorded for this report.</td></tr></table>
+  <div class="legend">Winners DB, Meta Ad Winners tab, 25 rows matching Search Term &quot;baby rocker&quot; (this row&#x27;s locked spy term). Web research (Reddit/parenting-press sourced): Fortune (Aug 2024) on SNOO subscription backlash; parenthoodadventures.com SNOO-alternatives roundup. Web research (YouTube-sourced): auto-rocking bassinet review commentary and SNOO-adjacent complaint/praise themes. Product DB row Notes column (existing strategic research: SNOO market stats, TAM, bleeding-neck rating). Blocked, not used: direct Amazon review scrape for ASIN B0G58RZ67N (proxy connected but Amazon 503&#x27;d the reviews endpoint specifically) and the AliExpress top-seller listing (x5sec wall held on a fresh proxy session). Both were retried once through a working proxy path before being dropped per the one-retry rule; no invented data was substituted.</div>
 </section>
 
-<section>
-  <h2>Top 3 angles</h2>
-  <p class="lead">The most emotionally charged angles that competitors are not already running. Test these first.</p>
-  <div class="card top"><div class="head"><span class="rank">#1</span><h3>You Don&#x27;t Need The $1,695 One</h3><span class="chip">Contrarian / Pattern Interrupt</span><span class="chip u Fresh">Fresh 0/25</span></div><div class="row"><b>Why this one</b>Directly answers the primary objection (value/price) with a real, sourced price anchor. Zero of 25 competitor ads run a direct cost-comparison frame, and it converts price-shame into smart-shopper pride.</div><div class="quote">Everyone talks about the $1,695 bassinet. Nobody tells you the auto-rock part isn&#x27;t the expensive part.</div><div class="row"><b>Insight</b>Directly challenges the belief that only the premium brand actually auto-rocks well.</div><div class="row"><b>Format</b>Static / carousel</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>You&#x27;ve been quietly pricing out a $1,695 bassinet and feeling bad about the number. You&#x27;re not the problem, the price tag is.</div></li><li><span>Curiosity</span><div>The bassinet everyone recommends costs $1,695. Here&#x27;s the part nobody tells you about the $300 one.</div></li><li><span>Contra</span><div>Stop assuming auto-rocking has to cost a car payment. It doesn&#x27;t.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#2</span><h3>The 3AM Math</h3><span class="chip">Pain / Frustration</span><span class="chip u Twist">Twist 8/25</span></div><div class="row"><b>Why this one</b>The most viscerally specific pain point in the research (time-stamped, sensory). 8 of 25 competitor ads claim the same underlying benefit (&quot;baby sleeps, so do we&quot;); this wins by differentiating on STORY, not on claim.</div><div class="quote">3:47am. You&#x27;ve done this math every night for six weeks: rock for 20, lay down, she wakes, start over.</div><div class="row"><b>Insight</b>New parents run an exhausting mental loop every night (rock, lay down, wake, repeat); the value is ending that loop.</div><div class="row"><b>Format</b>UGC video</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Result-first</span><div>We stopped doing the 3am math three nights ago. I forgot what a full sleep cycle felt like.</div></li><li><span>Social proof</span><div>Every mom in my group chat has done this math. One of us finally found the shortcut.</div></li><li><span>Problem-first</span><div>Rock 20 minutes. Lay down. She wakes in 4. Start over. If you know, you know.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#3</span><h3>The Group Chat Recommendation</h3><span class="chip">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/25</span></div><div class="row"><b>Why this one</b>Taps the strongest trust currency for a first-time or postpartum buyer. Zero of 25 competitor ads frame it this way, and it reinforces the Rank 1 price insight through social proof rather than repeating the claim.</div><div class="quote">Ask any mom group what saved their sleep and this comes up before the $1,695 one does.</div><div class="row"><b>Insight</b>Peer recommendation from her own mom group beats brand marketing.</div><div class="row"><b>Format</b>UGC / testimonial</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Social proof</span><div>I asked in my mom group what actually worked. Six people sent me the same link.</div></li><li><span>Curiosity</span><div>The thing nobody puts on the baby registry, but every mom group recommends anyway.</div></li><li><span>Problem-first</span><div>You&#x27;ve scrolled a hundred &#x27;best bassinet&#x27; articles. Your mom group already had the answer.</div></li></ul></div>
+<section id="top3">
+  <h2>2. Top 3 angles</h2>
+  <p class="lead">The most emotionally charged angles competitors are not already running. Test these first.</p>
+  <div class="g3"><div class="card top"><div class="head"><span class="rank">1</span><h4>You Don&#x27;t Need The $1,695 One</h4></div><div class="tags"><span class="chip cat k3">Contrarian / Pattern Interrupt</span><span class="chip u Fresh">Fresh 0/25</span></div><p class="hook">Everyone talks about the $1,695 bassinet. Nobody tells you the auto-rock part isn&#x27;t the expensive part.</p><p class="why"><b>Why</b>Directly answers the primary objection (value/price) with a real, sourced price anchor. Zero of 25 competitor ads run a direct cost-comparison frame, and it converts price-shame into smart-shopper pride.</p><ul class="hooks"><li><span>Problem-first</span>You&#x27;ve been quietly pricing out a $1,695 bassinet and feeling bad about the number. You&#x27;re not the problem, the price tag is.</li><li><span>Curiosity</span>The bassinet everyone recommends costs $1,695. Here&#x27;s the part nobody tells you about the $300 one.</li><li><span>Contra</span>Stop assuming auto-rocking has to cost a car payment. It doesn&#x27;t.</li></ul><div class="fmt"><b>Format</b>Static / carousel</div></div><div class="card top"><div class="head"><span class="rank">2</span><h4>The 3AM Math</h4></div><div class="tags"><span class="chip cat k1">Pain / Frustration</span><span class="chip u Twist">Twist 8/25</span></div><p class="hook">3:47am. You&#x27;ve done this math every night for six weeks: rock for 20, lay down, she wakes, start over.</p><p class="why"><b>Why</b>The most viscerally specific pain point in the research (time-stamped, sensory). 8 of 25 competitor ads claim the same underlying benefit (&quot;baby sleeps, so do we&quot;); this wins by differentiating on STORY, not on claim.</p><ul class="hooks"><li><span>Result-first</span>We stopped doing the 3am math three nights ago. I forgot what a full sleep cycle felt like.</li><li><span>Social proof</span>Every mom in my group chat has done this math. One of us finally found the shortcut.</li><li><span>Problem-first</span>Rock 20 minutes. Lay down. She wakes in 4. Start over. If you know, you know.</li></ul><div class="fmt"><b>Format</b>UGC video</div></div><div class="card top"><div class="head"><span class="rank">3</span><h4>The Group Chat Recommendation</h4></div><div class="tags"><span class="chip cat k5">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/25</span></div><p class="hook">Ask any mom group what saved their sleep and this comes up before the $1,695 one does.</p><p class="why"><b>Why</b>Taps the strongest trust currency for a first-time or postpartum buyer. Zero of 25 competitor ads frame it this way, and it reinforces the Rank 1 price insight through social proof rather than repeating the claim.</p><ul class="hooks"><li><span>Social proof</span>I asked in my mom group what actually worked. Six people sent me the same link.</li><li><span>Curiosity</span>The thing nobody puts on the baby registry, but every mom group recommends anyway.</li><li><span>Problem-first</span>You&#x27;ve scrolled a hundred &#x27;best bassinet&#x27; articles. Your mom group already had the answer.</li></ul><div class="fmt"><b>Format</b>UGC / testimonial</div></div></div>
 </section>
 
-<section>
-  <h2>All 20 angles</h2>
-  <p class="lead">Four per category. Uniqueness is measured against the 25 competitor ads in the Winners DB for "baby rocker".</p>
+<section id="all20">
+  <h2>3. All 20 angles</h2>
+  <p class="lead">Four per category. Uniqueness is measured against 25 competitor brands in the Winners DB.</p>
   <div class="filters" id="filters">
-    <button class="on" data-band="all">All</button>
+    <button class="on" data-band="all">All 20</button>
     <button data-band="Fresh">Fresh 13</button>
     <button data-band="Twist">Twist 7</button>
     <button data-band="Crowded">Crowded 0</button>
   </div>
-  <div class="group"><h3>Pain / Frustration</h3><table><tr data-band="Fresh"><td class="n">The SNOO Sticker Shock<small>Good sleep feels reserved for people who can afford a $1,695 bassinet; this closes that gap.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">We looked at the $1,695 price tag too. Then we found out auto-rocking doesn&#x27;t have to cost a car payment.<small>Static (price-comparison creative)</small></td></tr><tr data-band="Fresh"><td class="n">One More App, One More Password<small>Subscription/tech fatigue: no app, no monthly bill on top of the purchase price.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">No app. No subscription. No $20/month bill showing up after you already paid $1,700. Just a bassinet that rocks.<small>Static / carousel</small></td></tr><tr data-band="Twist"><td class="n">The 3AM Math<small>New parents run an exhausting mental loop every night (rock, lay down, wake, repeat); the value is ending that loop.</small></td><td class="b"><span class="chip u Twist">Twist 8/25</span></td><td class="h">3:47am. You&#x27;ve done this math every night for six weeks: rock for 20, lay down, she wakes, start over.<small>UGC video</small></td></tr><tr data-band="Twist"><td class="n">Arms That Never Get a Break<small>Physical exhaustion of endless hand-holding/rocking; the product takes a literal shift.</small></td><td class="b"><span class="chip u Twist">Twist 8/25</span></td><td class="h">Your arms have been the rocking chair for six weeks straight. Let something else take the shift.<small>Static / testimonial</small></td></tr></table></div><div class="group"><h3>Aspiration / Identity</h3><table><tr data-band="Fresh"><td class="n">The Mom Who Figured It Out<small>Identity of the resourceful mom who found the smart alternative instead of overpaying.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">She didn&#x27;t pay $1,700 to figure out the secret to sleep. She just did her research.<small>UGC / testimonial</small></td></tr><tr data-band="Fresh"><td class="n">The Village You Didn&#x27;t Have<small>Positions the product as the extra pair of hands for parents without nearby family help.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">No grandma down the hall. No night nurse. Just you, and one thing that helps.<small>Testimonial / UGC</small></td></tr><tr data-band="Twist"><td class="n">Bedside, Not Bedroom Takeover<small>Keeping the nursery/bedroom feeling like her space instead of a gear showroom.</small></td><td class="b"><span class="chip u Twist">Twist 2/25</span></td><td class="h">Your room doesn&#x27;t have to turn into a nursery showroom to get through the next six months.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">Still You, Just Rested<small>Aspiration to feel like herself again through real sleep, not just &#x27;baby sleeps.&#x27;</small></td><td class="b"><span class="chip u Twist">Twist 8/25</span></td><td class="h">You&#x27;re not asking for luxury. You&#x27;re asking to feel like yourself again.<small>Emotional VSL / testimonial</small></td></tr></table></div><div class="group"><h3>Contrarian / Pattern Interrupt</h3><table><tr data-band="Fresh"><td class="n">You Don&#x27;t Need The $1,695 One<small>Directly challenges the belief that only the premium brand actually auto-rocks well.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">Everyone talks about the $1,695 bassinet. Nobody tells you the auto-rock part isn&#x27;t the expensive part.<small>Static / carousel</small></td></tr><tr data-band="Fresh"><td class="n">The Subscription Nobody Warns You About<small>Calls out the real, sourced backlash against premium smart-bassinet subscriptions added after purchase.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">Some premium smart bassinets started charging a monthly fee after people already paid $1,700. Ours doesn&#x27;t have one to add.<small>Static / carousel</small></td></tr><tr data-band="Twist"><td class="n">Stop Buying A Nursery Showpiece<small>Counters the crowded &#x27;16-mode versatility&#x27; cluster: fewer, better modes beat a features wall.</small></td><td class="b"><span class="chip u Twist">Twist 7/25</span></td><td class="h">It doesn&#x27;t need 16 settings. It needs one that works at 3am.<small>Static</small></td></tr><tr data-band="Twist"><td class="n">Rocking Isn&#x27;t The Hard Part<small>Reframes the value prop away from the motion mechanism and onto the parent&#x27;s relief.</small></td><td class="b"><span class="chip u Twist">Twist 8/25</span></td><td class="h">The rocking was never the hard part. Staying awake to do it was.<small>Static</small></td></tr></table></div><div class="group"><h3>Fear / Urgency</h3><table><tr data-band="Fresh"><td class="n">Before The Next Growth Spurt<small>The bedside-sleeper window is brief (0-6mo); waiting means missing it entirely.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">This stage lasts about six months. However you get through it, you don&#x27;t get it back.<small>UGC / testimonial</small></td></tr><tr data-band="Fresh"><td class="n">What Happens If You Wait Another Month<small>Sleep debt compounds; &#x27;pushing through&#x27; another month isn&#x27;t free.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">Another month of 45-minute stretches of sleep isn&#x27;t &#x27;pushing through.&#x27; It&#x27;s a debt that compounds.<small>Static / VSL</small></td></tr><tr data-band="Fresh"><td class="n">The Nights Don&#x27;t Wait For A Good Deal<small>Urgency around not delaying relief while waiting for a discount.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">You weren&#x27;t planning to wait for a discount code to get some sleep tonight.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">The Return-To-Work Countdown<small>Maternity leave ending adds urgency to fixing sleep before returning to normal life.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">Leave ends in six weeks. However you get sleep before then is on the table.<small>Static / testimonial</small></td></tr></table></div><div class="group"><h3>Social Proof / Tribe</h3><table><tr data-band="Fresh"><td class="n">The Group Chat Recommendation<small>Peer recommendation from her own mom group beats brand marketing.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">Ask any mom group what saved their sleep and this comes up before the $1,695 one does.<small>UGC / testimonial</small></td></tr><tr data-band="Fresh"><td class="n">4.7 Stars, Real Parents<small>Straightforward, sheet-verified rating-led social proof (4.7 stars / 102 reviews).</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">4.7 stars from parents who were exactly this tired.<small>Static / UGC</small></td></tr><tr data-band="Fresh"><td class="n">The Registry Item Everyone Wishes They&#x27;d Added<small>FOMO/social proof from registry veterans who regret skipping it.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/25</span></td><td class="h">The #1 thing baby registry veterans say they wish they&#x27;d added.<small>Static / testimonial</small></td></tr><tr data-band="Twist"><td class="n">She Wasn&#x27;t The Only One Up At 3AM<small>Normalizes the shared 3am experience across a community of exhausted parents.</small></td><td class="b"><span class="chip u Twist">Twist 8/25</span></td><td class="h">Turns out half your mom group was up at 3am too, they just didn&#x27;t post about it.<small>UGC / carousel</small></td></tr></table></div>
-  <div class="legend"><b>Fresh</b> = no competitor ad runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 25 competitor ads. The Meta Ad Winners rows for search term &quot;baby rocker&quot; (this row&#x27;s locked Social search term); TikTok Winners had 0 rows for this term.</div>
-</section>
-
-<section>
-  <h2>Offers that fit</h2>
-  <p class="lead">Macro-angles: a reason for a sale. Only the ones that genuinely fit this product.</p>
-  <div class="card"><ul class="plain"><li><b>Mother&#x27;s Day (Spring seasonal).</b> A bedside auto-rocker is a natural gifting item for expecting/new mothers; activate 2 weeks out.</li></ul><div class="legend">New Product Launch/Restock: no event yet for this SKU. Evergreen milestone: no sales history yet. Handmade/Jewelry angles: do not fit this category.</div></div>
-</section>
-
-<section>
-  <h2>What the research said</h2>
-  <div class="cols">
-    <div class="card"><h3>Top pain points</h3><ul class="plain"><li>Extreme sleep deprivation described by parents as &quot;the most desperate, helpless, exhausted life stage&quot; (Fortune, SNOO-parent quote).</li><li>SNOO&#x27;s $1,695 price is a hard wall; even used units run $500-900.</li><li>SNOO&#x27;s retroactive $20/month subscription, including on secondhand units, drew direct backlash.</li><li>Short useful lifespan (~5-6 months) before a separate crib purchase is needed.</li><li>Soothing mismatch: motion/white-noise settings &quot;too loud, or not loud enough&quot; for some babies.</li><li>Assembly/mechanical gripes across the category (wheel/remote/motor noise complaints).</li><li>A minority of babies resist the motion outright; worth pre-empting, not hiding.</li></ul></div>
-    <div class="card"><h3>Top benefits</h3><ul class="plain"><li>Hands-free auto-rocking is the recurring, cross-source &quot;lifesaver&quot; claim when it works.</li><li>All-in-one: rocker + sound + safe bedside sleep space in one purchase.</li><li>Bedside/co-sleeping proximity for night feeds without full co-sleep risk (also this row&#x27;s own Winners DB cluster: &quot;Bedside Bonding Rocker,&quot; &quot;Keep Them Close Without Missing a Bite&quot;).</li><li>Adjustable height for easier bedside access.</li></ul></div>
-    <div class="card"><h3>What competitors run</h3><ul class="plain"><li>Crowded (~8/25): &quot;automatic rocking so parents can finally sleep&quot; / &quot;baby sleeps, so do we.&quot;</li><li>Crowded (~7/25): &quot;16-mode / multi-mode swing+rocker versatility.&quot;</li><li>Lighter presence: Scandinavian/nursery aesthetic (2/25), bedside night-feed proximity (3/25), cry-activated response tech (1/25), infant-to-toddler growth framing (1/25), budget/clearance framing (2/25).</li><li>Whitespace (0/25): no competitor runs a direct cost/value comparison against the $1,695 category leader, and none runs a &quot;no subscription&quot; angle.</li></ul></div>
-  </div>
-  <div class="sources">Winners DB, Meta Ad Winners tab, 25 rows matching Search Term &quot;baby rocker&quot; (this row&#x27;s locked spy term). Web research (Reddit/parenting-press sourced): Fortune (Aug 2024) on SNOO subscription backlash; parenthoodadventures.com SNOO-alternatives roundup. Web research (YouTube-sourced): auto-rocking bassinet review commentary and SNOO-adjacent complaint/praise themes. Product DB row Notes column (existing strategic research: SNOO market stats, TAM, bleeding-neck rating). Blocked, not used: direct Amazon review scrape for ASIN B0G58RZ67N (proxy connected but Amazon 503&#x27;d the reviews endpoint specifically) and the AliExpress top-seller listing (x5sec wall held on a fresh proxy session). Both were retried once through a working proxy path before being dropped per the one-retry rule; no invented data was substituted.</div>
+  <div class="group"><h3><span class="chip cat k1">Pain / Frustration</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The SNOO Sticker Shock</p><p class="hook">We looked at the $1,695 price tag too. Then we found out auto-rocking doesn&#x27;t have to cost a car payment.</p><p class="ins">Good sleep feels reserved for people who can afford a $1,695 bassinet; this closes that gap.</p><div class="fmt"><b>Format</b>Static (price-comparison creative)</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">One More App, One More Password</p><p class="hook">No app. No subscription. No $20/month bill showing up after you already paid $1,700. Just a bassinet that rocks.</p><p class="ins">Subscription/tech fatigue: no app, no monthly bill on top of the purchase price.</p><div class="fmt"><b>Format</b>Static / carousel</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 8/25</span></div><p class="name">The 3AM Math</p><p class="hook">3:47am. You&#x27;ve done this math every night for six weeks: rock for 20, lay down, she wakes, start over.</p><p class="ins">New parents run an exhausting mental loop every night (rock, lay down, wake, repeat); the value is ending that loop.</p><div class="fmt"><b>Format</b>UGC video</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 8/25</span></div><p class="name">Arms That Never Get a Break</p><p class="hook">Your arms have been the rocking chair for six weeks straight. Let something else take the shift.</p><p class="ins">Physical exhaustion of endless hand-holding/rocking; the product takes a literal shift.</p><div class="fmt"><b>Format</b>Static / testimonial</div></div></div></div><div class="group"><h3><span class="chip cat k2">Aspiration / Identity</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Mom Who Figured It Out</p><p class="hook">She didn&#x27;t pay $1,700 to figure out the secret to sleep. She just did her research.</p><p class="ins">Identity of the resourceful mom who found the smart alternative instead of overpaying.</p><div class="fmt"><b>Format</b>UGC / testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Village You Didn&#x27;t Have</p><p class="hook">No grandma down the hall. No night nurse. Just you, and one thing that helps.</p><p class="ins">Positions the product as the extra pair of hands for parents without nearby family help.</p><div class="fmt"><b>Format</b>Testimonial / UGC</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 2/25</span></div><p class="name">Bedside, Not Bedroom Takeover</p><p class="hook">Your room doesn&#x27;t have to turn into a nursery showroom to get through the next six months.</p><p class="ins">Keeping the nursery/bedroom feeling like her space instead of a gear showroom.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 8/25</span></div><p class="name">Still You, Just Rested</p><p class="hook">You&#x27;re not asking for luxury. You&#x27;re asking to feel like yourself again.</p><p class="ins">Aspiration to feel like herself again through real sleep, not just &#x27;baby sleeps.&#x27;</p><div class="fmt"><b>Format</b>Emotional VSL / testimonial</div></div></div></div><div class="group"><h3><span class="chip cat k3">Contrarian / Pattern Interrupt</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">You Don&#x27;t Need The $1,695 One</p><p class="hook">Everyone talks about the $1,695 bassinet. Nobody tells you the auto-rock part isn&#x27;t the expensive part.</p><p class="ins">Directly challenges the belief that only the premium brand actually auto-rocks well.</p><div class="fmt"><b>Format</b>Static / carousel</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Subscription Nobody Warns You About</p><p class="hook">Some premium smart bassinets started charging a monthly fee after people already paid $1,700. Ours doesn&#x27;t have one to add.</p><p class="ins">Calls out the real, sourced backlash against premium smart-bassinet subscriptions added after purchase.</p><div class="fmt"><b>Format</b>Static / carousel</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 7/25</span></div><p class="name">Stop Buying A Nursery Showpiece</p><p class="hook">It doesn&#x27;t need 16 settings. It needs one that works at 3am.</p><p class="ins">Counters the crowded &#x27;16-mode versatility&#x27; cluster: fewer, better modes beat a features wall.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 8/25</span></div><p class="name">Rocking Isn&#x27;t The Hard Part</p><p class="hook">The rocking was never the hard part. Staying awake to do it was.</p><p class="ins">Reframes the value prop away from the motion mechanism and onto the parent&#x27;s relief.</p><div class="fmt"><b>Format</b>Static</div></div></div></div><div class="group"><h3><span class="chip cat k4">Fear / Urgency</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">Before The Next Growth Spurt</p><p class="hook">This stage lasts about six months. However you get through it, you don&#x27;t get it back.</p><p class="ins">The bedside-sleeper window is brief (0-6mo); waiting means missing it entirely.</p><div class="fmt"><b>Format</b>UGC / testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">What Happens If You Wait Another Month</p><p class="hook">Another month of 45-minute stretches of sleep isn&#x27;t &#x27;pushing through.&#x27; It&#x27;s a debt that compounds.</p><p class="ins">Sleep debt compounds; &#x27;pushing through&#x27; another month isn&#x27;t free.</p><div class="fmt"><b>Format</b>Static / VSL</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Nights Don&#x27;t Wait For A Good Deal</p><p class="hook">You weren&#x27;t planning to wait for a discount code to get some sleep tonight.</p><p class="ins">Urgency around not delaying relief while waiting for a discount.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Return-To-Work Countdown</p><p class="hook">Leave ends in six weeks. However you get sleep before then is on the table.</p><p class="ins">Maternity leave ending adds urgency to fixing sleep before returning to normal life.</p><div class="fmt"><b>Format</b>Static / testimonial</div></div></div></div><div class="group"><h3><span class="chip cat k5">Social Proof / Tribe</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Group Chat Recommendation</p><p class="hook">Ask any mom group what saved their sleep and this comes up before the $1,695 one does.</p><p class="ins">Peer recommendation from her own mom group beats brand marketing.</p><div class="fmt"><b>Format</b>UGC / testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">4.7 Stars, Real Parents</p><p class="hook">4.7 stars from parents who were exactly this tired.</p><p class="ins">Straightforward, sheet-verified rating-led social proof (4.7 stars / 102 reviews).</p><div class="fmt"><b>Format</b>Static / UGC</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/25</span></div><p class="name">The Registry Item Everyone Wishes They&#x27;d Added</p><p class="hook">The #1 thing baby registry veterans say they wish they&#x27;d added.</p><p class="ins">FOMO/social proof from registry veterans who regret skipping it.</p><div class="fmt"><b>Format</b>Static / testimonial</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 8/25</span></div><p class="name">She Wasn&#x27;t The Only One Up At 3AM</p><p class="hook">Turns out half your mom group was up at 3am too, they just didn&#x27;t post about it.</p><p class="ins">Normalizes the shared 3am experience across a community of exhausted parents.</p><div class="fmt"><b>Format</b>UGC / carousel</div></div></div></div>
+  <div class="legend"><b>Fresh</b> = no competitor runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 25 competitor brands.</div>
 </section>
 
 </main>
@@ -123,12 +154,12 @@
 <script>
 (function(){
   var btns=document.querySelectorAll('#filters button');
-  var rows=document.querySelectorAll('tr[data-band]');
+  var cards=document.querySelectorAll('.angle[data-band]');
   btns.forEach(function(b){ b.addEventListener('click',function(){
     btns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
     var band=b.getAttribute('data-band');
-    rows.forEach(function(r){ r.classList.toggle('hide', band!=='all' && r.getAttribute('data-band')!==band); });
-    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('tr[data-band]:not(.hide)') ? '' : 'none'; });
+    cards.forEach(function(c){ c.classList.toggle('hide', band!=='all' && c.getAttribute('data-band')!==band); });
+    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('.angle[data-band]:not(.hide)') ? '' : 'none'; });
   });});
 })();
 </script>

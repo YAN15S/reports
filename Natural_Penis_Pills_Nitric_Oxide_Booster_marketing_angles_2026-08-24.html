@@ -5,63 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nitric Oxide 12-in-1 Circulation Supplement: Marketing Angles</title>
 <style>
-  :root { --slate:#1e293b; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f8fafc; --card:#fff;
-          --fresh:#065f46; --fresh-bg:#ecfdf5; --twist:#92400e; --twist-bg:#fef3c7; --crowded:#991b1b; --crowded-bg:#fee2e2; --unscored:#475569; --unscored-bg:#f1f5f9; }
+  :root { --ink:#0f172a; --muted:#64748b; --line:#e2e8f0; --bg:#f4f6fa; --card:#fff; --slate:#1e293b; --link:#1d4ed8;
+          --fresh:#065f46; --fresh-bg:#d1fae5; --twist:#92400e; --twist-bg:#fde68a; --crowded:#991b1b; --crowded-bg:#fecaca; --unscored:#475569; --unscored-bg:#e2e8f0;
+          --c1:#dbeafe; --c1i:#1e40af; --c2:#ede9fe; --c2i:#5b21b6; --c3:#ffedd5; --c3i:#9a3412; --c4:#fee2e2; --c4i:#991b1b; --c5:#dcfce7; --c5i:#166534; }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.45; font-size:14px; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover { text-decoration:underline; }
   .accent { height:6px; background:var(--slate); }
-  header { background:#fff; border-bottom:1px solid var(--line); padding:22px 20px; }
-  .wrap { max-width:960px; margin:0 auto; }
-  h1 { margin:0 0 4px; font-size:24px; }
-  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:8px; }
-  .sub { color:var(--muted); font-size:14px; }
-  .date { color:var(--muted); font-size:13px; margin-top:4px; }
-  main { padding:20px; }
-  section { margin-bottom:28px; }
-  h2 { font-size:18px; margin:0 0 4px; }
-  .lead { color:var(--muted); font-size:13px; margin:0 0 12px; }
-  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px 18px; }
-  .kv { display:grid; grid-template-columns:150px 1fr; gap:8px 16px; font-size:14px; }
-  .kv dt { color:var(--muted); font-weight:600; }
-  .kv dd { margin:0; }
-  .top { border-left:4px solid var(--slate); margin-bottom:12px; }
-  .top .head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
-  .rank { font-size:13px; font-weight:700; color:#fff; background:var(--slate); border-radius:6px; padding:2px 8px; }
-  .top h3 { margin:0; font-size:17px; }
-  .chip { display:inline-block; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--line); color:var(--muted); white-space:nowrap; }
-  .u { border:0; font-weight:600; }
+  header { background:#fff; border-bottom:1px solid var(--line); padding:24px 20px 18px; }
+  .wrap { max-width:1040px; margin:0 auto; }
+  h1 { margin:0 0 6px; font-size:26px; letter-spacing:-.01em; }
+  h1 small { font-weight:400; color:var(--muted); font-size:15px; margin-left:10px; }
+  .sub { color:var(--muted); font-size:14px; max-width:760px; }
+  .meta { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
+  .date { color:var(--muted); font-size:13px; }
+  nav.toc a { margin-left:16px; font-size:13px; font-weight:600; }
+  main { padding:24px 20px 8px; }
+  section { margin-bottom:36px; }
+  h2 { font-size:19px; margin:0 0 2px; }
+  .lead { color:var(--muted); font-size:13px; margin:0 0 14px; }
+  .g2 { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+  .g3 { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; }
+  .g4 { display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:14px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; display:flex; flex-direction:column; min-width:0; }
+  .card h3 { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:0 0 10px; font-weight:700; }
+  .tile { min-height:120px; }
+  .tile p, .avatar p { margin:0; font-size:14px; }
+  .avatar { margin-bottom:14px; }
+  .g2, .g3, .g4 { margin-bottom:14px; }
+  .sub-h { font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); margin:18px 0 10px; font-weight:700; }
+  .q { font-size:13.5px; border-left:4px solid var(--slate); }
+  .q p { margin:0 0 8px; font-style:italic; }
+  .q .src { margin-top:auto; white-space:normal; }
+  .comp { font-size:13.5px; }
+  .comp .src { margin-top:auto; padding-top:6px; }
+  .strip { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px; margin:0 0 20px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; text-align:center; }
+  .stat .v { font-size:24px; font-weight:700; line-height:1.1; }
+  .stat .l { color:var(--muted); font-size:12px; margin-top:4px; text-transform:uppercase; letter-spacing:.05em; }
+  ul.plain { margin:0; padding-left:18px; }
+  ul.plain li { margin:0 0 8px; }
+  ul.plain li:last-child { margin-bottom:0; }
+  .src { font-size:12px; color:var(--muted); white-space:nowrap; }
+  .voice { gap:8px; }
+  .voice blockquote { margin:0 0 8px; padding:8px 12px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13.5px; }
+  .voice blockquote:last-child { margin-bottom:0; }
+  .voice blockquote .src { display:block; margin-top:3px; white-space:normal; }
+  table.cov { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13px; margin-top:14px; }
+  table.cov td, table.cov th { padding:8px 12px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
+  table.cov th { color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.06em; border-top:0; background:#fafbfc; }
+  table.cov td:first-child { font-weight:600; width:22%; }
+  table.cov td:last-child { width:10%; white-space:nowrap; }
+  .chip { display:inline-block; font-size:11px; font-weight:700; padding:3px 9px; border-radius:999px; white-space:nowrap; line-height:1.3; }
   .u.Fresh { background:var(--fresh-bg); color:var(--fresh); }
   .u.Twist { background:var(--twist-bg); color:var(--twist); }
   .u.Crowded { background:var(--crowded-bg); color:var(--crowded); }
   .u.Unscored { background:var(--unscored-bg); color:var(--unscored); }
-  .row { font-size:14px; margin:6px 0; }
-  .row b { color:var(--muted); font-weight:600; margin-right:6px; }
-  .quote { font-size:15px; font-style:italic; margin:8px 0; padding:8px 12px; background:var(--bg); border-radius:8px; }
-  .hooks { margin:10px 0 0; padding:0; list-style:none; }
-  .hooks li { display:grid; grid-template-columns:110px 1fr; gap:10px; font-size:14px; padding:6px 0; border-top:1px solid var(--line); }
-  .hooks li span { color:var(--muted); font-weight:600; font-size:12px; padding-top:2px; }
-  .filters { display:flex; gap:6px; flex-wrap:wrap; margin:0 0 12px; }
-  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:6px 11px; border-radius:8px; font-size:13px; cursor:pointer; }
+  .cat { font-weight:600; }
+  .cat.k1 { background:var(--c1); color:var(--c1i); } .cat.k2 { background:var(--c2); color:var(--c2i); } .cat.k3 { background:var(--c3); color:var(--c3i); } .cat.k4 { background:var(--c4); color:var(--c4i); } .cat.k5 { background:var(--c5); color:var(--c5i); }
+  .top { border-top:5px solid var(--slate); }
+  .top .head { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .rank { width:30px; height:30px; border-radius:50%; background:var(--slate); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex:0 0 30px; }
+  .top h4 { margin:0; font-size:16px; line-height:1.25; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
+  .hook { font-size:14px; font-style:italic; padding:10px 12px; background:var(--bg); border-radius:8px; margin:0 0 10px; }
+  .why { font-size:13px; color:var(--ink); margin:0 0 10px; }
+  .why b, .fmt b { color:var(--muted); font-weight:600; margin-right:4px; }
+  .fmt { font-size:12px; color:var(--muted); margin-top:auto; padding-top:8px; }
+  .hooks { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
+  .hooks li { font-size:13px; padding:7px 0; border-bottom:1px solid var(--line); }
+  .hooks li span { display:block; color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:2px; }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px; }
+  .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 13px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }
-  .group { margin-bottom:14px; }
-  .group h3 { font-size:14px; color:var(--muted); margin:0 0 6px; text-transform:uppercase; letter-spacing:.04em; }
-  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:10px; overflow:hidden; font-size:14px; }
-  td { padding:10px 12px; border-top:1px solid var(--line); vertical-align:top; }
-  tr:first-child td { border-top:0; }
-  td.n { width:34%; font-weight:600; }
-  td.n small { display:block; font-weight:400; color:var(--muted); font-size:12px; margin-top:2px; }
-  td.b { width:120px; white-space:nowrap; }
-  td.h small { display:block; color:var(--muted); font-size:12px; margin-top:2px; }
-  tr.hide { display:none; }
-  .legend { font-size:12px; color:var(--muted); margin-top:10px; }
-  ul.plain { margin:0; padding-left:18px; font-size:14px; }
-  ul.plain li { margin:4px 0; }
-  ul.plain b { font-weight:600; }
-  .cols { display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; }
-  .cols h3 { font-size:14px; margin:0 0 6px; }
-  .sources { font-size:12px; color:var(--muted); margin-top:12px; }
+  .group { margin-bottom:22px; }
+  .group h3 { display:flex; align-items:center; gap:10px; font-size:14px; margin:0 0 10px; }
+  .group h3 .chip { font-size:12px; }
+  .angle { min-height:150px; }
+  .angle .name { font-weight:700; font-size:15px; margin:0 0 8px; line-height:1.3; }
+  .angle .hook { margin-bottom:8px; font-size:13.5px; }
+  .angle .ins { font-size:12.5px; color:var(--muted); margin:0; }
+  .angle.hide { display:none; }
+  .legend { font-size:12px; color:var(--muted); margin-top:12px; }
   footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
-  @media (max-width:720px) { .kv { grid-template-columns:1fr; } .cols { grid-template-columns:1fr; } .hooks li { grid-template-columns:1fr; } td.b { white-space:normal; } }
+  @media (max-width:860px) { .g3, .g4, .strip { grid-template-columns:repeat(2, minmax(0,1fr)); } }
+  @media (max-width:560px) { .g2, .g3, .g4, .strip { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
 </head>
 <body>
@@ -69,53 +98,55 @@
 <header><div class="wrap">
   <h1>Nitric Oxide 12-in-1 Circulation Supplement<small>Marketing angles</small></h1>
   <div class="sub">active, health-conscious adults 35-55 juggling a cabinet of separate supplements, chasing steady energy and faster workout recovery without stimulant crashes</div>
-  <div class="date">08-24-2026</div>
+  <div class="meta"><div class="date">08-24-2026, search term "nitric oxide supplement"</div>
+  <nav class="toc"><a href="#research">1. Research</a><a href="#top3">2. Top 3 angles</a><a href="#all20">3. All 20 angles</a></nav></div>
 </div></header>
 <main class="wrap">
 
-<section>
-  <h2>Who we are selling to</h2>
-  <div class="card"><dl class="kv">
-    <dt>Avatar</dt><dd>Active, health-conscious professionals aged 35-55 (product markets unisex), semi-regular gym-goers or fitness-conscious, US-based. They already manage 5+ separate supplement bottles (aminos, pre-workout, vitamins), have tried multiple energy or performance products with underwhelming or short-lived results, and privately worry they are slowing down faster than they should. Skeptical of supplement hype after being burned before, but still open if something is credibly different.</dd>
-    <dt>Before</dt><dd>A cluttered morning routine of five-plus separate bottles and inconsistent, crash-prone energy that leaves them doubting every supplement they buy.</dd>
-    <dt>After</dt><dd>One natural 12-in-1 capsule each morning: steady energy without the jitters, faster-feeling workout recovery, and one less thing to manage.</dd>
-    <dt>Biggest objection</dt><dd>&quot;I&#x27;ve already spent money on supplements that didn&#x27;t work. Why would this one be different?&quot;</dd>
-  </dl></div>
+<section id="research">
+  <h2>1. Research</h2>
+  <p class="lead">What real people said, with the source behind every line.</p>
+  <div class="strip">
+    <div class="stat"><div class="v">22</div><div class="l">competitor brands in market</div></div>
+    <div class="stat"><div class="v">10 / 9 / 1</div><div class="l">fresh / twist / crowded angles</div></div>
+    <div class="stat"><div class="v">n/a</div><div class="l">sources read</div></div>
+  </div>
+  <div class="card avatar"><h3>Avatar</h3><p>Active, health-conscious professionals aged 35-55 (product markets unisex), semi-regular gym-goers or fitness-conscious, US-based. They already manage 5+ separate supplement bottles (aminos, pre-workout, vitamins), have tried multiple energy or performance products with underwhelming or short-lived results, and privately worry they are slowing down faster than they should. Skeptical of supplement hype after being burned before, but still open if something is credibly different.</p></div>
+  <div class="g3">
+    <div class="card tile"><h3>Before</h3><p>A cluttered morning routine of five-plus separate bottles and inconsistent, crash-prone energy that leaves them doubting every supplement they buy.</p></div>
+    <div class="card tile"><h3>After</h3><p>One natural 12-in-1 capsule each morning: steady energy without the jitters, faster-feeling workout recovery, and one less thing to manage.</p></div>
+    <div class="card tile"><h3>Biggest objection</h3><p>&quot;I&#x27;ve already spent money on supplements that didn&#x27;t work. Why would this one be different?&quot;</p></div>
+  </div>
+  <div class="g2">
+    <div class="card"><h3>Pain points</h3><ul class="plain"><li>Afternoon energy crash / sluggish energy (Amazon testimonials, general research)</li><li>Slow post-workout recovery and soreness lasting days</li><li>Stimulant side effects and crashes from other energy/pre-workout products</li><li>Pill/capsule burden: managing 5+ separate supplement bottles</li><li>Skepticism from being &quot;burned before&quot; by supplements that did not work</li><li>Feeling older than their actual age, especially ages 35-50</li><li>Doubts about product quality and label accuracy in the category generally</li></ul></div>
+    <div class="card"><h3>Benefits</h3><ul class="plain"><li>Noticeable energy and stamina improvement within about 2 weeks</li><li>Reduced workout fatigue, better endurance</li><li>Faster-feeling recovery, less soreness</li><li>Better muscle pump / circulation sensation</li><li>Sustained energy without a stimulant crash</li></ul></div>
+  </div>
+  <h3 class="sub-h">Customer voice</h3>
+  <div class="g3 voice"><div class="card q"><p class="legend">No verbatim quotes recorded for this report.</p></div></div>
+  <h3 class="sub-h">What competitors run</h3>
+  <div class="g2"><div class="card comp">Mars Nitric Oxide Capsules (verified winner, 4 geo variants): &quot;Flow Before Failure&quot;, reframes low gym energy as fixable circulation, not aging. Credibility-heavy (lab-tested, 75k+ units sold). This is the Crowded cluster (5/22).<div></div></div><div class="card comp">Force Factor Nitric Oxide Booster (verified winner): &quot;Low Energy Root Cause&quot;, same core reframe, fast-acting gym-performance tone.<div></div></div><div class="card comp">A separate adjacent cluster of competitor ads (Killari, Lemeli, VitaMia, Bathmate, Fyne, Selerb, Ilion) leans into sexual-performance and libido framing, deliberately excluded from every angle in this report on compliance grounds.<div></div></div></div>
+  <div class="legend">The closest real competitor set on file is the nitric oxide booster term (29 Meta Ad Winners rows, 22 carrying a usable Marketing Angle after excluding 7 unresolved/off-target rows), scraped for a prior anchor on this same row.</div>
+  <table class="cov"><tr><th>Source</th><th>What was read</th><th>Link</th></tr><tr><td colspan="3" class="legend">Source coverage not recorded for this report.</td></tr></table>
+  <div class="legend">Grounding sources this run: Amazon testimonials and general research for pain points and benefits, Reddit-adjacent sources for skepticism and treatment-burden language, and a Winners DB pull of 22 usable Marketing Angle rows under the closest captured term, nitric oxide booster (29 rows total, 7 unresolved or off-target excluded), used as the adjacent-term competitor set since the spy tool has not yet run against this row&#x27;s locked terms. Product identity for this row was re-anchored 08-17-2026 to Amazon ASIN B0CZGHL1TW per the row&#x27;s own AI Audit; every angle stays inside that confirmed identity and general energy, circulation, recovery and vitality territory, never sexual-performance framing, per Meta ad policy.</div>
 </section>
 
-<section>
-  <h2>Top 3 angles</h2>
-  <p class="lead">The most emotionally charged angles that competitors are not already running. Test these first.</p>
-  <div class="card top"><div class="head"><span class="rank">#1</span><h3>One Bottle, Not Ten</h3><span class="chip">Aspiration / Identity</span><span class="chip u Fresh">Fresh 0/22</span></div><div class="row"><b>Why this one</b>Pill/capsule burden was the single most repeated pain point across research (Amazon, Reddit-adjacent: 75% report high treatment burden), and zero of the 22 scored competitor ads lead with consolidation as the primary hook; they lead with performance or, for the excluded adjacent set, sexual vitality.</div><div class="quote">Replace the whole cabinet with the one capsule that was actually built to work together.</div><div class="row"><b>Insight</b>The person who has it together takes one purposeful formula, not a fistful of guesses.</div><div class="row"><b>Format</b>Carousel</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Problem-first</span><div>Eight bottles on the counter. One thing to remember. That&#x27;s the whole problem.</div></li><li><span>Result-first</span><div>We replaced five separate supplements with one formula, and mornings got a lot simpler.</div></li><li><span>Contra</span><div>Stop stacking five bottles that were never designed to work together. Take the one that was.</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#2</span><h3>The Skeptic&#x27;s Review</h3><span class="chip">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/22</span></div><div class="row"><b>Why this one</b>Research surfaced burned-before skepticism and waste-of-money language as a top recurring objection across every source. None of the 22 scored competitor ads lead with an admitted-skeptic narrative; they lead with credibility stacking instead, so this converts the category&#x27;s biggest objection into the hook itself.</div><div class="quote">I&#x27;ve bought enough supplements to fill a drawer. This is the first one I kept taking after the bottle ran out.</div><div class="row"><b>Insight</b>Leads with a customer who admits real doubt, then reports a genuine result, pre-empting skepticism directly.</div><div class="row"><b>Format</b>Testimonial / VSL</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Curiosity</span><div>They didn&#x27;t believe it would do anything. Two weeks later, they reordered before the bottle was empty.</div></li><li><span>Contra</span><div>Most reviews say &quot;it worked.&quot; The honest ones say &quot;I didn&#x27;t expect it to.&quot;</div></li><li><span>Result-first</span><div>No hype in the first message. Just: &quot;okay, this one actually did something.&quot;</div></li></ul></div><div class="card top"><div class="head"><span class="rank">#3</span><h3>The Supplement Industry Doesn&#x27;t Want Consolidation</h3><span class="chip">Contrarian / Pattern Interrupt</span><span class="chip u Fresh">Fresh 0/22</span></div><div class="row"><b>Why this one</b>Research showed real distrust of supplement marketing generally (loopholes in guidelines and clever marketing, misleading promises, per Harvard Health). None of the 22 scored competitor ads make an institutional-critique argument; they sell the product on its own merits. This is a genuine scroll-stopping pattern interrupt for cold traffic.</div><div class="quote">There&#x27;s a reason almost nobody sells you the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.</div><div class="row"><b>Insight</b>Separate SKUs make more money per customer than one true multi-formula, which is why one is rare.</div><div class="row"><b>Format</b>Static / VSL</div><div class="row"><b>Hooks to test</b></div><ul class="hooks"><li><span>Curiosity</span><div>There&#x27;s a reason almost nobody sells the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.</div></li><li><span>Contra</span><div>Separate bottles mean separate sales. One real formula means one honest answer.</div></li><li><span>Problem-first</span><div>Ever notice how supplement companies keep launching new bottles instead of just building the one that works?</div></li></ul></div>
+<section id="top3">
+  <h2>2. Top 3 angles</h2>
+  <p class="lead">The most emotionally charged angles competitors are not already running. Test these first.</p>
+  <div class="g3"><div class="card top"><div class="head"><span class="rank">1</span><h4>One Bottle, Not Ten</h4></div><div class="tags"><span class="chip cat k2">Aspiration / Identity</span><span class="chip u Fresh">Fresh 0/22</span></div><p class="hook">Replace the whole cabinet with the one capsule that was actually built to work together.</p><p class="why"><b>Why</b>Pill/capsule burden was the single most repeated pain point across research (Amazon, Reddit-adjacent: 75% report high treatment burden), and zero of the 22 scored competitor ads lead with consolidation as the primary hook; they lead with performance or, for the excluded adjacent set, sexual vitality.</p><ul class="hooks"><li><span>Problem-first</span>Eight bottles on the counter. One thing to remember. That&#x27;s the whole problem.</li><li><span>Result-first</span>We replaced five separate supplements with one formula, and mornings got a lot simpler.</li><li><span>Contra</span>Stop stacking five bottles that were never designed to work together. Take the one that was.</li></ul><div class="fmt"><b>Format</b>Carousel</div></div><div class="card top"><div class="head"><span class="rank">2</span><h4>The Skeptic&#x27;s Review</h4></div><div class="tags"><span class="chip cat k5">Social Proof / Tribe</span><span class="chip u Fresh">Fresh 0/22</span></div><p class="hook">I&#x27;ve bought enough supplements to fill a drawer. This is the first one I kept taking after the bottle ran out.</p><p class="why"><b>Why</b>Research surfaced burned-before skepticism and waste-of-money language as a top recurring objection across every source. None of the 22 scored competitor ads lead with an admitted-skeptic narrative; they lead with credibility stacking instead, so this converts the category&#x27;s biggest objection into the hook itself.</p><ul class="hooks"><li><span>Curiosity</span>They didn&#x27;t believe it would do anything. Two weeks later, they reordered before the bottle was empty.</li><li><span>Contra</span>Most reviews say &quot;it worked.&quot; The honest ones say &quot;I didn&#x27;t expect it to.&quot;</li><li><span>Result-first</span>No hype in the first message. Just: &quot;okay, this one actually did something.&quot;</li></ul><div class="fmt"><b>Format</b>Testimonial / VSL</div></div><div class="card top"><div class="head"><span class="rank">3</span><h4>The Supplement Industry Doesn&#x27;t Want Consolidation</h4></div><div class="tags"><span class="chip cat k3">Contrarian / Pattern Interrupt</span><span class="chip u Fresh">Fresh 0/22</span></div><p class="hook">There&#x27;s a reason almost nobody sells you the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.</p><p class="why"><b>Why</b>Research showed real distrust of supplement marketing generally (loopholes in guidelines and clever marketing, misleading promises, per Harvard Health). None of the 22 scored competitor ads make an institutional-critique argument; they sell the product on its own merits. This is a genuine scroll-stopping pattern interrupt for cold traffic.</p><ul class="hooks"><li><span>Curiosity</span>There&#x27;s a reason almost nobody sells the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.</li><li><span>Contra</span>Separate bottles mean separate sales. One real formula means one honest answer.</li><li><span>Problem-first</span>Ever notice how supplement companies keep launching new bottles instead of just building the one that works?</li></ul><div class="fmt"><b>Format</b>Static / VSL</div></div></div>
 </section>
 
-<section>
-  <h2>All 20 angles</h2>
-  <p class="lead">Four per category. Uniqueness is measured against the 22 competitor ads in the Winners DB for "nitric oxide supplement".</p>
+<section id="all20">
+  <h2>3. All 20 angles</h2>
+  <p class="lead">Four per category. Uniqueness is measured against 22 competitor brands in the Winners DB.</p>
   <div class="filters" id="filters">
-    <button class="on" data-band="all">All</button>
+    <button class="on" data-band="all">All 20</button>
     <button data-band="Fresh">Fresh 10</button>
     <button data-band="Twist">Twist 9</button>
     <button data-band="Crowded">Crowded 1</button>
   </div>
-  <div class="group"><h3>Pain / Frustration</h3><table><tr data-band="Fresh"><td class="n">Cabinet Full of Almosts<small>Most people already own a shelf of half-used supplements that never delivered.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">Open the cabinet. Count the bottles. Now count how many of them actually did something.<small>Carousel</small></td></tr><tr data-band="Twist"><td class="n">The 2PM Wall<small>The mid-afternoon crash is a circulation issue, not a willpower problem.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">It&#x27;s not that you&#x27;re lazy at 2pm. It&#x27;s that your body stopped moving oxygen the way it used to.<small>UGC video</small></td></tr><tr data-band="Twist"><td class="n">Recovery That Never Comes<small>Soreness lasting days after a normal workout is a circulation problem, not just age.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">You didn&#x27;t used to feel a workout for three days after. Something changed, and it&#x27;s fixable.<small>UGC testimonial</small></td></tr><tr data-band="Twist"><td class="n">The Jitter Tax<small>Stimulant pre-workouts trade a fake spike for a worse crash later.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">That 3pm crash you blamed on lunch? That&#x27;s the pre-workout wearing off.<small>Static</small></td></tr></table></div><div class="group"><h3>Aspiration / Identity</h3><table><tr data-band="Fresh"><td class="n">One Bottle, Not Ten<small>The person who has it together takes one purposeful formula, not a fistful of guesses.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">Replace the whole cabinet with the one capsule that was actually built to work together.<small>Carousel</small></td></tr><tr data-band="Fresh"><td class="n">Built From the Ground, Not the Lab<small>Choosing recognizable whole herbs over synthetic amino blends is its own identity.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">Six herbs you could point to on a farm. Not a string of letters you&#x27;d need a chemistry degree to say.<small>Carousel</small></td></tr><tr data-band="Twist"><td class="n">Energy On Your Terms<small>Clean, steady energy lets you show up fully without paying a crash tax later.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">Not wired. Not crashing. Just steady, all day.<small>UGC video</small></td></tr><tr data-band="Twist"><td class="n">Still Got It<small>Staying sharp and capable past 40 without chasing youth, just maintaining it.</small></td><td class="b"><span class="chip u Twist">Twist 5/22</span></td><td class="h">You&#x27;re not trying to turn back the clock. You&#x27;re just not ready to slow down yet.<small>UGC testimonial</small></td></tr></table></div><div class="group"><h3>Contrarian / Pattern Interrupt</h3><table><tr data-band="Fresh"><td class="n">More Ingredients, Not More Hype<small>Most NO boosters gamble on one amino acid; the body doesn&#x27;t run on one input.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">Most nitric oxide pills bet everything on one ingredient. This one didn&#x27;t have to.<small>Carousel</small></td></tr><tr data-band="Fresh"><td class="n">The Supplement Industry Doesn&#x27;t Want Consolidation<small>Separate SKUs make more money per customer than one true multi-formula, which is why one is rare.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">There&#x27;s a reason almost nobody sells you the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.<small>Static / VSL</small></td></tr><tr data-band="Twist"><td class="n">You Don&#x27;t Need to Feel It in 20 Minutes<small>Challenges the instant-jitter-equals-working assumption pre-workout culture trained people to expect.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">If a supplement makes your heart race in twenty minutes, that&#x27;s caffeine, not nitric oxide.<small>Testimonial</small></td></tr><tr data-band="Crowded"><td class="n">Aging Isn&#x27;t the Problem. Circulation Is.<small>Directly challenges &#x27;it&#x27;s just age&#x27;, the exact reframe the category&#x27;s top winners already run.</small></td><td class="b"><span class="chip u Crowded">Crowded 5/22</span></td><td class="h">Nobody&#x27;s energy just disappears at 40. It gets rerouted.<small>VSL</small></td></tr></table></div><div class="group"><h3>Fear / Urgency</h3><table><tr data-band="Fresh"><td class="n">Every Bottle You Skip Is a Year You Don&#x27;t Get Back<small>Urgency around delaying one simple change while continuing to guess with separate products.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">You can start today, or explain to yourself in five years why you didn&#x27;t.<small>Static</small></td></tr><tr data-band="Fresh"><td class="n">Stop Guessing With Separate Bottles<small>Fear of wasted time and money repeating the same trial-and-error every month.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">Every month you keep guessing with five separate bottles is a month you could&#x27;ve taken the one built to work together.<small>Carousel</small></td></tr><tr data-band="Twist"><td class="n">The Slow Fade Nobody Warns You About<small>Circulation decline compounds quietly year over year, unlike a single dramatic moment.</small></td><td class="b"><span class="chip u Twist">Twist 5/22</span></td><td class="h">Nobody feels the drop from 35 to 45. They just wake up one day and it&#x27;s already happened.<small>UGC testimonial</small></td></tr><tr data-band="Twist"><td class="n">What Your Workouts Are Quietly Telling You<small>Declining stamina and recovery are early signals worth listening to, not ignoring.</small></td><td class="b"><span class="chip u Twist">Twist 5/22</span></td><td class="h">Your workouts aren&#x27;t lying to you. They&#x27;re the first thing to tell you something&#x27;s off.<small>UGC video</small></td></tr></table></div><div class="group"><h3>Social Proof / Tribe</h3><table><tr data-band="Fresh"><td class="n">The Cabinet Cleanout<small>Real customers describe consolidating a cluttered routine down to one bottle.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">I used to have five bottles on my counter. Now I have one.<small>UGC testimonial</small></td></tr><tr data-band="Fresh"><td class="n">Two Weeks In<small>Mirrors the honest 2 to 3 week timeline customers actually report, not an instant-result promise.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">By week two I stopped waiting for the 3pm crash. It just didn&#x27;t come.<small>UGC video</small></td></tr><tr data-band="Fresh"><td class="n">The Skeptic&#x27;s Review<small>Leads with a customer who admits real doubt, then reports a genuine result, pre-empting skepticism directly.</small></td><td class="b"><span class="chip u Fresh">Fresh 0/22</span></td><td class="h">I&#x27;ve bought enough supplements to fill a drawer. This is the first one I kept taking after the bottle ran out.<small>Testimonial / VSL</small></td></tr><tr data-band="Twist"><td class="n">Recovery People Noticed<small>Social proof built around the specific recovery and soreness benefit, the most vivid research signal.</small></td><td class="b"><span class="chip u Twist">Twist 1/22</span></td><td class="h">My training partner asked why I wasn&#x27;t sore anymore. I didn&#x27;t have a good answer besides the bottle on my counter.<small>UGC testimonial</small></td></tr></table></div>
-  <div class="legend"><b>Fresh</b> = no competitor ad runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 22 competitor ads. The closest real competitor set on file is the nitric oxide booster term (29 Meta Ad Winners rows, 22 carrying a usable Marketing Angle after excluding 7 unresolved/off-target rows), scraped for a prior anchor on this same row.</div>
-</section>
-
-<section>
-  <h2>Offers that fit</h2>
-  <p class="lead">Macro-angles: a reason for a sale. Only the ones that genuinely fit this product.</p>
-  <div class="card"><ul class="plain"><li><b>Fall / Labor Day sale.</b> Labor Day sits inside the &quot;activate 2 weeks before&quot; window from this run&#x27;s date. A simple seasonal offer (&quot;reset your routine this fall&quot;) fits the consolidation angle naturally: swapping a cluttered cabinet for one bottle is itself a fall-cleanup framing.</li><li><b>Evergreen milestone.</b> The anchor ASIN carries 2,187 Amazon reviews at 4.5 stars, a genuine milestone. &quot;Join 2,000+ people who simplified their supplement routine&quot; works as a standing social-proof offer independent of season.</li></ul><div class="legend">New Product Launch, Restock Event, and the Handmade/Jewelry product-specific angles do not fit this product and were not forced.</div></div>
-</section>
-
-<section>
-  <h2>What the research said</h2>
-  <div class="cols">
-    <div class="card"><h3>Top pain points</h3><ul class="plain"><li>Afternoon energy crash / sluggish energy (Amazon testimonials, general research)</li><li>Slow post-workout recovery and soreness lasting days</li><li>Stimulant side effects and crashes from other energy/pre-workout products</li><li>Pill/capsule burden: managing 5+ separate supplement bottles</li><li>Skepticism from being &quot;burned before&quot; by supplements that did not work</li><li>Feeling older than their actual age, especially ages 35-50</li><li>Doubts about product quality and label accuracy in the category generally</li></ul></div>
-    <div class="card"><h3>Top benefits</h3><ul class="plain"><li>Noticeable energy and stamina improvement within about 2 weeks</li><li>Reduced workout fatigue, better endurance</li><li>Faster-feeling recovery, less soreness</li><li>Better muscle pump / circulation sensation</li><li>Sustained energy without a stimulant crash</li></ul></div>
-    <div class="card"><h3>What competitors run</h3><ul class="plain"><li>Mars Nitric Oxide Capsules (verified winner, 4 geo variants): &quot;Flow Before Failure&quot;, reframes low gym energy as fixable circulation, not aging. Credibility-heavy (lab-tested, 75k+ units sold). This is the Crowded cluster (5/22).</li><li>Force Factor Nitric Oxide Booster (verified winner): &quot;Low Energy Root Cause&quot;, same core reframe, fast-acting gym-performance tone.</li><li>A separate adjacent cluster of competitor ads (Killari, Lemeli, VitaMia, Bathmate, Fyne, Selerb, Ilion) leans into sexual-performance and libido framing, deliberately excluded from every angle in this report on compliance grounds.</li></ul></div>
-  </div>
-  <div class="sources">Grounding sources this run: Amazon testimonials and general research for pain points and benefits, Reddit-adjacent sources for skepticism and treatment-burden language, and a Winners DB pull of 22 usable Marketing Angle rows under the closest captured term, nitric oxide booster (29 rows total, 7 unresolved or off-target excluded), used as the adjacent-term competitor set since the spy tool has not yet run against this row&#x27;s locked terms. Product identity for this row was re-anchored 08-17-2026 to Amazon ASIN B0CZGHL1TW per the row&#x27;s own AI Audit; every angle stays inside that confirmed identity and general energy, circulation, recovery and vitality territory, never sexual-performance framing, per Meta ad policy.</div>
+  <div class="group"><h3><span class="chip cat k1">Pain / Frustration</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">Cabinet Full of Almosts</p><p class="hook">Open the cabinet. Count the bottles. Now count how many of them actually did something.</p><p class="ins">Most people already own a shelf of half-used supplements that never delivered.</p><div class="fmt"><b>Format</b>Carousel</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">The 2PM Wall</p><p class="hook">It&#x27;s not that you&#x27;re lazy at 2pm. It&#x27;s that your body stopped moving oxygen the way it used to.</p><p class="ins">The mid-afternoon crash is a circulation issue, not a willpower problem.</p><div class="fmt"><b>Format</b>UGC video</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">Recovery That Never Comes</p><p class="hook">You didn&#x27;t used to feel a workout for three days after. Something changed, and it&#x27;s fixable.</p><p class="ins">Soreness lasting days after a normal workout is a circulation problem, not just age.</p><div class="fmt"><b>Format</b>UGC testimonial</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">The Jitter Tax</p><p class="hook">That 3pm crash you blamed on lunch? That&#x27;s the pre-workout wearing off.</p><p class="ins">Stimulant pre-workouts trade a fake spike for a worse crash later.</p><div class="fmt"><b>Format</b>Static</div></div></div></div><div class="group"><h3><span class="chip cat k2">Aspiration / Identity</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">One Bottle, Not Ten</p><p class="hook">Replace the whole cabinet with the one capsule that was actually built to work together.</p><p class="ins">The person who has it together takes one purposeful formula, not a fistful of guesses.</p><div class="fmt"><b>Format</b>Carousel</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">Built From the Ground, Not the Lab</p><p class="hook">Six herbs you could point to on a farm. Not a string of letters you&#x27;d need a chemistry degree to say.</p><p class="ins">Choosing recognizable whole herbs over synthetic amino blends is its own identity.</p><div class="fmt"><b>Format</b>Carousel</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">Energy On Your Terms</p><p class="hook">Not wired. Not crashing. Just steady, all day.</p><p class="ins">Clean, steady energy lets you show up fully without paying a crash tax later.</p><div class="fmt"><b>Format</b>UGC video</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 5/22</span></div><p class="name">Still Got It</p><p class="hook">You&#x27;re not trying to turn back the clock. You&#x27;re just not ready to slow down yet.</p><p class="ins">Staying sharp and capable past 40 without chasing youth, just maintaining it.</p><div class="fmt"><b>Format</b>UGC testimonial</div></div></div></div><div class="group"><h3><span class="chip cat k3">Contrarian / Pattern Interrupt</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">More Ingredients, Not More Hype</p><p class="hook">Most nitric oxide pills bet everything on one ingredient. This one didn&#x27;t have to.</p><p class="ins">Most NO boosters gamble on one amino acid; the body doesn&#x27;t run on one input.</p><div class="fmt"><b>Format</b>Carousel</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">The Supplement Industry Doesn&#x27;t Want Consolidation</p><p class="hook">There&#x27;s a reason almost nobody sells you the one bottle that replaces the other five. It&#x27;s not because it can&#x27;t be built.</p><p class="ins">Separate SKUs make more money per customer than one true multi-formula, which is why one is rare.</p><div class="fmt"><b>Format</b>Static / VSL</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">You Don&#x27;t Need to Feel It in 20 Minutes</p><p class="hook">If a supplement makes your heart race in twenty minutes, that&#x27;s caffeine, not nitric oxide.</p><p class="ins">Challenges the instant-jitter-equals-working assumption pre-workout culture trained people to expect.</p><div class="fmt"><b>Format</b>Testimonial</div></div><div class="card angle" data-band="Crowded"><div class="tags"><span class="chip u Crowded">Crowded 5/22</span></div><p class="name">Aging Isn&#x27;t the Problem. Circulation Is.</p><p class="hook">Nobody&#x27;s energy just disappears at 40. It gets rerouted.</p><p class="ins">Directly challenges &#x27;it&#x27;s just age&#x27;, the exact reframe the category&#x27;s top winners already run.</p><div class="fmt"><b>Format</b>VSL</div></div></div></div><div class="group"><h3><span class="chip cat k4">Fear / Urgency</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">Every Bottle You Skip Is a Year You Don&#x27;t Get Back</p><p class="hook">You can start today, or explain to yourself in five years why you didn&#x27;t.</p><p class="ins">Urgency around delaying one simple change while continuing to guess with separate products.</p><div class="fmt"><b>Format</b>Static</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">Stop Guessing With Separate Bottles</p><p class="hook">Every month you keep guessing with five separate bottles is a month you could&#x27;ve taken the one built to work together.</p><p class="ins">Fear of wasted time and money repeating the same trial-and-error every month.</p><div class="fmt"><b>Format</b>Carousel</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 5/22</span></div><p class="name">The Slow Fade Nobody Warns You About</p><p class="hook">Nobody feels the drop from 35 to 45. They just wake up one day and it&#x27;s already happened.</p><p class="ins">Circulation decline compounds quietly year over year, unlike a single dramatic moment.</p><div class="fmt"><b>Format</b>UGC testimonial</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 5/22</span></div><p class="name">What Your Workouts Are Quietly Telling You</p><p class="hook">Your workouts aren&#x27;t lying to you. They&#x27;re the first thing to tell you something&#x27;s off.</p><p class="ins">Declining stamina and recovery are early signals worth listening to, not ignoring.</p><div class="fmt"><b>Format</b>UGC video</div></div></div></div><div class="group"><h3><span class="chip cat k5">Social Proof / Tribe</span></h3><div class="g2"><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">The Cabinet Cleanout</p><p class="hook">I used to have five bottles on my counter. Now I have one.</p><p class="ins">Real customers describe consolidating a cluttered routine down to one bottle.</p><div class="fmt"><b>Format</b>UGC testimonial</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">Two Weeks In</p><p class="hook">By week two I stopped waiting for the 3pm crash. It just didn&#x27;t come.</p><p class="ins">Mirrors the honest 2 to 3 week timeline customers actually report, not an instant-result promise.</p><div class="fmt"><b>Format</b>UGC video</div></div><div class="card angle" data-band="Fresh"><div class="tags"><span class="chip u Fresh">Fresh 0/22</span></div><p class="name">The Skeptic&#x27;s Review</p><p class="hook">I&#x27;ve bought enough supplements to fill a drawer. This is the first one I kept taking after the bottle ran out.</p><p class="ins">Leads with a customer who admits real doubt, then reports a genuine result, pre-empting skepticism directly.</p><div class="fmt"><b>Format</b>Testimonial / VSL</div></div><div class="card angle" data-band="Twist"><div class="tags"><span class="chip u Twist">Twist 1/22</span></div><p class="name">Recovery People Noticed</p><p class="hook">My training partner asked why I wasn&#x27;t sore anymore. I didn&#x27;t have a good answer besides the bottle on my counter.</p><p class="ins">Social proof built around the specific recovery and soreness benefit, the most vivid research signal.</p><div class="fmt"><b>Format</b>UGC testimonial</div></div></div></div>
+  <div class="legend"><b>Fresh</b> = no competitor runs this angle. <b>Twist</b> = competitors hit the same pain or benefit, this angle frames it differently. <b>Crowded</b> = competitors already run this angle. The number is matches out of 22 competitor brands.</div>
 </section>
 
 </main>
@@ -123,12 +154,12 @@
 <script>
 (function(){
   var btns=document.querySelectorAll('#filters button');
-  var rows=document.querySelectorAll('tr[data-band]');
+  var cards=document.querySelectorAll('.angle[data-band]');
   btns.forEach(function(b){ b.addEventListener('click',function(){
     btns.forEach(function(x){x.classList.remove('on');}); b.classList.add('on');
     var band=b.getAttribute('data-band');
-    rows.forEach(function(r){ r.classList.toggle('hide', band!=='all' && r.getAttribute('data-band')!==band); });
-    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('tr[data-band]:not(.hide)') ? '' : 'none'; });
+    cards.forEach(function(c){ c.classList.toggle('hide', band!=='all' && c.getAttribute('data-band')!==band); });
+    document.querySelectorAll('.group').forEach(function(g){ g.style.display = g.querySelector('.angle[data-band]:not(.hide)') ? '' : 'none'; });
   });});
 })();
 </script>

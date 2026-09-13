@@ -10,6 +10,7 @@
           --c1:#dbeafe; --c1i:#1e40af; --c2:#ede9fe; --c2i:#5b21b6; --c3:#ffedd5; --c3i:#9a3412; --c4:#fee2e2; --c4i:#991b1b; --c5:#dcfce7; --c5i:#166534;
           --identity:#0d9488; --problem:#dc2626; --positive:#16a34a; --caution:#d97706; --voice:#4f46e5; --compete:#ea580c; }
   * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
   body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.45; font-size:14px; }
   a { color:var(--link); text-decoration:none; }
   a:hover { text-decoration:underline; }
@@ -20,7 +21,7 @@
   .meta { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:12px; flex-wrap:wrap; }
   .date-block { display:flex; flex-direction:column; gap:4px; }
   .date { color:var(--muted); font-size:13px; }
-  .date b { color:var(--ink); font-weight:700; margin-right:4px; }
+  .date b { color:var(--muted); font-weight:700; margin-right:4px; }
   nav.toc a { margin-left:16px; font-size:13px; font-weight:600; }
   main { padding:24px 20px 8px; }
   section { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:26px 28px 22px; margin-bottom:28px; box-shadow:0 1px 2px rgba(15,23,42,.05); }
@@ -98,12 +99,15 @@
   .uniqueness-legend div:last-child { margin-bottom:0; }
   .uniqueness-legend .chip { margin-right:6px; }
   footer { color:var(--muted); font-size:12px; text-align:center; padding:20px; }
+  .back-to-top-wrap { text-align:center; margin:4px 0 20px; }
+  .back-to-top { display:inline-block; border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 16px; border-radius:999px; font-size:13px; font-weight:600; }
+  .back-to-top:hover { background:var(--bg); text-decoration:none; }
   @media (max-width:860px) { .g3, .g4, .strip { grid-template-columns:repeat(2, minmax(0,1fr)); } }
   @media (max-width:560px) { .g2, .g3, .g4, .strip { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
 </head>
 <body>
-<div class="accent"></div>
+<div class="accent" id="top"></div>
 <header><div class="wrap">
   <h1>Silk Collagen Peptide Serum Marketing Angles</h1>
   <div class="meta">
@@ -171,8 +175,9 @@
   </div>
 </section>
 
+<div class="back-to-top-wrap"><a href="#top" class="back-to-top">Back to top</a></div>
 </main>
-<footer>Nova Capital, Find Marketing Angles. Silk Collagen Peptide Serum, 08-23-2026.</footer>
+<footer>Generated agentically by Nova Capital</footer>
 <script>
 (function(){
   var btns=document.querySelectorAll('#filters button');

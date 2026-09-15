@@ -29,7 +29,7 @@
   .h2-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:0 0 2px; }
   .h2-row h2 { margin:0; }
   .meta-line { margin:4px 0 10px; }
-  .comp .used { display:inline-block; margin:8px 0 2px; }
+  .comp .used { display:inline-block; align-self:flex-start; margin:8px 0 2px; }
   .meta-badge { display:inline-block; font-size:12px; font-weight:600; color:var(--muted); background:var(--bg); border:1px solid var(--line); padding:4px 10px; border-radius:999px; white-space:nowrap; }
   .lead { color:var(--muted); font-size:13px; margin:0 0 14px; }
   .g2 { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
@@ -40,7 +40,7 @@
   .tile { min-height:120px; }
   .tile p { margin:0; font-size:14px; }
   .avatar-tile { border-top:3px solid var(--identity); }
-  .avatar-tile blockquote { margin:8px 0 0; padding:6px 10px; background:var(--bg); border-left:3px solid var(--identity); border-radius:6px; font-size:12.5px; font-style:italic; }
+  .avatar-tile blockquote { margin:8px 0 0; padding:6px 10px; background:var(--bg); border-left:3px solid var(--identity); border-radius:6px; font-size:13px; font-style:italic; line-height:1.4; }
   .avatar-tile .src { display:block; margin-top:6px; white-space:normal; }
   .before-tile { border-top:3px solid var(--problem); }
   .after-tile { border-top:3px solid var(--positive); }
@@ -57,12 +57,14 @@
   ul.plain { margin:0; padding-left:18px; }
   ul.plain li { margin:0 0 8px; }
   ul.plain li:last-child { margin-bottom:0; }
+  ul.plain li .src { display:block; white-space:normal; margin-top:2px; }
   .src { font-size:12px; color:var(--muted); white-space:nowrap; }
   .voice { gap:8px; }
   .voice blockquote { margin:0 0 8px; padding:8px 12px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13.5px; }
   .voice blockquote:last-child { margin-bottom:0; }
   .voice blockquote .src { display:block; margin-top:3px; white-space:normal; }
   table.cov { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--line); border-radius:12px; overflow:hidden; font-size:13px; margin-top:14px; }
+  .sub-h + table.cov { margin-top:0; }
   table.cov td, table.cov th { padding:8px 12px; border-top:1px solid var(--line); text-align:left; vertical-align:top; }
   table.cov th { color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.06em; border-top:0; background:#fafbfc; }
   table.cov td:first-child { font-weight:600; width:22%; }
@@ -79,13 +81,15 @@
   .rank { width:30px; height:30px; border-radius:50%; background:var(--slate); color:#fff; font-weight:700; font-size:14px; display:flex; align-items:center; justify-content:center; flex:0 0 30px; }
   .top h4 { margin:0; font-size:16px; line-height:1.25; }
   .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:10px; }
-  .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); font-weight:700; margin:0 0 4px; }
+  .lbl { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:#334155; font-weight:700; margin:0 0 5px; }
+  .top .lbl + .hooks { border-top:0; }
   .hook { font-size:14px; font-style:italic; padding:10px 12px; background:var(--bg); border-radius:8px; margin:0 0 10px; }
-  .why { font-size:13px; color:var(--ink); margin:0 0 10px; }
-  .why b { color:var(--muted); font-weight:600; margin-right:4px; }
+  .why { font-size:13px; color:var(--ink); margin:0 0 12px; }
+  .why b { display:block; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:#334155; font-weight:700; margin:0 0 5px; }
   .hooks { margin:0; padding:0; list-style:none; border-top:1px solid var(--line); }
-  .hooks li { font-size:13px; padding:7px 0; border-bottom:1px solid var(--line); }
-  .hooks li span { display:block; color:var(--muted); font-weight:700; font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-bottom:2px; }
+  .hooks li { font-size:13px; padding:8px 0; border-bottom:1px solid var(--line); }
+  .hooks li:last-child { border-bottom:0; padding-bottom:0; }
+  .hooks li span { display:inline-block; background:var(--bg); color:var(--muted); font-weight:700; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; padding:2px 8px; border-radius:999px; margin-bottom:4px; }
   .filters { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 16px; }
   .filters button { border:1px solid var(--line); background:#fff; color:var(--ink); padding:7px 13px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; }
   .filters button.on { background:var(--slate); color:#fff; border-color:var(--slate); }

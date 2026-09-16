@@ -118,7 +118,7 @@
   @media (max-width:860px) { .g3, .g4 { grid-template-columns:repeat(2, minmax(0,1fr)); } }
   @media (max-width:560px) { .g2, .g3, .g4 { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
-<style>/* dl+pdf patch v3 09-16-2026 */
+<style>/* dl+pdf patch v4 09-16-2026 */
 header{padding-top:40px!important;padding-bottom:34px!important}
 .topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 30px}
 .back{margin:0!important;padding:7px 15px!important}
@@ -128,15 +128,17 @@ header{padding-top:40px!important;padding-bottom:34px!important}
 h1{margin-bottom:14px!important}
 .meta{margin-top:26px!important}
 .date-block{gap:6px!important}
-section{border-color:#ccd6e2!important;box-shadow:0 1px 3px rgba(15,23,42,.08)!important}
-.card{border-color:#d5dde8}
-.before-tile,.pain-card{background:#fff4f4!important;border:1px solid #f6c6c6!important;border-top:4px solid var(--problem)!important}
-.after-tile,.benefits-card{background:#f0fdf4!important;border:1px solid #b7e6c7!important;border-top:4px solid var(--positive)!important}
-.objection-tile{background:#fffaef!important;border:1px solid #f2dcac!important;border-top:4px solid var(--caution)!important}
-.comp{background:#fff5ec!important;border:1px solid #f6cea8!important;border-left:5px solid var(--compete)!important}
-.q{background:#f1f3ff!important;border:1px solid #cdd3f7!important;border-left:5px solid var(--voice)!important}
-.avatar-panel{background:#eafbf7!important;border-color:#5eead4!important}
-.avatar-tile{border:1px solid #b8ede4!important;border-top:4px solid var(--identity)!important}
+body{background:#e9edf3}
+section{background:#f7f9fc!important;border-color:#c3cddb!important;box-shadow:0 2px 6px rgba(15,23,42,.10)!important}
+.card{border:1.5px solid #c9d3df!important;box-shadow:0 2px 5px rgba(15,23,42,.10)!important}
+.top{border-top:5px solid var(--slate)!important}
+.before-tile,.pain-card{background:#fff0f0!important;border:1.5px solid #f19a9a!important;border-top:5px solid var(--problem)!important}
+.after-tile,.benefits-card{background:#edfbf1!important;border:1.5px solid #86d3a1!important;border-top:5px solid var(--positive)!important}
+.objection-tile{background:#fff8e8!important;border:1.5px solid #e9c37a!important;border-top:5px solid var(--caution)!important}
+.comp{background:#fff3e6!important;border:1.5px solid #f1b27c!important;border-left:6px solid var(--compete)!important}
+.q{background:#eef0ff!important;border:1.5px solid #a9b3f0!important;border-left:6px solid var(--voice)!important}
+.avatar-panel{background:#e3f8f3!important;border:1.5px solid #2dd4bf!important}
+.avatar-tile{background:#fff!important;border:1.5px solid #7fdcd0!important;border-top:5px solid var(--identity)!important}
 @media print{@page{margin:14mm}:root{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff!important;font-size:11px}.accent,.topbar,nav.toc,.back-to-top-wrap,footer{display:none!important}header{padding:0 0 14px!important}main{padding:10px 0 0!important}section{box-shadow:none!important;margin-bottom:14px}.card,.top,.angle,.card.comp,.card.q,.tile,.group,tr,.uniqueness-legend{break-inside:avoid}h1,h2,h3{break-after:avoid}a{color:inherit!important;text-decoration:none!important}}
 </style>
 </head>

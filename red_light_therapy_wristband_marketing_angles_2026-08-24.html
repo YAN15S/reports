@@ -118,7 +118,7 @@
   @media (max-width:860px) { .g3, .g4 { grid-template-columns:repeat(2, minmax(0,1fr)); } }
   @media (max-width:560px) { .g2, .g3, .g4 { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
-<style>/* dl+pdf patch 09-16-2026 */
+<style>/* dl+pdf patch v2 09-16-2026 */
 header{padding-top:40px!important;padding-bottom:34px!important}
 .topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 30px}
 .back{margin:0!important;padding:7px 15px!important}
@@ -128,13 +128,22 @@ header{padding-top:40px!important;padding-bottom:34px!important}
 h1{margin-bottom:14px!important}
 .meta{margin-top:26px!important}
 .date-block{gap:6px!important}
+:root{color-scheme:light}
+section{border-color:#d7dee7!important;box-shadow:0 1px 3px rgba(15,23,42,.08)!important}
+.card{border-color:#dce3ec}
+.before-tile,.pain-card{background:#fff5f5!important;border-top-width:4px!important}
+.after-tile,.benefits-card{background:#f1fdf5!important;border-top-width:4px!important}
+.objection-tile{background:#fffbef!important;border-top-width:4px!important}
+.comp{background:#fff8f1!important}
+.q{background:#f4f6ff!important}
+.avatar-panel{border-color:#7fe3d4!important}
 @media print{@page{margin:14mm}:root{-webkit-print-color-adjust:exact;print-color-adjust:exact}body{background:#fff!important;font-size:11px}.accent,.topbar,nav.toc,.back-to-top-wrap,footer{display:none!important}header{padding:0 0 14px!important}main{padding:10px 0 0!important}section{box-shadow:none!important;margin-bottom:14px}.card,.top,.angle,.card.comp,.card.q,.tile,.group,tr,.uniqueness-legend{break-inside:avoid}h1,h2,h3{break-after:avoid}a{color:inherit!important;text-decoration:none!important}}
 </style>
 </head>
 <body>
 <div class="accent" id="top"></div>
 <header><div class="wrap">
-  <div class="topbar"><a class="back" href="index.html">Back to all reports</a><button type="button" class="dl" onclick="downloadReport()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>Download PDF</button></div>
+  <div class="topbar"><a class="back" href="index.html">Back to all reports</a><button type="button" class="dl" onclick="downloadReport()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>Download</button></div>
   <h1><a href="https://www.amazon.com/dp/B0FP5KT4HC/" target="_blank" rel="noopener">Red Light Therapy Wristband</a> Marketing Angles</h1>
   <div class="meta">
     <div class="date-block">

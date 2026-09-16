@@ -118,11 +118,22 @@
   @media (max-width:860px) { .g3, .g4 { grid-template-columns:repeat(2, minmax(0,1fr)); } }
   @media (max-width:560px) { .g2, .g3, .g4 { grid-template-columns:1fr; } nav.toc a { margin-left:10px; } }
 </style>
+<style>/* dl+spacing patch 09-16-2026 */
+header{padding-top:40px!important;padding-bottom:34px!important}
+.topbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 30px}
+.back{margin:0!important;padding:7px 15px!important}
+.dl{display:inline-flex;align-items:center;gap:7px;margin:0;border:1px solid var(--slate,#1e293b);background:var(--slate,#1e293b);color:#fff;padding:7px 15px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.dl:hover{background:#0f172a}
+.dl svg{width:14px;height:14px}
+h1{margin-bottom:14px!important}
+.meta{margin-top:26px!important}
+.date-block{gap:6px!important}
+</style>
 </head>
 <body>
 <div class="accent" id="top"></div>
 <header><div class="wrap">
-  <a class="back" href="index.html">Back to all reports</a>
+  <div class="topbar"><a class="back" href="index.html">Back to all reports</a><button type="button" class="dl" onclick="downloadReport()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 11l5 5 5-5"/><path d="M4 20h16"/></svg>Download report</button></div>
   <h1><a href="https://www.aliexpress.us/item/3256811421620753.html" target="_blank" rel="noopener">3 in 1 Cervical Neck Traction Device</a> Marketing Angles</h1>
   <div class="meta">
     <div class="date-block">
@@ -201,5 +212,6 @@
   });});
 })();
 </script>
+<script>function downloadReport(){try{var html='<!doctype html>\n'+document.documentElement.outerHTML;var blob=new Blob([html],{type:'text/html'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);var name=(location.pathname.split('/').pop()||'').trim();if(!/\.html?$/i.test(name))name='marketing_angles_report.html';a.download=name;document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove();},1500);}catch(e){window.print();}}</script>
 </body>
 </html>

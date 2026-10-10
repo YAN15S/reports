@@ -96,6 +96,10 @@
   table.cov td:last-child { width:10%; white-space:nowrap; }
   /* founder 10-10-2026: "keep the what was read at one line"; the full text shows on hover */
   table.cov { table-layout:fixed; }
+  /* fixed layout sizes columns from the header row, so the widths sit on th too */
+  table.cov th:nth-child(1), table.cov td:nth-child(1) { width:20%; }
+  table.cov th:nth-child(2), table.cov td:nth-child(2) { width:auto; }
+  table.cov th:nth-child(3), table.cov td:nth-child(3) { width:64px; }
   table.cov td:nth-child(2) { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   table.cov td:first-child { white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
   @media print { table.cov td:nth-child(2), table.cov td:first-child { white-space:normal; } }
@@ -206,7 +210,7 @@
   <h1><a href="https://www.amazon.com/dp/B0FNRHY3SH/" target="_blank" rel="noopener">Silk Collagen Peptide Serum</a> Marketing Angles</h1>
   <div class="meta">
     <div class="date-block">
-      <div class="date"><b>Report generated</b> 2026-10-09 · 00:22:22</div>
+      <div class="date"><b>Report generated</b> 2026-10-09 · 00:31:49</div>
       <div class="date"><b>Search term</b> "collagen peptide serum" (spied 09-25-2026)</div>
     </div>
     <nav class="toc"><a href="#research">1. Research</a><a href="#competitors">2. What competitors run</a><a href="#top3">3. Top 3 angles</a><a href="#all20">4. All 20 angles</a></nav>

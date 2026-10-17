@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "batana_oil_marketing_angles_2026-08-27.html",
+      "title": "Batana Oil",
+      "date": "2026-10-17 15:59:01",
+      "type": "angles"
+    },
+    {
       "file": "Bassinet_with_Auto-Rocking_marketing_angles_2026-08-24.html",
       "title": "Bassinet with Auto-Rocking",
       "date": "2026-10-17 15:58:12",
@@ -52,12 +58,6 @@
       "file": "hifu_skin_tightening_device_marketing_angles_2026-10-16.html",
       "title": "HIFU Skin Tightening Device",
       "date": "2026-10-17 01:40:40",
-      "type": "angles"
-    },
-    {
-      "file": "batana_oil_marketing_angles_2026-08-27.html",
-      "title": "Batana Oil",
-      "date": "2026-10-17 01:20:52",
       "type": "angles"
     },
     {

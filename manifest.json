@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "batana_oil_marketing_angles_2026-08-27.html",
+      "title": "Batana Oil",
+      "date": "2026-10-18 17:01:26",
+      "type": "angles"
+    },
+    {
       "file": "organic-mega-mushroom-powder_marketing_angles_2026-08-24.html",
       "title": "Organic Mega Mushroom Powder",
       "date": "2026-10-18 16:52:11",
@@ -118,12 +124,6 @@
       "file": "collagen_protein_coffee_powder_marketing_angles_2026-09-04.html",
       "title": "Collagen Protein Coffee Powder",
       "date": "2026-10-17 15:59:49",
-      "type": "angles"
-    },
-    {
-      "file": "batana_oil_marketing_angles_2026-08-27.html",
-      "title": "Batana Oil",
-      "date": "2026-10-17 15:59:01",
       "type": "angles"
     },
     {

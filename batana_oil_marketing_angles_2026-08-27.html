@@ -37,9 +37,21 @@
   .h2-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:0 0 2px; }
   .h2-row h2 { margin:0; }
   .meta-line { margin:4px 0 10px; }
-  .stage { margin:0 0 14px; }
-  .stage p { margin:0; }
-  .stage blockquote { margin:8px 0 0; padding:6px 10px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13px; font-style:italic; line-height:1.4; }
+  .stage { margin:0 0 18px; padding:20px 22px; }
+  .stage p { margin:0; line-height:1.5; }
+  .stage .stage-h { font-size:15px; }
+  .stage .track { position:relative; display:grid; grid-template-columns:repeat(5,1fr); margin:22px 0 20px; }
+  .stage .track:before { content:""; position:absolute; left:10%; right:10%; top:11px; height:2px; background:#d6d3d1; }
+  .stage .pt { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; }
+  .stage .pt i { width:14px; height:14px; margin-top:4px; border-radius:50%; background:#fff; border:2px solid #a8a29e; }
+  .stage .pt.on i { width:24px; height:24px; margin-top:-1px; background:#ea580c; border-color:#9a3412; }
+  .stage .pt .lb { font-size:13px; color:var(--muted); line-height:1.3; }
+  .stage .pt.on .lb { color:#9a3412; font-weight:600; }
+  .stage .stage-legend { list-style:none; margin:0 0 18px; padding:14px 16px; background:var(--bg); border-radius:8px; font-size:13px; line-height:1.5; color:var(--muted); }
+  .stage .stage-legend b { color:var(--ink, #1c1917); font-weight:600; }
+  .stage .stage-legend li + li { margin-top:6px; }
+  .stage .stage-legend li.on, .stage .stage-legend li.on b { color:#9a3412; }
+  .stage blockquote { margin:12px 0 6px; padding:6px 10px; background:var(--bg); border-left:3px solid var(--slate); border-radius:6px; font-size:13px; font-style:italic; line-height:1.4; }
   .comp .used { display:inline-block; align-self:flex-start; margin:8px 0 2px; }
   .meta-badge { display:inline-block; font-size:12px; font-weight:600; color:var(--muted); background:var(--bg); border:1px solid var(--line); padding:4px 10px; border-radius:999px; white-space:nowrap; }
   /* founder 10-10-2026: "make the used by N of M brands text more visible" */
@@ -222,7 +234,7 @@
   <h1><a href="https://amazon.com/Lebanta-Raw-Batana-Hair-Growth/dp/B0DCX7628T/" target="_blank" rel="noopener">Batana Oil</a> Marketing Angles</h1>
   <div class="meta">
     <div class="date-block">
-      <div class="date"><b>Report generated</b> 2026-10-19 · 21:56:20</div>
+      <div class="date"><b>Report generated</b> 2026-10-19 · 23:04:07</div>
       <div class="date"><b>Search term</b> "batana oil" (spied 10-16-2026)</div>
     </div>
     <nav class="toc"><a href="#research">1. Research</a><a href="#competitors">2. What competitors run</a><a href="#top3">3. Top 3 angles</a><a href="#all20">4. All 20 angles</a></nav>
@@ -251,7 +263,7 @@
 <section id="competitors">
   <h2>2. What competitors run</h2>
   <div class="meta-line"><span class="meta-badge">42 competitor brands in market</span></div>
-  <div class="card stage"><p><b>Market stage: 2 (Copied)</b> Most ads repeat the same thicker, regrown hair claim and enlarge it with percentages, week counts, customer counts and money-back guarantees; few explain how it works.</p><blockquote>93% saw new growth along thinning edges in clinical testing.</blockquote><span class="src"><a href="https://www.facebook.com/ads/library/?id=1411285850926065" target="_blank" rel="noopener">jolie ad</a></span></div>
+  <div class="card stage"><p class="stage-h"><b>Market Stage: 2 (Copied)</b></p><div class="track"><div class="pt"><i></i><span class="lb">New</span></div><div class="pt on"><i></i><span class="lb">Copied</span></div><div class="pt"><i></i><span class="lb">Claims worn out</span></div><div class="pt"><i></i><span class="lb">Mechanism copied</span></div><div class="pt"><i></i><span class="lb">Tired of claims</span></div></div><ul class="stage-legend"><li><b>1 New:</b> No one makes the claim yet; ads just state the result.</li><li class="on"><b>2 Copied:</b> Competitors make the same claim and enlarge it (bigger numbers, faster, guarantees).</li><li><b>3 Claims worn out:</b> Claims are worn out; competitors explain how it works (a named mechanism).</li><li><b>4 Mechanism copied:</b> Competitors run improved or more specific mechanisms.</li><li><b>5 Tired of claims:</b> Buyers are tired of claims; ads lead with identity and emotion, few hard claims.</li></ul><p>Most ads repeat the same thicker, regrown hair claim and enlarge it with percentages, week counts, customer counts and money-back guarantees; few explain how it works.</p><blockquote>93% saw new growth along thinning edges in clinical testing.</blockquote><span class="src"><a href="https://www.facebook.com/ads/library/?id=1411285850926065" target="_blank" rel="noopener">jolie ad</a></span></div>
   <div class="g2"><div class="card comp">Real Batana Proof: shows what genuine batana oil looks like, implying others are fake (Jostylin&#x27;s Apothecary, 209 days)<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=4074156289497634" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Dry Brittle Reset: raw Honduran batana oil delivers deep moisture and smooths frizz (Barbari, 254 days)<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=1253899393279388" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Split End Goodbye: batana oil ends split ends and combats thinning (Afriqonline, 89 days)<span class="meta-badge used">used by 4 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=1934053450548258" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Lab-Verified Purity: single-origin batana oil for long, thick hair (botanichair, 44 days)<span class="meta-badge used">used by 2 of 42 brands</span><div><span class="src"><a href="https://shop.trybotanic.com/products/the-batana-oil" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Breakage Not Growth: hair stalls because strands snap, so keep what you grow (ChoiceMart NG, 70 days)<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=903936068942685" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Edges Came Back: a Honduran jar regrew edges where edge oils failed (jennashairgrowthjourney, 44 days)<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://trybotanic.com/pages/what-honduran-women-know-about-edges" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Hairline Comeback Story: a user says batana oil regrew the hairline after serums and pills failed (Botanic Clinically Proven Formulas for Hair Growth, 44 days<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=2289221005164264" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div><div class="card comp">Stop the Shame: batana oil halts hair loss and improves density in 2 to 3 weeks (DRC SHOP, 58 days)<span class="meta-badge used">used by 1 of 42 brands</span><div><span class="src"><a href="https://www.facebook.com/ads/library/?id=1531497348210491" target="_blank" rel="noopener">Meta Ad Library</a></span></div></div></div>
 </section>
 

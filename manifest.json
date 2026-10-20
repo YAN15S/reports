@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
+      "title": "Cooling Blanket",
+      "date": "2026-10-19 23:17:08",
+      "type": "angles"
+    },
+    {
       "file": "collagen_protein_coffee_powder_marketing_angles_2026-09-04.html",
       "title": "Collagen Protein Coffee Powder",
       "date": "2026-10-19 23:16:49",
@@ -130,12 +136,6 @@
       "file": "electrolyte_creatine_gummies_marketing_angles_2026-08-23.html",
       "title": "Electrolyte Creatine Gummies",
       "date": "2026-10-17 16:01:26",
-      "type": "angles"
-    },
-    {
-      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
-      "title": "Cooling Blanket",
-      "date": "2026-10-17 16:00:08",
       "type": "angles"
     },
     {

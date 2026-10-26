@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "batana_oil_marketing_angles_2026-08-27.html",
+      "title": "Batana Oil",
+      "date": "2026-10-26 14:02:57",
+      "type": "angles"
+    },
+    {
       "file": "persimmon_soap_marketing_angles_2026-10-16.html",
       "title": "Persimmon Soap",
       "date": "2026-10-26 13:34:06",
@@ -112,12 +118,6 @@
       "file": "cooling_blanket_marketing_angles_2026-08-24.html",
       "title": "Cooling Blanket",
       "date": "2026-10-19 23:17:08",
-      "type": "angles"
-    },
-    {
-      "file": "batana_oil_marketing_angles_2026-08-27.html",
-      "title": "Batana Oil",
-      "date": "2026-10-19 23:14:40",
       "type": "angles"
     },
     {

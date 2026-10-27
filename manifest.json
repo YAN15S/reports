@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
+      "title": "Cooling Blanket",
+      "date": "2026-10-27 00:46:11",
+      "type": "angles"
+    },
+    {
       "file": "collagen_protein_coffee_powder_marketing_angles_2026-09-04.html",
       "title": "Collagen Protein Coffee Powder",
       "date": "2026-10-27 00:45:43",
@@ -28,12 +34,6 @@
       "file": "3_in_1_cervical_neck_traction_device_marketing_angles_2026-08-24.html",
       "title": "3 in 1 Cervical Neck Traction Device",
       "date": "2026-10-27 00:41:12",
-      "type": "angles"
-    },
-    {
-      "file": "cooling_blanket_marketing_angles_2026-08-24.html",
-      "title": "Cooling Blanket",
-      "date": "2026-10-26 15:14:06",
       "type": "angles"
     },
     {

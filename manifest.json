@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "dog-grooming-vacuum_other_winners_2026-09-24.html",
+      "title": "dog grooming vacuum - Other Winners",
+      "date": "2026-11-01 13:35:27",
+      "type": "winners"
+    },
+    {
       "file": "debloat-supplement_other_winners_2026-07-11.html",
       "title": "debloat supplement - Other Winners",
       "date": "2026-11-01 13:35:21",
@@ -461,12 +467,6 @@
       "file": "electrolyte-powder_other_winners_2026-07-11.html",
       "title": "electrolyte powder - Other Winners",
       "date": "2026-09-24 18:46:25",
-      "type": "winners"
-    },
-    {
-      "file": "dog-grooming-vacuum_other_winners_2026-09-24.html",
-      "title": "dog grooming vacuum - Other Winners",
-      "date": "2026-09-24 18:46:14",
       "type": "winners"
     },
     {

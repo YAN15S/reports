@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "red-light-therapy-panel_other_winners_2026-10-16.html",
+      "title": "red light therapy panel - Other Winners",
+      "date": "2026-11-01 13:37:26",
+      "type": "winners"
+    },
+    {
       "file": "portable-espresso-maker_other_winners_2026-07-11.html",
       "title": "portable espresso maker - Other Winners",
       "date": "2026-11-01 13:37:21",
@@ -342,12 +348,6 @@
       "date": "2026-10-17 00:10:23",
       "type": "angles",
       "archived": true
-    },
-    {
-      "file": "red-light-therapy-panel_other_winners_2026-10-16.html",
-      "title": "red light therapy panel - Other Winners",
-      "date": "2026-10-16 20:39:53",
-      "type": "winners"
     },
     {
       "file": "portable-blender_other_winners_2026-07-11.html",

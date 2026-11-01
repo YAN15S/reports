@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "lips-peptide_other_winners_2026-09-26.html",
+      "title": "lips peptide - Other Winners",
+      "date": "2026-11-01 13:36:30",
+      "type": "winners"
+    },
+    {
       "file": "lions-mane-supplement_other_winners_2026-09-24.html",
       "title": "lions mane supplement - Other Winners",
       "date": "2026-11-01 13:36:24",
@@ -329,12 +335,6 @@
       "file": "balm-stick_other_winners_2026-09-24.html",
       "title": "balm stick - Other Winners",
       "date": "2026-10-01 13:32:21",
-      "type": "winners"
-    },
-    {
-      "file": "lips-peptide_other_winners_2026-09-26.html",
-      "title": "lips peptide - Other Winners",
-      "date": "2026-09-26 20:51:22",
       "type": "winners"
     },
     {

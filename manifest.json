@@ -1,6 +1,12 @@
 {
   "reports": [
     {
+      "file": "cooling-blanket_other_winners_2026-10-16.html",
+      "title": "cooling blanket - Other Winners",
+      "date": "2026-11-01 13:35:11",
+      "type": "winners"
+    },
+    {
       "file": "collagen_peptide_serum_other_winners_2026-09-19.html",
       "title": "collagen peptide serum - Other Winners",
       "date": "2026-11-01 13:35:05",
@@ -204,12 +210,6 @@
       "date": "2026-10-17 00:10:23",
       "type": "angles",
       "archived": true
-    },
-    {
-      "file": "cooling-blanket_other_winners_2026-10-16.html",
-      "title": "cooling blanket - Other Winners",
-      "date": "2026-10-16 21:07:35",
-      "type": "winners"
     },
     {
       "file": "red-light-therapy-panel_other_winners_2026-10-16.html",
